@@ -1,308 +1,297 @@
-# NACLO Prep Platform — Project Spec
-
-> Companion to `brainstorm.md`, which holds the original idea. This document is the design.
+# NACLO Prep Platform
 
 ---
 
-## 1. Problem & Motivation
+# Part 1 — Product Requirements
 
-NACLO (North American Computational Linguistics Olympiad) publishes past exams and practice
-problems as PDFs, along with solution PDFs for most of them. As a preparation resource this has
-three gaps:
+## What this is
 
-- **No targeting.** A student who wants to drill morphology problems has to open twenty PDFs and
-  guess from the titles.
-- **No scaffolding.** When you get stuck, the only options are to stare harder or read the full
-  answer. There is no middle step.
-- **Keys state answers, not reasoning.** The official solutions tell you *what* the answer is.
-  They rarely walk you through how a solver would have found it — which is the only part that
-  transfers to the next problem.
+NACLO publishes its past exams as PDFs, with solution PDFs for most problems. Everything a student needs is technically available and practically unusable. You can't search it, you can't filter it, and when you get stuck your only two options are to keep staring or to read the whole answer.
 
-**Goal:** a standalone website where the existing NACLO problem set becomes an interactive prep
-experience — searchable by concept, scaffolded with hints, explained step by step, and practiceable
-under whatever time pressure the student chooses.
+This is a website that turns the same archive into something you can practice against. Same problems, same official answers, plus the things the PDFs don't give you: filtering by concept, graduated hints, worked explanations, and a clock you control.
 
-**Non-goal at launch:** writing new problems. The existing NACLO back catalogue is the entire
-question bank.
+No new problems get written. The NACLO back catalogue is the entire question bank.
 
----
+## Who uses it
 
-## 2. Product Overview
+Mostly high school and middle school students preparing for the Open Round, concentrated in the weeks before it runs in late January. Some have done a handful of problems before. Many are looking at their first Rosetta-stone table. A smaller group preparing for the Invitational Round wants harder material and full timed papers.
 
-| Feature | Description |
+Two things follow from that. Usage is seasonal, so nothing should depend on daily habit. And a meaningful share of users are under 13, which is why the site collects no personal information.
+
+## Core features
+
+### Practice by concept
+
+The student picks a concept and gets problems of that type. "Morphology." "Writing systems." "Number systems." Filters stack, so "phonology, Invitational round" is a valid request.
+
+This requires every problem to carry concept tags. NACLO doesn't publish any, so building that taxonomy is part of the work (Part 2, Content Pipeline).
+
+### Hints
+
+Each problem has three hints, available in order, written in advance.
+
+1. **Orientation.** Where to look. *"Compare rows 2 and 5. What changes between them?"*
+
+2. **Method.** The insight, stated but not applied. *"The suffix is marking number, not case."*
+
+3. **Partial work.** One step worked through, the rest left alone.
+
+Taking a hint reduces the XP the problem is worth, and later hints cost more than earlier ones. The point is to make help available without making it free.
+
+### Explanations
+
+After an attempt, the student can open a full walkthrough: not just the official answer, but the path a solver would take to reach it. This is the main thing the site adds over the existing PDFs, since NACLO's keys give the answer and rarely give the reasoning.
+
+Explanations are written during ingestion and reviewed by a person before publishing. Every student sees the same one.
+
+### Answer checking
+
+The student types an answer and finds out whether it's right. How that check works depends on the question:
+
+| Question type | Check |
 |---|---|
-| **Concept-targeted practice** | Student picks a concept ("morphology", "writing systems", "number systems") and gets matching problems |
-| **Tiered hints** | Three escalating levels of help per problem; each one taken reduces XP earned |
-| **Step-by-step explanations** | Full worked reasoning after the attempt, not just the answer |
-| **XP & progression** | XP per problem solved, reduced by hints taken; progress tracked per concept |
-| **Flexible timing** | Untimed, user-set per-question limits, or full exams under official time (§9) |
-| **Full past exams** | Complete past papers under real contest conditions |
+| Table cells, single words, matching, ordering | Automatic comparison against the key |
+| Short free response, e.g. "translate these sentences" | AI compares the answer to the official key and explains the verdict |
+| Open-ended, e.g. "state the rule" | The key and rubric are revealed, and the student marks their own |
 
-**Later (not specced here):** native app, leaderboards, AI-generated original problems.
+Partial credit follows NACLO's own point breakdowns where the official key provides them.
+
+When the AI grades something, the student can flag the result as wrong. Flags get reviewed, and correct answers that were wrongly rejected get added to the accepted list.
+
+### XP and progress
+
+XP is awarded per problem solved and reduced by hints taken. Progress is tracked per concept, so the interface can show "Morphology 6/14" rather than a lifetime point total. For a student cramming in January, coverage is the more useful number.
+
+There are no streaks. Streak mechanics assume daily use, and this audience shows up for three weeks a year.
+
+Progress is stored in the browser. No account, no sign-up, nothing to forget. The cost is that progress doesn't follow you between devices, which is an acceptable trade for launch.
+
+### Timing
+
+Three modes, all running over the same problems.
+
+**Untimed** is the default for practice. A clock on your first unfamiliar problem type measures nothing useful.
+
+**Custom per-question timer.** The student can set a time limit on any practice question. The field arrives pre-filled with a suggestion based on the problem's official time allowance, but any value is allowed, and a global default can be set once in settings instead of re-entered every time. When the timer runs out, a banner appears and the input stays live. This is a pacing tool, not a punishment, and cutting someone off mid-thought interrupts them at the worst possible moment. The timer survives a page refresh.
+
+Time taken does not affect XP. A speed bonus would reward guessing, which is the opposite of what NACLO tests.
+
+**Full exam mode** runs a complete past paper under its official total time and stops hard at expiry, scored against official points. This is the one place a hard cutoff belongs, because the whole point is simulating the real thing.
+
+### Attribution
+
+NACLO problems credit individual authors. Every problem page carries the byline and links back to the original problem and solution PDFs.
+
+## NOT in scope for v1
+
+Accounts, leaderboards, a native app, and AI-generated original problems. All reasonable later. None needed to find out whether the core idea works.
 
 ---
 
-## 3. Core Architecture — Offline Ingestion, Not Runtime AI
+# Part 2 — Technical Overview
 
-This is the defining decision of the project.
+## The shape of it
 
-The AI does not read PDFs while a student is on the page. PDFs are processed **once, offline**,
-into a reviewed database of structured problem records. The website then serves plain rows.
+The AI never reads a PDF while a student is on the page. PDFs are processed once, offline, into structured problem records that a person reviews before they go live. The website is then a static site serving reviewed content.
 
 ```
 NACLO problem PDF + solution PDF
-        │
-        ▼
-  extraction & transcription            ← offline, one-time (§4)
-        │
-        ▼
-  LLM drafts: concept tags, hint ladder,
-  step-by-step explanation, grading mode
-        │
-        ▼
-  human review                          ← the quality gate
-        │
-        ▼
-  problem database
-        │
-        ▼
-  website serves reviewed rows          ← no LLM on page load
+        ↓
+  extract & transcribe            offline, one-time
+        ↓
+  AI drafts tags, hints,
+  explanation, grading modes
+        ↓
+  human review                    quality gate
+        ↓
+  content/problems/*.json
+        ↓
+  static site build
 ```
 
-**Why it has to work this way:**
+Four reasons this is worth the up-front work. Every student sees identical content, so the XP cost of "took hint 2" means the same thing for everyone. A wrong explanation can be caught by a person before it ships, which is impossible if the text doesn't exist until a student loads the page. Annotation becomes a one-time cost instead of a bill that grows with traffic forever. And pages load instantly, because nothing is being generated.
 
-- **Deterministic.** Every student sees the same hint and the same explanation. Runtime generation
-  produces something slightly different each time, so the XP deduction for "took hint 2" is not
-  reproducible and two students comparing notes see two different products.
-- **Reviewable.** A wrong explanation gets caught once, by a human, before it ships. With runtime
-  generation you can never review what students actually see — it doesn't exist until they load it.
-- **Bounded cost.** Annotation is a one-time expense. Runtime generation is a bill that scales with
-  every page view, forever, on a free educational site.
-- **Fast.** No generation latency between clicking a problem and reading it.
+The only AI that runs at request time is free-text grading, which is a small and optional part of the system.
 
-Runtime AI is confined to exactly one optional job: grading free-text answers (§5).
+## Stack
 
----
-
-## 4. The Extraction Problem
-
-**This is the project's real cost — budget for it honestly.**
-
-NACLO problem PDFs are not ordinary documents. A typical set contains:
-
-- IPA transcription and heavy diacritics
-- Non-Latin scripts (Devanagari, Georgian, Cherokee syllabary, Amharic, …)
-- Glyph specimens that exist only as images (Mayan, Ogham, cuneiform, invented orthographies)
-- **Alignment-critical data tables**, where the row/column correspondence *is* the puzzle
-- Occasional diagrams: kinship trees, phonological charts, maps
-
-Naive text extraction (`pdftotext` and friends) mangles all of this. A Rosetta-stone table whose
-alignment has been destroyed is not a degraded problem — it is an unsolvable one.
-
-**Approach — hybrid, decided per problem at ingest:**
-
-| Content | Handling |
+| Layer | Choice |
 |---|---|
-| Prose | Transcribe to Unicode HTML |
-| Data tables | Real HTML tables, transcribed and verified cell by cell |
-| Glyph specimens, diagrams | Crop from the PDF, store as images with alt text |
+| Framework | Next.js (App Router) + TypeScript, statically generated |
+| Styling | Tailwind CSS |
+| UI components | shadcn/ui where useful (dialogs, tabs, inputs) |
+| Content store | JSON files in the repo. No database. |
+| Schema & validation | Zod, enforced at build time |
+| Search / filter | Client-side, over an index generated at build |
+| Progress & XP | `localStorage` |
+| AI grading | One serverless route calling the Claude API |
+| Ingestion pipeline | Standalone TypeScript scripts, run by hand |
+| Hosting | Vercel free tier (Netlify or Cloudflare Pages work the same) |
+| Fonts | Self-hosted Noto Sans subsets, Charis SIL for IPA |
 
-Everything UTF-8. Font stack must actually cover what's used — Noto family for scripts, Charis SIL
-or Gentium for IPA. A missing-glyph box in the middle of a phonology problem is a broken problem.
+Two notes on the choices.
 
-The cell-by-cell table verification is where the human review hours go. Plan accordingly.
+**No database.** A few hundred read-only records that change once a year don't need one. JSON in git gives version history, diffable review, and no operational surface at all. If the site ever grows user accounts, revisit it then.
 
----
+**Next.js is a default, not a requirement.** Astro arguably suits a content-heavy site with localized interactivity slightly better. Next is the recommendation because it's the more common skill and easier to get help with. Nothing below the framework row changes if you swap it.
 
-## 5. Grading Design
+## Content pipeline
 
-**Explaining an answer and grading an answer are different jobs.** The solution PDFs solve the
-first one completely. They do not solve the second: when a student types into a box, something
-still has to return correct / incorrect so XP can be awarded.
+Run manually, once per batch of problems. Lives in `scripts/ingest/`, entirely separate from the web app.
 
-The good news is that ground truth exists, so grading is **comparison against a known key**, not
-open-ended judgment. The design question is which comparison mechanism each question needs.
+1. **Fetch.** Download problem and solution PDFs from NACLO, keeping year, round, and problem letter.
 
-**Every sub-question is assigned a grading mode at ingest time and stores it in the record.**
-No runtime guessing.
+2. **Transcribe.** Convert the PDF into HTML. Partly automated, substantially manual (see below).
 
-| Mode | Used for | Mechanism |
-|---|---|---|
-| `exact` | Single tokens, table cells, matching, ordering | Normalized string comparison — case / diacritic / whitespace folding, plus an explicit accepted-variants list |
-| `llm` | Short free response ("translate these sentences") | Model compares student text against the official key; returns correct / partial / incorrect with a reason |
-| `self` | Open-ended ("state the rule", "explain why") | Reveal key and rubric; student self-marks. XP awarded but flagged as self-reported |
+3. **Draft.** An AI pass over the transcribed problem and its solution produces concept tags, the three hints, the step-by-step explanation, and a proposed grading mode and answer key for each sub-question.
 
-**Design rules:**
+4. **Review.** A person checks all of it and fixes what's wrong. Records stay `drafted` until reviewed, and the site only ever serves `published`.
 
-- **Bias hard toward `exact`.** It is free, instant, offline, and reproducible. Many NACLO
-  sub-questions are table completion or one-word translation and qualify directly.
-- **Mode is per sub-question, not per problem.** A single NACLO problem routinely mixes a
-  fill-the-table part (auto-gradable) with a "state the rule" part (not). Tagging at the problem
-  level would force the worst case onto the whole thing and lose auto-grading everywhere.
-- **Mirror NACLO's own point breakdowns** for partial credit rather than inventing a scheme. The
-  official keys usually carry them.
-- **`llm` mode needs a dispute button.** Mis-grading corrodes trust in XP faster than any other
-  failure. Let the student flag it; review flagged items and grow the accepted-variants list.
+5. **Validate.** A script checks every record against the Zod schema, confirms referenced image files exist, and confirms every sub-question has a key. Runs in CI and blocks the build.
 
----
+Step 4 is the bottleneck, and it should be. It's the reason the content can be trusted.
 
-## 6. Hints — Pre-Authored Ladders
+## Transcription is the expensive part
 
-Three tiers per problem, written once during ingest and human-reviewed:
+NACLO PDFs are not ordinary documents. They contain IPA and stacked diacritics, non-Latin scripts (Devanagari, Georgian, Cherokee syllabary, Amharic), glyph specimens that exist only as images, alignment-critical data tables where the row and column correspondence is the actual puzzle, and the occasional kinship tree or phonological chart.
 
-| Tier | Purpose | Example shape |
-|---|---|---|
-| 1 | **Orientation** — where to look | "Compare rows 2 and 5. What changes between them?" |
-| 2 | **Method** — the key insight, unapplied | "The suffix is marking number, not case." |
-| 3 | **Partial work** — one step done for you | Work through the first form, leave the rest |
+`pdftotext` and similar tools destroy most of this. A Rosetta-stone table with broken alignment isn't a degraded problem, it's an unsolvable one.
 
-XP cost escalates by tier.
+The approach is hybrid, decided per problem:
 
-**Do not generate hints at runtime from the solution key.** Two failure modes: a model handed the
-full answer routinely gives away too much, and the hint differs every time, which makes the XP
-penalty non-reproducible. Pre-authoring fixes both and costs nothing at runtime.
+- Prose becomes Unicode HTML.
 
----
+- Data tables become real `<table>` markup, transcribed and checked cell by cell.
 
-## 7. Concept Taxonomy
+- Glyph specimens and diagrams get cropped out of the PDF and stored as images with alt text.
 
-The headline feature — "enter the concept you want to study" — requires every problem to be tagged.
-NACLO publishes no such tags, so the taxonomy has to be built. Tags are LLM-drafted at ingest and
-human-reviewed. Problems get **multiple** tags, not one category.
+Everything is UTF-8, and the font stack has to actually cover what's used. A missing-glyph box in the middle of a phonology problem breaks the problem.
 
-**Axes:**
+Cell-by-cell table checking is where the review hours go. The Phase 1 slice exists mainly to measure how many.
 
-- **Linguistic domain** — phonology, morphology, syntax, semantics, orthography / writing systems,
-  historical & comparative, sociolinguistics, number systems
-- **Problem form** — Rosetta-stone translation, table completion, rule discovery, transliteration,
-  calendrical / counting, formal & computational (parsing, edit distance, encoding, finite-state)
-- **Difficulty** — derived from round (Open vs. Invitational) as a starting proxy
-- **Language / region** — secondary, but useful for variety so a session doesn't serve three
-  Austronesian problems in a row
+## Data model
 
----
+One record per problem. Exam membership is a field, not a folder, which is what lets the same store feed both concept drills and full timed exams.
 
-## 8. Problem Data Model
+```ts
+// content/schema.ts
+export const Question = z.object({
+  id: z.string(),
+  promptHtml: z.string(),
+  gradingMode: z.enum(['exact', 'llm', 'self']),
+  answerKey: z.string(),
+  acceptedVariants: z.array(z.string()).default([]),
+  points: z.number(),
+})
 
-One record per problem. **Exam membership is metadata, not structure** — this is what lets a single
-store serve both concept drills and full timed exams without duplicating content.
+export const Problem = z.object({
+  id: z.string(),                       // "2019-open-C"
+  year: z.number(),
+  round: z.enum(['open', 'invitational']),
+  letter: z.string(),
+  title: z.string(),
+  authors: z.array(z.string()),
+  sourcePdfUrl: z.string().url(),
+  solutionPdfUrl: z.string().url().optional(),
 
-```
-Problem
-  id, year, round (open | invitational), letter, title, author(s)
-  source_pdf_url, solution_pdf_url        # link back to NACLO originals
+  conceptTags: z.array(z.string()).min(1),
+  formTag: z.string(),
+  difficulty: z.enum(['intro', 'standard', 'hard']),
+  languages: z.array(z.string()).default([]),
 
-  concept_tags[], form_tag, difficulty, languages[]
-  official_points
-  official_time_minutes                   # exam-mode budget + basis for suggested timer
+  officialPoints: z.number(),
+  officialTimeMinutes: z.number(),      // exam budget + basis for the suggested timer
 
-  body_html                               # transcribed statement + data tables
-  assets[]                                # cropped images + alt text
+  bodyHtml: z.string(),
+  assets: z.array(z.object({ src: z.string(), alt: z.string() })).default([]),
 
-  questions[]
-      id, prompt_html, grading_mode, answer_key,
-      accepted_variants[], points
+  questions: z.array(Question).min(1),
+  hints: z.array(z.object({ tier: z.number(), text: z.string(), xpCost: z.number() })).length(3),
+  explanationHtml: z.string(),
 
-  hints[]                                 # tier 1–3, text, xp_cost
-  explanation_html                        # step-by-step walkthrough
-
-  review_status (drafted | reviewed | published)
+  reviewStatus: z.enum(['drafted', 'reviewed', 'published']),
+})
 ```
 
-`review_status` is load-bearing: it is the mechanism that keeps unreviewed AI output away from
-students. Only `published` records are ever served.
+`reviewStatus` is what keeps unreviewed AI output away from students. The build filters on it.
 
----
+### Concept tags
 
-## 9. Timing & Practice Modes
+The vocabulary behind `conceptTags` and `formTag`, since it has to be invented:
 
-Three modes over the same problem store.
+**Linguistic domain** — phonology, morphology, syntax, semantics, writing systems, historical and comparative, sociolinguistics, number systems.
 
-### 9.1 Untimed — the practice default
+**Problem form** — Rosetta-stone translation, table completion, rule discovery, transliteration, calendrical and counting, formal and computational (parsing, edit distance, encoding, finite-state).
 
-No clock. This is the right default when learning an unfamiliar problem type; a timer on your first
-ever Rosetta-stone problem measures nothing useful.
+Problems take several domain tags, not one. Difficulty starts as a proxy for round and can be corrected later by hand.
 
-### 9.2 Custom per-question timer
+## Grading
 
-The student sets their own limit on any practice question.
+Grading mode is stored per sub-question, decided at ingest, never guessed at runtime. This matters because a single NACLO problem routinely mixes a fill-in-the-table part that grades automatically with a "state the rule" part that can't. Tagging at the problem level would force the harder case onto everything and throw away automatic grading where it was available.
 
-- **Suggested default is pre-filled**, derived from `official_time_minutes` scaled to that
-  question's share of the problem — so the field is never blank — but the student can override it
-  to anything.
-- **Global default in settings** ("always give me 10 minutes"), so it doesn't have to be re-entered
-  on every question.
-- **Soft expiry.** When time runs out, show a banner and *keep the input live*. The purpose is
-  self-pacing awareness, not punishment — cutting a learner off mid-thought interrupts exactly the
-  moment they're closest to the insight.
-- **Timer survives refresh.** Persist the start timestamp, not an elapsed-second counter — counters
-  drift when the tab is backgrounded and reset on reload.
-- **Does not affect XP by default.** A "beat the clock" bonus is noted as a possible later addition
-  but deliberately not specced: tying XP to speed rewards guessing, which is the opposite of the
-  skill NACLO tests.
+**`exact`** runs entirely in the browser. A pure function normalizes both sides (lowercase, strip combining marks, collapse whitespace, normalize apostrophes and hyphens) and compares against the key plus its accepted-variants list. No network, no cost, instant.
 
-### 9.3 Full exam mode
+**`llm`** posts to `/api/grade` with the question id and the student's answer. The route looks up the official key server-side, asks the Claude API to compare the two, and returns a verdict with a short reason. The API key never reaches the client. Responses are cached on `(questionId, normalizedAnswer)`, since students converge on the same handful of wrong answers and there's no reason to pay twice for the same one.
 
-An entire past exam under its official total time, scored against official points. **Hard stop** at
-expiry — this is the one place a hard cutoff is correct, because the point is simulating real
-contest conditions.
+**`self`** needs no code beyond revealing the key and rubric and recording what the student claims. Self-reported XP is stored with a flag so the interface can distinguish it later.
 
----
+Push as much as possible into `exact`. It's free, offline, instant, and gives the same answer every time. Hints are never generated at request time either, for the same reason plus one more: a model holding the full solution tends to give too much away.
 
-## 10. XP & Progression
+## Progress, XP, and timers
 
-XP per problem solved, reduced by hints taken, as originally conceived — with one adjustment.
+Progress lives in `localStorage` behind a small typed module, roughly:
 
-XP-and-streak mechanics are borrowed from daily-habit products like Duolingo, where the streak *is*
-the product. NACLO runs once a year (Open Round in late January), so real usage will be a spike
-lasting a few weeks, not a year-round habit. Accordingly:
+```ts
+type Progress = {
+  problems: Record<string, {
+    solved: boolean
+    xpEarned: number
+    hintsUsed: number
+    selfGraded: boolean
+  }>
+}
+```
 
-- **Keep** per-problem XP and the hint penalty — they make help available without making it free,
-  which is the good idea in the original design.
-- **Drop** streaks. They punish exactly the usage pattern this audience actually has.
-- **Lead the UI with concept mastery** — "Morphology: 6 / 14" — over cumulative XP. A student
-  cramming in January wants to know what they haven't covered yet, not their lifetime point total.
+Timers store a start timestamp and a duration, never an elapsed-second counter. Counters drift when the tab is backgrounded and reset on reload, which would let an attempt be restarted by accident or on purpose. A render tick recomputes remaining time from the timestamp, for display only. Practice mode shows a banner at expiry and leaves the input enabled. Exam mode submits and locks.
 
----
+## Rendering
 
-## 11. Attribution & Content Handling
+Wide data tables need a horizontally scrolling container so the page body never scrolls sideways. This matters because a lot of students will be on a phone, and it's worth testing early, since it may change how tables get transcribed in the first place.
 
-NACLO problems credit individual authors. Carry that byline onto every problem page, and link back
-to the original problem and solution PDFs from each one. Costs nothing and is simply correct.
+Fonts are self-hosted and subset. Web-safe defaults don't cover IPA or most of the scripts these problems use.
 
----
+## Repo layout
 
-## 12. Phase 1 Scope
+```
+content/
+  problems/*.json          one file per problem, reviewed, in git
+  schema.ts                Zod schema, shared by pipeline and site
+scripts/
+  ingest/                  fetch, transcribe, draft, validate
+app/                       Next.js routes
+  practice/                concept filter + problem view
+  exam/                    full timed papers
+  api/grade/               the only server route
+lib/
+  grading.ts               exact-match normalization
+  progress.ts              localStorage wrapper
+  timer.ts                 timestamp-based timing
+```
 
-**Anti-goal: do not ingest twenty years of problems before shipping anything.**
+## Phase 1
 
-Ship one vertical slice: **a single full past exam (~8 problems), annotated end to end** — tagged,
-hint-laddered, explained, grading modes assigned — with concept practice, hints, explanations, and
-all three timing modes working over just those.
+Ingest one full past exam, roughly eight problems, and take it all the way through: tagged, hint-laddered, explained, grading modes assigned, published. Build practice mode, hints, explanations, and all three timing modes over just those.
 
-Why this shape:
+The goal isn't a demo. It's to find out how long one problem actually takes to annotate properly, because that number decides whether the full back catalogue is a month of work or a year. Eight problems is enough to learn it and small enough to throw away if the pipeline turns out wrong.
 
-- It exercises every part of the pipeline, so unknown-unknowns surface at 8 problems instead of 300.
-- It produces an honest per-problem annotation time estimate, which is the number that determines
-  whether the full back catalogue is a month of work or a year.
-- It is a real, demoable product rather than a prototype.
+Ingest the rest of the archive only after that slice is genuinely pleasant to use.
 
-Scale to the full catalogue only after that slice feels good to use.
+## Open technical questions
 
----
+**What fraction of sub-questions can grade with `exact`?** Sample one exam and count. At 80%, the AI grading route is nearly optional and the site is effectively static. At 20%, the cost and complexity picture changes. This is about an hour of work and it should happen before anything gets built.
 
-## 13. Open Questions
+**Alt text when the glyph is the puzzle.** Describing a Mayan numeral for a screen reader without handing over the answer is a real problem with no clean solution yet.
 
-- **Grading split.** What fraction of NACLO sub-questions are genuinely `exact`? Sample one full
-  exam and count before committing to an architecture. If it's 80%, runtime AI is nearly optional;
-  if it's 20%, the cost model changes.
-- **Self-graded XP.** Does it count the same as verified XP, or display distinctly?
-- **Mobile.** Many students will practice on a phone, and alignment-critical tables are hostile to
-  narrow screens. Test this early — it may constrain how tables are transcribed.
-- **Alt text when the glyph *is* the puzzle.** Describing a Mayan numeral accessibly without giving
-  away the answer is genuinely tricky.
-- **Accounts.** NACLO reaches middle schoolers, so a meaningful share of users will be under 13,
-  which brings real constraints on collecting personal data. Simplest path: no account required,
-  progress in `localStorage`. Optional sign-in — and the future leaderboard, which is the
-  data-hungriest feature on the roadmap — stays a later decision rather than a launch dependency.
-- **Solution PDFs.** Serve NACLO's originals alongside the new explanations, or supersede them?
+**Solution PDFs.** Link to NACLO's originals alongside the new explanations, or replace them?
+
+**Cross-device progress.** `localStorage` is the right launch answer. If students start asking for sync, that's the point at which accounts, and everything that comes with collecting data from minors, has to be thought through properly.
