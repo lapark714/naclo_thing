@@ -104,6 +104,11 @@ naclo_tool/
 - One logical change per commit; say what changed and why
 - Keep content records (`content/problems/*.json`) in their own commits, separate from code — the point of JSON in git is a readable diff to review
 
+**Documentation — after every milestone or major addition:**
+- Add the change to `docs/changelog.md`
+- Log the day's progress and where things were left off in `docs/project_status.md`
+- Update `docs/architecture.md` whenever the structure or data flow changes
+
 **Before pushing:**
 1. `npm run lint`
 2. `npm run build` — catches type errors
