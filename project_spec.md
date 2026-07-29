@@ -1,7 +1,5 @@
 # NACLO Prep Platform
 
----
-
 # Part 1 — Product Requirements
 
 ## What this is
@@ -32,9 +30,9 @@ Each problem has three hints, available in order, written in advance.
 
 1. **Orientation.** Where to look. *"Compare rows 2 and 5. What changes between them?"*
 
-2. **Method.** The insight, stated but not applied. *"The suffix is marking number, not case."*
+2. **Method.** The insight, stated but not applied. *"The suffix is marking number, rather than case."*
 
-3. **Partial work.** One step worked through, the rest left alone.
+3. **Partial Work** One step worked through, the rest left alone.
 
 Taking a hint reduces the XP the problem is worth, and later hints cost more than earlier ones. The point is to make help available without making it free.
 
@@ -219,9 +217,9 @@ export const Problem = z.object({
 
 The vocabulary behind 'conceptTags' and 'formTag', since it has to be invented:
 
-**Linguistic domain** — phonology, morphology, syntax, semantics, writing systems, historical and comparative, sociolinguistics, number systems.
+**Linguistic Domain** — phonology, morphology, syntax, semantics, writing systems, historical and comparative, sociolinguistics, number systems.
 
-**Problem form** — Rosetta-stone translation, table completion, rule discovery, transliteration, calendrical and counting, formal and computational (parsing, edit distance, encoding, finite-state).
+**Problem Form** — Rosetta-stone translation, table completion, rule discovery, transliteration, calendrical and counting, formal and computational (parsing, edit distance, encoding, finite-state).
 
 Problems take several domain tags, not one. Difficulty starts as a proxy for round and can be corrected later by hand.
 

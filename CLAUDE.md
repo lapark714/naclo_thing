@@ -7,7 +7,7 @@
 
 ## Architecture Overview
 
-Statically generated Next.js site over JSON content files. No database. Problem content is drafted offline in 'scripts/ingest/' and human-reviewed before it ships; the only request-time AI is free-text grading.
+Statically generated Next.js site over JSON content files. No database. Problem content is drafted offline in `scripts/ingest/` and human-reviewed before it ships; the only request-time AI is free-text grading.
 
 ```
 naclo_tool/
@@ -75,37 +75,37 @@ naclo_tool/
 ## Constraints & Policies
 
 **Security — MUST Follow:**
-- NEVER expose 'ANTHROPIC_API_KEY' to the client — '/api/grade' server-side only
-- Only 'NEXT_PUBLIC_*' vars reach the browser; never prefix a secret with it
-- NEVER commit '.env' or any file with API keys
-- Validate, sanitize, and rate-limit every request to '/api/grade'
+- NEVER expose `ANTHROPIC_API_KEY` to the client — `/api/grade` server-side only
+- Only `NEXT_PUBLIC_*` vars reach the browser; never prefix a secret with it
+- NEVER commit `.env` or any file with API keys
+- Validate, sanitize, and rate-limit every request to `/api/grade`
 - Collect no personal information
 
 **Content integrity — MUST Follow:**
-- Only 'published' records ship; unreviewed AI drafts never reach a student
+- Only `published` records ship; unreviewed AI drafts never reach a student
 - Hints and explanations are written at ingest, never generated at request time
-- 'llm' answer keys stay server-side; only 'exact' keys ship in the content bundle
-- 'validate.ts' blocks the build — never bypass it
+- `llm` answer keys stay server-side; only `exact` keys ship in the content bundle
+- `validate.ts` blocks the build — never bypass it
 
 **Code quality:**
 - TypeScript strict mode
-- Run 'npm run lint' before committing
-- No 'any' types without justification
+- Run `npm run lint` before committing
+- No `any` types without justification
 
 ## Repository Etiquette
 
 **Branching**
-- Small, safe changes go straight to 'main'
-- Branch for anything risky or spanning multiple sessions: 'feature/description' or 'fix/description'
+- Small, safe changes go straight to `main`
+- Branch for anything risky or spanning multiple sessions: `feature/description` or `fix/description`
 - Merge back once it builds clean, then delete the branch
-- NEVER force push to 'main'
+- NEVER force push to `main`
 
 **Commits:**
 - One logical change per commit; say what changed and why
-- Keep content records ('content/problems/*.json') in their own commits, separate from code — the point of JSON in git is a readable diff to review
+- Keep content records (`content/problems/*.json`) in their own commits, separate from code — the point of JSON in git is a readable diff to review
 
 **Before pushing:**
-1. 'npm run lint'
-2. 'npm run build' — catches type errors
-3. 'npm run validate' — content records against the Zod schema
-4. Open it in the browser: 'npm run dev' at localhost:3000
+1. `npm run lint`
+2. `npm run build` — catches type errors
+3. `npm run validate` — content records against the Zod schema
+4. Open it in the browser: `npm run dev` at localhost:3000
