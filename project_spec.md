@@ -123,7 +123,7 @@ The only AI that runs at request time is free-text grading, which is a small and
 | Content store | JSON files in the repo. No database. |
 | Schema & validation | Zod, enforced at build time |
 | Search / filter | Client-side, over an index generated at build |
-| Progress & XP | `localStorage` |
+| Progress & XP | 'localStorage' |
 | AI grading | One serverless route calling the Claude API |
 | Ingestion pipeline | Standalone TypeScript scripts, run by hand |
 | Hosting | Vercel free tier (Netlify or Cloudflare Pages work the same) |
@@ -137,7 +137,7 @@ Two notes on the choices.
 
 ## Content pipeline
 
-Run manually, once per batch of problems. Lives in `scripts/ingest/`, entirely separate from the web app.
+Run manually, once per batch of problems. Lives in 'scripts/ingest/', entirely separate from the web app.
 
 1. **Fetch.** Download problem and solution PDFs from NACLO, keeping year, round, and problem letter.
 
@@ -145,7 +145,7 @@ Run manually, once per batch of problems. Lives in `scripts/ingest/`, entirely s
 
 3. **Draft.** An AI pass over the transcribed problem and its solution produces concept tags, the three hints, the step-by-step explanation, and a proposed grading mode and answer key for each sub-question.
 
-4. **Review.** A person checks all of it and fixes what's wrong. Records stay `drafted` until reviewed, and the site only ever serves `published`.
+4. **Review.** A person checks all of it and fixes what's wrong. Records stay 'drafted' until reviewed, and the site only ever serves 'published'.
 
 5. **Validate.** A script checks every record against the Zod schema, confirms referenced image files exist, and confirms every sub-question has a key. Runs in CI and blocks the build.
 
@@ -155,13 +155,13 @@ Step 4 is the bottleneck, and it should be. It's the reason the content can be t
 
 NACLO PDFs are not ordinary documents. They contain IPA and stacked diacritics, non-Latin scripts (Devanagari, Georgian, Cherokee syllabary, Amharic), glyph specimens that exist only as images, alignment-critical data tables where the row and column correspondence is the actual puzzle, and the occasional kinship tree or phonological chart.
 
-`pdftotext` and similar tools destroy most of this. A Rosetta-stone table with broken alignment isn't a degraded problem, it's an unsolvable one.
+'pdftotext' and similar tools destroy most of this. A Rosetta-stone table with broken alignment isn't a degraded problem, it's an unsolvable one.
 
 The approach is hybrid, decided per problem:
 
 - Prose becomes Unicode HTML.
 
-- Data tables become real `<table>` markup, transcribed and checked cell by cell.
+- Data tables become real '<table>' markup, transcribed and checked cell by cell.
 
 - Glyph specimens and diagrams get cropped out of the PDF and stored as images with alt text.
 
@@ -213,11 +213,11 @@ export const Problem = z.object({
 })
 ```
 
-`reviewStatus` is what keeps unreviewed AI output away from students. The build filters on it.
+'reviewStatus' is what keeps unreviewed AI output away from students. The build filters on it.
 
 ### Concept tags
 
-The vocabulary behind `conceptTags` and `formTag`, since it has to be invented:
+The vocabulary behind 'conceptTags' and 'formTag', since it has to be invented:
 
 **Linguistic domain** — phonology, morphology, syntax, semantics, writing systems, historical and comparative, sociolinguistics, number systems.
 
@@ -229,17 +229,17 @@ Problems take several domain tags, not one. Difficulty starts as a proxy for rou
 
 Grading mode is stored per sub-question, decided at ingest, never guessed at runtime. This matters because a single NACLO problem routinely mixes a fill-in-the-table part that grades automatically with a "state the rule" part that can't. Tagging at the problem level would force the harder case onto everything and throw away automatic grading where it was available.
 
-**`exact`** runs entirely in the browser. A pure function normalizes both sides (lowercase, strip combining marks, collapse whitespace, normalize apostrophes and hyphens) and compares against the key plus its accepted-variants list. No network, no cost, instant.
+**'exact'** runs entirely in the browser. A pure function normalizes both sides (lowercase, strip combining marks, collapse whitespace, normalize apostrophes and hyphens) and compares against the key plus its accepted-variants list. No network, no cost, instant.
 
-**`llm`** posts to `/api/grade` with the question id and the student's answer. The route looks up the official key server-side, asks the Claude API to compare the two, and returns a verdict with a short reason. The API key never reaches the client. Responses are cached on `(questionId, normalizedAnswer)`, since students converge on the same handful of wrong answers and there's no reason to pay twice for the same one.
+**'llm'** posts to '/api/grade' with the question id and the student's answer. The route looks up the official key server-side, asks the Claude API to compare the two, and returns a verdict with a short reason. The API key never reaches the client. Responses are cached on '(questionId, normalizedAnswer)', since students converge on the same handful of wrong answers and there's no reason to pay twice for the same one.
 
-**`self`** needs no code beyond revealing the key and rubric and recording what the student claims. Self-reported XP is stored with a flag so the interface can distinguish it later.
+**'self'** needs no code beyond revealing the key and rubric and recording what the student claims. Self-reported XP is stored with a flag so the interface can distinguish it later.
 
-Push as much as possible into `exact`. It's free, offline, instant, and gives the same answer every time. Hints are never generated at request time either, for the same reason plus one more: a model holding the full solution tends to give too much away.
+Push as much as possible into 'exact'. It's free, offline, instant, and gives the same answer every time. Hints are never generated at request time either, for the same reason plus one more: a model holding the full solution tends to give too much away.
 
 ## Progress, XP, and timers
 
-Progress lives in `localStorage` behind a small typed module, roughly:
+Progress lives in 'localStorage' behind a small typed module, roughly:
 
 ```ts
 type Progress = {
@@ -288,10 +288,10 @@ Ingest the rest of the archive only after that slice is genuinely pleasant to us
 
 ## Open technical questions
 
-**What fraction of sub-questions can grade with `exact`?** Sample one exam and count. At 80%, the AI grading route is nearly optional and the site is effectively static. At 20%, the cost and complexity picture changes. This is about an hour of work and it should happen before anything gets built.
+**What fraction of sub-questions can grade with 'exact'?** Sample one exam and count. At 80%, the AI grading route is nearly optional and the site is effectively static. At 20%, the cost and complexity picture changes. This is about an hour of work and it should happen before anything gets built.
 
 **Alt text when the glyph is the puzzle.** Describing a Mayan numeral for a screen reader without handing over the answer is a real problem with no clean solution yet.
 
 **Solution PDFs.** Link to NACLO's originals alongside the new explanations, or replace them?
 
-**Cross-device progress.** `localStorage` is the right launch answer. If students start asking for sync, that's the point at which accounts, and everything that comes with collecting data from minors, has to be thought through properly.
+**Cross-device progress.** 'localStorage' is the right launch answer. If students start asking for sync, that's the point at which accounts, and everything that comes with collecting data from minors, has to be thought through properly.
