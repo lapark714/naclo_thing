@@ -8,18 +8,15 @@ A statically generated Next.js site over reviewed JSON content files, with no da
 
 ## Data Flow
 
-### Ingest — offline, run by hand
+### Ingest — offline, by hand (no `fetch`/`transcribe`/`draft` scripts exist yet)
 
 ```
-problem PDF + solution PDF
-   ↓  fetch.ts        → /pdfs (gitignored)
-   ↓  transcribe.ts   → Unicode HTML, real <table> markup, cropped assets
-   ↓  draft.ts        → Claude drafts tags, 3 hints, explanation,
-                        gradingMode + answerKey per sub-question
-content/problems/<id>.json                     reviewStatus: 'drafted'
-   ↓  human review    → tags, tables cell by cell, hints
-                                               reviewStatus: 'published'
-   ↓  validate.ts     → Zod + assets + keys. Blocks the build.
+problem PDF + solution PDF        → /pdfs (gitignored), downloaded by hand
+   ↓  transcribed by hand         → Unicode HTML, real <table> markup;
+                                    figures cropped with pdftoppm → content/assets/
+content/problems/<id>.json                              reviewStatus: 'published'
+   ↓  validate.ts                 → Zod + assets + keys. Blocks the build.
+   ↓  sync-assets.ts              → content/assets → public/content-assets (predev/prebuild)
 ```
 
 ### Attempt — request time
@@ -43,13 +40,12 @@ content/problems/<id>.json                     reviewStatus: 'drafted'
 - `app/practice/[problemId]/page.tsx` — Single problem, statically generated
 
 ### Frontend Components
-- `problem-view.tsx` — Main orchestrator: body, questions, hints, timer, explanation
-- `problem-body.tsx` — Stored `bodyHtml` + assets; wide tables get their own scroll container
-- `question-card.tsx` — One sub-question, branches on `gradingMode`
+- `problem-view.tsx` — Main orchestrator: body, assets, questions, hints, timer, and explanation (folds in what would otherwise be `problem-body.tsx` / `explanation-panel.tsx`)
+- `question-row.tsx` — One sub-question, branches on `gradingMode`
 - `hint-ladder.tsx` — Three tiers in order, XP cost shown before reveal
-- `explanation-panel.tsx` — Post-attempt walkthrough
-- `timer.tsx` — Countdown display; banner at expiry, input stays live
-- `concept-filter.tsx` — Client-side filtering over the prebuilt index
+- `practice-timer.tsx` — Timestamp-based display; banner at expiry, input stays live
+- `concept-filter.tsx` — Client-side filtering over the prebuilt index, used on `/practice`
+- `concept-coverage.tsx` — Per-concept solved/total counts, used on the landing page
 
 ### API Layer
 - `/api/grade` — The only server code. Validates and rate-limits, reads the `llm` key server-side, calls Claude, returns `{ correct, reason }`. Cached on `(questionId, normalizedAnswer)`.
@@ -63,8 +59,8 @@ content/problems/<id>.json                     reviewStatus: 'drafted'
 ### Content & Ingest
 - `content/schema.ts` — Zod `Problem`/`Question`, imported by both the scripts and the site
 - `content/taxonomy.ts` — Concept + form tag vocabulary (NACLO publishes none)
-- `content/problems/*.json` — One reviewed record per problem; `content/assets/` holds cropped glyph specimens
-- `scripts/ingest/*` — `fetch`, `transcribe`, `draft`, `validate`. Offline only, never at request time.
+- `content/problems/*.json` — One reviewed record per problem; `content/assets/` holds cropped figures
+- `scripts/ingest/validate.ts` — Zod + assets + keys, blocks the build. `scripts/ingest/sync-assets.ts` — copies `content/assets` to `public/content-assets`. Both offline only, never at request time.
 
 ## Design Decisions
 

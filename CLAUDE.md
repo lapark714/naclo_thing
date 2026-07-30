@@ -3,7 +3,7 @@
 
 **Current Milestone** MVP - website that takes NACLO past problems and practice sets from their website, turning it into a cohesive study platform
 
-**Phase 1 Slice:** One full past exam (about 8 problems) taken end to end - transcribed, tagged, hint-laddered, explained, grading modes assigned, published — with practice mode, hints, explanations, and all three timing modes built over just those.
+**Phase 1 Slice:** One full past exam (about 8 problems) taken end to end - transcribed, tagged, hint-laddered, explained, grading modes assigned, published — with practice mode, hints, explanations, and both practice timing modes built over just those. Individual problems only — full timed exam mode is deferred.
 
 ## Architecture Overview
 
@@ -15,7 +15,6 @@ naclo_tool/
 │   ├── layout.tsx                # Root layout
 │   ├── page.tsx                  # Landing page
 │   ├── practice/                 # Concept filters + problem view
-│   ├── exam/                     # Full timed past papers
 │   └── api/grade/route.ts        # Only server route — AI free-text grading
 ├── components/
 │   ├── ui/                       # shadcn/ui primitives

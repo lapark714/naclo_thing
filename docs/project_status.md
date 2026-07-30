@@ -14,6 +14,15 @@ This file will hold the project's development status and thus document whatever 
 - Cleared pre-MVP blockers (`123ac6e`): `zod` and `@anthropic-ai/sdk` promoted to real dependencies, shadcn/ui initialised on the Radix base (`components.json`, `lib/utils.ts`, `app/globals.css` rewritten), `tsx` added with a working `npm run validate` over `scripts/ingest/validate.ts`, `package.json` renamed `naclo-scaffold` → `gloss`, `.env.example` added with a `!.env.example` gitignore exception
 - Narrowed MVP scope to individual problems only; full timed exam mode deferred. `docs/architecture.md` updated (uncommitted): `app/exam/[examId]/page.tsx` dropped from the target tree, timer description no longer mentions a hard exam lock. `Problem` records keep `year`, `round`, `officialPoints`, `officialTimeMinutes` so exams can be assembled later without a schema change
 - Downloaded the first source PDFs into `pdfs/` (gitignored): six problems, each with its official solution. Nothing ingested or transcribed yet
+- Restored `CLAUDE.md` to real content (`dd773f0`): project goals, architecture tree, design style guide, UX guidelines, constraints, repo etiquette — no longer just `@AGENTS.md`
+- Built the MVP (`b5bb883`): ingested NACLO 2026 Open problems A-F into `content/problems/*.json` — transcribed bodies (prose as HTML, data tables as real `<table>`, Rosetta pairs as `<dl class="gloss-list">`), 106 sub-questions with answer keys, three-tier hints with XP costs, worked explanations. Eleven figures cropped from the PDFs into `content/assets/` with `pdftoppm` (poppler via Homebrew, run by hand). All six records `reviewStatus: "published"`
+- Answered the spec's open question: `npm run validate` reports 98 of 106 sub-questions (92%) grade `exact`, past the spec's 80% "AI grading is nearly optional" threshold. The other 8 are `llm` — all in problem F, Māori sentence translation. Zero `self`. `/api/grade` now serves exactly one problem's worth of questions
+- Built the practice site: `app/practice/page.tsx` (client-side concept/difficulty filters over a build-time index), `app/practice/[problemId]/page.tsx` (statically generated per problem), `app/page.tsx` landing rewritten with per-concept coverage (`concept-coverage.tsx`)
+- Built `app/api/grade/route.ts`, the only server route: Zod-validated body, per-IP rate limit, verdicts cached on `(questionId, normalizedAnswer)`, answer key read server-side
+- Built `lib/grading.ts` (NFD normalization, strips combining marks), `lib/progress.ts` (localStorage), `lib/timer.ts` (timestamp + duration), `lib/content.ts` (build-time loader — filters to `published`, strips `llm` answer keys before anything reaches the client)
+- Self-hosted Noto Sans, Noto Serif Display, and Charis SIL in `public/fonts/` (latin + latin-ext, ~880KB), wired into `app/globals.css` and used sitewide — closes the Geist-placeholder debt
+- `npm run validate` now does real work (Zod schema, asset-existence, non-empty keys, choice-key-in-choices); `npm run sync-assets` copies `content/assets` → `public/content-assets`, wired as `predev`/`prebuild`
+- Verified the deploy live: `/`, `/practice`, and all six problem pages return 200 anonymously at https://naclo-thing.vercel.app
 
 **Deployment notes — four separate gates had to clear**
 
@@ -24,22 +33,23 @@ This file will hold the project's development status and thus document whatever 
 
 **Where things stand**
 
-The site is live and public, but it is still a placeholder — no content records, no `content/schema.ts`, no ingest run yet. MVP scope is now explicit: individual problems only, no exam assembly. `scripts/ingest/validate.ts` exists and runs, but only checks that files parse as JSON; it exits early since `content/` doesn't exist yet. Zod schema checks, asset-existence checks, and answer-key checks are TODO, blocked on `content/schema.ts`. `pdfs/` holds six problems' worth of raw material (problem + official solution each), untouched by any script.
+The MVP is live and has real content. Six NACLO 2026 Open problems (A-F), 106 sub-questions, all `published`: 98 grade `exact` in the browser, 8 (problem F only, Māori sentence translation) go through `/api/grade`. Practice mode, hints, timer, and localStorage progress are built. Fonts are self-hosted (Noto Sans / Noto Serif Display / Charis SIL) and wired sitewide. MVP scope stays individual-problems-only — no exam assembly, no accounts, no leaderboards. `content/` holds only these six 2026 Open records; the rest of `pdfs/` (2024 and 2025 full exams) is untouched.
 
 **Carried over / needs fixing**
 
-- `app/layout.tsx` loads Geist from Google Fonts. The spec requires self-hosted Noto Sans subsets and Charis SIL for IPA — a remote font fetch cannot ship with problem content
 - The Vercel project is still named `naclo-thing`, so the URL does not match the `gloss.` name. Renaming it changes the URL, so do it before sharing the link widely
-- `npm audit`: 12 high-severity advisories. Most are the ESLint toolchain (`brace-expansion`/`minimatch`), devDependencies only. Three (`postcss`, `sharp`, `next`) are nested under `next` itself, a production dependency — `npm audit fix --force` is the only offered fix and it proposes downgrading to `next@9.3.3`, not viable. Deliberately left, but worth a second look since it's not purely a dev-tooling issue
-- `CLAUDE.md` is now just `@AGENTS.md`. The architecture tree, design style guide, UX guidelines, constraints, and repo etiquette that used to live in `CLAUDE.md` are gone from the repo — nothing restores them yet
-- `docs/project_spec.md`'s Phase 1 slice description still says "all three timing modes"; that's stale against today's MVP-scope decision (individual problems only, exam mode deferred) and needs reconciling in the spec itself
-- The spec's open question — sample a past exam and count what fraction of sub-questions grade with `exact` — is still unanswered and still gates how central `/api/grade` is
+- 2024 and 2025 full exam PDFs in `pdfs/` are not ingested — content is six problems from one year only
+- `npm audit`: 12 high-severity advisories, unchanged. Most are the ESLint toolchain (`brace-expansion`/`minimatch`), devDependencies only. Three (`postcss`, `sharp`, `next`) are nested under `next` itself, a production dependency — `npm audit fix --force` is the only offered fix and it proposes downgrading to `next@9.3.3`, not viable. Deliberately left, but worth a second look since it's not purely a dev-tooling issue
+- `app/layout.tsx` still imports `Geist`/`Geist_Mono` from `next/font/google` and applies them as CSS variables on `<html>`, but nothing reads those variables now that `body`/`.problem-body` are hardcoded to Noto Sans/Charis SIL in `app/globals.css` — dead code left from the scaffold
+- `CLAUDE.md` was restored (`dd773f0`) but its architecture tree and Phase 1 slice description still mention `app/exam/` and "all three timing modes," contradicting the MVP-scope narrowing recorded the same day in `docs/architecture.md` — needs reconciling
+- `docs/project_spec.md`'s Phase 1 slice description still says "all three timing modes" — same staleness, still unreconciled
 
 **Next up**
 
-1. Sample the downloaded problems (six pairs now in `pdfs/`) and count what fraction of sub-questions can grade with `exact`. Still the spec's open question, still belongs before content work goes further.
-2. Write `content/schema.ts` (Zod `Problem`/`Question`) and `content/taxonomy.ts`, then wire real validation into `scripts/ingest/validate.ts`.
-3. Run the Phase 1 slice on `pdfs/NACLO-2026-Exam-Problem1.pdf`: transcribe one problem end to end and time it.
+1. Rename the Vercel project so the URL matches `gloss.`
+2. Reconcile `CLAUDE.md` and `docs/project_spec.md` against actual MVP scope (drop `app/exam/` / "all three timing modes," or explicitly re-scope)
+3. Decide whether and when to ingest the 2024 and 2025 exam PDFs already sitting in `pdfs/`
+4. Remove the unused Geist font import from `app/layout.tsx`
 
 ## 2026-07-29
 
