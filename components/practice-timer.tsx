@@ -1,8 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { clearTimer, formatDuration, readTimer, remainingMs, startTimer } from "@/lib/timer";
-import { readProgress, setDefaultTimerMinutes } from "@/lib/progress";
+import {
+  clearTimer,
+  formatDuration,
+  remainingMs,
+  startTimer,
+  useStoredTimer,
+} from "@/lib/timer";
+import { setDefaultTimerMinutes, useProgress } from "@/lib/progress";
 
 /**
  * A pacing tool, not a punishment. At expiry a banner appears and the input
@@ -16,41 +22,26 @@ export function PracticeTimer({
   problemId: string;
   suggestedMinutes: number;
 }) {
-  const [minutes, setMinutes] = useState(String(suggestedMinutes));
-  const [running, setRunning] = useState(false);
-  const [left, setLeft] = useState<number | null>(null);
+  const saved = useStoredTimer(problemId);
+  const { defaultTimerMinutes } = useProgress();
+  const [draft, setDraft] = useState<string | null>(null);
+  const [now, setNow] = useState(() => Date.now());
 
-  // Restore an in-flight timer after a refresh.
+  // Display tick only. Remaining time is always recomputed from the stored
+  // timestamp, so backgrounding the tab and reloading both behave.
   useEffect(() => {
-    const preset = readProgress().defaultTimerMinutes;
-    if (preset) setMinutes(String(preset));
-
-    const saved = readTimer(problemId);
-    if (saved) {
-      setRunning(true);
-      setLeft(remainingMs(saved));
-    }
-  }, [problemId]);
-
-  // Display tick. Remaining time is always recomputed from the timestamp.
-  useEffect(() => {
-    if (!running) return;
-    const id = window.setInterval(() => {
-      const saved = readTimer(problemId);
-      if (!saved) {
-        setRunning(false);
-        return;
-      }
-      setLeft(remainingMs(saved));
-    }, 1000);
+    if (!saved) return;
+    const id = window.setInterval(() => setNow(Date.now()), 1000);
     return () => window.clearInterval(id);
-  }, [running, problemId]);
+  }, [saved]);
 
-  const expired = running && left !== null && left <= 0;
+  const minutes = draft ?? String(defaultTimerMinutes ?? suggestedMinutes);
+  const left = saved ? remainingMs(saved, now) : 0;
+  const expired = Boolean(saved) && left <= 0;
 
   return (
     <div className="mt-6 border border-rule bg-white px-4 py-3">
-      {!running ? (
+      {!saved ? (
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
           <span className="text-[0.7rem] font-semibold tracking-[0.14em] text-ink-soft uppercase">
             Timer
@@ -61,7 +52,7 @@ export function PracticeTimer({
               min={1}
               max={180}
               value={minutes}
-              onChange={(e) => setMinutes(e.target.value)}
+              onChange={(e) => setDraft(e.target.value)}
               className="w-16 border border-input bg-white px-2 py-1 text-[0.9rem] tabular-nums"
               aria-label="Minutes"
             />
@@ -72,9 +63,8 @@ export function PracticeTimer({
             onClick={() => {
               const m = Number(minutes);
               if (!Number.isFinite(m) || m <= 0) return;
+              setNow(Date.now());
               startTimer(problemId, m);
-              setRunning(true);
-              setLeft(m * 60_000);
             }}
             className="border border-ink px-3 py-1 text-xs font-semibold tracking-wide uppercase hover:bg-ink hover:text-paper"
           >
@@ -101,16 +91,12 @@ export function PracticeTimer({
               className={`text-xl tabular-nums ${expired ? "text-mark" : "text-ink"}`}
               aria-live="polite"
             >
-              {formatDuration(left ?? 0)}
+              {formatDuration(left)}
             </span>
           </div>
           <button
             type="button"
-            onClick={() => {
-              clearTimer(problemId);
-              setRunning(false);
-              setLeft(null);
-            }}
+            onClick={() => clearTimer(problemId)}
             className="text-[0.78rem] text-ink-soft underline underline-offset-2 hover:text-ink"
           >
             Stop

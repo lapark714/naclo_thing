@@ -16,14 +16,17 @@ type Props = {
   problemId: string;
   question: ClientQuestion;
   onResolved: (questionId: string, correct: boolean, selfGraded: boolean) => void;
+  /** Set when the whole part has been revealed from the help popover. */
+  revealedAnswer?: string;
 };
 
-export function QuestionRow({ problemId, question, onResolved }: Props) {
+export function QuestionRow({ problemId, question, onResolved, revealedAnswer }: Props) {
   const [value, setValue] = useState("");
   const [verdict, setVerdict] = useState<Verdict>({ state: "unanswered" });
   const [flagged, setFlagged] = useState(false);
 
-  const settled = verdict.state === "correct" || verdict.state === "revealed";
+  const settled =
+    verdict.state === "correct" || verdict.state === "revealed" || Boolean(revealedAnswer);
 
   async function check() {
     if (question.gradingMode === "exact") {
@@ -147,6 +150,12 @@ export function QuestionRow({ problemId, question, onResolved }: Props) {
           )}
         </div>
       </div>
+
+      {revealedAnswer && verdict.state !== "correct" && (
+        <p className="mt-1.5 text-[0.82rem] text-ink-soft">
+          Answer: <span className="data font-semibold text-ink">{revealedAnswer}</span>
+        </p>
+      )}
 
       <Feedback
         verdict={verdict}

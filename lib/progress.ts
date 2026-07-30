@@ -5,12 +5,17 @@
  * The cost is that progress does not follow you between devices.
  */
 
+import { useSyncExternalStore } from "react";
+
 const KEY = "gloss.progress.v1";
 
 export type ProblemProgress = {
   solved: boolean;
   xpEarned: number;
+  /** Written hint tiers taken, 0–3. */
   hintsUsed: number;
+  /** Request-time AI hints taken. Costs more per hint than the written ones. */
+  aiHintsUsed: number;
   selfGraded: boolean;
   /** questionId -> whether it has been answered correctly */
   answered: Record<string, boolean>;
@@ -25,7 +30,14 @@ export type Progress = {
 const EMPTY: Progress = { problems: {}, defaultTimerMinutes: null };
 
 export function blankProblem(): ProblemProgress {
-  return { solved: false, xpEarned: 0, hintsUsed: 0, selfGraded: false, answered: {} };
+  return {
+    solved: false,
+    xpEarned: 0,
+    hintsUsed: 0,
+    aiHintsUsed: 0,
+    selfGraded: false,
+    answered: {},
+  };
 }
 
 export function readProgress(): Progress {
@@ -74,9 +86,64 @@ export function setDefaultTimerMinutes(minutes: number | null) {
 
 export function resetProblem(problemId: string) {
   const all = readProgress();
-  const { [problemId]: _removed, ...rest } = all.problems;
-  write({ ...all, problems: rest });
+  const problems = { ...all.problems };
+  delete problems[problemId];
+  write({ ...all, problems });
 }
+
+/* ---------------------------------------------------------------------------
+   Subscription. localStorage is the single source of truth, so components read
+   it through useSyncExternalStore rather than copying it into local state on
+   mount — that copy is what causes cascading renders and stale reads.
+   --------------------------------------------------------------------------- */
+
+function subscribe(onChange: () => void) {
+  window.addEventListener("gloss:progress", onChange);
+  window.addEventListener("storage", onChange);
+  return () => {
+    window.removeEventListener("gloss:progress", onChange);
+    window.removeEventListener("storage", onChange);
+  };
+}
+
+// getSnapshot must return a stable reference when nothing has changed, so the
+// parsed value is memoised against the raw string.
+let lastRaw: string | null = null;
+let lastParsed: Progress = EMPTY;
+
+function getSnapshot(): Progress {
+  let raw: string | null = null;
+  try {
+    raw = window.localStorage.getItem(KEY);
+  } catch {
+    return EMPTY;
+  }
+  if (raw === lastRaw) return lastParsed;
+  lastRaw = raw;
+  lastParsed = readProgress();
+  return lastParsed;
+}
+
+function getServerSnapshot(): Progress {
+  return EMPTY;
+}
+
+export function useProgress(): Progress {
+  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+}
+
+export function useProblemProgress(problemId: string): ProblemProgress {
+  return useProgress().problems[problemId] ?? EMPTY_PROBLEM;
+}
+
+const EMPTY_PROBLEM: ProblemProgress = {
+  solved: false,
+  xpEarned: 0,
+  hintsUsed: 0,
+  aiHintsUsed: 0,
+  selfGraded: false,
+  answered: {},
+};
 
 /** Per-concept coverage: how many problems carrying each tag are solved. */
 export function coverageByConcept(

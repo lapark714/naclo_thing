@@ -1,30 +1,33 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import type { ProblemSummary } from "@/lib/content";
-import { coverageByConcept } from "@/lib/progress";
+import { useProgress } from "@/lib/progress";
 
 /**
  * Coverage per concept rather than a lifetime point total. For a student
  * cramming in January, "morphology 2/4" is the more useful number.
  */
 export function ConceptCoverage({ problems }: { problems: ProblemSummary[] }) {
-  const [coverage, setCoverage] = useState<Record<string, { solved: number; total: number }>>({});
-  const [ready, setReady] = useState(false);
+  const progress = useProgress();
 
-  useEffect(() => {
-    const read = () => setCoverage(coverageByConcept(problems));
-    read();
-    setReady(true);
-    window.addEventListener("gloss:progress", read);
-    return () => window.removeEventListener("gloss:progress", read);
-  }, [problems]);
+  const entries = useMemo(() => {
+    const out: Record<string, { solved: number; total: number }> = {};
+    for (const problem of problems) {
+      const solved = progress.problems[problem.id]?.solved ?? false;
+      for (const tag of problem.conceptTags) {
+        out[tag] ??= { solved: 0, total: 0 };
+        out[tag].total += 1;
+        if (solved) out[tag].solved += 1;
+      }
+    }
+    return Object.entries(out).sort(
+      (a, b) => b[1].total - a[1].total || a[0].localeCompare(b[0]),
+    );
+  }, [problems, progress]);
 
-  const entries = Object.entries(coverage).sort(
-    (a, b) => b[1].total - a[1].total || a[0].localeCompare(b[0]),
-  );
-  if (!ready || entries.length === 0) return null;
+  if (entries.length === 0) return null;
 
   const anySolved = entries.some(([, v]) => v.solved > 0);
 

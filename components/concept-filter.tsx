@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { ProblemSummary } from "@/lib/content";
-import { readProgress } from "@/lib/progress";
+import { useProgress } from "@/lib/progress";
 
 type Props = { problems: ProblemSummary[] };
 
@@ -14,14 +14,7 @@ type Props = { problems: ProblemSummary[] };
 export function ConceptFilter({ problems }: Props) {
   const [concepts, setConcepts] = useState<string[]>([]);
   const [difficulty, setDifficulty] = useState<string | null>(null);
-  const [solvedState, setSolvedState] = useState<Record<string, boolean>>({});
-
-  useEffect(() => {
-    const p = readProgress();
-    const map: Record<string, boolean> = {};
-    for (const [id, entry] of Object.entries(p.problems)) map[id] = entry.solved;
-    setSolvedState(map);
-  }, []);
+  const progress = useProgress();
 
   const allConcepts = useMemo(() => {
     const counts = new Map<string, number>();
@@ -135,7 +128,7 @@ export function ConceptFilter({ problems }: Props) {
                   </span>
                 </span>
                 <span className="shrink-0 text-[0.78rem] text-ink-soft tabular-nums">
-                  {solvedState[p.id] ? (
+                  {progress.problems[p.id]?.solved ? (
                     <span className="text-good">solved</span>
                   ) : (
                     <>
