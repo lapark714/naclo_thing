@@ -9,6 +9,8 @@ This file will hold the project's development status and thus document whatever 
 - Scaffolded Next.js 16 (App Router, TypeScript, Tailwind, ESLint), `app/` at the repo root
 - Replaced the boilerplate landing page with a coming-soon page; set real metadata in `app/layout.tsx`
 - Deployed to production and verified it publicly: <https://naclo-thing.vercel.app>
+- Renamed the site to `gloss.` (tab title and landing heading)
+- Tidied the repo: `project_spec.md` and `brainstorm.md` moved into `docs/`, unused scaffold SVGs deleted, `public/` now empty
 
 **Deployment notes — four separate gates had to clear**
 
@@ -26,6 +28,7 @@ The site is live and public, but it is a placeholder only. No content records, n
 - `app/layout.tsx` loads Geist from Google Fonts. The spec requires self-hosted Noto Sans subsets and Charis SIL for IPA — a remote font fetch cannot ship with problem content
 - `package.json` still lacks the `validate` script that `CLAUDE.md` lists as a pre-push step
 - `package.json` name is still `naclo-scaffold` from the temp directory
+- The Vercel project is still named `naclo-thing`, so the URL does not match the `gloss.` name. Renaming it changes the URL, so do it before sharing the link widely
 
 **Next up**
 

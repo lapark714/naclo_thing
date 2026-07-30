@@ -20,7 +20,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ### Changed
 
+- Renamed the site to `gloss.` — browser title in `app/layout.tsx`, landing heading in `app/page.tsx`
+- Moved `project_spec.md` and `brainstorm.md` into `docs/`, leaving only tooling-required config at the repo root
 - `.gitignore` broadened from `.env` to `.env*`
+
+### Removed
+
+- Unused create-next-app SVGs from `public/` (`file`, `globe`, `next`, `vercel`, `window`)
 
 ### Notes
 
