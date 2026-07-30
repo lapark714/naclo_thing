@@ -24,3 +24,4 @@ next-env.d.ts
 # naclo source pdfs
 /pdfs
 .env*
+!.env.example
