@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "tsx scripts/ingest/sync-assets.ts",
     "dev": "next dev",
+    "prebuild": "tsx scripts/ingest/sync-assets.ts && tsx scripts/ingest/validate.ts",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "validate": "tsx scripts/ingest/validate.ts"
+    "validate": "tsx scripts/ingest/validate.ts",
+    "sync-assets": "tsx scripts/ingest/sync-assets.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.115.0",

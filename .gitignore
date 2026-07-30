@@ -25,3 +25,6 @@ next-env.d.ts
 /pdfs
 .env*
 !.env.example
+
+# generated from content/assets by npm run sync-assets
+/public/content-assets

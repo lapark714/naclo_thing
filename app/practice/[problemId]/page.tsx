@@ -1,0 +1,98 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { getProblem, getPublishedProblems, toClientQuestions } from "@/lib/content";
+import { ProblemView } from "@/components/problem-view";
+
+export function generateStaticParams() {
+  return getPublishedProblems().map((p) => ({ problemId: p.id }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ problemId: string }>;
+}): Promise<Metadata> {
+  const { problemId } = await params;
+  const problem = getProblem(problemId);
+  if (!problem) return { title: "Problem not found" };
+  return {
+    title: `${problem.title} · gloss.`,
+    description: `NACLO ${problem.year} ${problem.round} round, problem ${problem.letter}. ${problem.conceptTags.join(", ")}.`,
+  };
+}
+
+export default async function ProblemPage({
+  params,
+}: {
+  params: Promise<{ problemId: string }>;
+}) {
+  const { problemId } = await params;
+  const problem = getProblem(problemId);
+  if (!problem) notFound();
+
+  return (
+    <article className="mx-auto max-w-3xl px-5 py-10 sm:px-8">
+      <Link
+        href="/practice"
+        className="text-[0.8rem] text-ink-soft underline underline-offset-2 hover:text-ink"
+      >
+        ← All problems
+      </Link>
+
+      <header className="mt-6 border-b border-ink pb-5">
+        <p className="text-[0.7rem] font-semibold tracking-[0.16em] text-ink-soft uppercase">
+          {problem.year} · {problem.round} round · {problem.letter}
+          <span className="text-ink-faint"> · {problem.officialPoints} points</span>
+        </p>
+        <h1 className="font-heading mt-2 text-3xl leading-tight sm:text-4xl">{problem.title}</h1>
+        <p className="mt-2 text-[0.88rem] text-ink-soft">
+          {problem.authors.join(" & ")}
+          <span className="text-ink-faint">
+            {" "}
+            · {problem.conceptTags.join(" · ")} · {problem.formTag}
+          </span>
+        </p>
+      </header>
+
+      <div className="mt-7">
+        <ProblemView
+          problemId={problem.id}
+          bodyHtml={problem.bodyHtml}
+          questions={toClientQuestions(problem)}
+          hints={problem.hints}
+          explanationHtml={problem.explanationHtml}
+          officialPoints={problem.officialPoints}
+          officialTimeMinutes={problem.officialTimeMinutes}
+        />
+      </div>
+
+      <footer className="mt-12 border-t border-rule pt-5 text-[0.8rem] text-ink-soft">
+        <p>
+          Problem by {problem.authors.join(" & ")} for the North American Computational Linguistics
+          Open Competition, {problem.year}. Reproduced for practice.
+        </p>
+        <p className="mt-2 flex flex-wrap gap-x-4">
+          <a
+            href={problem.sourcePdfUrl}
+            className="underline underline-offset-2 hover:text-ink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Original problem PDF
+          </a>
+          {problem.solutionPdfUrl && (
+            <a
+              href={problem.solutionPdfUrl}
+              className="underline underline-offset-2 hover:text-ink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Official solution PDF
+            </a>
+          )}
+        </p>
+      </footer>
+    </article>
+  );
+}
