@@ -159,7 +159,7 @@ The approach is hybrid, decided per problem:
 
 - Prose becomes Unicode HTML.
 
-- Data tables become real '<table>' markup, transcribed and checked cell by cell.
+- Data tables become real `<table>` markup, transcribed and checked cell by cell.
 
 - Glyph specimens and diagrams get cropped out of the PDF and stored as images with alt text.
 
