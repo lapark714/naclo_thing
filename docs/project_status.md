@@ -2,6 +2,35 @@
 
 This file will hold the project's development status and thus document whatever large updates/accomplishments on the project have been made day-by-day. It is meant to help keep track of where things were left off from the previous day, as a personal reminder.
 
+## 2026-07-30
+
+**Done**
+
+- Scaffolded Next.js 16 (App Router, TypeScript, Tailwind, ESLint), `app/` at the repo root
+- Replaced the boilerplate landing page with a coming-soon page; set real metadata in `app/layout.tsx`
+- Deployed to production and verified it publicly: <https://naclo-thing.vercel.app>
+
+**Deployment notes — four separate gates had to clear**
+
+1. Vercel's GitHub App lacked access to the repo, so no branches appeared
+2. Commits carried a fabricated author email (`laurence@MacBook-Air-3.local`); Vercel refuses those. Fixed with `git config --global user.email` plus a new commit — history keeps the old address
+3. Deployment Protection was on, redirecting anonymous visitors to a Vercel login
+4. The project had no Framework Preset, so `next build` ran and passed but the output was served as a static folder, returning 404 on a green build. Pinned in `vercel.json`
+
+**Where things stand**
+
+The site is live and public, but it is a placeholder only. No content records, no schema, no ingest scripts. Everything below `app/` in the architecture tree is still a target.
+
+**Carried over / needs fixing**
+
+- `app/layout.tsx` loads Geist from Google Fonts. The spec requires self-hosted Noto Sans subsets and Charis SIL for IPA — a remote font fetch cannot ship with problem content
+- `package.json` still lacks the `validate` script that `CLAUDE.md` lists as a pre-push step
+- `package.json` name is still `naclo-scaffold` from the temp directory
+
+**Next up**
+
+Unchanged from 2026-07-29 below, except that item 2 (scaffold) is now done.
+
 ## 2026-07-29
 
 **Done**
