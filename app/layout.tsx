@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NACLO Prep",
+  title: "gloss.",
   description:
     "Practice the NACLO back catalogue by concept, with hints, worked explanations, and a clock you control.",
 };
