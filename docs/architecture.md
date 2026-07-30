@@ -33,7 +33,7 @@ content/problems/<id>.json                     reviewStatus: 'drafted'
    ↓  lib/progress.ts → localStorage. Explanation unlocks after the attempt.
 ```
 
-Exam mode runs the same path over a whole paper under its official time and locks at expiry; practice shows a banner and leaves the input live.
+**MVP scope: individual problems only.** Full timed exam mode is deferred. Problem records still carry `year`, `round`, `officialPoints`, and `officialTimeMinutes`, so whole papers can be assembled later without a schema change.
 
 ## Component Architecture
 
@@ -41,7 +41,6 @@ Exam mode runs the same path over a whole paper under its official time and lock
 - `app/page.tsx` — Landing, per-concept coverage
 - `app/practice/page.tsx` — Concept / round / difficulty filters over the build index
 - `app/practice/[problemId]/page.tsx` — Single problem, statically generated
-- `app/exam/[examId]/page.tsx` — Full past paper, official total time, hard cutoff
 
 ### Frontend Components
 - `problem-view.tsx` — Main orchestrator: body, questions, hints, timer, explanation
@@ -49,7 +48,7 @@ Exam mode runs the same path over a whole paper under its official time and lock
 - `question-card.tsx` — One sub-question, branches on `gradingMode`
 - `hint-ladder.tsx` — Three tiers in order, XP cost shown before reveal
 - `explanation-panel.tsx` — Post-attempt walkthrough
-- `timer.tsx` — Countdown display; soft banner in practice, hard lock in exam
+- `timer.tsx` — Countdown display; banner at expiry, input stays live
 - `concept-filter.tsx` — Client-side filtering over the prebuilt index
 
 ### API Layer

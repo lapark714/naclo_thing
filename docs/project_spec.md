@@ -76,13 +76,15 @@ Time taken does not affect XP. A speed bonus would reward guessing, which is the
 
 **Full exam mode** runs a complete past paper under its official total time and stops hard at expiry, scored against official points. This is the one place a hard cutoff belongs, because the whole point is simulating the real thing.
 
+*Deferred as of 2026-07-30.* The MVP covers individual problems only. Problem records still carry `year`, `round`, `officialPoints`, and `officialTimeMinutes`, so whole papers can be assembled later without a schema change.
+
 ### Attribution
 
 NACLO problems credit individual authors. Every problem page carries the byline and links back to the original problem and solution PDFs.
 
 ## NOT in scope for v1
 
-Accounts, leaderboards, a native app, and AI-generated original problems. All reasonable later. None needed to find out whether the core idea works.
+Accounts, leaderboards, a native app, and AI-generated original problems. Full timed exam mode is also deferred (see Timing). All reasonable later. None needed to find out whether the core idea works.
 
 ---
 
@@ -278,7 +280,7 @@ lib/
 
 ## Phase 1
 
-Ingest one full past exam, roughly eight problems, and take it all the way through: tagged, hint-laddered, explained, grading modes assigned, published. Build practice mode, hints, explanations, and all three timing modes over just those.
+Ingest one full past exam, roughly eight problems, and take it all the way through: tagged, hint-laddered, explained, grading modes assigned, published. Build practice mode, hints, explanations, and both practice timing modes (untimed and the custom per-question timer) over just those.
 
 The goal isn't a demo. It's to find out how long one problem actually takes to annotate properly, because that number decides whether the full back catalogue is a month of work or a year. Eight problems is enough to learn it and small enough to throw away if the pipeline turns out wrong.
 
