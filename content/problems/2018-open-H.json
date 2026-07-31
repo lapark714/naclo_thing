@@ -1,0 +1,28 @@
+{
+  "id": "2018-open-H",
+  "tier": "catalogue",
+  "year": 2018,
+  "round": "open",
+  "letter": "H",
+  "title": "N’ko, M’kay",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "writing systems"
+  ],
+  "formTag": "transliteration",
+  "difficulty": "hard",
+  "languages": [
+    "Maninka",
+    "Dyula",
+    "Bambara"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

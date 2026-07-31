@@ -1,0 +1,27 @@
+{
+  "id": "2020-open-A",
+  "tier": "catalogue",
+  "year": 2020,
+  "round": "open",
+  "letter": "A",
+  "title": "Let That Mongo!",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "phonology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "intro",
+  "languages": [
+    "Mongo"
+  ],
+  "officialPoints": 5,
+  "officialTimeMinutes": 10,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "2023-open-F",
+  "tier": "catalogue",
+  "year": 2023,
+  "round": "open",
+  "letter": "F",
+  "title": "A Calabash Calculation",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "number systems"
+  ],
+  "formTag": "calendrical and counting",
+  "difficulty": "hard",
+  "languages": [
+    "Nizaa"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

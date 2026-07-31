@@ -1,0 +1,27 @@
+{
+  "id": "2024-open-A",
+  "tier": "catalogue",
+  "year": 2024,
+  "round": "open",
+  "letter": "A",
+  "title": "Holy Roman Shorthand",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "writing systems",
+    "historical and comparative"
+  ],
+  "formTag": "transliteration",
+  "difficulty": "standard",
+  "languages": [
+    "Latin"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

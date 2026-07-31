@@ -1,0 +1,27 @@
+{
+  "id": "2024-open-H",
+  "tier": "catalogue",
+  "year": 2024,
+  "round": "open",
+  "letter": "H",
+  "title": "Evidentially, My Dear Tariana",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "semantics"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "hard",
+  "languages": [
+    "Tariana"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "2018-open-C",
+  "tier": "catalogue",
+  "year": 2018,
+  "round": "open",
+  "letter": "C",
+  "title": "All Roads Lead to Tirana",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "syntax",
+    "semantics"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "hard",
+  "languages": [
+    "Albanian"
+  ],
+  "officialPoints": 20,
+  "officialTimeMinutes": 36,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

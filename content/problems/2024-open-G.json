@@ -1,0 +1,24 @@
+{
+  "id": "2024-open-G",
+  "tier": "catalogue",
+  "year": 2024,
+  "round": "open",
+  "letter": "G",
+  "title": "At a Loss for Words",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "semantics"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "hard",
+  "languages": [],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

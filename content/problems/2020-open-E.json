@@ -1,0 +1,26 @@
+{
+  "id": "2020-open-E",
+  "tier": "catalogue",
+  "year": 2020,
+  "round": "open",
+  "letter": "E",
+  "title": "Breton Numbers",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "number systems"
+  ],
+  "formTag": "calendrical and counting",
+  "difficulty": "hard",
+  "languages": [
+    "Breton"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

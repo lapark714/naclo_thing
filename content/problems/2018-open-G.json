@@ -1,0 +1,24 @@
+{
+  "id": "2018-open-G",
+  "tier": "catalogue",
+  "year": 2018,
+  "round": "open",
+  "letter": "G",
+  "title": "By the Same Token",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "writing systems"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "standard",
+  "languages": [],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "2020-open-D",
+  "tier": "catalogue",
+  "year": 2020,
+  "round": "open",
+  "letter": "D",
+  "title": "Pay Attention",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "semantics"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "standard",
+  "languages": [],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

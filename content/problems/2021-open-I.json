@@ -1,0 +1,24 @@
+{
+  "id": "2021-open-I",
+  "tier": "catalogue",
+  "year": 2021,
+  "round": "open",
+  "letter": "I",
+  "title": "Non Sequitur",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "semantics"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "standard",
+  "languages": [],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

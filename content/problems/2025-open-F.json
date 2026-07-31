@@ -1,0 +1,24 @@
+{
+  "id": "2025-open-F",
+  "tier": "catalogue",
+  "year": 2025,
+  "round": "open",
+  "letter": "F",
+  "title": "Not Quite Right",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "semantics"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "standard",
+  "languages": [],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

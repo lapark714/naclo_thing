@@ -1,0 +1,27 @@
+{
+  "id": "2021-open-B",
+  "tier": "catalogue",
+  "year": 2021,
+  "round": "open",
+  "letter": "B",
+  "title": "Junk Mail: Letters We Don’t Need",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "writing systems",
+    "phonology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "standard",
+  "languages": [
+    "English"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

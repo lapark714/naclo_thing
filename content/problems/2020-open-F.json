@@ -1,0 +1,27 @@
+{
+  "id": "2020-open-F",
+  "tier": "catalogue",
+  "year": 2020,
+  "round": "open",
+  "letter": "F",
+  "title": "Coming into Focus",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "syntax",
+    "morphology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "hard",
+  "languages": [
+    "Paiwan"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

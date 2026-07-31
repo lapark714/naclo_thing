@@ -1,0 +1,27 @@
+{
+  "id": "2022-open-D",
+  "tier": "catalogue",
+  "year": 2022,
+  "round": "open",
+  "letter": "D",
+  "title": "Real Numbers",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "number systems",
+    "writing systems"
+  ],
+  "formTag": "calendrical and counting",
+  "difficulty": "standard",
+  "languages": [
+    "Iñupiaq"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

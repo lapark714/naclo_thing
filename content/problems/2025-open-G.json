@@ -1,0 +1,27 @@
+{
+  "id": "2025-open-G",
+  "tier": "catalogue",
+  "year": 2025,
+  "round": "open",
+  "letter": "G",
+  "title": "The Little Dog That Could Read",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "phonology",
+    "morphology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "hard",
+  "languages": [
+    "Sakata"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

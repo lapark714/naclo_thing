@@ -1,0 +1,26 @@
+{
+  "id": "2024-open-E",
+  "tier": "catalogue",
+  "year": 2024,
+  "round": "open",
+  "letter": "E",
+  "title": "Japanese From Afar",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "writing systems"
+  ],
+  "formTag": "transliteration",
+  "difficulty": "standard",
+  "languages": [
+    "Japanese"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

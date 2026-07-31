@@ -1,0 +1,24 @@
+{
+  "id": "2023-open-C",
+  "tier": "catalogue",
+  "year": 2023,
+  "round": "open",
+  "letter": "C",
+  "title": "Vloxes",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "semantics"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "hard",
+  "languages": [],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

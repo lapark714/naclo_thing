@@ -1,0 +1,27 @@
+{
+  "id": "2021-open-A",
+  "tier": "catalogue",
+  "year": 2021,
+  "round": "open",
+  "letter": "A",
+  "title": "The Tortoise and the Rabbit",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "syntax",
+    "morphology"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "standard",
+  "languages": [
+    "Malagasy"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

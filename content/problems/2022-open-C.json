@@ -1,0 +1,24 @@
+{
+  "id": "2022-open-C",
+  "tier": "catalogue",
+  "year": 2022,
+  "round": "open",
+  "letter": "C",
+  "title": "To Make a Long Story Short",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "semantics"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "hard",
+  "languages": [],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

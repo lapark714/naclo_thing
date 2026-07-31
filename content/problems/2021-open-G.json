@@ -1,0 +1,26 @@
+{
+  "id": "2021-open-G",
+  "tier": "catalogue",
+  "year": 2021,
+  "round": "open",
+  "letter": "G",
+  "title": "The Skates of Wrath",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "hard",
+  "languages": [
+    "Sauk"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

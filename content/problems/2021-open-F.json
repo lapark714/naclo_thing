@@ -1,0 +1,27 @@
+{
+  "id": "2021-open-F",
+  "tier": "catalogue",
+  "year": 2021,
+  "round": "open",
+  "letter": "F",
+  "title": "The Wiles of Reptiles",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "syntax"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "hard",
+  "languages": [
+    "Dime"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

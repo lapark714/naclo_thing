@@ -1,0 +1,27 @@
+{
+  "id": "2022-open-F",
+  "tier": "catalogue",
+  "year": 2022,
+  "round": "open",
+  "letter": "F",
+  "title": "Splash to Save",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "syntax"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "standard",
+  "languages": [
+    "Ende"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "2018-open-E",
+  "tier": "catalogue",
+  "year": 2018,
+  "round": "open",
+  "letter": "E",
+  "title": "Parties in Palauan",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "intro",
+  "languages": [
+    "Palauan"
+  ],
+  "officialPoints": 5,
+  "officialTimeMinutes": 10,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

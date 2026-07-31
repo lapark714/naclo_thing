@@ -1,0 +1,24 @@
+{
+  "id": "2018-open-D",
+  "tier": "catalogue",
+  "year": 2018,
+  "round": "open",
+  "letter": "D",
+  "title": "Intergalactic Grammars",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "syntax"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "intro",
+  "languages": [],
+  "officialPoints": 5,
+  "officialTimeMinutes": 10,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

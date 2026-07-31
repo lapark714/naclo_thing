@@ -1,0 +1,27 @@
+{
+  "id": "2021-open-C",
+  "tier": "catalogue",
+  "year": 2021,
+  "round": "open",
+  "letter": "C",
+  "title": "Versatile Verb",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "syntax"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "standard",
+  "languages": [
+    "Waama"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "2025-open-E",
+  "tier": "catalogue",
+  "year": 2025,
+  "round": "open",
+  "letter": "E",
+  "title": "Around the World in Armenian",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "historical and comparative"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "hard",
+  "languages": [
+    "Armenian"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

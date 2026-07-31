@@ -1,0 +1,26 @@
+{
+  "id": "2023-open-B",
+  "tier": "catalogue",
+  "year": 2023,
+  "round": "open",
+  "letter": "B",
+  "title": "Don’t Stress",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "phonology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "standard",
+  "languages": [
+    "Ho-Chunk"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

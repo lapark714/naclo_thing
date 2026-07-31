@@ -53,6 +53,7 @@ export function getQuestion(problemId: string, questionId: string) {
  */
 export type ProblemSummary = {
   id: string;
+  tier: Problem["tier"];
   year: number;
   round: Problem["round"];
   letter: string;
@@ -70,6 +71,7 @@ export type ProblemSummary = {
 export function getProblemIndex(): ProblemSummary[] {
   return getPublishedProblems().map((p) => ({
     id: p.id,
+    tier: p.tier,
     year: p.year,
     round: p.round,
     letter: p.letter,

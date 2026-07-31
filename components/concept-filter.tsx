@@ -14,7 +14,10 @@ type Props = { problems: ProblemSummary[] };
 export function ConceptFilter({ problems }: Props) {
   const [concepts, setConcepts] = useState<string[]>([]);
   const [difficulty, setDifficulty] = useState<string | null>(null);
+  const [playableOnly, setPlayableOnly] = useState(false);
   const progress = useProgress();
+
+  const playableCount = problems.filter((p) => p.tier === "full").length;
 
   const allConcepts = useMemo(() => {
     const counts = new Map<string, number>();
@@ -25,6 +28,7 @@ export function ConceptFilter({ problems }: Props) {
   }, [problems]);
 
   const filtered = problems.filter((p) => {
+    if (playableOnly && p.tier !== "full") return false;
     if (difficulty && p.difficulty !== difficulty) return false;
     if (concepts.length && !concepts.every((c) => p.conceptTags.includes(c))) return false;
     return true;
@@ -82,12 +86,30 @@ export function ConceptFilter({ problems }: Props) {
               </button>
             );
           })}
-          {(concepts.length > 0 || difficulty) && (
+          <button
+            type="button"
+            onClick={() => setPlayableOnly((v) => !v)}
+            aria-pressed={playableOnly}
+            className={`ml-2 border px-2.5 py-1 text-[0.82rem] transition-colors ${
+              playableOnly
+                ? "border-ink bg-ink text-paper"
+                : "border-rule-strong bg-white hover:bg-tint"
+            }`}
+          >
+            playable now
+            <span
+              className={`ml-1.5 tabular-nums ${playableOnly ? "text-paper/60" : "text-ink-faint"}`}
+            >
+              {playableCount}
+            </span>
+          </button>
+          {(concepts.length > 0 || difficulty || playableOnly) && (
             <button
               type="button"
               onClick={() => {
                 setConcepts([]);
                 setDifficulty(null);
+                setPlayableOnly(false);
               }}
               className="ml-1 text-[0.8rem] text-ink-soft underline underline-offset-2 hover:text-ink"
             >
@@ -128,7 +150,9 @@ export function ConceptFilter({ problems }: Props) {
                   </span>
                 </span>
                 <span className="shrink-0 text-[0.78rem] text-ink-soft tabular-nums">
-                  {progress.problems[p.id]?.solved ? (
+                  {p.tier !== "full" ? (
+                    <span className="text-ink-faint">not yet transcribed</span>
+                  ) : progress.problems[p.id]?.solved ? (
                     <span className="text-good">solved</span>
                   ) : (
                     <>

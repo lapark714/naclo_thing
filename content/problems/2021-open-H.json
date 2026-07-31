@@ -1,0 +1,24 @@
+{
+  "id": "2021-open-H",
+  "tier": "catalogue",
+  "year": 2021,
+  "round": "open",
+  "letter": "H",
+  "title": "Sequitur",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "writing systems"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "intro",
+  "languages": [],
+  "officialPoints": 5,
+  "officialTimeMinutes": 10,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

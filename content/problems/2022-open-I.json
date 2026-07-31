@@ -1,0 +1,27 @@
+{
+  "id": "2022-open-I",
+  "tier": "catalogue",
+  "year": 2022,
+  "round": "open",
+  "letter": "I",
+  "title": "A Cornish Conundrum",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "historical and comparative",
+    "phonology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "hard",
+  "languages": [
+    "Cornish"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

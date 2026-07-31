@@ -1,0 +1,27 @@
+{
+  "id": "2023-open-H",
+  "tier": "catalogue",
+  "year": 2023,
+  "round": "open",
+  "letter": "H",
+  "title": "My Grandmother and I",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "semantics"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "hard",
+  "languages": [
+    "Lardil"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

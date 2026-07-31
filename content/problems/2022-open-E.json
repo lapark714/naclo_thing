@@ -1,0 +1,27 @@
+{
+  "id": "2022-open-E",
+  "tier": "catalogue",
+  "year": 2022,
+  "round": "open",
+  "letter": "E",
+  "title": "Sleeping in the Shade",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "phonology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "standard",
+  "languages": [
+    "Ik"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

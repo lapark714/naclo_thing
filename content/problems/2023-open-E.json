@@ -1,0 +1,24 @@
+{
+  "id": "2023-open-E",
+  "tier": "catalogue",
+  "year": 2023,
+  "round": "open",
+  "letter": "E",
+  "title": "Bengalese Finch Song",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "semantics"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "intro",
+  "languages": [],
+  "officialPoints": 5,
+  "officialTimeMinutes": 10,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

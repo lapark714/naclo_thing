@@ -1,0 +1,27 @@
+{
+  "id": "2021-open-E",
+  "tier": "catalogue",
+  "year": 2021,
+  "round": "open",
+  "letter": "E",
+  "title": "The Script of Your Dreams",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "writing systems"
+  ],
+  "formTag": "transliteration",
+  "difficulty": "hard",
+  "languages": [
+    "Kongo",
+    "Lingala"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

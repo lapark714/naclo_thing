@@ -1,0 +1,27 @@
+{
+  "id": "2022-open-H",
+  "tier": "catalogue",
+  "year": 2022,
+  "round": "open",
+  "letter": "H",
+  "title": "From Soup to Nuts",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "semantics"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "hard",
+  "languages": [
+    "Tseltal"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

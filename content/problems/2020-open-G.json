@@ -1,0 +1,24 @@
+{
+  "id": "2020-open-G",
+  "tier": "catalogue",
+  "year": 2020,
+  "round": "open",
+  "letter": "G",
+  "title": "Password Confusion",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "writing systems"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "standard",
+  "languages": [],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

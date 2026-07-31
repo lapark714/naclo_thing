@@ -1,0 +1,27 @@
+{
+  "id": "2020-open-B",
+  "tier": "catalogue",
+  "year": 2020,
+  "round": "open",
+  "letter": "B",
+  "title": "A Cat in a Hat",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "writing systems"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "hard",
+  "languages": [
+    "Chintang"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "2025-open-H",
+  "tier": "catalogue",
+  "year": 2025,
+  "round": "open",
+  "letter": "H",
+  "title": "There Is Another Hand",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "historical and comparative",
+    "number systems"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "hard",
+  "languages": [
+    "Basque"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

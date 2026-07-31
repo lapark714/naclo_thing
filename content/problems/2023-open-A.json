@@ -1,0 +1,25 @@
+{
+  "id": "2023-open-A",
+  "tier": "catalogue",
+  "year": 2023,
+  "round": "open",
+  "letter": "A",
+  "title": "The Way We Were",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "historical and comparative",
+    "syntax"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "hard",
+  "languages": [],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

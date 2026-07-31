@@ -1,0 +1,27 @@
+{
+  "id": "2018-open-A",
+  "tier": "catalogue",
+  "year": 2018,
+  "round": "open",
+  "letter": "A",
+  "title": "At Ease in Gilbertese",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "syntax"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "standard",
+  "languages": [
+    "Gilbertese"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

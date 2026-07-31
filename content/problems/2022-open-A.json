@@ -1,0 +1,26 @@
+{
+  "id": "2022-open-A",
+  "tier": "catalogue",
+  "year": 2022,
+  "round": "open",
+  "letter": "A",
+  "title": "Lines in the Sand",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "writing systems"
+  ],
+  "formTag": "transliteration",
+  "difficulty": "standard",
+  "languages": [
+    "Raga"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

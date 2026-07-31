@@ -40,33 +40,70 @@ export const Asset = z.object({
   alt: z.string(),
 });
 
-export const Problem = z.object({
-  id: z.string(), // "2026-open-A"
-  year: z.number().int(),
-  round: z.enum(["open", "invitational"]),
-  letter: z.string(),
-  title: z.string(),
-  authors: z.array(z.string()).min(1),
-  sourcePdfUrl: z.string().url(),
-  solutionPdfUrl: z.string().url().optional(),
+/**
+ * How much of a problem has been ingested.
+ *
+ * `full`      — transcribed, keyed, hint-laddered, explained. Playable.
+ * `catalogue` — metadata only: findable and filterable, links out to the
+ *               original booklet. Not playable until someone transcribes it.
+ *
+ * The tier exists so the archive can be discoverable long before it is all
+ * transcribed, without pretending a catalogue entry is a practice problem.
+ */
+export const Tier = z.enum(["full", "catalogue"]);
+export type Tier = z.infer<typeof Tier>;
 
-  conceptTags: z.array(z.string()).min(1),
-  formTag: z.string(),
-  difficulty: z.enum(["intro", "standard", "hard"]),
-  languages: z.array(z.string()).default([]),
+export const Problem = z
+  .object({
+    id: z.string(), // "2026-open-A"
+    tier: Tier.default("full"),
+    year: z.number().int(),
+    round: z.enum(["open", "invitational"]),
+    letter: z.string(),
+    title: z.string(),
+    /** Empty on catalogue entries: the booklets carry one blanket copyright
+     *  rather than per-problem bylines, so the credit comes from the original. */
+    authors: z.array(z.string()).default([]),
+    sourcePdfUrl: z.string().url(),
+    solutionPdfUrl: z.string().url().optional(),
 
-  officialPoints: z.number(),
-  /** Exam budget, and the basis for the suggested per-question timer. */
-  officialTimeMinutes: z.number(),
+    conceptTags: z.array(z.string()).min(1),
+    formTag: z.string(),
+    difficulty: z.enum(["intro", "standard", "hard"]),
+    languages: z.array(z.string()).default([]),
 
-  bodyHtml: z.string(),
-  assets: z.array(Asset).default([]),
+    officialPoints: z.number(),
+    /** Exam budget, and the basis for the suggested per-question timer. */
+    officialTimeMinutes: z.number(),
 
-  questions: z.array(Question).min(1),
-  hints: z.array(Hint).length(3),
-  explanationHtml: z.string(),
+    bodyHtml: z.string().default(""),
+    assets: z.array(Asset).default([]),
 
-  /** The build serves only "published". This is what keeps drafts off the site. */
-  reviewStatus: z.enum(["drafted", "reviewed", "published"]),
-});
+    questions: z.array(Question).default([]),
+    hints: z.array(Hint).default([]),
+    explanationHtml: z.string().default(""),
+
+    /** The build serves only "published". This is what keeps drafts off the site. */
+    reviewStatus: z.enum(["drafted", "reviewed", "published"]),
+  })
+  // A full record must actually be playable. Catalogue records are exempt,
+  // which is the only thing the tier buys them.
+  .superRefine((p, ctx) => {
+    if (p.tier !== "full") return;
+    if (p.questions.length < 1) {
+      ctx.addIssue({ code: "custom", path: ["questions"], message: "a full record needs at least one question" });
+    }
+    if (p.hints.length !== 3) {
+      ctx.addIssue({ code: "custom", path: ["hints"], message: "a full record needs exactly 3 hints" });
+    }
+    if (!p.bodyHtml.trim()) {
+      ctx.addIssue({ code: "custom", path: ["bodyHtml"], message: "a full record needs a transcribed body" });
+    }
+    if (!p.explanationHtml.trim()) {
+      ctx.addIssue({ code: "custom", path: ["explanationHtml"], message: "a full record needs an explanation" });
+    }
+    if (p.authors.length < 1) {
+      ctx.addIssue({ code: "custom", path: ["authors"], message: "a full record needs a byline" });
+    }
+  });
 export type Problem = z.infer<typeof Problem>;

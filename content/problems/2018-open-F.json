@@ -1,0 +1,27 @@
+{
+  "id": "2018-open-F",
+  "tier": "catalogue",
+  "year": 2018,
+  "round": "open",
+  "letter": "F",
+  "title": "A Match Made in Vietnam",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "semantics"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "hard",
+  "languages": [
+    "Vietnamese"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

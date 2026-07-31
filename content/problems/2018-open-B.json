@@ -1,0 +1,28 @@
+{
+  "id": "2018-open-B",
+  "tier": "catalogue",
+  "year": 2018,
+  "round": "open",
+  "letter": "B",
+  "title": "The Pame Game",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "phonology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "hard",
+  "languages": [
+    "Northern Pame",
+    "Central Pame"
+  ],
+  "officialPoints": 20,
+  "officialTimeMinutes": 36,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "2025-open-B",
+  "tier": "catalogue",
+  "year": 2025,
+  "round": "open",
+  "letter": "B",
+  "title": "Swidden in Plain Sight",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "phonology",
+    "morphology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "standard",
+  "languages": [
+    "Kri"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

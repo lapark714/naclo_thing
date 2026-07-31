@@ -1,0 +1,26 @@
+{
+  "id": "2024-open-C",
+  "tier": "catalogue",
+  "year": 2024,
+  "round": "open",
+  "letter": "C",
+  "title": "Happy Birthday!",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology"
+  ],
+  "formTag": "calendrical and counting",
+  "difficulty": "standard",
+  "languages": [
+    "Ewe"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

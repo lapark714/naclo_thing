@@ -1,0 +1,25 @@
+{
+  "id": "2021-open-D",
+  "tier": "catalogue",
+  "year": 2021,
+  "round": "open",
+  "letter": "D",
+  "title": "Made You Look!",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "syntax",
+    "semantics"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "standard",
+  "languages": [],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

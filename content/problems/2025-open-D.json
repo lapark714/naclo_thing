@@ -1,0 +1,24 @@
+{
+  "id": "2025-open-D",
+  "tier": "catalogue",
+  "year": 2025,
+  "round": "open",
+  "letter": "D",
+  "title": "Let’s Pivot!",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "semantics"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "standard",
+  "languages": [],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}

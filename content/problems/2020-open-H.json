@@ -1,0 +1,27 @@
+{
+  "id": "2020-open-H",
+  "tier": "catalogue",
+  "year": 2020,
+  "round": "open",
+  "letter": "H",
+  "title": "The Idalion Tablet",
+  "authors": [],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "writing systems",
+    "historical and comparative"
+  ],
+  "formTag": "transliteration",
+  "difficulty": "standard",
+  "languages": [
+    "Cypriot Greek"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "",
+  "assets": [],
+  "questions": [],
+  "hints": [],
+  "explanationHtml": "",
+  "reviewStatus": "published"
+}
