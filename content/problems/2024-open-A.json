@@ -1,11 +1,13 @@
 {
   "id": "2024-open-A",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2024,
   "round": "open",
   "letter": "A",
   "title": "Holy Roman Shorthand",
-  "authors": [],
+  "authors": [
+    "NACLO 2024 Problem Committee"
+  ],
   "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
   "conceptTags": [
     "writing systems",
@@ -18,10 +20,266 @@
   ],
   "officialPoints": 10,
   "officialTimeMinutes": 18,
-  "bodyHtml": "",
-  "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "bodyHtml": "<p>Before the printing press was invented, books had to be copied by hand. In Medieval Europe, most of this copying was done by monks. Poor lighting and other factors made this a difficult, often painful, task<sup>1</sup> &ndash; so it&rsquo;s no wonder that monks developed an extensive system of abbreviations to speed up their work!</p>\n<p>For example, if a monk wanted to write the Latin words <em class=\"data\">revertitur</em> and <em class=\"data\">illorum</em>, they might have written:</p>\n<figure><img src=\"/content-assets/2024-open-a-handwritten.png\" alt=\"Two handwritten medieval abbreviations: 'reuti' with a small hook above the u and a wavy mark at the end, standing for revertitur; and 'illo' followed by a crossed r-rotunda, standing for illorum\" /></figure>\n<p>Below are some examples of abbreviated Latin<sup>2</sup> words you might find in a Medieval manuscript. Note that we&rsquo;ve made some formatting changes when typing them up. Next to each one is the full (un-shortened) Latin word it corresponds to. In the right column, one possible English translation of the word is given. The English translations, and knowledge of Latin in general, aren&rsquo;t necessary or helpful to solve this problem.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Abbreviated Latin word</th><th>Latin word</th><th>English translation</th></tr></thead>\n<tbody>\n<tr><td><span class=\"data\">reu<sup>9</sup>ti<sup>2</sup></span></td><td><span class=\"data\">revertitur</span></td><td>she returns</td></tr>\n<tr><td><span class=\"data\">&#42833;cul</span></td><td><span class=\"data\">procul</span></td><td>far</td></tr>\n<tr><td><span class=\"data\">su<sup>9</sup></span></td><td><span class=\"data\">suus</span></td><td>its own</td></tr>\n<tr><td><span class=\"data\">&imacr;p<sup>9</sup>p7<span style=\"text-decoration: overline;\">uu</span></span></td><td><span class=\"data\">imperpetuum</span></td><td>not lasting</td></tr>\n<tr><td><span class=\"data\">illo&#42845;</span></td><td><span class=\"data\">illorum</span></td><td>of theirs</td></tr>\n<tr><td>(a)</td><td><span class=\"data\">conversatio</span></td><td>conversation</td></tr>\n<tr><td>(b)</td><td><span class=\"data\">fortis</span></td><td>strong</td></tr>\n<tr><td>(c)</td><td><span class=\"data\">complexio</span></td><td>combination</td></tr>\n<tr><td>(d)</td><td><span class=\"data\">martis</span></td><td>of Mars</td></tr>\n<tr><td>(e)</td><td><span class=\"data\">caveret</span></td><td>he might fear</td></tr>\n<tr><td>(f)</td><td><span class=\"data\">introductum</span></td><td>introduced</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>A1.</strong> Fill in the blanks (a) to (f) with the number (1&ndash;6) of the correct abbreviation from the list below:</p>\n<p style=\"line-height: 2;\">1. <span class=\"data\">f<sup>o</sup>tis</span> &nbsp;&nbsp; 2. <span class=\"data\">&imacr;t<sup>o</sup>duct&umacr;</span> &nbsp;&nbsp; 3. <span class=\"data\">9u<sup>9</sup>sa<sup>o</sup></span> &nbsp;&nbsp; 4. <span class=\"data\">9p<sup>x</sup>io</span> &nbsp;&nbsp; 5. <span class=\"data\">cau<sup>9</sup>7</span> &nbsp;&nbsp; 6. <span class=\"data\">m<sup>a</sup>tis</span></p>\n<p><strong>A2.</strong> There can be many ways to abbreviate a Latin word. Below are 5 abbreviated words. 4 of them stand for the same Latin word. Write the letter of the one that does not match the others.</p>\n<p style=\"line-height: 2;\"><strong>a.</strong> <span class=\"data\">9probatum</span> &nbsp;&nbsp; <strong>b.</strong> <span class=\"data\">c&omacr;probat&umacr;</span> &nbsp;&nbsp; <strong>c.</strong> <span class=\"data\">comp<sup>o</sup>batum</span> &nbsp;&nbsp; <strong>d.</strong> <span class=\"data\">9probat<sup>9</sup></span> &nbsp;&nbsp; <strong>e.</strong> <span class=\"data\">9probat&umacr;</span></p>\n<p>In English, we sometimes use the symbol &amp; as an abbreviation for <em>and</em>. This symbol originally comes from the Latin word <em class=\"data\">et</em>, meaning &ldquo;and&rdquo;. In some fonts, the way that this symbol is written makes it easier to see how it came from the letter <em>e</em> plus the letter <em>t</em>. Here is one example:</p>\n<figure><img src=\"/content-assets/2024-open-a-ampersand.png\" alt=\"An old-style italic ampersand in which the shapes of the letters e and t can clearly be seen\" /></figure>\n<p><strong>A3.</strong> Some monks used the symbol &amp; in their writing in the same contexts where one of the symbols listed below might be used. Which one?</p>\n<p style=\"line-height: 2;\"><strong>a.</strong> <span class=\"data\">7</span> &nbsp;&nbsp; <strong>b.</strong> <span class=\"data\">9</span> &nbsp;&nbsp; <strong>c.</strong> <span class=\"data\">&imacr;</span> &nbsp;&nbsp; <strong>d.</strong> <span class=\"data\">&omacr;</span> &nbsp;&nbsp; <strong>e.</strong> <span class=\"data\">&umacr;</span></p>\n<p><strong>A4.</strong> Give abbreviated forms for the Latin words in the table below, labeled (a) through (f). You should write your abbreviations using the numerical codes shown in the symbol bank, writing one number from 1 to 22 for each symbol. <em>Notes:</em></p>\n<ul>\n<li>Some symbols appear multiple times in the symbol bank, always with the same number. You should use a given symbol no more times than it appears in the symbol bank. For example, there are four copies of <span class=\"data\">n</span> (number 9), so you should not use the number 9 more than four times in your answers.</li>\n<li>As <strong>A2</strong> showed, there can be more than one way to abbreviate a Latin word. However, for this question (<strong>A4</strong>), there is only one correct abbreviation for each Latin word, because other ways of abbreviating would not satisfy the constraints imposed by the symbol bank.</li>\n<li>Some symbols will be left over in the symbol bank after you complete <strong>A4</strong>&mdash;see <strong>A5</strong> for more details.</li>\n</ul>\n<p>For example, if you thought the answer to (a) was <span class=\"data\">d<sup>9</sup></span>, your answer would be <strong>3 22</strong>, with 3 standing for <span class=\"data\">d</span> and 22 standing for <span class=\"data\"><sup>9</sup></span>.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Latin word</th><th>English translation</th></tr></thead>\n<tbody>\n<tr><td>(a)</td><td><span class=\"data\">procatis</span></td><td>you (plural) ask</td></tr>\n<tr><td>(b)</td><td><span class=\"data\">notarum</span></td><td>of the known ones</td></tr>\n<tr><td>(c)</td><td><span class=\"data\">decernimus</span></td><td>we decide</td></tr>\n<tr><td>(d)</td><td><span class=\"data\">congnitio</span></td><td>knowledge [alternate form of <em class=\"data\">cognitio</em>]</td></tr>\n<tr><td>(e)</td><td><span class=\"data\">crux</span></td><td>cross</td></tr>\n<tr><td>(f)</td><td><span class=\"data\">petitur</span></td><td>it is sought for</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>SYMBOL BANK</strong> (each symbol with its number and how many copies of it the bank contains):</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Number</th><th>Symbol</th><th>Copies in bank</th></tr></thead>\n<tbody>\n<tr><td>1</td><td><span class=\"data\">a</span></td><td>3</td></tr>\n<tr><td>2</td><td><span class=\"data\">c</span></td><td>4</td></tr>\n<tr><td>3</td><td><span class=\"data\">d</span></td><td>2</td></tr>\n<tr><td>4</td><td><span class=\"data\">e</span></td><td>2</td></tr>\n<tr><td>5</td><td><span class=\"data\">g</span></td><td>1</td></tr>\n<tr><td>6</td><td><span class=\"data\">i</span></td><td>3</td></tr>\n<tr><td>7</td><td><span class=\"data\">&imacr;</span></td><td>1</td></tr>\n<tr><td>8</td><td><span class=\"data\">l</span></td><td>1</td></tr>\n<tr><td>9</td><td><span class=\"data\">n</span></td><td>4</td></tr>\n<tr><td>10</td><td><span class=\"data\">o</span></td><td>1</td></tr>\n<tr><td>11</td><td><span class=\"data\"><sup>o</sup></span> (superscript o)</td><td>1</td></tr>\n<tr><td>12</td><td><span class=\"data\">p</span></td><td>1</td></tr>\n<tr><td>13</td><td><span class=\"data\">s</span></td><td>1</td></tr>\n<tr><td>14</td><td><span class=\"data\">t</span></td><td>2</td></tr>\n<tr><td>15</td><td><span class=\"data\"><sup>u</sup></span> (superscript u)</td><td>1</td></tr>\n<tr><td>16</td><td><span class=\"data\">x</span></td><td>1</td></tr>\n<tr><td>17</td><td><span class=\"data\">&#42833;</span> (p with crossed descender)</td><td>1</td></tr>\n<tr><td>18</td><td><span class=\"data\">&#42845;</span> (crossed r-rotunda)</td><td>1</td></tr>\n<tr><td>19</td><td><span class=\"data\"><sup>2</sup></span> (superscript 2)</td><td>1</td></tr>\n<tr><td>20</td><td><span class=\"data\">7</span></td><td>1</td></tr>\n<tr><td>21</td><td><span class=\"data\">9</span></td><td>1</td></tr>\n<tr><td>22</td><td><span class=\"data\"><sup>9</sup></span> (superscript 9)</td><td>2</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>A5.</strong> If you have completed <strong>A4</strong> correctly, there should be six numbers left over in the symbol bank. The symbols corresponding to these numbers can be arranged into an English word that could be a good birthday gift for a Medieval monk. What is the English word?</p>\n<hr />\n<ol>\n<li>A quote from the 10<sup>th</sup> century about manuscript copying reads: &ldquo;It dims your eyes, makes your back ache, and knits your chest and belly together. It is a terrible ordeal for the whole body.&rdquo;</li>\n<li>Latin was the language of ancient Rome. In Medieval Europe, Latin continued to be used in many contexts, such as in religious and scholarly settings.</li>\n</ol>",
+  "assets": [
+    {
+      "src": "/content-assets/2024-open-a-handwritten.png",
+      "alt": "Two handwritten medieval abbreviations: 'reuti' with a small hook above the u and a wavy mark at the end, standing for revertitur; and 'illo' followed by a crossed r-rotunda, standing for illorum"
+    },
+    {
+      "src": "/content-assets/2024-open-a-ampersand.png",
+      "alt": "An old-style italic ampersand in which the shapes of the letters e and t can clearly be seen"
+    }
+  ],
+  "questions": [
+    {
+      "id": "A1.a",
+      "part": "A1",
+      "partPrompt": "Fill in the blanks (a) to (f) with the number (1-6) of the correct abbreviation from the list above.",
+      "promptHtml": "(a) <span class=\"data\">conversatio</span> &lsquo;conversation&rsquo;",
+      "gradingMode": "exact",
+      "answerKey": "3",
+      "acceptedVariants": [],
+      "points": 0.5,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "id": "A1.b",
+      "part": "A1",
+      "promptHtml": "(b) <span class=\"data\">fortis</span> &lsquo;strong&rsquo;",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [],
+      "points": 0.5,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "id": "A1.c",
+      "part": "A1",
+      "promptHtml": "(c) <span class=\"data\">complexio</span> &lsquo;combination&rsquo;",
+      "gradingMode": "exact",
+      "answerKey": "4",
+      "acceptedVariants": [],
+      "points": 0.5,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "id": "A1.d",
+      "part": "A1",
+      "promptHtml": "(d) <span class=\"data\">martis</span> &lsquo;of Mars&rsquo;",
+      "gradingMode": "exact",
+      "answerKey": "6",
+      "acceptedVariants": [],
+      "points": 0.5,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "id": "A1.e",
+      "part": "A1",
+      "promptHtml": "(e) <span class=\"data\">caveret</span> &lsquo;he might fear&rsquo;",
+      "gradingMode": "exact",
+      "answerKey": "5",
+      "acceptedVariants": [],
+      "points": 0.5,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "id": "A1.f",
+      "part": "A1",
+      "promptHtml": "(f) <span class=\"data\">introductum</span> &lsquo;introduced&rsquo;",
+      "gradingMode": "exact",
+      "answerKey": "2",
+      "acceptedVariants": [],
+      "points": 0.5,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "id": "A2.a",
+      "part": "A2",
+      "partPrompt": "Four of the five abbreviated words stand for the same Latin word. Write the letter of the one that does not match the others.",
+      "promptHtml": "<p><strong>a.</strong> <span class=\"data\">9probatum</span> &nbsp; <strong>b.</strong> <span class=\"data\">c&omacr;probat&umacr;</span> &nbsp; <strong>c.</strong> <span class=\"data\">comp<sup>o</sup>batum</span> &nbsp; <strong>d.</strong> <span class=\"data\">9probat<sup>9</sup></span> &nbsp; <strong>e.</strong> <span class=\"data\">9probat&umacr;</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "d",
+      "acceptedVariants": [],
+      "points": 1,
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
+    },
+    {
+      "id": "A3.a",
+      "part": "A3",
+      "partPrompt": "Some monks used the symbol & in their writing in the same contexts where one of these symbols might be used. Which one?",
+      "promptHtml": "<p><strong>a.</strong> <span class=\"data\">7</span> &nbsp; <strong>b.</strong> <span class=\"data\">9</span> &nbsp; <strong>c.</strong> <span class=\"data\">&imacr;</span> &nbsp; <strong>d.</strong> <span class=\"data\">&omacr;</span> &nbsp; <strong>e.</strong> <span class=\"data\">&umacr;</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "a",
+      "acceptedVariants": [
+        "7"
+      ],
+      "points": 1,
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
+    },
+    {
+      "id": "A4.a",
+      "part": "A4",
+      "partPrompt": "Give the abbreviation for each Latin word as a sequence of symbol-bank numbers, separated by spaces (use each symbol no more times than it appears in the bank).",
+      "promptHtml": "(a) <span class=\"data\">procatis</span> &lsquo;you (plural) ask&rsquo;",
+      "gradingMode": "exact",
+      "answerKey": "17 2 1 14 6 13",
+      "acceptedVariants": [
+        "17,2,1,14,6,13",
+        "17, 2, 1, 14, 6, 13",
+        "17-2-1-14-6-13"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A4.b",
+      "part": "A4",
+      "promptHtml": "(b) <span class=\"data\">notarum</span> &lsquo;of the known ones&rsquo;",
+      "gradingMode": "exact",
+      "answerKey": "9 10 14 1 18",
+      "acceptedVariants": [
+        "9,10,14,1,18",
+        "9, 10, 14, 1, 18",
+        "9-10-14-1-18"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A4.c",
+      "part": "A4",
+      "promptHtml": "(c) <span class=\"data\">decernimus</span> &lsquo;we decide&rsquo;",
+      "gradingMode": "exact",
+      "answerKey": "3 4 2 22 9 7 22",
+      "acceptedVariants": [
+        "3,4,2,22,9,7,22",
+        "3, 4, 2, 22, 9, 7, 22",
+        "3-4-2-22-9-7-22"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A4.d",
+      "part": "A4",
+      "promptHtml": "(d) <span class=\"data\">congnitio</span> &lsquo;knowledge&rsquo;",
+      "gradingMode": "exact",
+      "answerKey": "21 5 9 6 11",
+      "acceptedVariants": [
+        "21,5,9,6,11",
+        "21, 5, 9, 6, 11",
+        "21-5-9-6-11"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A4.e",
+      "part": "A4",
+      "promptHtml": "(e) <span class=\"data\">crux</span> &lsquo;cross&rsquo;",
+      "gradingMode": "exact",
+      "answerKey": "2 15 16",
+      "acceptedVariants": [
+        "2,15,16",
+        "2, 15, 16",
+        "2-15-16"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A4.f",
+      "part": "A4",
+      "promptHtml": "(f) <span class=\"data\">petitur</span> &lsquo;it is sought for&rsquo;",
+      "gradingMode": "exact",
+      "answerKey": "12 20 6 19",
+      "acceptedVariants": [
+        "12,20,6,19",
+        "12, 20, 6, 19",
+        "12-20-6-19"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A5.a",
+      "part": "A5",
+      "partPrompt": "Six numbers are left over in the symbol bank. The symbols for those numbers can be rearranged into an English word that would make a good birthday gift for a Medieval monk. What is the word?",
+      "promptHtml": "Write the English word.",
+      "gradingMode": "exact",
+      "answerKey": "candle",
+      "acceptedVariants": [
+        "a candle"
+      ],
+      "points": 2
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Line each abbreviated word up letter by letter with its full Latin word. Every plain letter matches; wherever a strange sign appears, some letters of the full word have gone missing. Write down which letters each sign is 'covering'. (Remember that in Latin manuscripts u and v are the same letter.)",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "There are two different kinds of shortcut. (1) A bar (macron) written over a vowel stands for that vowel plus a following m or n — and a bar can cover more than one letter. (2) A superscript or special sign stands for a whole chunk of missing letters: some superscript letters mark that letters right around them (very often an r) were dropped, while the number-like signs 7, 9, superscript 9 and superscript 2 each stand for a fixed group of letters. For A4, treat the symbol bank as a jigsaw: if a letter you need (such as plain r) is not in the bank at all, you are forced to use a shortcut sign there.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Work through a given example. In ꝑcul = procul, everything after the first sign (c-u-l) already matches the end of procul, so the single sign ꝑ must be doing the work of 'pro' — expect that same sign wherever 'pro' shows up. Similarly, in illoꝛ = illorum, 'illo' matches, so the final crossed sign spells 'rum'.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What kind of puzzle is this?</h3>\n<p>Medieval scribes saved time (and ink, and parchment) by leaving letters out and marking the gap with a special sign. Our job is to work out the value of each sign by comparing the short form with the full Latin word. Two facts about medieval Latin writing help: <em>u</em> and <em>v</em> are the same letter, and a bar (called a <strong>macron</strong>) over a letter means &ldquo;an <em>m</em> or <em>n</em> was left out here.&rdquo;</p>\n\n<h3>Step 1: decode the five given examples</h3>\n<ul>\n<li><span class=\"data\">&#42833;cul</span> = <span class=\"data\">procul</span>. The letters <em>c-u-l</em> already match, so <span class=\"data\">&#42833;</span> alone = <strong>pro</strong>.</li>\n<li><span class=\"data\">illo&#42845;</span> = <span class=\"data\">illorum</span>. <em>illo</em> matches, so the crossed sign <span class=\"data\">&#42845;</span> = <strong>rum</strong>.</li>\n<li><span class=\"data\">su<sup>9</sup></span> = <span class=\"data\">suus</span>. <em>su</em> matches, so superscript <span class=\"data\"><sup>9</sup></span> = <strong>us</strong> at the end of a word.</li>\n<li><span class=\"data\">reu<sup>9</sup>ti<sup>2</sup></span> = <span class=\"data\">revertitur</span>. Read it as re-u(=v)-<sup>9</sup>-ti-<sup>2</sup>: re + v + ? + ti + ? must give re-v-<strong>er</strong>-ti-<strong>ur</strong>. So the same superscript <span class=\"data\"><sup>9</sup></span> can also stand for <strong>er</strong>, and superscript <span class=\"data\"><sup>2</sup></span> = <strong>ur</strong>.</li>\n<li><span class=\"data\">&imacr;p<sup>9</sup>p7<span style=\"text-decoration: overline;\">uu</span></span> = <span class=\"data\">imperpetuum</span>. Piece by piece: <span class=\"data\">&imacr;</span> = <strong>im</strong> (bar = missing m), <span class=\"data\">p<sup>9</sup></span> = <strong>per</strong>, then <span class=\"data\">p7</span> = <strong>pet</strong>, so <span class=\"data\">7</span> = <strong>et</strong>; finally the bar over <em>uu</em> gives <strong>uum</strong>.</li>\n</ul>\n<p>The other kind of sign is a <strong>superscript letter</strong>. It marks that letters next to it were dropped. You can see this in the A1 answer list, e.g. <span class=\"data\">m<sup>a</sup>tis</span> for a word where an <em>r</em> is missing after the <em>a</em>.</p>\n\n<h3>Step 2 (A1): match each Latin word to an abbreviation</h3>\n<p>Sound out each option using the values above and see which Latin word it produces:</p>\n<ul>\n<li>1. <span class=\"data\">f<sup>o</sup>tis</span> &rarr; f-o-(r missing)-tis = <span class=\"data\">fortis</span>, so (b) = 1.</li>\n<li>2. <span class=\"data\">&imacr;t<sup>o</sup>duct&umacr;</span> &rarr; in-t-ro-ductum = <span class=\"data\">introductum</span>, so (f) = 2.</li>\n<li>3. <span class=\"data\">9u<sup>9</sup>sa<sup>o</sup></span> &rarr; con-v-er-sa-(ti missing)-o = <span class=\"data\">conversatio</span>, so (a) = 3. Notice this also tells us the baseline sign <span class=\"data\">9</span> = <strong>con/com</strong>.</li>\n<li>4. <span class=\"data\">9p<sup>x</sup>io</span> &rarr; com-p-(le missing)-x-io = <span class=\"data\">complexio</span>, so (c) = 4.</li>\n<li>5. <span class=\"data\">cau<sup>9</sup>7</span> &rarr; c-a-v-er-et = <span class=\"data\">caveret</span>, so (e) = 5.</li>\n<li>6. <span class=\"data\">m<sup>a</sup>tis</span> &rarr; ma-(r missing)-tis = <span class=\"data\">martis</span>, so (d) = 6.</li>\n</ul>\n\n<h3>Step 3 (A2): spot the odd one out</h3>\n<p>Expand all five: <span class=\"data\">9probatum</span> = comprobatum; <span class=\"data\">c&omacr;probat&umacr;</span> = com-probatu(m) = comprobatum; <span class=\"data\">comp<sup>o</sup>batum</span> = comp-ro-batum = comprobatum; <span class=\"data\">9probat&umacr;</span> = comprobatum. But <span class=\"data\">9probat<sup>9</sup></span> ends in the word-final &ldquo;us&rdquo; sign, giving <strong>comprobatus</strong> &mdash; a different word. Answer: <strong>d</strong>.</p>\n\n<h3>Step 4 (A3): the ampersand</h3>\n<p>&amp; comes from <em>e</em> + <em>t</em> and means &ldquo;et&rdquo;. We already discovered from <span class=\"data\">p7</span> = <em>pet</em> that <span class=\"data\">7</span> stands for <strong>et</strong> (this is the real historical &ldquo;Tironian et&rdquo;). Answer: <strong>a</strong>.</p>\n\n<h3>Step 5 (A4): the symbol-bank jigsaw</h3>\n<p>Now look at what the bank does <em>not</em> contain: there is no plain <em>r</em>, no plain <em>m</em>, and no plain <em>u</em>. So wherever a word needs those letters, you must use a shortcut sign. Working each word:</p>\n<ul>\n<li>(a) <span class=\"data\">procatis</span>: no plain <em>r</em>, so start with <span class=\"data\">&#42833;</span> (pro) = 17, then c a t i s = 2 1 14 6 13. &rarr; <strong>17 2 1 14 6 13</strong></li>\n<li>(b) <span class=\"data\">notarum</span>: n o t a = 9 10 14 1, then the &ldquo;rum&rdquo; sign = 18. &rarr; <strong>9 10 14 1 18</strong></li>\n<li>(c) <span class=\"data\">decernimus</span>: d e c = 3 4 2, then <em>er</em> = 22, n = 9, <em>im</em> (i with bar) = 7, and final <em>us</em> = 22. This uses both copies of 22. &rarr; <strong>3 4 2 22 9 7 22</strong></li>\n<li>(d) <span class=\"data\">congnitio</span>: <em>con</em> = 21, g = 5, n = 9, i = 6, then a superscript o (11) with the <em>t</em> left out: congni(t)o. &rarr; <strong>21 5 9 6 11</strong></li>\n<li>(e) <span class=\"data\">crux</span>: there is no plain <em>r</em> and no plain <em>u</em>, only superscript <sup>u</sup> (15). So c + <sup>u</sup> + x = 2 15 16. &rarr; <strong>2 15 16</strong></li>\n<li>(f) <span class=\"data\">petitur</span>: the final <em>ur</em> must be 19. For &ldquo;pet&rdquo; you might be tempted to write p-e-t, but the bank contains a <span class=\"data\">7</span> (&ldquo;et&rdquo;) that has to be used somewhere, and <em>petitur</em> is the only word here containing &ldquo;et&rdquo;. So p + 7 + i + <sup>2</sup> = 12 20 6 19. &rarr; <strong>12 20 6 19</strong></li>\n</ul>\n<p>Checking the counts confirms nothing is over-used: 22 is used exactly twice, 9 three times (out of four), 2 three times (out of four), and so on.</p>\n\n<h3>Step 6 (A5): the leftovers</h3>\n<p>Cross off every number you used. What remains is one <em>a</em> (1), one <em>c</em> (2), one <em>d</em> (3), one <em>e</em> (4), the <em>l</em> (8) and one <em>n</em> (9). Rearranged: <strong>candle</strong> &mdash; exactly what a monk squinting at a manuscript in a dim scriptorium would want for his birthday.</p>",
   "reviewStatus": "published"
 }

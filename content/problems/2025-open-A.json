@@ -1,24 +1,118 @@
 {
   "id": "2025-open-A",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2025,
   "round": "open",
   "letter": "A",
   "title": "Fox out of the Box",
-  "authors": [],
+  "authors": [
+    "NACLO 2025 Problem Committee"
+  ],
   "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
   "conceptTags": [
+    "morphology",
     "semantics"
   ],
-  "formTag": "rule discovery",
+  "formTag": "rosetta-stone translation",
   "difficulty": "standard",
-  "languages": [],
+  "languages": [
+    "Totonac"
+  ],
   "officialPoints": 10,
   "officialTimeMinutes": 18,
-  "bodyHtml": "",
-  "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "bodyHtml": "<p>Zorro the fox is looking for his friend Mapache the raccoon, who likes to hang out in houses where humans live. The following picture shows the fox's search through the house and its surroundings.</p>\n<figure><img src=\"/content-assets/2025-open-a-house.png\" alt=\"Line drawing of a house on stilts, with a fox drawn at nine numbered places: 1 entering the front door, 2 on top of the chimney, 3 coming through a hole in the roof, 4 at a window in the front wall, 5 in a flower box on the side wall, 6 under the house, 7 coming out from under the porch, 8 standing beside the house, 9 in a hole in the ground.\" /></figure>\n<p>Below, sentences in Totonac describe the numbered phases of the search.</p>\n<p>Although we've given English descriptions to clarify the drawings, don't assume that the Totonac sentences are direct translations of the English sentences. The sentences in both languages describe the fox's journey, but different languages can focus on different aspects of a scene.</p>\n<p><em>Notes:</em></p>\n<ul>\n<li>In the Totonac sentences, a colon “:” indicates a long vowel. The word “<span class=\"data\">n</span>” is added to sentences based on phrasal prosody (making the sound flow well). It doesn't have a meaning (but you are still responsible for using it correctly in your answers).</li>\n<li>This problem features the variety of Totonac spoken in the town of Zongozotla, Mexico.</li>\n</ul>\n<ol>\n<li><strong><span class=\"data\">Tanu:yi kchiki wa:qni’</span></strong><br /><em>The fox goes into the house through the front door.</em></li>\n<li><strong><span class=\"data\">Akpu:tukuta n chiki wa:qni’</span></strong><br /><em>The fox comes out of the chimney.</em></li>\n<li><strong><span class=\"data\">Akpu:tanu:yi n chiki wa:qni’</span></strong><br /><em>The fox enters the house through a hole in the roof.</em></li>\n<li><strong><span class=\"data\">Cha:qe:taxtiyi n chiki wa:qni’</span></strong><br /><em>The fox comes out the back door.</em></li>\n<li><strong><span class=\"data\">Lakpa:tuju:yi n chiki wa:qni’</span></strong><br /><em>The fox goes into a flower box on the side of the house.</em></li>\n<li><strong><span class=\"data\">Tampi:tanu:yi n chiki wa:qni’</span></strong><br /><em>The fox goes under the house.</em></li>\n<li><strong><span class=\"data\">Tampi:taxtiyi n chiki wa:qni’</span></strong><br /><em>The fox comes out from under the house.</em></li>\n<li><strong><span class=\"data\">Tuju:yi ktaqalhwaxni wa:qni’</span></strong><br /><em>The fox goes into a hole.</em></li>\n<li><strong><span class=\"data\">Tukuta ktaqalhwaxni wa:qni’</span></strong><br /><em>The fox comes out of a hole.</em></li>\n</ol>",
+  "assets": [
+    {
+      "src": "/content-assets/2025-open-a-house.png",
+      "alt": "Line drawing of a house on stilts, with a fox drawn at nine numbered places: 1 entering the front door, 2 on top of the chimney, 3 coming through a hole in the roof, 4 at a window in the front wall, 5 in a flower box on the side wall, 6 under the house, 7 coming out from under the porch, 8 standing beside the house, 9 in a hole in the ground."
+    }
+  ],
+  "questions": [
+    {
+      "id": "A1.10",
+      "part": "A1",
+      "partPrompt": "Construct Totonac sentences describing each of these events.",
+      "promptHtml": "<p>10. <em>The fox comes out the front door.</em></p>",
+      "gradingMode": "exact",
+      "answerKey": "taxtiyi kchiki wa:qni’",
+      "acceptedVariants": [
+        "taxtiyi kchiki wa:qni'"
+      ],
+      "points": 2
+    },
+    {
+      "id": "A1.11",
+      "part": "A1",
+      "promptHtml": "<p>11. <em>The fox goes into the chimney.</em></p>",
+      "gradingMode": "exact",
+      "answerKey": "akpu:tuju:yi n chiki wa:qni’",
+      "acceptedVariants": [
+        "akpu:tuju:yi n chiki wa:qni'"
+      ],
+      "points": 2
+    },
+    {
+      "id": "A1.12",
+      "part": "A1",
+      "promptHtml": "<p>12. <em>The fox comes out a hole in the roof.</em></p>",
+      "gradingMode": "exact",
+      "answerKey": "akpu:taxtiyi n chiki wa:qni’",
+      "acceptedVariants": [
+        "akpu:taxtiyi n chiki wa:qni'"
+      ],
+      "points": 2
+    },
+    {
+      "id": "A1.13",
+      "part": "A1",
+      "promptHtml": "<p>13. <em>The fox comes in the back door.</em></p>",
+      "gradingMode": "exact",
+      "answerKey": "cha:qe:tanu:yi n chiki wa:qni’",
+      "acceptedVariants": [
+        "cha:qe:tanu:yi n chiki wa:qni'"
+      ],
+      "points": 2
+    },
+    {
+      "id": "A1.14",
+      "part": "A1",
+      "promptHtml": "<p>14. <em>The fox goes into a window on the side of the house.</em></p>",
+      "gradingMode": "exact",
+      "answerKey": "lakpa:tanu:yi n chiki wa:qni’",
+      "acceptedVariants": [
+        "lakpa:tanu:yi n chiki wa:qni'"
+      ],
+      "points": 1
+    },
+    {
+      "id": "A1.15",
+      "part": "A1",
+      "promptHtml": "<p>15. <em>The fox comes out of a flower box on the back of the house.</em></p>",
+      "gradingMode": "exact",
+      "answerKey": "cha:qe:tukuta n chiki wa:qni’",
+      "acceptedVariants": [
+        "cha:qe:tukuta n chiki wa:qni'"
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Every sentence has the same shape: one long verb, then a place word (chiki 'house' or taqalhwaxni 'hole'), then wa:qni’ 'fox'. All the interesting information is packed into the front of the verb, so line the nine verbs up under each other and compare their beginnings and endings.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Each verb splits into a prefix (akpu:, cha:qe:, lakpa:, tampi:, or nothing) that names which part of the house the fox uses, plus a root that says both 'in vs. out' AND what kind of space is involved: one pair of roots is used for entering/leaving a big enclosure, a different pair for entering/leaving a narrow opening such as a hole, a chimney or a box. Also watch what happens to the place word: when the verb carries a prefix, chiki appears as 'n chiki'; when the verb has no prefix, the place word gets a k- glued on front.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Practice on a sentence that isn't asked for: 'The fox comes out of a flower box on the side of the house.' Sentence 5 shows that a flower box on the side is lakpa: + the 'narrow opening' root, and sentences 8-9 show that the 'out' partner of tuju:yi is tukuta. So the verb is lakpa:tukuta, and because the verb has a prefix the rest of the sentence is 'n chiki wa:qni’'.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: Find the skeleton of the sentence</h3>\n<p>Every Totonac sentence here has exactly the same three-part shape:</p>\n<p><strong>VERB &nbsp; PLACE &nbsp; <span class=\"data\">wa:qni’</span></strong></p>\n<p><span class=\"data\">wa:qni’</span> is at the end of all nine sentences and 'fox' is in all nine English translations, so <span class=\"data\">wa:qni’</span> = 'fox' (the subject comes last). <span class=\"data\">chiki</span> shows up whenever the house is involved, and <span class=\"data\">taqalhwaxni</span> only in sentences 8 and 9, which mention a hole. So <span class=\"data\">chiki</span> = 'house', <span class=\"data\">taqalhwaxni</span> = 'hole'.</p>\n<p>Everything else — door vs. roof vs. under, in vs. out — is crammed into the single long verb at the front. That is very common in languages of Mexico: a lot of what English does with prepositions (<em>into, out of, under, through</em>), Totonac does with pieces glued onto the verb (that's <em>morphology</em>: word-building).</p>\n<h3>Step 2: Split the verbs into prefix + root</h3>\n<p>Write the nine verbs in a column:</p>\n<div class=\"table-scroll\"><table>\n<thead><tr><th>#</th><th>verb</th><th>prefix</th><th>root</th><th>meaning</th></tr></thead>\n<tbody>\n<tr><td>1</td><td><span class=\"data\">tanu:yi</span></td><td>—</td><td><span class=\"data\">tanu:yi</span></td><td>in, front door</td></tr>\n<tr><td>2</td><td><span class=\"data\">akpu:tukuta</span></td><td><span class=\"data\">akpu:</span></td><td><span class=\"data\">tukuta</span></td><td>out of chimney</td></tr>\n<tr><td>3</td><td><span class=\"data\">akpu:tanu:yi</span></td><td><span class=\"data\">akpu:</span></td><td><span class=\"data\">tanu:yi</span></td><td>in through roof hole</td></tr>\n<tr><td>4</td><td><span class=\"data\">cha:qe:taxtiyi</span></td><td><span class=\"data\">cha:qe:</span></td><td><span class=\"data\">taxtiyi</span></td><td>out the back door</td></tr>\n<tr><td>5</td><td><span class=\"data\">lakpa:tuju:yi</span></td><td><span class=\"data\">lakpa:</span></td><td><span class=\"data\">tuju:yi</span></td><td>into side flower box</td></tr>\n<tr><td>6</td><td><span class=\"data\">tampi:tanu:yi</span></td><td><span class=\"data\">tampi:</span></td><td><span class=\"data\">tanu:yi</span></td><td>in under the house</td></tr>\n<tr><td>7</td><td><span class=\"data\">tampi:taxtiyi</span></td><td><span class=\"data\">tampi:</span></td><td><span class=\"data\">taxtiyi</span></td><td>out from under</td></tr>\n<tr><td>8</td><td><span class=\"data\">tuju:yi</span></td><td>—</td><td><span class=\"data\">tuju:yi</span></td><td>into a hole</td></tr>\n<tr><td>9</td><td><span class=\"data\">tukuta</span></td><td>—</td><td><span class=\"data\">tukuta</span></td><td>out of a hole</td></tr>\n</tbody>\n</table></div>\n<h3>Step 3: What the prefixes mean</h3>\n<p>Comparing 3 (roof) and 2 (chimney, which sticks out of the roof) gives <span class=\"data\">akpu:</span> = 'on top / through the top'. Sentence 4 (back door) gives <span class=\"data\">cha:qe:</span> = 'at the back'. Sentence 5 (side of the house) gives <span class=\"data\">lakpa:</span> = 'on the side / on the wall surface'. Sentences 6 and 7 give <span class=\"data\">tampi:</span> = 'underneath'. And sentences 1, 8, 9 have <em>no</em> prefix: with no prefix you get the default, unmarked route — the front door of a house, or just a plain hole.</p>\n<h3>Step 4: The two pairs of roots (the tricky part)</h3>\n<p>There are four roots, and they clearly pair up:</p>\n<ul>\n<li><span class=\"data\">tanu:yi</span> 'go in' pairs with <span class=\"data\">taxtiyi</span> 'come out' (both start <span class=\"data\">ta-</span>)</li>\n<li><span class=\"data\">tuju:yi</span> 'go in' pairs with <span class=\"data\">tukuta</span> 'come out' (both start <span class=\"data\">tu-</span>)</li>\n</ul>\n<p>Why two pairs? Look at what kind of space the fox is moving in and out of:</p>\n<ul>\n<li><span class=\"data\">tanu:yi / taxtiyi</span> are used when the fox enters or leaves a big roomy space you can be <em>inside</em>: the house (1, 3, 4) or the open area under the house (6, 7).</li>\n<li><span class=\"data\">tuju:yi / tukuta</span> are used for squeezing into or out of a narrow opening or small container: a hole in the ground (8, 9), the chimney tube (2), a flower box (5).</li>\n</ul>\n<p>So the root tells you two things at once: direction (in/out) and type of space (roomy vs. narrow). This is the part where English and Totonac 'focus on different aspects of the scene', exactly as the introduction warns.</p>\n<h3>Step 5: k- and n</h3>\n<p>Look at the place word. When the verb has <em>no</em> prefix, the place word carries a <span class=\"data\">k-</span>: <span class=\"data\">kchiki</span> (1), <span class=\"data\">ktaqalhwaxni</span> (8, 9). When the verb <em>does</em> have a prefix, the noun appears as plain <span class=\"data\">chiki</span> with the meaningless prosodic filler <span class=\"data\">n</span> in front of it: <span class=\"data\">n chiki</span>. So once you decide on your prefix, the ending of the sentence is decided too:</p>\n<ul>\n<li>no prefix means <span class=\"data\">k</span>+place, then <span class=\"data\">wa:qni’</span></li>\n<li>prefix means <span class=\"data\">n chiki wa:qni’</span></li>\n</ul>\n<h3>Step 6: Building the answers</h3>\n<ul>\n<li><strong>10. out the front door:</strong> front door = no prefix; leaving the house (roomy) = <span class=\"data\">taxtiyi</span>; no prefix means <span class=\"data\">kchiki</span>, giving <span class=\"data\">taxtiyi kchiki wa:qni’</span></li>\n<li><strong>11. into the chimney:</strong> top = <span class=\"data\">akpu:</span>; entering a narrow tube = <span class=\"data\">tuju:yi</span>, giving <span class=\"data\">akpu:tuju:yi n chiki wa:qni’</span></li>\n<li><strong>12. out a hole in the roof:</strong> top = <span class=\"data\">akpu:</span>; leaving the house itself (roomy) = <span class=\"data\">taxtiyi</span> — compare sentence 3, which used <span class=\"data\">tanu:yi</span> for going in the same way, giving <span class=\"data\">akpu:taxtiyi n chiki wa:qni’</span></li>\n<li><strong>13. in the back door:</strong> back = <span class=\"data\">cha:qe:</span>; entering the house = <span class=\"data\">tanu:yi</span>, giving <span class=\"data\">cha:qe:tanu:yi n chiki wa:qni’</span></li>\n<li><strong>14. into a window on the side:</strong> side = <span class=\"data\">lakpa:</span>; a window leads into the house itself, a roomy space, so <span class=\"data\">tanu:yi</span> (not <span class=\"data\">tuju:yi</span>, which sentence 5 used for the little flower box on the same wall), giving <span class=\"data\">lakpa:tanu:yi n chiki wa:qni’</span></li>\n<li><strong>15. out of a flower box on the back:</strong> back = <span class=\"data\">cha:qe:</span>; leaving a small container = <span class=\"data\">tukuta</span>, giving <span class=\"data\">cha:qe:tukuta n chiki wa:qni’</span></li>\n</ul>\n<p>Notice how 12 and 14 are the real test: they force you to keep the prefix (which part of the house) separate from the root choice (roomy space vs. narrow opening).</p>",
   "reviewStatus": "published"
 }
