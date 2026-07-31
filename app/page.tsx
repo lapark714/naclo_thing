@@ -15,10 +15,8 @@ export default function Home() {
       </p>
 
       <p className="mt-4 max-w-[54ch] text-[0.95rem] leading-relaxed text-ink-soft">
-        NACLO publishes its past exams as PDFs. Everything you need is technically available and
-        practically unusable — you cannot search it, you cannot filter it, and when you get stuck
-        your only options are to keep staring or read the whole answer. This is the same archive,
-        rebuilt as something you can work against.
+        NACLO publishes its past exams and practice problems as PDFs. Everything you need is available but difficult to use: you cannot search it, you cannot filter it, and when you get stuck
+        your only options are to keep staring or read the whole answer. This is your solution.
       </p>
 
       <div className="mt-8 flex flex-wrap items-center gap-4">

@@ -15,16 +15,19 @@ naclo_tool/
 │   ├── layout.tsx                # Root layout
 │   ├── page.tsx                  # Landing page
 │   ├── practice/                 # Concept filters + problem view
-│   └── api/grade/route.ts        # Only server route — AI free-text grading
+│   ├── api/grade/route.ts        # AI free-text grading
+│   └── api/help/route.ts         # AI hints, plain-word explanations, reveal
 ├── components/
 │   ├── ui/                       # shadcn/ui primitives
 │   ├── problem-view.tsx          # Main orchestrator
-│   ├── question-card.tsx         # Sub-question, branches on gradingMode
-│   ├── hint-ladder.tsx           # Three tiers, in order, XP cost
-│   └── timer.tsx                 # Countdown display
+│   ├── question-row.tsx          # Sub-question, branches on gradingMode
+│   ├── help-popover.tsx          # Per-part help: hints, AI, reveal
+│   ├── practice-timer.tsx        # Countdown display
+│   ├── concept-filter.tsx        # Client-side filtering
+│   └── concept-coverage.tsx      # Per-concept progress
 ├── lib/
 │   ├── grading.ts                # exact-match normalization
-│   ├── progress.ts               # localStorage wrapper — solved, XP, hints
+│   ├── progress.ts               # localStorage via useSyncExternalStore
 │   ├── timer.ts                  # Timestamp-based timing
 │   └── content.ts                # Loads published problems, builds index
 ├── content/
@@ -74,15 +77,15 @@ naclo_tool/
 ## Constraints & Policies
 
 **Security — MUST Follow:**
-- NEVER expose `ANTHROPIC_API_KEY` to the client — `/api/grade` server-side only
+- NEVER expose `ANTHROPIC_API_KEY` to the client — server routes only
 - Only `NEXT_PUBLIC_*` vars reach the browser; never prefix a secret with it
 - NEVER commit `.env` or any file with API keys
-- Validate, sanitize, and rate-limit every request to `/api/grade`
+- Validate, sanitize, and rate-limit every request to `/api/grade` and `/api/help`
 - Collect no personal information
 
 **Content integrity — MUST Follow:**
 - Only `published` records ship; unreviewed AI drafts never reach a student
-- Hints and explanations are written at ingest, never generated at request time
+- The written hints and explanations are authored at ingest and human-reviewed. `/api/help` adds request-time AI hints on top; it never replaces them, is prompted against revealing answers, and costs more XP than the reviewed ladder
 - `llm` answer keys stay server-side; only `exact` keys ship in the content bundle
 - `validate.ts` blocks the build — never bypass it
 

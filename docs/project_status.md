@@ -2,6 +2,40 @@
 
 This file will hold the project's development status and thus document whatever large updates/accomplishments on the project have been made day-by-day. It is meant to help keep track of where things were left off from the previous day, as a personal reminder.
 
+## 2026-07-31
+
+**Done**
+
+- Removed the dead `Geist`/`Geist_Mono` import from `app/layout.tsx` (`aeb6647`) — the site already rendered in the self-hosted faces, so these were only unread CSS variables plus a build-time Google Fonts fetch the spec's self-hosted requirement rules out
+- Reconciled `CLAUDE.md` (`aeb6647`): dropped `app/exam/` from the architecture tree, "all three timing modes" now "both practice timing modes." `docs/project_spec.md`'s own stale "all three timing modes" line was not touched and is still outstanding
+- Built AI help at the point of confusion (`2e3fca0`): new `app/api/help/route.ts`, the second server route, with three modes — `hint` (escalating level 1-3, prompted hard against revealing any answer), `explain` (plain-language rewrite of the reviewed explanation, grounded in it, for 12-17 year olds), and `reveal` (returns one part's answer keys, no model call)
+- New `components/help-popover.tsx`: a "Stuck?" button beside every part opens the written hint ladder, AI hints, plain-word explanation, and answer reveal in one popover anchored to that part. Replaces and deletes `components/hint-ladder.tsx` (confirmed gone from the tree)
+- XP: AI hints cost 2 XP each, capped at 3 per part; revealing a part zeroes that part's XP. `ProblemProgress` gained `aiHintsUsed`. Written hints unchanged at 1-3 XP and remain the cheaper default
+- `lib/progress.ts` and `lib/timer.ts` gained `useSyncExternalStore`-based hooks (`useProgress`, `useProblemProgress`, `useStoredTimer`); components read localStorage directly instead of copying it into state on mount. Fixed four `react-hooks/set-state-in-effect` lint errors
+- Found and fixed a live bug, not visible from reading the code: level-3 hints were returning 502s because `max_tokens: 300` was too low — the model spent the budget reasoning before it wrote anything, tripping the empty-text guard. Raised to 1000 for hints, 1600 for explain
+
+**Where things stand**
+
+AI help is live alongside the six published problems: a "Stuck?" popover per part offers written hints first, then optional AI hints (2 XP each, 3 per part) and a free plain-language explanation, then an answer reveal that zeroes that part's XP. `reveal` is also the mechanism that lets the 8 `llm`-graded Māori answer keys reach a student without ever sitting in the client bundle. This is a deliberate departure from `docs/project_spec.md`, which argues hints and explanations should be written offline because "a model holding the full solution tends to give too much away" — the written ladder stays the default, cheaper path, and its four offline-content reasons (consistency, human review before shipping, one-time cost, instant load) still apply to it. AI help is additive, for what the written ladder doesn't cover. `CLAUDE.md`'s content-integrity line ("Hints and explanations are written at ingest, never generated at request time") now contradicts this and has not been updated — same kind of staleness as the `app/exam/` line fixed earlier today, just not yet caught. `CLAUDE.md`'s architecture tree also still names `question-card.tsx`, `hint-ladder.tsx`, and `timer.tsx` — none of which match the actual files (`question-row.tsx`, `help-popover.tsx`, `practice-timer.tsx`) — and doesn't mention `app/api/help` at all.
+
+**Carried over / needs fixing**
+
+- `ANTHROPIC_API_KEY` is not set in Vercel's environment. Verified live: on production, both `/api/help` and `/api/grade` return a graceful 503 ("AI help is not set up. The written hints below still work.") instead of calling the model. Everything else on prod works, including `reveal`, which needs no key. Must be set in Vercel Settings → Environment Variables before AI hints, explain, or `llm` grading work in production
+- `CLAUDE.md`'s content-integrity policy still says hints/explanations are never generated at request time, contradicting the new `/api/help` route; its architecture tree still lists deleted/renamed files and omits `/api/help` and `help-popover.tsx` entirely
+- `docs/project_spec.md`'s Phase 1 slice description still says "all three timing modes" — unreconciled
+- The Vercel project is still named `naclo-thing`, so the URL does not match `gloss.`
+- 2024 and 2025 full exam PDFs in `pdfs/` are still un-ingested
+- `npm audit`: 12 high advisories, no fix available (3 nest under `next` itself)
+- No visual verification has been done by any agent — the live site has only been checked by fetching HTML. A browser MCP would close that gap
+
+**Next up**
+
+1. Reconcile `CLAUDE.md`'s content-integrity policy and architecture tree with what actually shipped (`/api/help`, `help-popover.tsx`, current component/lib file names)
+2. Set `ANTHROPIC_API_KEY` in Vercel so AI help and `llm` grading work in production
+3. Rename the Vercel project so the URL matches `gloss.`
+4. Reconcile `docs/project_spec.md`'s remaining "all three timing modes" line
+5. Decide whether and when to ingest the 2024 and 2025 exam PDFs already sitting in `pdfs/`
+
 ## 2026-07-30
 
 **Done**
