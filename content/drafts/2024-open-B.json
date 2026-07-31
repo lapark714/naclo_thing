@@ -1,0 +1,183 @@
+{
+  "id": "2024-open-B",
+  "tier": "full",
+  "year": 2024,
+  "round": "open",
+  "letter": "B",
+  "title": "Finding Your Place in Warlpiri",
+  "authors": [
+    "NACLO 2024 Problem Committee"
+  ],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "phonology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "standard",
+  "languages": [
+    "Warlpiri"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>Warlpiri is a language spoken by about 3,000 people in Central Australia. The Warlpiri people are originally from the Tanami Desert in Australia's Northern Territory; most still live in that area, but many also live in other parts of Australia. In Warlpiri-speaking communities, such as Lajamanu, Yuendumu, Willowra, and Nyirripi, schools offer bilingual education programs in both Warlpiri and English.</p>\n<p><strong>B1.</strong> Below are some sentences in Warlpiri, along with English translations. Write the sentences that should go in the two blank spaces.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Warlpiri</th><th>English</th></tr></thead>\n<tbody>\n<tr><td>1.</td><td><span class=\"data\">Maliki ka marlungka karrimi.</span></td><td>The dog is standing on the kangaroo.</td></tr>\n<tr><td>2.</td><td><span class=\"data\">Maliki ka marlungka nyinami.</span></td><td>The dog is sitting on the kangaroo.</td></tr>\n<tr><td>3.</td><td><span class=\"data\">Maliki ka karntangka karrimi.</span></td><td>The dog is standing on the woman.</td></tr>\n<tr><td>4.</td><td><span class=\"data\">Marlu ka nantuwurla karrimi.</span></td><td>The kangaroo is standing on the horse.</td></tr>\n<tr><td>5.</td><td><span class=\"data\">Karnta ka kuurlurla ngunami.</span></td><td>The woman is lying in the school.</td></tr>\n<tr><td>6.</td><td><span class=\"data\">Maliki ka nantuwurla ngunami.</span></td><td>(a)</td></tr>\n<tr><td>7.</td><td>(b)</td><td>The kangaroo is sitting in the school.</td></tr>\n</tbody>\n</table>\n</div>\n<p>Here are some more sentences. Study them, and then answer the questions below.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Warlpiri</th><th>English</th></tr></thead>\n<tbody>\n<tr><td>8.</td><td><span class=\"data\">Nantuwu ka yaparranjirla nyinami.</span></td><td>The horse is sitting on the teenage boy.</td></tr>\n<tr><td>9.</td><td><span class=\"data\">Luurnpa ka mardukujarla nyinami.</span></td><td>The kingfisher bird is sitting on the woman.</td></tr>\n<tr><td>10.</td><td><span class=\"data\">Yaparranji ka paarlparla nyinami.</span></td><td>The teenage boy is sitting on the calf (of the leg).</td></tr>\n<tr><td>11.</td><td><span class=\"data\">Mardukuja ka pirlingka ngunami.</span></td><td>The woman is lying on the hill.</td></tr>\n<tr><td>12.</td><td><span class=\"data\">Pirli ka raangka nyinami.</span></td><td>The hill is sitting in the clearing.</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>B2.</strong> Two of the Warlpiri words in the following list have the same meaning as each other. Identify these two words: <span class=\"data\">karnta, luurnpa, mardukuja, ngunami, pirli</span></p>\n<p><strong>B3.</strong> Answer each of the following questions by writing A or B.</p>\n<ol type=\"i\">\n<li><span class=\"data\">Wati</span> means \"man\", so \"on the man\" is: A. <span class=\"data\">watirla</span> &nbsp; B. <span class=\"data\">watingka</span></li>\n<li><span class=\"data\">Warlu</span> means \"fire\", so \"in the fire\" is: A. <span class=\"data\">warlurla</span> &nbsp; B. <span class=\"data\">warlungka</span></li>\n<li><span class=\"data\">Jaaji</span> means \"church\", so \"in the church\" is: A. <span class=\"data\">jaajirla</span> &nbsp; B. <span class=\"data\">jaajingka</span></li>\n<li><span class=\"data\">Wulpayi</span> means \"creek\", so \"in the creek\" is: A. <span class=\"data\">wulpayirla</span> &nbsp; B. <span class=\"data\">wulpayingka</span></li>\n<li><span class=\"data\">Ngurra</span> means \"home\", so \"at home\" is: A. <span class=\"data\">ngurrarla</span> &nbsp; B. <span class=\"data\">ngurrangka</span></li>\n<li><span class=\"data\">Yama</span> means \"shade\", so \"in the shade\" is: A. <span class=\"data\">yamarla</span> &nbsp; B. <span class=\"data\">yamangka</span></li>\n</ol>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "b1a",
+      "part": "B1",
+      "partPrompt": "Write the sentences that should go in the two blank spaces (a) and (b) of the first table.",
+      "promptHtml": "(a) English translation of <span class=\"data\">Maliki ka nantuwurla ngunami.</span>",
+      "gradingMode": "exact",
+      "answerKey": "The dog is lying on the horse.",
+      "acceptedVariants": [
+        "the dog is lying on the horse",
+        "The dog is lying on the horse",
+        "the dog is lying on the horse."
+      ],
+      "points": 1
+    },
+    {
+      "id": "b1b",
+      "part": "B1",
+      "promptHtml": "(b) Warlpiri sentence meaning \"The kangaroo is sitting in the school.\"",
+      "gradingMode": "exact",
+      "answerKey": "Marlu ka kuurlurla nyinami.",
+      "acceptedVariants": [
+        "marlu ka kuurlurla nyinami",
+        "Marlu ka kuurlurla nyinami",
+        "marlu ka kuurlurla nyinami."
+      ],
+      "points": 1
+    },
+    {
+      "id": "b2",
+      "part": "B2",
+      "partPrompt": "Two of the Warlpiri words in the list have the same meaning as each other. Which two?",
+      "promptHtml": "List the two words with the same meaning (separated by a comma).",
+      "gradingMode": "exact",
+      "answerKey": "karnta, mardukuja",
+      "acceptedVariants": [
+        "karnta and mardukuja",
+        "mardukuja, karnta",
+        "mardukuja and karnta",
+        "karnta mardukuja"
+      ],
+      "points": 2
+    },
+    {
+      "id": "b3i",
+      "part": "B3",
+      "partPrompt": "Answer each of the following by writing A or B.",
+      "promptHtml": "i. <span class=\"data\">Wati</span> means \"man\", so \"on the man\" is: A. <span class=\"data\">watirla</span> &nbsp; B. <span class=\"data\">watingka</span>",
+      "choices": [
+        "A",
+        "B"
+      ],
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "b",
+        "watingka"
+      ],
+      "points": 1
+    },
+    {
+      "id": "b3ii",
+      "part": "B3",
+      "promptHtml": "ii. <span class=\"data\">Warlu</span> means \"fire\", so \"in the fire\" is: A. <span class=\"data\">warlurla</span> &nbsp; B. <span class=\"data\">warlungka</span>",
+      "choices": [
+        "A",
+        "B"
+      ],
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "b",
+        "warlungka"
+      ],
+      "points": 1
+    },
+    {
+      "id": "b3iii",
+      "part": "B3",
+      "promptHtml": "iii. <span class=\"data\">Jaaji</span> means \"church\", so \"in the church\" is: A. <span class=\"data\">jaajirla</span> &nbsp; B. <span class=\"data\">jaajingka</span>",
+      "choices": [
+        "A",
+        "B"
+      ],
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "a",
+        "jaajirla"
+      ],
+      "points": 1
+    },
+    {
+      "id": "b3iv",
+      "part": "B3",
+      "promptHtml": "iv. <span class=\"data\">Wulpayi</span> means \"creek\", so \"in the creek\" is: A. <span class=\"data\">wulpayirla</span> &nbsp; B. <span class=\"data\">wulpayingka</span>",
+      "choices": [
+        "A",
+        "B"
+      ],
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "a",
+        "wulpayirla"
+      ],
+      "points": 1
+    },
+    {
+      "id": "b3v",
+      "part": "B3",
+      "promptHtml": "v. <span class=\"data\">Ngurra</span> means \"home\", so \"at home\" is: A. <span class=\"data\">ngurrarla</span> &nbsp; B. <span class=\"data\">ngurrangka</span>",
+      "choices": [
+        "A",
+        "B"
+      ],
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "b",
+        "ngurrangka"
+      ],
+      "points": 1
+    },
+    {
+      "id": "b3vi",
+      "part": "B3",
+      "promptHtml": "vi. <span class=\"data\">Yama</span> means \"shade\", so \"in the shade\" is: A. <span class=\"data\">yamarla</span> &nbsp; B. <span class=\"data\">yamangka</span>",
+      "choices": [
+        "A",
+        "B"
+      ],
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "b",
+        "yamangka"
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "text": "Compare the noun on its own with the same noun when it means 'on/in it'. For example <span class=\"data\">marlu</span> 'kangaroo' appears as <span class=\"data\">marlungka</span>, and <span class=\"data\">nantuwu</span> 'horse' appears as <span class=\"data\">nantuwurla</span>. There are two different endings for 'on/in'.",
+      "xpCost": 1
+    },
+    {
+      "text": "Which ending a noun takes has nothing to do with its meaning — it depends on the shape (the length) of the word. Count the parts of each noun, and remember that a doubled vowel like <span class=\"data\">aa</span> or <span class=\"data\">uu</span> is a long vowel that counts as extra length.",
+      "xpCost": 2
+    },
+    {
+      "text": "Try it on a word that isn't asked about: <span class=\"data\">pirli</span> 'hill' is <em>pir-li</em>, two short beats, and it becomes <span class=\"data\">pirlingka</span>. <span class=\"data\">yaparranji</span> 'teenage boy' has four beats and becomes <span class=\"data\">yaparranjirla</span>. Now decide where a word like <span class=\"data\">kuurlu</span> (with its long <span class=\"data\">uu</span>) falls.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: Work out the shape of a Warlpiri sentence</h3>\n<p>Take sentence 1: <span class=\"data\">Maliki ka marlungka karrimi.</span> = 'The dog is standing on the kangaroo.' Comparing with sentences 2 and 3 we can line things up:</p>\n<ul>\n<li><span class=\"data\">maliki</span> = 'dog' (the subject comes first)</li>\n<li><span class=\"data\">ka</span> = a little word that marks 'is ...-ing' (it appears in every sentence)</li>\n<li><span class=\"data\">marlungka</span> = 'on the kangaroo', <span class=\"data\">karntangka</span> = 'on the woman'</li>\n<li><span class=\"data\">karrimi</span> = 'is standing', <span class=\"data\">nyinami</span> = 'is sitting', <span class=\"data\">ngunami</span> = 'is lying'</li>\n</ul>\n<p>So the order is: <em>subject – ka – place – verb</em>. English uses a separate word ('on', 'in'); Warlpiri glues an ending onto the noun instead. Linguists call such an ending a <strong>suffix</strong>, and this particular one, meaning 'on/in/at', is called a <strong>locative</strong> suffix.</p>\n<h3>Step 2: Two forms of the same suffix</h3>\n<p>The place words end in two different ways:</p>\n<ul>\n<li><strong>-ngka</strong>: <span class=\"data\">marlu → marlungka</span>, <span class=\"data\">karnta → karntangka</span>, <span class=\"data\">pirli → pirlingka</span>, <span class=\"data\">raa → raangka</span></li>\n<li><strong>-rla</strong>: <span class=\"data\">nantuwu → nantuwurla</span>, <span class=\"data\">kuurlu → kuurlurla</span>, <span class=\"data\">yaparranji → yaparranjirla</span>, <span class=\"data\">mardukuja → mardukujarla</span>, <span class=\"data\">paarlpa → paarlparla</span></li>\n</ul>\n<p>Meaning can't be the reason — 'on the woman' shows up both as <span class=\"data\">karntangka</span> and as <span class=\"data\">mardukujarla</span>. So the choice must depend on the <em>sound shape</em> of the noun. Two forms of one suffix chosen by sound like this are called <strong>allomorphs</strong>.</p>\n<h3>Step 3: Count beats, not just syllables</h3>\n<p>Count syllables first: <span class=\"data\">mar-lu</span> (2) takes <em>-ngka</em>; <span class=\"data\">nan-tu-wu</span> (3), <span class=\"data\">ya-pa-rran-ji</span> (4), <span class=\"data\">mar-du-ku-ja</span> (4) take <em>-rla</em>. Good start: short words get <em>-ngka</em>, long words get <em>-rla</em>.</p>\n<p>But two words break that simple rule: <span class=\"data\">kuu-rlu</span> and <span class=\"data\">paa-rlpa</span> look like 2 syllables yet take <em>-rla</em>, and <span class=\"data\">raa</span> looks like just 1 syllable yet takes <em>-ngka</em>. Notice the doubled vowels: <span class=\"data\">uu</span>, <span class=\"data\">aa</span> are <strong>long vowels</strong>. A long vowel counts as two 'beats' of length (linguists call a beat a <strong>mora</strong>). Recount in beats:</p>\n<ul>\n<li>2 beats → <em>-ngka</em>: <span class=\"data\">marlu</span>, <span class=\"data\">karnta</span>, <span class=\"data\">pirli</span>, <span class=\"data\">raa</span> (raa = 2 beats all by itself)</li>\n<li>3 or more beats → <em>-rla</em>: <span class=\"data\">nantuwu</span> (3), <span class=\"data\">kuurlu</span> (2+1 = 3), <span class=\"data\">paarlpa</span> (2+1 = 3), <span class=\"data\">yaparranji</span> (4), <span class=\"data\">mardukuja</span> (4)</li>\n</ul>\n<p>Now every single example fits. (A quick rule of thumb that gets all the B3 items right: two short syllables → <em>-ngka</em>; anything longer, including a long vowel, → <em>-rla</em>.)</p>\n<h3>Step 4: Filling the blanks (B1)</h3>\n<p>(a) <span class=\"data\">Maliki ka nantuwurla ngunami.</span> = <span class=\"data\">maliki</span> 'dog' + <span class=\"data\">ka</span> + <span class=\"data\">nantuwu-rla</span> 'on the horse' + <span class=\"data\">ngunami</span> 'is lying' → <strong>The dog is lying on the horse.</strong></p>\n<p>(b) 'The kangaroo is sitting in the school': kangaroo = <span class=\"data\">marlu</span>, school = <span class=\"data\">kuurlu</span>, which takes <em>-rla</em> (from sentence 5), and 'is sitting' = <span class=\"data\">nyinami</span> → <strong><span class=\"data\">Marlu ka kuurlurla nyinami.</span></strong></p>\n<h3>Step 5: The two synonyms (B2)</h3>\n<p>Sentence 3 shows <span class=\"data\">karntangka</span> = 'on the woman'; sentence 9 shows <span class=\"data\">mardukujarla</span> = 'on the woman' too. So <span class=\"data\">karnta</span> and <span class=\"data\">mardukuja</span> both mean 'woman'. (<span class=\"data\">luurnpa</span> = 'kingfisher bird', <span class=\"data\">pirli</span> = 'hill', <span class=\"data\">ngunami</span> = 'is lying'.) Many Australian languages have several words for the same thing, sometimes because a word is avoided for cultural reasons or belongs to a special speech style.</p>\n<h3>Step 6: Applying the rule (B3)</h3>\n<ul>\n<li>i. <span class=\"data\">wa-ti</span> — 2 short beats → <em>-ngka</em>: <span class=\"data\">watingka</span> = <strong>B</strong></li>\n<li>ii. <span class=\"data\">wa-rlu</span> — 2 beats → <span class=\"data\">warlungka</span> = <strong>B</strong></li>\n<li>iii. <span class=\"data\">jaa-ji</span> — long <span class=\"data\">aa</span>, so 3 beats → <span class=\"data\">jaajirla</span> = <strong>A</strong></li>\n<li>iv. <span class=\"data\">wul-pa-yi</span> — 3 beats → <span class=\"data\">wulpayirla</span> = <strong>A</strong></li>\n<li>v. <span class=\"data\">ngu-rra</span> — 2 beats → <span class=\"data\">ngurrangka</span> = <strong>B</strong></li>\n<li>vi. <span class=\"data\">ya-ma</span> — 2 beats → <span class=\"data\">yamangka</span> = <strong>B</strong></li>\n</ul>\n<p>Note that clusters like <span class=\"data\">rr</span>, <span class=\"data\">rl</span>, <span class=\"data\">ng</span> are single consonants in Warlpiri spelling, so they don't add beats — only vowel length and extra syllables do.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution page (it spells the title 'Walpiri'; the problem page spells it 'Warlpiri' — title field uses the problem page spelling). Official solution gives B1a 'the dog is lying on the horse' and B1b 'marlu ka kuurlurla nyinami' (lowercase, no final period); accepted variants cover capitalization/punctuation. No per-part point breakdown was published; 10 points distributed as B1 1+1, B2 2, B3 1 each — adjust if a rubric surfaces. No figures on the page (only the NACLO logo), so no crops needed."
+}

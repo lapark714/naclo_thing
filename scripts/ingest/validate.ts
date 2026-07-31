@@ -9,6 +9,13 @@
  *   - every asset referenced by a record exists on disk
  *   - every sub-question has a non-empty answer key
  *   - a question with choices has its key among those choices
+ *   - every character in every record is covered by a self-hosted font.
+ *     The allowed ranges are parsed from app/globals.css, so the fonts stay
+ *     the single source of truth: ship a script with no coverage and the
+ *     build fails instead of rendering tofu boxes for students.
+ *
+ * Records in content/drafts/ (AI output awaiting review) are checked too, but
+ * their failures are warnings — the gate is at publish, not at draft.
  */
 
 import { existsSync, readdirSync, readFileSync } from "node:fs";
@@ -16,46 +23,111 @@ import { join } from "node:path";
 import { Problem } from "../../content/schema";
 
 const PROBLEMS_DIR = process.env.CONTENT_DIR ?? "content/problems";
+const DRAFTS_DIR = "content/drafts";
 const ASSETS_PREFIX = "/content-assets/";
 const ASSETS_DIR = "content/assets";
+const CSS_FILE = "app/globals.css";
 
-function main() {
-  if (!existsSync(PROBLEMS_DIR)) {
-    console.log(`No content yet — ${PROBLEMS_DIR} does not exist. Nothing to validate.`);
-    return;
+/* ---------------------------------------------------------------------------
+   Glyph coverage
+   --------------------------------------------------------------------------- */
+
+type Range = [number, number];
+
+function coveredRanges(): Range[] {
+  const css = readFileSync(CSS_FILE, "utf8");
+  const ranges: Range[] = [
+    [0x09, 0x0a], // tab, newline
+    [0x0d, 0x0d],
+  ];
+  for (const m of css.matchAll(/unicode-range:\s*([^;]+);/g)) {
+    for (const part of m[1].split(",")) {
+      const token = part.trim().toUpperCase();
+      let hit = token.match(/^U\+([0-9A-F]+)-([0-9A-F]+)$/);
+      if (hit) {
+        ranges.push([parseInt(hit[1], 16), parseInt(hit[2], 16)]);
+        continue;
+      }
+      hit = token.match(/^U\+([0-9A-F?]+)$/);
+      if (hit) {
+        if (hit[1].includes("?")) {
+          const lo = parseInt(hit[1].replaceAll("?", "0"), 16);
+          const hi = parseInt(hit[1].replaceAll("?", "F"), 16);
+          ranges.push([lo, hi]);
+        } else {
+          const cp = parseInt(hit[1], 16);
+          ranges.push([cp, cp]);
+        }
+      }
+    }
   }
+  return ranges;
+}
 
-  const files = readdirSync(PROBLEMS_DIR).filter((f) => f.endsWith(".json"));
-  if (files.length === 0) {
-    console.log(`No records in ${PROBLEMS_DIR}. Nothing to validate.`);
-    return;
+function uncoveredChars(text: string, ranges: Range[]): Map<string, number> {
+  const bad = new Map<string, number>();
+  for (const ch of text) {
+    const cp = ch.codePointAt(0)!;
+    if (!ranges.some(([lo, hi]) => cp >= lo && cp <= hi)) {
+      bad.set(ch, cp);
+    }
   }
+  return bad;
+}
 
-  const errors: string[] = [];
-  let published = 0;
-  let questions = 0;
-  const modes: Record<string, number> = { exact: 0, llm: 0, self: 0 };
+/** Every human-visible string in a record, flattened. */
+function allText(value: unknown): string {
+  if (typeof value === "string") return value;
+  if (Array.isArray(value)) return value.map(allText).join("");
+  if (value && typeof value === "object") {
+    return Object.values(value).map(allText).join("");
+  }
+  return "";
+}
 
-  for (const file of files) {
-    const path = join(PROBLEMS_DIR, file);
+/* --------------------------------------------------------------------------- */
+
+function checkDir(
+  dir: string,
+  ranges: Range[],
+  stats: { published: number; questions: number; modes: Record<string, number> } | null,
+): string[] {
+  const issues: string[] = [];
+  if (!existsSync(dir)) return issues;
+
+  for (const file of readdirSync(dir).filter((f) => f.endsWith(".json"))) {
+    const path = join(dir, file);
     let raw: unknown;
     try {
       raw = JSON.parse(readFileSync(path, "utf8"));
     } catch (err) {
-      errors.push(`${file}: not valid JSON — ${(err as Error).message}`);
+      issues.push(`${file}: not valid JSON — ${(err as Error).message}`);
       continue;
     }
 
     const parsed = Problem.safeParse(raw);
     if (!parsed.success) {
       for (const issue of parsed.error.issues) {
-        errors.push(`${file}: ${issue.path.join(".") || "(root)"} — ${issue.message}`);
+        issues.push(`${file}: ${issue.path.join(".") || "(root)"} — ${issue.message}`);
       }
       continue;
     }
 
     const problem = parsed.data;
-    if (problem.reviewStatus === "published") published += 1;
+    if (stats && problem.reviewStatus === "published") stats.published += 1;
+
+    // Glyph coverage over every string in the record.
+    const bad = uncoveredChars(allText(raw), ranges);
+    if (bad.size > 0) {
+      const list = [...bad.entries()]
+        .slice(0, 8)
+        .map(([ch, cp]) => `"${ch}" U+${cp.toString(16).toUpperCase().padStart(4, "0")}`)
+        .join(", ");
+      issues.push(
+        `${file}: characters with no font coverage — ${list}${bad.size > 8 ? ` (+${bad.size - 8} more)` : ""}. ` +
+          `Add a subset in ${CSS_FILE} before shipping this script.`,
+      );
+    }
 
     // Referenced assets must exist. A missing figure in a problem where the
     // figure is the puzzle makes the problem unsolvable, not merely uglier.
@@ -67,27 +139,48 @@ function main() {
     }
     for (const src of referenced) {
       if (!src.startsWith(ASSETS_PREFIX)) {
-        errors.push(`${file}: asset "${src}" is not under ${ASSETS_PREFIX}`);
+        issues.push(`${file}: asset "${src}" is not under ${ASSETS_PREFIX}`);
         continue;
       }
       const onDisk = join(ASSETS_DIR, src.slice(ASSETS_PREFIX.length));
-      if (!existsSync(onDisk)) errors.push(`${file}: asset file missing — ${onDisk}`);
+      if (!existsSync(onDisk)) issues.push(`${file}: asset file missing — ${onDisk}`);
     }
 
     for (const q of problem.questions) {
-      questions += 1;
-      modes[q.gradingMode] += 1;
-
+      if (stats) {
+        stats.questions += 1;
+        stats.modes[q.gradingMode] += 1;
+      }
       if (!q.answerKey.trim()) {
-        errors.push(`${file}: question ${q.id} has an empty answer key`);
+        issues.push(`${file}: question ${q.id} has an empty answer key`);
       }
       if (q.choices && !q.choices.includes(q.answerKey)) {
-        errors.push(`${file}: question ${q.id} has an answer key that is not one of its choices`);
+        issues.push(`${file}: question ${q.id} has an answer key that is not one of its choices`);
       }
       if (q.gradingMode === "self" && !q.rubric) {
-        errors.push(`${file}: question ${q.id} is self-graded but has no rubric`);
+        issues.push(`${file}: question ${q.id} is self-graded but has no rubric`);
       }
     }
+  }
+  return issues;
+}
+
+function main() {
+  if (!existsSync(PROBLEMS_DIR)) {
+    console.log(`No content yet — ${PROBLEMS_DIR} does not exist. Nothing to validate.`);
+    return;
+  }
+
+  const ranges = coveredRanges();
+  const stats = { published: 0, questions: 0, modes: { exact: 0, llm: 0, self: 0 } };
+
+  const errors = checkDir(PROBLEMS_DIR, ranges, stats);
+  const draftWarnings = checkDir(DRAFTS_DIR, ranges, null);
+
+  if (draftWarnings.length > 0) {
+    console.warn(`\n${draftWarnings.length} draft warning(s) — not blocking, fix before promoting:\n`);
+    for (const w of draftWarnings) console.warn(`  ${w}`);
+    console.warn("");
   }
 
   if (errors.length > 0) {
@@ -97,10 +190,14 @@ function main() {
     process.exit(1);
   }
 
-  const exactPct = questions ? Math.round((modes.exact / questions) * 100) : 0;
+  const fileCount = readdirSync(PROBLEMS_DIR).filter((f) => f.endsWith(".json")).length;
+  const exactPct = stats.questions ? Math.round((stats.modes.exact / stats.questions) * 100) : 0;
   console.log(
-    `${files.length} record(s) valid · ${published} published · ${questions} sub-questions ` +
-      `(${modes.exact} exact, ${modes.llm} llm, ${modes.self} self — ${exactPct}% exact)`,
+    `${fileCount} record(s) valid · ${stats.published} published · ${stats.questions} sub-questions ` +
+      `(${stats.modes.exact} exact, ${stats.modes.llm} llm, ${stats.modes.self} self — ${exactPct}% exact)` +
+      (existsSync(DRAFTS_DIR)
+        ? ` · ${readdirSync(DRAFTS_DIR).filter((f) => f.endsWith(".json")).length} draft(s) awaiting review`
+        : ""),
   );
 }
 

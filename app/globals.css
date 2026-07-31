@@ -173,9 +173,186 @@
   unicode-range: U+0308, U+0530-058F, U+2010, U+25CC, U+FB13-FB17;
 }
 
+/* Script coverage for the wider archive: Devanagari, Georgian, Cherokee,
+   Ethiopic, N'Ko, plus Greek and Cyrillic subsets of the existing families.
+   unicode-range means an unused subset costs a visitor zero bytes — a face is
+   only fetched when a codepoint in its range appears on the page. validate.ts
+   parses these ranges, so shipping a script with no coverage fails the build. */
+@font-face {
+  font-family: "Noto Sans Devanagari";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NotoSansDevanagari-400-devanagari.woff2") format("woff2");
+  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
+}
+@font-face {
+  font-family: "Noto Sans Devanagari";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/NotoSansDevanagari-700-devanagari.woff2") format("woff2");
+  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
+}
+@font-face {
+  font-family: "Noto Sans Georgian";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NotoSansGeorgian-400-georgian.woff2") format("woff2");
+  unicode-range: U+0589, U+10A0-10FF, U+1C90-1CBA, U+1CBD-1CBF, U+205A, U+2D00-2D2F, U+2E31;
+}
+@font-face {
+  font-family: "Noto Sans Georgian";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/NotoSansGeorgian-700-georgian.woff2") format("woff2");
+  unicode-range: U+0589, U+10A0-10FF, U+1C90-1CBA, U+1CBD-1CBF, U+205A, U+2D00-2D2F, U+2E31;
+}
+@font-face {
+  font-family: "Noto Sans Cherokee";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NotoSansCherokee-400-cherokee.woff2") format("woff2");
+  unicode-range: U+0300-0302, U+0304, U+030B-030C, U+0323-0324, U+0330-0331, U+13A0-13FF, U+AB70-ABBF;
+}
+@font-face {
+  font-family: "Noto Sans Cherokee";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/NotoSansCherokee-700-cherokee.woff2") format("woff2");
+  unicode-range: U+0300-0302, U+0304, U+030B-030C, U+0323-0324, U+0330-0331, U+13A0-13FF, U+AB70-ABBF;
+}
+@font-face {
+  font-family: "Noto Sans Ethiopic";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NotoSansEthiopic-400-ethiopic.woff2") format("woff2");
+  unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}
+@font-face {
+  font-family: "Noto Sans Ethiopic";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/NotoSansEthiopic-700-ethiopic.woff2") format("woff2");
+  unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}
+@font-face {
+  font-family: "Noto Sans NKo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NotoSansNKo-400-nko.woff2") format("woff2");
+  unicode-range: U+060C, U+061B, U+061F, U+066A, U+07C0-07FF, U+200C-200F, U+25CC, U+2E1C-2E1D, U+FD3E-FD3F;
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NotoSans-400-cyrillic-ext.woff2") format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NotoSans-400-cyrillic.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NotoSans-400-greek-ext.woff2") format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NotoSans-400-greek.woff2") format("woff2");
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/NotoSans-700-cyrillic-ext.woff2") format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/NotoSans-700-cyrillic.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/NotoSans-700-greek-ext.woff2") format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/NotoSans-700-greek.woff2") format("woff2");
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+@font-face {
+  font-family: "Charis SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/CharisSIL-400-cyrillic-ext.woff2") format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Charis SIL";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/CharisSIL-400-cyrillic.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Charis SIL";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/CharisSIL-700-cyrillic-ext.woff2") format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Charis SIL";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/CharisSIL-700-cyrillic.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
 /* --------------------------------------------------------------------------- */
 
 :root {
+  --data-stack: "Charis SIL", "Noto Sans Armenian", "Noto Sans Devanagari",
+    "Noto Sans Georgian", "Noto Sans Cherokee", "Noto Sans Ethiopic",
+    "Noto Sans NKo", "Noto Sans", "Doulos SIL", Charter, Georgia, serif;
   --paper: #fbfaf7;
   --ink: #16181d;
   --ink-soft: #5a6070;
@@ -271,7 +448,7 @@
   --font-sans: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Noto Serif Display", Georgia, serif;
   --font-display: "Noto Serif Display", Georgia, serif;
-  --font-data: "Charis SIL", "Noto Sans Armenian", "Doulos SIL", Charter, Georgia, serif;
+  --font-data: var(--data-stack);
   --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
 
   --radius-sm: 2px;
@@ -312,8 +489,7 @@ body {
 
 /* The signature: primary language data is always set in Charis SIL. */
 .data {
-  font-family: "Charis SIL", "Noto Sans Armenian", "Doulos SIL", Charter, Georgia,
-    serif;
+  font-family: var(--data-stack);
 }
 
 .problem-body ul,
@@ -341,7 +517,7 @@ body {
 .problem-body table,
 .table-scroll table {
   border-collapse: collapse;
-  font-family: "Charis SIL", "Noto Sans Armenian", Charter, Georgia, serif;
+  font-family: var(--data-stack);
   font-size: 0.95rem;
   width: max-content;
   min-width: 100%;
@@ -382,7 +558,7 @@ body {
   max-width: 68ch;
 }
 .gloss-list dt {
-  font-family: "Charis SIL", "Noto Sans Armenian", Charter, Georgia, serif;
+  font-family: var(--data-stack);
   font-weight: 700;
 }
 .gloss-list dd {
