@@ -27,7 +27,7 @@ Verified after the build that `llm` answer keys still do not reach the browser: 
 - Five drafts await review in `content/drafts/` (2024 A, E and 2025 A, D, H). Every one needs at least one figure cropped from the source PDF. 2024 E additionally needs a katakana subset — the problem is *about* the script, so a missing glyph makes it unsolvable rather than ugly
 - 2024 A also uses `⁹` (U+2079) for a medieval Latin abbreviation; `ꝯ` (U+A76F) is likely the right character and already sits inside a declared range, but the glyph's presence in the file has not been checked
 - 40 archive problems (2018, 2019, 2020-2023, and the rest of 2024-2025) are still catalogue-only. `npm run draft -- <year>` handles a year at a time now
-- `ANTHROPIC_API_KEY` still not set in Vercel, so AI help and `llm` grading degrade to a 503 in production. This now matters more: 14 `llm` sub-questions depend on it
+- ~~`ANTHROPIC_API_KEY` not set in Vercel~~ **Resolved.** Verified live against production after this deploy: `POST /api/help` for 2025 C part C1 returned HTTP 200 with a real model-written hint that nudged toward the rule without naming an answer. AI help and `llm` grading work in production; the 503 noted earlier today is gone
 - The Vercel project is still named `naclo-thing`, so the URL does not match `gloss.`
 - `npm audit`: 12 high advisories, no fix available (3 nest under `next` itself)
 - Still no visual verification by any agent — the site has only ever been checked by fetching HTML and reading the build output
@@ -36,8 +36,7 @@ Verified after the build that `llm` answer keys still do not reach the browser: 
 
 1. Crop the six figures the five pending drafts need, then review and publish them
 2. Add a katakana subset for 2024 E
-3. Set `ANTHROPIC_API_KEY` in Vercel
-4. Keep drafting year by year; 2023 was the originally chosen scope and is untouched
+3. Keep drafting year by year; 2023 was the originally chosen scope and is untouched
 
 ## 2026-07-31
 
