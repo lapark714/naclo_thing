@@ -519,6 +519,17 @@ body {
   font-family: var(--ui-stack);
   -webkit-font-smoothing: antialiased;
 }
+/* body is a flex column, so every page wrapper is a flex item. Two flexbox
+   rules combined to push the whole document sideways on a phone, carrying the
+   prose off-screen with the table: a flex item's min-width resolves to auto,
+   so it will not shrink below its own content, and the wrappers use mx-auto,
+   whose auto cross-axis margins switch stretch off and leave the item sized
+   to fit-content. Pinning width and min-width restores both. The horizontal
+   scroll belongs to .table-scroll alone; the page body never scrolls sideways. */
+body > * {
+  width: 100%;
+  min-width: 0;
+}
 
 :focus-visible {
   outline: 2px solid var(--ink);
