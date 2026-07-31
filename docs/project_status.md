@@ -13,6 +13,7 @@ This file will hold the project's development status and thus document whatever 
 - Drafted 10 problems in one batch run (2024 A, C, D, E and 2025 A, B, C, D, F, H): 10 drafted, 0 failed, ~112k input / ~148k output tokens, roughly $4 total, about 45 minutes unattended
 - Reviewed and published 6 of them (`2a41643`): 2024 B, C, D and 2025 B, C, F. **Playable problems 8 -> 14, sub-questions 138 -> 232, 94% exact.** Every answer key was checked against the official solution pages rather than trusted from the draft
 - Added the nasal-vowel font subset (`bddad7e`) for Tucano `kamrẽ` in 2025 C
+- Cleared the drafts queue (`4f273de`, `f5a7fe6`, `07ca56b`): cropped the ten figures the last five problems needed, added a katakana subset for 2024 E, and published 2024 A, E and 2025 A, D, H. **Playable 14 -> 19, sub-questions 232 -> 294 at 95% exact. 2025 is complete at all eight problems**
 
 **Where things stand**
 
@@ -24,9 +25,8 @@ Verified after the build that `llm` answer keys still do not reach the browser: 
 
 **Carried over / needs fixing**
 
-- Five drafts await review in `content/drafts/` (2024 A, E and 2025 A, D, H). Every one needs at least one figure cropped from the source PDF. 2024 E additionally needs a katakana subset — the problem is *about* the script, so a missing glyph makes it unsolvable rather than ugly
-- 2024 A also uses `⁹` (U+2079) for a medieval Latin abbreviation; `ꝯ` (U+A76F) is likely the right character and already sits inside a declared range, but the glyph's presence in the file has not been checked
-- 40 archive problems (2018, 2019, 2020-2023, and the rest of 2024-2025) are still catalogue-only. `npm run draft -- <year>` handles a year at a time now
+- 45 archive problems (2018-2023 and 2024 F-H) are still catalogue-only. `npm run draft -- <year>` handles a year at a time; 2019's page map is in place, so nothing is blocked
+- Figure crops are the one step the pipeline cannot do. Ten were cut by hand this session; budget for roughly one or two per problem drafted
 - ~~`ANTHROPIC_API_KEY` not set in Vercel~~ **Resolved.** Verified live against production after this deploy: `POST /api/help` for 2025 C part C1 returned HTTP 200 with a real model-written hint that nudged toward the rule without naming an answer. AI help and `llm` grading work in production; the 503 noted earlier today is gone
 - The Vercel project is still named `naclo-thing`, so the URL does not match `gloss.`
 - `npm audit`: 12 high advisories, no fix available (3 nest under `next` itself)
@@ -34,9 +34,9 @@ Verified after the build that `llm` answer keys still do not reach the browser: 
 
 **Next up**
 
-1. Crop the six figures the five pending drafts need, then review and publish them
-2. Add a katakana subset for 2024 E
-3. Keep drafting year by year; 2023 was the originally chosen scope and is untouched
+1. Keep drafting year by year; 2023 was the originally chosen scope and is untouched, and 2024 F-H would finish that year
+2. Rename the Vercel project so the URL matches `gloss.`
+3. Get eyes (or a browser agent) on the published pages — still the oldest untouched gap
 
 ## 2026-07-31
 
