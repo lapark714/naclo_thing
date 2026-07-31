@@ -199,6 +199,27 @@
   unicode-range: U+0308, U+0530-058F, U+2010, U+25CC, U+FB13-FB17;
 }
 
+/* Katakana. Added for 2024 (E), where the puzzle is reading the script itself,
+   so a missing glyph does not make the problem ugly, it makes it impossible.
+   Subset to the katakana block only: 20KB rather than the multi-megabyte
+   full Japanese face, and all 96 codepoints verified present in the file. */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NotoSansJP-400-katakana.woff2") format("woff2");
+  unicode-range: U+30A0-30FF;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/NotoSansJP-700-katakana.woff2") format("woff2");
+  unicode-range: U+30A0-30FF;
+}
+
 /* Script coverage for the wider archive: Devanagari, Georgian, Cherokee,
    Ethiopic, N'Ko, plus Greek and Cyrillic subsets of the existing families.
    unicode-range means an unused subset costs a visitor zero bytes — a face is
@@ -378,7 +399,8 @@
 :root {
   --data-stack: "Charis SIL", "Noto Sans Armenian", "Noto Sans Devanagari",
     "Noto Sans Georgian", "Noto Sans Cherokee", "Noto Sans Ethiopic",
-    "Noto Sans NKo", "Noto Sans", "Doulos SIL", Charter, Georgia, serif;
+    "Noto Sans NKo", "Noto Sans JP", "Noto Sans", "Doulos SIL", Charter,
+    Georgia, serif;
   --paper: #fbfaf7;
   --ink: #16181d;
   --ink-soft: #5a6070;
