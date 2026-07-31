@@ -24,7 +24,7 @@ export default function Home() {
           href="/practice"
           className="border border-ink px-5 py-2.5 text-[0.8rem] font-semibold tracking-[0.1em] uppercase transition-colors hover:bg-ink hover:text-paper"
         >
-          Start practising
+          Start practicing
         </Link>
         <span className="text-[0.85rem] text-ink-soft tabular-nums">
           {problems.length} problems · {languages.length} languages
@@ -55,7 +55,7 @@ export default function Home() {
           <div>
             <dt className="font-heading text-[1.05rem]">A clock you control</dt>
             <dd className="mt-1 text-[0.88rem] leading-relaxed text-ink-soft">
-              Untimed by default. Set a limit if you want to practise pacing — when it runs out you
+              Untimed by default. Set a limit if you want to practice pacing — when it runs out you
               get a banner, not a locked screen.
             </dd>
           </div>
