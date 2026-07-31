@@ -8,19 +8,20 @@ A statically generated Next.js site over reviewed JSON content files, with no da
 
 ## Data Flow
 
-### Ingest — offline, by hand (no `fetch`/`transcribe`/`draft` scripts exist yet)
-
+### Ingest — offline (`draft.ts` exists; no `fetch`/`transcribe` scripts)
 ```
 problem PDF + solution PDF        → /pdfs (gitignored), downloaded by hand
-   ↓  transcribed by hand         → Unicode HTML, real <table> markup;
-                                    figures cropped with pdftoppm → content/assets/
+   ↓  draft.ts                    → pdftoppm images → Claude. Flags figures, can't crop them
+content/drafts/<id>.json                                reviewStatus: 'drafted'
+   ↓  REVIEW BY A HUMAN           → keys checked against the official solution;
+                                    figures cropped by hand → content/assets/
 content/problems/<id>.json                              reviewStatus: 'published'
-   ↓  validate.ts                 → Zod + assets + keys. Blocks the build.
+   ↓  validate.ts                 → Zod + assets + keys + glyph coverage. Blocks
+                                    the build; drafts warn but never block.
    ↓  sync-assets.ts              → content/assets → public/content-assets (predev/prebuild)
 ```
 
 ### Attempt — request time
-
 ```
 /practice + filters  →  static page, prerendered from published records
    ↓  submit a sub-question answer, branch on gradingMode
@@ -64,8 +65,9 @@ content/problems/<id>.json                              reviewStatus: 'published
 ### Content & Ingest
 - `content/schema.ts` — Zod `Problem`/`Question`, imported by both the scripts and the site
 - `content/taxonomy.ts` — Concept + form tag vocabulary (NACLO publishes none)
-- `content/problems/*.json` — One reviewed record per problem; `content/assets/` holds cropped figures
-- `scripts/ingest/validate.ts` — Zod + assets + keys, blocks the build. `scripts/ingest/sync-assets.ts` — copies `content/assets` to `public/content-assets`. Both offline only, never at request time.
+- `content/problems/*.json` — One reviewed record per problem; `content/assets/` holds cropped figures. `tier` is `full` (playable) or `catalogue` (metadata, links out to the booklet). `content/drafts/*.json` is machine output; `lib/content.ts` never reads it, so promotion is a human move rather than a flag flip
+- `scripts/ingest/draft.ts` — `npm run draft [--list | <id> | <year> | --all]`. Holds the booklet page maps, hand-checked where the text layer is mojibake
+- `scripts/ingest/validate.ts` — Zod + assets + keys + glyph coverage, blocks the build; allowed `unicode-range`s come from `app/globals.css` so the fonts stay the single source of truth. `scripts/ingest/sync-assets.ts` — copies `content/assets` to `public/content-assets`. Offline only, never at request time.
 
 ## Design Decisions
 

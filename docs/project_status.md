@@ -2,6 +2,43 @@
 
 This file will hold the project's development status and thus document whatever large updates/accomplishments on the project have been made day-by-day. It is meant to help keep track of where things were left off from the previous day, as a personal reminder.
 
+## 2026-07-31 (later sessions)
+
+**Done**
+
+- Catalogued the whole 2018-2025 archive (`1da1ff5`): 64 records, of which 6 playable at the time. Added the `tier` field (`full` vs `catalogue`) so the archive is findable and filterable long before it is all transcribed
+- Transcribed 2025 E and G (`156b865`); E needed Armenian, which surfaced the general problem below
+- Attacked the throughput bottleneck (`9be9677`) three ways: a glyph-coverage gate in `validate.ts` that reads the allowed `unicode-range`s straight out of `globals.css`; 21 preloaded script font subsets; and `scripts/ingest/draft.ts`, the batch drafting pipeline the spec always called for but that had never been built
+- Unlocked 2019 (`3fa47c2`). Both its booklets return a substitution cipher from `pdftotext`, but the cipher is consistent and the header furniture survives it, so scanning for `(X)` and `(n/m)` pins all eight problems to their pages without decoding a word of prose. Verified against the rendered page. Archive coverage 58 -> 66
+- Drafted 10 problems in one batch run (2024 A, C, D, E and 2025 A, B, C, D, F, H): 10 drafted, 0 failed, ~112k input / ~148k output tokens, roughly $4 total, about 45 minutes unattended
+- Reviewed and published 6 of them (`2a41643`): 2024 B, C, D and 2025 B, C, F. **Playable problems 8 -> 14, sub-questions 138 -> 232, 94% exact.** Every answer key was checked against the official solution pages rather than trusted from the draft
+- Added the nasal-vowel font subset (`bddad7e`) for Tucano `kamrẽ` in 2025 C
+
+**Where things stand**
+
+The pipeline works end to end and the review step is now the only slow part, which is where the spec wants it. Drafting a problem costs about $0.40 and produces a record whose keys, in this batch, matched the official solutions cell for cell in all six cases checked. What the model does *not* get right without help is bounded and predictable: it invents its own question-id scheme, it reaches for arrows and ✔/✘ that no shipped font carries, and it cannot crop a figure. The first two are now prompt rules; the third is genuinely manual.
+
+Two real bugs were caught by review rather than by validation, which is worth remembering when judging how far to trust a draft. 2025 B's B3 had `answerKey: "9"` against choices like `"9. to cross over"`, so every correct answer would have been marked wrong. And 2024 B graded a free English translation as `exact`, which would have failed a student who wrote "the dog lies on the horse" — it is now `llm`. Neither is visible to the schema.
+
+Verified after the build that `llm` answer keys still do not reach the browser: the prerendered HTML for 2024 B carries exactly 8 `answerKey` fields for its 8 `exact` questions, and none for the `llm` one.
+
+**Carried over / needs fixing**
+
+- Five drafts await review in `content/drafts/` (2024 A, E and 2025 A, D, H). Every one needs at least one figure cropped from the source PDF. 2024 E additionally needs a katakana subset — the problem is *about* the script, so a missing glyph makes it unsolvable rather than ugly
+- 2024 A also uses `⁹` (U+2079) for a medieval Latin abbreviation; `ꝯ` (U+A76F) is likely the right character and already sits inside a declared range, but the glyph's presence in the file has not been checked
+- 40 archive problems (2018, 2019, 2020-2023, and the rest of 2024-2025) are still catalogue-only. `npm run draft -- <year>` handles a year at a time now
+- `ANTHROPIC_API_KEY` still not set in Vercel, so AI help and `llm` grading degrade to a 503 in production. This now matters more: 14 `llm` sub-questions depend on it
+- The Vercel project is still named `naclo-thing`, so the URL does not match `gloss.`
+- `npm audit`: 12 high advisories, no fix available (3 nest under `next` itself)
+- Still no visual verification by any agent — the site has only ever been checked by fetching HTML and reading the build output
+
+**Next up**
+
+1. Crop the six figures the five pending drafts need, then review and publish them
+2. Add a katakana subset for 2024 E
+3. Set `ANTHROPIC_API_KEY` in Vercel
+4. Keep drafting year by year; 2023 was the originally chosen scope and is untouched
+
 ## 2026-07-31
 
 **Done**
