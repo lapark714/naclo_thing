@@ -62,10 +62,26 @@ const EXAMS: Record<number, { problems: string; solutions: string }> = {
 };
 
 // Hand-checked page maps for booklets whose embedded text is mojibake.
-// 2023 solutions verified by rendering each page; 2019 not yet mapped.
+//
+// 2023 solutions verified by rendering each page. Both 2019 booklets embed a
+// subsetted font with a broken ToUnicode map, so pdftotext returns a
+// substitution cipher — but a consistent one, and the header furniture
+// survives it: "(" is U+037E, ")" is U+037F, and a digit d is U+03EC+d. That
+// leaves "(X)" and "(n/m)" findable without decoding a word of the prose.
+// Scanning both booklets for that shape turns up exactly eight letter glyphs
+// (U+0004, U+0011, U+0012, U+0018, U+001C, U+0026, U+0027, U+002C) in the
+// same order in each, which pins them to A-H. Pages below are that scan, with
+// the (n/m) counts agreeing on every span. The end-of-booklet answer sheet
+// (problems p24-29, its own "1/6".."6/6") is excluded.
 const MANUAL_PAGES: Record<string, Record<string, number[]>> = {
   "pdfs/NACLO2023ROUND1SOL.pdf": {
     A: [1, 2], B: [3], C: [4, 5], D: [6, 7], E: [8], F: [9], G: [10, 11, 12, 13], H: [14],
+  },
+  "pdfs/NACLO2019ROUND1.pdf": {
+    A: [8, 9], B: [10], C: [11], D: [12, 13, 14], E: [15], F: [16, 17], G: [18, 19], H: [20, 21],
+  },
+  "pdfs/NACLO2019ROUND1SOL.pdf": {
+    A: [2], B: [3], C: [4], D: [5], E: [6], F: [7], G: [8], H: [9],
   },
 };
 
@@ -197,6 +213,7 @@ Return ONLY a JSON object, no markdown fences, matching this shape:
 
 TRANSCRIPTION RULES
 - Prose becomes clean HTML paragraphs. Preserve every piece of language data exactly: diacritics, apostrophes, unusual letters. Never "correct" spelling in a language you do not know.
+- In YOUR OWN prose (hints, explanation, prompts) use only ASCII plus curly quotes, en/em dashes and the ellipsis. No arrows (→ ⇒), no maths symbols, no emoji: the self-hosted fonts do not carry them and the build fails on an uncovered character. Write "gives", "becomes" or "takes" where you would reach for an arrow. This limit does NOT apply to transcribed language data — a script the problem is actually about is expected, and gets a font subset added for it.
 - Data tables become real <table> markup wrapped in <div class="table-scroll">. Alignment IS the puzzle: transcribe cell by cell.
 - Paired translation lists (word — gloss) become <dl class="gloss-list"><dt>word</dt><dd>gloss</dd>...</dl>.
 - Wrap every span of non-English language data in class="data": <span class="data">word</span>, or <dt> content (already styled).
@@ -205,6 +222,8 @@ TRANSCRIPTION RULES
 QUESTIONS
 - One entry per blank the student fills: {"id","part","partPrompt","promptHtml","gradingMode","answerKey","acceptedVariants","points"} plus optional "choices".
 - "part" groups sub-questions (e.g. "B1"); put the instruction in "partPrompt" on the FIRST question of the part only.
+- "id" is always "<part>.<label>" — the part, a dot, then the label the booklet itself uses for that blank: "B1.a", "B3.iv", "A2.7". Never invent a scheme of your own, and never lowercase the part.
+- acceptedVariants exist for genuinely different answers, not typography: grading already ignores case, surrounding whitespace and trailing . ! ? on both sides. Do not list a variant that differs only by those.
 - gradingMode "exact" for anything with a single checkable answer (letters, words, numbers, matching, table cells). Add reasonable acceptedVariants (letter-only for lettered matches, missing diacritics a US keyboard cannot type). Use "choices" when the problem gives a fixed option set.
 - gradingMode "llm" ONLY for free-text translation where several wordings are correct. Prefer exact wherever defensible.
 - Never use gradingMode "self".
