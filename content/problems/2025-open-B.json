@@ -1,15 +1,17 @@
 {
   "id": "2025-open-B",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2025,
   "round": "open",
   "letter": "B",
   "title": "Swidden in Plain Sight",
-  "authors": [],
+  "authors": [
+    "NACLO 2025 Problem Committee"
+  ],
   "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
   "conceptTags": [
-    "phonology",
-    "morphology"
+    "morphology",
+    "semantics"
   ],
   "formTag": "rule discovery",
   "difficulty": "standard",
@@ -18,10 +20,204 @@
   ],
   "officialPoints": 10,
   "officialTimeMinutes": 18,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Kri is a Vietic language spoken in Laos, with about 250 speakers as of 2009. Below are some words in Kri, alongside their English translations. Kri vowels come in two registers, heavy and light, but for simplicity this distinction is not marked in this problem.</p>\n<dl class=\"gloss-list\">\n<dt>blang</dt><dd><em>(of the eyes) to become open</em><sup>1</sup></dd>\n<dt>balang</dt><dd><em>to open one's eyes</em></dd>\n<dt>plaajh</dt><dd><em>an arm span</em><sup>2</sup></dd>\n<dt>palaajh</dt><dd><em>to measure something by arm spans</em></dd>\n<dt>cabuuc</dt><dd><em>to pick up or measure out purse-hand</em><sup>3</sup></dd>\n<dt>truum</dt><dd><em>to be on its face</em></dd>\n<dt>paang</dt><dd><em>to signal ownership of a swidden</em><sup>4</sup></dd>\n<dt>ckaang</dt><dd><em>a hand span</em><sup>5</sup></dd>\n<dt>basơt</dt><dd><em>to turn off, put out</em></dd>\n<dt>kooq</dt><dd><em>to live</em></dd>\n<dt>bsơt</dt><dd><em>to go out (as a light or fire does)</em></dd>\n<dt>cakaang</dt><dd><em>to measure something by hand spans</em></dd>\n<dt>cooh</dt><dd><em>to pierce</em></dd>\n<dt>krnooq</dt><dd><em>a house</em></dd>\n<dt>prnaang</dt><dd><em>a sign placed in a swidden to show ownership</em></dd>\n</dl>\n<p class=\"footnotes\"><small>\n<sup>1</sup> As an example, this verb can be used to describe the point a few weeks into a puppy's life, when its eyes open for the first time.<br />\n<sup>2</sup> An <em>arm span</em> is the length of a person's outstretched arms, from fingertips to fingertips.<br />\n<sup>3</sup> <em>Purse-hand</em> means to put the thumb and other four fingers together in a pinching motion.<br />\n<sup>4</sup> A <em>swidden</em> is an agricultural field that has been cleared by cutting and burning vegetation.<br />\n<sup>5</sup> A <em>hand span</em> is the length of a person's hand.\n</small></p>\n<p><strong>B1.</strong> Give the Kri word for each of the following:</p>\n<ol type=\"a\">\n<li><em>a unit of measure equal to an amount that can be picked up purse-hand</em></li>\n<li><em>to put something on its face</em></li>\n<li><em>a hanging thread, pierced through many objects</em></li>\n</ol>\n<p>Here are six more Kri words. Their English meanings are given below, in a random order.</p>\n<p>A. <span class=\"data\">kaleer</span> &nbsp;&nbsp; B. <span class=\"data\">kleer</span> &nbsp;&nbsp; C. <span class=\"data\">koorq</span> &nbsp;&nbsp; D. <span class=\"data\">krneep</span> &nbsp;&nbsp; E. <span class=\"data\">krnoorq</span> &nbsp;&nbsp; F. <span class=\"data\">paraang</span></p>\n<ol>\n<li><em>to scoop out strips of a vegetable for food preparation</em></li>\n<li><em>to fall off (as a fruit does)</em></li>\n<li><em>an instrument to scoop out strips of a vegetable</em></li>\n<li><em>to take someone across (e.g., across a river)</em></li>\n<li><em>tongs, pincers</em></li>\n<li><em>to pick something off (e.g., to pick a berry off of a bush)</em></li>\n</ol>\n<p><strong>B2.</strong> Match the Kri words (A to F) with their English translations (1 to 6).</p>\n<p><strong>B3.</strong> A Kri word in this problem can be modified to translate exactly one of the English phrases below. Choose that phrase and give the Kri word that translates it.</p>\n<ol start=\"7\">\n<li><em>a river</em></li>\n<li><em>to put someone into a river</em></li>\n<li><em>to cross over</em></li>\n<li><em>a cross</em></li>\n</ol>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "B1.a",
+      "part": "B1",
+      "partPrompt": "Give the Kri word for each of the following meanings.",
+      "promptHtml": "<em>a unit of measure equal to an amount that can be picked up purse-hand</em>",
+      "gradingMode": "exact",
+      "answerKey": "cbuuc",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "B1.b",
+      "part": "B1",
+      "promptHtml": "<em>to put something on its face</em>",
+      "gradingMode": "exact",
+      "answerKey": "taruum",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "B1.c",
+      "part": "B1",
+      "promptHtml": "<em>a hanging thread, pierced through many objects</em>",
+      "gradingMode": "exact",
+      "answerKey": "crnooh",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "B2.1",
+      "part": "B2",
+      "partPrompt": "Match each English translation (1 to 6) with the correct Kri word (A. kaleer, B. kleer, C. koorq, D. krneep, E. krnoorq, F. paraang).",
+      "promptHtml": "1. <em>to scoop out strips of a vegetable for food preparation</em>",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "koorq",
+        "C. koorq"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B2.2",
+      "part": "B2",
+      "promptHtml": "2. <em>to fall off (as a fruit does)</em>",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "kleer",
+        "B. kleer"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B2.3",
+      "part": "B2",
+      "promptHtml": "3. <em>an instrument to scoop out strips of a vegetable</em>",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "krnoorq",
+        "E. krnoorq"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B2.4",
+      "part": "B2",
+      "promptHtml": "4. <em>to take someone across (e.g., across a river)</em>",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "paraang",
+        "F. paraang"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B2.5",
+      "part": "B2",
+      "promptHtml": "5. <em>tongs, pincers</em>",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "krneep",
+        "D. krneep"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B2.6",
+      "part": "B2",
+      "promptHtml": "6. <em>to pick something off (e.g., to pick a berry off of a bush)</em>",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "kaleer",
+        "A. kaleer"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B3.phrase",
+      "part": "B3",
+      "partPrompt": "One Kri word in this problem can be modified to translate exactly one of the English phrases 7–10. Choose that phrase, then give the Kri word.",
+      "promptHtml": "Which English phrase can be translated? (give its number)",
+      "gradingMode": "exact",
+      "answerKey": "9. to cross over",
+      "acceptedVariants": [
+        "9",
+        "to cross over"
+      ],
+      "choices": [
+        "7. a river",
+        "8. to put someone into a river",
+        "9. to cross over",
+        "10. a cross"
+      ],
+      "points": 2
+    },
+    {
+      "id": "B3.word",
+      "part": "B3",
+      "promptHtml": "Give the Kri word that translates the phrase you chose.",
+      "gradingMode": "exact",
+      "answerKey": "praang",
+      "acceptedVariants": [],
+      "points": 2
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Line up the words that clearly belong together in pairs or triples, for example plaajh / palaajh and kooq / krnooq. In each set, the consonants and vowels of the 'core' of the word stay the same, and something extra gets added inside the word, not at the beginning or end.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Kri uses infixes: extra material slipped in right after the very first consonant. One infix builds an action verb (doing something, or making something happen) out of a noun or a state; the other infix builds a noun (an instrument, a physical thing, or the result of the action) out of a verb. Decide which infix is which, then remember that you can also work backwards: strip an infix off to recover the simpler base word.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Practice on a pair that is not asked about: blang means '(of the eyes) to become open', and balang means 'to open one's eyes'. So inserting -a- after the first consonant b turns the plain happening into something an agent does. Check the same insertion in bsơt 'to go out', so basơt 'to turn off, put out'. Now find the other infix by comparing kooq 'to live' with krnooq 'a house'.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What to notice first</h3>\n<p>Kri words in this problem come in families. Members of a family share the same skeleton of consonants and vowels, and differ only by something inserted <em>inside</em> the word, just after the first consonant. Linguists call such an inserted piece an <strong>infix</strong> (English mostly uses prefixes and suffixes, like <em>un-</em> and <em>-ness</em>, so infixes feel unusual to us).</p>\n<p>Two families to compare:</p>\n<ul>\n<li><span class=\"data\">plaajh</span> 'an arm span' vs. <span class=\"data\">palaajh</span> 'to measure something by arm spans'</li>\n<li><span class=\"data\">kooq</span> 'to live' vs. <span class=\"data\">krnooq</span> 'a house'</li>\n</ul>\n<p>In the first, <strong>-a-</strong> is slipped in after <em>p</em>. In the second, <strong>-rn-</strong> is slipped in after <em>k</em>.</p>\n<h3>Infix 1: -a- makes an action verb</h3>\n<p>Collect all the -a- pairs:</p>\n<ul>\n<li><span class=\"data\">blang</span> '(of the eyes) to become open' gives <span class=\"data\">balang</span> 'to open one's eyes' (someone makes it happen)</li>\n<li><span class=\"data\">bsơt</span> 'to go out (of a fire)' gives <span class=\"data\">basơt</span> 'to put out' (someone makes it happen)</li>\n<li><span class=\"data\">plaajh</span> 'an arm span' (a unit) gives <span class=\"data\">palaajh</span> 'to measure by arm spans' (use the unit)</li>\n<li><span class=\"data\">ckaang</span> 'a hand span' gives <span class=\"data\">cakaang</span> 'to measure by hand spans'</li>\n</ul>\n<p>So -a- takes a state or a thing and gives you a verb meaning 'do it / cause it / use it'. Notice that -a- only appears in words whose base begins with two consonants (bl-, bs-, pl-, ck-): the infix breaks up that cluster.</p>\n<h3>Infix 2: -rn- makes a noun</h3>\n<ul>\n<li><span class=\"data\">kooq</span> 'to live' gives <span class=\"data\">krnooq</span> 'a house' (the place/thing for living)</li>\n<li><span class=\"data\">paang</span> 'to signal ownership of a swidden' gives <span class=\"data\">prnaang</span> 'a sign placed in a swidden to show ownership' (the physical thing used)</li>\n</ul>\n<p>So -rn- turns a verb into a concrete noun: the instrument, object, or result of the action.</p>\n<h3>Working backwards</h3>\n<p>The key trick is that the rules run in both directions. <span class=\"data\">cabuuc</span> 'to pick up or measure out purse-hand' already contains the verb-making -a-. Peel it off and you get the base noun <span class=\"data\">cbuuc</span>, which must be the <em>unit</em> of measure — exactly parallel to <span class=\"data\">ckaang</span> / <span class=\"data\">cakaang</span>. That solves B1a.</p>\n<p>For B1b, <span class=\"data\">truum</span> 'to be on its face' is a state, and we want the caused version 'to put something on its face'. Insert -a- after the first consonant <em>t</em>: <span class=\"data\">taruum</span>.</p>\n<p>For B1c, <span class=\"data\">cooh</span> 'to pierce' is a verb, and 'a hanging thread pierced through many objects' is a physical thing produced by piercing — a noun. Insert -rn- after <em>c</em>: <span class=\"data\">crnooh</span>.</p>\n<h3>B2: sorting the six new words</h3>\n<p>Look at the shapes:</p>\n<ul>\n<li><span class=\"data\">koorq</span> — plain verb, so 'to scoop out strips of a vegetable' (1)</li>\n<li><span class=\"data\">krnoorq</span> — the -rn- noun of that verb, so 'an instrument to scoop out strips' (3)</li>\n<li><span class=\"data\">kleer</span> — plain verb with a cluster, a spontaneous happening, so 'to fall off (as a fruit does)' (2)</li>\n<li><span class=\"data\">kaleer</span> — the -a- version of kleer, caused by someone, so 'to pick something off' (6)</li>\n<li><span class=\"data\">krneep</span> — contains -rn-, so it is an instrument noun, so 'tongs, pincers' (5)</li>\n<li><span class=\"data\">paraang</span> — contains -a- after <em>p</em>, so a caused verb, so 'to take someone across' (4)</li>\n</ul>\n<p>Note how the caused/spontaneous pair kleer / kaleer matches blang / balang: the fruit falling by itself vs. a person picking it off.</p>\n<h3>B3: which phrase is buildable?</h3>\n<p>We need a word in the problem that can be <em>modified</em> to fit one phrase. Start from <span class=\"data\">paraang</span> 'to take someone across'. Since -a- is the causing infix, its base must be <span class=\"data\">praang</span>, and the base of a caused verb is the plain happening: 'to cross over' — phrase 9. So the answer is 9, <span class=\"data\">praang</span>.</p>\n<p>Why not the others? 'A river' and 'a cross' are nouns, but the -rn- infix makes instruments and results of an action, not the setting or the shape, and neither 'river' nor 'cross' is the thing produced by crossing. 'To put someone into a river' is a different caused meaning that no single infix on any given word delivers. Only 'to cross over' falls out of the system directly.</p>",
   "reviewStatus": "published"
 }

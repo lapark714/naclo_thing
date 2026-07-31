@@ -1,24 +1,205 @@
 {
   "id": "2025-open-F",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2025,
   "round": "open",
   "letter": "F",
   "title": "Not Quite Right",
-  "authors": [],
+  "authors": [
+    "NACLO 2025 Problem Committee"
+  ],
   "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
   "conceptTags": [
-    "semantics"
+    "writing systems",
+    "number systems"
   ],
   "formTag": "formal and computational",
   "difficulty": "standard",
-  "languages": [],
+  "languages": [
+    "English"
+  ],
   "officialPoints": 10,
   "officialTimeMinutes": 18,
-  "bodyHtml": "",
+  "bodyHtml": "<p>A chatbot is a computer program that is designed to have conversations with people. NacloCorp has recently developed a chatbot, and it is your job to test it out.</p>\n<p>First, you ask NacloChat to decode five sentences written in a cipher, where each letter has been replaced by a different letter. The table below shows what you found, but some cells in the table are blank.</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th>Cipher text</th><th>Correct answer</th><th>NacloChat&rsquo;s answer</th></tr>\n</thead>\n<tbody>\n<tr><td><span class=\"data\">IPVFDDN ZSJ DPQJ SFT BLQJ</span></td><td><strong>a.</strong></td><td>finally the time has come</td></tr>\n<tr><td><span class=\"data\">ZSJN BSFVZJG ZSJ LIIPBPFD ULDPBN</span></td><td><strong>b.</strong></td><td>they changed the official policy</td></tr>\n<tr><td><span class=\"data\">SJ TZYIIJG ZSJ ULTZJW PVTPGJ F ZYEF</span></td><td><strong>c.</strong></td><td>he stuffed the poster inside a tube</td></tr>\n<tr><td><span class=\"data\">ZSJN TFPDJG FXFN PV F ELLZ</span></td><td><strong>d.</strong></td><td><strong>e.</strong></td></tr>\n<tr><td><span class=\"data\">XJ QYTZ EJ APVG ZL JFBS LZZJW</span></td><td><strong>f.</strong></td><td><strong>g.</strong></td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>F1.</strong> Fill in the blanks <strong>a.</strong> to <strong>g.</strong></p>\n<p><em>Hints:</em></p>\n<ul>\n<li>The same cipher has been used in all five sentences. For example, if <span class=\"data\">Q</span> stands for <em>m</em> in the first sentence, it will stand for <em>m</em> in all other sentences too.</li>\n<li>In each of the five sentences, NacloChat got exactly one letter wrong.</li>\n</ul>\n<p>Next, you ask NacloChat to form acronyms from the names of several organizations. An acronym is created by combining the first letters from all the words in a sequence of words. The table below shows what you find.</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th>Organization</th><th>Correct answer</th><th>NacloChat&rsquo;s answer</th></tr>\n</thead>\n<tbody>\n<tr><td>Waiting Room Enthusiasts Network</td><td>WREN</td><td>WHEN</td></tr>\n<tr><td>Architects Building Office Units Near Deserts</td><td>ABOUND</td><td>AROUND</td></tr>\n<tr><td>Seriously Creative Hat Manufacturers Organizational League</td><td>SCHMOL</td><td>SCHOOL</td></tr>\n<tr><td>Society Incentivizing Lateness &mdash; Earlybirds Not Allowed!</td><td>SILENA</td><td>SILENT</td></tr>\n<tr><td>People Improving Tomorrow&rsquo;s Yesterday</td><td>PITY</td><td>CITY</td></tr>\n<tr><td>Annoyingly Friendly Thimblemakers &mdash; Northern Region</td><td>AFTNR</td><td><strong>h.</strong></td></tr>\n<tr><td>Vancouver Eggplant Relocation Bureau</td><td>VERB</td><td><strong>i.</strong></td></tr>\n<tr><td>Pseudoscientists Embracing Obviously Counterfeited Evidence</td><td>PEOCE</td><td><strong>j.</strong></td></tr>\n<tr><td>Filmmakers Reimagining Old Memoirs</td><td>FROM</td><td><strong>k.</strong></td></tr>\n<tr><td>Western Indiana Typewriter Society</td><td>WITS</td><td><strong>l.</strong></td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>F2.</strong> Fill in the cells <strong>h.</strong> to <strong>l.</strong> that are missing from the table.</p>\n<p><em>Hints:</em></p>\n<ul>\n<li>There is one case where NacloChat gets the right answer. In all other cases, it gets exactly one letter wrong.</li>\n<li>The &ldquo;Organization&rdquo; column is provided for fun, but it is not necessary for solving the problem.</li>\n</ul>\n<p>Finally, you ask NacloChat to count how many words there are in some lists of words. For example, given the list &ldquo;elephant jacket spaghetti mattress,&rdquo; NacloChat should answer 4. You observe that it sometimes gets the answer wrong.</p>\n<p><strong>F3.</strong> Below are some questions about three of the cases that NacloChat answered incorrectly. Select the correct letter (A or B) for each one. <em>Note: To save some space, we are not providing the lists that were given to NacloChat &mdash; we are just saying how long each list was.</em></p>\n<p><em>In the past few years, many chatbots &mdash; powered by a type of technology called large language models (LLMs) &mdash; have been developed that can perform impressively well on a wide range of tasks. For example, they can summarize text and write computer code. However, despite their impressive performance, there are certain types of situations where chatbots often have trouble. This problem illustrates one type of issue that many chatbots display.</em></p>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "F1.a",
+      "part": "F1",
+      "partPrompt": "Fill in the blanks a. to g. in the cipher table. (Blanks in the \"Correct answer\" column are the true decodings; blanks in the \"NacloChat's answer\" column are what the chatbot produced.)",
+      "promptHtml": "<strong>a.</strong> Correct decoding of <span class=\"data\">IPVFDDN ZSJ DPQJ SFT BLQJ</span>",
+      "gradingMode": "exact",
+      "answerKey": "finally the lime has come",
+      "acceptedVariants": [],
+      "points": 0.57
+    },
+    {
+      "id": "F1.b",
+      "part": "F1",
+      "promptHtml": "<strong>b.</strong> Correct decoding of <span class=\"data\">ZSJN BSFVZJG ZSJ LIIPBPFD ULDPBN</span>",
+      "gradingMode": "exact",
+      "answerKey": "they chanted the official policy",
+      "acceptedVariants": [],
+      "points": 0.57
+    },
+    {
+      "id": "F1.c",
+      "part": "F1",
+      "promptHtml": "<strong>c.</strong> Correct decoding of <span class=\"data\">SJ TZYIIJG ZSJ ULTZJW PVTPGJ F ZYEF</span>",
+      "gradingMode": "exact",
+      "answerKey": "he stuffed the poster inside a tuba",
+      "acceptedVariants": [],
+      "points": 0.57
+    },
+    {
+      "id": "F1.d",
+      "part": "F1",
+      "promptHtml": "<strong>d.</strong> Correct decoding of <span class=\"data\">ZSJN TFPDJG FXFN PV F ELLZ</span>",
+      "gradingMode": "exact",
+      "answerKey": "they sailed away in a boot",
+      "acceptedVariants": [],
+      "points": 0.57
+    },
+    {
+      "id": "F1.e",
+      "part": "F1",
+      "promptHtml": "<strong>e.</strong> NacloChat&rsquo;s answer for <span class=\"data\">ZSJN TFPDJG FXFN PV F ELLZ</span>",
+      "gradingMode": "exact",
+      "answerKey": "they sailed away in a boat",
+      "acceptedVariants": [],
+      "points": 0.57
+    },
+    {
+      "id": "F1.f",
+      "part": "F1",
+      "promptHtml": "<strong>f.</strong> Correct decoding of <span class=\"data\">XJ QYTZ EJ APVG ZL JFBS LZZJW</span>",
+      "gradingMode": "exact",
+      "answerKey": "we must be kind to each otter",
+      "acceptedVariants": [],
+      "points": 0.57
+    },
+    {
+      "id": "F1.g",
+      "part": "F1",
+      "promptHtml": "<strong>g.</strong> NacloChat&rsquo;s answer for <span class=\"data\">XJ QYTZ EJ APVG ZL JFBS LZZJW</span>",
+      "gradingMode": "exact",
+      "answerKey": "we must be kind to each other",
+      "acceptedVariants": [],
+      "points": 0.58
+    },
+    {
+      "id": "F2.h",
+      "part": "F2",
+      "partPrompt": "Fill in the cells h. to l. that are missing from the acronym table (NacloChat's answers).",
+      "promptHtml": "<strong>h.</strong> NacloChat&rsquo;s answer when the correct acronym is AFTNR",
+      "gradingMode": "exact",
+      "answerKey": "AFTER",
+      "acceptedVariants": [],
+      "points": 0.6
+    },
+    {
+      "id": "F2.i",
+      "part": "F2",
+      "promptHtml": "<strong>i.</strong> NacloChat&rsquo;s answer when the correct acronym is VERB",
+      "gradingMode": "exact",
+      "answerKey": "VERY",
+      "acceptedVariants": [],
+      "points": 0.6
+    },
+    {
+      "id": "F2.j",
+      "part": "F2",
+      "promptHtml": "<strong>j.</strong> NacloChat&rsquo;s answer when the correct acronym is PEOCE",
+      "gradingMode": "exact",
+      "answerKey": "PEACE",
+      "acceptedVariants": [],
+      "points": 0.6
+    },
+    {
+      "id": "F2.k",
+      "part": "F2",
+      "promptHtml": "<strong>k.</strong> NacloChat&rsquo;s answer when the correct acronym is FROM",
+      "gradingMode": "exact",
+      "answerKey": "FROM",
+      "acceptedVariants": [],
+      "points": 0.6
+    },
+    {
+      "id": "F2.l",
+      "part": "F2",
+      "promptHtml": "<strong>l.</strong> NacloChat&rsquo;s answer when the correct acronym is WITS",
+      "gradingMode": "exact",
+      "answerKey": "WITH",
+      "acceptedVariants": [],
+      "points": 0.6
+    },
+    {
+      "id": "F3.1",
+      "part": "F3",
+      "partPrompt": "For each case, select the letter (A or B) of the number NacloChat produced.",
+      "promptHtml": "1. When the length of the list was 91, what number did NacloChat produce?",
+      "gradingMode": "exact",
+      "choices": [
+        "A. 90",
+        "B. 92"
+      ],
+      "answerKey": "A. 90",
+      "acceptedVariants": [
+        "A",
+        "90"
+      ],
+      "points": 1
+    },
+    {
+      "id": "F3.2",
+      "part": "F3",
+      "promptHtml": "2. When the length of the list was 59, what number did NacloChat produce?",
+      "gradingMode": "exact",
+      "choices": [
+        "A. 58",
+        "B. 60"
+      ],
+      "answerKey": "B. 60",
+      "acceptedVariants": [
+        "B",
+        "60"
+      ],
+      "points": 1
+    },
+    {
+      "id": "F3.3",
+      "part": "F3",
+      "promptHtml": "3. When the length of the list was 74, what number did NacloChat produce?",
+      "gradingMode": "exact",
+      "choices": [
+        "A. 73",
+        "B. 75"
+      ],
+      "answerKey": "B. 75",
+      "acceptedVariants": [
+        "B",
+        "75"
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start with the three rows where NacloChat's answer is given. Even though the chatbot made one mistake in each of those rows, almost every letter it produced is right, so you can use them to build a letter-by-letter key for the cipher (Z = t, S = h, J = e, and so on).",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "In every part, NacloChat's mistake makes the answer into something more ordinary or expected: an unusual word becomes a common word, a random-looking string of letters becomes a real English word, and an awkward number becomes a rounder number. Once you have decoded a sentence correctly, ask yourself which single letter a chatbot would 'fix' to get a more familiar sentence — and go the other way for the rows where you are given the chatbot's answer.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Worked step on ungraded data: in row 3 the cipher text ends with F ZYEF, and NacloChat says 'a tube'. Using the key, F = a, Z = t, Y = u, E = b, so ZYEF spells t-u-b-a. The chatbot changed the odd-sounding 'tuba' into the far more common 'tube' — exactly one letter off, in the direction of the more expected word.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What kind of puzzle is this?</h3>\n<p>There is one idea behind all three parts: NacloChat does not really carry out the task you asked for. Instead it produces the answer that <em>looks most normal</em> — the most familiar sentence, the most familiar word, the roundest number. Each time, its answer is only slightly off from the truth, and always slightly off in the direction of 'more ordinary'.</p>\n\n<h3>Part F1: cracking the cipher</h3>\n<p>A <strong>substitution cipher</strong> replaces every letter of the alphabet with some other letter, consistently. Because NacloChat gets only one letter wrong per sentence, its (mostly correct) answers are almost a free answer key.</p>\n<p>Line up the first row:</p>\n<div class=\"table-scroll\"><table><tbody>\n<tr><td>IPVFDDN</td><td>ZSJ</td><td>DPQJ</td><td>SFT</td><td>BLQJ</td></tr>\n<tr><td>finally</td><td>the</td><td>?ime</td><td>has</td><td>come</td></tr>\n</tbody></table></div>\n<p>From <span class=\"data\">IPVFDDN</span> = finally we get I=f, P=i, V=n, F=a, D=l, N=y. From <span class=\"data\">ZSJ</span> = the: Z=t, S=h, J=e. From <span class=\"data\">SFT</span> = has: T=s. From <span class=\"data\">BLQJ</span> = come: B=c, L=o, Q=m.</p>\n<p>Now check the third word, <span class=\"data\">DPQJ</span>. Using the key: D=l, P=i, Q=m, J=e &rarr; <strong>lime</strong>. NacloChat said <em>time</em>. That is the one letter it got wrong — and notice why: 'finally the time has come' is a phrase you have heard a thousand times, while 'finally the lime has come' is not. So <strong>a. finally the lime has come</strong>.</p>\n<p>Row 2 works the same way. <span class=\"data\">BSFVZJG</span> = c-h-a-n-t-e-d (this also tells us G=d), so the true sentence is <strong>b. they chanted the official policy</strong>; the chatbot slid 'chanted' into the more expected 'changed'. Row 3 gives <span class=\"data\">ZYEF</span> = t-u-b-a (so Y=u, and from <span class=\"data\">ULTZJW</span> = poster we also get U=p, W=r), so <strong>c. he stuffed the poster inside a tuba</strong>.</p>\n<p>Our key so far: A=k, B=c, D=l, E=b, F=a, G=d, I=f, J=e, L=o, N=y, P=i, Q=m, S=h, T=s, U=p, V=n, W=r, X=w, Y=u, Z=t.</p>\n<p>Rows 4 and 5 have <em>both</em> cells blank, so decode them yourself and then predict the chatbot's slip:</p>\n<ul>\n<li><span class=\"data\">ZSJN TFPDJG FXFN PV F ELLZ</span> &rarr; they sailed away in a <strong>boot</strong> (<span class=\"data\">ELLZ</span> = b-o-o-t; <span class=\"data\">FXFN</span> = a-w-a-y gives X=w). That is odd, and the ordinary version is 'boat', so <strong>d. they sailed away in a boot</strong> and <strong>e. they sailed away in a boat</strong>.</li>\n<li><span class=\"data\">XJ QYTZ EJ APVG ZL JFBS LZZJW</span> &rarr; we must be kind to each <strong>otter</strong> (<span class=\"data\">APVG</span> = k-i-n-d gives A=k; <span class=\"data\">LZZJW</span> = o-t-t-e-r). The familiar saying is 'each other', so <strong>f. we must be kind to each otter</strong> and <strong>g. we must be kind to each other</strong>.</li>\n</ul>\n\n<h3>Part F2: acronyms</h3>\n<p>An <strong>acronym</strong> takes the first letter of each word. Look at what the chatbot does with the given examples: WREN &rarr; WHEN, ABOUND &rarr; AROUND, SCHMOL &rarr; SCHOOL, SILENA &rarr; SILENT, PITY &rarr; CITY. In every case it changes exactly one letter and lands on a very common English word of the same length.</p>\n<p>So do the same for the blanks:</p>\n<ul>\n<li>AFTNR &rarr; <strong>AFTER</strong> (N&rarr;E)</li>\n<li>VERB &rarr; <strong>VERY</strong> (B&rarr;Y)</li>\n<li>PEOCE &rarr; <strong>PEACE</strong> (O&rarr;A)</li>\n<li>FROM &rarr; <strong>FROM</strong> — this one is already an extremely common word, so nothing gets 'fixed'. This is the promised case where NacloChat is right.</li>\n<li>WITS &rarr; <strong>WITH</strong> (S&rarr;H)</li>\n</ul>\n<p>Note that VERB and WITS are real words too, but not nearly as frequent as <em>very</em> and <em>with</em>; the chatbot drifts toward the highest-frequency neighbour.</p>\n\n<h3>Part F3: counting</h3>\n<p>Same principle, applied to numbers: the chatbot's answer is one off from the truth, in the direction of a 'rounder', more expected number (a multiple of 10, or at least of 5).</p>\n<ul>\n<li>91 &rarr; the neighbours are 90 and 92; 90 is round, so the answer is <strong>A. 90</strong>.</li>\n<li>59 &rarr; neighbours 58 and 60; 60 is round, so <strong>B. 60</strong>.</li>\n<li>74 &rarr; neighbours 73 and 75; 75 is the rounder one, so <strong>B. 75</strong>.</li>\n</ul>\n\n<h3>Why real chatbots behave this way</h3>\n<p>Large language models are trained to predict what text is likely to come next, based on huge amounts of writing. That makes them excellent at producing fluent, typical language — but when the correct answer is <em>atypical</em> (a rare phrase like 'each otter', a nonsense acronym like PEOCE, an unround count like 59), the pull toward the typical can override the actual task. Linguists call this kind of pressure a bias toward high-frequency forms, and this problem is built entirely out of it.</p>",
   "reviewStatus": "published"
 }

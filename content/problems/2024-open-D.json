@@ -1,24 +1,395 @@
 {
   "id": "2024-open-D",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2024,
   "round": "open",
   "letter": "D",
   "title": "Generally Speaking",
-  "authors": [],
+  "authors": [
+    "NACLO 2024 Problem Committee"
+  ],
   "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
   "conceptTags": [
-    "syntax"
+    "syntax",
+    "morphology"
   ],
   "formTag": "formal and computational",
   "difficulty": "hard",
-  "languages": [],
+  "languages": [
+    "English"
+  ],
   "officialPoints": 20,
   "officialTimeMinutes": 36,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Think about these two examples:</p>\n<ol type=\"A\">\n<li>The hummingbird interviewed the penguin.</li>\n<li>The the interviewed penguin hummingbird.</li>\n</ol>\n<p>It's unlikely that you have seen either of these examples before. Nonetheless, you can probably tell that example A is a possible English sentence (it's certainly strange, but it is <strong>grammatical</strong>—that is, it obeys all the rules of English sentence structure), while example B could not be an English sentence.</p>\n<p>How are we able to make judgments about sentences we have never seen before? This question relates to the broader topic of <strong>generalization</strong>—applying what you have learned to new situations or examples. Generalization is an important concept in computational linguistics because we want to build computers that can effectively generalize to sentences they have never seen before.</p>\n<p>At NACLO Labs, to study generalization, we have created four different computers that are able to learn from data. The computers are named C1, C2, C3, and C4, and they have never encountered any English sentences before our experiment. We first show the computers the 17 sentences below, which we will refer to as the <strong>training set</strong>—the set of examples that the computers learn English from. We tell the computers that all 17 of these sentences are grammatical.</p>\n<p><strong>Training set:</strong></p>\n<ol>\n<li>The linguist met the programmer.</li>\n<li>The cartoonist saw the spy.</li>\n<li>The watchmaker is asleep.</li>\n<li>The happy concierge met the ballerina.</li>\n<li>The spy saw the woodcarver.</li>\n<li>The spy is knowledgeable.</li>\n<li>The main detective visited the ballerina.</li>\n<li>The main calligrapher saw the astronaut.</li>\n<li>The programmer visited the blacksmith.</li>\n<li>The detective met the yodeler.</li>\n<li>The spy is happy.</li>\n<li>The ballerina is famous.</li>\n<li>The linguist is tall.</li>\n<li>The talented watchmaker visited the astronaut.</li>\n<li>The famous programmer visited the blacksmith.</li>\n<li>The cheerful concierge met the ballerina.</li>\n<li>The haberdasher saw the linguist.</li>\n</ol>\n<p>Note that all of the nouns in these sentences are types of occupations (for example, a haberdasher is someone who sells men's clothing), but for this problem you do not need to know the meanings of these words.</p>\n<p>We now show the computers 21 more sentences, which are listed in the table below. For each sentence, we ask each computer whether it thinks the sentence is <strong>grammatical (G)</strong> or <strong>ungrammatical (U)</strong>. Their answers are recorded in the table. We have also included the answers that a human provided when shown the same sentences.</p>\n<p><strong>D1.</strong> Some of the cells in the table are empty (marked (a)–(n)). Provide the missing entries.</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th></th><th>Sentence</th><th>C1</th><th>C2</th><th>C3</th><th>C4</th><th>Human</th></tr>\n</thead>\n<tbody>\n<tr><td>18.</td><td>The main detective visited the ballerina.</td><td>G</td><td>G</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>19.</td><td>The linguist is tall.</td><td>G</td><td>G</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>20.</td><td>The cartoonist saw the spy.</td><td>G</td><td>G</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>21.</td><td>The linguist visited the spy.</td><td>U</td><td>G</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>22.</td><td>The main concierge saw the blacksmith.</td><td>U</td><td>G</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>23.</td><td>The ballerina is asleep.</td><td>U</td><td>G</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>24.</td><td>The cartoonist met the programmer.</td><td>U</td><td>G</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>25.</td><td>The woodcarver visited the programmer.</td><td>U</td><td>U</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>26.</td><td>The linguist saw the haberdasher.</td><td>U</td><td>U</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>27.</td><td>The famous concierge visited the watchmaker.</td><td>U</td><td>U</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>28.</td><td>The linguist is cheerful.</td><td>U</td><td>U</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>29.</td><td>The calligrapher watchmaker visited met.</td><td>U</td><td>U</td><td>U</td><td>G</td><td>U</td></tr>\n<tr><td>30.</td><td>The knowledgeable cheerful talented.</td><td>U</td><td>U</td><td>U</td><td>G</td><td>U</td></tr>\n<tr><td>31.</td><td>The tall detective saw the ballerina.</td><td>U</td><td>(a)</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>32.</td><td>The linguist saw the yodeler.</td><td>U</td><td>(b)</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>33.</td><td>The visited met linguist programmer.</td><td>U</td><td>(c)</td><td>U</td><td>G</td><td>U</td></tr>\n<tr><td>34.</td><td>The yodeler met the woodcarver.</td><td>U</td><td>(d)</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>35.</td><td>The watchmaker is famous.</td><td>U</td><td>(e)</td><td>G</td><td>G</td><td>G</td></tr>\n<tr><td>36.</td><td>The detective met the yodeler.</td><td>(f)</td><td>(g)</td><td>G</td><td>(h)</td><td>G</td></tr>\n<tr><td>37.</td><td>The spy is talented.</td><td>(i)</td><td>(j)</td><td>G</td><td>(k)</td><td>G</td></tr>\n<tr><td>38.</td><td>The programmer met the cartoonist.</td><td>(l)</td><td>(m)</td><td>G</td><td>(n)</td><td>G</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>D2.</strong> The table below contains some more sentences, along with C2 and C3's judgments for those sentences. In each sentence, one word has been hidden from you by replacing it with the string HIDDEN_WORD_1, HIDDEN_WORD_2, or HIDDEN_WORD_3. Write down what each HIDDEN_WORD stands for, choosing from the following options: <em>asleep</em>, <em>happy</em>, or <em>main</em>. Additional notes:</p>\n<ul>\n<li>You should use each option (<em>asleep</em>, <em>happy</em>, or <em>main</em>) exactly once.</li>\n<li>Each HIDDEN_WORD stands for the same word in both of the sentences where it appears.</li>\n</ul>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th></th><th>Sentence</th><th>C2</th><th>C3</th></tr>\n</thead>\n<tbody>\n<tr><td>39.</td><td>The watchmaker is <strong>HIDDEN_WORD_1</strong>.</td><td>G</td><td>G</td></tr>\n<tr><td>40.</td><td>The <strong>HIDDEN_WORD_1</strong> concierge visited the astronaut.</td><td>G</td><td>G</td></tr>\n<tr><td>41.</td><td>The watchmaker is <strong>HIDDEN_WORD_2</strong>.</td><td>U</td><td>G</td></tr>\n<tr><td>42.</td><td>The <strong>HIDDEN_WORD_2</strong> concierge visited the astronaut.</td><td>G</td><td>G</td></tr>\n<tr><td>43.</td><td>The watchmaker is <strong>HIDDEN_WORD_3</strong>.</td><td>G</td><td>G</td></tr>\n<tr><td>44.</td><td>The <strong>HIDDEN_WORD_3</strong> concierge visited the astronaut.</td><td>U</td><td>G</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>D3.</strong> For each sentence in the table above, think about what your own labels would be. Out of these 6 sentences, how many are there where C2 produced the same label as you? How many are there where C3 produced the same label as you?</p>\n<p><em>NOTE: Different people may have different judgments about these sentences. Therefore, as long as you write <em>something</em> for D3, you will get credit—it doesn't matter what you write! We just want you to think a bit about which computer matches your own judgments the best.</em></p>\n<p>Ideally, we would want our computers to make exactly the same predictions as a human would. If you look back at sentences 18 to 38, you will see that C1 and C2 often <strong>undergeneralize</strong>—there are sentences, such as sentence 25, that these computers label as ungrammatical (U) even though the human called them grammatical (G).</p>\n<p>In the other direction, C4 sometimes <strong>overgeneralizes</strong>—it labels some sentences as grammatical (G) even though the human labeled them as ungrammatical (U). Depending on how you answered question D3, there may also be some examples of undergeneralization or overgeneralization in sentences 39 to 44 as well.</p>\n<p>The examples of overgeneralization that we've seen so far were about the domain of sentence structure. Overgeneralization can also happen on the level of individual words. For example, based on pairs of words like <em>walk</em> and <em>walked</em>, or <em>laugh</em> and <em>laughed</em>, a computer might overgeneralize and produce the word <em>thinked</em> (based on <em>think</em>) or <em>bringed</em> (based on <em>bring</em>).</p>\n<p>How might word-level overgeneralization affect our interactions with a computer? As an illustration, below are some interactions between a human and a hypothetical robot. The robot has been trained on a very large amount of English text, and it often overgeneralizes when forming words. Each word that resulted from overgeneralization has been hidden from you by being encoded in a cipher, where each letter has been replaced with a different letter. The same code was used for all examples—for example, if <strong>X</strong> stands for w in the first encoded word, then it will also stand for w everywhere else.</p>\n<p><strong>D4.</strong> Decode each encoded word from the conversations below. We are not providing the robot's training set, so it will not be possible to understand the robot as precisely as C1, C2, C3, and C4 from the previous part of the problem. However, if you carefully analyze what the robot says and also figure out the code, it should be possible to determine what each encoded word stands for.</p>\n<div class=\"dialogue\">\n<p><strong>Human:</strong> How severe will the storm be? Do you think it will interrupt my WiFi?</p>\n<p><strong>Robot:</strong> The storm will have a high level of severity. An interruption to your WiFi is likely, especially if lightning strikes somewhere nearby.</p>\n</div>\n<div class=\"dialogue\">\n<p><strong>Human:</strong> Are you able to make this picture smaller for me?</p>\n<p><strong>Robot:</strong> I would be happy to <span class=\"data\"><strong>QGTRHUU</strong></span> it for you! The <span class=\"data\"><strong>RKGKHENDKEW</strong></span> of the smaller version should make it easier to move around. And I would be happy to enlarge it again later.</p>\n<p><strong>Human:</strong> That's a strange way to phrase it…but thank you! Also, something looks a little odd about the picture—can you tell what it is?</p>\n<p><strong>Robot:</strong> The picture is currently <span class=\"data\"><strong>UQYETKFQ-DKAPE</strong></span>. I would be happy to apply a mirror filter to fix that. The website where you got the picture has many shortcomings—one of them is that it often distorts images.</p>\n</div>\n<div class=\"dialogue\">\n<p><strong>Human:</strong> <em>[showing a picture]</em> What is the largest object in this picture?</p>\n<p><strong>Robot:</strong> <em>[pointing at object in picture]</em> That!</p>\n<p><strong>Human:</strong> Where is the water bottle in the picture?</p>\n<p><strong>Robot:</strong> <em>[pointing at corner of picture]</em> There!</p>\n<p><strong>Human:</strong> Who is the tallest person in the picture?</p>\n<p><strong>Robot:</strong> <em>[pointing at person in picture]</em> <span class=\"data\"><strong>EPX</strong></span>!</p>\n</div>\n<div class=\"dialogue\">\n<p><strong>Human:</strong> Can you attempt to schedule an appointment with my hairdresser?</p>\n<p><strong>Robot:</strong> Yes, I will make this <span class=\"data\"><strong>HEEQRMEKXG</strong></span> soon. I will request an appointment <span class=\"data\"><strong>TXRQCPQG</strong></span> next week.</p>\n</div>\n<div class=\"dialogue\">\n<p><strong>Human:</strong> <em>[returning after a two-week vacation]</em> It's great to be back in the office! Did anything happen while I was away?</p>\n<p><strong>Robot:</strong> Not much happened for the first week. But then, <span class=\"data\"><strong>WQTEQDCQQB</strong></span>, we got two new clients! They thought our company had many <span class=\"data\"><strong>EHUUJXRKGAT</strong></span>, so they were happy to hire us.</p>\n</div>\n<p>An important challenge in computational linguistics is figuring out how to get computers to generalize in the right way. Generalizing can also be a challenge for humans acquiring languages. For example, when acquiring English, children often overgeneralize by producing words such as <em>thinked</em> or <em>bringed</em>.</p>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "D1.a",
+      "part": "D1",
+      "partPrompt": "Fill in the missing cells (a)–(n) of the table for sentences 18–38 with G (grammatical) or U (ungrammatical).",
+      "promptHtml": "(a) C2's judgment of sentence 31: <em>The tall detective saw the ballerina.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "U",
+      "acceptedVariants": [
+        "ungrammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D1.b",
+      "part": "D1",
+      "promptHtml": "(b) C2's judgment of sentence 32: <em>The linguist saw the yodeler.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "G",
+      "acceptedVariants": [
+        "grammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D1.c",
+      "part": "D1",
+      "promptHtml": "(c) C2's judgment of sentence 33: <em>The visited met linguist programmer.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "U",
+      "acceptedVariants": [
+        "ungrammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D1.d",
+      "part": "D1",
+      "promptHtml": "(d) C2's judgment of sentence 34: <em>The yodeler met the woodcarver.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "U",
+      "acceptedVariants": [
+        "ungrammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D1.e",
+      "part": "D1",
+      "promptHtml": "(e) C2's judgment of sentence 35: <em>The watchmaker is famous.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "G",
+      "acceptedVariants": [
+        "grammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D1.f",
+      "part": "D1",
+      "promptHtml": "(f) C1's judgment of sentence 36: <em>The detective met the yodeler.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "G",
+      "acceptedVariants": [
+        "grammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D1.g",
+      "part": "D1",
+      "promptHtml": "(g) C2's judgment of sentence 36: <em>The detective met the yodeler.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "G",
+      "acceptedVariants": [
+        "grammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D1.h",
+      "part": "D1",
+      "promptHtml": "(h) C4's judgment of sentence 36: <em>The detective met the yodeler.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "G",
+      "acceptedVariants": [
+        "grammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D1.i",
+      "part": "D1",
+      "promptHtml": "(i) C1's judgment of sentence 37: <em>The spy is talented.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "U",
+      "acceptedVariants": [
+        "ungrammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D1.j",
+      "part": "D1",
+      "promptHtml": "(j) C2's judgment of sentence 37: <em>The spy is talented.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "U",
+      "acceptedVariants": [
+        "ungrammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D1.k",
+      "part": "D1",
+      "promptHtml": "(k) C4's judgment of sentence 37: <em>The spy is talented.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "G",
+      "acceptedVariants": [
+        "grammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D1.l",
+      "part": "D1",
+      "promptHtml": "(l) C1's judgment of sentence 38: <em>The programmer met the cartoonist.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "U",
+      "acceptedVariants": [
+        "ungrammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D1.m",
+      "part": "D1",
+      "promptHtml": "(m) C2's judgment of sentence 38: <em>The programmer met the cartoonist.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "U",
+      "acceptedVariants": [
+        "ungrammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D1.n",
+      "part": "D1",
+      "promptHtml": "(n) C4's judgment of sentence 38: <em>The programmer met the cartoonist.</em>",
+      "gradingMode": "exact",
+      "choices": [
+        "G",
+        "U"
+      ],
+      "answerKey": "G",
+      "acceptedVariants": [
+        "grammatical"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D2.1",
+      "part": "D2",
+      "partPrompt": "Using C2's and C3's judgments in sentences 39–44, decide which of asleep, happy, main each HIDDEN_WORD stands for (each option is used exactly once).",
+      "promptHtml": "HIDDEN_WORD_1 =",
+      "gradingMode": "exact",
+      "choices": [
+        "asleep",
+        "happy",
+        "main"
+      ],
+      "answerKey": "happy",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D2.2",
+      "part": "D2",
+      "promptHtml": "HIDDEN_WORD_2 =",
+      "gradingMode": "exact",
+      "choices": [
+        "asleep",
+        "happy",
+        "main"
+      ],
+      "answerKey": "main",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D2.3",
+      "part": "D2",
+      "promptHtml": "HIDDEN_WORD_3 =",
+      "gradingMode": "exact",
+      "choices": [
+        "asleep",
+        "happy",
+        "main"
+      ],
+      "answerKey": "asleep",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D3.c2",
+      "part": "D3",
+      "partPrompt": "Out of sentences 39–44, how many did each computer label the same way you would? (Any answer receives credit — the graders accept whatever you write.)",
+      "promptHtml": "Number of the 6 sentences where <strong>C2</strong> gave the same label as you (0–6):",
+      "gradingMode": "llm",
+      "answerKey": "Any answer from 0 to 6 is accepted; the official key says \"any answer accepted\". A typical answer is 4, since most English speakers accept sentences 39, 40, 42 and 43 (matching C2) but disagree with C2's U on 41 (\"The watchmaker is main.\") only if they accept it, and with its U on 44 (\"The asleep concierge visited the astronaut.\").",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D3.c3",
+      "part": "D3",
+      "promptHtml": "Number of the 6 sentences where <strong>C3</strong> gave the same label as you (0–6):",
+      "gradingMode": "llm",
+      "answerKey": "Any answer from 0 to 6 is accepted; the official key says \"any answer accepted\". A typical answer is 4, since C3 calls all six grammatical while many English speakers reject \"The watchmaker is main.\" and \"The asleep concierge visited the astronaut.\"",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D4.a",
+      "part": "D4",
+      "partPrompt": "Decode each of the robot's encoded words. Write the plain English word the robot actually produced.",
+      "promptHtml": "<span class=\"data\">QGTRHUU</span> =",
+      "gradingMode": "exact",
+      "answerKey": "ensmall",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D4.b",
+      "part": "D4",
+      "promptHtml": "<span class=\"data\">RKGKHENDKEW</span> =",
+      "gradingMode": "exact",
+      "answerKey": "miniaturity",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D4.c",
+      "part": "D4",
+      "promptHtml": "<span class=\"data\">UQYETKFQ-DKAPE</span> =",
+      "gradingMode": "exact",
+      "answerKey": "leftside-right",
+      "acceptedVariants": [
+        "leftside right",
+        "leftsideright"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D4.d",
+      "part": "D4",
+      "promptHtml": "<span class=\"data\">EPX</span> =",
+      "gradingMode": "exact",
+      "answerKey": "tho",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D4.e",
+      "part": "D4",
+      "promptHtml": "<span class=\"data\">HEEQRMEKXG</span> =",
+      "gradingMode": "exact",
+      "answerKey": "attemption",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D4.f",
+      "part": "D4",
+      "promptHtml": "<span class=\"data\">TXRQCPQG</span> =",
+      "gradingMode": "exact",
+      "answerKey": "somewhen",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D4.g",
+      "part": "D4",
+      "promptHtml": "<span class=\"data\">WQTEQDCQQB</span> =",
+      "gradingMode": "exact",
+      "answerKey": "yesterweek",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D4.h",
+      "part": "D4",
+      "promptHtml": "<span class=\"data\">EHUUJXRKGAT</span> =",
+      "gradingMode": "exact",
+      "answerKey": "tallcomings",
+      "acceptedVariants": [],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "For D1 and D2, don't try to judge the sentences yourself — figure out each computer's personality. Compare every test sentence with the 17 training sentences and ask: is it word-for-word one of them? Does every word appear in the same slot as in training? Does it just follow the same general pattern (The + [adjective] + noun + verb + the + noun, or The + noun + is + adjective)? Is it anything at all? Rows 18–30, where all five columns are filled in, tell you which computer uses which test.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "The four computers form a scale from least to most general: C1 only accepts sentences it memorised exactly; C2 accepts a sentence only if every single word sits in a slot where that very word appeared in training (so it tracks words, not categories); C3 has learned the general sentence patterns and word categories (noun, verb, adjective) and accepts anything matching a pattern; C4 accepts absolutely everything. In D4, remember that the robot builds words by applying regular rules where English happens to be irregular — the human's own wording in each conversation usually tells you which normal English word the robot has replaced.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Worked example on a row that is already filled in: sentence 28, \"The linguist is cheerful,\" gets U from C2 but G from C3. Why? In the training set, cheerful appears only in sentence 16, before a noun (\"the cheerful concierge\"), never after is. C2 therefore refuses to put cheerful in the after-is slot, while C3 knows cheerful is an adjective and that adjectives can go there. Check each blank the same way, slot by slot. For D4, notice the third conversation: the robot answers What…? with That! and Where…? with There!, so its answer to Who…? is formed by the same rule — decoding that three-letter word gives you three letters of the cipher to reuse elsewhere.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What the problem is really asking</h3>\n<p>Four computers see the same 17 English sentences and then have to judge brand-new sentences as <strong>grammatical</strong> (G, a possible English sentence) or <strong>ungrammatical</strong> (U). They differ in how boldly they <strong>generalize</strong> — how far beyond the examples they are willing to go. Your job is to work out each computer's rule from the rows that are already filled in, then apply those rules to the blanks.</p>\n\n<h3>Step 1: What patterns are in the training set?</h3>\n<p>Every training sentence has one of two shapes:</p>\n<ul>\n<li><em>The</em> (+ adjective) + noun + verb + <em>the</em> + noun — e.g. \"The happy concierge met the ballerina.\"</li>\n<li><em>The</em> + noun + <em>is</em> + adjective — e.g. \"The spy is happy.\"</li>\n</ul>\n<p>It also helps to list, for each word, which slots it occupies in training. For example <em>haberdasher</em> only ever appears as a subject (#17), <em>yodeler</em> only as an object (#10), <em>tall</em> only after <em>is</em> (#13), <em>talented</em> only before a noun (#14), and <em>happy</em> appears in both adjective slots (before a noun in #4, after <em>is</em> in #11).</p>\n\n<h3>Step 2: Identify the four computers</h3>\n<ul>\n<li><strong>C1 = pure memorization.</strong> It says G only for sentences 18, 19, 20 — which are exact copies of training sentences 7, 13, 2. Everything else, even perfectly good English like #21, gets U. C1 does not generalize at all.</li>\n<li><strong>C2 = word-by-slot.</strong> It accepts #21–24 (new combinations of words, but each word in a slot where it was already seen) and rejects #25–28. Why reject #25 \"The woodcarver visited the programmer\"? Because <em>woodcarver</em> was only ever an object in training, never a subject. #26 fails because <em>haberdasher</em> was never an object; #27 because <em>watchmaker</em> was never an object; #28 because <em>cheerful</em> never followed <em>is</em>. So C2 checks each individual word against the slots that exact word has occupied.</li>\n<li><strong>C3 = pattern learner.</strong> It accepts anything matching one of the two sentence templates with the right word categories, so #25–28 are G, but the word-salad sentences #29, #30, #33 are U. This is closest to the human column.</li>\n<li><strong>C4 = accept everything.</strong> Every C4 cell in the table is G, including the word salads.</li>\n</ul>\n\n<h3>Step 3: Filling in D1</h3>\n<p>Now the blanks are mechanical.</p>\n<ul>\n<li>(a) #31 \"The tall detective saw the ballerina.\" — C2: <em>tall</em> never appeared before a noun, so <strong>U</strong>.</li>\n<li>(b) #32 \"The linguist saw the yodeler.\" — every word is in an attested slot (<em>linguist</em> subject in #1, <em>yodeler</em> object in #10), so <strong>G</strong>.</li>\n<li>(c) #33 word salad, so <strong>U</strong>.</li>\n<li>(d) #34 \"The yodeler met the woodcarver.\" — <em>yodeler</em> was never a subject, so <strong>U</strong>.</li>\n<li>(e) #35 \"The watchmaker is famous.\" — <em>watchmaker</em> subject (#3), <em>famous</em> after <em>is</em> (#12), so <strong>G</strong>.</li>\n<li>(f), (g), (h) #36 \"The detective met the yodeler\" is training sentence #10 word for word, so even memorizing C1 says <strong>G</strong>; C2 <strong>G</strong>; C4 <strong>G</strong>.</li>\n<li>(i), (j), (k) #37 \"The spy is talented.\" — not in training, so C1 = <strong>U</strong>; <em>talented</em> never followed <em>is</em>, so C2 = <strong>U</strong>; C4 = <strong>G</strong>.</li>\n<li>(l), (m), (n) #38 \"The programmer met the cartoonist.\" — not in training, so C1 <strong>U</strong>; <em>cartoonist</em> was never an object, so C2 <strong>U</strong>; C4 <strong>G</strong>.</li>\n</ul>\n\n<h3>Step 4: D2 — using C2 as a detector</h3>\n<p>C3 says G for all six sentences, so it tells us nothing. C2 is the informative column, and we know exactly what C2 cares about: has this adjective been seen in this slot?</p>\n<ul>\n<li>In training, <em>happy</em> appears in <strong>both</strong> adjective slots (#4 before a noun, #11 after <em>is</em>). So C2 would say G in both positions, so HIDDEN_WORD_1 = <strong>happy</strong>.</li>\n<li><em>main</em> appears <strong>only</strong> before a noun (#7, #8). So C2 says U after <em>is</em> but G before a noun — exactly rows 41 (U) and 42 (G), so HIDDEN_WORD_2 = <strong>main</strong>.</li>\n<li><em>asleep</em> appears <strong>only</strong> after <em>is</em> (#3). So C2 says G after <em>is</em> but U before a noun — rows 43 (G) and 44 (U), so HIDDEN_WORD_3 = <strong>asleep</strong>.</li>\n</ul>\n<p>Notice that C2's caution about <em>main</em> is actually right for English (\"The watchmaker is main\" is odd), and so is its caution about <em>asleep</em> (\"the asleep concierge\" is odd), while C3's blanket acceptance overgeneralizes. D3 simply asks you to compare your own judgments with the two computers; the official key accepts any numbers you write.</p>\n\n<h3>Step 5: D4 — the overgeneralizing robot</h3>\n<p>The robot builds words with regular rules in places where English is irregular, and each of those inventions has been enciphered with a fixed letter-for-letter substitution. The easiest crack is the pointing conversation: the robot answers <em>What…?</em> with \"That!\" and <em>Where…?</em> with \"There!\", so for <em>Who…?</em> it invents the matching form \"Tho!\" That gives <span class=\"data\">EPX</span> = <strong>tho</strong>, so E = t, P = h, X = o.</p>\n<p>Next, <span class=\"data\">TXRQCPQG</span> is 8 letters ending …h-e-n with o and a repeated Q; \"the robot will request an appointment ___ next week\" plus the earlier model <em>somewhere</em> gives <strong>somewhen</strong> (T = s, R = m, Q = e, C = w, G = n). Then <span class=\"data\">WQTEQDCQQB</span> = y-e-s-t-e-?-w-e-e-? — <em>yesterday</em> generalized to <strong>yesterweek</strong> (W = y, D = r, B = k).</p>\n<p>With that alphabet, the rest falls out:</p>\n<ul>\n<li><span class=\"data\">QGTRHUU</span> = e-n-s-m-a-l-l = <strong>ensmall</strong> (the opposite of <em>enlarge</em>).</li>\n<li><span class=\"data\">RKGKHENDKEW</span> = <strong>miniaturity</strong> (built like <em>severe becoming severity</em>, which the robot used a moment earlier).</li>\n<li><span class=\"data\">UQYETKFQ-DKAPE</span> = <strong>leftside-right</strong> (built like <em>upside-down</em>; the picture is mirrored).</li>\n<li><span class=\"data\">HEEQRMEKXG</span> = <strong>attemption</strong> (built like <em>interrupt becoming interruption</em>).</li>\n<li><span class=\"data\">EHUUJXRKGAT</span> = <strong>tallcomings</strong> (the opposite of <em>shortcomings</em>, taken literally as short swapped for tall).</li>\n</ul>\n<p>The moral of the whole problem: a learner that generalizes too little can only repeat what it has memorized, while a learner that generalizes too much produces <em>thinked</em>, <em>ensmall</em>, and \"The knowledgeable cheerful talented.\" Getting the amount of generalization right is one of the central problems of computational linguistics — and of learning a first language.</p>",
   "reviewStatus": "published"
 }

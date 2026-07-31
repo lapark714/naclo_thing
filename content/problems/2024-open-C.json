@@ -1,14 +1,17 @@
 {
   "id": "2024-open-C",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2024,
   "round": "open",
   "letter": "C",
   "title": "Happy Birthday!",
-  "authors": [],
+  "authors": [
+    "NACLO 2024 Problem Committee"
+  ],
   "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
   "conceptTags": [
-    "morphology"
+    "morphology",
+    "semantics"
   ],
   "formTag": "calendrical and counting",
   "difficulty": "standard",
@@ -17,10 +20,284 @@
   ],
   "officialPoints": 10,
   "officialTimeMinutes": 18,
-  "bodyHtml": "",
+  "bodyHtml": "<p>The Ewe language is spoken principally in Ghana, Togo, and Benin. Names in Ewe are often connected to the day on which a person was born. (Not all Ewe names are related to date of birth, but all the names used in this problem are.) Below are some dates along with one possible name for a child born on each date. For your convenience, we have also provided calendars for January 2024 and February 2024 below. All dates in this problem are from 2024. “ɔ” is a vowel sound a little like the “aw” in “paw”.</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>January 7</td><td><span class=\"data\">Kɔsi</span> (male child)</td><td>January 27</td><td><span class=\"data\">Kwami</span> (male child)</td></tr>\n<tr><td>January 9</td><td><span class=\"data\">Kɔbla</span> (male child)</td><td>February 6</td><td><span class=\"data\">Abla</span> (female child)</td></tr>\n<tr><td>January 11</td><td><span class=\"data\">Yawa</span> (female child)</td><td>February 11</td><td><span class=\"data\">Akosua</span> (female child)</td></tr>\n<tr><td>January 14</td><td><span class=\"data\">Kwasi</span> (male child)</td><td>February 13</td><td><span class=\"data\">Kwamla</span> (male child)</td></tr>\n<tr><td>January 15</td><td><span class=\"data\">Kɔdzo</span> (male child)</td><td>February 22</td><td><span class=\"data\">Yao</span> (male child)</td></tr>\n<tr><td>January 20</td><td><span class=\"data\">Ami</span> (female child)</td><td>February 26</td><td><span class=\"data\">Adzoa</span> (female child)</td></tr>\n<tr><td>January 24</td><td><span class=\"data\">Aku</span> (female child)</td><td></td><td></td></tr>\n</tbody>\n</table>\n</div>\n<p>Below are calendars for January and February 2024, which may be helpful for answering the questions.</p>\n<h3>January 2024</h3>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th>Sunday</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th></tr>\n</thead>\n<tbody>\n<tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>\n<tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>\n<tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>\n<tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr>\n<tr><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td><td></td></tr>\n</tbody>\n</table>\n</div>\n<h3>February 2024</h3>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th>Sunday</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th></tr>\n</thead>\n<tbody>\n<tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>\n<tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>\n<tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>\n<tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>\n<tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td></td><td></td></tr>\n</tbody>\n</table>\n</div>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "C1.a",
+      "part": "C1",
+      "partPrompt": "Indicate whether each name below would typically be a female name or a male name. Write F for female or M for male.",
+      "promptHtml": "a. <span class=\"data\">Awusi</span>",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "female"
+      ],
+      "points": 0.5,
+      "choices": [
+        "F",
+        "M"
+      ]
+    },
+    {
+      "id": "C1.b",
+      "part": "C1",
+      "promptHtml": "b. <span class=\"data\">Kwadzo</span>",
+      "gradingMode": "exact",
+      "answerKey": "M",
+      "acceptedVariants": [
+        "male"
+      ],
+      "points": 0.5,
+      "choices": [
+        "F",
+        "M"
+      ]
+    },
+    {
+      "id": "C1.c",
+      "part": "C1",
+      "promptHtml": "c. <span class=\"data\">Adzo</span>",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "female"
+      ],
+      "points": 0.5,
+      "choices": [
+        "F",
+        "M"
+      ]
+    },
+    {
+      "id": "C1.d",
+      "part": "C1",
+      "promptHtml": "d. <span class=\"data\">Kofi</span>",
+      "gradingMode": "exact",
+      "answerKey": "M",
+      "acceptedVariants": [
+        "male"
+      ],
+      "points": 0.5,
+      "choices": [
+        "F",
+        "M"
+      ]
+    },
+    {
+      "id": "C1.e",
+      "part": "C1",
+      "promptHtml": "e. <span class=\"data\">Afiwa</span>",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "female"
+      ],
+      "points": 0.5,
+      "choices": [
+        "F",
+        "M"
+      ]
+    },
+    {
+      "id": "C2.i",
+      "part": "C2",
+      "partPrompt": "Match each date below to a name that could be given to a child born on that day. Choose from: (a) Afua, (b) Kɔku, (c) Yao, (d) Adzoa, (e) Kɔmi, (f) Abla. Each name is used exactly once.",
+      "promptHtml": "(i) January 10",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "b) Kɔku",
+        "Kɔku",
+        "Koku"
+      ],
+      "points": 0.5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    {
+      "id": "C2.ii",
+      "part": "C2",
+      "promptHtml": "(ii) January 13",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "e) Kɔmi",
+        "Kɔmi",
+        "Komi"
+      ],
+      "points": 0.5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    {
+      "id": "C2.iii",
+      "part": "C2",
+      "promptHtml": "(iii) January 16",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "f) Abla",
+        "Abla"
+      ],
+      "points": 0.5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    {
+      "id": "C2.iv",
+      "part": "C2",
+      "promptHtml": "(iv) January 26",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "a) Afua",
+        "Afua"
+      ],
+      "points": 0.5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    {
+      "id": "C2.v",
+      "part": "C2",
+      "promptHtml": "(v) January 29",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "d) Adzoa",
+        "Adzoa"
+      ],
+      "points": 0.5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    {
+      "id": "C2.vi",
+      "part": "C2",
+      "promptHtml": "(vi) February 8",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "c) Yao",
+        "Yao"
+      ],
+      "points": 0.5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    {
+      "id": "C3.a",
+      "part": "C3",
+      "partPrompt": "On which day could a child named Kofi have been born? Write the correct letter.",
+      "promptHtml": "(a) January 12 &nbsp; (b) January 18 &nbsp; (c) January 23",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "a) January 12",
+        "January 12",
+        "Jan 12"
+      ],
+      "points": 1,
+      "choices": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "id": "C4.a",
+      "part": "C4",
+      "partPrompt": "Which of these names might be given to a child born on February 5? Write the correct letter.",
+      "promptHtml": "(a) <span class=\"data\">Kwadzo</span> &nbsp; (b) <span class=\"data\">Afi</span> &nbsp; (c) <span class=\"data\">Kwaku</span>",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "a) Kwadzo",
+        "Kwadzo"
+      ],
+      "points": 1,
+      "choices": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "id": "C5.i",
+      "part": "C5",
+      "partPrompt": "In Ewe, the word gbe means “day.” Translate each of the following Ewe words into English.",
+      "promptHtml": "i. <span class=\"data\">Dzoɗagbe</span>",
+      "gradingMode": "exact",
+      "answerKey": "Monday",
+      "acceptedVariants": [
+        "Monday (the day Monday)"
+      ],
+      "points": 1.25
+    },
+    {
+      "id": "C5.ii",
+      "part": "C5",
+      "promptHtml": "ii. <span class=\"data\">Fiɗagbe</span>",
+      "gradingMode": "exact",
+      "answerKey": "Friday",
+      "acceptedVariants": [],
+      "points": 1.25
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Don't look at the dates as numbers — look them up on the calendars and write the day of the week next to each name. Several different dates in the data fall on the same weekday.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Each name splits into two parts: a piece that marks the child's sex (a prefix like Kwa-/Kɔ- for boys or A- for girls) and a piece that identifies the weekday. Names for the same weekday share that second piece.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Worked example (not one of the graded items): January 20 is a Saturday and gives the female name Ami; January 27 is also a Saturday and gives the male name Kwami. So the Saturday element is -mi, with A- for a girl and Kwa- (or Kɔ-) for a boy.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: Turn dates into weekdays</h3><p>The names have nothing to do with the number on the calendar — they depend on the <em>day of the week</em>. So the very first move is to use the two calendars and relabel every example:</p><div class=\"table-scroll\"><table><thead><tr><th>Date</th><th>Weekday</th><th>Name</th><th>Sex</th></tr></thead><tbody><tr><td>Jan 7</td><td>Sunday</td><td><span class=\"data\">Kɔsi</span></td><td>M</td></tr><tr><td>Jan 14</td><td>Sunday</td><td><span class=\"data\">Kwasi</span></td><td>M</td></tr><tr><td>Feb 11</td><td>Sunday</td><td><span class=\"data\">Akosua</span></td><td>F</td></tr><tr><td>Jan 15</td><td>Monday</td><td><span class=\"data\">Kɔdzo</span></td><td>M</td></tr><tr><td>Feb 26</td><td>Monday</td><td><span class=\"data\">Adzoa</span></td><td>F</td></tr><tr><td>Jan 9</td><td>Tuesday</td><td><span class=\"data\">Kɔbla</span></td><td>M</td></tr><tr><td>Feb 13</td><td>Tuesday</td><td><span class=\"data\">Kwamla</span></td><td>M</td></tr><tr><td>Feb 6</td><td>Tuesday</td><td><span class=\"data\">Abla</span></td><td>F</td></tr><tr><td>Jan 24</td><td>Wednesday</td><td><span class=\"data\">Aku</span></td><td>F</td></tr><tr><td>Jan 11</td><td>Thursday</td><td><span class=\"data\">Yawa</span></td><td>F</td></tr><tr><td>Feb 22</td><td>Thursday</td><td><span class=\"data\">Yao</span></td><td>M</td></tr><tr><td>Jan 20</td><td>Saturday</td><td><span class=\"data\">Ami</span></td><td>F</td></tr><tr><td>Jan 27</td><td>Saturday</td><td><span class=\"data\">Kwami</span></td><td>M</td></tr></tbody></table></div><p>Notice how tidy this is: the three Sunday names all contain <span class=\"data\">si</span>/<span class=\"data\">sua</span>, both Monday names contain <span class=\"data\">dzo</span>, all three Tuesday names contain <span class=\"data\">bla</span>/<span class=\"data\">mla</span>, and both Saturday names contain <span class=\"data\">mi</span>.</p><h3>Step 2: Split each name into sex + weekday</h3><p>This kind of splitting is <em>morphology</em> — the study of how words are built out of smaller meaningful pieces. Each Ewe day-name here = (piece meaning “boy” or “girl”) + (piece meaning the weekday):</p><ul><li>Male names begin with <span class=\"data\">Kwa-</span> or <span class=\"data\">Kɔ-</span> (these are two variants of the same prefix): <span class=\"data\">Kwasi</span>, <span class=\"data\">Kɔsi</span>, <span class=\"data\">Kɔdzo</span>, <span class=\"data\">Kɔbla</span>, <span class=\"data\">Kwamla</span>, <span class=\"data\">Kwami</span>.</li><li>Female names begin with <span class=\"data\">A-</span> (and often end in <span class=\"data\">-a</span>): <span class=\"data\">Abla</span>, <span class=\"data\">Aku</span>, <span class=\"data\">Ami</span>, <span class=\"data\">Adzoa</span>, <span class=\"data\">Akosua</span>.</li><li>Thursday is the odd one out in shape: both Thursday names start with <span class=\"data\">Ya-</span>, with <span class=\"data\">Yawa</span> female and <span class=\"data\">Yao</span> male.</li></ul><p>So the weekday elements we can extract are: Sunday <span class=\"data\">-si / -sua</span>, Monday <span class=\"data\">-dzo</span>, Tuesday <span class=\"data\">-bla / -mla</span>, Wednesday <span class=\"data\">-ku</span>, Thursday <span class=\"data\">Ya-</span>, Saturday <span class=\"data\">-mi</span>. Friday never appears in the examples — remember that, because the questions will make you fill the gap.</p><h3>C1: male or female?</h3><p>Just read off the prefix. <span class=\"data\">Awusi</span> and <span class=\"data\">Adzo</span> and <span class=\"data\">Afiwa</span> all start with <span class=\"data\">A-</span> means female. <span class=\"data\">Kwadzo</span> starts with <span class=\"data\">Kwa-</span> means male. <span class=\"data\">Kofi</span> doesn't have <span class=\"data\">A-</span>, and its <span class=\"data\">Ko-</span> looks just like the <span class=\"data\">Kɔ-</span> of <span class=\"data\">Kɔsi</span>, <span class=\"data\">Kɔdzo</span>, <span class=\"data\">Kɔbla</span> are all male. (Answers: F, M, F, M, F.)</p><h3>C2: matching dates to names</h3><p>Convert each date to a weekday, then find the name with the matching weekday element:</p><ul><li>Jan 10 = Wednesday, so the Wednesday element is <span class=\"data\">-ku</span>, giving <span class=\"data\">Kɔku</span> (b).</li><li>Jan 13 = Saturday, so <span class=\"data\">-mi</span>, giving <span class=\"data\">Kɔmi</span> (e).</li><li>Jan 16 = Tuesday, so <span class=\"data\">-bla</span>, giving <span class=\"data\">Abla</span> (f).</li><li>Jan 26 = Friday, so the only name left that we can't tie to any other weekday is <span class=\"data\">Afua</span> (a). This is where the missing Friday slot pays off.</li><li>Jan 29 = Monday, so <span class=\"data\">-dzo</span>, giving <span class=\"data\">Adzoa</span> (d).</li><li>Feb 8 = Thursday, so <span class=\"data\">Ya-</span>, giving <span class=\"data\">Yao</span> (c).</li></ul><h3>C3 and C4: using Friday and Monday</h3><p>From C1 we know <span class=\"data\">Kofi</span> is male, and neither <span class=\"data\">-fi</span> nor the female <span class=\"data\">Afi/Afiwa</span> matches any weekday we already labelled — so <span class=\"data\">-fi</span> must be the missing Friday. Of the three choices in C3, only January 12 is a Friday, so the answer is (a).</p><p>For C4, February 5 is a Monday. Monday is <span class=\"data\">-dzo</span>, so the name is <span class=\"data\">Kwadzo</span>, choice (a). (<span class=\"data\">Afi</span> would be Friday and <span class=\"data\">Kwaku</span> Wednesday.)</p><h3>C5: gbe = “day”</h3><p>Ewe forms the names of weekdays the same way it forms the personal names: a weekday element plus the word for “day.” In <span class=\"data\">Dzoɗagbe</span> you can see the Monday element <span class=\"data\">dzo</span> (as in <span class=\"data\">Kɔdzo</span>, <span class=\"data\">Adzoa</span>), so it means <strong>Monday</strong>. In <span class=\"data\">Fiɗagbe</span> you can see the Friday element <span class=\"data\">fi</span> (as in <span class=\"data\">Kofi</span>, <span class=\"data\">Afiwa</span>), so it means <strong>Friday</strong>. The extra <span class=\"data\">ɗa</span> is just a linking piece that shows up in all the weekday words.</p>",
   "reviewStatus": "published"
 }
