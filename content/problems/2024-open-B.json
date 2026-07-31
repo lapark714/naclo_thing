@@ -152,17 +152,17 @@
   "hints": [
     {
       "tier": 1,
-      "text": "Compare the noun on its own with the same noun when it means 'on/in it'. For example <span class=\"data\">marlu</span> 'kangaroo' appears as <span class=\"data\">marlungka</span>, and <span class=\"data\">nantuwu</span> 'horse' appears as <span class=\"data\">nantuwurla</span>. There are two different endings for 'on/in'.",
+      "text": "Compare the noun on its own with the same noun when it means 'on/in it'. For example marlu 'kangaroo' appears as marlungka, and nantuwu 'horse' appears as nantuwurla. There are two different endings for 'on/in'.",
       "xpCost": 1
     },
     {
       "tier": 2,
-      "text": "Which ending a noun takes has nothing to do with its meaning — it depends on the shape (the length) of the word. Count the parts of each noun, and remember that a doubled vowel like <span class=\"data\">aa</span> or <span class=\"data\">uu</span> is a long vowel that counts as extra length.",
+      "text": "Which ending a noun takes has nothing to do with its meaning — it depends on the shape (the length) of the word. Count the parts of each noun, and remember that a doubled vowel like aa or uu is a long vowel that counts as extra length.",
       "xpCost": 2
     },
     {
       "tier": 3,
-      "text": "Try it on a word that isn't asked about: <span class=\"data\">pirli</span> 'hill' is <em>pir-li</em>, two short beats, and it becomes <span class=\"data\">pirlingka</span>. <span class=\"data\">yaparranji</span> 'teenage boy' has four beats and becomes <span class=\"data\">yaparranjirla</span>. Now decide where a word like <span class=\"data\">kuurlu</span> (with its long <span class=\"data\">uu</span>) falls.",
+      "text": "Try it on a word that isn't asked about: pirli 'hill' is pir-li, two short beats, and it becomes pirlingka. yaparranji 'teenage boy' has four beats and becomes yaparranjirla. Now decide where a word like kuurlu (with its long uu) falls.",
       "xpCost": 3
     }
   ],
