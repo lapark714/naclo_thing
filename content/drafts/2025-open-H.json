@@ -1,0 +1,518 @@
+{
+  "id": "2025-open-H",
+  "tier": "full",
+  "year": 2025,
+  "round": "open",
+  "letter": "H",
+  "title": "There Is Another Hand",
+  "authors": [
+    "NACLO 2025 Problem Committee"
+  ],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "number systems",
+    "historical and comparative",
+    "morphology"
+  ],
+  "formTag": "calendrical and counting",
+  "difficulty": "hard",
+  "languages": [
+    "Basque",
+    "Proto-Basque"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>Most languages spoken in Europe today are Indo-European, brought to Europe by waves of migration 3000 to 8000 years ago. Before this, various other languages were spoken, such as the language of Minoan Crete, famous for its undeciphered writing system known as Linear A. Of these old European languages, only Basque survives, being spoken by around 800,000 people in northern Spain and southern France.</p>\n<p>In the same way that French and Spanish descend from Latin, modern-day Basque descends from an older language called Proto-Basque. Although there are no speakers of Proto-Basque left, linguists can use historical methods to attempt to reconstruct what words in Proto-Basque may have looked like. For example, here is one proposal for the Proto-Basque numbers 1&ndash;9, <u>given in a random order</u>. Note that since these words are reconstructed, rather than known for certain, they are preceded by <strong>*</strong>.</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>A. <span class=\"data\">*bada-eri</span></td><td>B. <span class=\"data\">*berr-eri-ahur</span></td><td>C. <span class=\"data\">*atz-az-berr-eri</span></td></tr>\n<tr><td>D. <span class=\"data\">*be-oro-atz</span></td><td>E. <span class=\"data\">*berr-eri</span></td><td>F. <span class=\"data\">*atz-az-bada-eri-ahur-itzi</span></td></tr>\n<tr><td>G. <span class=\"data\">*atz-az-berr-eri-ahur-itzi</span></td><td>H. <span class=\"data\">*atz-az-eri</span></td><td>I. <span class=\"data\">*eri-ahur</span></td></tr>\n</tbody>\n</table>\n</div>\n<figure><img src=\"/content-assets/2025-open-h-hands.png\" alt=\"Five line drawings of a right hand, showing in turn one finger raised, two fingers raised, three fingers raised with two folded into the palm, four fingers raised with the thumb folded, and all five fingers spread open.\" /></figure>\n<p>Each of the Proto-Basque numbers are made of smaller word-parts, with meanings related to counting on your hand. For example, <span class=\"data\">*berr-eri</span> literally means <em>another finger</em>.</p>\n<p>Below are the word-parts of Proto-Basque numbers, with their English translations <u>given in a random order</u>. Note that the meanings of <span class=\"data\">*be</span> and <span class=\"data\">*itzi</span> are not relevant (linguists have other reasons to believe that they were present).</p>\n<p><strong>Proto-Basque word-parts:</strong></p>\n<ul>\n<li>i. <span class=\"data\">*ahur</span></li>\n<li>ii. <span class=\"data\">*atz</span></li>\n<li>iii. <span class=\"data\">*az</span></li>\n<li>iv. <span class=\"data\">*bada</span></li>\n<li>v. <span class=\"data\">*berr</span></li>\n<li>vi. <span class=\"data\">*eri</span></li>\n<li>vii. <span class=\"data\">*oro</span></li>\n</ul>\n<p><strong>English translations (random order):</strong></p>\n<ul>\n<li>J. <em>another</em></li>\n<li>K. <em>finger</em></li>\n<li>L. <em>hand</em></li>\n<li>M. <em>(in) palm (of hand)</em></li>\n<li>N. <em>there is</em></li>\n<li>O. <em>with</em></li>\n<li>P. <em>whole</em></li>\n</ul>\n<p>Later in the problem you will also need the modern Basque numbers 5&ndash;10 in a northern dialect, <u>given again in a random order</u>:</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>Q. <span class=\"data\">zazpi</span></td><td>R. <span class=\"data\">bortz</span></td><td>S. <span class=\"data\">zortzi</span></td></tr>\n<tr><td>T. <span class=\"data\">bederatzi</span></td><td>U. <span class=\"data\">hamar</span></td><td>V. <span class=\"data\">sei</span></td></tr>\n</tbody>\n</table>\n</div>",
+  "assets": [
+    {
+      "src": "/content-assets/2025-open-h-hands.png",
+      "alt": "Five line drawings of a right hand, showing in turn one finger raised, two fingers raised, three fingers raised with two folded into the palm, four fingers raised with the thumb folded, and all five fingers spread open."
+    }
+  ],
+  "questions": [
+    {
+      "id": "h1-a",
+      "part": "H1",
+      "partPrompt": "Determine the correct correspondences between the Proto-Basque words A to I and the numbers from 1 to 9.",
+      "promptHtml": "A. <span class=\"data\">*bada-eri</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [
+        "one"
+      ],
+      "points": 0.7,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "id": "h1-b",
+      "part": "H1",
+      "promptHtml": "B. <span class=\"data\">*berr-eri-ahur</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "3",
+      "acceptedVariants": [
+        "three"
+      ],
+      "points": 0.7,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "id": "h1-c",
+      "part": "H1",
+      "promptHtml": "C. <span class=\"data\">*atz-az-berr-eri</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "7",
+      "acceptedVariants": [
+        "seven"
+      ],
+      "points": 0.7,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "id": "h1-d",
+      "part": "H1",
+      "promptHtml": "D. <span class=\"data\">*be-oro-atz</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "5",
+      "acceptedVariants": [
+        "five"
+      ],
+      "points": 0.7,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "id": "h1-e",
+      "part": "H1",
+      "promptHtml": "E. <span class=\"data\">*berr-eri</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "2",
+      "acceptedVariants": [
+        "two"
+      ],
+      "points": 0.7,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "id": "h1-f",
+      "part": "H1",
+      "promptHtml": "F. <span class=\"data\">*atz-az-bada-eri-ahur-itzi</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "9",
+      "acceptedVariants": [
+        "nine"
+      ],
+      "points": 0.7,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "id": "h1-g",
+      "part": "H1",
+      "promptHtml": "G. <span class=\"data\">*atz-az-berr-eri-ahur-itzi</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "8",
+      "acceptedVariants": [
+        "eight"
+      ],
+      "points": 0.7,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "id": "h1-h",
+      "part": "H1",
+      "promptHtml": "H. <span class=\"data\">*atz-az-eri</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "6",
+      "acceptedVariants": [
+        "six"
+      ],
+      "points": 0.7,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "id": "h1-i",
+      "part": "H1",
+      "promptHtml": "I. <span class=\"data\">*eri-ahur</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "4",
+      "acceptedVariants": [
+        "four"
+      ],
+      "points": 0.7,
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "id": "h2-i",
+      "part": "H2",
+      "partPrompt": "Determine the correct correspondences between the Proto-Basque word-parts i. to vii. and their English translations J to P. Answer with the letter.",
+      "promptHtml": "i. <span class=\"data\">*ahur</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "M",
+      "acceptedVariants": [
+        "M.",
+        "(in) palm (of hand)",
+        "palm",
+        "in palm"
+      ],
+      "points": 0.6,
+      "choices": [
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P"
+      ]
+    },
+    {
+      "id": "h2-ii",
+      "part": "H2",
+      "promptHtml": "ii. <span class=\"data\">*atz</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "L",
+      "acceptedVariants": [
+        "L.",
+        "hand"
+      ],
+      "points": 0.6,
+      "choices": [
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P"
+      ]
+    },
+    {
+      "id": "h2-iii",
+      "part": "H2",
+      "promptHtml": "iii. <span class=\"data\">*az</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "O",
+      "acceptedVariants": [
+        "O.",
+        "with"
+      ],
+      "points": 0.6,
+      "choices": [
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P"
+      ]
+    },
+    {
+      "id": "h2-iv",
+      "part": "H2",
+      "promptHtml": "iv. <span class=\"data\">*bada</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "N.",
+        "there is"
+      ],
+      "points": 0.6,
+      "choices": [
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P"
+      ]
+    },
+    {
+      "id": "h2-v",
+      "part": "H2",
+      "promptHtml": "v. <span class=\"data\">*berr</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "J",
+      "acceptedVariants": [
+        "J.",
+        "another"
+      ],
+      "points": 0.6,
+      "choices": [
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P"
+      ]
+    },
+    {
+      "id": "h2-vi",
+      "part": "H2",
+      "promptHtml": "vi. <span class=\"data\">*eri</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [
+        "K.",
+        "finger"
+      ],
+      "points": 0.6,
+      "choices": [
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P"
+      ]
+    },
+    {
+      "id": "h2-vii",
+      "part": "H2",
+      "promptHtml": "vii. <span class=\"data\">*oro</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "P",
+      "acceptedVariants": [
+        "P.",
+        "whole"
+      ],
+      "points": 0.6,
+      "choices": [
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P"
+      ]
+    },
+    {
+      "id": "h3-q",
+      "part": "H3",
+      "partPrompt": "Determine which number from 5 to 10 each of the modern Basque numbers Q to V means. It may be helpful to know that the Basque z is very similar to s (although pronounced with the tongue touching the teeth), and that p and b are similar consonants.",
+      "promptHtml": "Q. <span class=\"data\">zazpi</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "7",
+      "acceptedVariants": [
+        "seven"
+      ],
+      "points": 0.75,
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "id": "h3-r",
+      "part": "H3",
+      "promptHtml": "R. <span class=\"data\">bortz</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "5",
+      "acceptedVariants": [
+        "five"
+      ],
+      "points": 0.75,
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "id": "h3-s",
+      "part": "H3",
+      "promptHtml": "S. <span class=\"data\">zortzi</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "8",
+      "acceptedVariants": [
+        "eight"
+      ],
+      "points": 0.75,
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "id": "h3-t",
+      "part": "H3",
+      "promptHtml": "T. <span class=\"data\">bederatzi</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "9",
+      "acceptedVariants": [
+        "nine"
+      ],
+      "points": 0.75,
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "id": "h3-u",
+      "part": "H3",
+      "promptHtml": "U. <span class=\"data\">hamar</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "10",
+      "acceptedVariants": [
+        "ten"
+      ],
+      "points": 0.75,
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "id": "h3-v",
+      "part": "H3",
+      "promptHtml": "V. <span class=\"data\">sei</span> = ?",
+      "gradingMode": "exact",
+      "answerKey": "6",
+      "acceptedVariants": [
+        "six"
+      ],
+      "points": 0.75,
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "You are given one translation for free: *berr-eri means 'another finger'. That already pins down two word-parts. Now sort the nine Proto-Basque words into groups by which chunks they share — notice that four of them begin with exactly the same two pieces, and one of them contains no *eri at all.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "These numbers are built by counting on one hand: small numbers name fingers, and once the hand is used up, the bigger numbers are 'hand with (small number)'. So the words that begin *atz-az- are the numbers above five, and what follows *atz-az- is (almost) the word for the number you add to five. Word length generally grows with the number, too.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Here is the method on an invented form. Suppose Proto-Basque had *atz-az-atz. Stripping off the *atz-az- prefix ('hand with') leaves *atz 'hand', which is five, so the whole thing would mean five plus five, i.e. ten. Use exactly this stripping-and-adding step on the real *atz-az- words, and for the modern Basque forms match beginnings and endings letter by letter (remembering z≈s and p≈b).",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: use the free translation</h3>\n<p>The problem tells you that <span class=\"data\">*berr-eri</span> literally means <em>another finger</em>. Since the word-parts are written in the same order as the English, that gives you two pieces straight away: <span class=\"data\">*berr</span> = <em>another</em> (J) and <span class=\"data\">*eri</span> = <em>finger</em> (K).</p>\n<p>And what number is 'another finger'? If you count on your hand, the <em>first</em> finger is number one, and 'another finger' is the next one: <strong>two</strong>. So E = 2.</p>\n<h3>Step 2: group the nine words by shape</h3>\n<p>Line the nine words up and look at what they share:</p>\n<ul>\n<li>Four words begin with <span class=\"data\">*atz-az-</span>: C, F, G, H.</li>\n<li>One word contains no <span class=\"data\">*eri</span> 'finger' at all: D <span class=\"data\">*be-oro-atz</span>.</li>\n<li>Four words contain <span class=\"data\">*eri</span> but no <span class=\"data\">*atz-az-</span>: A, B, E, I.</li>\n</ul>\n<p>That 4 + 1 + 4 split is a huge clue, because a hand has five fingers. The four 'finger-only' words are 1&ndash;4 (counting fingers), D is 5 (the whole hand is used up), and the four <span class=\"data\">*atz-az-</span> words are 6&ndash;9 ('hand with ...').</p>\n<h3>Step 3: sort out 1 to 4</h3>\n<p>We know E <span class=\"data\">*berr-eri</span> = 2. Of the remaining three:</p>\n<ul>\n<li>A <span class=\"data\">*bada-eri</span> is the simplest 'X finger' word left, and 1 is the simplest number: A = 1. (The title of the problem, <em>There Is Another Hand</em>, is a nudge: <span class=\"data\">*bada</span> = <em>there is</em>, so 1 is literally 'there is a finger'.)</li>\n<li>B <span class=\"data\">*berr-eri-ahur</span> is E (=2) plus one more piece, <span class=\"data\">*ahur</span>, so it should be the next number up: B = 3.</li>\n<li>That leaves I <span class=\"data\">*eri-ahur</span> = 4.</li>\n</ul>\n<p>Look at the hand pictures: in the drawings for 3 and 4 some fingers are folded down into the palm. That fits <span class=\"data\">*ahur</span> = <em>(in) palm (of hand)</em> (M), appearing exactly in 3 and 4 (and later in 8 and 9).</p>\n<h3>Step 4: sort out 6 to 9</h3>\n<p>Strip <span class=\"data\">*atz-az-</span> off each of C, F, G, H and see what number is left over:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Word</th><th>after stripping *atz-az-</th><th>that piece is...</th><th>5 + it =</th></tr></thead>\n<tbody>\n<tr><td>H *atz-az-eri</td><td>*eri</td><td>one finger &rarr; 1</td><td>6</td></tr>\n<tr><td>C *atz-az-berr-eri</td><td>*berr-eri</td><td>= E = 2</td><td>7</td></tr>\n<tr><td>G *atz-az-berr-eri-ahur-itzi</td><td>*berr-eri-ahur (+*itzi)</td><td>= B = 3</td><td>8</td></tr>\n<tr><td>F *atz-az-bada-eri-ahur-itzi</td><td>*bada-eri-ahur (+*itzi)</td><td>the 4-type 'fingers in palm' word</td><td>9</td></tr>\n</tbody>\n</table>\n</div>\n<p>Notice that this also confirms Step 3: the tail of the 8-word is exactly the word for 3, which only works if B (not I) is 3. The words also get steadily longer as the numbers get bigger, another good check.</p>\n<h3>Step 5: finish the word-part meanings (H2)</h3>\n<ul>\n<li><span class=\"data\">*eri</span> = <em>finger</em> (K), <span class=\"data\">*berr</span> = <em>another</em> (J) &mdash; given.</li>\n<li><span class=\"data\">*ahur</span> = <em>(in) palm (of hand)</em> (M) &mdash; it marks the numbers where fingers are folded into the palm.</li>\n<li><span class=\"data\">*bada</span> = <em>there is</em> (N) &mdash; it opens the word for 1, 'there is a finger'.</li>\n<li>The prefix <span class=\"data\">*atz-az-</span> must mean 'hand with', and <span class=\"data\">*atz</span> also appears in D, the word for 5. So <span class=\"data\">*atz</span> = <em>hand</em> (L) and <span class=\"data\">*az</span> = <em>with</em> (O).</li>\n<li>That leaves <span class=\"data\">*oro</span> = <em>whole</em> (P), which makes D <span class=\"data\">*be-oro-atz</span> literally '(the) whole hand' &mdash; a perfect name for 5.</li>\n</ul>\n<h3>Step 6: the modern Basque numbers (H3)</h3>\n<p>Now compare each modern word with the reconstructions, using the two sound tips: <strong>z</strong> is basically an <strong>s</strong>, and <strong>p</strong> and <strong>b</strong> are near-twins. Words change over thousands of years mostly by losing bits and smoothing sounds, so look for surviving beginnings and endings.</p>\n<ul>\n<li><span class=\"data\">bederatzi</span> (T): starts <em>bede-</em> like <span class=\"data\">*bada-</span>, has an <em>r</em> from <span class=\"data\">*eri</span>, and ends <em>-atzi</em> like <span class=\"data\">*-itzi</span>. That is F, so <strong>9</strong>.</li>\n<li><span class=\"data\">zortzi</span> (S): also ends in <em>-tzi</em>, the other <span class=\"data\">*-itzi</span> word, and begins with a z from <span class=\"data\">*atz-az-</span>. Since 9 is taken, this is G, <strong>8</strong>.</li>\n<li><span class=\"data\">zazpi</span> (Q): <em>zaz-</em> is a squashed <span class=\"data\">*atz-az-</span>, and the <em>p</em> comes from the <em>b</em> of <span class=\"data\">*berr</span>. That is C, <strong>7</strong>.</li>\n<li><span class=\"data\">sei</span> (V): short, with just an s (&asymp; z from <span class=\"data\">*atz-az</span>) and the <em>-i</em> remnant of <span class=\"data\">*eri</span>. That is H, <strong>6</strong>.</li>\n<li><span class=\"data\">bortz</span> (R): <em>b...or...tz</em> lines up piece for piece with <span class=\"data\">*be-oro-atz</span>. That is D, <strong>5</strong>.</li>\n<li><span class=\"data\">hamar</span> (U) is left over, and indeed it resembles none of the reconstructions &mdash; because no Proto-Basque word for 10 was given. So it is <strong>10</strong>.</li>\n</ul>\n<p>The nice moral: modern Basque 5&ndash;9 still carry, in worn-down form, the ancient sentence-like descriptions of counting on one hand.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "FIGURE CROP NEEDED: page 1 of the problem PDF, centred between the A-I word list and the paragraph beginning 'Each of the Proto-Basque numbers...' — a row of five line-drawn hands showing 1, 2, 3, 4 and 5 raised fingers. Save as /content-assets/2025-open-h-hands.png. Answer keys for H1, H2 and H3 are taken verbatim from the official solution page (A.1 B.3 C.7 D.5 E.2 F.9 G.8 H.6 I.4; i.M ii.L iii.O iv.N v.J vi.K vii.P; Q.7 R.5 S.8 T.9 U.10 V.6). The official solution gives no per-item point breakdown, so the 15 points were split as H1 = 6.3 (0.7 x 9), H2 = 4.2 (0.6 x 7), H3 = 4.5 (0.75 x 6); adjust if the official marking scheme differs. Note that the modern Basque forms Q-V appear on page 2 of the original between H2 and H3; they have been moved into the body text so the data is visible while answering."
+}

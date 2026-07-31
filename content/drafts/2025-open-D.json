@@ -1,0 +1,283 @@
+{
+  "id": "2025-open-D",
+  "tier": "full",
+  "year": 2025,
+  "round": "open",
+  "letter": "D",
+  "title": "Let's Pivot!",
+  "authors": [
+    "NACLO 2025 Problem Committee"
+  ],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "semantics",
+    "formal and computational"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "standard",
+  "languages": [
+    "Ejagham",
+    "Seri",
+    "Karajá",
+    "Tlapanec",
+    "Matsés",
+    "Yakan",
+    "Guambiano",
+    "Hebrew",
+    "Teribe",
+    "Tsafiki",
+    "Amuzgo",
+    "Apinayé",
+    "Bassa",
+    "Bété",
+    "English"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p><strong><em>For this problem, you will need to use the information on page (1/3) of problem (C).</em></strong> Otherwise, problems (C) and (D) are not related — you don't need to solve either one in order to solve the other.</p>\n<figure><img src=\"/content-assets/2025-open-d-problem-c-data.png\" alt=\"The data table from page (1/3) of NACLO 2025 Open Round problem (C): for each language (Apinayé, Amuzgo, Bassa, Bété, Ejagham, English, Guambiano, Hebrew, Karajá, Matsés, Seri, Teribe, Tlapanec, Tsafiki, Yakan), the colour words of that language and the range of colours each word covers.\" /><figcaption>Colour-word data from page (1/3) of problem (C). Each language's words are shown together with the range of colours that word can name; two words can translate each other directly if their colour ranges overlap.</figcaption></figure>\n<p>Imagine that you know a way to translate reliably from language <em>A</em> to language <em>B</em>, and also a way to translate from <em>B</em> to language <em>C</em>. Then you also know how to translate from <em>A</em> to <em>C</em>: just translate from <em>A</em> to <em>B</em> first, and next from <em>B</em> to <em>C</em>. When a machine translation system uses this strategy, <em>B</em> is called a <em>pivot language</em>.<sup>1</sup></p>\n<p>NACLO Labs is about to release its groundbreaking new app, <em>NacloTranslate</em>. <em>NacloTranslate</em> can translate between more language pairs than any of its competitors, and it does so by using pivot languages.</p>\n<p>Unfortunately, <em>NacloTranslate</em> doesn't always translate totally reliably. In a study, NACLO Labs scientists tried translating <strong><span class=\"data\">ebi</span></strong> from Ejagham to Seri, using Karajá as a pivot language. They hoped to see the app give only the answers <strong><span class=\"data\">kʔe'el</span></strong> and <strong><span class=\"data\">kwassool</span></strong>, which are the results that could be produced from direct (no pivot) translation. But it was observed producing each of these three results on different test runs:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Ejagham&nbsp;⇄</th><th>Seri</th></tr></thead>\n<tbody>\n<tr><td><span class=\"data\">ebi</span></td><td><span class=\"data\">kʔe'el</span></td></tr>\n<tr><td><span class=\"data\">ebi</span></td><td><span class=\"data\">kwassool</span></td></tr>\n<tr><td><span class=\"data\">ebi</span></td><td><span class=\"data\">ko'il</span></td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>D1.</strong> Below are three more <em>NacloTranslate</em> test runs, from a different study. A pivot language was used for exactly one of the three language pairs—which one? Give a possibility for what the pivot language could be.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Test run</th><th>Language 1</th><th>Word 1</th><th>Language 2</th><th>Word 2</th></tr></thead>\n<tbody>\n<tr><td>A.</td><td>Tlapanec</td><td><span class=\"data\">minuu</span></td><td>Matsés</td><td><span class=\"data\">umu</span></td></tr>\n<tr><td>B.</td><td>Yakan</td><td><span class=\"data\">ittem</span></td><td>Guambiano</td><td><span class=\"data\">chilga</span></td></tr>\n<tr><td>C.</td><td>Hebrew</td><td><span class=\"data\">kakhol</span></td><td>Teribe</td><td><span class=\"data\">dindin</span></td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>D2.</strong> NACLO Labs is considering its options for having <em>NacloTranslate</em> translate <strong><span class=\"data\">paban</span></strong> from Tsafiki to English.</p>\n<p><strong>a.</strong> What are the results of a direct translation? Select all possible answers.<br />\n<strong>b.</strong> What are the results if Karajá is used as a pivot? Select all possible answers.<br />\n<strong>c.</strong> NACLO Labs selects a different pivot language, and the results for <strong><span class=\"data\">paban</span></strong> are <strong>green</strong>, <strong>blue</strong>, and <strong>black</strong> (and no others). Which languages could NACLO Labs be using as pivot? Give all three possible answers.</p>\n<p><strong>D3.</strong> Here are six test runs of <em>NacloTranslate</em>, from a different study. From the options below, identify the pivot language used in each test run by matching options A-F to test runs 1-6. Each option was used once.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Test run</th><th>Language 1</th><th>Word 1</th><th>Language 2</th><th>Word 2</th></tr></thead>\n<tbody>\n<tr><td>1.</td><td>Guambiano</td><td><span class=\"data\">piguig</span></td><td>Tlapanec</td><td><span class=\"data\">skuni</span></td></tr>\n<tr><td>2.</td><td>Tlapanec</td><td><span class=\"data\">minuu</span></td><td>Amuzgo</td><td><span class=\"data\">tsa</span></td></tr>\n<tr><td>3.</td><td>Seri</td><td><span class=\"data\">kʔe'el</span></td><td>Yakan</td><td><span class=\"data\">taluk</span></td></tr>\n<tr><td>4.</td><td>Matsés</td><td><span class=\"data\">piu</span></td><td>Seri</td><td><span class=\"data\">ko'il</span></td></tr>\n<tr><td>5.</td><td>Amuzgo</td><td><span class=\"data\">cajan</span></td><td>Matsés</td><td><span class=\"data\">ushu</span></td></tr>\n<tr><td>6.</td><td>Yakan</td><td><span class=\"data\">gaddung</span></td><td>Guambiano</td><td><span class=\"data\">piguig</span></td></tr>\n</tbody>\n</table>\n</div>\n<p><em>Options:</em> A. Apinaye &nbsp; B. Bassa &nbsp; C. Bété &nbsp; D. English &nbsp; E. Teribe &nbsp; F. Tsafiki</p>\n<p><small><sup>1</sup> This strategy can be useful when training data is hard to find. Modern machine translators may need to be trained on huge amounts of <em>parallel text</em> — that is, text in one language given alongside its translation in another (much like in some NACLO problems!). Sometimes, <em>A-C</em> parallel text will be hard to find, but <em>A-B</em> and <em>B-C</em> parallel text will be much more common.</small></p>",
+  "assets": [
+    {
+      "src": "/content-assets/2025-open-d-problem-c-data.png",
+      "alt": "The data table from page (1/3) of NACLO 2025 Open Round problem (C): for each language, its colour words and the range of colours each word covers."
+    }
+  ],
+  "questions": [
+    {
+      "id": "d1-pair",
+      "part": "D1",
+      "partPrompt": "A pivot language was used for exactly one of the three language pairs (A, B, C) — identify it and give one language that the pivot could be.",
+      "promptHtml": "<p>Which test run (A, B or C) used a pivot language?</p>",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "b",
+        "B.",
+        "Yakan–Guambiano",
+        "Yakan / Guambiano"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C"
+      ],
+      "points": 1
+    },
+    {
+      "id": "d1-pivot",
+      "part": "D1",
+      "promptHtml": "<p>Give one possibility for what that pivot language could be.</p>",
+      "gradingMode": "exact",
+      "answerKey": "Bassa",
+      "acceptedVariants": [
+        "Bété",
+        "Bete",
+        "Ejagham",
+        "bassa",
+        "bété",
+        "bete",
+        "ejagham"
+      ],
+      "points": 1
+    },
+    {
+      "id": "d2-a",
+      "part": "D2",
+      "partPrompt": "NACLO Labs wants NacloTranslate to translate paban from Tsafiki to English.",
+      "promptHtml": "<p><strong>a.</strong> What are the results of a <em>direct</em> translation of <span class=\"data\">paban</span> into English? Select all possible answers.</p>",
+      "gradingMode": "exact",
+      "answerKey": "blue, black",
+      "acceptedVariants": [
+        "black, blue",
+        "blue and black",
+        "black and blue",
+        "blue black",
+        "black blue"
+      ],
+      "points": 1.5
+    },
+    {
+      "id": "d2-b",
+      "part": "D2",
+      "promptHtml": "<p><strong>b.</strong> What are the results if Karajá is used as a pivot? Select all possible answers.</p>",
+      "gradingMode": "exact",
+      "answerKey": "yellow, green, blue, black",
+      "acceptedVariants": [
+        "black, blue, green, yellow",
+        "yellow, green, black, blue",
+        "green, yellow, blue, black",
+        "blue, black, green, yellow",
+        "yellow green blue black",
+        "yellow, blue, green, black"
+      ],
+      "points": 1.5
+    },
+    {
+      "id": "d2-c",
+      "part": "D2",
+      "promptHtml": "<p><strong>c.</strong> With a different pivot language, the results for <span class=\"data\">paban</span> are <strong>green</strong>, <strong>blue</strong> and <strong>black</strong> (and no others). Which languages could NACLO Labs be using as pivot? Give all three possible answers.</p>",
+      "gradingMode": "exact",
+      "answerKey": "Seri, Matsés, Ejagham",
+      "acceptedVariants": [
+        "Seri, Matses, Ejagham",
+        "Ejagham, Matsés, Seri",
+        "Ejagham, Matses, Seri",
+        "Matsés, Seri, Ejagham",
+        "Matses, Seri, Ejagham",
+        "Seri, Ejagham, Matsés",
+        "Seri, Ejagham, Matses"
+      ],
+      "points": 2
+    },
+    {
+      "id": "d3-1",
+      "part": "D3",
+      "partPrompt": "For each of the six test runs, identify the pivot language used by matching options A–F to test runs 1–6. Each option is used exactly once.",
+      "promptHtml": "<p>Test run 1: Guambiano <span class=\"data\">piguig</span> ⇄ Tlapanec <span class=\"data\">skuni</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "C. Bété",
+      "acceptedVariants": [
+        "C",
+        "c",
+        "Bété",
+        "Bete",
+        "C. Bete"
+      ],
+      "choices": [
+        "A. Apinaye",
+        "B. Bassa",
+        "C. Bété",
+        "D. English",
+        "E. Teribe",
+        "F. Tsafiki"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "d3-2",
+      "part": "D3",
+      "promptHtml": "<p>Test run 2: Tlapanec <span class=\"data\">minuu</span> ⇄ Amuzgo <span class=\"data\">tsa</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "D. English",
+      "acceptedVariants": [
+        "D",
+        "d",
+        "English"
+      ],
+      "choices": [
+        "A. Apinaye",
+        "B. Bassa",
+        "C. Bété",
+        "D. English",
+        "E. Teribe",
+        "F. Tsafiki"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "d3-3",
+      "part": "D3",
+      "promptHtml": "<p>Test run 3: Seri <span class=\"data\">kʔe'el</span> ⇄ Yakan <span class=\"data\">taluk</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "F. Tsafiki",
+      "acceptedVariants": [
+        "F",
+        "f",
+        "Tsafiki"
+      ],
+      "choices": [
+        "A. Apinaye",
+        "B. Bassa",
+        "C. Bété",
+        "D. English",
+        "E. Teribe",
+        "F. Tsafiki"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "d3-4",
+      "part": "D3",
+      "promptHtml": "<p>Test run 4: Matsés <span class=\"data\">piu</span> ⇄ Seri <span class=\"data\">ko'il</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "E. Teribe",
+      "acceptedVariants": [
+        "E",
+        "e",
+        "Teribe"
+      ],
+      "choices": [
+        "A. Apinaye",
+        "B. Bassa",
+        "C. Bété",
+        "D. English",
+        "E. Teribe",
+        "F. Tsafiki"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "d3-5",
+      "part": "D3",
+      "promptHtml": "<p>Test run 5: Amuzgo <span class=\"data\">cajan</span> ⇄ Matsés <span class=\"data\">ushu</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "B. Bassa",
+      "acceptedVariants": [
+        "B",
+        "b",
+        "Bassa"
+      ],
+      "choices": [
+        "A. Apinaye",
+        "B. Bassa",
+        "C. Bété",
+        "D. English",
+        "E. Teribe",
+        "F. Tsafiki"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "d3-6",
+      "part": "D3",
+      "promptHtml": "<p>Test run 6: Yakan <span class=\"data\">gaddung</span> ⇄ Guambiano <span class=\"data\">piguig</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "A. Apinaye",
+      "acceptedVariants": [
+        "A",
+        "a",
+        "Apinaye",
+        "Apinayé"
+      ],
+      "choices": [
+        "A. Apinaye",
+        "B. Bassa",
+        "C. Bété",
+        "D. English",
+        "E. Teribe",
+        "F. Tsafiki"
+      ],
+      "points": 0.5
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Everything you need is in the colour-range table from problem (C). A word in one language can be a direct translation of a word in another language exactly when the two words' colour ranges share at least one colour. Start by writing down, for each word in the test runs, the list of colours it can name.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Think about what a pivot does to the set of outputs. Translating A→B gives every B word that overlaps the A word; then translating each of those B words into C gives every C word that overlaps any of them. Because each B word may stretch beyond the original A word's range, the pivot output is always the direct output PLUS possibly extra words — never fewer. So an output that is impossible directly is proof that a pivot was used, and the pivot must be a language containing a single word that overlaps both the source word and that surprising output.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try the worked example at the top. Ejagham ebi translates directly into Seri kʔe'el and kwassool, because those are the Seri words whose colour ranges overlap ebi. When Karajá is the pivot, ebi first becomes every Karajá word that overlaps it; at least one of those Karajá words reaches into a colour that ebi itself does not cover, and that colour is also covered by Seri ko'il — so ko'il shows up as an extra output. Find that Karajá word in the table; the same 'reaching beyond' logic is what you apply in D1–D3.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What the app is actually doing</h3>\n<p>All of the words in this problem are <em>colour words</em>, and the table from problem (C) tells you which colours each word can name. Languages carve up the colour space differently: English has separate words <em>green</em>, <em>blue</em> and <em>black</em>, while some languages have a single word that covers all the 'cool/dark' colours at once.</p>\n<p>Rule for <strong>direct</strong> translation: a word <em>w</em> of language A can be translated as word <em>v</em> of language C whenever the colour ranges of <em>w</em> and <em>v</em> overlap (they share at least one colour). A single word may therefore have several possible translations, which is why <em>NacloTranslate</em> gives different answers on different runs.</p>\n<h3>What a pivot changes</h3>\n<p>With pivot language B, the app does two steps:</p>\n<ol><li>Step 1: <em>w</em> (in A) → every B word whose range overlaps <em>w</em>.</li>\n<li>Step 2: each of those B words → every C word whose range overlaps <em>that</em> B word.</li></ol>\n<p>Each B word chosen in step 1 touches <em>w</em>, but it may also stick out into colours that <em>w</em> never covered. In step 2, those extra colours can pull in extra C words. So:</p>\n<p><strong>Pivot output ⊇ direct output.</strong> A pivot can only <em>add</em> wrong answers; it can never lose a correct one.</p>\n<p>That is exactly what happens in the example at the top: Ejagham <span class=\"data\">ebi</span> overlaps Seri <span class=\"data\">kʔe'el</span> and <span class=\"data\">kwassool</span>, so those two are the direct answers. But going through Karajá, one Karajá word that overlaps <span class=\"data\">ebi</span> stretches into a colour that <span class=\"data\">ebi</span> does not cover, and Seri <span class=\"data\">ko'il</span> covers that colour too — so <span class=\"data\">ko'il</span> appears as a third, spurious result.</p>\n<h3>D1 — spotting the pivot</h3>\n<p>Look up the colour ranges of the two words in each run.</p>\n<ul>\n<li>In runs A and C, the two words' ranges overlap, so the output could have come from a plain direct translation — no pivot needed.</li>\n<li>In run B, Yakan <span class=\"data\">ittem</span> and Guambiano <span class=\"data\">chilga</span> have <em>no</em> colour in common. A direct translator could never pair them, so run <strong>B</strong> must have used a pivot.</li>\n</ul>\n<p>Now, which pivot? You need a language that contains one word <em>x</em> such that <em>x</em> overlaps <span class=\"data\">ittem</span> <em>and</em> <em>x</em> overlaps <span class=\"data\">chilga</span> — a word broad enough to bridge the gap. Scanning the table, three languages have such a word: <strong>Bassa</strong>, <strong>Bété</strong> and <strong>Ejagham</strong> (all of them have very few, very wide colour terms). Any one of these is an acceptable answer.</p>\n<h3>D2 — counting the outputs</h3>\n<p><strong>a.</strong> Direct translation of Tsafiki <span class=\"data\">paban</span> into English: list the English words whose range overlaps <span class=\"data\">paban</span>. Those are <strong>blue</strong> and <strong>black</strong>.</p>\n<p><strong>b.</strong> With Karajá as pivot: first find every Karajá word overlapping <span class=\"data\">paban</span>. Those Karajá words reach further than <span class=\"data\">paban</span> does, into green and yellow territory. Translating them into English therefore returns <strong>yellow, green, blue, black</strong> — the two correct answers plus two extras. Notice how this illustrates the rule: the pivot set contains the direct set.</p>\n<p><strong>c.</strong> Now we want the output to be exactly <strong>green, blue, black</strong>: one extra word (green) compared with the direct answer, and no yellow. So the pivot language must have word(s) overlapping <span class=\"data\">paban</span> that extend into green but stop short of yellow (and don't reach white, red, etc.). Checking each candidate language in the table gives three that work: <strong>Seri</strong>, <strong>Matsés</strong> and <strong>Ejagham</strong>.</p>\n<h3>D3 — matching six pivots</h3>\n<p>For each run, the recipe is the same: a pivot language works only if it has a single word that overlaps <em>both</em> the source word and the printed output word (that is how the output could survive the two-step journey). Compute the colour range of both words, then test the six options A–F. Because each option is used exactly once, you can also use elimination: nail down the runs with only one possible bridging language first, then remove those options from the remaining runs.</p>\n<p>For example, in a run where the two words are separated by a large gap in the colour space, only a language with very broad terms (Bassa or Bété) can bridge it; a language with many narrow terms like English can only bridge small gaps.</p>\n<p>Carrying this out for all six runs gives:</p>\n<div class=\"table-scroll\"><table><thead><tr><th>Run</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><td>Pivot</td><td>C. Bété</td><td>D. English</td><td>F. Tsafiki</td><td>E. Teribe</td><td>B. Bassa</td><td>A. Apinaye</td></tr></tbody></table></div>\n<h3>The big idea</h3>\n<p>Real machine-translation systems use pivot languages when they lack <em>parallel text</em> (the same text in two languages) for a pair of languages. This problem shows the hidden cost: every time you pass through a language whose words are 'wider' than the original, meaning leaks in. Errors accumulate, and the set of possible outputs grows — a pivot never sharpens a translation, it can only blur it.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "IMPORTANT: This problem depends entirely on the data table on page (1/3) of NACLO 2025 Open Round problem (C), which was NOT supplied with these images. Please crop that page's colour-word/colour-range table (page 1 of problem C, main data block) and save it as /content-assets/2025-open-d-problem-c-data.png; without it the problem is unsolvable. Verify my figcaption wording matches the actual layout of that table.\n\nAll answer keys are taken from the official solution page (D1: B, pivot = any one of Bassa/Bété/Ejagham; D2a: blue, black; D2b: yellow, green, blue, black; D2c: Seri, Matsés, Ejagham; D3: 1C 2D 3F 4E 5B 6A). Point split across the 11 blanks (1+1, 1.5+1.5+2, 6×0.5 = 10) is my own — the official PDF gives only the 10-point total.\n\nFormatting notes: the original prints each test run inside its own small two-cell box with a '⇄' between the two language names; I merged runs into single tables per part for readability — check this is acceptable. Seri kʔe'el is printed with a glottal stop character followed by an apostrophe; verify the exact characters (kʔe'el vs k?e'el). 'Apinaye' is printed without an accent in the options list; I kept it as printed and accepted 'Apinayé' as a variant. Explanation of D2c/D3 describes the reasoning pattern generically because the (C) colour ranges were unavailable — once the crop is in hand, please confirm the sentences about which words 'reach into green but not yellow' etc. are consistent with the actual data.",
+  "questionsCount": 11
+}
