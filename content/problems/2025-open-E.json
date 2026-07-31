@@ -1,27 +1,50 @@
 {
   "id": "2025-open-E",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2025,
   "round": "open",
   "letter": "E",
   "title": "Around the World in Armenian",
-  "authors": [],
+  "authors": ["NACLO 2025 Problem Committee"],
   "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
-  "conceptTags": [
-    "morphology",
-    "historical and comparative"
-  ],
-  "formTag": "rosetta-stone translation",
+  "conceptTags": ["writing systems", "historical and comparative"],
+  "formTag": "transliteration",
   "difficulty": "hard",
-  "languages": [
-    "Armenian"
-  ],
+  "languages": ["Armenian"],
   "officialPoints": 15,
   "officialTimeMinutes": 27,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Armenian, the official language of Armenia, is part of the Indo-European language family, the language family that contains most European languages like English and Russian, as well as many South Asian languages like Punjabi and Hindi. Its alphabet, developed in the early 5th century CE, is also related to the Latin alphabet we use for English, since both descend from an archaic form of the Greek alphabet.</p><p>Below are the names of several of the world&rsquo;s countries in the Armenian script, and their English equivalents <strong>in a random order</strong>. Note that some of the names of countries are slightly different in the Armenian language.</p><div class=\"table-scroll\"><table><thead><tr><th>No.</th><th>Armenian</th><th>Letter</th><th>English</th></tr></thead><tbody><tr><td>1</td><td>Ֆրանսիա</td><td>A</td><td>Canada</td></tr><tr><td>2</td><td>Գերմանիա</td><td>B</td><td>Australia</td></tr><tr><td>3</td><td>Կանադա</td><td>C</td><td>Israel</td></tr><tr><td>4</td><td>Իտալիա</td><td>D</td><td>America</td></tr><tr><td>5</td><td>Իսրայել</td><td>E</td><td>Peru</td></tr><tr><td>6</td><td>Բուլղարիա</td><td>F</td><td>Russia</td></tr><tr><td>7</td><td>Արգենտինա</td><td>G</td><td>England</td></tr><tr><td>8</td><td>Ավստրալիա</td><td>H</td><td>Bulgaria</td></tr><tr><td>9</td><td>Ֆինլանդիա</td><td>I</td><td>Libya</td></tr><tr><td>10</td><td>Ռուսաստան</td><td>J</td><td>France</td></tr><tr><td>11</td><td>Անգլիա</td><td>K</td><td>Germany</td></tr><tr><td>12</td><td>Պերու</td><td>L</td><td>Finland</td></tr><tr><td>13</td><td>Ամերիկա</td><td>M</td><td>Romania</td></tr><tr><td>14</td><td>Լիբիա</td><td>N</td><td>Italy</td></tr><tr><td>15</td><td>Ռումինիա</td><td>O</td><td>Argentina</td></tr></tbody></table></div>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    { "id": "E1.1", "part": "E1", "partPrompt": "Match each Armenian country name to its English equivalent by entering the letter A–O.", "promptHtml": "Ֆրանսիա", "gradingMode": "exact", "answerKey": "J", "acceptedVariants": ["France"], "points": 0.6 },
+    { "id": "E1.2", "part": "E1", "promptHtml": "Գերմանիա", "gradingMode": "exact", "answerKey": "K", "acceptedVariants": ["Germany"], "points": 0.6 },
+    { "id": "E1.3", "part": "E1", "promptHtml": "Կանադա", "gradingMode": "exact", "answerKey": "A", "acceptedVariants": ["Canada"], "points": 0.6 },
+    { "id": "E1.4", "part": "E1", "promptHtml": "Իտալիա", "gradingMode": "exact", "answerKey": "N", "acceptedVariants": ["Italy"], "points": 0.6 },
+    { "id": "E1.5", "part": "E1", "promptHtml": "Իսրայել", "gradingMode": "exact", "answerKey": "C", "acceptedVariants": ["Israel"], "points": 0.6 },
+    { "id": "E1.6", "part": "E1", "promptHtml": "Բուլղարիա", "gradingMode": "exact", "answerKey": "H", "acceptedVariants": ["Bulgaria"], "points": 0.6 },
+    { "id": "E1.7", "part": "E1", "promptHtml": "Արգենտինա", "gradingMode": "exact", "answerKey": "O", "acceptedVariants": ["Argentina"], "points": 0.6 },
+    { "id": "E1.8", "part": "E1", "promptHtml": "Ավստրալիա", "gradingMode": "exact", "answerKey": "B", "acceptedVariants": ["Australia"], "points": 0.6 },
+    { "id": "E1.9", "part": "E1", "promptHtml": "Ֆինլանդիա", "gradingMode": "exact", "answerKey": "L", "acceptedVariants": ["Finland"], "points": 0.6 },
+    { "id": "E1.10", "part": "E1", "promptHtml": "Ռուսաստան", "gradingMode": "exact", "answerKey": "F", "acceptedVariants": ["Russia"], "points": 0.6 },
+    { "id": "E1.11", "part": "E1", "promptHtml": "Անգլիա", "gradingMode": "exact", "answerKey": "G", "acceptedVariants": ["England"], "points": 0.6 },
+    { "id": "E1.12", "part": "E1", "promptHtml": "Պերու", "gradingMode": "exact", "answerKey": "E", "acceptedVariants": ["Peru"], "points": 0.6 },
+    { "id": "E1.13", "part": "E1", "promptHtml": "Ամերիկա", "gradingMode": "exact", "answerKey": "D", "acceptedVariants": ["America"], "points": 0.6 },
+    { "id": "E1.14", "part": "E1", "promptHtml": "Լիբիա", "gradingMode": "exact", "answerKey": "I", "acceptedVariants": ["Libya"], "points": 0.6 },
+    { "id": "E1.15", "part": "E1", "promptHtml": "Ռումինիա", "gradingMode": "exact", "answerKey": "M", "acceptedVariants": ["Romania"], "points": 0.6 },
+
+    { "id": "E2.1", "part": "E2", "partPrompt": "Write how you think the Armenian names for these countries are pronounced, using the Latin alphabet.", "promptHtml": "England", "gradingMode": "exact", "answerKey": "Anglia", "acceptedVariants": ["Anglya", "Angliya"], "points": 1.5 },
+    { "id": "E2.2", "part": "E2", "promptHtml": "Russia", "gradingMode": "exact", "answerKey": "Rusastan", "acceptedVariants": ["Rosastan", "Rousastan", "Russastan"], "points": 1.5 },
+
+    { "id": "E3.a", "part": "E3", "partPrompt": "Write these country names in the Armenian script. Each is pronounced the same in Armenian as in English.", "promptHtml": "Iran", "gradingMode": "exact", "answerKey": "Իրան", "acceptedVariants": [], "points": 0.75 },
+    { "id": "E3.b", "part": "E3", "promptHtml": "Pakistan", "gradingMode": "exact", "answerKey": "Պակիստան", "acceptedVariants": [], "points": 0.75 },
+    { "id": "E3.c", "part": "E3", "promptHtml": "Cameroon", "gradingMode": "exact", "answerKey": "Կամերուն", "acceptedVariants": [], "points": 0.75 },
+    { "id": "E3.d", "part": "E3", "promptHtml": "Burundi", "gradingMode": "exact", "answerKey": "Բուրունդի", "acceptedVariants": [], "points": 0.75 }
+  ],
+  "hints": [
+    { "tier": 1, "text": "Do not try to read Armenian. Count instead. Look at how many letters each Armenian name has and compare that with the English names — Կանադա has six characters, and so does Canada. Start with the names where the letter count is unusual, and where the same character repeats in the same position.", "xpCost": 1 },
+    { "tier": 2, "text": "Once you have matched two or three names, you can start building an alphabet. Line up a matched pair character by character and write down what each Armenian letter must be. Then use those known letters to crack the next name, the way you would a substitution cipher.", "xpCost": 2 },
+    { "tier": 3, "text": "Worked start: Կանադա and Ամերիկա both end in the same character, ա. In English, Canada and America both end in a. So ա is a. Now Կանադա is Կ-ա-ն-ա-դ-ա, with a in positions 2, 4 and 6 — matching C-a-n-a-d-a exactly. That gives you three more letters in one move. Two of the fifteen names are not spelled like their English forms at all; leave those until last.", "xpCost": 3 }
+  ],
+  "explanationHtml": "<p>This is a substitution cipher with a helpful property: most of the Armenian names are straight transliterations of the English ones, so the letters line up position by position.</p><h3>Getting in</h3><p>The way in is repeated letters. <span class=\"data\">Կանադա</span> has the same character in positions 2, 4 and 6, and <em>Canada</em> has <em>a</em> in exactly those positions. That fixes <span class=\"data\">ա</span> = a and hands you <span class=\"data\">Կ</span> = k, <span class=\"data\">ն</span> = n and <span class=\"data\">դ</span> = d for free.</p><p><span class=\"data\">Պերու</span> is short, and only one English name here is short and ends in a vowel: <em>Peru</em>. That gives <span class=\"data\">Պ</span> = p, <span class=\"data\">ե</span> = e, <span class=\"data\">ր</span> = r, and reveals that <span class=\"data\">ու</span> is a two-character digraph for <em>u</em> — which is why some letter counts do not match at first glance.</p><h3>The alphabet you end up with</h3><div class=\"table-scroll\"><table><thead><tr><th>Armenian</th><th>Latin</th><th>Armenian</th><th>Latin</th><th>Armenian</th><th>Latin</th></tr></thead><tbody><tr><td>ա</td><td>a</td><td>ի</td><td>i</td><td>ս</td><td>s</td></tr><tr><td>բ</td><td>b</td><td>լ</td><td>l</td><td>տ</td><td>t</td></tr><tr><td>գ</td><td>g</td><td>կ</td><td>k</td><td>ու</td><td>u</td></tr><tr><td>դ</td><td>d</td><td>մ</td><td>m</td><td>վ</td><td>v</td></tr><tr><td>ե</td><td>e</td><td>ն</td><td>n</td><td>ֆ</td><td>f</td></tr><tr><td>ղ</td><td>gh</td><td>պ</td><td>p</td><td>յ</td><td>y</td></tr><tr><td>ռ</td><td>r</td><td>ր</td><td>r</td><td>ա</td><td>a</td></tr></tbody></table></div><p>Armenian has two letters that both transliterate as <em>r</em>. <span class=\"data\">ր</span> is the ordinary one; <span class=\"data\">ռ</span> is a trilled variety, and it is the one that starts <em>Russia</em> and <em>Romania</em>.</p><h3>The two that are not transliterations</h3><p>E2 asks about exactly the two names that do not look like their English forms.</p><p><span class=\"data\">Անգլիա</span> reads <em>Anglia</em> — the same root as <em>Anglo-</em>, not <em>England</em>. Many languages name England from that root rather than from the English word.</p><p><span class=\"data\">Ռուսաստան</span> reads <em>Rusastan</em>: <em>Rus</em> plus <em>-stan</em>, the Persian-derived suffix meaning <em>land of</em> that also ends Afghanistan and Kazakhstan. Armenian borrowed that suffix through centuries of contact with Persian, which is why a European country ends up with a Central Asian-looking name.</p><h3>Writing the new names</h3><p>For E3 you run the cipher backwards. <em>Iran</em> is i-r-a-n, giving <span class=\"data\">Իրան</span>. <em>Pakistan</em> is p-a-k-i-s-t-a-n, giving <span class=\"data\">Պակիստան</span>. <em>Cameroon</em> needs the <span class=\"data\">ու</span> digraph for the <em>oo</em> sound: <span class=\"data\">Կամերուն</span>. <em>Burundi</em> uses it too: <span class=\"data\">Բուրունդի</span>.</p>",
   "reviewStatus": "published"
 }

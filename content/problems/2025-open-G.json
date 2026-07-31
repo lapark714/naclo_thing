@@ -1,27 +1,40 @@
 {
   "id": "2025-open-G",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2025,
   "round": "open",
   "letter": "G",
   "title": "The Little Dog That Could Read",
-  "authors": [],
+  "authors": ["NACLO 2025 Problem Committee"],
   "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
-  "conceptTags": [
-    "phonology",
-    "morphology"
-  ],
-  "formTag": "rule discovery",
+  "conceptTags": ["morphology", "syntax"],
+  "formTag": "rosetta-stone translation",
   "difficulty": "hard",
-  "languages": [
-    "Sakata"
-  ],
+  "languages": ["Sakata"],
   "officialPoints": 15,
   "officialTimeMinutes": 27,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Sakata (also known as Kisakata or Kesakata) is a language in the Bantu family spoken by several thousand people in the Democratic Republic of the Congo. It consists of several quite distinct dialects; this problem features the dialect spoken in the village of Bosobe in the 1980s.</p><p>Below are some Sakata sentences, alongside their English translations. Note that <strong class=\"data\">ə</strong> and <strong class=\"data\">ü</strong> are both vowels, and that one Sakata noun is slightly irregular.</p><dl class=\"gloss-list\"><dt>Banka balülü bamwi bebil benini.</dt><dd>The good women saw the big fields.</dd><dt>Banjir babibə badzo ibat lelülü.</dt><dd>The bad men killed the good duck.</dd><dt>Keto ketita kejo ntaw ne banjir.</dt><dd>The long snake heard the men's goat.</dd><dt>Mabat masinxunə ola mokan mo munjir.</dt><dd>The ducks wanted to eat the man's book.</dd><dt>Mva nekikə ne banka nejao otang.</dt><dd>The women's little dog learned to read.</dd><dt>Nə ala ipe le ibat lenini?</dt><dd>Who ate the big duck's wing?</dd><dt>Munkar nejo nko ne bang.</dt><dd>The woman heard the children's chicken.</dd><dt>Nko ibibə ila ncher i bang.</dt><dd>The bad chickens ate the children's peanuts.</dd><dt>Bande bachunga ntaw ilülü.</dt><dd>The white men bought the good goats.</dd><dt>Ntaw i banka ikwi o kebil ke munde.</dt><dd>The women's goats went to the white man's field.</dd><dt>Nə amwi bena be bande?</dt><dd>Who saw the white men's things?</dd><dt>Ngombe nekikə nemwi lecher lenini.</dt><dd>The little cow saw the big peanut.</dd></dl><p>Below are some numerical phrases in Sakata, alongside their English translations.</p><dl class=\"gloss-list\"><dt>ledze lemo</dt><dd>one finger</dd><dt>ipyao lemo</dt><dd>one shoulder</dd><dt>nchungə ipə</dt><dd>two pigs</dd><dt>befwa besa</dt><dd>three bones</dd><dt>mete meni</dt><dd>four trees</dd></dl>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    { "id": "G1.a", "part": "G1", "partPrompt": "Translate into English.", "promptHtml": "Mva imwi ntaw nebibə.", "gradingMode": "llm", "answerKey": "The dogs saw the bad goat.", "acceptedVariants": [], "points": 2 },
+    { "id": "G1.b", "part": "G1", "promptHtml": "Munjir nekikə netang mekan melülü.", "gradingMode": "llm", "answerKey": "The little man read the good books.", "acceptedVariants": [], "points": 2 },
+    { "id": "G1.c", "part": "G1", "promptHtml": "Nə adzo beto be munkar?", "gradingMode": "llm", "answerKey": "Who killed the woman's snakes?", "acceptedVariants": [], "points": 2 },
+
+    { "id": "G2.a", "part": "G2", "partPrompt": "Translate into Sakata.", "promptHtml": "The cows heard the big dogs.", "gradingMode": "exact", "answerKey": "Ngombe ijo mva inini.", "acceptedVariants": ["Ngombe ijo mva inini"], "points": 2 },
+    { "id": "G2.b", "part": "G2", "promptHtml": "The white man learned to eat wings.", "gradingMode": "exact", "answerKey": "Munde nejao ola mape.", "acceptedVariants": ["Munde nejao ola mape"], "points": 2 },
+    { "id": "G2.c", "part": "G2", "promptHtml": "The snakes of the field read the big books.", "gradingMode": "exact", "answerKey": "Beto be kebil betang mekan menini.", "acceptedVariants": ["Beto be kebil betang mekan menini"], "points": 2 },
+
+    { "id": "G3.a", "part": "G3", "partPrompt": "Translate into Sakata.", "promptHtml": "one pig", "gradingMode": "exact", "answerKey": "nchungə nemo", "acceptedVariants": ["nchunga nemo"], "points": 0.6 },
+    { "id": "G3.b", "part": "G3", "promptHtml": "one tree", "gradingMode": "exact", "answerKey": "mote momo", "acceptedVariants": [], "points": 0.6 },
+    { "id": "G3.c", "part": "G3", "promptHtml": "one bone", "gradingMode": "exact", "answerKey": "kefwa kemo", "acceptedVariants": [], "points": 0.6 },
+    { "id": "G3.d", "part": "G3", "promptHtml": "two shoulders", "gradingMode": "exact", "answerKey": "mapyao mapə", "acceptedVariants": ["mapyao mapa"], "points": 0.6 },
+    { "id": "G3.e", "part": "G3", "promptHtml": "three fingers", "gradingMode": "exact", "answerKey": "ndze isa", "acceptedVariants": [], "points": 0.6 }
+  ],
+  "hints": [
+    { "tier": 1, "text": "Look at the first letter or two of each noun, then look at the first letter or two of every word that follows it in the same sentence. They keep matching. Sort the nouns into groups by how their neighbours start, and ignore meaning entirely while you do it.", "xpCost": 2 },
+    { "tier": 2, "text": "Sakata sorts nouns into classes, and every adjective, verb and possessive linker that goes with a noun copies that noun's class marker. Singular and plural are different classes, so a word does not just change its own ending when it becomes plural — everything agreeing with it changes too. Build a table: noun class down the side, and the marker it forces on adjectives, verbs and linkers across the top.", "xpCost": 3 },
+    { "tier": 3, "text": "Worked example: banka balülü bamwi bebil benini means the good women saw the big fields. Every word starts with be- or ba-. Now compare mva nekikə ne banka nejao — little dog, and everything agreeing with it starts ne-. So mva is in a different class from banka. Find mva again in G1a, where it is plural, and see which marker it takes there. Note that mva is the irregular noun the problem warns about.", "xpCost": 4 }
+  ],
+  "explanationHtml": "<p>Sakata is a Bantu language, and like most of the family it sorts every noun into a <em>class</em>. The class is not about meaning — it is closer to grammatical gender in French or German, except there are many more than two. What makes it visible is <strong>agreement</strong>: every adjective, verb and possessive linker attached to a noun copies that noun's class marker.</p><h3>Reading a sentence</h3><p>Take <span class=\"data\">Banka balülü bamwi bebil benini</span> — <em>the good women saw the big fields</em>. Almost every word starts with <span class=\"data\">ba-</span> or <span class=\"data\">be-</span>: <span class=\"data\">banka</span> (women) forces <span class=\"data\">ba-</span> on its adjective and verb, and <span class=\"data\">bebil</span> (fields) forces <span class=\"data\">be-</span> on its own adjective. Once you see that, the sentence parses itself.</p><h3>The classes</h3><div class=\"table-scroll\"><table><thead><tr><th>Class</th><th>Marker</th><th>Example noun</th><th>Gloss</th></tr></thead><tbody><tr><td>person sg</td><td>mu- / ne-</td><td>munjir</td><td>man</td></tr><tr><td>person pl</td><td>ba-</td><td>banjir</td><td>men</td></tr><tr><td>thing sg</td><td>ke-</td><td>kebil</td><td>field</td></tr><tr><td>thing pl</td><td>be-</td><td>bebil</td><td>fields</td></tr><tr><td>long thing sg</td><td>le- / lu-</td><td>lecher</td><td>peanut</td></tr><tr><td>long thing pl</td><td>i-</td><td>ncher</td><td>peanuts</td></tr><tr><td>mass sg</td><td>mo-</td><td>mokan</td><td>book</td></tr><tr><td>mass pl</td><td>me-</td><td>mekan</td><td>books</td></tr><tr><td>animal sg</td><td>ne-</td><td>ngombe</td><td>cow</td></tr><tr><td>animal pl</td><td>i-</td><td>ntaw</td><td>goats</td></tr></tbody></table></div><p>Notice that the noun itself often does not change between singular and plural — <span class=\"data\">ntaw</span> is <em>goat</em> and <em>goats</em>, <span class=\"data\">ngombe</span> is <em>cow</em> and <em>cows</em>. The number is carried entirely by what agrees with it. That is the single hardest idea in the problem, and it is why <span class=\"data\">Mva imwi ntaw nebibə</span> is <em>the dogs saw the bad goat</em> and not the reverse: <span class=\"data\">imwi</span> marks a plural subject, <span class=\"data\">nebibə</span> a singular one.</p><h3>Possession</h3><p>Possession is built with a linker that agrees with the thing possessed, not the possessor: <span class=\"data\">ntaw i banka</span> is <em>goats of the women</em>, where <span class=\"data\">i</span> matches <span class=\"data\">ntaw</span>. Compare <span class=\"data\">kebil ke munde</span>, <em>field of the white man</em>, where the linker matches <span class=\"data\">kebil</span>.</p><h3>Numbers</h3><p>Numerals agree too, which is what G3 tests. The root for <em>one</em> is <span class=\"data\">-mo</span>, for <em>two</em> <span class=\"data\">-pə</span>, <em>three</em> <span class=\"data\">-sa</span>, <em>four</em> <span class=\"data\">-ni</span>, and each takes the class prefix of the noun it counts. So <em>one bone</em> is <span class=\"data\">kefwa kemo</span> while <em>three bones</em> is <span class=\"data\">befwa besa</span> — the noun changes class between singular and plural, and the numeral follows it.</p><p>The title is a joke about the data: a little dog that learned to read is one of the sentences, and <span class=\"data\">mva</span> is the irregular noun the problem warns you about — it looks singular but takes plural agreement in some sentences.</p>",
   "reviewStatus": "published"
 }

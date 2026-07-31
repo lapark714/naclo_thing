@@ -154,6 +154,25 @@
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
+/* Armenian. Added for 2025 (E); a missing-glyph box in a script problem does
+   not degrade it, it makes it unsolvable. Any new script needs its own subset. */
+@font-face {
+  font-family: "Noto Sans Armenian";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NotoSansArmenian-400-armenian.woff2") format("woff2");
+  unicode-range: U+0308, U+0530-058F, U+2010, U+25CC, U+FB13-FB17;
+}
+@font-face {
+  font-family: "Noto Sans Armenian";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/NotoSansArmenian-700-armenian.woff2") format("woff2");
+  unicode-range: U+0308, U+0530-058F, U+2010, U+25CC, U+FB13-FB17;
+}
+
 /* --------------------------------------------------------------------------- */
 
 :root {
@@ -252,7 +271,7 @@
   --font-sans: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Noto Serif Display", Georgia, serif;
   --font-display: "Noto Serif Display", Georgia, serif;
-  --font-data: "Charis SIL", "Doulos SIL", Charter, Georgia, serif;
+  --font-data: "Charis SIL", "Noto Sans Armenian", "Doulos SIL", Charter, Georgia, serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
 
   --radius-sm: 2px;
@@ -293,7 +312,8 @@ body {
 
 /* The signature: primary language data is always set in Charis SIL. */
 .data {
-  font-family: "Charis SIL", "Doulos SIL", Charter, Georgia, serif;
+  font-family: "Charis SIL", "Noto Sans Armenian", "Doulos SIL", Charter, Georgia,
+    serif;
 }
 
 .problem-body ul,
@@ -321,7 +341,7 @@ body {
 .problem-body table,
 .table-scroll table {
   border-collapse: collapse;
-  font-family: "Charis SIL", Charter, Georgia, serif;
+  font-family: "Charis SIL", "Noto Sans Armenian", Charter, Georgia, serif;
   font-size: 0.95rem;
   width: max-content;
   min-width: 100%;
@@ -362,7 +382,7 @@ body {
   max-width: 68ch;
 }
 .gloss-list dt {
-  font-family: "Charis SIL", Charter, Georgia, serif;
+  font-family: "Charis SIL", "Noto Sans Armenian", Charter, Georgia, serif;
   font-weight: 700;
 }
 .gloss-list dd {
