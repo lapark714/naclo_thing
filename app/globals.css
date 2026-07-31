@@ -401,6 +401,15 @@
     "Noto Sans Georgian", "Noto Sans Cherokee", "Noto Sans Ethiopic",
     "Noto Sans NKo", "Noto Sans JP", "Noto Sans", "Doulos SIL", Charter,
     Georgia, serif;
+  /* UI text. The script families sit behind "Noto Sans" because a hint or a
+     part instruction can quote the language it is about, and a family the
+     element never names can never be used however well @font-face covers it.
+     unicode-range still gates the download, so a page with no Armenian on it
+     pays nothing for the Armenian entry. */
+  --ui-stack: "Noto Sans", "Noto Sans Armenian", "Noto Sans Devanagari",
+    "Noto Sans Georgian", "Noto Sans Cherokee", "Noto Sans Ethiopic",
+    "Noto Sans NKo", "Noto Sans JP", "Charis SIL", ui-sans-serif, system-ui,
+    sans-serif;
   --paper: #fbfaf7;
   --ink: #16181d;
   --ink-soft: #5a6070;
@@ -507,7 +516,7 @@
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--ui-stack);
   -webkit-font-smoothing: antialiased;
 }
 

@@ -230,6 +230,8 @@ QUESTIONS
 - Distribute officialPoints across questions using the official per-part breakdown when the solution shows one, else evenly.
 - Every answerKey comes from the OFFICIAL solution pages. If no solution images were provided, solve the problem yourself, set every affected question's answerKey normally, and state prominently in _reviewNotes that keys are unofficial and must be verified.
 
+PLAIN TEXT vs HTML — only the fields whose names end in Html are rendered as HTML. "text", "partPrompt", "rubric", "answerKey" and "choices" are rendered as plain text, so a <span> or an &nbsp; in one of them reaches the student as literal angle brackets. Write those fields with plain characters only; the language data in them is still safe to write directly, because the UI font stack covers every script the fonts do.
+
 HINTS — exactly 3, each shaped {"tier": <1|2|3>, "text": "...", "xpCost": <n>} with xpCost 1/2/3 (or 2/3/4 for 15-point problems):
 1. Orientation: where to look. 2. Method: the insight, stated but not applied. 3. Partial work: ONE step worked through on data that is NOT one of the graded questions. Never reveal an answer.
 

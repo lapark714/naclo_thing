@@ -13,6 +13,9 @@
  *     The allowed ranges are parsed from app/globals.css, so the fonts stay
  *     the single source of truth: ship a script with no coverage and the
  *     build fails instead of rendering tofu boxes for students.
+ *   - fields that the site renders as plain text carry no markup. Only the
+ *     *Html fields are ever passed through dangerouslySetInnerHTML; a <span>
+ *     in a hint reaches the student as literal angle brackets.
  *
  * Records in content/drafts/ (AI output awaiting review) are checked too, but
  * their failures are warnings — the gate is at publish, not at draft.
@@ -85,6 +88,33 @@ function allText(value: unknown): string {
   return "";
 }
 
+/* ---------------------------------------------------------------------------
+   Plain-text fields
+
+   The site renders bodyHtml, promptHtml and explanationHtml as HTML, and
+   everything else as text. Markup that lands in a text field is shown to the
+   student verbatim — "<span class=\"data\">marlu</span>" instead of "marlu".
+   The naming convention (*Html or not) is the contract; this enforces it.
+   --------------------------------------------------------------------------- */
+
+const MARKUP = /<[a-zA-Z/][^>]*>|&(?:[a-zA-Z]+|#\d+);/;
+
+function markupInTextFields(problem: Problem): string[] {
+  const bad: string[] = [];
+  problem.hints.forEach((h, i) => {
+    if (MARKUP.test(h.text)) bad.push(`hints[${i}].text`);
+  });
+  for (const q of problem.questions) {
+    if (q.partPrompt && MARKUP.test(q.partPrompt)) bad.push(`question ${q.id} partPrompt`);
+    if (q.rubric && MARKUP.test(q.rubric)) bad.push(`question ${q.id} rubric`);
+    if (MARKUP.test(q.answerKey)) bad.push(`question ${q.id} answerKey`);
+    q.choices?.forEach((c, i) => {
+      if (MARKUP.test(c)) bad.push(`question ${q.id} choices[${i}]`);
+    });
+  }
+  return bad;
+}
+
 /* --------------------------------------------------------------------------- */
 
 function checkDir(
@@ -126,6 +156,13 @@ function checkDir(
       issues.push(
         `${file}: characters with no font coverage — ${list}${bad.size > 8 ? ` (+${bad.size - 8} more)` : ""}. ` +
           `Add a subset in ${CSS_FILE} before shipping this script.`,
+      );
+    }
+
+    for (const field of markupInTextFields(problem)) {
+      issues.push(
+        `${file}: ${field} contains markup, but the site renders that field as plain text — ` +
+          `the tags would be shown to the student. Use plain characters, or move it into an *Html field.`,
       );
     }
 
