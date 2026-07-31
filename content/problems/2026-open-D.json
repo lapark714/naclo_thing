@@ -4,35 +4,197 @@
   "round": "open",
   "letter": "D",
   "title": "Witsuwit'en Word Salad",
-  "authors": ["Arul Kolla"],
-  "sourcePdfUrl": "https://naclo.org/resources/problems/2026/N2026-D.pdf",
-  "solutionPdfUrl": "https://naclo.org/resources/problems/2026/N2026-DS.pdf",
-  "conceptTags": ["morphology", "semantics"],
+  "authors": [
+    "Arul Kolla"
+  ],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "semantics"
+  ],
   "formTag": "rule discovery",
   "difficulty": "standard",
-  "languages": ["Witsuwit'en"],
+  "languages": [
+    "Witsuwit'en"
+  ],
   "officialPoints": 10,
   "officialTimeMinutes": 20,
   "bodyHtml": "<p>Witsuwit'en is a language spoken by around 3,500 people in British Columbia, Canada. Below are some sentences in Witsuwit'en and their English translations. It may be helpful to know that <strong class=\"data\">c'</strong>, <strong class=\"data\">dz</strong>, <strong class=\"data\">gh</strong>, <strong class=\"data\">kw</strong>, <strong class=\"data\">k'</strong>, <strong class=\"data\">lh</strong>, <strong class=\"data\">ts</strong>, <strong class=\"data\">t'</strong>, <strong class=\"data\">y</strong>, and <strong class=\"data\">'</strong> are consonants, while <strong class=\"data\">ë</strong> and <strong class=\"data\">ï</strong> are vowels.</p><dl class=\"gloss-list\"><dt>lemidec yini'alh</dt><dd>He's eating a potato.</dd><dt>c'ighïz nildïlh</dt><dd>He's eating (e.g. hard-boiled) eggs.</dd><dt>lisuc hildïlh</dt><dd>He's eating sugar.</dd><dt>lesucam yini'alh</dt><dd>He's eating a turnip.</dd><dt>be' yi'alh</dt><dd>He's eating dried fish.</dd><dt>dïndze yini'alh</dt><dd>He's eating a blueberry.</dd><dt>tazil yi'alh</dt><dd>He's eating (thick) soup.</dd><dt>c'it'an hildïlh</dt><dd>He's eating leaves (e.g. kale).</dd><dt>c'it'an tsïlhghis yini'alh</dt><dd>He's eating a head of lettuce.</dd><dt>hida tsiy yi'alh</dt><dd>He's eating moose meat.</dd><dt>silhts'ec hildïlh</dt><dd>He's eating (ground) pepper.</dd><dt>k'inïh sigï hildïlh</dt><dd>He's eating cornflakes.</dd><dt>lhës yi'alh</dt><dd>He's eating a slice of bread.</dd><dt>cit'an hilhtsin nildïlh</dt><dd>He's eating onions.</dd><dt>ligalat yi'alh</dt><dd>He's eating a carrot.</dd><dt>c'ik'agh hildïlh</dt><dd>He's eating strips of bacon.</dd></dl><figure><img src=\"/content-assets/2026-open-D-foods.png\" alt=\"Reference illustrations of five foods: a turnip, a head of lettuce, cornflakes, rhubarb, and hazelnuts.\" /><figcaption>Reference images for some of the foods named in this problem.</figcaption></figure>",
   "assets": [
-    { "src": "/content-assets/2026-open-D-foods.png", "alt": "Illustrations of a turnip, a head of lettuce, cornflakes, rhubarb, and hazelnuts." }
+    {
+      "src": "/content-assets/2026-open-D-foods.png",
+      "alt": "Illustrations of a turnip, a head of lettuce, cornflakes, rhubarb, and hazelnuts."
+    }
   ],
   "questions": [
-    { "id": "D1.1", "part": "D1", "partPrompt": "For each Witsuwit'en sentence, choose the word that completes it.", "promptHtml": "lemidec nïlhtiz ___ &mdash; <em>He's eating mashed potatoes.</em>", "gradingMode": "exact", "answerKey": "yi'alh", "acceptedVariants": [], "choices": ["hildïlh", "nildïlh", "yini'alh", "yi'alh"], "points": 1 },
-    { "id": "D1.2", "part": "D1", "promptHtml": "lemidec st'ë ___ &mdash; <em>He's eating french fries.</em>", "gradingMode": "exact", "answerKey": "hildïlh", "acceptedVariants": [], "choices": ["hildïlh", "nildïlh", "yini'alh", "yi'alh"], "points": 1 },
-    { "id": "D1.3", "part": "D1", "promptHtml": "lemidec sigï ___ &mdash; <em>He's eating a potato chip.</em>", "gradingMode": "exact", "answerKey": "yi'alh", "acceptedVariants": [], "choices": ["hildïlh", "nildïlh", "yini'alh", "yi'alh"], "points": 1 },
-    { "id": "D1.4", "part": "D1", "promptHtml": "gus ___ &mdash; <em>He's eating stalks of rhubarb.</em>", "gradingMode": "exact", "answerKey": "hildïlh", "acceptedVariants": [], "choices": ["hildïlh", "nildïlh", "yini'alh", "yi'alh"], "points": 1 },
-    { "id": "D1.5", "part": "D1", "promptHtml": "c'itsiy dïnïltiz ___ &mdash; <em>He's eating sausages.</em>", "gradingMode": "exact", "answerKey": "hildïlh", "acceptedVariants": [], "choices": ["hildïlh", "nildïlh", "yini'alh", "yi'alh"], "points": 1 },
-    { "id": "D1.6", "part": "D1", "promptHtml": "lhës sigï ___ &mdash; <em>He's eating a cracker.</em>", "gradingMode": "exact", "answerKey": "yi'alh", "acceptedVariants": [], "choices": ["hildïlh", "nildïlh", "yini'alh", "yi'alh"], "points": 1 },
-    { "id": "D1.7", "part": "D1", "promptHtml": "sniw ___ &mdash; <em>He's eating cherries.</em>", "gradingMode": "exact", "answerKey": "nildïlh", "acceptedVariants": [], "choices": ["hildïlh", "nildïlh", "yini'alh", "yi'alh"], "points": 1 },
-    { "id": "D1.8", "part": "D1", "promptHtml": "tsalic këkwin' ___ &mdash; <em>He's eating a hazelnut.</em>", "gradingMode": "exact", "answerKey": "yini'alh", "acceptedVariants": [], "choices": ["hildïlh", "nildïlh", "yini'alh", "yi'alh"], "points": 1 },
-    { "id": "D1.9", "part": "D1", "promptHtml": "mï'o ___ &mdash; <em>He's eating cranberries.</em>", "gradingMode": "exact", "answerKey": "nildïlh", "acceptedVariants": [], "choices": ["hildïlh", "nildïlh", "yini'alh", "yi'alh"], "points": 1 },
-    { "id": "D1.10", "part": "D1", "promptHtml": "tselh ghïl ___ &mdash; <em>He's eating a tomato.</em>", "gradingMode": "exact", "answerKey": "yini'alh", "acceptedVariants": [], "choices": ["hildïlh", "nildïlh", "yini'alh", "yi'alh"], "points": 1 }
+    {
+      "id": "D1.1",
+      "part": "D1",
+      "partPrompt": "For each Witsuwit'en sentence, choose the word that completes it.",
+      "promptHtml": "lemidec nïlhtiz ___ &mdash; <em>He's eating mashed potatoes.</em>",
+      "gradingMode": "exact",
+      "answerKey": "yi'alh",
+      "acceptedVariants": [],
+      "choices": [
+        "hildïlh",
+        "nildïlh",
+        "yini'alh",
+        "yi'alh"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.2",
+      "part": "D1",
+      "promptHtml": "lemidec st'ë ___ &mdash; <em>He's eating french fries.</em>",
+      "gradingMode": "exact",
+      "answerKey": "hildïlh",
+      "acceptedVariants": [],
+      "choices": [
+        "hildïlh",
+        "nildïlh",
+        "yini'alh",
+        "yi'alh"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.3",
+      "part": "D1",
+      "promptHtml": "lemidec sigï ___ &mdash; <em>He's eating a potato chip.</em>",
+      "gradingMode": "exact",
+      "answerKey": "yi'alh",
+      "acceptedVariants": [],
+      "choices": [
+        "hildïlh",
+        "nildïlh",
+        "yini'alh",
+        "yi'alh"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.4",
+      "part": "D1",
+      "promptHtml": "gus ___ &mdash; <em>He's eating stalks of rhubarb.</em>",
+      "gradingMode": "exact",
+      "answerKey": "hildïlh",
+      "acceptedVariants": [],
+      "choices": [
+        "hildïlh",
+        "nildïlh",
+        "yini'alh",
+        "yi'alh"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.5",
+      "part": "D1",
+      "promptHtml": "c'itsiy dïnïltiz ___ &mdash; <em>He's eating sausages.</em>",
+      "gradingMode": "exact",
+      "answerKey": "hildïlh",
+      "acceptedVariants": [],
+      "choices": [
+        "hildïlh",
+        "nildïlh",
+        "yini'alh",
+        "yi'alh"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.6",
+      "part": "D1",
+      "promptHtml": "lhës sigï ___ &mdash; <em>He's eating a cracker.</em>",
+      "gradingMode": "exact",
+      "answerKey": "yi'alh",
+      "acceptedVariants": [],
+      "choices": [
+        "hildïlh",
+        "nildïlh",
+        "yini'alh",
+        "yi'alh"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.7",
+      "part": "D1",
+      "promptHtml": "sniw ___ &mdash; <em>He's eating cherries.</em>",
+      "gradingMode": "exact",
+      "answerKey": "nildïlh",
+      "acceptedVariants": [],
+      "choices": [
+        "hildïlh",
+        "nildïlh",
+        "yini'alh",
+        "yi'alh"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.8",
+      "part": "D1",
+      "promptHtml": "tsalic këkwin' ___ &mdash; <em>He's eating a hazelnut.</em>",
+      "gradingMode": "exact",
+      "answerKey": "yini'alh",
+      "acceptedVariants": [],
+      "choices": [
+        "hildïlh",
+        "nildïlh",
+        "yini'alh",
+        "yi'alh"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.9",
+      "part": "D1",
+      "promptHtml": "mï'o ___ &mdash; <em>He's eating cranberries.</em>",
+      "gradingMode": "exact",
+      "answerKey": "nildïlh",
+      "acceptedVariants": [],
+      "choices": [
+        "hildïlh",
+        "nildïlh",
+        "yini'alh",
+        "yi'alh"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.10",
+      "part": "D1",
+      "promptHtml": "tselh ghïl ___ &mdash; <em>He's eating a tomato.</em>",
+      "gradingMode": "exact",
+      "answerKey": "yini'alh",
+      "acceptedVariants": [],
+      "choices": [
+        "hildïlh",
+        "nildïlh",
+        "yini'alh",
+        "yi'alh"
+      ],
+      "points": 1
+    }
   ],
   "hints": [
-    { "tier": 1, "text": "There are only four possible verbs, so sort the sixteen example sentences into four groups by which verb they use. Then ask what the foods in each group have in common — not what they taste like, but what they are shaped like.", "xpCost": 1 },
-    { "tier": 2, "text": "Two properties are being marked at once, and they are independent. One is roughly how many things there are, or whether the food behaves as a mass rather than a countable object. The other is about shape.", "xpCost": 2 },
-    { "tier": 3, "text": "Compare dïndze yini'alh (a blueberry) with c'ighïz nildïlh (eggs). Both are round; the difference is one versus many. Now compare c'ighïz nildïlh (eggs) with c'it'an hildïlh (leaves). Both are plural; the difference is round versus not round. That gives you a two-by-two grid. Place tazil (thick soup) and lisuc (sugar) into it to see how mass nouns behave.", "xpCost": 3 }
+    {
+      "tier": 1,
+      "text": "There are only four possible verbs, so sort the sixteen example sentences into four groups by which verb they use. Then ask what the foods in each group have in common — not what they taste like, but what they are shaped like.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Two properties are being marked at once, and they are independent. One is roughly how many things there are, or whether the food behaves as a mass rather than a countable object. The other is about shape.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Compare dïndze yini'alh (a blueberry) with c'ighïz nildïlh (eggs). Both are round; the difference is one versus many. Now compare c'ighïz nildïlh (eggs) with c'it'an hildïlh (leaves). Both are plural; the difference is round versus not round. That gives you a two-by-two grid. Place tazil (thick soup) and lisuc (sugar) into it to see how mass nouns behave.",
+      "xpCost": 3
+    }
   ],
   "explanationHtml": "<p>Witsuwit'en verbs of eating agree with the <em>shape and number</em> of what is being eaten. This is a classifier system, and it is common across Athabaskan languages.</p><h3>The grid</h3><div class=\"table-scroll\"><table><thead><tr><th></th><th>non-spherical</th><th>spherical</th></tr></thead><tbody><tr><td>singular</td><td>yi'alh</td><td>yini'alh</td></tr><tr><td>plural</td><td>hildïlh</td><td>nildïlh</td></tr></tbody></table></div><p>Two independent axes: singular versus plural, and roughly spherical versus not. The <span class=\"data\">n</span> in <span class=\"data\">yini'alh</span> and <span class=\"data\">nildïlh</span> marks the spherical column; the <span class=\"data\">-ldïlh</span> ending marks the plural row.</p><h3>Where mass nouns land</h3><p>The rule the examples establish is that <strong>granular substances count as plural, and thick substances count as singular</strong>. So sugar (<span class=\"data\">lisuc hildïlh</span>) and ground pepper (<span class=\"data\">silhts'ec hildïlh</span>) take the plural non-spherical verb — they are made of many small pieces. But thick soup (<span class=\"data\">tazil yi'alh</span>) takes the singular non-spherical verb, because it behaves as one continuous mass.</p><h3>Working the answers</h3><ul><li><strong>Mashed potatoes</strong> — a thick mass, not round: <span class=\"data\">yi'alh</span>.</li><li><strong>French fries</strong>, <strong>rhubarb stalks</strong>, <strong>sausages</strong>, <strong>bacon strips</strong> — many long objects: <span class=\"data\">hildïlh</span>.</li><li><strong>A potato chip</strong>, <strong>a cracker</strong>, <strong>a slice of bread</strong> — one flat object: <span class=\"data\">yi'alh</span>.</li><li><strong>Cherries</strong>, <strong>cranberries</strong>, <strong>eggs</strong> — many round objects: <span class=\"data\">nildïlh</span>.</li><li><strong>A hazelnut</strong>, <strong>a tomato</strong>, <strong>a blueberry</strong>, <strong>a turnip</strong> — one round object: <span class=\"data\">yini'alh</span>.</li></ul><p>Notice that the noun itself does not change. All the work is done by the verb, which is why the problem title calls it a word salad: the sentence looks like a list until you realise the last word is carrying the classification.</p>",
   "reviewStatus": "published"

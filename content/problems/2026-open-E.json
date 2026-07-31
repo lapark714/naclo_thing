@@ -4,10 +4,14 @@
   "round": "open",
   "letter": "E",
   "title": "A Typical Problem",
-  "authors": ["Kyle Zhang", "Nina Stadermann"],
-  "sourcePdfUrl": "https://naclo.org/resources/problems/2026/N2026-E.pdf",
-  "solutionPdfUrl": "https://naclo.org/resources/problems/2026/N2026-ES.pdf",
-  "conceptTags": ["writing systems"],
+  "authors": [
+    "Kyle Zhang",
+    "Nina Stadermann"
+  ],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "writing systems"
+  ],
   "formTag": "formal and computational",
   "difficulty": "hard",
   "languages": [],
@@ -15,42 +19,290 @@
   "officialTimeMinutes": 30,
   "bodyHtml": "<p>When you recognise an image as a snail, that quick judgment comes from a lot of behind-the-scenes processing: a rounded shell, two eyes poking out, an outstretched body. In machine learning these cues are called <em>features</em> — aspects of data that a system uses to decide on a label.</p><p>NACLOLabs wants an algorithm that takes an image and decides which of eight animals it is. The algorithm asks three questions as its features: <em>is it underwater?</em>, <em>does it have legs?</em>, and <em>does it have a shell?</em> It then looks up the row of the table matching those answers and produces the &ldquo;output&rdquo; column. If the answer to all three is no (written <span class=\"data\">N</span>), it says the image contains a snake. But NACLOLabs left some gaps in the table.</p><figure><img src=\"/content-assets/2026-open-E-animals.png\" alt=\"Eight labelled line drawings: snail, clam, lizard, hermit crab, eel, axolotl, snake, tortoise. A wavy line above an animal indicates it is underwater.\" /></figure><div class=\"table-scroll\"><table><thead><tr><th>(a)</th><th>(b)</th><th>(c)</th><th>Output</th></tr></thead><tbody><tr><td>N</td><td>N</td><td>N</td><td>snake</td></tr><tr><td>N</td><td>N</td><td>Y</td><td>snail</td></tr><tr><td>N</td><td>Y</td><td>(1)</td><td>clam</td></tr><tr><td>N</td><td>(2)</td><td>(3)</td><td>eel</td></tr><tr><td>Y</td><td>(4)</td><td>(5)</td><td>lizard</td></tr><tr><td>Y</td><td>(6)</td><td>N</td><td>axolotl</td></tr><tr><td>Y</td><td>N</td><td>Y</td><td>tortoise</td></tr><tr><td>Y</td><td>Y</td><td>Y</td><td>hermit crab</td></tr></tbody></table></div><p>One way NACLOLabs can improve its algorithm is to use the same feature for several regions of an image, so that it outputs multiple values for each feature.</p><p>Optical character recognition works this way. NACLOLabs uses a basic font where every capital letter sits on a grid of thirty-six pixels. For each feature, the algorithm considers nine regions of this grid and outputs a sequence of yes and no answers.</p><figure><img src=\"/content-assets/2026-open-E-feature-table.png\" alt=\"A table with columns Input, Feature 1, Feature 2, Feature 3, Feature 4 and Output. Each Input cell shows a six-by-six pixel grid forming a capital letter. Shaded cells need not be filled in. Gaps are numbered 7 to 12.\" /></figure>",
   "assets": [
-    { "src": "/content-assets/2026-open-E-animals.png", "alt": "Eight labelled line drawings of animals, with wavy lines marking the ones that are underwater." },
-    { "src": "/content-assets/2026-open-E-feature-table.png", "alt": "Feature table for six letter inputs with four feature columns and numbered gaps." },
-    { "src": "/content-assets/2026-open-E-e3-input.png", "alt": "A line drawing of a small shelled creature with legs, shown underwater." },
-    { "src": "/content-assets/2026-open-E-e5-inputs.png", "alt": "Two six-by-six pixel grids, each forming a capital letter." },
-    { "src": "/content-assets/2026-open-E-e6-input.png", "alt": "A single six-by-six pixel grid forming a capital letter." }
+    {
+      "src": "/content-assets/2026-open-E-animals.png",
+      "alt": "Eight labelled line drawings of animals, with wavy lines marking the ones that are underwater."
+    },
+    {
+      "src": "/content-assets/2026-open-E-feature-table.png",
+      "alt": "Feature table for six letter inputs with four feature columns and numbered gaps."
+    },
+    {
+      "src": "/content-assets/2026-open-E-e3-input.png",
+      "alt": "A line drawing of a small shelled creature with legs, shown underwater."
+    },
+    {
+      "src": "/content-assets/2026-open-E-e5-inputs.png",
+      "alt": "Two six-by-six pixel grids, each forming a capital letter."
+    },
+    {
+      "src": "/content-assets/2026-open-E-e6-input.png",
+      "alt": "A single six-by-six pixel grid forming a capital letter."
+    }
   ],
   "questions": [
-    { "id": "E1.a", "part": "E1", "partPrompt": "Match each of (a), (b) and (c) to its feature.", "promptHtml": "(a)", "gradingMode": "exact", "answerKey": "has legs", "acceptedVariants": [], "choices": ["underwater", "has legs", "has a shell"], "points": 0.75 },
-    { "id": "E1.b", "part": "E1", "promptHtml": "(b)", "gradingMode": "exact", "answerKey": "underwater", "acceptedVariants": [], "choices": ["underwater", "has legs", "has a shell"], "points": 0.75 },
-    { "id": "E1.c", "part": "E1", "promptHtml": "(c)", "gradingMode": "exact", "answerKey": "has a shell", "acceptedVariants": [], "choices": ["underwater", "has legs", "has a shell"], "points": 0.75 },
-
-    { "id": "E2.1", "part": "E2", "partPrompt": "Fill in gaps (1)–(6) so that the algorithm works on all eight images.", "promptHtml": "(1)", "gradingMode": "exact", "answerKey": "Y", "acceptedVariants": ["yes"], "choices": ["Y", "N"], "points": 0.75 },
-    { "id": "E2.2", "part": "E2", "promptHtml": "(2)", "gradingMode": "exact", "answerKey": "Y", "acceptedVariants": ["yes"], "choices": ["Y", "N"], "points": 0.75 },
-    { "id": "E2.3", "part": "E2", "promptHtml": "(3)", "gradingMode": "exact", "answerKey": "N", "acceptedVariants": ["no"], "choices": ["Y", "N"], "points": 0.75 },
-    { "id": "E2.4", "part": "E2", "promptHtml": "(4)", "gradingMode": "exact", "answerKey": "N", "acceptedVariants": ["no"], "choices": ["Y", "N"], "points": 0.75 },
-    { "id": "E2.5", "part": "E2", "promptHtml": "(5)", "gradingMode": "exact", "answerKey": "N", "acceptedVariants": ["no"], "choices": ["Y", "N"], "points": 0.75 },
-    { "id": "E2.6", "part": "E2", "promptHtml": "(6)", "gradingMode": "exact", "answerKey": "Y", "acceptedVariants": ["yes"], "choices": ["Y", "N"], "points": 0.75 },
-
-    { "id": "E3.1", "part": "E3", "partPrompt": "NACLOLabs runs the animal-labelling algorithm on an additional input and gets an unexpected result. Which animal does the algorithm output for the image shown?", "promptHtml": "<figure><img src=\"/content-assets/2026-open-E-e3-input.png\" alt=\"A small shelled creature with legs, underwater.\" /></figure>", "gradingMode": "exact", "answerKey": "hermit crab", "acceptedVariants": [], "choices": ["snake", "snail", "clam", "eel", "lizard", "axolotl", "tortoise", "hermit crab"], "points": 1.5 },
-
-    { "id": "E4.7", "part": "E4", "partPrompt": "Fill in gaps (7)–(12) in the feature table. You do not have to fill in the shaded cells.", "promptHtml": "(7)", "gradingMode": "exact", "answerKey": "NYY/NYN/YNN", "acceptedVariants": [], "points": 1 },
-    { "id": "E4.8", "part": "E4", "promptHtml": "(8)", "gradingMode": "exact", "answerKey": "NNY/NNN/YNN", "acceptedVariants": [], "points": 1 },
-    { "id": "E4.9", "part": "E4", "promptHtml": "(9)", "gradingMode": "exact", "answerKey": "YNY/NNN/NNN", "acceptedVariants": [], "points": 1 },
-    { "id": "E4.10", "part": "E4", "promptHtml": "(10)", "gradingMode": "exact", "answerKey": "YNY/YYY/YNY", "acceptedVariants": [], "points": 1 },
-    { "id": "E4.11", "part": "E4", "promptHtml": "(11)", "gradingMode": "exact", "answerKey": "NYN/YNY/NYN", "acceptedVariants": [], "points": 1 },
-    { "id": "E4.12", "part": "E4", "promptHtml": "(12)", "gradingMode": "exact", "answerKey": "YNY/NNN/YNY", "acceptedVariants": [], "points": 1 },
-
-    { "id": "E5.1", "part": "E5", "partPrompt": "The letter-labelling algorithm is run on two additional inputs, shown above, and gives unexpected results. Which letter does it output for each?", "promptHtml": "First input", "gradingMode": "exact", "answerKey": "F", "acceptedVariants": [], "points": 0.75 },
-    { "id": "E5.2", "part": "E5", "promptHtml": "Second input", "gradingMode": "exact", "answerKey": "N", "acceptedVariants": [], "points": 0.75 },
-
-    { "id": "E6.1", "part": "E6", "partPrompt": "Sometimes the algorithm has two possible answers for a given input. Which two letters does it output for the input shown? Enter them in either order, separated by a space.", "promptHtml": "Two letters", "gradingMode": "exact", "answerKey": "G Q", "acceptedVariants": ["Q G", "G, Q", "Q, G", "G&Q", "GQ", "QG"], "points": 1.5 }
+    {
+      "id": "E1.a",
+      "part": "E1",
+      "partPrompt": "Match each of (a), (b) and (c) to its feature.",
+      "promptHtml": "(a)",
+      "gradingMode": "exact",
+      "answerKey": "has legs",
+      "acceptedVariants": [],
+      "choices": [
+        "underwater",
+        "has legs",
+        "has a shell"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "E1.b",
+      "part": "E1",
+      "promptHtml": "(b)",
+      "gradingMode": "exact",
+      "answerKey": "underwater",
+      "acceptedVariants": [],
+      "choices": [
+        "underwater",
+        "has legs",
+        "has a shell"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "E1.c",
+      "part": "E1",
+      "promptHtml": "(c)",
+      "gradingMode": "exact",
+      "answerKey": "has a shell",
+      "acceptedVariants": [],
+      "choices": [
+        "underwater",
+        "has legs",
+        "has a shell"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "E2.1",
+      "part": "E2",
+      "partPrompt": "Fill in gaps (1)–(6) so that the algorithm works on all eight images.",
+      "promptHtml": "(1)",
+      "gradingMode": "exact",
+      "answerKey": "Y",
+      "acceptedVariants": [
+        "yes"
+      ],
+      "choices": [
+        "Y",
+        "N"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "E2.2",
+      "part": "E2",
+      "promptHtml": "(2)",
+      "gradingMode": "exact",
+      "answerKey": "Y",
+      "acceptedVariants": [
+        "yes"
+      ],
+      "choices": [
+        "Y",
+        "N"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "E2.3",
+      "part": "E2",
+      "promptHtml": "(3)",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "no"
+      ],
+      "choices": [
+        "Y",
+        "N"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "E2.4",
+      "part": "E2",
+      "promptHtml": "(4)",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "no"
+      ],
+      "choices": [
+        "Y",
+        "N"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "E2.5",
+      "part": "E2",
+      "promptHtml": "(5)",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "no"
+      ],
+      "choices": [
+        "Y",
+        "N"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "E2.6",
+      "part": "E2",
+      "promptHtml": "(6)",
+      "gradingMode": "exact",
+      "answerKey": "Y",
+      "acceptedVariants": [
+        "yes"
+      ],
+      "choices": [
+        "Y",
+        "N"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "E3.1",
+      "part": "E3",
+      "partPrompt": "NACLOLabs runs the animal-labelling algorithm on an additional input and gets an unexpected result. Which animal does the algorithm output for the image shown?",
+      "promptHtml": "<figure><img src=\"/content-assets/2026-open-E-e3-input.png\" alt=\"A small shelled creature with legs, underwater.\" /></figure>",
+      "gradingMode": "exact",
+      "answerKey": "hermit crab",
+      "acceptedVariants": [],
+      "choices": [
+        "snake",
+        "snail",
+        "clam",
+        "eel",
+        "lizard",
+        "axolotl",
+        "tortoise",
+        "hermit crab"
+      ],
+      "points": 1.5
+    },
+    {
+      "id": "E4.7",
+      "part": "E4",
+      "partPrompt": "Fill in gaps (7)–(12) in the feature table. You do not have to fill in the shaded cells.",
+      "promptHtml": "(7)",
+      "gradingMode": "exact",
+      "answerKey": "NYY/NYN/YNN",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "E4.8",
+      "part": "E4",
+      "promptHtml": "(8)",
+      "gradingMode": "exact",
+      "answerKey": "NNY/NNN/YNN",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "E4.9",
+      "part": "E4",
+      "promptHtml": "(9)",
+      "gradingMode": "exact",
+      "answerKey": "YNY/NNN/NNN",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "E4.10",
+      "part": "E4",
+      "promptHtml": "(10)",
+      "gradingMode": "exact",
+      "answerKey": "YNY/YYY/YNY",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "E4.11",
+      "part": "E4",
+      "promptHtml": "(11)",
+      "gradingMode": "exact",
+      "answerKey": "NYN/YNY/NYN",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "E4.12",
+      "part": "E4",
+      "promptHtml": "(12)",
+      "gradingMode": "exact",
+      "answerKey": "YNY/NNN/YNY",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "E5.1",
+      "part": "E5",
+      "partPrompt": "The letter-labelling algorithm is run on two additional inputs, shown above, and gives unexpected results. Which letter does it output for each?",
+      "promptHtml": "First input",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [],
+      "points": 0.75
+    },
+    {
+      "id": "E5.2",
+      "part": "E5",
+      "promptHtml": "Second input",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [],
+      "points": 0.75
+    },
+    {
+      "id": "E6.1",
+      "part": "E6",
+      "partPrompt": "Sometimes the algorithm has two possible answers for a given input. Which two letters does it output for the input shown? Enter them in either order, separated by a space.",
+      "promptHtml": "Two letters",
+      "gradingMode": "exact",
+      "answerKey": "G Q",
+      "acceptedVariants": [
+        "Q G",
+        "G, Q",
+        "Q, G",
+        "G&Q",
+        "GQ",
+        "QG"
+      ],
+      "points": 1.5
+    }
   ],
   "hints": [
-    { "tier": 1, "text": "For the animal table, do not try to solve all six gaps at once. Find two rows that differ in exactly one column, then look at the two animals those rows produce and ask what single property separates them.", "xpCost": 2 },
-    { "tier": 2, "text": "For the OCR table, the grid is six by six and each feature outputs nine values. Nine is three by three, so the grid is being cut into nine blocks of two-by-two pixels, read left to right and top to bottom. The slashes separate rows of blocks. Each feature is a simple yes-or-no question asked of each two-by-two block.", "xpCost": 3 },
-    { "tier": 3, "text": "Worked example: Feature 2 on the letter R gives YYY/YYY/YNY. Look at the R grid, split into nine 2x2 blocks. Only one block comes out N, and it is the one that is entirely empty. So Feature 2 asks: does this block contain at least one black pixel? Now find Feature 1 by comparing against a letter with a different answer, and remember the solution note: no block is ever fully black.", "xpCost": 4 }
+    {
+      "tier": 1,
+      "text": "For the animal table, do not try to solve all six gaps at once. Find two rows that differ in exactly one column, then look at the two animals those rows produce and ask what single property separates them.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "For the OCR table, the grid is six by six and each feature outputs nine values. Nine is three by three, so the grid is being cut into nine blocks of two-by-two pixels, read left to right and top to bottom. The slashes separate rows of blocks. Each feature is a simple yes-or-no question asked of each two-by-two block.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Worked example: Feature 2 on the letter R gives YYY/YYY/YNY. Look at the R grid, split into nine 2x2 blocks. Only one block comes out N, and it is the one that is entirely empty. So Feature 2 asks: does this block contain at least one black pixel? Now find Feature 1 by comparing against a letter with a different answer, and remember the solution note: no block is ever fully black.",
+      "xpCost": 4
+    }
   ],
   "explanationHtml": "<p>The problem runs the same idea twice, once with three features and once with nine values per feature.</p><h3>Part one: the animal table</h3><p>Find rows that differ in one column. Row 7 (<span class=\"data\">Y N Y</span>) gives tortoise and row 8 (<span class=\"data\">Y Y Y</span>) gives hermit crab: the only change is column (b), and the difference between a tortoise and a hermit crab in these drawings is that the crab is underwater. So <strong>(b) is underwater</strong>. Row 1 (<span class=\"data\">N N N</span>) is a snake and row 2 (<span class=\"data\">N N Y</span>) is a snail — the snail has a shell, so <strong>(c) is has a shell</strong>. That leaves <strong>(a) as has legs</strong>.</p><p>Now fill the gaps by reading each animal off the drawings: a clam has a shell, so (1) is <span class=\"data\">Y</span>. An eel is underwater with no shell, so (2) is <span class=\"data\">Y</span> and (3) is <span class=\"data\">N</span>. A lizard has legs but is not underwater and has no shell: (4) and (5) are both <span class=\"data\">N</span>. An axolotl has legs and is underwater: (6) is <span class=\"data\">Y</span>.</p><p>For E3 the image shows a shelled creature with legs, underwater — <span class=\"data\">Y Y Y</span>, which the table maps to hermit crab. That is the &ldquo;unexpected&rdquo; result: the algorithm has no way to tell a hermit crab from anything else matching those three answers.</p><h3>Part two: optical character recognition</h3><p>Each feature subdivides the 6&times;6 grid into nine 2&times;2 squares and answers <span class=\"data\">Y</span> or <span class=\"data\">N</span> for each, concatenated with a slash between rows of three.</p><ul><li><strong>Feature 1</strong> — <span class=\"data\">Y</span> if exactly 3 of the 4 pixels in the sub-square are black.</li><li><strong>Feature 2</strong> — <span class=\"data\">Y</span> if at least 1 pixel in the sub-square is black.</li><li><strong>Feature 3</strong> — <span class=\"data\">Y</span> if only two edge-adjacent pixels in the sub-square are black.</li><li><strong>Feature 4</strong> — <span class=\"data\">Y</span> if only two pixels touching at a corner are black.</li></ul><p>Because no sub-square in any of these letters is fully black, features 1 and 2 cannot be told apart on this data alone, and contestants may reasonably interpret them differently.</p><h3>Why E6 has two answers</h3><p>G and Q differ by only a small stroke, and at this resolution their feature vectors come out identical. The algorithm cannot separate them. This is the real lesson: a feature set is only as good as the distinctions it can make, and adding regions per feature buys resolution but never guarantees uniqueness.</p>",
   "reviewStatus": "published"

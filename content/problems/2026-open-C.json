@@ -4,38 +4,161 @@
   "round": "open",
   "letter": "C",
   "title": "Sheninagans in Kogi",
-  "authors": ["Devin Joe", "Nina Stadermann"],
-  "sourcePdfUrl": "https://naclo.org/resources/problems/2026/N2026-C.pdf",
-  "solutionPdfUrl": "https://naclo.org/resources/problems/2026/N2026-CS.pdf",
-  "conceptTags": ["morphology", "semantics", "syntax"],
+  "authors": [
+    "Devin Joe",
+    "Nina Stadermann"
+  ],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "semantics",
+    "syntax"
+  ],
   "formTag": "rule discovery",
   "difficulty": "standard",
-  "languages": ["Kogi"],
+  "languages": [
+    "Kogi"
+  ],
   "officialPoints": 10,
   "officialTimeMinutes": 20,
   "bodyHtml": "<p>Kogi is a language spoken by around 10,000 people in Colombia. Two Kogi-speaking friends are talking to each other. The picture below shows an illustration of one situation where the phrase <strong class=\"data\">akhiengua nigukú</strong> might occur in their dialogue.</p><figure><img src=\"/content-assets/2026-open-C-example.png\" alt=\"Two stick figures face each other. The left one has a speech bubble; a small mark near the right figure's feet suggests something on the ground.\" /><figcaption><span class=\"data\">akhiengua nigukú</span></figcaption></figure><p>Below are eight more excerpts of dialogue in Kogi and illustrations of situations in which they might occur, in arbitrary order.</p><div class=\"table-scroll\"><table><thead><tr><th>No.</th><th>Excerpt</th><th>No.</th><th>Excerpt</th></tr></thead><tbody><tr><td>1</td><td>akhiengua nagukú</td><td>5</td><td>kwisaté nagukú</td></tr><tr><td>2</td><td>akhiengua namagu</td><td>6</td><td>kwisaté nigukú</td></tr><tr><td>3</td><td>ga nigukú</td><td>7</td><td>mowi nagukú</td></tr><tr><td>4</td><td>ga nimagu</td><td>8</td><td>mowi nimagu</td></tr></tbody></table></div><figure><img src=\"/content-assets/2026-open-C-situations.png\" alt=\"Eight panels labelled A to H, each showing two stick figures in conversation. Panels differ in who is speaking, who is gesturing, and what is happening around them.\" /></figure>",
   "assets": [
-    { "src": "/content-assets/2026-open-C-example.png", "alt": "Two stick figures in conversation, illustrating the example phrase." },
-    { "src": "/content-assets/2026-open-C-situations.png", "alt": "Eight lettered panels A to H showing two stick figures in different conversational situations." },
-    { "src": "/content-assets/2026-open-C-situations-9-11.png", "alt": "Three further panels numbered 9, 10 and 11 showing two stick figures in conversation." }
+    {
+      "src": "/content-assets/2026-open-C-example.png",
+      "alt": "Two stick figures in conversation, illustrating the example phrase."
+    },
+    {
+      "src": "/content-assets/2026-open-C-situations.png",
+      "alt": "Eight lettered panels A to H showing two stick figures in different conversational situations."
+    },
+    {
+      "src": "/content-assets/2026-open-C-situations-9-11.png",
+      "alt": "Three further panels numbered 9, 10 and 11 showing two stick figures in conversation."
+    }
   ],
   "questions": [
-    { "id": "C1.1", "part": "C1", "partPrompt": "Match each excerpt of dialogue 1–8 to its corresponding situation A–H.", "promptHtml": "akhiengua nagukú", "gradingMode": "exact", "answerKey": "F", "acceptedVariants": [], "points": 0.7 },
-    { "id": "C1.2", "part": "C1", "promptHtml": "akhiengua namagu", "gradingMode": "exact", "answerKey": "C", "acceptedVariants": [], "points": 0.7 },
-    { "id": "C1.3", "part": "C1", "promptHtml": "ga nigukú", "gradingMode": "exact", "answerKey": "A", "acceptedVariants": [], "points": 0.7 },
-    { "id": "C1.4", "part": "C1", "promptHtml": "ga nimagu", "gradingMode": "exact", "answerKey": "B", "acceptedVariants": [], "points": 0.7 },
-    { "id": "C1.5", "part": "C1", "promptHtml": "kwisaté nagukú", "gradingMode": "exact", "answerKey": "H", "acceptedVariants": [], "points": 0.7 },
-    { "id": "C1.6", "part": "C1", "promptHtml": "kwisaté nigukú", "gradingMode": "exact", "answerKey": "G", "acceptedVariants": [], "points": 0.7 },
-    { "id": "C1.7", "part": "C1", "promptHtml": "mowi nagukú", "gradingMode": "exact", "answerKey": "E", "acceptedVariants": [], "points": 0.7 },
-    { "id": "C1.8", "part": "C1", "promptHtml": "mowi nimagu", "gradingMode": "exact", "answerKey": "D", "acceptedVariants": [], "points": 0.7 },
-    { "id": "C2.9", "part": "C2", "partPrompt": "Here are three more situations, shown in the panel above. Write the Kogi dialogue that would be appropriate for each.", "promptHtml": "Situation 9", "gradingMode": "exact", "answerKey": "ga nagukú", "acceptedVariants": ["ga naguku"], "points": 1.47 },
-    { "id": "C2.10", "part": "C2", "promptHtml": "Situation 10", "gradingMode": "exact", "answerKey": "akhiengua nimagu", "acceptedVariants": [], "points": 1.47 },
-    { "id": "C2.11", "part": "C2", "promptHtml": "Situation 11", "gradingMode": "exact", "answerKey": "kwisaté nimagu", "acceptedVariants": ["kwisate nimagu"], "points": 1.46 }
+    {
+      "id": "C1.1",
+      "part": "C1",
+      "partPrompt": "Match each excerpt of dialogue 1–8 to its corresponding situation A–H.",
+      "promptHtml": "akhiengua nagukú",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [],
+      "points": 0.7
+    },
+    {
+      "id": "C1.2",
+      "part": "C1",
+      "promptHtml": "akhiengua namagu",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [],
+      "points": 0.7
+    },
+    {
+      "id": "C1.3",
+      "part": "C1",
+      "promptHtml": "ga nigukú",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [],
+      "points": 0.7
+    },
+    {
+      "id": "C1.4",
+      "part": "C1",
+      "promptHtml": "ga nimagu",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [],
+      "points": 0.7
+    },
+    {
+      "id": "C1.5",
+      "part": "C1",
+      "promptHtml": "kwisaté nagukú",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [],
+      "points": 0.7
+    },
+    {
+      "id": "C1.6",
+      "part": "C1",
+      "promptHtml": "kwisaté nigukú",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [],
+      "points": 0.7
+    },
+    {
+      "id": "C1.7",
+      "part": "C1",
+      "promptHtml": "mowi nagukú",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [],
+      "points": 0.7
+    },
+    {
+      "id": "C1.8",
+      "part": "C1",
+      "promptHtml": "mowi nimagu",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [],
+      "points": 0.7
+    },
+    {
+      "id": "C2.9",
+      "part": "C2",
+      "partPrompt": "Here are three more situations, shown in the panel above. Write the Kogi dialogue that would be appropriate for each.",
+      "promptHtml": "Situation 9",
+      "gradingMode": "exact",
+      "answerKey": "ga nagukú",
+      "acceptedVariants": [
+        "ga naguku"
+      ],
+      "points": 1.47
+    },
+    {
+      "id": "C2.10",
+      "part": "C2",
+      "promptHtml": "Situation 10",
+      "gradingMode": "exact",
+      "answerKey": "akhiengua nimagu",
+      "acceptedVariants": [],
+      "points": 1.47
+    },
+    {
+      "id": "C2.11",
+      "part": "C2",
+      "promptHtml": "Situation 11",
+      "gradingMode": "exact",
+      "answerKey": "kwisaté nimagu",
+      "acceptedVariants": [
+        "kwisate nimagu"
+      ],
+      "points": 1.46
+    }
   ],
   "hints": [
-    { "tier": 1, "text": "Ignore the first word of each excerpt to begin with. Look only at the second word, and sort the eight excerpts into groups by it. Then look at what the pictures in each group have in common.", "xpCost": 1 },
-    { "tier": 2, "text": "The second word is built from three pieces, and two of them vary independently. One piece tracks who the subject is — the speaker or the listener. The other tracks something subtler about what the speaker assumes the listener already knows.", "xpCost": 2 },
-    { "tier": 3, "text": "Split the second words: na-gu-kú, ni-ma-gu, ni-gu-kú, na-ma-gu. There is a shared root gu. The prefix is na- or ni-, and the remaining piece is either -kú or ma-. Compare akhiengua nagukú with akhiengua namagu: only the subject changes between those two pictures. That tells you what -kú and ma- encode. Now work out na- versus ni- from the remaining pairs.", "xpCost": 3 }
+    {
+      "tier": 1,
+      "text": "Ignore the first word of each excerpt to begin with. Look only at the second word, and sort the eight excerpts into groups by it. Then look at what the pictures in each group have in common.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "The second word is built from three pieces, and two of them vary independently. One piece tracks who the subject is — the speaker or the listener. The other tracks something subtler about what the speaker assumes the listener already knows.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Split the second words: na-gu-kú, ni-ma-gu, ni-gu-kú, na-ma-gu. There is a shared root gu. The prefix is na- or ni-, and the remaining piece is either -kú or ma-. Compare akhiengua nagukú with akhiengua namagu: only the subject changes between those two pictures. That tells you what -kú and ma- encode. Now work out na- versus ni- from the remaining pairs.",
+      "xpCost": 3
+    }
   ],
   "explanationHtml": "<p>The first word of each excerpt is the root — the thing being said or done. The second word carries all the grammar, and it decomposes into three slots.</p><h3>Phrase structure</h3><div class=\"table-scroll\"><table><thead><tr><th>Slot</th><th>Form</th><th>Meaning</th></tr></thead><tbody><tr><td>Prefix</td><td>na-</td><td>asymmetric</td></tr><tr><td>Prefix</td><td>ni-</td><td>symmetric</td></tr><tr><td>Subject</td><td>ma-</td><td>subject is <em>you</em></td></tr><tr><td>Subject</td><td>-kú</td><td>subject is <em>I</em></td></tr><tr><td>Root</td><td>gu</td><td>shared across all forms</td></tr></tbody></table></div><p>So the second word is prefix + gu, with the subject marker either preceding (<span class=\"data\">ma-</span>) or following (<span class=\"data\">-kú</span>) the root.</p><h3>What symmetric and asymmetric mean</h3><p>These are terms for what linguists call <em>epistemological perspective</em>: the speaker's assumption about what the listener already knows.</p><ul><li><strong>Asymmetric</strong> (<span class=\"data\">na-</span>) — the speaker is telling the listener something they do not expect the listener to already know. New information.</li><li><strong>Symmetric</strong> (<span class=\"data\">ni-</span>) — the speaker is saying something they assume the listener already knows, often for emphasis or rhetorical effect.</li></ul><p>This is why the pictures matter so much. A panel where the listener is visibly surprised signals new information; a panel where both figures can already see what is being discussed signals shared knowledge.</p><h3>Building the answers</h3><p>For situation 9, the root is <span class=\"data\">ga</span> and the subject is the speaker, with information the listener does not have: <span class=\"data\">ga nagukú</span>. For 10, the root is <span class=\"data\">akhiengua</span>, the subject is the listener, and the information is shared: <span class=\"data\">akhiengua nimagu</span>. For 11, the same symmetric-listener frame with root <span class=\"data\">kwisaté</span>: <span class=\"data\">kwisaté nimagu</span>.</p><p>Grammatical marking of who-knows-what is called evidentiality or engagement, and it is obligatory in many languages of South America. English has nothing that forces you to mark it, which is exactly why this problem is hard on a first read.</p>",
   "reviewStatus": "published"

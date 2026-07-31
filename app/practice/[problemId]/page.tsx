@@ -79,18 +79,8 @@ export default async function ProblemPage({
             target="_blank"
             rel="noopener noreferrer"
           >
-            Original problem PDF
+            Find the original on nacloweb.org
           </a>
-          {problem.solutionPdfUrl && (
-            <a
-              href={problem.solutionPdfUrl}
-              className="underline underline-offset-2 hover:text-ink"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Official solution PDF
-            </a>
-          )}
         </p>
       </footer>
     </article>

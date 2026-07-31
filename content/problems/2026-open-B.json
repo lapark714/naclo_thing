@@ -4,10 +4,13 @@
   "round": "open",
   "letter": "B",
   "title": "Game: Set Match",
-  "authors": ["Tom McCoy"],
-  "sourcePdfUrl": "https://naclo.org/resources/problems/2026/N2026-B.pdf",
-  "solutionPdfUrl": "https://naclo.org/resources/problems/2026/N2026-BS.pdf",
-  "conceptTags": ["semantics"],
+  "authors": [
+    "Tom McCoy"
+  ],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "semantics"
+  ],
   "formTag": "formal and computational",
   "difficulty": "standard",
   "languages": [],
@@ -15,33 +18,232 @@
   "officialTimeMinutes": 20,
   "bodyHtml": "<p>Consider the word <em>walruses</em> and the phrase <em>cheerful walruses</em>. The diagram below shows one way to illustrate the relationship between these phrases.</p><figure><img src=\"/content-assets/2026-open-B-example.png\" alt=\"A large circle labelled walruses. Fully inside it sits a smaller circle labelled cheerful walruses.\" /></figure><p>Each circle stands for the set of things that could be described by the relevant word or phrase. Since all cheerful walruses are walruses, the region for <em>cheerful walruses</em> is fully contained inside the region for <em>walruses</em>. The sizes of the circles are irrelevant; what matters is how they overlap and which ones are contained inside others.</p><p>This example relates to an important question: how does the meaning of a phrase relate to the meanings of the words that make it up? This question comes up in computational linguistics because computers that process language must be able to determine the meanings of complex phrases.</p><p>Note that this problem only gives a partial picture of meaning in language. Some nuances that are left out are important in linguistic theories, but for the sake of this problem you should only use the information presented.</p><p>Below are 18 words and phrases in arbitrary order, along with a diagram representing their meanings.</p><div class=\"table-scroll\"><table><thead><tr><th>Label</th><th>Phrase</th><th>Label</th><th>Phrase</th><th>Label</th><th>Phrase</th></tr></thead><tbody><tr><td>A</td><td>alleged spies</td><td>G</td><td>fruits</td><td>M</td><td>purple Italian cars</td></tr><tr><td>B</td><td>berries</td><td>H</td><td>future spies</td><td>N</td><td>small big elephants</td></tr><tr><td>C</td><td>big elephants</td><td>I</td><td>green cars</td><td>O</td><td>small blueberries</td></tr><tr><td>D</td><td>blueberries</td><td>J</td><td>green Italian cars</td><td>P</td><td>small elephants</td></tr><tr><td>E</td><td>cars</td><td>K</td><td>happy spies</td><td>Q</td><td>spies</td></tr><tr><td>F</td><td>elephants</td><td>L</td><td>Italian cars</td><td>R</td><td>strawberries</td></tr></tbody></table></div><figure><img src=\"/content-assets/2026-open-B-diagrams.png\" alt=\"Four separate groups of overlapping and nested circles. Each region carries a number from 1 to 18 in a small box touching its circle.\" /><figcaption>Each number goes with the circle it touches, except for 8, which goes with the intersection of the 7 and 10 circles.</figcaption></figure><p><strong>Notes.</strong> <em>Alleged spies</em> are people who have been accused of being spies but who may or may not actually be spies. The phrase <em>small big elephants</em> may be confusing without context; here is an example where it can occur: &ldquo;That&rsquo;s a big elephant, but compared to other big elephants it&rsquo;s relatively small; it&rsquo;s a small big elephant.&rdquo; We assume that cars cannot be both green and purple at the same time. We use the informal definition of <em>berry</em>, in which strawberries are a type of berry. We assume that elephants cannot be spies.</p>",
   "assets": [
-    { "src": "/content-assets/2026-open-B-example.png", "alt": "A large circle labelled walruses, containing a smaller circle labelled cheerful walruses." },
-    { "src": "/content-assets/2026-open-B-diagrams.png", "alt": "Four groups of overlapping and nested circles, with regions numbered 1 to 18." }
+    {
+      "src": "/content-assets/2026-open-B-example.png",
+      "alt": "A large circle labelled walruses, containing a smaller circle labelled cheerful walruses."
+    },
+    {
+      "src": "/content-assets/2026-open-B-diagrams.png",
+      "alt": "Four groups of overlapping and nested circles, with regions numbered 1 to 18."
+    }
   ],
   "questions": [
-    { "id": "B1.1", "part": "B1", "partPrompt": "Each of the words or phrases A–R corresponds to one of the regions 1–18 in the diagram. Enter the letter for each region.", "promptHtml": "Region 1", "gradingMode": "exact", "answerKey": "G", "acceptedVariants": ["fruits"], "points": 0.56 },
-    { "id": "B1.2", "part": "B1", "promptHtml": "Region 2", "gradingMode": "exact", "answerKey": "B", "acceptedVariants": ["berries"], "points": 0.56 },
-    { "id": "B1.3", "part": "B1", "promptHtml": "Region 3", "gradingMode": "exact", "answerKey": "R", "acceptedVariants": ["strawberries"], "points": 0.56 },
-    { "id": "B1.4", "part": "B1", "promptHtml": "Region 4", "gradingMode": "exact", "answerKey": "D", "acceptedVariants": ["blueberries"], "points": 0.56 },
-    { "id": "B1.5", "part": "B1", "promptHtml": "Region 5", "gradingMode": "exact", "answerKey": "O", "acceptedVariants": ["small blueberries"], "points": 0.56 },
-    { "id": "B1.6", "part": "B1", "promptHtml": "Region 6", "gradingMode": "exact", "answerKey": "E", "acceptedVariants": ["cars"], "points": 0.56 },
-    { "id": "B1.7", "part": "B1", "promptHtml": "Region 7", "gradingMode": "exact", "answerKey": "I", "acceptedVariants": ["green cars"], "points": 0.56 },
-    { "id": "B1.8", "part": "B1", "promptHtml": "Region 8", "gradingMode": "exact", "answerKey": "J", "acceptedVariants": ["green Italian cars"], "points": 0.56 },
-    { "id": "B1.9", "part": "B1", "promptHtml": "Region 9", "gradingMode": "exact", "answerKey": "M", "acceptedVariants": ["purple Italian cars"], "points": 0.56 },
-    { "id": "B1.10", "part": "B1", "promptHtml": "Region 10", "gradingMode": "exact", "answerKey": "L", "acceptedVariants": ["Italian cars"], "points": 0.56 },
-    { "id": "B1.11", "part": "B1", "promptHtml": "Region 11", "gradingMode": "exact", "answerKey": "A", "acceptedVariants": ["alleged spies"], "points": 0.56 },
-    { "id": "B1.12", "part": "B1", "promptHtml": "Region 12", "gradingMode": "exact", "answerKey": "Q", "acceptedVariants": ["spies"], "points": 0.56 },
-    { "id": "B1.13", "part": "B1", "promptHtml": "Region 13", "gradingMode": "exact", "answerKey": "H", "acceptedVariants": ["future spies"], "points": 0.56 },
-    { "id": "B1.14", "part": "B1", "promptHtml": "Region 14", "gradingMode": "exact", "answerKey": "K", "acceptedVariants": ["happy spies"], "points": 0.56 },
-    { "id": "B1.15", "part": "B1", "promptHtml": "Region 15", "gradingMode": "exact", "answerKey": "F", "acceptedVariants": ["elephants"], "points": 0.56 },
-    { "id": "B1.16", "part": "B1", "promptHtml": "Region 16", "gradingMode": "exact", "answerKey": "P", "acceptedVariants": ["small elephants"], "points": 0.56 },
-    { "id": "B1.17", "part": "B1", "promptHtml": "Region 17", "gradingMode": "exact", "answerKey": "C", "acceptedVariants": ["big elephants"], "points": 0.56 },
-    { "id": "B1.18", "part": "B1", "promptHtml": "Region 18", "gradingMode": "exact", "answerKey": "N", "acceptedVariants": ["small big elephants"], "points": 0.56 }
+    {
+      "id": "B1.1",
+      "part": "B1",
+      "partPrompt": "Each of the words or phrases A–R corresponds to one of the regions 1–18 in the diagram. Enter the letter for each region.",
+      "promptHtml": "Region 1",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [
+        "fruits"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.2",
+      "part": "B1",
+      "promptHtml": "Region 2",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "berries"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.3",
+      "part": "B1",
+      "promptHtml": "Region 3",
+      "gradingMode": "exact",
+      "answerKey": "R",
+      "acceptedVariants": [
+        "strawberries"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.4",
+      "part": "B1",
+      "promptHtml": "Region 4",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "blueberries"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.5",
+      "part": "B1",
+      "promptHtml": "Region 5",
+      "gradingMode": "exact",
+      "answerKey": "O",
+      "acceptedVariants": [
+        "small blueberries"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.6",
+      "part": "B1",
+      "promptHtml": "Region 6",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "cars"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.7",
+      "part": "B1",
+      "promptHtml": "Region 7",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [
+        "green cars"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.8",
+      "part": "B1",
+      "promptHtml": "Region 8",
+      "gradingMode": "exact",
+      "answerKey": "J",
+      "acceptedVariants": [
+        "green Italian cars"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.9",
+      "part": "B1",
+      "promptHtml": "Region 9",
+      "gradingMode": "exact",
+      "answerKey": "M",
+      "acceptedVariants": [
+        "purple Italian cars"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.10",
+      "part": "B1",
+      "promptHtml": "Region 10",
+      "gradingMode": "exact",
+      "answerKey": "L",
+      "acceptedVariants": [
+        "Italian cars"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.11",
+      "part": "B1",
+      "promptHtml": "Region 11",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "alleged spies"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.12",
+      "part": "B1",
+      "promptHtml": "Region 12",
+      "gradingMode": "exact",
+      "answerKey": "Q",
+      "acceptedVariants": [
+        "spies"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.13",
+      "part": "B1",
+      "promptHtml": "Region 13",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [
+        "future spies"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.14",
+      "part": "B1",
+      "promptHtml": "Region 14",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [
+        "happy spies"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.15",
+      "part": "B1",
+      "promptHtml": "Region 15",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "elephants"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.16",
+      "part": "B1",
+      "promptHtml": "Region 16",
+      "gradingMode": "exact",
+      "answerKey": "P",
+      "acceptedVariants": [
+        "small elephants"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.17",
+      "part": "B1",
+      "promptHtml": "Region 17",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "big elephants"
+      ],
+      "points": 0.56
+    },
+    {
+      "id": "B1.18",
+      "part": "B1",
+      "promptHtml": "Region 18",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "small big elephants"
+      ],
+      "points": 0.56
+    }
   ],
   "hints": [
-    { "tier": 1, "text": "Work group by group. Each of the four diagram groups covers one topic: fruit, cars, spies, elephants. Decide which group is which before you place any individual region.", "xpCost": 1 },
-    { "tier": 2, "text": "Adjectives do not all behave the same way. Some narrow a set from the inside — every green car is a car, so green cars sits inside cars. Others do not: an alleged spy might not be a spy at all, and a future spy is not a spy yet. Those adjectives produce circles that only overlap, or sit entirely outside.", "xpCost": 2 },
-    { "tier": 3, "text": "Worked example: the spies group. Region 12 is the plain set, spies. Happy spies (14) are genuinely spies, so that circle sits inside 12. Alleged spies (11) only overlap 12, because some alleged spies are real and some are not. Future spies (13) sit entirely outside 12 — they are not spies yet. Now apply the same three shapes to the elephant group, where big and small are the interesting cases.", "xpCost": 3 }
+    {
+      "tier": 1,
+      "text": "Work group by group. Each of the four diagram groups covers one topic: fruit, cars, spies, elephants. Decide which group is which before you place any individual region.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Adjectives do not all behave the same way. Some narrow a set from the inside — every green car is a car, so green cars sits inside cars. Others do not: an alleged spy might not be a spy at all, and a future spy is not a spy yet. Those adjectives produce circles that only overlap, or sit entirely outside.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Worked example: the spies group. Region 12 is the plain set, spies. Happy spies (14) are genuinely spies, so that circle sits inside 12. Alleged spies (11) only overlap 12, because some alleged spies are real and some are not. Future spies (13) sit entirely outside 12 — they are not spies yet. Now apply the same three shapes to the elephant group, where big and small are the interesting cases.",
+      "xpCost": 3
+    }
   ],
   "explanationHtml": "<p>The problem is really asking you to sort adjectives into three classes by what they do to a set.</p><h3>Intersective adjectives</h3><p>These narrow a set from the inside. Every green car is a car, so <em>green cars</em> is a circle wholly inside <em>cars</em>. Fruits and berries work the same way: <em>strawberries</em> and <em>blueberries</em> sit inside <em>berries</em>, which sits inside <em>fruits</em>. That gives the nesting of group one: 1 fruits, 2 berries, 3 strawberries, 4 blueberries, 5 small blueberries.</p><h3>Non-subsective adjectives</h3><p>These break the containment entirely. An <em>alleged spy</em> may or may not be a spy, so the circle overlaps <em>spies</em> without being contained by it — region 11. A <em>future spy</em> is not a spy at all right now, so region 13 sits outside 12 altogether, touching only the alleged circle.</p><h3>Subsective but relative adjectives</h3><p>This is the elephant group, and the sharpest part of the problem. <em>Big</em> and <em>small</em> are subsective: every big elephant is an elephant. But they are judged relative to a comparison class, which is why <em>small big elephants</em> is not a contradiction. Region 18 sits inside region 17 (<em>big elephants</em>), not inside region 16 (<em>small elephants</em>) — a small big elephant is still a big elephant.</p><h3>The cars group</h3><p>The one place two circles overlap without either containing the other is 7 and 10, <em>green cars</em> and <em>Italian cars</em>. Their intersection is 8, <em>green Italian cars</em>. Since a car cannot be both green and purple, <em>purple Italian cars</em> (9) sits inside <em>Italian cars</em> but never touches the green circle.</p><p>Why this matters for computational linguistics: a system that assumes every adjective narrows its noun will conclude that an alleged spy is a spy. Knowing which class an adjective belongs to is what stops that.</p>",
   "reviewStatus": "published"

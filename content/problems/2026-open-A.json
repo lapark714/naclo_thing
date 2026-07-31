@@ -4,13 +4,20 @@
   "round": "open",
   "letter": "A",
   "title": "The Horse Before the Cart",
-  "authors": ["Devin Joe"],
-  "sourcePdfUrl": "https://naclo.org/resources/problems/2026/N2026-A.pdf",
-  "solutionPdfUrl": "https://naclo.org/resources/problems/2026/N2026-AS.pdf",
-  "conceptTags": ["morphology", "semantics", "historical and comparative"],
+  "authors": [
+    "Devin Joe"
+  ],
+  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "semantics",
+    "historical and comparative"
+  ],
   "formTag": "rosetta-stone translation",
   "difficulty": "intro",
-  "languages": ["Sranan Tongo"],
+  "languages": [
+    "Sranan Tongo"
+  ],
   "officialPoints": 10,
   "officialTimeMinutes": 20,
   "bodyHtml": "<p>Sranan Tongo is a language spoken by around 670,000 people in Suriname, a country on the northern coast of South America. Much of its vocabulary is based on English. For example, the Sranan Tongo word <strong class=\"data\">kaw</strong> is borrowed from English <em>cow</em>. It is also heavily influenced by various African languages and by Dutch, as Suriname is a former colony of the Netherlands.</p><p>You came across a Sranan Tongo calendar for this month, January 2026. A portion of the calendar is pictured below. It may be helpful to know that January 29, 2026 is a Thursday.</p><div class=\"table-scroll\"><table><thead><tr><th>freida</th><th>satra</th><th>sondo</th></tr></thead><tbody><tr><td>2 &middot; tu</td><td>3 &middot; dri</td><td>4 &middot; fo</td></tr><tr><td>9 &middot; neigi</td><td>10 &middot; tin</td><td>11 &middot; erfu</td></tr><tr><td>16</td><td>17</td><td>18</td></tr></tbody></table></div><p><strong>Notes.</strong> An <em>airstrip</em> is a strip of land where airplanes land and take off. A <em>gadfly</em> is a fly that feeds on the blood of large animals. A <em>uvula</em> is the small, teardrop-shaped piece of tissue that hangs at the back of the mouth.</p>",
@@ -26,11 +33,42 @@
       "acceptedVariants": [],
       "points": 0.25
     },
-    { "id": "A1.2", "part": "A1", "promptHtml": "sonde", "gradingMode": "exact", "answerKey": "Sunday", "acceptedVariants": [], "points": 0.25 },
-    { "id": "A1.3", "part": "A1", "promptHtml": "tudewroko", "gradingMode": "exact", "answerKey": "Tuesday", "acceptedVariants": [], "points": 0.25 },
-    { "id": "A1.4", "part": "A1", "promptHtml": "fodewroko", "gradingMode": "exact", "answerKey": "Thursday", "acceptedVariants": [], "points": 0.25 },
-    { "id": "A1.5", "part": "A1", "promptHtml": "dridewroko", "gradingMode": "exact", "answerKey": "Wednesday", "acceptedVariants": [], "points": 0.25 },
-
+    {
+      "id": "A1.2",
+      "part": "A1",
+      "promptHtml": "sonde",
+      "gradingMode": "exact",
+      "answerKey": "Sunday",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "A1.3",
+      "part": "A1",
+      "promptHtml": "tudewroko",
+      "gradingMode": "exact",
+      "answerKey": "Tuesday",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "A1.4",
+      "part": "A1",
+      "promptHtml": "fodewroko",
+      "gradingMode": "exact",
+      "answerKey": "Thursday",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "A1.5",
+      "part": "A1",
+      "promptHtml": "dridewroko",
+      "gradingMode": "exact",
+      "answerKey": "Wednesday",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
     {
       "id": "A2.6",
       "part": "A2",
@@ -38,19 +76,207 @@
       "promptHtml": "amerkankondre",
       "gradingMode": "exact",
       "answerKey": "I. the USA",
-      "acceptedVariants": ["I", "the USA"],
-      "choices": ["A. calf", "B. horse cart", "C. horse pen", "D. housework", "E. river", "F. riverside", "G. square", "H. stroller", "I. the USA"],
+      "acceptedVariants": [
+        "I",
+        "the USA"
+      ],
+      "choices": [
+        "A. calf",
+        "B. horse cart",
+        "C. horse pen",
+        "D. housework",
+        "E. river",
+        "F. riverside",
+        "G. square",
+        "H. stroller",
+        "I. the USA"
+      ],
       "points": 0.25
     },
-    { "id": "A2.7", "part": "A2", "promptHtml": "asipen", "gradingMode": "exact", "answerKey": "C. horse pen", "acceptedVariants": ["C", "horse pen"], "choices": ["A. calf", "B. horse cart", "C. horse pen", "D. housework", "E. river", "F. riverside", "G. square", "H. stroller", "I. the USA"], "points": 0.25 },
-    { "id": "A2.8", "part": "A2", "promptHtml": "asiwagi", "gradingMode": "exact", "answerKey": "B. horse cart", "acceptedVariants": ["B", "horse cart"], "choices": ["A. calf", "B. horse cart", "C. horse pen", "D. housework", "E. river", "F. riverside", "G. square", "H. stroller", "I. the USA"], "points": 0.25 },
-    { "id": "A2.9", "part": "A2", "promptHtml": "babywagi", "gradingMode": "exact", "answerKey": "H. stroller", "acceptedVariants": ["H", "stroller"], "choices": ["A. calf", "B. horse cart", "C. horse pen", "D. housework", "E. river", "F. riverside", "G. square", "H. stroller", "I. the USA"], "points": 0.25 },
-    { "id": "A2.10", "part": "A2", "promptHtml": "fokanti", "gradingMode": "exact", "answerKey": "G. square", "acceptedVariants": ["G", "square"], "choices": ["A. calf", "B. horse cart", "C. horse pen", "D. housework", "E. river", "F. riverside", "G. square", "H. stroller", "I. the USA"], "points": 0.25 },
-    { "id": "A2.11", "part": "A2", "promptHtml": "liba", "gradingMode": "exact", "answerKey": "E. river", "acceptedVariants": ["E", "river"], "choices": ["A. calf", "B. horse cart", "C. horse pen", "D. housework", "E. river", "F. riverside", "G. square", "H. stroller", "I. the USA"], "points": 0.25 },
-    { "id": "A2.12", "part": "A2", "promptHtml": "libakanti", "gradingMode": "exact", "answerKey": "F. riverside", "acceptedVariants": ["F", "riverside"], "choices": ["A. calf", "B. horse cart", "C. horse pen", "D. housework", "E. river", "F. riverside", "G. square", "H. stroller", "I. the USA"], "points": 0.25 },
-    { "id": "A2.13", "part": "A2", "promptHtml": "osowroko", "gradingMode": "exact", "answerKey": "D. housework", "acceptedVariants": ["D", "housework"], "choices": ["A. calf", "B. horse cart", "C. horse pen", "D. housework", "E. river", "F. riverside", "G. square", "H. stroller", "I. the USA"], "points": 0.25 },
-    { "id": "A2.14", "part": "A2", "promptHtml": "pikin kaw", "gradingMode": "exact", "answerKey": "A. calf", "acceptedVariants": ["A", "calf"], "choices": ["A. calf", "B. horse cart", "C. horse pen", "D. housework", "E. river", "F. riverside", "G. square", "H. stroller", "I. the USA"], "points": 0.25 },
-
+    {
+      "id": "A2.7",
+      "part": "A2",
+      "promptHtml": "asipen",
+      "gradingMode": "exact",
+      "answerKey": "C. horse pen",
+      "acceptedVariants": [
+        "C",
+        "horse pen"
+      ],
+      "choices": [
+        "A. calf",
+        "B. horse cart",
+        "C. horse pen",
+        "D. housework",
+        "E. river",
+        "F. riverside",
+        "G. square",
+        "H. stroller",
+        "I. the USA"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A2.8",
+      "part": "A2",
+      "promptHtml": "asiwagi",
+      "gradingMode": "exact",
+      "answerKey": "B. horse cart",
+      "acceptedVariants": [
+        "B",
+        "horse cart"
+      ],
+      "choices": [
+        "A. calf",
+        "B. horse cart",
+        "C. horse pen",
+        "D. housework",
+        "E. river",
+        "F. riverside",
+        "G. square",
+        "H. stroller",
+        "I. the USA"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A2.9",
+      "part": "A2",
+      "promptHtml": "babywagi",
+      "gradingMode": "exact",
+      "answerKey": "H. stroller",
+      "acceptedVariants": [
+        "H",
+        "stroller"
+      ],
+      "choices": [
+        "A. calf",
+        "B. horse cart",
+        "C. horse pen",
+        "D. housework",
+        "E. river",
+        "F. riverside",
+        "G. square",
+        "H. stroller",
+        "I. the USA"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A2.10",
+      "part": "A2",
+      "promptHtml": "fokanti",
+      "gradingMode": "exact",
+      "answerKey": "G. square",
+      "acceptedVariants": [
+        "G",
+        "square"
+      ],
+      "choices": [
+        "A. calf",
+        "B. horse cart",
+        "C. horse pen",
+        "D. housework",
+        "E. river",
+        "F. riverside",
+        "G. square",
+        "H. stroller",
+        "I. the USA"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A2.11",
+      "part": "A2",
+      "promptHtml": "liba",
+      "gradingMode": "exact",
+      "answerKey": "E. river",
+      "acceptedVariants": [
+        "E",
+        "river"
+      ],
+      "choices": [
+        "A. calf",
+        "B. horse cart",
+        "C. horse pen",
+        "D. housework",
+        "E. river",
+        "F. riverside",
+        "G. square",
+        "H. stroller",
+        "I. the USA"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A2.12",
+      "part": "A2",
+      "promptHtml": "libakanti",
+      "gradingMode": "exact",
+      "answerKey": "F. riverside",
+      "acceptedVariants": [
+        "F",
+        "riverside"
+      ],
+      "choices": [
+        "A. calf",
+        "B. horse cart",
+        "C. horse pen",
+        "D. housework",
+        "E. river",
+        "F. riverside",
+        "G. square",
+        "H. stroller",
+        "I. the USA"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A2.13",
+      "part": "A2",
+      "promptHtml": "osowroko",
+      "gradingMode": "exact",
+      "answerKey": "D. housework",
+      "acceptedVariants": [
+        "D",
+        "housework"
+      ],
+      "choices": [
+        "A. calf",
+        "B. horse cart",
+        "C. horse pen",
+        "D. housework",
+        "E. river",
+        "F. riverside",
+        "G. square",
+        "H. stroller",
+        "I. the USA"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A2.14",
+      "part": "A2",
+      "promptHtml": "pikin kaw",
+      "gradingMode": "exact",
+      "answerKey": "A. calf",
+      "acceptedVariants": [
+        "A",
+        "calf"
+      ],
+      "choices": [
+        "A. calf",
+        "B. horse cart",
+        "C. horse pen",
+        "D. housework",
+        "E. river",
+        "F. riverside",
+        "G. square",
+        "H. stroller",
+        "I. the USA"
+      ],
+      "points": 0.25
+    },
     {
       "id": "A3.15",
       "part": "A3",
@@ -58,26 +284,480 @@
       "promptHtml": "baiman",
       "gradingMode": "exact",
       "answerKey": "M. customer",
-      "acceptedVariants": ["M", "customer"],
-      "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"],
+      "acceptedVariants": [
+        "M",
+        "customer"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
       "points": 0.25
     },
-    { "id": "A3.16", "part": "A3", "promptHtml": "bakra", "gradingMode": "exact", "answerKey": "Y. white person", "acceptedVariants": ["Y", "white person"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.17", "part": "A3", "promptHtml": "bakrakawfrei", "gradingMode": "exact", "answerKey": "X. white gadfly", "acceptedVariants": ["X", "white gadfly"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.18", "part": "A3", "promptHtml": "bakratongo", "gradingMode": "exact", "answerKey": "O. Dutch language", "acceptedVariants": ["O", "Dutch language"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.19", "part": "A3", "promptHtml": "fayadosu", "gradingMode": "exact", "answerKey": "T. lighter (fire-producing device)", "acceptedVariants": ["T", "lighter"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.20", "part": "A3", "promptHtml": "fayatongo", "gradingMode": "exact", "answerKey": "R. flame", "acceptedVariants": ["R", "flame"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.21", "part": "A3", "promptHtml": "freigron", "gradingMode": "exact", "answerKey": "J. airstrip", "acceptedVariants": ["J", "airstrip"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.22", "part": "A3", "promptHtml": "gadobuku", "gradingMode": "exact", "answerKey": "L. Bible", "acceptedVariants": ["L", "Bible"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.23", "part": "A3", "promptHtml": "gadokondre", "gradingMode": "exact", "answerKey": "S. heaven", "acceptedVariants": ["S", "heaven"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.24", "part": "A3", "promptHtml": "gronman", "gradingMode": "exact", "answerKey": "Q. farmer", "acceptedVariants": ["Q", "farmer"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.25", "part": "A3", "promptHtml": "manpikin", "gradingMode": "exact", "answerKey": "V. son", "acceptedVariants": ["V", "son"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.26", "part": "A3", "promptHtml": "onifrei", "gradingMode": "exact", "answerKey": "K. bee", "acceptedVariants": ["K", "bee"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.27", "part": "A3", "promptHtml": "pikintongo", "gradingMode": "exact", "answerKey": "W. uvula", "acceptedVariants": ["W", "uvula"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.28", "part": "A3", "promptHtml": "pokudosu", "gradingMode": "exact", "answerKey": "U. radio", "acceptedVariants": ["U", "radio"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.29", "part": "A3", "promptHtml": "wortubuku", "gradingMode": "exact", "answerKey": "N. dictionary", "acceptedVariants": ["N", "dictionary"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-    { "id": "A3.30", "part": "A3", "promptHtml": "wrokoman", "gradingMode": "exact", "answerKey": "P. employee", "acceptedVariants": ["P", "employee"], "choices": ["J. airstrip", "K. bee", "L. Bible", "M. customer", "N. dictionary", "O. Dutch language", "P. employee", "Q. farmer", "R. flame", "S. heaven", "T. lighter (fire-producing device)", "U. radio", "V. son", "W. uvula", "X. white gadfly", "Y. white person"], "points": 0.25 },
-
+    {
+      "id": "A3.16",
+      "part": "A3",
+      "promptHtml": "bakra",
+      "gradingMode": "exact",
+      "answerKey": "Y. white person",
+      "acceptedVariants": [
+        "Y",
+        "white person"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.17",
+      "part": "A3",
+      "promptHtml": "bakrakawfrei",
+      "gradingMode": "exact",
+      "answerKey": "X. white gadfly",
+      "acceptedVariants": [
+        "X",
+        "white gadfly"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.18",
+      "part": "A3",
+      "promptHtml": "bakratongo",
+      "gradingMode": "exact",
+      "answerKey": "O. Dutch language",
+      "acceptedVariants": [
+        "O",
+        "Dutch language"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.19",
+      "part": "A3",
+      "promptHtml": "fayadosu",
+      "gradingMode": "exact",
+      "answerKey": "T. lighter (fire-producing device)",
+      "acceptedVariants": [
+        "T",
+        "lighter"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.20",
+      "part": "A3",
+      "promptHtml": "fayatongo",
+      "gradingMode": "exact",
+      "answerKey": "R. flame",
+      "acceptedVariants": [
+        "R",
+        "flame"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.21",
+      "part": "A3",
+      "promptHtml": "freigron",
+      "gradingMode": "exact",
+      "answerKey": "J. airstrip",
+      "acceptedVariants": [
+        "J",
+        "airstrip"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.22",
+      "part": "A3",
+      "promptHtml": "gadobuku",
+      "gradingMode": "exact",
+      "answerKey": "L. Bible",
+      "acceptedVariants": [
+        "L",
+        "Bible"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.23",
+      "part": "A3",
+      "promptHtml": "gadokondre",
+      "gradingMode": "exact",
+      "answerKey": "S. heaven",
+      "acceptedVariants": [
+        "S",
+        "heaven"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.24",
+      "part": "A3",
+      "promptHtml": "gronman",
+      "gradingMode": "exact",
+      "answerKey": "Q. farmer",
+      "acceptedVariants": [
+        "Q",
+        "farmer"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.25",
+      "part": "A3",
+      "promptHtml": "manpikin",
+      "gradingMode": "exact",
+      "answerKey": "V. son",
+      "acceptedVariants": [
+        "V",
+        "son"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.26",
+      "part": "A3",
+      "promptHtml": "onifrei",
+      "gradingMode": "exact",
+      "answerKey": "K. bee",
+      "acceptedVariants": [
+        "K",
+        "bee"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.27",
+      "part": "A3",
+      "promptHtml": "pikintongo",
+      "gradingMode": "exact",
+      "answerKey": "W. uvula",
+      "acceptedVariants": [
+        "W",
+        "uvula"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.28",
+      "part": "A3",
+      "promptHtml": "pokudosu",
+      "gradingMode": "exact",
+      "answerKey": "U. radio",
+      "acceptedVariants": [
+        "U",
+        "radio"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.29",
+      "part": "A3",
+      "promptHtml": "wortubuku",
+      "gradingMode": "exact",
+      "answerKey": "N. dictionary",
+      "acceptedVariants": [
+        "N",
+        "dictionary"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A3.30",
+      "part": "A3",
+      "promptHtml": "wrokoman",
+      "gradingMode": "exact",
+      "answerKey": "P. employee",
+      "acceptedVariants": [
+        "P",
+        "employee"
+      ],
+      "choices": [
+        "J. airstrip",
+        "K. bee",
+        "L. Bible",
+        "M. customer",
+        "N. dictionary",
+        "O. Dutch language",
+        "P. employee",
+        "Q. farmer",
+        "R. flame",
+        "S. heaven",
+        "T. lighter (fire-producing device)",
+        "U. radio",
+        "V. son",
+        "W. uvula",
+        "X. white gadfly",
+        "Y. white person"
+      ],
+      "points": 0.25
+    },
     {
       "id": "A4.1",
       "part": "A4",
@@ -85,14 +765,53 @@
       "promptHtml": "bakrakondre",
       "gradingMode": "exact",
       "answerKey": "the Netherlands",
-      "acceptedVariants": ["Netherlands", "Holland", "the Holland"],
+      "acceptedVariants": [
+        "Netherlands",
+        "Holland",
+        "the Holland"
+      ],
       "points": 0.25
     },
-    { "id": "A4.2", "part": "A4", "promptHtml": "faya", "gradingMode": "exact", "answerKey": "fire", "acceptedVariants": [], "points": 0.25 },
-    { "id": "A4.3", "part": "A4", "promptHtml": "gado", "gradingMode": "exact", "answerKey": "god", "acceptedVariants": ["God"], "points": 0.25 },
-    { "id": "A4.4", "part": "A4", "promptHtml": "pikin", "gradingMode": "exact", "answerKey": "small", "acceptedVariants": ["little"], "points": 0.25 },
-    { "id": "A4.5", "part": "A4", "promptHtml": "wroko", "gradingMode": "exact", "answerKey": "work", "acceptedVariants": [], "points": 0.25 },
-
+    {
+      "id": "A4.2",
+      "part": "A4",
+      "promptHtml": "faya",
+      "gradingMode": "exact",
+      "answerKey": "fire",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "A4.3",
+      "part": "A4",
+      "promptHtml": "gado",
+      "gradingMode": "exact",
+      "answerKey": "god",
+      "acceptedVariants": [
+        "God"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A4.4",
+      "part": "A4",
+      "promptHtml": "pikin",
+      "gradingMode": "exact",
+      "answerKey": "small",
+      "acceptedVariants": [
+        "little"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A4.5",
+      "part": "A4",
+      "promptHtml": "wroko",
+      "gradingMode": "exact",
+      "answerKey": "work",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
     {
       "id": "A5.1",
       "part": "A5",
@@ -103,10 +822,44 @@
       "acceptedVariants": [],
       "points": 0.25
     },
-    { "id": "A5.2", "part": "A5", "promptHtml": "honey", "gradingMode": "exact", "answerKey": "oni", "acceptedVariants": [], "points": 0.25 },
-    { "id": "A5.3", "part": "A5", "promptHtml": "music", "gradingMode": "exact", "answerKey": "poku", "acceptedVariants": [], "points": 0.25 },
-    { "id": "A5.4", "part": "A5", "promptHtml": "Suriname", "gradingMode": "exact", "answerKey": "sranan", "acceptedVariants": ["sranankondre"], "points": 0.25 },
-    { "id": "A5.5", "part": "A5", "promptHtml": "word", "gradingMode": "exact", "answerKey": "wortu", "acceptedVariants": [], "points": 0.25 }
+    {
+      "id": "A5.2",
+      "part": "A5",
+      "promptHtml": "honey",
+      "gradingMode": "exact",
+      "answerKey": "oni",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "A5.3",
+      "part": "A5",
+      "promptHtml": "music",
+      "gradingMode": "exact",
+      "answerKey": "poku",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "A5.4",
+      "part": "A5",
+      "promptHtml": "Suriname",
+      "gradingMode": "exact",
+      "answerKey": "sranan",
+      "acceptedVariants": [
+        "sranankondre"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "A5.5",
+      "part": "A5",
+      "promptHtml": "word",
+      "gradingMode": "exact",
+      "answerKey": "wortu",
+      "acceptedVariants": [],
+      "points": 0.25
+    }
   ],
   "hints": [
     {
