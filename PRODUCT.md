@@ -59,7 +59,7 @@ same work:
   must hold up on a phone. A wide data table scrolls inside its own container
   and never pushes the page sideways.
 - The source material is the NACLO Open Round booklets, 2018 to 2026, published
-  as PDFs at nacloweb.org. Problem PDFs are copyrighted and stay out of the
+  as PDFs at naclo.org. Problem PDFs are copyrighted and stay out of the
   repository.
 - Problem data is the interface. Alignment in a table is often the puzzle
   itself, and the languages involved use scripts a default font stack does not

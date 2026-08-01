@@ -114,7 +114,7 @@ export default async function ProblemPage({
             target="_blank"
             rel="noopener noreferrer"
           >
-            Find the original on nacloweb.org
+            Find the original on naclo.org
           </a>
         </p>
       </footer>

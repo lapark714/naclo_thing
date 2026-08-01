@@ -195,7 +195,7 @@ Return ONLY a JSON object, no markdown fences, matching this shape:
   "year": <number>, "round": "open", "letter": "<letter>",
   "title": "<exact title from the header>",
   "authors": ["<from the copyright line if visible, else 'NACLO <year> Problem Committee'>"],
-  "sourcePdfUrl": "https://www.nacloweb.org/practice.php",
+  "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [<1-3 from: ${CONCEPT_TAGS.map((t) => `"${t}"`).join(", ")}>],
   "formTag": <one of: ${FORM_TAGS.map((t) => `"${t}"`).join(", ")}>,
   "difficulty": <"intro" if <=5 official points, "standard" if <=10, "hard" otherwise>,
@@ -337,7 +337,7 @@ async function draftOne(client: Anthropic, target: Target, force: boolean): Prom
       year: target.year,
       round: "open",
       letter: target.letter,
-      sourcePdfUrl: "https://www.nacloweb.org/practice.php",
+      sourcePdfUrl: "https://naclo.org/practice.php",
       reviewStatus: "drafted",
     };
 

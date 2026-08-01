@@ -87,7 +87,7 @@ const TAGS: Record<string, [string[], string, string[]]> = {
   "2025H": [["historical and comparative", "number systems"], "rule discovery", ["Basque"]],
 };
 
-const SOURCE_URL = "https://www.nacloweb.org/practice.php";
+const SOURCE_URL = "https://naclo.org/practice.php";
 
 function difficultyFor(points: number): "intro" | "standard" | "hard" {
   if (points <= 5) return "intro";
