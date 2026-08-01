@@ -56,7 +56,7 @@ export function ConceptCoverage({ problems }: { problems: ProblemSummary[] }) {
       </ul>
 
       {!anySolved && (
-        <p className="mt-4 text-[0.85rem] text-ink-faint">
+        <p className="mt-4 text-[0.85rem] text-ink-soft">
           Nothing solved yet.{" "}
           <Link href="/practice" className="underline underline-offset-2 hover:text-ink">
             Pick a concept

@@ -158,8 +158,8 @@ A paper-and-ink neutral field with two signal colours held in reserve.
 - **Ink Faint** (#8b8f9c): Metadata that should recede: counts, footnotes,
   disabled states.
 - **Rule** (#dfdcd4): Hairline dividers and table borders.
-- **Rule Strong** (#c9c5ba): Input and control borders, and the offset shadow
-  under the primary button.
+- **Rule Strong** (#c9c5ba): Input and control borders, one step darker than
+  Rule so a control reads as interactive against a mere divider.
 - **Tint** (#f1eee6): Tonal block for table headers and hover states, the
   substitute for elevation.
 
@@ -255,23 +255,21 @@ shadows. A table header is distinguished by a tint fill, a section by a 1px
 rule, a raised surface by turning white against warm paper. There is no
 elevation scale and no card shadow.
 
-Two shadows exist in the entire system, both earned.
+Exactly one shadow exists in the entire system, and it is earned. Controls do
+not carry shadow at all: a button signals pressability by inverting its fill,
+not by faking a raised edge.
 
 ### Shadow Vocabulary
 
 - **Popover lift** (`box-shadow: 0 8px 28px -12px rgba(22,24,29,0.35)`): The
   hint panel only. It genuinely floats over the page and must read as
   detached from the problem underneath.
-- **Control offset** (`box-shadow: 4px 4px 0 0 #c9c5ba`, collapsing to
-  `2px 2px 0 0` with a matching 2px translate on hover): The primary button
-  only. A hard offset in the rule colour, not a blur. It is printing, not
-  lighting.
-
 ### Named Rules
 
-**The Flat Page Rule.** Surfaces are flat at rest. A shadow appears only when an
-element actually leaves the page (the popover) or is being pressed (the primary
-button). Soft ambient shadow on a card, panel, or table is out of the system.
+**The Flat Page Rule.** Surfaces are flat at rest. The only shadow in the system
+belongs to the one element that actually leaves the page, the hint popover.
+Nothing else carries shadow, including controls. A hard zero-blur offset is a
+neobrutalist costume and this world is not that.
 
 ## Shapes
 
@@ -297,9 +295,10 @@ harsh, fix it with spacing, border colour, or tone, never with a radius.
 ### Buttons
 
 - **Shape:** Square (0px radius), 1px border.
-- **Primary:** Ink fill, paper text, 16px by 32px padding, uppercase label at
-  0.85rem with 0.12em tracking, carrying the control offset shadow. One per
-  page at most; it is the page's single call to action.
+- **Primary:** Ink fill, paper text, 1px ink border, 16px by 32px padding,
+  uppercase label at 0.85rem with 0.12em tracking. No shadow. One per page at
+  most; it is the page's single call to action. On hover it inverts to paper
+  fill with ink text against the border it already carries, so nothing shifts.
 - **Secondary:** White fill, ink text, 1px ink border, 6px by 12px padding,
   uppercase label at 0.75rem. Used for Check, Show explanation, and every
   in-page action.
@@ -378,9 +377,9 @@ the page.
 
 - **Don't** introduce a border radius. Every corner is 0px, and the radius
   tokens in `globals.css` are vestigial.
-- **Don't** add a soft ambient shadow to a card, panel or table. Only the hint
-  popover and the primary button carry shadow, and the button's is a hard
-  offset rather than a blur.
+- **Don't** give any control a shadow, and don't add ambient shadow to a card,
+  panel or table. The hint popover is the only element in the system that
+  carries one.
 - **Don't** let the interface drift toward a generic SaaS dashboard: no blue
   accent, no rounded cards, no sidebar chrome, no soft elevation. This is the
   one confirmed rejection.

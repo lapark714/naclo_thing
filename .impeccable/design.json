@@ -186,11 +186,6 @@
         "name": "popover-lift",
         "value": "0 8px 28px -12px rgba(22,24,29,0.35)",
         "purpose": "The hint popover only. It genuinely floats over the problem and must read as detached."
-      },
-      {
-        "name": "control-offset",
-        "value": "4px 4px 0 0 #c9c5ba",
-        "purpose": "The primary button only. A hard offset in the rule colour, collapsing to 2px 2px with a matching translate on hover. Printing, not lighting."
       }
     ],
     "motion": [
@@ -198,11 +193,6 @@
         "name": "state-transition",
         "value": "transition-colors, default duration",
         "purpose": "Colour-only transitions on buttons and chips as they invert to ink fill."
-      },
-      {
-        "name": "press-collapse",
-        "value": "transition on transform and box-shadow",
-        "purpose": "Primary button: shadow halves and the element translates 2px to meet it."
       }
     ],
     "breakpoints": [
@@ -217,9 +207,9 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The single call to action on a page. Ink fill with a hard offset shadow that collapses on hover.",
+      "description": "The single call to action on a page. Ink fill that inverts on hover; no shadow.",
       "html": "<a class=\"ds-btn-primary\" href=\"#\">Start practicing</a>",
-      "css": ".ds-btn-primary{display:inline-flex;align-items:center;background:#16181d;color:#fbfaf7;padding:16px 32px;font-family:'Noto Sans',ui-sans-serif,system-ui,sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:none;border-radius:0;box-shadow:4px 4px 0 0 #c9c5ba;transition:transform .15s,box-shadow .15s}.ds-btn-primary:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 0 #c9c5ba}.ds-btn-primary:focus-visible{outline:2px solid #16181d;outline-offset:2px}"
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;background:#16181d;color:#fbfaf7;border:1px solid #16181d;padding:16px 32px;font-family:'Noto Sans',ui-sans-serif,system-ui,sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:0;transition:background .15s,color .15s}.ds-btn-primary:hover{background:#fbfaf7;color:#16181d}.ds-btn-primary:focus-visible{outline:2px solid #16181d;outline-offset:2px}"
     },
     {
       "name": "Secondary Button",
@@ -313,7 +303,7 @@
       },
       {
         "name": "The Flat Page Rule",
-        "body": "Surfaces are flat at rest. A shadow appears only when an element actually leaves the page (the popover) or is being pressed (the primary button).",
+        "body": "Surfaces are flat at rest. The only shadow in the system belongs to the one element that actually leaves the page, the hint popover. Nothing else carries shadow, including controls.",
         "section": "elevation"
       },
       {
@@ -332,7 +322,7 @@
     ],
     "donts": [
       "Don't introduce a border radius. Every corner is 0px, and the radius tokens in globals.css are vestigial.",
-      "Don't add a soft ambient shadow to a card, panel or table.",
+      "Don't give any control a shadow, and don't add ambient shadow to a card, panel or table.",
       "Don't let the interface drift toward a generic SaaS dashboard: no blue accent, no rounded cards, no sidebar chrome, no soft elevation.",
       "Don't add a third accent colour.",
       "Don't reflow or wrap a data table to fit a narrow screen.",
