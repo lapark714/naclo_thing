@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-01T12:45:39Z",
+  "title": "Design System: gloss.",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Ink",
+        "canonical": "#16181d",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#16181d",
+          "#2b2f37",
+          "#434855",
+          "#5a6070",
+          "#8b8f9c",
+          "#b6b9c2",
+          "#e3e4e8"
+        ]
+      },
+      "oxblood": {
+        "role": "secondary",
+        "displayName": "Oxblood",
+        "canonical": "#a4342a",
+        "tonalRamp": [
+          "#3a1210",
+          "#571b17",
+          "#75241e",
+          "#8c2c24",
+          "#a4342a",
+          "#c25a50",
+          "#dc9a94",
+          "#f8efed"
+        ]
+      },
+      "verdigris": {
+        "role": "tertiary",
+        "displayName": "Verdigris",
+        "canonical": "#2f6b4f",
+        "tonalRamp": [
+          "#0f2418",
+          "#173726",
+          "#204b34",
+          "#285a42",
+          "#2f6b4f",
+          "#4f8d70",
+          "#8fbaa4",
+          "#ebf2ee"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#fbfaf7",
+        "tonalRamp": [
+          "#26241f",
+          "#3d3a33",
+          "#5b574d",
+          "#847f72",
+          "#b0aca1",
+          "#d5d1c8",
+          "#eeebe4",
+          "#fbfaf7"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#4d4d4d",
+          "#737373",
+          "#a6a6a6",
+          "#d9d9d9",
+          "#f2f2f2",
+          "#ffffff"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "#5a6070",
+        "tonalRamp": [
+          "#14161a",
+          "#22252c",
+          "#333842",
+          "#464b58",
+          "#5a6070",
+          "#848a99",
+          "#adb2be",
+          "#dcdee4"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Ink Faint",
+        "canonical": "#8b8f9c",
+        "tonalRamp": [
+          "#1c1e23",
+          "#2f323a",
+          "#454953",
+          "#5f636e",
+          "#7a7e8b",
+          "#8b8f9c",
+          "#b9bcc5",
+          "#e6e7eb"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "#dfdcd4",
+        "tonalRamp": [
+          "#2b2924",
+          "#443f37",
+          "#5f5a4f",
+          "#807a6d",
+          "#a8a294",
+          "#c9c5ba",
+          "#dfdcd4",
+          "#f4f2ed"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Rule Strong",
+        "canonical": "#c9c5ba",
+        "tonalRamp": [
+          "#26241f",
+          "#3b382f",
+          "#544f43",
+          "#726c5c",
+          "#9a9384",
+          "#c9c5ba",
+          "#e0ddd5",
+          "#f5f4f0"
+        ]
+      },
+      "tint": {
+        "role": "neutral",
+        "displayName": "Tint",
+        "canonical": "#f1eee6",
+        "tonalRamp": [
+          "#2a2820",
+          "#413e33",
+          "#5d5949",
+          "#807b67",
+          "#aaa593",
+          "#d3cfc1",
+          "#f1eee6",
+          "#faf9f5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The wordmark on the landing page only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Problem titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card and section headings inside a page."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose, capped at 54-68ch measure."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Every span of language data, table cell and answer input. Charis SIL backed by the Noto script stack."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase eyebrows, table headers and all button text."
+      }
+    },
+    "shadows": [
+      {
+        "name": "popover-lift",
+        "value": "0 8px 28px -12px rgba(22,24,29,0.35)",
+        "purpose": "The hint popover only. It genuinely floats over the problem and must read as detached."
+      },
+      {
+        "name": "control-offset",
+        "value": "4px 4px 0 0 #c9c5ba",
+        "purpose": "The primary button only. A hard offset in the rule colour, collapsing to 2px 2px with a matching translate on hover. Printing, not lighting."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-transition",
+        "value": "transition-colors, default duration",
+        "purpose": "Colour-only transitions on buttons and chips as they invert to ink fill."
+      },
+      {
+        "name": "press-collapse",
+        "value": "transition on transform and box-shadow",
+        "purpose": "Primary button: shadow halves and the element translates 2px to meet it."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single call to action on a page. Ink fill with a hard offset shadow that collapses on hover.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Start practicing</a>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;background:#16181d;color:#fbfaf7;padding:16px 32px;font-family:'Noto Sans',ui-sans-serif,system-ui,sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:none;border-radius:0;box-shadow:4px 4px 0 0 #c9c5ba;transition:transform .15s,box-shadow .15s}.ds-btn-primary:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 0 #c9c5ba}.ds-btn-primary:focus-visible{outline:2px solid #16181d;outline-offset:2px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Every in-page action: Check, Show explanation. Inverts to ink fill on hover.",
+      "html": "<button class=\"ds-btn-secondary\">Check</button>",
+      "css": ".ds-btn-secondary{background:#fff;color:#16181d;border:1px solid #16181d;border-radius:0;padding:6px 12px;font-family:'Noto Sans',ui-sans-serif,system-ui,sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.025em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s}.ds-btn-secondary:hover{background:#16181d;color:#fbfaf7}.ds-btn-secondary:focus-visible{outline:2px solid #16181d;outline-offset:2px}.ds-btn-secondary:disabled{opacity:.35;cursor:not-allowed}"
+    },
+    {
+      "name": "Hint Trigger",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Anchored beside each part of a problem. Inverts while open and appends XP spent in Oxblood.",
+      "html": "<button class=\"ds-hint\">Hint <span class=\"ds-hint-xp\">−1</span></button>",
+      "css": ".ds-hint{display:inline-flex;align-items:center;gap:6px;background:#fff;color:#5a6070;border:1px solid #c9c5ba;border-radius:0;padding:4px 8px;font-family:'Noto Sans',ui-sans-serif,system-ui,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.025em;text-transform:uppercase;cursor:pointer;transition:border-color .15s,color .15s}.ds-hint:hover{border-color:#16181d;color:#16181d}.ds-hint:focus-visible{outline:2px solid #16181d;outline-offset:2px}.ds-hint-xp{color:#a4342a}"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Concept and difficulty filters, which stack. Selected state is ink fill.",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"false\">morphology <span class=\"ds-chip-count\">31</span></button><button class=\"ds-chip ds-chip-on\" aria-pressed=\"true\">syntax <span class=\"ds-chip-count\">17</span></button>",
+      "css": ".ds-chip{background:#fff;color:#16181d;border:1px solid #c9c5ba;border-radius:0;padding:4px 10px;margin-right:6px;font-family:'Noto Sans',ui-sans-serif,system-ui,sans-serif;font-size:.82rem;cursor:pointer;transition:background .15s,border-color .15s}.ds-chip:hover{background:#f1eee6}.ds-chip-count{margin-left:6px;font-variant-numeric:tabular-nums;color:#8b8f9c}.ds-chip-on{background:#16181d;border-color:#16181d;color:#fbfaf7}.ds-chip-on .ds-chip-count{color:rgba(251,250,247,.6)}.ds-chip:focus-visible{outline:2px solid #16181d;outline-offset:2px}"
+    },
+    {
+      "name": "Answer Input",
+      "kind": "input",
+      "refersTo": "input-answer",
+      "description": "Set in the data font because the student is typing language data.",
+      "html": "<input class=\"ds-input\" type=\"text\" value=\"marlungka\" />",
+      "css": ".ds-input{width:100%;background:#fff;color:#16181d;border:1px solid #c9c5ba;border-radius:0;padding:6px 8px;font-family:'Charis SIL',Charter,Georgia,serif;font-size:.95rem}.ds-input:focus-visible{outline:2px solid #16181d;outline-offset:2px}.ds-input:disabled{opacity:.7}"
+    },
+    {
+      "name": "Data Table",
+      "kind": "custom",
+      "refersTo": "table-header",
+      "description": "The signature component. Keeps its natural width and scrolls inside its container; cells never wrap, because column alignment is often the puzzle.",
+      "html": "<div class=\"ds-table-scroll\"><table class=\"ds-table\"><thead><tr><th>Warlpiri</th><th>English</th></tr></thead><tbody><tr><td><span class=\"ds-data\">Maliki ka marlungka karrimi.</span></td><td>The dog is standing on the kangaroo.</td></tr><tr><td><span class=\"ds-data\">Karnta ka kuurlurla ngunami.</span></td><td>The woman is lying in the school.</td></tr></tbody></table></div>",
+      "css": ".ds-table-scroll{overflow-x:auto;border:1px solid #dfdcd4;background:#fff}.ds-table{border-collapse:collapse;width:max-content;min-width:100%}.ds-table th{background:#f1eee6;color:#5a6070;font-family:'Noto Sans',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:8px 14px}.ds-table td{padding:7px 14px;font-size:.95rem;white-space:nowrap;border-bottom:1px solid #dfdcd4;vertical-align:top}.ds-data{font-family:'Charis SIL',Charter,Georgia,serif}"
+    },
+    {
+      "name": "Hint Popover",
+      "kind": "custom",
+      "refersTo": "button-secondary",
+      "description": "Anchored to a part, not the page. The only element in the system that carries a blurred shadow.",
+      "html": "<div class=\"ds-popover\"><p class=\"ds-popover-eyebrow\">Help with B1</p><p class=\"ds-popover-tier\">1. Where to look</p><p class=\"ds-popover-body\">Compare the noun on its own with the same noun when it means ‘on/in it’.</p><button class=\"ds-popover-reveal\">Reveal · −2 XP</button></div>",
+      "css": ".ds-popover{width:min(23rem,calc(100vw - 2.5rem));background:#fff;border:1px solid #16181d;border-radius:0;padding:16px;box-shadow:0 8px 28px -12px rgba(22,24,29,.35);font-family:'Noto Sans',ui-sans-serif,system-ui,sans-serif}.ds-popover-eyebrow{margin:0 0 10px;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#5a6070}.ds-popover-tier{margin:0;font-size:.8rem;font-weight:600;color:#16181d}.ds-popover-body{margin:6px 0 12px;font-size:.85rem;line-height:1.6;color:#16181d}.ds-popover-reveal{background:none;border:none;padding:0;color:#a4342a;font-size:.75rem;text-decoration:underline;text-underline-offset:2px;cursor:pointer}.ds-popover-reveal:hover{text-decoration:none}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Reference Grammar",
+    "overview": "The page is a scholarly linguistics volume that happens to accept typing. Warm paper stock, a serif display face used sparingly at the top of a page, and data set with the care a good grammar gives its example sentences. The subject is a Warlpiri locative suffix or an Armenian transliteration, and the design's job is to present that subject accurately and then get out of the way.\n\nDensity is closer to a printed page than to an application. Rules are hairlines, corners are square, and the only fill in the palette is the near-black used to mark a control as active. Colour is nearly absent: a page of eight problems is paper, ink, and one line of oxblood where something costs XP. That restraint is what makes the data legible, and the data is the whole product.\n\nThe single confirmed rejection is the generic SaaS dashboard: soft shadows, a blue accent, rounded cards, and sidebar chrome. Nothing here should look like a product template.",
+    "keyCharacteristics": [
+      "Warm paper ground (#fbfaf7), never pure white except on raised surfaces",
+      "Square corners everywhere; the radius scale exists in tokens and is unused",
+      "Hairline rules and tonal blocks carry structure instead of shadows",
+      "Serif display for identity, humanist sans for interface, a dedicated linguistics face for language data",
+      "One accent, spent on cost and error, not on decoration"
+    ],
+    "rules": [
+      {
+        "name": "The One Accent Rule",
+        "body": "Oxblood is the only chromatic colour in the interface, and it means cost or error. Verdigris answers it and means correct. Neither is ever decorative, and no third accent is introduced for emphasis, category, or brand.",
+        "section": "colors"
+      },
+      {
+        "name": "The White Means Above Rule",
+        "body": "The page is paper; white is a raised surface. Anything painted #ffffff is claiming to sit above the page, so use it only for tables, inputs, popovers, and unselected controls.",
+        "section": "colors"
+      },
+      {
+        "name": "The Third Voice Rule",
+        "body": "Language data is set in the data stack, never the UI sans. This is the established convention rather than a hard invariant; the enforced part is narrower and absolute: every character in a published record must be covered by a self-hosted font, and the build fails otherwise.",
+        "section": "typography"
+      },
+      {
+        "name": "The Uppercase Label Rule",
+        "body": "Anything functional and small is uppercase at 0.72rem with wide tracking: eyebrows, table headers, buttons. Sentence case is for prose.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sideways Scroll Rule",
+        "body": "The page body never scrolls horizontally. A wide table scrolls inside .table-scroll and nothing else moves. Every page wrapper carries width:100% and min-width:0.",
+        "section": "layout"
+      },
+      {
+        "name": "The Measure Rule",
+        "body": "Prose is capped by character count, not by container. 54ch for introductory copy, 58ch for instructions, 68ch for body text inside a problem.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Page Rule",
+        "body": "Surfaces are flat at rest. A shadow appears only when an element actually leaves the page (the popover) or is being pressed (the primary button).",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Corner Rule",
+        "body": "Radius is zero everywhere. If a component looks harsh, fix it with spacing, border colour, or tone, never with a radius.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep the page on warm paper (#fbfaf7) and reserve white (#ffffff) for surfaces that genuinely sit above it.",
+      "Do set every span of language data in the data stack, and add a font subset before shipping a script the fonts do not cover.",
+      "Do give wide tables their natural width inside .table-scroll, and give every direct child of <body> width:100% and min-width:0.",
+      "Do cap prose by character measure (54ch to 68ch), not by container width.",
+      "Do use the global focus treatment: a 2px ink outline at 2px offset.",
+      "Do spend Oxblood on cost and error only, and Verdigris on correctness only."
+    ],
+    "donts": [
+      "Don't introduce a border radius. Every corner is 0px, and the radius tokens in globals.css are vestigial.",
+      "Don't add a soft ambient shadow to a card, panel or table.",
+      "Don't let the interface drift toward a generic SaaS dashboard: no blue accent, no rounded cards, no sidebar chrome, no soft elevation.",
+      "Don't add a third accent colour.",
+      "Don't reflow or wrap a data table to fit a narrow screen.",
+      "Don't put an em dash in user-facing copy, and don't use a character the self-hosted fonts do not carry."
+    ]
+  }
+}
