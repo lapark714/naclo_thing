@@ -37,6 +37,15 @@ export function getPublishedProblems(): Problem[] {
   return loadAll().filter((p) => p.reviewStatus === "published");
 }
 
+/**
+ * The problems a student can actually work. Catalogue entries are published
+ * records too, so this is the narrower gate: everything the site offers as
+ * practice, and nothing it can only point at.
+ */
+export function getPlayableProblems(): Problem[] {
+  return getPublishedProblems().filter((p) => p.tier === "full");
+}
+
 export function getProblem(id: string): Problem | undefined {
   return getPublishedProblems().find((p) => p.id === id);
 }
@@ -53,7 +62,6 @@ export function getQuestion(problemId: string, questionId: string) {
  */
 export type ProblemSummary = {
   id: string;
-  tier: Problem["tier"];
   year: number;
   round: Problem["round"];
   letter: string;
@@ -69,9 +77,8 @@ export type ProblemSummary = {
 };
 
 export function getProblemIndex(): ProblemSummary[] {
-  return getPublishedProblems().map((p) => ({
+  return getPlayableProblems().map((p) => ({
     id: p.id,
-    tier: p.tier,
     year: p.year,
     round: p.round,
     letter: p.letter,
@@ -85,6 +92,30 @@ export function getProblemIndex(): ProblemSummary[] {
     officialTimeMinutes: p.officialTimeMinutes,
     questionCount: p.questions.length,
   }));
+}
+
+/**
+ * The queue, counted rather than listed. A catalogue entry is a real record
+ * with real metadata, but to a student it is only a promise, so the practice
+ * page states how many are coming and from which years instead of putting
+ * forty-odd unplayable rows in front of the ones that work.
+ */
+export type Upcoming = {
+  total: number;
+  byYear: { year: number; count: number }[];
+};
+
+export function getUpcoming(): Upcoming {
+  const pending = getPublishedProblems().filter((p) => p.tier !== "full");
+  const counts = new Map<number, number>();
+  for (const p of pending) counts.set(p.year, (counts.get(p.year) ?? 0) + 1);
+
+  return {
+    total: pending.length,
+    byYear: [...counts.entries()]
+      .sort((a, b) => a[0] - b[0])
+      .map(([year, count]) => ({ year, count })),
+  };
 }
 
 /**

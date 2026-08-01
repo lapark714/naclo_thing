@@ -560,6 +560,16 @@ body > * {
   font-family: var(--data-stack);
 }
 
+/* Some booklets annotate data by underlining part of a word — the vowel of a
+   syllable, the segment a rule applies to. The mark has to clear descenders,
+   or an ogonek (ą) becomes indistinguishable from a plain a and the underline
+   stops being readable as an annotation. */
+u {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+}
+
 .problem-body ul,
 .problem-body ol {
   max-width: 68ch;

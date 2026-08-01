@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getProblemIndex } from "@/lib/content";
+import { getProblemIndex, getUpcoming } from "@/lib/content";
 import { ConceptFilter } from "@/components/concept-filter";
+import { ComingSoon } from "@/components/coming-soon";
 
 export const metadata: Metadata = {
   title: "Practice · gloss.",
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 
 export default function PracticePage() {
   const problems = getProblemIndex();
+  const upcoming = getUpcoming();
 
   return (
     <main className="mx-auto max-w-3xl px-5 py-10 sm:px-8">
@@ -28,6 +30,8 @@ export default function PracticePage() {
       <div className="mt-7">
         <ConceptFilter problems={problems} />
       </div>
+
+      <ComingSoon upcoming={upcoming} />
     </main>
   );
 }

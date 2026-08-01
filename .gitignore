@@ -28,3 +28,7 @@ next-env.d.ts
 
 # generated from content/assets by npm run sync-assets
 /public/content-assets
+
+# unreviewed AI output from npm run draft; promotion into content/problems is
+# the human step, and nothing in here should ever be committed as if it were
+/content/drafts
