@@ -51,6 +51,7 @@ content/problems/<id>.json                              reviewStatus: 'published
 - `practice-timer.tsx` — Timestamp-based display; banner at expiry, input stays live
 - `concept-filter.tsx` — Client-side filtering over the prebuilt index, used on `/practice`
 - `concept-coverage.tsx` — Per-concept solved/total counts, used on the landing page
+- `coming-soon.tsx` — The untranscribed remainder as a count and a year breakdown, at the foot of `/practice`
 
 ### API Layer
 - `/api/grade` — Validates and rate-limits, reads the `llm` key server-side, calls Claude, returns `{ correct, reason }`. Cached on `(questionId, normalizedAnswer)`.
@@ -66,6 +67,7 @@ content/problems/<id>.json                              reviewStatus: 'published
 - `content/schema.ts` — Zod `Problem`/`Question`, imported by both the scripts and the site
 - `content/taxonomy.ts` — Concept + form tag vocabulary (NACLO publishes none)
 - `content/problems/*.json` — One reviewed record per problem; `content/assets/` holds cropped figures. `tier` is `full` (playable) or `catalogue` (metadata, links out to the booklet). `content/drafts/*.json` is machine output; `lib/content.ts` never reads it, so promotion is a human move rather than a flag flip
+- Two gates in `lib/content.ts`, not one. `getPublishedProblems()` is the review gate; `getPlayableProblems()` narrows it to `full` and is what `getProblemIndex()` maps over, so no count anywhere in the UI can quietly include a problem nobody can work. `getUpcoming()` returns the catalogue remainder as a total and a per-year tally, which is all the site says about it
 - `scripts/ingest/draft.ts` — `npm run draft [--list | <id> | <year> | --all]`. Holds the booklet page maps, hand-checked where the text layer is mojibake
 - `scripts/ingest/validate.ts` — Zod + assets + keys + glyph coverage, blocks the build; allowed `unicode-range`s come from `app/globals.css` so the fonts stay the single source of truth. `scripts/ingest/sync-assets.ts` — copies `content/assets` to `public/content-assets`. Offline only, never at request time.
 

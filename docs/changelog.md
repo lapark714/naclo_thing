@@ -46,6 +46,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 - 2019 added to the draft manifest (`3fa47c2`): its booklets embed a broken ToUnicode map, but the header furniture survives the cipher (`(` is U+037E, `)` is U+037F, digit `d` is U+03EC+d), which pins all eight problems to their pages. Archive coverage 58 -> 66 problems
 - Published 2024 B, C, D and 2025 B, C, F (`2a41643`), then 2024 A, E and 2025 A, D, H (`07ca56b`), clearing the drafts queue. 19 problems playable, 294 sub-questions at 95% exact; 2025 complete at all eight
 - Katakana subset (`4f273de`) for 2024 E, and ten figures cropped from the source PDFs (`f5a7fe6`). The 2024 E semaphore strips are cut per table row — found by detecting the table's rules in the render rather than by eye — so they sit in the real table beside real katakana text
+- Published all eight 2023 problems and 2024 F, G, H. **30 problems playable, 441 sub-questions at 97% exact; 2023 through 2026 complete.** Four figures cropped (the nine vloxes for 2023 C, three card sets for 2024 G)
+- Per-problem author bylines for 2023 and 2024 F-H, read off the credits page of each booklet
+- `components/coming-soon.tsx` and `getUpcoming()` in `lib/content.ts`: the untranscribed remainder is stated once at the foot of `/practice` as a count and a year breakdown
+- A global `u` rule in `app/globals.css` with `text-underline-offset: 0.3em`, so a booklet's syllable-nucleus underlining clears an ogonek instead of colliding with it
 
 ### Changed
 
@@ -56,6 +60,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 - MVP scope narrowed to individual problems only; full timed exam mode deferred (`docs/architecture.md`). Removed `app/exam/[examId]/page.tsx` from the target tree and the hard-lock behavior from the timer description. `Problem` records still carry `year`, `round`, `officialPoints`, `officialTimeMinutes`, so whole papers can be assembled later without a schema change
 - `CLAUDE.md` reconciled with the MVP-scope narrowing: dropped `app/exam/` from the architecture tree, "all three timing modes" now reads "both practice timing modes"
 - XP: AI hints cost 2 XP each and are capped at 3 per part; revealing a part's answers zeroes that part's XP for scoring. Written hints unchanged at 1-3 XP and remain the default, cheaper path
+- `/practice` lists playable problems only. Catalogue entries no longer appear as rows marked "not yet transcribed"; they are counted in a "More problems coming soon" section instead. `getProblemIndex()` now returns `full`-tier records only, so the landing-page problem count, the language count, and every per-concept coverage denominator describe what a student can actually work. Their pages are still generated and still link out to the booklet — nothing links to them
+- The "playable now" filter chip is gone from `concept-filter.tsx`, since every listed problem is now playable
 
 ### Removed
 

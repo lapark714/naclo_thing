@@ -2,6 +2,37 @@
 
 This file will hold the project's development status and thus document whatever large updates/accomplishments on the project have been made day-by-day. It is meant to help keep track of where things were left off from the previous day, as a personal reminder.
 
+## 2026-08-01
+
+**Done**
+
+- Drafted 11 problems in one batch (all of 2023, plus 2024 F-H): 11 drafted, 0 failed, ~2.5 hours of wall clock. Reviewed and published every one. **Playable 19 -> 30, sub-questions 294 -> 441 at 97% exact. 2023, 2024, 2025 and 2026 are all complete**
+- Four figures cropped: the nine vloxes for 2023 C, three card sets for 2024 G
+- Filled in per-problem author bylines for 2023 and 2024 F-H from each booklet's credits page
+- `/practice` no longer lists catalogue entries. The 34 untranscribed problems are stated once at the foot of the page as "More problems coming soon" with a per-year tally
+
+**Five real errors the drafts contained, none of which the schema could see**
+
+Worth recording, because they are the shape of what review is actually for:
+
+1. **2023 B** — the booklet marks stress by underlining the *vowel* of each syllable. The draft read the underlines as syllable *boundaries* and rewrote the data with hyphens, inventing divisions the source never states. It also dropped the ogoneks from `hąąhere` and `wanįǧįgra`, turning nasal vowels into plain ones. Rebuilt with `<u>` on the vowels, matching the print
+2. **2023 D** — every `ɲ` (n with left hook, U+0272) came back as `ŋ` (eng, U+014B). A different consonant, 8 times
+3. **2023 E** — two characters dropped out of the Hawaiian text (`oloheloheamalun` -> `olohelohealun`), which is the exact string the transitional-probability counts are computed over. Caught by diffing against the PDF text layer; the corrected text independently reproduces the official counts (12 k's, 1 followed by i, 7 by a)
+4. **2023 F** — answer keys were bare letters (`"B"`) against choices like `"B. calabash"`, so a dropdown would have marked every correct answer wrong. Same bug class as 2025 B last session
+5. **2024 H** — the tap `ɾ` was flattened to `r` throughout. The problem booklet prints `ɾ`; NACLO's own solution sheet prints `r`. Data now shows what the student reads, and both spellings grade as correct, since `ɾ` is on no keyboard they have
+
+**Where things stand**
+
+Batch drafting is reliable; per-glyph review is the thing that cannot be skipped. Three of the five errors above were caught by mechanically diffing the draft against the PDF text layer, which is cheap and should be the first step on every future batch. The two that needed eyes on the rendered page (2023 B's underlines, 2023 F's tone marks) were both cases where the *typography* carries meaning.
+
+One font limit worth knowing: the shipped Charis SIL subsets do not carry U+1DC6 (combining macron-grave), which 2023 F's Nizaa data uses. Substituted `ḕ` (U+1E15), which keeps the tone contour and is covered. A plain macron would have dropped it.
+
+**Carried over / needs fixing**
+
+- 34 problems (2018, 2020-2022) still catalogue-only. 2019 has a page map but no records at all — it was never catalogued, so it does not appear in the coming-soon tally either
+- Vercel project still named `naclo-thing`
+- README still unwritten
+
 ## 2026-07-31 (later sessions)
 
 **Done**

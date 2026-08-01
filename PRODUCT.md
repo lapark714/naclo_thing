@@ -69,13 +69,16 @@ same work:
 
 ## Capabilities and Constraints
 
-**Today:** 64 problem records covering 2018 to 2026 and 73 languages. 19 are
-fully playable with 294 sub-questions; the other 45 are catalogue entries that
-are findable and filterable but not yet transcribed, and say so plainly.
+**Today:** 64 problem records covering 2018 to 2026. 30 are fully playable with
+441 sub-questions, and 2023 through 2026 are complete. The other 34 are
+catalogue entries: transcribed metadata, not yet a problem anyone can work. They
+are counted at the foot of the practice page as "more coming soon" rather than
+listed, because a row a student cannot open is not a problem, and mixing the two
+made the library look larger than it is.
 
 - **Grading** is decided per sub-question at ingest: `exact` runs in the browser
   with forgiving normalization, `llm` calls a server route for free-text
-  translation, `self` is unused. Currently 280 exact, 14 llm, 0 self.
+  translation, `self` is unused. Currently 427 exact, 14 llm, 0 self.
 - **Help** is a three-tier written hint ladder with XP costs, plus a
   request-time route offering an extra AI hint, a plain-language explanation,
   and an answer reveal that zeroes that part's XP.
