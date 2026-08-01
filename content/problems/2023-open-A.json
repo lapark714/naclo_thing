@@ -1,25 +1,337 @@
 {
   "id": "2023-open-A",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2023,
   "round": "open",
   "letter": "A",
   "title": "The Way We Were",
-  "authors": [],
+  "authors": [
+    "Cynthia Allen"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
-    "historical and comparative",
-    "syntax"
+    "morphology",
+    "syntax",
+    "historical and comparative"
   ],
-  "formTag": "rule discovery",
+  "formTag": "table completion",
   "difficulty": "hard",
-  "languages": [],
+  "languages": [
+    "Old English",
+    "English"
+  ],
   "officialPoints": 15,
   "officialTimeMinutes": 27,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Languages are constantly changing. For example, when you talk to your friends, you probably use some words that did not exist ten years ago. Even the basic grammar of a language can change.</p>\n<p>Over time, these changes accumulate until new languages are born. In this way, the English that is spoken today—known as Present Day English—is descended from a language called Old English, which was spoken approximately a thousand years ago. Since that time, the language has transformed so much that, if you wanted to understand Old English, you would need to study it as a foreign language. This problem focuses on some of the differences between Old English and Present Day English.</p>\n<p>Study the table below, which contains some sentences in Old English along with their translations in Present Day English. (The pronunciation of the letters is not important for this problem, but see the end of the problem for pronunciation notes.) Then answer the questions that follow.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Old English</th><th>Present Day English</th></tr></thead>\n<tbody>\n<tr><td>1.</td><td><span class=\"data\">Æþelwine and Wulfstan gesawon þas menn. Hi hi gretton.</span></td><td>Athelwine and Wulfstan saw these men. They greeted them.</td></tr>\n<tr><td>2.</td><td><span class=\"data\">Nereþ hit us?</span></td><td>Does it save us?</td></tr>\n<tr><td>3.</td><td><span class=\"data\">Se cyning and se bisceop and ic gesawon þone arcebisceop. We hine gretton.</span></td><td>The king and the bishop and I saw the archbishop. We greeted him.</td></tr>\n<tr><td>4.</td><td><span class=\"data\">Hwæt cweþe we?</span></td><td>What do we say?</td></tr>\n<tr><td>5.</td><td><span class=\"data\">Seo lar eow nereþ.</span></td><td>The teaching saves you.</td></tr>\n<tr><td>6.</td><td><span class=\"data\">We cumaþ.</span></td><td>We come.</td></tr>\n<tr><td>7.</td><td><span class=\"data\">Ne hiere we þas wifmen.</span></td><td>We do not hear these women.</td></tr>\n<tr><td>8.</td><td><span class=\"data\">þas weras hieraþ þas wifmen. Ne gesawon hi hi.</span></td><td>These men hear these women. They did not see them.</td></tr>\n<tr><td>9.</td><td><span class=\"data\">þu hierdest þas menn.</span></td><td>You heard these men.</td></tr>\n<tr><td>10.</td><td><span class=\"data\">þa hierde we þe.</span></td><td>Then we heard you.</td></tr>\n<tr><td>11.</td><td><span class=\"data\">þu þe hierdest, and we us hierdon.</span></td><td>You heard yourself, and we heard ourselves.</td></tr>\n<tr><td>12.</td><td><span class=\"data\">Alfred cyning and se bisceop ridon into þære byrig. þa gesawe we hi.</span></td><td>King Alfred and the bishop rode into the town. Then we saw them.</td></tr>\n<tr><td>13.</td><td><span class=\"data\">Eadweard hine geseah. Gesawe ge us?</span></td><td>Edward saw himself. Did you see us?</td></tr>\n<tr><td>14.</td><td><span class=\"data\">Hwæt fremest þu?</span></td><td>What do you perform?</td></tr>\n<tr><td>15.</td><td><span class=\"data\">Fremede we hit?</span></td><td>Did we perform it?</td></tr>\n</tbody>\n</table>\n</div>\n<h3>A1</h3>\n<p>Fill in the blank cells from the table below:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Old English</th><th>Present Day English</th></tr></thead>\n<tbody>\n<tr><td>16.</td><td>(a)</td><td>archbishop</td></tr>\n<tr><td>17.</td><td>(b)</td><td>King Edward</td></tr>\n<tr><td>18.</td><td><span class=\"data\">menn</span></td><td>(c)</td></tr>\n<tr><td>19.</td><td><span class=\"data\">weras</span></td><td>(d)</td></tr>\n<tr><td>20.</td><td><span class=\"data\">Ne hierde ge hi.</span></td><td>(e)</td></tr>\n<tr><td>21.</td><td><span class=\"data\">Ne gesawon hi þe.</span></td><td>(f)</td></tr>\n<tr><td>22.</td><td><span class=\"data\">Hi hit fremedon.</span></td><td>(g)</td></tr>\n<tr><td>23.</td><td><span class=\"data\">Ne nerede we þe.</span></td><td>(h)</td></tr>\n</tbody>\n</table>\n</div>\n<h3>A2</h3>\n<p>Fill in the blanks in these Old English sentences. A blank can be filled in with one word or a sequence of multiple words. For some blanks, there may be more than one solution; you should only give one.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Old English</th><th>Present Day English</th></tr></thead>\n<tbody>\n<tr><td>24.</td><td><span class=\"data\">Ne grette ge _____(a)_____ .</span></td><td>You did not greet them.</td></tr>\n<tr><td>25.</td><td><span class=\"data\">Seo lar hi _____(b)_____ .</span></td><td>The teaching saves them.</td></tr>\n<tr><td>26.</td><td><span class=\"data\">Þu _____(c)_____ .</span></td><td>You heard it.</td></tr>\n<tr><td>27.</td><td><span class=\"data\">Þa _____(d)_____ .</span></td><td>Then they heard us.</td></tr>\n</tbody>\n</table>\n</div>\n<p>Here are some more Old English sentences:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Old English</th><th>Present Day English</th></tr></thead>\n<tbody>\n<tr><td>28.</td><td><span class=\"data\">Wit hieraþ þæt word and wit hit cweþaþ.</span></td><td>We hear the word and we say it.</td></tr>\n<tr><td>29.</td><td><span class=\"data\">Se cyning and ic gesawon þas boceras, ac ne grette wit hi. þas boceras unc gretton.</span></td><td>The king and I saw these scribes but we did not approach them. These scribes greeted us.</td></tr>\n<tr><td>30.</td><td><span class=\"data\">þonne cume wit to his rice.</span></td><td>Then we come to his kingdom.</td></tr>\n<tr><td>31.</td><td><span class=\"data\">Æþelbald and ic eow gesawon, ac ne hierde wit eow. Wit eow gretton.</span></td><td>Athelbald and I saw you, but we didn't hear you. We greeted you.</td></tr>\n<tr><td>32.</td><td><span class=\"data\">Edmund and Swiþun, ne hiere git þas wifmen, ac wit hi hieraþ. þas wifmen inc hieraþ.</span></td><td>Edmund and Swithun, you do not hear these women, but we hear them. These women hear you.</td></tr>\n</tbody>\n</table>\n</div>\n<h3>A3</h3>\n<p>Below on the left are six Old English sentences which can all be translated into Present Day English by the single sentence <em>We saw you</em>. Match each Old English sentence with the context (on the right) in which it might have been said.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Old English</th></tr></thead>\n<tbody>\n<tr><td>i.</td><td><span class=\"data\">Wit eow gesawon.</span></td></tr>\n<tr><td>ii.</td><td><span class=\"data\">Wit inc gesawon.</span></td></tr>\n<tr><td>iii.</td><td><span class=\"data\">We eow gesawon.</span></td></tr>\n<tr><td>iv.</td><td><span class=\"data\">We inc gesawon.</span></td></tr>\n<tr><td>v.</td><td><span class=\"data\">We þe gesawon.</span></td></tr>\n<tr><td>vi.</td><td><span class=\"data\">Wit þe gesawon.</span></td></tr>\n</tbody>\n</table>\n</div>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Context</th></tr></thead>\n<tbody>\n<tr><td>A.</td><td>I said <strong>“We saw you”</strong> to tell your people that my people and I had seen them.</td></tr>\n<tr><td>B.</td><td>Mother said <strong>“We saw you”</strong> to tell me that she and my father had seen me.</td></tr>\n<tr><td>C.</td><td>One bishop said <strong>“We saw you”</strong> to tell the archbishop that all the bishops had seen him.</td></tr>\n<tr><td>D.</td><td>I said <strong>“We saw you”</strong> to tell my sister and brother that my mother and I had seen them.</td></tr>\n<tr><td>E.</td><td>Athelbald said <strong>“We saw you”</strong> to tell Swithun and Edmund that he and his men had seen them.</td></tr>\n<tr><td>F.</td><td>The king said <strong>“We saw you”</strong> to tell the people that he and his queen had seen them all.</td></tr>\n</tbody>\n</table>\n</div>\n<h3>A4</h3>\n<p>Six distinct words are used to translate the Present Day English word <em>you</em> into Old English. For each of the following sentences, write the correct <em>you</em> word that is missing.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Old English</th><th>Present Day English</th></tr></thead>\n<tbody>\n<tr><td>33.</td><td><span class=\"data\">Ne hierdest ___(a)___ hi.</span></td><td>(Speaking to Paul) You didn't hear them.</td></tr>\n<tr><td>34.</td><td><span class=\"data\">Ne hierde ___(b)___ hi.</span></td><td>(Speaking to Alfred &amp; Edmund) You didn't hear them.</td></tr>\n<tr><td>35.</td><td><span class=\"data\">Æþelwine and Wulfstan, gesawon hi ___(c)___ ?</span></td><td>Athelwine and Wulfstan, did they see you?</td></tr>\n<tr><td>36.</td><td><span class=\"data\">Hierde ___(d)___ hine?</span></td><td>(Addressing the crowd) Did you hear him?</td></tr>\n<tr><td>37.</td><td><span class=\"data\">Paulus, gretton hi ___(e)___ ?</span></td><td>Paul, did they greet you?</td></tr>\n<tr><td>38.</td><td><span class=\"data\">Gretton hi ___(f)___ ?</span></td><td>(Speaking to Alfred, Athelwine, and Paul) Did they greet you?</td></tr>\n</tbody>\n</table>\n</div>\n<h3>Some more information about Old English</h3>\n<p>If someone referred to Old English, would you think of the language of Shakespeare, who was active at the end of the sixteenth century and the beginning of the seventeenth, or possibly of Geoffrey Chaucer's <em>Canterbury Tales</em>, written circa 1385? In the standard historical division of English, Shakespeare's language is actually Early Modern English, while Chaucer was writing late Middle English. English was brought to England from Germany and northern Denmark in the early fifth century, and before the conversion of the English to Christianity, was occasionally written in inscriptions using the Germanic runic alphabet. A small number of English writings in the Latin alphabet appear circa 700, but it is only in the ninth century that we find a substantial body of texts. The Old English (also known as Anglo-Saxon) period extended to circa 1100, when enough changes to the language had happened that it would be unintelligible to the people who brought the language to England. If Old English would have been incomprehensible to the speakers of the Middle English period, this is even more true for Present Day English speakers.</p>\n<h3>Additional notes</h3>\n<ul>\n<li>For the most part, Latin letters were used to represent similar sounds in Old English. The letter &lt;æ&gt; (which is capitalized as &lt;Æ&gt;) represented a vowel similar to that in Present Day English <em>hat</em>. The symbol &lt;þ&gt;, called <em>thorn</em>, comes from the runic alphabet and was used to represent sounds not found in Latin, the two sounds of &lt;th&gt; in Present Day English <em>this</em> and <em>thigh</em>.</li>\n<li>Word order in Old English was flexible. In your answers for this problem, you should only use the word orders illustrated in the example sentences.</li>\n</ul>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "A1.a",
+      "part": "A1",
+      "partPrompt": "Fill in the blank cells (a)-(h) of the A1 table.",
+      "promptHtml": "<p>16. Old English for <em>archbishop</em>:</p>",
+      "gradingMode": "exact",
+      "answerKey": "arcebisceop",
+      "acceptedVariants": [
+        "þone arcebisceop",
+        "se arcebisceop"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A1.b",
+      "part": "A1",
+      "promptHtml": "<p>17. Old English for <em>King Edward</em>:</p>",
+      "gradingMode": "exact",
+      "answerKey": "Eadweard cyning",
+      "acceptedVariants": [],
+      "points": 0.625
+    },
+    {
+      "id": "A1.c",
+      "part": "A1",
+      "promptHtml": "<p>18. Present Day English for <span class=\"data\">menn</span>:</p>",
+      "gradingMode": "exact",
+      "answerKey": "men",
+      "acceptedVariants": [],
+      "points": 0.625
+    },
+    {
+      "id": "A1.d",
+      "part": "A1",
+      "promptHtml": "<p>19. Present Day English for <span class=\"data\">weras</span>:</p>",
+      "gradingMode": "exact",
+      "answerKey": "men",
+      "acceptedVariants": [],
+      "points": 0.625
+    },
+    {
+      "id": "A1.e",
+      "part": "A1",
+      "promptHtml": "<p>20. Present Day English for <span class=\"data\">Ne hierde ge hi.</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "You did not hear them.",
+      "acceptedVariants": [
+        "You didn't hear them."
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A1.f",
+      "part": "A1",
+      "promptHtml": "<p>21. Present Day English for <span class=\"data\">Ne gesawon hi þe.</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "They did not see you.",
+      "acceptedVariants": [
+        "They didn't see you."
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A1.g",
+      "part": "A1",
+      "promptHtml": "<p>22. Present Day English for <span class=\"data\">Hi hit fremedon.</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "They performed it.",
+      "acceptedVariants": [
+        "They did it.",
+        "They performed it",
+        "They did it"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A1.h",
+      "part": "A1",
+      "promptHtml": "<p>23. Present Day English for <span class=\"data\">Ne nerede we þe.</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "We did not save you.",
+      "acceptedVariants": [
+        "We didn't save you."
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A2.a",
+      "part": "A2",
+      "partPrompt": "Fill in the blanks (a)-(d) in the Old English sentences of the A2 table. A blank can be one word or several words.",
+      "promptHtml": "<p>24. <span class=\"data\">Ne grette ge _____(a)_____ .</span> = You did not greet them.</p>",
+      "gradingMode": "exact",
+      "answerKey": "hi",
+      "acceptedVariants": [],
+      "points": 0.625
+    },
+    {
+      "id": "A2.b",
+      "part": "A2",
+      "promptHtml": "<p>25. <span class=\"data\">Seo lar hi _____(b)_____ .</span> = The teaching saves them.</p>",
+      "gradingMode": "exact",
+      "answerKey": "nereþ",
+      "acceptedVariants": [
+        "nereth"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A2.c",
+      "part": "A2",
+      "promptHtml": "<p>26. <span class=\"data\">Þu _____(c)_____ .</span> = You heard it.</p>",
+      "gradingMode": "exact",
+      "answerKey": "hit hierdest",
+      "acceptedVariants": [],
+      "points": 0.625
+    },
+    {
+      "id": "A2.d",
+      "part": "A2",
+      "promptHtml": "<p>27. <span class=\"data\">Þa _____(d)_____ .</span> = Then they heard us.</p>",
+      "gradingMode": "exact",
+      "answerKey": "hierdon hi us",
+      "acceptedVariants": [
+        "hierdon hi unc"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A3.i",
+      "part": "A3",
+      "partPrompt": "Match each Old English sentence (i-vi), all meaning We saw you, with the context A-F in which it might have been said.",
+      "promptHtml": "<p>i. <span class=\"data\">Wit eow gesawon.</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A3.ii",
+      "part": "A3",
+      "promptHtml": "<p>ii. <span class=\"data\">Wit inc gesawon.</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A3.iii",
+      "part": "A3",
+      "promptHtml": "<p>iii. <span class=\"data\">We eow gesawon.</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A3.iv",
+      "part": "A3",
+      "promptHtml": "<p>iv. <span class=\"data\">We inc gesawon.</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A3.v",
+      "part": "A3",
+      "promptHtml": "<p>v. <span class=\"data\">We þe gesawon.</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A3.vi",
+      "part": "A3",
+      "promptHtml": "<p>vi. <span class=\"data\">Wit þe gesawon.</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A4.a",
+      "part": "A4",
+      "partPrompt": "Six distinct words translate the Present Day English word you into Old English. Write the correct you word for each blank (a)-(f).",
+      "promptHtml": "<p>33. <span class=\"data\">Ne hierdest ___(a)___ hi.</span> = (Speaking to Paul) You didn't hear them.</p>",
+      "gradingMode": "exact",
+      "answerKey": "þu",
+      "acceptedVariants": [
+        "thu"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A4.b",
+      "part": "A4",
+      "promptHtml": "<p>34. <span class=\"data\">Ne hierde ___(b)___ hi.</span> = (Speaking to Alfred &amp; Edmund) You didn't hear them.</p>",
+      "gradingMode": "exact",
+      "answerKey": "git",
+      "acceptedVariants": [],
+      "points": 0.625
+    },
+    {
+      "id": "A4.c",
+      "part": "A4",
+      "promptHtml": "<p>35. <span class=\"data\">Æþelwine and Wulfstan, gesawon hi ___(c)___ ?</span> = Athelwine and Wulfstan, did they see you?</p>",
+      "gradingMode": "exact",
+      "answerKey": "inc",
+      "acceptedVariants": [],
+      "points": 0.625
+    },
+    {
+      "id": "A4.d",
+      "part": "A4",
+      "promptHtml": "<p>36. <span class=\"data\">Hierde ___(d)___ hine?</span> = (Addressing the crowd) Did you hear him?</p>",
+      "gradingMode": "exact",
+      "answerKey": "ge",
+      "acceptedVariants": [],
+      "points": 0.625
+    },
+    {
+      "id": "A4.e",
+      "part": "A4",
+      "promptHtml": "<p>37. <span class=\"data\">Paulus, gretton hi ___(e)___ ?</span> = Paul, did they greet you?</p>",
+      "gradingMode": "exact",
+      "answerKey": "þe",
+      "acceptedVariants": [
+        "the"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "A4.f",
+      "part": "A4",
+      "promptHtml": "<p>38. <span class=\"data\">Gretton hi ___(f)___ ?</span> = (Speaking to Alfred, Athelwine, and Paul) Did they greet you?</p>",
+      "gradingMode": "exact",
+      "answerKey": "eow",
+      "acceptedVariants": [],
+      "points": 0.625
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start by making a list of every Old English pronoun in the data and what it corresponds to in the translation. Pay attention to two things at once: who the pronoun refers to, and whether it is the doer of the action or the one the action is done to.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Old English pronouns distinguish three numbers, not two: exactly one person, exactly two people, and three or more. They also change shape depending on their job in the sentence (subject versus object). Separately, watch the word order: it is not always the same. Compare where the object sits when it is a full noun phrase (like \"these men\") with where it sits when it is a pronoun, and notice what happens when the sentence begins with ne (\"not\"), þa/þonne (\"then\") or a wh-word.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Work through sentence 32 as practice. Edmund and Swithun are two people, and the sentence begins with ne, so the order is ne + verb + subject + object: ne hiere git þas wifmen. The speaker and one companion are the \"we\" here, and that dual subject is wit. In the last clause the women are the subject and \"you two\" is the object, so the object form inc appears before the verb because it is a pronoun: þas wifmen inc hieraþ. That gives you both the subject form (git) and the object form (inc) of the two-person \"you\".",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What is going on in this problem</h3>\n<p>Old English is the ancestor of the English we speak, but a thousand years of change have hidden two systems that were once obvious: a rich set of <strong>pronouns</strong> and a flexible but rule-governed <strong>word order</strong>. Almost every answer in this problem comes from those two systems.</p>\n\n<h3>Step 1: build the pronoun chart</h3>\n<p>Go through the data and write down each pronoun with its translation and its job in the sentence. \"Subject\" means the doer (the <em>we</em> in <em>we saw</em>); \"object\" means the one acted on (the <em>us</em> in <em>they saw us</em>).</p>\n<p>From sentences 3, 6, 7, 11 and 12 you get <span class=\"data\">ic</span> = I, <span class=\"data\">we</span> = we (subject), <span class=\"data\">us</span> = us (object). From 9, 10, 11 you get <span class=\"data\">þu</span> = you (subject, one person) and <span class=\"data\">þe</span> = you (object, one person). Sentence 13, <span class=\"data\">Gesawe ge us?</span> \"Did you see us?\", gives <span class=\"data\">ge</span> as a subject \"you\", and sentence 5, <span class=\"data\">Seo lar eow nereþ</span>, gives <span class=\"data\">eow</span> as an object \"you\". So there are already two different \"you\" words for one person and two more for a group.</p>\n<p>The extra sentences 28-32 add the surprise. In 29, \"the king and I\" are the subject and the sentence continues <span class=\"data\">ne grette wit hi</span> — <span class=\"data\">wit</span> means \"we\", but only when \"we\" is <em>exactly two people</em>. The matching object form appears in the same example: <span class=\"data\">þas boceras unc gretton</span>, \"these scribes greeted us (two)\". In 32, Edmund and Swithun are addressed as <span class=\"data\">git</span> when they are the subject and <span class=\"data\">inc</span> when they are the object.</p>\n<p>This gives a three-way number system, called <strong>dual</strong> for the \"exactly two\" forms:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>one</th><th>two (dual)</th><th>three or more</th></tr></thead>\n<tbody>\n<tr><td>\"I / we\" subject</td><td><span class=\"data\">ic</span></td><td><span class=\"data\">wit</span></td><td><span class=\"data\">we</span></td></tr>\n<tr><td>\"me / us\" object</td><td>—</td><td><span class=\"data\">unc</span></td><td><span class=\"data\">us</span></td></tr>\n<tr><td>\"you\" subject</td><td><span class=\"data\">þu</span></td><td><span class=\"data\">git</span></td><td><span class=\"data\">ge</span></td></tr>\n<tr><td>\"you\" object</td><td><span class=\"data\">þe</span></td><td><span class=\"data\">inc</span></td><td><span class=\"data\">eow</span></td></tr>\n</tbody>\n</table>\n</div>\n<p>Those six \"you\" forms are exactly what part A4 asks about. Third person is similar: <span class=\"data\">hi</span> is \"they\" and also \"them\", <span class=\"data\">hine</span> is \"him\", <span class=\"data\">hit</span> is \"it\".</p>\n\n<h3>Step 2: work out the word order</h3>\n<p>Compare these:</p>\n<ul>\n<li><span class=\"data\">þas weras hieraþ þas wifmen</span> — subject, verb, object. The object is a full noun phrase.</li>\n<li><span class=\"data\">We hine gretton</span> — subject, <em>object</em>, verb. The object is a pronoun, and it jumps in front of the verb.</li>\n<li><span class=\"data\">Ne hiere we þas wifmen</span> and <span class=\"data\">þa hierde we þe</span> — when the sentence starts with <span class=\"data\">ne</span> \"not\" or <span class=\"data\">þa/þonne</span> \"then\", the verb comes straight after it and the subject follows the verb.</li>\n<li><span class=\"data\">Hwæt cweþe we?</span> — wh-word, verb, subject.</li>\n<li><span class=\"data\">Fremede we hit?</span> — a yes/no question puts the verb first.</li>\n</ul>\n\n<h3>Step 3: apply it to A1</h3>\n<p>For (a), sentence 3 has <span class=\"data\">þone arcebisceop</span> \"the archbishop\", so the noun itself is <span class=\"data\">arcebisceop</span>. For (b), sentence 12 shows the pattern <span class=\"data\">Alfred cyning</span> = \"King Alfred\": the title goes <em>after</em> the name, so \"King Edward\" is <span class=\"data\">Eadweard cyning</span>. Both <span class=\"data\">menn</span> and <span class=\"data\">weras</span> translate as \"men\" (Old English had more than one word for it). Sentences 20-23 are then straight translations using the chart: <span class=\"data\">Ne hierde ge hi</span> has plural subject <span class=\"data\">ge</span> and object <span class=\"data\">hi</span>, and <span class=\"data\">ne</span> plus the past tense gives \"did not\", so it means \"You did not hear them.\"</p>\n\n<h3>Step 4: A2, filling Old English blanks</h3>\n<p>Work backwards from the English. \"The teaching saves them\" has a pronoun object, so the order is subject-object-verb: <span class=\"data\">Seo lar hi</span> + the verb. Sentence 5 gives that verb as <span class=\"data\">nereþ</span>. \"You heard it\" likewise puts the pronoun object first: <span class=\"data\">Þu hit hierdest</span>, with the second-person singular past ending <em>-est</em> copied from sentence 9. \"Then they heard us\" starts with \"then\", so the verb comes next, then the subject, then the object: <span class=\"data\">Þa hierdon hi us</span>.</p>\n\n<h3>Step 5: A3, matching the contexts</h3>\n<p>Each sentence is \"we saw you\". You only need two questions: how many people are in the \"we\", and how many in the \"you\"? <span class=\"data\">wit</span> = we two, <span class=\"data\">we</span> = we three or more; <span class=\"data\">þe</span> = you one, <span class=\"data\">inc</span> = you two, <span class=\"data\">eow</span> = you three or more. Context B, \"Mother said it to tell me that she and my father had seen me\", is two speakers and one addressee, so it is <span class=\"data\">Wit þe gesawon</span>. Context C, one bishop speaking for all the bishops to a single archbishop, is many speakers and one addressee: <span class=\"data\">We þe gesawon</span>. Every context sorts out the same way.</p>\n\n<h3>Step 6: A4</h3>\n<p>Decide subject or object, then count. In 33 the blank is the subject and Paul is one person: <span class=\"data\">þu</span>. In 34 the subject is two people: <span class=\"data\">git</span>. In 35 the blank is the object (the addressees are Athelwine and Wulfstan, two people): <span class=\"data\">inc</span>. In 36 the crowd is the subject: <span class=\"data\">ge</span>. In 37 Paul is the object: <span class=\"data\">þe</span>. In 38 three addressees as object: <span class=\"data\">eow</span>.</p>\n\n<h3>One extra detail</h3>\n<p>You may have noticed <span class=\"data\">gesawe we hi</span> in 12 but <span class=\"data\">gesawon</span> elsewhere. When a first- or second-person plural pronoun follows the verb immediately, the verb ending shrinks to <em>-e</em>. That is why sentence 34 has <span class=\"data\">hierde git</span> rather than <span class=\"data\">hierdon git</span>. Present Day English kept only one \"you\" and lost the dual entirely — which is why the modern sentence \"We saw you\" is ambiguous in six different ways at once.</p>",
   "reviewStatus": "published"
 }

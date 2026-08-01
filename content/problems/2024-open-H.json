@@ -1,27 +1,182 @@
 {
   "id": "2024-open-H",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2024,
   "round": "open",
   "letter": "H",
   "title": "Evidentially, My Dear Tariana",
-  "authors": [],
+  "authors": [
+    "Babette Verhoeven",
+    "Simi Hellsten"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
-    "morphology",
-    "semantics"
+    "semantics",
+    "morphology"
   ],
-  "formTag": "rule discovery",
+  "formTag": "table completion",
   "difficulty": "hard",
   "languages": [
     "Tariana"
   ],
   "officialPoints": 15,
   "officialTimeMinutes": 27,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Tariana is an endangered language spoken in the Vaupés River area in Brazil, close to the border with Colombia. There are about 100 speakers of Tariana today, while there are a further 1,500 Tariana people who do not speak the language.</p>\n<p>One morning, Antônia, Cândido, Margarida, João, Maria, and Emílio were playing a detective game, in which they had to discover who had just “poisoned” their sleeping friend Ismael! They very quickly decided that he had drunk some poisoned <em>manioc-flour</em>, a mixture of cassava (or tapioca) flour and water. When asked what happened to Ismael, their responses were as follows:</p>\n<div class=\"table-scroll\"><table><thead><tr><th>Speaker</th><th>Tariana Statement</th><th>English Translation</th><th>Evidence for Claim</th></tr></thead><tbody>\n<tr><td>Antônia</td><td><span class=\"data\">Diha kawhi-nuku diiɾaka</span></td><td><em>He drank manioc-flour</em></td><td>Antônia saw Ismael drink it before he (Ismael) fell asleep.</td></tr>\n<tr><td>Cândido</td><td><span class=\"data\">Mayẽ kawhi-nuku diiɾanihka</span></td><td><em>Ismael drank manioc-flour</em></td><td>Cândido saw some manioc-flour on Ismael’s upper lip (like a “milk mustache”).</td></tr>\n<tr><td>Margarida</td><td><span class=\"data\">Diha kawhi-nuku diiɾamahka</span></td><td><em>He drank manioc-flour</em></td><td>Margarida had heard Ismael slurping his manioc-flour in the room next door.</td></tr>\n<tr><td>João</td><td><span class=\"data\">Mayẽ kawhi-nuku diiɾasika</span></td><td><em>Ismael drank manioc-flour</em></td><td>João knew that Ismael took some of his sister’s manioc-flour every morning.</td></tr>\n<tr><td>Maria</td><td><span class=\"data\">Diha kawhi-nuku diiɾapidaka</span></td><td><em>He drank manioc-flour</em></td><td>Ismael told Maria (before falling asleep) that he (Ismael) had drunk some.</td></tr>\n<tr><td>Emílio</td><td><span class=\"data\">Mayẽ kawhi-nuku diiɾamahka</span></td><td><em>Ismael drank manioc-flour</em></td><td>Emílio could smell manioc-flour on Ismael’s breath.</td></tr>\n</tbody></table></div>\n<p>First, they suspected José, so they went to his house. They investigated the house and spoke to a key witness (José’s mom). They all concluded José was innocent—he had an alibi! When asked what José had been doing, their responses were as follows:</p>\n<div class=\"table-scroll\"><table><thead><tr><th>Speaker</th><th>Tariana Statement</th><th>English Translation</th><th>Evidence for Claim</th></tr></thead><tbody>\n<tr><td>Antônia</td><td><span class=\"data\">Juse iɾida dimanikaka</span></td><td><em>José was playing soccer</em></td><td>Antônia saw José playing soccer on the field by the road.</td></tr>\n<tr><td>Cândido</td><td><span class=\"data\">Juse iɾida dimanikanihka</span></td><td><em>José was playing soccer</em></td><td>Cândido saw that both José and José’s soccer equipment were missing.</td></tr>\n<tr><td>Margarida</td><td><span class=\"data\">Juse iɾida dimanikasika</span></td><td><em>José was playing soccer</em></td><td>Margarida knew it was time for José’s weekly soccer match.</td></tr>\n<tr><td>João</td><td><span class=\"data\">Naha iɾida namanikaka</span></td><td><em>They were playing soccer</em></td><td>João could see José playing soccer with his brother.</td></tr>\n<tr><td>Maria</td><td><span class=\"data\">Naha iɾida namanikapidaka</span></td><td><em>They were playing soccer</em></td><td>Maria was told by José’s mum that José was playing soccer with his brother.</td></tr>\n<tr><td>Emílio</td><td><span class=\"data\">Naha iɾida namanikanihka</span></td><td><em>They were playing soccer</em></td><td>Emílio saw that José’s soccer ball and both sets of soccer shoes were missing.</td></tr>\n</tbody></table></div>\n<p>Next, they went to Ismael’s house. Again they looked around, and they spoke to a second key witness (Ismael’s sister, Olívia). They agreed she was acting very suspiciously, as she wouldn’t say what she was doing at the time of Ismael’s “death”. This time, they didn’t all agree. When asked what they thought had happened, their responses were as follows:</p>\n<div class=\"table-scroll\"><table><thead><tr><th>Speaker</th><th>Tariana Statement</th><th>English Translation</th><th>Evidence for Claim</th></tr></thead><tbody>\n<tr><td>Antônia</td><td><span class=\"data\">Óli dukwasika</span></td><td><em>Olívia was sleeping in the hammock</em></td><td>Antônia believed that Olívia always sleeps all morning.</td></tr>\n<tr><td>Cândido</td><td>(a)</td><td><em>She was swimming</em></td><td>Cândido saw that Olívia’s clothes were wet.</td></tr>\n<tr><td>Margarida</td><td><span class=\"data\">Duha duayhamahka</span></td><td><em>She was swimming</em></td><td>Margarida had heard Olívia splashing around in the river earlier.</td></tr>\n<tr><td>João</td><td><span class=\"data\">Óli kawhi-nuku dunimahka</span></td><td><em>Olívia was making manioc-flour</em></td><td>João could smell manioc-flour in the kitchen.</td></tr>\n<tr><td>Maria</td><td>(b)</td><td><em>She was making manioc-flour</em></td><td>Maria was told by Ismael’s dad that Olívia had been making manioc-flour.</td></tr>\n<tr><td>Emílio</td><td><span class=\"data\">Duha hinipuku dumeyutanihka</span></td><td><em>She was raking the garden</em></td><td>Emílio saw that the garden had recently been raked.</td></tr>\n</tbody></table></div>\n<p>When João and Maria shared their information, they told Olívia:</p>\n<p style=\"padding-left:2em\">“___(c)___ <span class=\"data\">mayẽ piinunihka!</span>” <em>You killed Ismael!</em></p>\n<p>They began explaining all of the things they had come across that morning. They establish that Olívia had also gone swimming, and that Leonardo had raked the garden before going to lie down in the hammock.</p>\n<p><strong>H3 table.</strong> For each statement below (numbered 1 through 4), three possible pieces of evidence are given (labelled A, B, and C).</p>\n<div class=\"table-scroll\"><table><thead><tr><th></th><th>Speaker</th><th>Tariana Statement</th><th>English Translation</th><th>Possible Evidence for Claim</th></tr></thead><tbody>\n<tr><td>1)</td><td>Leonardo</td><td><span class=\"data\">Óli duayhaka</span></td><td><em>Olívia was swimming</em></td><td>A. Leonardo knew that Olívia liked swimming.<br />B. Leonardo had seen Olívia swimming in the river.<br />C. Leonardo saw that Olívia’s clothes were wet.</td></tr>\n<tr><td>2)</td><td>Maria</td><td><span class=\"data\">Leó hinipuku dimeyutasika</span></td><td><em>Leonardo was raking the garden</em></td><td>A. Maria knew that Leonardo raked the garden every morning.<br />B. Leonardo smelt of the garden.<br />C. Maria saw that someone had raked the garden.</td></tr>\n<tr><td>3)</td><td>João</td><td><span class=\"data\">Diha hinipuku dimeyutamahka</span></td><td><em>He was raking the garden</em></td><td>A. Leonardo smelt of the garden.<br />B. João had heard Leonardo raking the garden.<br />C. João saw that someone had raked the garden.</td></tr>\n<tr><td>4)</td><td>Emílio</td><td><span class=\"data\">Leó dikwanihka</span></td><td><em>Leonardo was sleeping in the hammock</em></td><td>A. Leonardo told Emílio that he (Leonardo) had been asleep.<br />B. Emílio saw that someone had been sleeping in the hammock.<br />C. Leonardo looked well-rested.</td></tr>\n</tbody></table></div>\n<p><strong>H4 table.</strong> Fill in the gaps (d)-(h) with the correct Tariana translation.</p>\n<div class=\"table-scroll\"><table><thead><tr><th>Speaker</th><th>Tariana Statement</th><th>English Translation</th><th>Evidence for Claim</th></tr></thead><tbody>\n<tr><td>Cândido</td><td>(d)</td><td><em>You were swimming</em></td><td>Cândido had overheard Olívia confirm that she (Olívia) had gone swimming.</td></tr>\n<tr><td>Margarida</td><td>(e)</td><td><em>He was raking the garden</em></td><td>Margarida saw that Leonardo’s clothes had bits of grass and leaves on them.</td></tr>\n<tr><td>Olívia</td><td>(f)</td><td><em>Leonardo was sleeping in the hammock</em></td><td>Olívia knew that Leonardo always lies down in the hammock after gardening.</td></tr>\n<tr><td>Antônia</td><td>(g)</td><td><em>You drank manioc-flour</em></td><td>Antônia saw a dirty cup next to the hammock where Leonardo had been sleeping.</td></tr>\n<tr><td>Olívia</td><td>(h)</td><td><em>They were playing soccer</em></td><td>Olívia had heard a soccer game going on while she was swimming.</td></tr>\n</tbody></table></div>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "H1.a",
+      "part": "H1",
+      "partPrompt": "Fill in the gaps (a) and (b) by giving Cândido's and Maria's statements in Tariana.",
+      "promptHtml": "<p>(a) Cândido: <em>She was swimming</em> — Cândido saw that Olívia’s clothes were wet.</p>",
+      "gradingMode": "exact",
+      "answerKey": "duha duayhanihka",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "H1.b",
+      "part": "H1",
+      "promptHtml": "<p>(b) Maria: <em>She was making manioc-flour</em> — Maria was told by Ismael’s dad that Olívia had been making manioc-flour.</p>",
+      "gradingMode": "exact",
+      "answerKey": "duha kawhi-nuku dunipidaka",
+      "acceptedVariants": [
+        "duha kawhi nuku dunipidaka"
+      ],
+      "points": 2
+    },
+    {
+      "id": "H2.c",
+      "part": "H2",
+      "partPrompt": "What Tariana word should replace (c) in “___(c)___ mayẽ piinunihka!” (You killed Ismael!)?",
+      "promptHtml": "<p>Give the missing word (c).</p>",
+      "gradingMode": "exact",
+      "answerKey": "piha",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "H3.1",
+      "part": "H3",
+      "partPrompt": "For each statement (1-4) in the H3 table, say which of the three pieces of evidence (A, B, C) the speaker may have had in mind. You may give zero, one, or more than one option.",
+      "promptHtml": "<p>1) Leonardo: <span class=\"data\">Óli duayhaka</span> — <em>Olívia was swimming</em></p>",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "b only"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H3.2",
+      "part": "H3",
+      "promptHtml": "<p>2) Maria: <span class=\"data\">Leó hinipuku dimeyutasika</span> — <em>Leonardo was raking the garden</em></p>",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "a only"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H3.3",
+      "part": "H3",
+      "promptHtml": "<p>3) João: <span class=\"data\">Diha hinipuku dimeyutamahka</span> — <em>He was raking the garden</em></p>",
+      "gradingMode": "exact",
+      "answerKey": "A and B",
+      "acceptedVariants": [
+        "A, B",
+        "AB",
+        "A B",
+        "B and A"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H3.4",
+      "part": "H3",
+      "promptHtml": "<p>4) Emílio: <span class=\"data\">Leó dikwanihka</span> — <em>Leonardo was sleeping in the hammock</em></p>",
+      "gradingMode": "exact",
+      "answerKey": "B and C",
+      "acceptedVariants": [
+        "B, C",
+        "BC",
+        "B C",
+        "C and B"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H4.d",
+      "part": "H4",
+      "partPrompt": "Fill in the gaps (d)-(h) in the H4 table with the correct Tariana translation.",
+      "promptHtml": "<p>(d) Cândido: <em>You were swimming</em> — Cândido had overheard Olívia confirm that she (Olívia) had gone swimming.</p>",
+      "gradingMode": "exact",
+      "answerKey": "piha piayhapidaka",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "H4.e",
+      "part": "H4",
+      "promptHtml": "<p>(e) Margarida: <em>He was raking the garden</em> — Margarida saw that Leonardo’s clothes had bits of grass and leaves on them.</p>",
+      "gradingMode": "exact",
+      "answerKey": "diha hinipuku dimeyutanihka",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "H4.f",
+      "part": "H4",
+      "promptHtml": "<p>(f) Olívia: <em>Leonardo was sleeping in the hammock</em> — Olívia knew that Leonardo always lies down in the hammock after gardening.</p>",
+      "gradingMode": "exact",
+      "answerKey": "leó dikwasika",
+      "acceptedVariants": [
+        "leo dikwasika"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H4.g",
+      "part": "H4",
+      "promptHtml": "<p>(g) Antônia: <em>You drank manioc-flour</em> — Antônia saw a dirty cup next to the hammock where Leonardo had been sleeping.</p>",
+      "gradingMode": "exact",
+      "answerKey": "piha kawhi-nuku piiranihka",
+      "acceptedVariants": [
+        "piha kawhi nuku piiranihka",
+        "piha kawhi-nuku piiɾanihka"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H4.h",
+      "part": "H4",
+      "promptHtml": "<p>(h) Olívia: <em>They were playing soccer</em> — Olívia had heard a soccer game going on while she was swimming.</p>",
+      "gradingMode": "exact",
+      "answerKey": "naha irida namanikamahka",
+      "acceptedVariants": [
+        "naha iɾida namanikamahka"
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Notice that in the first table, six people say almost exactly the same sentence in Tariana, and the English translation is the same too. The only thing that changes is the last piece of the verb — and the only thing that changes in the story is HOW each person knows. Line those two columns up.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Tariana verbs are built as prefix + root + evidential suffix. The prefix tells you who the subject is (he, she, they, you), and the suffix tells you the speaker's source of information: seeing the event itself, hearing or smelling it, inferring it from physical traces left behind, assuming it from general knowledge, or being told about it by someone else. Each of the five sources has its own suffix.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Try the José table as practice. Antônia saw the game with her own eyes and says dimanikaka; Margarida only knew it was match day and says dimanikasika; Cândido found the equipment missing and says dimanikanihka. So the root is -manika- and the endings -ka, -sika, -nihka carry the three different kinds of knowledge. Compare dimanikaka with namanikaka to see what the prefix does.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What the puzzle is really about</h3><p>In English, if you want to say how you know something, you add extra words: “I saw that he drank it”, “apparently he drank it”, “he must have drunk it”. In Tariana you cannot avoid saying it: every verb carries a little ending called an <strong>evidential</strong>, which marks your source of information. Leaving it out is like leaving out the past tense in English — the sentence is simply not grammatical.</p><p>That is why the first table has six people saying the same English sentence, <em>He drank manioc-flour</em>, in six slightly different ways.</p><h3>Step 1: split the verb</h3><p>Look at Antônia's and Margarida's sentences:</p><ul><li><span class=\"data\">Diha kawhi-nuku diiɾaka</span></li><li><span class=\"data\">Diha kawhi-nuku diiɾamahka</span></li></ul><p>Everything is identical up to <span class=\"data\">diira-</span>, then one has <span class=\"data\">-ka</span> and the other <span class=\"data\">-mahka</span>. Doing this across all six rows gives the verb shape <strong>di- + -ira- + evidential</strong>: a prefix meaning “he”, the root “drink”, and an ending.</p><h3>Step 2: match each ending to a kind of evidence</h3><div class=\"table-scroll\"><table><thead><tr><th>Ending</th><th>Source of information</th><th>Example evidence in the story</th></tr></thead><tbody><tr><td><span class=\"data\">-ka</span></td><td>visual: you saw the event happen</td><td>Antônia saw Ismael drink it</td></tr><tr><td><span class=\"data\">-mahka</span></td><td>non-visual senses: you heard it, smelled it</td><td>Margarida heard slurping; Emílio smelled it on his breath</td></tr><tr><td><span class=\"data\">-nihka</span></td><td>inferred: you saw physical traces left behind</td><td>Cândido saw flour on the lip; the equipment was missing</td></tr><tr><td><span class=\"data\">-sika</span></td><td>assumed: general knowledge, habits, reasoning</td><td>João knew Ismael took some every morning</td></tr><tr><td><span class=\"data\">-pidaka</span></td><td>reported: somebody told you</td><td>Ismael told Maria; José's mum told Maria</td></tr></tbody></table></div><p>The tricky pair is <span class=\"data\">-mahka</span> versus <span class=\"data\">-nihka</span>. Both are indirect, but <span class=\"data\">-mahka</span> is for perceiving the event <em>as it happens</em> with a sense other than sight, while <span class=\"data\">-nihka</span> is for working it out afterwards from what was left behind.</p><h3>Step 3: the pronouns and prefixes</h3><p>The second and third tables give us the person system:</p><dl class=\"gloss-list\"><dt>diha / di-</dt><dd>he</dd><dt>duha / du-</dt><dd>she</dd><dt>naha / na-</dt><dd>they</dd><dt>piha / pi-</dt><dd>you</dd></dl><p>The free pronoun comes first in the sentence and the matching prefix sits on the verb: <span class=\"data\">Naha iɾida namanikaka</span> “they were playing soccer”. Personal names simply replace the pronoun, but the prefix stays: <span class=\"data\">Óli dukwasika</span> (Olívia, she-sleep-assumed), <span class=\"data\">Leó dikwanihka</span> (Leonardo, he-sleep-inferred).</p><p>Roots we can extract: <span class=\"data\">-ira</span> drink, <span class=\"data\">-manika</span> play, <span class=\"data\">-ayha</span> swim, <span class=\"data\">-kwa</span> sleep in a hammock, <span class=\"data\">-ni</span> make, <span class=\"data\">-meyuta</span> rake, <span class=\"data\">-inu</span> kill. Notice <span class=\"data\">du-</span> + <span class=\"data\">-ayha</span> gives <span class=\"data\">duayha</span> and <span class=\"data\">pi-</span> + <span class=\"data\">-ayha</span> gives <span class=\"data\">piayha</span>.</p><h3>H1 and H2</h3><p>(a) Cândido saw wet clothes — a trace, so inferred: <span class=\"data\">duha duayhanihka</span>. (b) Maria was told by Ismael's dad — reported: <span class=\"data\">duha kawhi-nuku dunipidaka</span>, built from João's <span class=\"data\">dunimahka</span> by swapping the ending.</p><p>For (c), the English is “You killed Ismael”, and the verb <span class=\"data\">piinunihka</span> already has the <span class=\"data\">pi-</span> “you” prefix, so the pronoun must be <span class=\"data\">piha</span>.</p><h3>H3: reading the evidence backwards</h3><p>Here the ending is given and you must decide which evidence fits. More than one option can fit, and some options fit no ending in the row.</p><ol><li><span class=\"data\">duayhaka</span> is visual, so the speaker must have seen the swimming itself: <strong>B</strong>. A is general knowledge (<span class=\"data\">-sika</span>) and C is a trace (<span class=\"data\">-nihka</span>).</li><li><span class=\"data\">dimeyutasika</span> is assumed, so it has to come from a known habit: <strong>A</strong>. B is a smell (<span class=\"data\">-mahka</span>), C is a trace (<span class=\"data\">-nihka</span>).</li><li><span class=\"data\">dimeyutamahka</span> is non-visual sense. Both smelling him (A) and hearing him rake (B) count, so the answer is <strong>A and B</strong>. C is seeing the finished result, which is inference.</li><li><span class=\"data\">dikwanihka</span> is inferred from evidence. Seeing the slept-in hammock (B) and seeing that Leonardo looks well-rested (C) are both conclusions drawn from traces, so <strong>B and C</strong>. A is being told, which would need <span class=\"data\">-pidaka</span>.</li></ol><h3>H4: putting it all together</h3><p>Each gap needs the right pronoun, the right prefix, the right root, and the right ending.</p><ul><li>(d) “You were swimming”, overheard Olívia say so — that is a report: <span class=\"data\">piha piayhapidaka</span>.</li><li>(e) “He was raking the garden”, grass on his clothes is a trace: <span class=\"data\">diha hinipuku dimeyutanihka</span>.</li><li>(f) “Leonardo was sleeping in the hammock”, based on knowing his habits: <span class=\"data\">leó dikwasika</span>.</li><li>(g) “You drank manioc-flour”, a dirty cup is a trace: <span class=\"data\">piha kawhi-nuku piiranihka</span>.</li><li>(h) “They were playing soccer”, heard while swimming: <span class=\"data\">naha iɾida namanikamahka</span>.</li></ul><p>One last detail worth noticing: the object <span class=\"data\">kawhi</span> “manioc-flour” carries the marker <span class=\"data\">-nuku</span>, which flags it as the topical object; <span class=\"data\">iɾida</span> “soccer” and <span class=\"data\">hinipuku</span> “garden” do not take it in this data, so just copy the pattern from the examples.</p>",
   "reviewStatus": "published"
 }

@@ -1,24 +1,189 @@
 {
   "id": "2023-open-C",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2023,
   "round": "open",
   "letter": "C",
   "title": "Vloxes",
-  "authors": [],
+  "authors": [
+    "Tom McCoy"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
-    "semantics"
+    "semantics",
+    "morphology"
   ],
   "formTag": "rule discovery",
   "difficulty": "hard",
   "languages": [],
   "officialPoints": 15,
   "officialTimeMinutes": 27,
-  "bodyHtml": "",
-  "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "bodyHtml": "<p>Exciting news: You've gotten clearance to visit Mars! Your job there is to take care of some Martian animals called vloxes. Here are the nine vloxes that you are in charge of:</p>\n<figure><img src=\"/content-assets/2023-open-c-vloxes.png\" alt=\"Nine cartoon Martian animals labeled A through I. Each has a pentagon-shaped body with a stripe across it, a round head, four legs, and some have a horn. They differ in overall size, presence of a horn, the direction the body stripe points, and how darkly the legs are shaded.\" /></figure>\n<p>Your manager asks you to identify which vloxes fit the following descriptions:</p>\n<ul>\n<li>The two <span class=\"data\">mellivu</span> vloxes</li>\n<li>The two <span class=\"data\">mellovu</span> vloxes</li>\n<li>The two <span class=\"data\">kibb</span> vloxes</li>\n<li>The two <span class=\"data\">azeltorf</span> vloxes</li>\n<li>The <span class=\"data\">qliqli</span> vlox</li>\n<li>The <span class=\"data\">imxo</span> vlox</li>\n<li>The three <span class=\"data\">ravv</span> vloxes</li>\n<li>The <span class=\"data\">kibbish-zuff</span> vlox</li>\n<li>The <span class=\"data\">zuffish-kibb</span> vlox</li>\n</ul>\n<p>Unfortunately, many of these words are unfamiliar to you, and you don't have a dictionary! Luckily, you do have an encyclopedia article (below) that uses these words. Even though the article doesn't define the words directly, you can figure out a lot about a word based on how it is used in context. In fact, this basic strategy is an important approach in computational linguistics: When computers need to learn the meanings of words, they do so by analyzing the contexts that those words appear in.</p>\n<p>Here is the encyclopedia article about vloxes that you should use to help you understand the unfamiliar words in your manager's descriptions.</p>\n<div class=\"table-scroll\">\n<h3>Vlox</h3>\n<p><em>From Marsipedia, the Martian encyclopedia</em></p>\n<p>The vlox (<em>Vloxis vloxia</em>) is the most <span class=\"data\">imxo</span> species of <span class=\"data\">zoobleporf</span>. Due to its playful disposition, it is a popular pet throughout Mars.</p>\n<p><strong>Contents</strong><br />1 Appearance<br />2 In popular culture</p>\n<h3>Appearance</h3>\n<p>Vloxes occur in two breeds: the polar vlox and the valley vlox. Polar vloxes are usually more <span class=\"data\">mellivu</span> than valley vloxes.<sup>[1]</sup> Regardless of breed, all vloxes are born completely <span class=\"data\">qliqli</span>. As they mature, they become less and less <span class=\"data\">qliqli</span>. It is believed that all prehistoric vloxes were <span class=\"data\">zuffish-kibb</span> or <span class=\"data\">tezzish-kibb</span>, but modern vloxes display great variety in <span class=\"data\">zlorvitude</span>.</p>\n<h3>In popular culture</h3>\n<ul>\n<li>In the “Olympus Mons Explorers” comics, Captain Dfdgb's spaceship is called <em>The <span class=\"data\">Mellovu</span> Vlox</em>.</li>\n<li>The first Martian prime minister, Jzirla Jzirlsdaughter, was often seen with her <span class=\"data\">kibbish-zuff</span> vlox named Klgrdm.</li>\n<li>In the sitcom “Phobos and Deimos,” the main character Phobos has three <span class=\"data\">imxo</span> vloxes: a <span class=\"data\">kibb</span> vlox named Blorblim, a <span class=\"data\">zuffish-ravv</span> vlox named Qqqq, and a <span class=\"data\">ravvish-womm</span> vlox named Robert.</li>\n<li>The most popular song by the Bellona Quartet is “Lookin' Like a Nearly <span class=\"data\">Azeltorf</span> Vlox,” which spent seven weeks at the #1 position on the Mercury Top 60 chart.</li>\n</ul>\n<h3>Notes</h3>\n<p><sup>1</sup> In a previous edition of this encyclopedia, we said that polar vloxes are more <span class=\"data\">mellovu</span> than valley vloxes. This was a typo - obviously, it makes no sense to say “more <span class=\"data\">mellovu</span>”!</p>\n</div>",
+  "assets": [
+    {
+      "src": "/content-assets/2023-open-c-vloxes.png",
+      "alt": "Nine cartoon Martian animals labeled A through I. Each has a pentagon-shaped body with a stripe across it, a round head, four legs, and some have a horn. They differ in overall size, presence of a horn, the direction the body stripe points, and how darkly the legs are shaded."
+    }
+  ],
+  "questions": [
+    {
+      "id": "C1.A",
+      "part": "C1",
+      "partPrompt": "Based on what you can infer from the encyclopedia article, fill in the letter or letters of the vloxes that fit each description from your manager. You will need to use some letters more than once. Give letters separated by commas.",
+      "promptHtml": "<p>The two <span class=\"data\">mellivu</span> vloxes</p>",
+      "gradingMode": "exact",
+      "answerKey": "B, F",
+      "acceptedVariants": [
+        "B,F",
+        "BF",
+        "F,B",
+        "F, B",
+        "B and F"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.B",
+      "part": "C1",
+      "promptHtml": "<p>The two <span class=\"data\">mellovu</span> vloxes</p>",
+      "gradingMode": "exact",
+      "answerKey": "A, I",
+      "acceptedVariants": [
+        "A,I",
+        "AI",
+        "I,A",
+        "I, A",
+        "A and I"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.C",
+      "part": "C1",
+      "promptHtml": "<p>The two <span class=\"data\">kibb</span> vloxes</p>",
+      "gradingMode": "exact",
+      "answerKey": "A, H",
+      "acceptedVariants": [
+        "A,H",
+        "AH",
+        "H,A",
+        "H, A",
+        "A and H"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.D",
+      "part": "C1",
+      "promptHtml": "<p>The two <span class=\"data\">azeltorf</span> vloxes</p>",
+      "gradingMode": "exact",
+      "answerKey": "A, G",
+      "acceptedVariants": [
+        "A,G",
+        "AG",
+        "G,A",
+        "G, A",
+        "A and G"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.E",
+      "part": "C1",
+      "promptHtml": "<p>The <span class=\"data\">qliqli</span> vlox</p>",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "C1.F",
+      "part": "C1",
+      "promptHtml": "<p>The <span class=\"data\">imxo</span> vlox</p>",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "C1.G",
+      "part": "C1",
+      "promptHtml": "<p>The three <span class=\"data\">ravv</span> vloxes</p>",
+      "gradingMode": "exact",
+      "answerKey": "E, F, G",
+      "acceptedVariants": [
+        "E,F,G",
+        "EFG",
+        "E F G",
+        "G,F,E",
+        "E, G, F",
+        "F, E, G"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.H",
+      "part": "C1",
+      "promptHtml": "<p>The <span class=\"data\">kibbish-zuff</span> vlox</p>",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [
+        "C"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.I",
+      "part": "C1",
+      "promptHtml": "<p>The <span class=\"data\">zuffish-kibb</span> vlox</p>",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "I"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C2.a",
+      "part": "C2",
+      "partPrompt": "Fill in the blanks to create a description of the youngest vlox in the image, of the form ___(a)___ish-__(b)____. Each blank should be filled in with one of the following words: kibb, womm, zuff, tezz, ravv. You should not use the same word twice.",
+      "promptHtml": "<p>Blank (a): the word before <em>-ish</em></p>",
+      "gradingMode": "exact",
+      "answerKey": "womm",
+      "acceptedVariants": [
+        "tezz"
+      ],
+      "points": 3
+    },
+    {
+      "id": "C2.b",
+      "part": "C2",
+      "promptHtml": "<p>Blank (b): the word after the hyphen</p>",
+      "gradingMode": "exact",
+      "answerKey": "tezz",
+      "acceptedVariants": [
+        "womm"
+      ],
+      "points": 3
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "First forget the words and just look at the pictures. List every way the nine vloxes differ from one another. There are exactly four such properties, so each mystery adjective should be describing one of them.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Match the shape of each word to the shape of a property. A word you can say “completely” or “nearly” with must name an endpoint of a scale. A word you cannot say “more” with must name a yes-or-no property. And the hyphenated -ish words work like greenish-yellow: they are blends of two neighbouring basic terms, which means the five basic terms sit next to each other in some fixed arrangement.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Here is one link in the chain, worked out on a word not asked about. The article mentions a ravvish-womm vlox, so ravv and womm must name neighbouring things; it also mentions zuffish-ravv, so zuff sits next to ravv on the other side. Collect all the -ish pairs in the article this way and you get one long chain of five terms. Then ask: five terms, and what part of the vlox has exactly five of something?",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: Look at the pictures before the words</h3>\n<p>Nine vloxes, and none of the mystery words are defined anywhere. So start from the drawings. Compare them carefully and you will find they vary in exactly four ways:</p>\n<ul>\n<li><strong>Size</strong> (some are tiny, one is huge)</li>\n<li><strong>Horn or no horn</strong> (only two vloxes have the curved horn behind the head)</li>\n<li><strong>Direction of the stripe</strong> across the pentagon-shaped body</li>\n<li><strong>How dark the legs are shaded</strong> (from pure white to solid black)</li>\n</ul>\n<p>Since the manager's nine descriptions have to pick out these vloxes, the mystery adjectives must be talking about these four properties. The whole puzzle is figuring out which word goes with which property.</p>\n<h3>Step 2: Use the little English words around each mystery word</h3>\n<p>This is the trick that computers use too: you learn a word from its neighbours. Look at what English words sit next to each mystery word in the article.</p>\n<p><em>“born completely <span class=\"data\">qliqli</span>… less and less <span class=\"data\">qliqli</span>”</em> and <em>“Nearly <span class=\"data\">Azeltorf</span>”</em>. You can only say “completely” or “nearly” about a scale that has a definite end: “completely full” is fine, but “completely large” is odd. Of our four properties, only leg shading has real endpoints, all-white and all-black. So <span class=\"data\">qliqli</span> and <span class=\"data\">azeltorf</span> are the two ends of the shading scale.</p>\n<p>Which is which? The manager wants <em>two</em> <span class=\"data\">azeltorf</span> vloxes and <em>one</em> <span class=\"data\">qliqli</span> vlox. In the picture there are exactly two vloxes with fully black legs and exactly one with fully white legs. So <span class=\"data\">azeltorf</span> = “shaded” (A and G) and <span class=\"data\">qliqli</span> = “unshaded” (D).</p>\n<h3>Step 3: The footnote is a gift</h3>\n<p>The footnote says that “more <span class=\"data\">mellovu</span>” makes no sense. A property you cannot have “more” of is a yes-or-no property: you either have a horn or you don't. So <span class=\"data\">mellovu</span> means either “horned” or “hornless.” Two vloxes have a horn and seven do not, and the manager asks for the <em>two</em> <span class=\"data\">mellovu</span> vloxes, so <span class=\"data\">mellovu</span> = “horned”: A and I.</p>\n<p>Notice the near-identical word <span class=\"data\">mellivu</span> <em>can</em> take “more” (“more <span class=\"data\">mellivu</span> than valley vloxes”), so it is a scale. The only property left over besides the stripe is size. <span class=\"data\">Imxo</span> also refers to size (“the most <span class=\"data\">imxo</span> species”). The manager asks for two <span class=\"data\">mellivu</span> vloxes, and exactly two are clearly tiny, so <span class=\"data\">mellivu</span> = “small” (B and F); and one <span class=\"data\">imxo</span> vlox, so <span class=\"data\">imxo</span> = “large”, which is the giant, I.</p>\n<h3>Step 4: The -ish words and the pentagon</h3>\n<p>That leaves the stripe direction, and the words <span class=\"data\">zuff</span>, <span class=\"data\">kibb</span>, <span class=\"data\">tezz</span>, <span class=\"data\">ravv</span>, <span class=\"data\">womm</span>. Five words, and the vlox body is a pentagon with five corners. That is not a coincidence: the stripe points from the middle of the body out toward one corner, and each word names a corner.</p>\n<p>The hyphenated words behave like English <em>greenish-yellow</em>: a blend of two colours that sit next to each other on the colour wheel, and the <em>second</em> word is the main one. The article gives us these blends: <span class=\"data\">zuffish-kibb</span>, <span class=\"data\">tezzish-kibb</span>, <span class=\"data\">kibbish-zuff</span>, <span class=\"data\">zuffish-ravv</span>, <span class=\"data\">ravvish-womm</span>. Each blend tells us two corners are neighbours. Chain them together:</p>\n<p><span class=\"data\">womm</span> — <span class=\"data\">ravv</span> — <span class=\"data\">zuff</span> — <span class=\"data\">kibb</span> — <span class=\"data\">tezz</span> (and <span class=\"data\">tezz</span> closes the ring back round to <span class=\"data\">womm</span>).</p>\n<h3>Step 5: Pin the chain onto the actual pentagon</h3>\n<p>We still need to know which corner is which. Count stripe directions in the picture. Three vloxes (E, F, G) have the stripe pointing back toward the tail, and the manager asks for <em>three</em> <span class=\"data\">ravv</span> vloxes, so that direction is <span class=\"data\">ravv</span>. Two vloxes (A and H) have it pointing toward the head, and the manager asks for <em>two</em> <span class=\"data\">kibb</span> vloxes, so that direction is <span class=\"data\">kibb</span>. Fitting the chain around the pentagon with those two fixed gives:</p>\n<ul>\n<li><span class=\"data\">zuff</span> at the top</li>\n<li><span class=\"data\">kibb</span> upper right (toward the head)</li>\n<li><span class=\"data\">tezz</span> lower right</li>\n<li><span class=\"data\">womm</span> at the bottom</li>\n<li><span class=\"data\">ravv</span> on the left (toward the tail)</li>\n</ul>\n<p>Now the two remaining descriptions: both <span class=\"data\">kibbish-zuff</span> and <span class=\"data\">zuffish-kibb</span> point somewhere between the top corner and the upper-right corner. Following the <em>greenish-yellow</em> rule, the second word dominates, so <span class=\"data\">zuffish-kibb</span> leans toward <span class=\"data\">kibb</span> and <span class=\"data\">kibbish-zuff</span> leans toward <span class=\"data\">zuff</span>. Comparing the two in-between stripes in the picture gives <span class=\"data\">zuffish-kibb</span> = C and <span class=\"data\">kibbish-zuff</span> = I. (The official solution notes contestants were not penalised for swapping these two.)</p>\n<h3>Step 6: The youngest vlox (C2)</h3>\n<p>The article says vloxes are born completely <span class=\"data\">qliqli</span> and get less <span class=\"data\">qliqli</span> as they mature. We decided <span class=\"data\">qliqli</span> = “unshaded legs”, so the youngest vlox is the one with the palest legs: D. Its stripe points mostly at the lower-right corner (<span class=\"data\">tezz</span>) but is tilted a little toward the bottom corner (<span class=\"data\">womm</span>). Main term second, modifier first: <span class=\"data\">wommish-tezz</span>. (<span class=\"data\">tezzish-womm</span> was also accepted.)</p>",
   "reviewStatus": "published"
 }

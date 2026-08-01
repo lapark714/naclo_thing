@@ -1,27 +1,101 @@
 {
   "id": "2024-open-F",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2024,
   "round": "open",
   "letter": "F",
   "title": "Paiwan in Progress",
-  "authors": [],
+  "authors": [
+    "Ethan Chi"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
     "morphology",
-    "syntax"
+    "phonology"
   ],
-  "formTag": "rule discovery",
+  "formTag": "table completion",
   "difficulty": "standard",
   "languages": [
     "Paiwan"
   ],
   "officialPoints": 10,
   "officialTimeMinutes": 18,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Paiwan is the language of the Paiwan people, one of the indigenous peoples of Taiwan. There are nearly 100,000 Paiwan people, and approximately 15,000 of them are native speakers of the language.</p>\n<p>Below are some Paiwan verbs given in two forms: their root form and their progressive form. (The root form is a verb's basic form, and the progressive is the form that, in English, has the ending <em>-ing</em>.) The meanings of the verbs are provided for interest, but they are not necessary for solving the problem.</p>\n<p><strong>F1.</strong> Some entries in the table have been left blank. Fill them in on your Answer Sheet.</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th colspan=\"2\">Root Forms</th><th colspan=\"2\">Progressive Forms</th></tr>\n</thead>\n<tbody>\n<tr><td><span class=\"data\">keman</span></td><td><em>to eat</em></td><td><span class=\"data\">kemakan</span></td><td><em>eating</em></td></tr>\n<tr><td><span class=\"data\">ivu</span></td><td><em>to talk</em></td><td><span class=\"data\">ivuivu</span></td><td><em>talking</em></td></tr>\n<tr><td><span class=\"data\">kivata</span></td><td><em>to ask</em></td><td><span class=\"data\">kivatavata</span></td><td><em>asking</em></td></tr>\n<tr><td><span class=\"data\">lemumay</span></td><td><em>to hit</em></td><td><span class=\"data\">lemumalumay</span></td><td><em>hitting</em></td></tr>\n<tr><td><span class=\"data\">temekel</span></td><td><em>to drink</em></td><td><span class=\"data\">temeketekel</span></td><td><em>drinking</em></td></tr>\n<tr><td><span class=\"data\">kalidjikidj</span></td><td><em>to flash</em></td><td><span class=\"data\">kalidjikidjikidj</span></td><td><em>flashing</em></td></tr>\n<tr><td><span class=\"data\">paderua</span></td><td><em>to hiccup</em></td><td><span class=\"data\">paderuarua</span></td><td><em>hiccupping</em></td></tr>\n<tr><td><span class=\"data\">semutjiray</span></td><td><em>to spit</em></td><td><span class=\"data\">semutjiratjiray</span></td><td><em>spitting</em></td></tr>\n<tr><td><span class=\"data\">kemesa</span></td><td><em>to cook</em></td><td><span class=\"data\">kemesakesa</span></td><td><em>cooking</em></td></tr>\n<tr><td><span class=\"data\">temulu</span></td><td><em>to teach</em></td><td>(a)</td><td><em>teaching</em></td></tr>\n<tr><td><span class=\"data\">djemavac</span></td><td><em>to walk</em></td><td>(b)</td><td><em>walking</em></td></tr>\n<tr><td><span class=\"data\">lemenguaq</span></td><td><em>to fix</em></td><td>(c)</td><td><em>fixing</em></td></tr>\n<tr><td><span class=\"data\">mikerekel</span></td><td><em>to shake</em></td><td>(d)</td><td><em>shaking</em></td></tr>\n<tr><td><span class=\"data\">takalava</span></td><td><em>to wait</em></td><td>(e)</td><td><em>waiting</em></td></tr>\n<tr><td><span class=\"data\">masasevalit</span></td><td><em>to take a turn</em></td><td>(f)</td><td><em>taking turns</em></td></tr>\n</tbody>\n</table>\n</div>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "F1.a",
+      "part": "F1",
+      "partPrompt": "Some entries in the table have been left blank. Fill in the missing progressive forms.",
+      "promptHtml": "(a) Progressive form of <span class=\"data\">temulu</span> (<em>to teach</em>)",
+      "gradingMode": "exact",
+      "answerKey": "temulutulu",
+      "acceptedVariants": [],
+      "points": 1.67
+    },
+    {
+      "id": "F1.b",
+      "part": "F1",
+      "promptHtml": "(b) Progressive form of <span class=\"data\">djemavac</span> (<em>to walk</em>)",
+      "gradingMode": "exact",
+      "answerKey": "djemavadjavac",
+      "acceptedVariants": [],
+      "points": 1.67
+    },
+    {
+      "id": "F1.c",
+      "part": "F1",
+      "promptHtml": "(c) Progressive form of <span class=\"data\">lemenguaq</span> (<em>to fix</em>)",
+      "gradingMode": "exact",
+      "answerKey": "lemenguanguaq",
+      "acceptedVariants": [],
+      "points": 1.67
+    },
+    {
+      "id": "F1.d",
+      "part": "F1",
+      "promptHtml": "(d) Progressive form of <span class=\"data\">mikerekel</span> (<em>to shake</em>)",
+      "gradingMode": "exact",
+      "answerKey": "mikerekerekel",
+      "acceptedVariants": [],
+      "points": 1.67
+    },
+    {
+      "id": "F1.e",
+      "part": "F1",
+      "promptHtml": "(e) Progressive form of <span class=\"data\">takalava</span> (<em>to wait</em>)",
+      "gradingMode": "exact",
+      "answerKey": "takalavalava",
+      "acceptedVariants": [],
+      "points": 1.66
+    },
+    {
+      "id": "F1.f",
+      "part": "F1",
+      "promptHtml": "(f) Progressive form of <span class=\"data\">masasevalit</span> (<em>to take a turn</em>)",
+      "gradingMode": "exact",
+      "answerKey": "masasevalivalit",
+      "acceptedVariants": [],
+      "points": 1.66
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Every progressive form is longer than its root because a chunk of the root is repeated (this is called reduplication). Line the two forms up letter by letter from the END of the word and mark exactly which letters got copied.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "The copied chunk always stretches back to the second-to-last vowel of the word, and any word-final consonant stays at the very end. But watch the words containing me or em right after the first consonant, like kemesa or temekel: that little syllable behaves like an extra piece that the copy skips over.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Work through semutjiray, which is already given. Ignore the -em- to get sutjiray. Counting vowels from the right, the last two are i and a, so the chunk from the second-to-last vowel's consonant onward is tjira. Insert that copy right after the last vowel, keeping the final y at the end: semutjira + tjira + y gives semutjiratjiray, exactly the form in the table.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: Find what is being repeated</h3>\n<p>Compare each root with its progressive. In every pair the progressive is the root with an extra chunk stuffed into it, and the chunk is a copy of material already in the word. Linguists call this <strong>reduplication</strong>: repeating part of a word to signal a grammatical meaning (here, the ongoing \"-ing\" sense).</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Root</th><th>Progressive, split up</th><th>Copied chunk</th></tr></thead>\n<tbody>\n<tr><td><span class=\"data\">kivata</span></td><td>kivata + vata</td><td>vata</td></tr>\n<tr><td><span class=\"data\">paderua</span></td><td>paderua + rua</td><td>rua</td></tr>\n<tr><td><span class=\"data\">kalidjikidj</span></td><td>kalidjiki + djiki + dj</td><td>djiki</td></tr>\n<tr><td><span class=\"data\">temekel</span></td><td>temeke + teke + l</td><td>teke</td></tr>\n</tbody>\n</table>\n</div>\n<h3>Step 2: Where does the copy start and where does it go?</h3>\n<p>Count vowels from the right. In <span class=\"data\">kivata</span> the last two vowels are the <em>a</em> of <em>va</em> and the final <em>a</em>; the copy <em>vata</em> begins with the consonant that sits in front of the second-to-last vowel. Same in <span class=\"data\">kalidjikidj</span>: last two vowels are <em>i</em> and <em>i</em>, and the copy starts at <em>dji</em>.</p>\n<p>The copy is placed right after the last vowel of the word. If the word ends in a consonant, that consonant simply stays at the very end, so it looks as though the copy was slipped in just before it: <span class=\"data\">kalidjiki-djiki-dj</span>, <span class=\"data\">temeke-teke-l</span>. If the word ends in a vowel, the copy just goes on the end: <span class=\"data\">kivata-vata</span>.</p>\n<h3>Step 3: The tricky words with -em-</h3>\n<p>Some forms look like they break the rule. <span class=\"data\">kemesa</span> should give <em>kemesamesa</em>, but the real answer is <span class=\"data\">kemesakesa</span>. Likewise <span class=\"data\">keman</span> gives <span class=\"data\">kemakan</span>, not <em>kemakeman</em>, and <span class=\"data\">lemumay</span> gives <span class=\"data\">lemumalumay</span>.</p>\n<p>The explanation: these verbs contain an <strong>infix</strong> - a piece of grammar inserted <em>inside</em> the word rather than at the front or back. Here it is <span class=\"data\">-em-</span>, slotted in after the first consonant. Strip it out and you recover the bare stem:</p>\n<dl class=\"gloss-list\"><dt>keman</dt><dd>k-em-an, stem kan</dd><dt>kemesa</dt><dd>k-em-esa, stem kesa</dd><dt>lemumay</dt><dd>l-em-umay, stem lumay</dd><dt>temekel</dt><dd>t-em-ekel, stem tekel</dd><dt>semutjiray</dt><dd>s-em-utjiray, stem sutjiray</dd></dl>\n<p>The copy is taken from the stem, ignoring the <span class=\"data\">-em-</span>, and then dropped into the full word after its last vowel. So <span class=\"data\">kemesa</span> copies <em>kesa</em> from the stem: kemesa + kesa. And <span class=\"data\">keman</span> copies <em>ka</em> (the stem <em>kan</em> minus its final consonant): kema + ka + n.</p>\n<h3>Step 4: Apply it to the blanks</h3>\n<ul>\n<li><span class=\"data\">temulu</span>: contains -em-, stem <em>tulu</em>. Copy <em>tulu</em> after the last vowel: <strong>temulutulu</strong>.</li>\n<li><span class=\"data\">djemavac</span>: stem <em>djavac</em>. Copy <em>djava</em>, final <em>c</em> stays last: <strong>djemavadjavac</strong>.</li>\n<li><span class=\"data\">lemenguaq</span>: stem <em>lenguaq</em>. The last two vowels are <em>u</em> and <em>a</em>, so the copy is <em>ngua</em>, with final <em>q</em> at the end: <strong>lemenguanguaq</strong>.</li>\n<li><span class=\"data\">mikerekel</span>: no -em- infix here (the <em>mi-</em> is a prefix, not an infix). Last two vowels <em>e</em>, <em>e</em>, so the copy is <em>reke</em>: <strong>mikerekerekel</strong>.</li>\n<li><span class=\"data\">takalava</span>: no infix, copy <em>lava</em>, word ends in a vowel: <strong>takalavalava</strong>.</li>\n<li><span class=\"data\">masasevalit</span>: no infix, copy <em>vali</em>, final <em>t</em> stays last: <strong>masasevalivalit</strong>.</li>\n</ul>\n<p>One more check on how to count syllables: in <span class=\"data\">paderua</span> the sequence <em>ua</em> is two vowels, so the last two vowels are <em>u</em> and <em>a</em> and the copy is <em>rua</em> - the same reasoning that gives <em>ngua</em> in <span class=\"data\">lemenguaq</span>.</p>",
   "reviewStatus": "published"
 }

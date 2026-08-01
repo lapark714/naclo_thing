@@ -1,26 +1,140 @@
 {
   "id": "2023-open-G",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2023,
   "round": "open",
   "letter": "G",
   "title": "Feathers of the Roseate Spoonbill",
-  "authors": [],
+  "authors": [
+    "Ben LaFond"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
-    "morphology"
+    "writing systems",
+    "phonology"
   ],
-  "formTag": "rosetta-stone translation",
+  "formTag": "transliteration",
   "difficulty": "hard",
   "languages": [
     "Classical Nahuatl"
   ],
   "officialPoints": 15,
   "officialTimeMinutes": 27,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Classical Nahuatl was the language of the Aztec Empire. Although Classical Nahuatl is no longer actively spoken, it is related to modern Nahuatl, which has approximately 1.5 million speakers, mainly in Mexico.</p>\n<p>Over the centuries, scholars have proposed several different writing systems for representing Classical Nahuatl. Some early approaches from the 16th century were based on the system used for Spanish at the time. However, this approach faced challenges in how to represent sounds and distinctions that were not present in Spanish.</p>\n<p>One solution is to use the International Phonetic Alphabet (IPA). The IPA is designed to represent all sounds of human speech unambiguously, and so it provides a reliable transcription system that can be read by linguists across the world. However, the IPA is often unwieldy and does not reflect the needs of particular language communities. Therefore, the IPA is rarely used by non-linguists.</p>\n<p>Some more recent proposals are therefore designed specifically with Nahuatl in mind, in order to ensure both ease of use (which the IPA lacks) and faithfulness to the language (which the 16th-century systems lacked). To illustrate some of the writing systems that have been proposed over the years, the name of the Nahuatl language can be written as <span class=\"data\"><em>nahuatlatolli</em></span> in a 16th-century writing system, <span class=\"data\">/nawatɬaʔtoːlli/</span> in the IPA, or <span class=\"data\"><em>nahuatlàtōlli</em></span> in a 20th-century writing system.</p>\n<p>Below is the first stanza of a Nahuatl poem, “The Song of Temilotzin.” On the left is the poem as it appears in a manuscript of the 16th century (modified slightly for clarity). On the right, the text has been rewritten in a system proposed more recently, in the 20th century.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>16th-century writing system</th><th>20th-century writing system</th></tr></thead>\n<tbody>\n<tr><td><span class=\"data\">Ye nihualla, antocnihuan in:</span></td><td><span class=\"data\">Ye nihuāllâ, antocnīhuān in:</span></td></tr>\n<tr><td><span class=\"data\">noconcozcazoya,</span></td><td><span class=\"data\">noconcōzcazōya,</span></td></tr>\n<tr><td><span class=\"data\">nictzinitzcamana,</span></td><td><span class=\"data\">nictzinitzcamana,</span></td></tr>\n<tr><td><span class=\"data\">nictlauhquecholihuimolohua,</span></td><td><span class=\"data\">nictlāuhquechōlihuimolohua,</span></td></tr>\n<tr><td><span class=\"data\">nicteocuitlaicuiya,</span></td><td><span class=\"data\">nicteōcuitlaìcuiya,</span></td></tr>\n<tr><td><span class=\"data\">nicquetzalhuixtoilpiz</span></td><td><span class=\"data\">nicquetzalhuixtoilpīz</span></td></tr>\n<tr><td><span class=\"data\">in icniuhyotl.</span></td><td><span class=\"data\">in icnīuhyōtl.</span></td></tr>\n<tr><td><span class=\"data\">Niccuicailacatzoa cohuayotl.</span></td><td><span class=\"data\">Niccuīcailacatzoa cōhuayōtl.</span></td></tr>\n<tr><td><span class=\"data\">In teucpan nicquixtiz,</span></td><td><span class=\"data\">In tēucpan nicquīxtīz,</span></td></tr>\n<tr><td><span class=\"data\">an ya tonmochin,</span></td><td><span class=\"data\">ān ya tonmochīn,</span></td></tr>\n<tr><td><span class=\"data\">quin icuac tonmochin in otiyaque</span></td><td><span class=\"data\">quin ìcuāc tonmochīn in ōtiyàquê</span></td></tr>\n<tr><td><span class=\"data\">&nbsp;&nbsp;&nbsp;&nbsp;ye Mictlan.</span></td><td><span class=\"data\">&nbsp;&nbsp;&nbsp;&nbsp;ye Mictlān.</span></td></tr>\n<tr><td><span class=\"data\">In iuh ca zan tictlanehuico.</span></td><td><span class=\"data\">In iuh ca zan tictlānehuīcô.</span></td></tr>\n</tbody>\n</table>\n</div>\n<p>Here are some words and phrases from “The Song of Temilotzin” in the 16th-century writing system, along with their equivalents in the IPA, as well as English translations:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>16th-century</th><th>IPA</th><th>English</th></tr></thead>\n<tbody>\n<tr><td><span class=\"data\"><em>nictlauhquecholihuimolohua</em></span></td><td><span class=\"data\">/niktɬaːwketʃoːliwimolowa/</span></td><td>‘I adorn it with feathers of the roseate spoonbill (a kind of bird)’</td></tr>\n<tr><td><span class=\"data\"><em>nicteocuitlaicuiya</em></span></td><td><span class=\"data\">/nikteoːkʷitɬaiʔkʷija/</span></td><td>‘I wrap it with coils of gold’</td></tr>\n<tr><td><span class=\"data\"><em>nicquetzalhuixtoilpiz in icniuhyotl</em></span></td><td><span class=\"data\">/nikketsalwiʃtoilpiːs in ikniːwjoːtɬ/</span></td><td>‘I have bound up our friendship like a captive with feathers of the quetzal (another kind of bird)’</td></tr>\n<tr><td><span class=\"data\"><em>in teucpan nicquixtiz</em></span></td><td><span class=\"data\">/in teːkʷpan nikkiːʃtiːs/</span></td><td>‘I will make it emerge in the palace’</td></tr>\n<tr><td><span class=\"data\"><em>otiyaque ye Mictlan</em></span></td><td><span class=\"data\">/oːtijaʔkeʔ je miktɬaːn/</span></td><td>‘we will have gone to Mictlan (the land of the dead)’</td></tr>\n</tbody>\n</table>\n</div>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "G1.a",
+      "part": "G1",
+      "partPrompt": "Convert the following phrases from the 16th-century writing system into the IPA.",
+      "promptHtml": "<p><span class=\"data\"><em>ye nihualla</em></span> ‘I have already come’</p>",
+      "gradingMode": "exact",
+      "answerKey": "/je niwaːllaʔ/",
+      "acceptedVariants": [
+        "je niwaːllaʔ",
+        "/je niwa:llaʔ/",
+        "je niwa:llaʔ",
+        "/je niwaːlla?/",
+        "je niwa:lla?"
+      ],
+      "points": 2
+    },
+    {
+      "id": "G1.b",
+      "part": "G1",
+      "promptHtml": "<p><span class=\"data\"><em>antocnihuan in</em></span> ‘my friends’</p>",
+      "gradingMode": "exact",
+      "answerKey": "/antokniːwaːn in/",
+      "acceptedVariants": [
+        "antokniːwaːn in",
+        "/antokni:wa:n in/",
+        "antokni:wa:n in"
+      ],
+      "points": 2
+    },
+    {
+      "id": "G1.c",
+      "part": "G1",
+      "promptHtml": "<p><span class=\"data\"><em>quin icuac</em></span> ‘because’</p>",
+      "gradingMode": "exact",
+      "answerKey": "/kin iʔkʷaːk/",
+      "acceptedVariants": [
+        "kin iʔkʷaːk",
+        "/kin i?kʷa:k/",
+        "kin i?kʷa:k",
+        "/kin iʔkwaːk/",
+        "kin i?kwa:k"
+      ],
+      "points": 2
+    },
+    {
+      "id": "G2.a",
+      "part": "G2",
+      "partPrompt": "Convert the following words from the IPA into the 20th-century writing system.",
+      "promptHtml": "<p><span class=\"data\">/weːweʔ/</span> ‘old man’</p>",
+      "gradingMode": "exact",
+      "answerKey": "huēhuê",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "G2.b",
+      "part": "G2",
+      "promptHtml": "<p><span class=\"data\">/tʃokolaːtɬ/</span> ‘chocolate’</p>",
+      "gradingMode": "exact",
+      "answerKey": "chocolātl",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "G2.c",
+      "part": "G2",
+      "promptHtml": "<p><span class=\"data\">/miktɬaːnteːkʷtɬi/</span> ‘Lord of the dead’</p>",
+      "gradingMode": "exact",
+      "answerKey": "Mictlāntēuctli",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "G3.a",
+      "part": "G3",
+      "partPrompt": "In set theory (a branch of mathematics), it is said that there is a bijection between two sets if it is possible to convert from one set to the other and back without losing any information. This concept can be extended to describe writing systems. For example, there is a bijection between the set of numbers written in numerals (e.g., 43 or 11) and the set of numbers written in letters (e.g., forty-three or eleven). If you ignore capitalization, there is a bijection between two of the writing systems discussed here.",
+      "promptHtml": "<p>Which two writing systems are they?</p>",
+      "gradingMode": "exact",
+      "answerKey": "the 20th-century writing system and the IPA",
+      "acceptedVariants": [
+        "20th century and IPA",
+        "20th-century and IPA",
+        "20th-century and the IPA",
+        "20th-century writing system and IPA",
+        "20th-century writing system and the IPA",
+        "IPA and 20th-century",
+        "IPA and the 20th-century system",
+        "IPA and the 20th-century writing system",
+        "the 20th century writing system and the IPA",
+        "the 20th-century system and the IPA",
+        "the IPA and the 20th-century writing system"
+      ],
+      "points": 3
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Line up the same word in all three systems. The two spellings of the poem differ only in extra marks (macrons like ā, and the accents à and â), so those marks must stand for something the IPA also shows.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Two things are audible in the IPA but simply missing from the 16th-century spelling: vowel length (marked with ː) and the glottal stop ʔ (the catch in the middle of English uh-oh). The 20th-century system writes length with a macron over the vowel and a glottal stop with a grave accent on the vowel before it inside a word, or a circumflex at the end of a word. Everything else is a straight letter-for-sound match, though a few sounds have two spellings depending on what follows: k is c before a, o, a consonant or word-end but qu before i and e; kʷ is cu before a vowel but uc before a consonant or word-end; w is hu before a vowel but uh otherwise.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Work through a line that is not asked about. The 16th-century line in teucpan nicquixtiz corresponds to IPA /in teːkʷpan nikkiːʃtiːs/: the uc in teucpan is kʷ before a consonant, qu in nicquixtiz is just k before i, x is ʃ, and the final z is s. Now add the length marks the IPA shows and you get the 20th-century In tēucpan nicquīxtīz. Try the reverse direction on that same line to check your rules.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What the problem is really about</h3>\n<p>You are given the same Nahuatl poem in two spelling systems, plus a handful of words in the IPA (the International Phonetic Alphabet, where each symbol stands for exactly one sound). The job is to work out how the three systems line up, letter by letter and sound by sound.</p>\n<p>Two IPA symbols matter a lot here:</p>\n<ul><li><span class=\"data\">ː</span> after a vowel means the vowel is <em>long</em> (held longer). Nahuatl uses length to tell words apart, so it is real information.</li><li><span class=\"data\">ʔ</span> is a <em>glottal stop</em>, the little catch in the throat in the middle of English “uh-oh.”</li></ul>\n<h3>Step 1: compare the two spellings of the poem</h3>\n<p>Look at line 1: 16th-century <span class=\"data\">Ye nihualla, antocnihuan in:</span> versus 20th-century <span class=\"data\">Ye nihuāllâ, antocnīhuān in:</span>. The letters are identical; only marks have been added. So the 20th-century system is the 16th-century system <em>plus</em> extra marks.</p>\n<p>Which marks? A macron (ā, ē, ī, ō), a grave accent (à, ì), and a circumflex (â, ê, ô).</p>\n<h3>Step 2: match those marks to the IPA</h3>\n<p>Take <span class=\"data\">nicteocuitlaicuiya</span> = <span class=\"data\">/nikteoːkʷitɬaiʔkʷija/</span>, written <span class=\"data\">nicteōcuitlaìcuiya</span> in the 20th century.</p>\n<ul>\n<li>Where the IPA has <span class=\"data\">oː</span>, the 20th-century text has <span class=\"data\">ō</span>. So <strong>macron = long vowel</strong>.</li>\n<li>Where the IPA has <span class=\"data\">aiʔ</span>, the 20th-century text has <span class=\"data\">aì</span>. So <strong>grave accent on a vowel = a glottal stop right after it</strong>, when it is inside the word.</li>\n</ul>\n<p>Now check the end of a word: <span class=\"data\">otiyaque</span> = <span class=\"data\">/oːtijaʔkeʔ/</span> = <span class=\"data\">ōtiyàquê</span>. The word-internal <span class=\"data\">aʔ</span> is <span class=\"data\">à</span>, and the final <span class=\"data\">eʔ</span> is <span class=\"data\">ê</span>. So <strong>circumflex = glottal stop at the end of a word</strong>.</p>\n<h3>Step 3: the plain letter-to-sound rules</h3>\n<p>Both spellings borrow habits from 16th-century Spanish:</p>\n<div class=\"table-scroll\"><table>\n<thead><tr><th>Spelling</th><th>IPA</th><th>Where</th></tr></thead>\n<tbody>\n<tr><td>c</td><td>k</td><td>before a, o, a consonant, or word-end</td></tr>\n<tr><td>qu</td><td>k</td><td>before i, e</td></tr>\n<tr><td>cu</td><td>kʷ</td><td>before a vowel</td></tr>\n<tr><td>uc</td><td>kʷ</td><td>before a consonant or word-end</td></tr>\n<tr><td>c</td><td>s</td><td>before i, e</td></tr>\n<tr><td>z</td><td>s</td><td>before a, o, a consonant, or word-end</td></tr>\n<tr><td>tz</td><td>ts</td><td>everywhere</td></tr>\n<tr><td>tl</td><td>tɬ</td><td>everywhere</td></tr>\n<tr><td>ch</td><td>tʃ</td><td>everywhere</td></tr>\n<tr><td>x</td><td>ʃ</td><td>everywhere</td></tr>\n<tr><td>y</td><td>j</td><td>everywhere</td></tr>\n<tr><td>hu</td><td>w</td><td>before a vowel</td></tr>\n<tr><td>uh</td><td>w</td><td>before a consonant or word-end</td></tr>\n</tbody>\n</table></div>\n<p>Notice the neat pattern: the “w-ish” sounds kʷ and w are written with the u on the <em>left</em> of the consonant letter when nothing follows, and on the <em>right</em> when a vowel follows.</p>\n<h3>Step 4: G1, spelling into IPA</h3>\n<p>Here the 20th-century poem is your friend, because it tells you where the long vowels and glottal stops are.</p>\n<ul>\n<li><span class=\"data\">ye nihualla</span> appears as <span class=\"data\">Ye nihuāllâ</span>. So: y = j, e = e, ni = ni, hu before a vowel = w, ā = aː, ll = ll (a long l, not the Spanish “ly” sound), â = a plus glottal stop. Result: <span class=\"data\">/je niwaːllaʔ/</span>.</li>\n<li><span class=\"data\">antocnihuan in</span> appears as <span class=\"data\">antocnīhuān in</span>. The c before n is k; ī = iː; hu = w; ā = aː. Result: <span class=\"data\">/antokniːwaːn in/</span>.</li>\n<li><span class=\"data\">quin icuac</span> appears as <span class=\"data\">quin ìcuāc</span>. qu before i = k; ì = i plus glottal stop; cu before a vowel = kʷ; ā = aː; final c = k. Result: <span class=\"data\">/kin iʔkʷaːk/</span>.</li>\n</ul>\n<h3>Step 5: G2, IPA into the 20th-century system</h3>\n<ul>\n<li><span class=\"data\">/weːweʔ/</span>: w before a vowel is hu, so we get hu + ē + hu + e; the final glottal stop turns that last e into ê. Answer: <span class=\"data\">huēhuê</span>.</li>\n<li><span class=\"data\">/tʃokolaːtɬ/</span>: tʃ = ch, aː = ā, tɬ = tl. Answer: <span class=\"data\">chocolātl</span>.</li>\n<li><span class=\"data\">/miktɬaːnteːkʷtɬi/</span>: k before a consonant = c, tɬ = tl, aː = ā, eː = ē, and kʷ before a consonant = uc. Answer: <span class=\"data\">Mictlāntēuctli</span> (the same tēuc- you can see in <span class=\"data\">tēucpan</span> ‘palace’, literally ‘lord-place’).</li>\n</ul>\n<h3>Step 6: G3, the bijection</h3>\n<p>A bijection means you can convert in either direction and get back exactly what you started with. The 16th-century system throws away information: it never marks vowel length or glottal stops, so <span class=\"data\">nihualla</span> could in principle be read several ways, and you cannot recover <span class=\"data\">nihuāllâ</span> from it without knowing the language. That rules out any pairing involving the 16th-century system.</p>\n<p>The 20th-century system and the IPA, however, encode exactly the same information. Every 20th-century letter or letter pair maps to one IPA symbol, and the choices between c/qu, cu/uc and hu/uh are fully predictable from the surrounding letters, so the mapping runs cleanly both ways. <strong>The bijection is between the 20th-century writing system and the IPA.</strong></p>",
   "reviewStatus": "published"
 }

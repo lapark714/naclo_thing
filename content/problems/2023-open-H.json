@@ -1,15 +1,17 @@
 {
   "id": "2023-open-H",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2023,
   "round": "open",
   "letter": "H",
   "title": "My Grandmother and I",
-  "authors": [],
+  "authors": [
+    "Michael Salter"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
-    "morphology",
-    "semantics"
+    "semantics",
+    "morphology"
   ],
   "formTag": "rule discovery",
   "difficulty": "hard",
@@ -18,10 +20,280 @@
   ],
   "officialPoints": 15,
   "officialTimeMinutes": 27,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Pronouns are words like <em>us</em> or <em>she</em> that refer to a person or group relevant to the conversation. This problem is about the system of pronouns in the language Lardil, which is spoken on Mornington Island, off the north coast of Australia. Lardil's pronoun system may seem complex at first, but it is organized around a systematic and logical set of principles.</p>\n<p>Below are thirteen groups of people, followed by pronouns that could refer to them in Lardil. Note that the Lardil words are not translations of the English—they are pronouns that could refer to the group described in English, similar to how the English pronoun <em>us</em> is not defined as \"Alex and me\" but might refer to \"Alex and me\" in a particular context. The English and Lardil are in the same order as each other, not scrambled.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>English</th><th>Lardil</th></tr></thead>\n<tbody>\n<tr><td>my grandmother and I</td><td><span class=\"data\">nyarri</span></td></tr>\n<tr><td>he, his brother, and his sister</td><td><span class=\"data\">bili</span></td></tr>\n<tr><td>you, your sister, and your grandson</td><td><span class=\"data\">kili</span></td></tr>\n<tr><td>my great-grandfather and I</td><td><span class=\"data\">nyaanki</span></td></tr>\n<tr><td>you and your brother</td><td><span class=\"data\">kirri</span></td></tr>\n<tr><td>my grandparents and I</td><td><span class=\"data\">nyali</span></td></tr>\n<tr><td>you and your aunt</td><td><span class=\"data\">nyiinki</span></td></tr>\n<tr><td>you, your father, and your mother</td><td><span class=\"data\">kilmu</span></td></tr>\n<tr><td>my son, my mother, and I</td><td><span class=\"data\">nyalmu</span></td></tr>\n<tr><td>she and her grandparents</td><td><span class=\"data\">bili</span></td></tr>\n<tr><td>my son and I</td><td><span class=\"data\">nyaanki</span></td></tr>\n<tr><td>my sister, my grandson, and I</td><td><span class=\"data\">nyali</span></td></tr>\n<tr><td>she and her great-granddaughter</td><td><span class=\"data\">niinki</span></td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>H1.</strong> Match up the following groups and pronouns:</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>a. you and your parents</td><td>1. <span class=\"data\">nyalmu</span></td></tr>\n<tr><td>b. my grandfather and I</td><td>2. <span class=\"data\">bili</span></td></tr>\n<tr><td>c. you and your grandchildren</td><td>3. <span class=\"data\">kilmu</span></td></tr>\n<tr><td>d. she, her grandmother, and her brother</td><td>4. <span class=\"data\">kili</span></td></tr>\n<tr><td>e. he and his sister</td><td>5. <span class=\"data\">nyarri</span></td></tr>\n<tr><td>f. my daughter, my mother, and I</td><td>6. <span class=\"data\">birri</span></td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>H2.</strong> What would be the correct Lardil pronoun for:</p>\n<ol type=\"a\">\n<li>my father and I</li>\n<li>you and your granddaughter</li>\n<li>my uncle, my aunt, and I</li>\n<li>he and his parents</li>\n<li>she and her mother</li>\n<li>you and your cousin</li>\n</ol>\n<p><strong>H3.</strong> Circle all of the following groups that would be designated as <em><span class=\"data\">birri</span></em>. The number of answers that should be circled could be 0, 1, 2, or 3.</p>\n<ul>\n<li>my uncle and I</li>\n<li>you, your brother, and your grandfather</li>\n<li>she and her sister</li>\n</ul>\n<p><strong>H4.</strong> There is another pair of pronouns in Lardil, <em><span class=\"data\">ngakuli</span></em> and <em><span class=\"data\">ngakulmu</span></em>, which are used to refer to groups made of \"you, I, and one other person.\" Assuming that \"I\" and \"you\" are brother and sister, which word would you use to refer to:</p>\n<ol type=\"a\">\n<li>you, I, and our grandfather</li>\n<li>you, I, and our aunt</li>\n</ol>\n<p><strong>H5.</strong> What Lardil word would refer to \"you and I\", where \"I\" refers to the speaker and \"you\" refers to the speaker's sister?</p>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "H1.a",
+      "part": "H1",
+      "partPrompt": "Match up the groups and pronouns. Give the number (1-6) of the Lardil pronoun that could refer to each group.",
+      "promptHtml": "<p>a. you and your parents</p>",
+      "gradingMode": "exact",
+      "answerKey": "3",
+      "acceptedVariants": [
+        "kilmu",
+        "3. kilmu"
+      ],
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.b",
+      "part": "H1",
+      "promptHtml": "<p>b. my grandfather and I</p>",
+      "gradingMode": "exact",
+      "answerKey": "5",
+      "acceptedVariants": [
+        "nyarri",
+        "5. nyarri"
+      ],
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.c",
+      "part": "H1",
+      "promptHtml": "<p>c. you and your grandchildren</p>",
+      "gradingMode": "exact",
+      "answerKey": "4",
+      "acceptedVariants": [
+        "kili",
+        "4. kili"
+      ],
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.d",
+      "part": "H1",
+      "promptHtml": "<p>d. she, her grandmother, and her brother</p>",
+      "gradingMode": "exact",
+      "answerKey": "2",
+      "acceptedVariants": [
+        "bili",
+        "2. bili"
+      ],
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.e",
+      "part": "H1",
+      "promptHtml": "<p>e. he and his sister</p>",
+      "gradingMode": "exact",
+      "answerKey": "6",
+      "acceptedVariants": [
+        "birri",
+        "6. birri"
+      ],
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.f",
+      "part": "H1",
+      "promptHtml": "<p>f. my daughter, my mother, and I</p>",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [
+        "nyalmu",
+        "1. nyalmu"
+      ],
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H2.a",
+      "part": "H2",
+      "partPrompt": "What would be the correct Lardil pronoun for each group?",
+      "promptHtml": "<p>a. my father and I</p>",
+      "gradingMode": "exact",
+      "answerKey": "nyaanki",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "H2.b",
+      "part": "H2",
+      "promptHtml": "<p>b. you and your granddaughter</p>",
+      "gradingMode": "exact",
+      "answerKey": "kirri",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "H2.c",
+      "part": "H2",
+      "promptHtml": "<p>c. my uncle, my aunt, and I</p>",
+      "gradingMode": "exact",
+      "answerKey": "nyalmu",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "H2.d",
+      "part": "H2",
+      "promptHtml": "<p>d. he and his parents</p>",
+      "gradingMode": "exact",
+      "answerKey": "bilmu",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "H2.e",
+      "part": "H2",
+      "promptHtml": "<p>e. she and her mother</p>",
+      "gradingMode": "exact",
+      "answerKey": "niinki",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "H2.f",
+      "part": "H2",
+      "promptHtml": "<p>f. you and your cousin</p>",
+      "gradingMode": "exact",
+      "answerKey": "kirri",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "H3.i",
+      "part": "H3",
+      "partPrompt": "The booklet asks you to circle every group that would be called birri. Answer yes or no for each one; the number of yes answers could be 0, 1, 2, or 3.",
+      "promptHtml": "<p>my uncle and I</p>",
+      "gradingMode": "exact",
+      "answerKey": "no",
+      "acceptedVariants": [],
+      "choices": [
+        "yes",
+        "no"
+      ],
+      "points": 0.67
+    },
+    {
+      "id": "H3.ii",
+      "part": "H3",
+      "promptHtml": "<p>you, your brother, and your grandfather</p>",
+      "gradingMode": "exact",
+      "answerKey": "no",
+      "acceptedVariants": [],
+      "choices": [
+        "yes",
+        "no"
+      ],
+      "points": 0.67
+    },
+    {
+      "id": "H3.iii",
+      "part": "H3",
+      "promptHtml": "<p>she and her sister</p>",
+      "gradingMode": "exact",
+      "answerKey": "yes",
+      "acceptedVariants": [],
+      "choices": [
+        "yes",
+        "no"
+      ],
+      "points": 0.66
+    },
+    {
+      "id": "H4.a",
+      "part": "H4",
+      "partPrompt": "Lardil also has ngakuli and ngakulmu, used for groups made of \"you, I, and one other person.\" Assuming \"I\" and \"you\" are brother and sister, which word would you use?",
+      "promptHtml": "<p>a. you, I, and our grandfather</p>",
+      "gradingMode": "exact",
+      "answerKey": "ngakuli",
+      "acceptedVariants": [],
+      "choices": [
+        "ngakuli",
+        "ngakulmu"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H4.b",
+      "part": "H4",
+      "promptHtml": "<p>b. you, I, and our aunt</p>",
+      "gradingMode": "exact",
+      "answerKey": "ngakulmu",
+      "acceptedVariants": [],
+      "choices": [
+        "ngakuli",
+        "ngakulmu"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H5.a",
+      "part": "H5",
+      "partPrompt": "Answer the final question.",
+      "promptHtml": "<p>What Lardil word would refer to \"you and I\", where \"I\" refers to the speaker and \"you\" refers to the speaker's sister?</p>",
+      "gradingMode": "exact",
+      "answerKey": "ngakurri",
+      "acceptedVariants": [],
+      "points": 2
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Sort the thirteen examples into groups first by which English pronoun starts the description (\"I\", \"you\", \"he/she\"), and then by how many people are in the group. Two examples that look alike in English can still get different Lardil words, so a third factor must be hiding in the family relationships.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Each Lardil pronoun encodes three things at once: the person (first, second, third), whether the group has exactly two members or more than two, and whether everybody in the group belongs to the same alternate-generation set. Count generational steps: a sibling or cousin is 0 steps away, a parent or child 1 step, a grandparent or grandchild 2 steps. An even number of steps puts you in the same set; an odd number puts you in the other set.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Try it on a line that is not asked about. \"she and her grandparents\" is third person, has more than two members, and a grandparent is two generational steps away, so everyone is in the same set — and the data gives bili. Compare \"you, your father, and your mother\": second person, more than two, but a parent is one step away, so the set is mixed, and the data gives kilmu. The endings -li and -lmu are doing that last job.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What the pronouns have to say</h3><p>English pronouns tell you two things: person (am I talking about myself, about you, or about someone else?) and number (one or more than one). Lardil pronouns tell you <em>three</em> things. The third one is the interesting part.</p><h3>Step 1: split by person</h3><p>Look at how each Lardil word begins.</p><ul><li>Groups that include the speaker (\"I\"): <span class=\"data\">nyarri</span>, <span class=\"data\">nyaanki</span>, <span class=\"data\">nyali</span>, <span class=\"data\">nyalmu</span> — all start with <span class=\"data\">nya-</span>.</li><li>Groups that include the addressee but not the speaker (\"you\"): <span class=\"data\">kirri</span>, <span class=\"data\">kili</span>, <span class=\"data\">kilmu</span> and also <span class=\"data\">nyiinki</span>.</li><li>Groups of other people only (\"he/she\"): <span class=\"data\">bili</span>, <span class=\"data\">niinki</span>.</li></ul><p>The odd ones out are <span class=\"data\">nyaanki</span>, <span class=\"data\">nyiinki</span>, <span class=\"data\">niinki</span>. Notice they line up as a neat set of their own: <span class=\"data\">nyaanki</span> is used for \"me + one other\", <span class=\"data\">nyiinki</span> for \"you + one other\", <span class=\"data\">niinki</span> for \"her + one other\". So the person is marked by the vowel there (<span class=\"data\">nyaa-</span>, <span class=\"data\">nyii-</span>, <span class=\"data\">nii-</span>), and this whole set must be doing a job that the <span class=\"data\">-rri</span> set does not.</p><h3>Step 2: split by size</h3><p>Every group in the data with exactly two people gets <span class=\"data\">nyarri</span>, <span class=\"data\">kirri</span>, <span class=\"data\">nyaanki</span>, <span class=\"data\">nyiinki</span> or <span class=\"data\">niinki</span>. Every group with three people gets <span class=\"data\">nyali</span>, <span class=\"data\">kili</span>, <span class=\"data\">bili</span>, <span class=\"data\">nyalmu</span> or <span class=\"data\">kilmu</span>. So Lardil distinguishes <em>dual</em> (exactly two) from <em>plural</em> (three or more), which English does not.</p><h3>Step 3: the hidden third factor — moiety</h3><p>Now compare two \"you + one person\" pairs:</p><ul><li>you and your brother = <span class=\"data\">kirri</span></li><li>you and your aunt = <span class=\"data\">nyiinki</span></li></ul><p>Same person, same size, different word. The difference is the family relationship. A brother is in your own generation; an aunt is in your parents' generation. Many Australian societies divide everyone into two alternating generation sets, called <strong>moieties</strong>. You are in the same moiety as your siblings and cousins (0 generations away), as your grandparents and grandchildren (2 generations away), and as your great-great-grandparents (4 away). You are in the <em>other</em> moiety from your parents, children, aunts and uncles (1 away) and from your great-grandparents and great-grandchildren (3 away). Even number of steps: same moiety. Odd number: different moiety.</p><p>Check it: \"my great-grandfather and I\" is 3 steps, so mixed, and it gets <span class=\"data\">nyaanki</span> — the same word as \"my son and I\" (1 step, also mixed). \"My grandmother and I\" is 2 steps, same moiety, and gets <span class=\"data\">nyarri</span>. It all fits.</p><h3>The full grid</h3><div class=\"table-scroll\"><table><thead><tr><th></th><th>dual, same moiety</th><th>dual, mixed</th><th>plural, same moiety</th><th>plural, mixed</th></tr></thead><tbody><tr><td>includes \"I\"</td><td>nyarri</td><td>nyaanki</td><td>nyali</td><td>nyalmu</td></tr><tr><td>includes \"you\"</td><td>kirri</td><td>nyiinki</td><td>kili</td><td>kilmu</td></tr><tr><td>others only</td><td>birri</td><td>niinki</td><td>bili</td><td>bilmu</td></tr></tbody></table></div><p>Two of these cells (<span class=\"data\">birri</span>, <span class=\"data\">bilmu</span>) never appear in the given data — you predict them from the pattern, and the problem asks you to use both.</p><h3>Working the questions</h3><p><strong>H1.</strong> \"You and your parents\" is second person, three people, and parents are one step away, so it is plural mixed: <span class=\"data\">kilmu</span>. \"He and his sister\" is third person, dual, same moiety: the predicted <span class=\"data\">birri</span>. \"My daughter, my mother, and I\" is first person, plural, and both relatives are one step away from me, so mixed: <span class=\"data\">nyalmu</span>. Careful with \"she, her grandmother, and her brother\": grandmother is 2 steps and brother 0 steps, so everyone is in the same moiety — <span class=\"data\">bili</span>, not the mixed form.</p><p><strong>H2.</strong> \"He and his parents\" is the cell no example filled in: third person, plural, mixed, so <span class=\"data\">bilmu</span>. \"You and your cousin\" is dual and a cousin is 0 steps away, so same moiety: <span class=\"data\">kirri</span> — the same word as \"you and your granddaughter\", because a granddaughter is 2 steps away.</p><p><strong>H3.</strong> <span class=\"data\">birri</span> means third person, dual, same moiety. \"My uncle and I\" fails on person (it includes the speaker). \"You, your brother, and your grandfather\" fails on both person and size. Only \"she and her sister\" fits.</p><p><strong>H4 and H5.</strong> <span class=\"data\">ngaku-</span> is a fourth person category for groups containing both \"you\" and \"I\", and it takes the very same endings. If you and I are brother and sister we are in one moiety; adding our grandfather (2 steps) keeps everyone in that moiety, so the plural same-moiety ending <span class=\"data\">-li</span> gives <span class=\"data\">ngakuli</span>. Adding our aunt (1 step) makes the group mixed, so the plural mixed ending <span class=\"data\">-lmu</span> gives <span class=\"data\">ngakulmu</span>. For just you and me, siblings, that is a group of exactly two in one moiety, so the dual same-moiety ending <span class=\"data\">-rri</span> gives <span class=\"data\">ngakurri</span>.</p>",
   "reviewStatus": "published"
 }

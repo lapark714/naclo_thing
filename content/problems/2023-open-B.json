@@ -1,11 +1,13 @@
 {
   "id": "2023-open-B",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2023,
   "round": "open",
   "letter": "B",
   "title": "Don’t Stress",
-  "authors": [],
+  "authors": [
+    "Ellie Bultena"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
     "phonology"
@@ -17,10 +19,88 @@
   ],
   "officialPoints": 10,
   "officialTimeMinutes": 18,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Ho-Chunk is a language in the Siouan family (an Indigenous language family of North America) spoken by 250 people in Iowa, Wisconsin, and Nebraska, USA. This problem is about the stress system of Ho-Chunk.</p>\n<p>Stress systems give emphasis to some syllables over others. In the English word <em>desert</em> (the place where a cactus grows), the first syllable is stressed. In the English word <em>dessert</em> (a sweet treat after dinner), the second syllable is stressed. There are different levels of stress that a syllable can have. In this problem, we indicate levels of stress by writing letters under syllables: The most strongly-stressed syllable in a word is indicated with P (short for <em>primary stress</em>), other stressed syllables are indicated with S (short for <em>secondary stress</em>), and syllables with no stress are indicated with N. A word can only have one primary stress, but it can have multiple secondary stresses or unstressed syllables.</p>\n<p>Each syllable is marked by underlining its vowel or vowels, and the stress letters line up with those underlines in order. For example, the English word <em>kangaroo</em> is written k<u>a</u>ng<u>a</u>r<u>oo</u> with the letters S N P underneath: its strongest stress is on the final syllable, and it has a secondary stress on the first syllable.</p>\n<p>Below are some words in Ho-Chunk annotated for stress along with their English translations. The English translations are not necessary for solving this problem. Some Ho-Chunk syllables contain two vowels. If the two vowels are the same (such as <strong>aa</strong>), the syllable has a long vowel sound. If the vowels are different (such as <strong>ai</strong>), then the syllable combines two distinct vowel sounds. Ho-Chunk uses a few symbols not present in English: <strong>į</strong> and <strong>ą</strong> are vowels, and <strong>ǧ</strong> is a consonant.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Ho-Chunk</th><th>Stress</th><th>Meaning</th></tr></thead>\n<tbody>\n<tr><td><span class=\"data\">h<u>o</u>k<u>e</u>w<u>e</u></span></td><td>N N P</td><td>“enter”</td></tr>\n<tr><td><span class=\"data\">w<u>aa</u>k<u>i</u>t’<u>e</u></span></td><td>N P N</td><td>“speak to”</td></tr>\n<tr><td><span class=\"data\">w<u>a</u>n<u>į</u>ǧ<u>į</u>gr<u>a</u></span></td><td>N N P N</td><td>“the bird”</td></tr>\n<tr><td><span class=\"data\">h<u>ąą</u>h<u>e</u>r<u>e</u></span></td><td>N P N</td><td>“last night”</td></tr>\n<tr><td><span class=\"data\">h<u>o</u>k<u>i</u>w<u>a</u>r<u>o</u>k<u>e</u></span></td><td>N N P N S</td><td>“swing”</td></tr>\n<tr><td><span class=\"data\">b<u>oo</u>k<u>ą</u>g<u>a</u>j<u>ą</u></span></td><td>N P N S</td><td>“knock down obviously”</td></tr>\n<tr><td><span class=\"data\">h<u>a</u>k<u>i</u>r<u>u</u>j<u>i</u>kg<u>a</u>j<u>ą</u></span></td><td>N N P N S N</td><td>“after he pulls taut”</td></tr>\n</tbody>\n</table>\n</div>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "B1.hipirak",
+      "part": "B1",
+      "partPrompt": "Indicate the stress for the Ho-Chunk words below by writing one letter (P, S, or N) per syllable, in order, with no spaces (for example NNP). There are nine stresses in total across the five words, counting both primary and secondary stress.",
+      "promptHtml": "<p><span class=\"data\">h<u>i</u>p<u>i</u>r<u>a</u>k</span> “belt”</p>",
+      "gradingMode": "exact",
+      "answerKey": "NNP",
+      "acceptedVariants": [
+        "N N P",
+        "N-N-P"
+      ],
+      "points": 2
+    },
+    {
+      "id": "B1.xorojike",
+      "part": "B1",
+      "promptHtml": "<p><span class=\"data\">x<u>o</u>r<u>o</u>j<u>i</u>k<u>e</u></span> “hollow”</p>",
+      "gradingMode": "exact",
+      "answerKey": "NNPN",
+      "acceptedVariants": [
+        "N N P N",
+        "N-N-P-N"
+      ],
+      "points": 2
+    },
+    {
+      "id": "B1.waiperesga",
+      "part": "B1",
+      "promptHtml": "<p><span class=\"data\">w<u>ai</u>p<u>e</u>r<u>e</u>sg<u>a</u></span> “linen”</p>",
+      "gradingMode": "exact",
+      "answerKey": "NPNS",
+      "acceptedVariants": [
+        "N P N S",
+        "N-P-N-S"
+      ],
+      "points": 2
+    },
+    {
+      "id": "B1.waaporoporo",
+      "part": "B1",
+      "promptHtml": "<p><span class=\"data\">w<u>aa</u>p<u>o</u>r<u>o</u>p<u>o</u>r<u>o</u></span> “snowball”</p>",
+      "gradingMode": "exact",
+      "answerKey": "NPNSN",
+      "acceptedVariants": [
+        "N P N S N",
+        "N-P-N-S-N"
+      ],
+      "points": 2
+    },
+    {
+      "id": "B1.hirakorohonira",
+      "part": "B1",
+      "promptHtml": "<p><span class=\"data\">h<u>i</u>r<u>a</u>k<u>o</u>r<u>o</u>h<u>o</u>n<u>i</u>r<u>a</u></span> “the fact that you did not get ready”</p>",
+      "gradingMode": "exact",
+      "answerKey": "NNPNSNS",
+      "acceptedVariants": [
+        "N N P N S N S",
+        "N-N-P-N-S-N-S"
+      ],
+      "points": 2
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Number the syllables of each example word from the left and write down which numbered positions carry a stress (P or S). Then sort the words into two groups: those whose first syllable has one vowel and those whose first syllable has two vowels.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Within each group the stresses fall on every other syllable, counting from a fixed starting point near the beginning of the word. The starting point differs between the two groups, and once you know where the stresses are, the leftmost one is always the primary stress (P) and the rest are secondary (S).",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try the rule on hakirujikgają (not one of the graded words). Its first syllable ha has a single vowel, so it belongs to the one-vowel group; the stresses land on syllables 3 and 5, giving N N P N S N — which matches the data exactly.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What the letters mean</h3>\n<p>Each syllable of a Ho-Chunk word gets one letter: P for the single strongest (primary) stress, S for any other stressed (secondary) syllable, and N for no stress at all. So the job is really: which syllables are stressed, and which stressed one is the strongest?</p>\n<h3>Step 1: write the stresses as positions</h3>\n<p>Number the syllables from the left and list the positions that carry P or S:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Word</th><th>Pattern</th><th>Stressed positions</th></tr></thead>\n<tbody>\n<tr><td>hokewe</td><td>N N P</td><td>3</td></tr>\n<tr><td>wanįǧįgra</td><td>N N P N</td><td>3</td></tr>\n<tr><td>hokiwaroke</td><td>N N P N S</td><td>3, 5</td></tr>\n<tr><td>hakirujikgają</td><td>N N P N S N</td><td>3, 5</td></tr>\n<tr><td>waakit’e</td><td>N P N</td><td>2</td></tr>\n<tr><td>hąąhere</td><td>N P N</td><td>2</td></tr>\n<tr><td>bookągają</td><td>N P N S</td><td>2, 4</td></tr>\n</tbody>\n</table>\n</div>\n<p>Two clear families jump out: some words are stressed on 3, 5, 7... and others on 2, 4, 6.... In both families the stresses alternate, hitting every second syllable. Linguists call this an <em>alternating</em> or <em>iambic</em> rhythm: strong, weak, strong, weak.</p>\n<h3>Step 2: what decides which family a word belongs to?</h3>\n<p>Look at the first syllable of the words in each family. The 2, 4, 6 words start with <span class=\"data\">waa</span>, <span class=\"data\">hąą</span>, <span class=\"data\">boo</span> — all of them have two vowel letters. The 3, 5, 7 words start with <span class=\"data\">ho</span>, <span class=\"data\">wa</span>, <span class=\"data\">ha</span> — one vowel each. A syllable with two vowels (a long vowel like <strong>aa</strong> or a two-vowel combination like <strong>ai</strong>) is called <em>heavy</em>; one with a single vowel is <em>light</em>.</p>\n<p>So the rule is:</p>\n<ul>\n<li>If the word starts with a <strong>light</strong> syllable, the first stress is on syllable 3, then every other syllable after that (5, 7, ...).</li>\n<li>If the word starts with a <strong>heavy</strong> syllable, the first stress is on syllable 2, then every other syllable after that (4, 6, ...).</li>\n</ul>\n<p>A neat way to think about it: a heavy first syllable counts as two beats of the rhythm all by itself, so the stress arrives one syllable earlier.</p>\n<h3>Step 3: primary versus secondary</h3>\n<p>In every example, the leftmost stress is the P and any later stresses are S. That gives P first, then S, S, ... Fill any remaining syllable with N.</p>\n<h3>Step 4: apply it</h3>\n<p>Take <span class=\"data\">waaporoporo</span> (five syllables). The first syllable <span class=\"data\">waa</span> has two vowels, so it is heavy: stresses on syllables 2 and 4. Syllable 2 is the first stress, so it is P; syllable 4 is S. Everything else is N, giving N P N S N.</p>\n<p>Take <span class=\"data\">hirakorohonira</span> (seven syllables). The first syllable <span class=\"data\">hi</span> is light, so stresses fall on 3, 5, and 7. Syllable 3 gets P; syllables 5 and 7 get S: N N P N S N S.</p>\n<p>The problem tells you there are nine stresses in total across the five words — a handy check. Counting P's and S's: 1 + 1 + 2 + 2 + 3 = 9. If your total is not nine, you have mis-split a syllable or mis-classified a heavy one somewhere.</p>",
   "reviewStatus": "published"
 }

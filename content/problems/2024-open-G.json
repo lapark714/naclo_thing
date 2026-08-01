@@ -1,24 +1,339 @@
 {
   "id": "2024-open-G",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2024,
   "round": "open",
   "letter": "G",
   "title": "At a Loss for Words",
-  "authors": [],
+  "authors": [
+    "Pranav Krishna",
+    "Lori Levin"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
-    "semantics"
+    "semantics",
+    "sociolinguistics"
   ],
   "formTag": "formal and computational",
   "difficulty": "hard",
   "languages": [],
   "officialPoints": 15,
   "officialTimeMinutes": 27,
-  "bodyHtml": "",
-  "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "bodyHtml": "<p>Researchers at NACLO Labs are working on machine-to-machine communication, and they need your help with something! They are trying to program two robots to talk to each other about cards with shapes on them. Here are some shapes they are using:</p>\n<figure><img src=\"/content-assets/2024-open-g-cards-small.png\" alt=\"Three cards: a filled (solid black) circle, an unfilled circle, and an unfilled square\" /></figure>\n<p>The two robots are called Describo and Selectrix. Describo's job will be to choose a card at random and describe it. Selectrix's job will be to select the correct card that Describo described. It would be easy for Describo to describe each card uniquely. For example, it could say “filled circle”, “unfilled circle”, and “unfilled square.” But NACLO Labs wants the descriptions to be more efficient. They want the robots to follow something called Rational Speech Acts theory. This theory says that <strong>a rational speaker, when deciding what to say, will consider both the cost of their utterance as well as the likelihood that they will be understood</strong>. To make matters simple, we will say that the cost of an utterance will just be the number of words it contains: Saying nothing has a cost of zero; saying “filled”, “unfilled”, “square”, or “circle” has a cost of one; and saying “filled circle”, “unfilled circle”, or “unfilled square” has a cost of two.</p>\n<p>Now the question is how Describo can make the shortest utterance that Selectrix can understand. If Describo wants to refer to the filled circle, it could say “filled circle,” but it could instead just say “filled” because there is only one filled shape. Saying “filled” costs less than saying “filled circle,” and Selectro can still understand it correctly. Therefore, it would make sense for Describo to say “filled” instead of “filled circle.”</p>\n<p><strong>G1.</strong> Here is a question to ponder: Suppose that, instead of machines, you and one other (rational) person had to communicate in this way, which is logical but not normal for humans. The other person is Describo and you are Selectrix, and the two of you are looking at the set of three cards shown above. The other person told you to choose the “circle.” Which object does the other person want you to pick? (Remember, the other person is using the Rational Speech Acts theory).</p>\n<p>Now you want to apply Rational Speech Acts theory to a larger set of cards:</p>\n<figure><img src=\"/content-assets/2024-open-g-cards-medium.png\" alt=\"Five cards in a row: a filled triangle, a filled circle, an unfilled circle, an unfilled square, and a striped square\" /></figure>\n<p>From left to right, these five cards show: a filled triangle, a filled circle, an unfilled circle, an unfilled square, and a striped square.</p>\n<p><strong>G2.</strong> Describe each shape in a way that has the smallest cost while remaining understandable. Your descriptions should come from the list below. You should provide each answer by writing a number from 1 to 11 next to each shape on your Answer Sheet. If multiple descriptions are tied for having the smallest cost while being understandable, you should only write one. If your descriptions were given to a (rational) listener, they should be able to understand exactly which card each description refers to—so make sure to strike the proper balance: you need to be understood, but you should also minimize the cost while doing so!</p>\n<ol>\n<li>“filled”</li>\n<li>“unfilled”</li>\n<li>“striped”</li>\n<li>“circle”</li>\n<li>“triangle”</li>\n<li>“square”</li>\n<li>“filled triangle”</li>\n<li>“filled circle”</li>\n<li>“unfilled circle”</li>\n<li>“unfilled square”</li>\n<li>“striped square”</li>\n</ol>\n<p>Now, to push the Rational Speech Acts theory even further, you look at an even bigger set of cards:</p>\n<figure><img src=\"/content-assets/2024-open-g-cards-large.png\" alt=\"Nine cards in two rows. Top row: filled triangle, unfilled triangle, striped square, unfilled square, filled square. Bottom row: striped circle, filled pentagon, spotted square, spotted hexagon\" /></figure>\n<p>Reading left to right and top to bottom, these nine cards show: (a) a filled triangle, (b) an unfilled triangle, (c) a striped square, (d) an unfilled square, (e) a filled square, (f) a striped circle, (g) a filled pentagon, (h) a spotted square, and (i) a spotted hexagon.</p>\n<p><strong>G3.</strong> How would you describe each of these shapes with the shortest possible utterance that will still be understood? Record each description on your answer sheet by selecting a description from the list below and writing its number next to the shape it would describe. Note: A pentagon is a five-sided shape, and a hexagon is a six-sided shape. If multiple descriptions are tied for being the shortest one that will be understood, you should only write one.</p>\n<ol>\n<li>“filled”</li>\n<li>“unfilled”</li>\n<li>“striped”</li>\n<li>“spotted”</li>\n<li>“triangle”</li>\n<li>“square”</li>\n<li>“circle”</li>\n<li>“pentagon”</li>\n<li>“hexagon”</li>\n<li>“filled triangle”</li>\n<li>“unfilled triangle”</li>\n<li>“striped square”</li>\n<li>“unfilled square”</li>\n<li>“filled square”</li>\n<li>“striped circle”</li>\n<li>“filled pentagon”</li>\n<li>“spotted square”</li>\n<li>“spotted hexagon”</li>\n</ol>\n<p>Now we fast-forward several years. Researchers at NACLO are looking through an abandoned lab when they find two robots, along with three envelopes containing cards. The robots had nametags saying “Descriptron” and “Identylizer”, and the envelopes were labeled SMALL, MEDIUM, and LARGE. When they looked in the envelopes, they found that they contained the same cards that NACLO Labs had been working with! The workers at the abandoned lab must have been spying on NACLO to steal some of NACLO's research. This made the NACLO researchers curious: What if these researchers made more progress on machine-to-machine communication than NACLO had? NACLO Labs assigns you to investigate.</p>\n<p>You experiment with Descriptron and Identylizer to find out what they are capable of. You observe that Descriptron does the following:</p>\n<ul>\n<li>It starts by choosing a card at random.</li>\n<li>Sometimes, it then says nothing.</li>\n<li>Other times, it names one property of the shape on the card it chose. For example, it might say “circle”, “square”, “filled”, or “unfilled”.</li>\n<li>Still other times, it names two properties of the shape it chose. For example, it might say “filled circle”, “unfilled circle”, or “unfilled square”.</li>\n<li>Whether it names zero, one, or two properties is random.</li>\n<li>It never says anything wrong. For example, it never says “square” when describing a circle or “filled” when describing something unfilled.</li>\n</ul>\n<p>You then notice that Identylizer could respond to what Descriptron says by picking up cards. But it doesn't always pick the card that Descriptron was describing. In order to better understand what is going on, you decide to focus exclusively on the smallest set of cards—all of the rest of the questions will be about this set of cards, which we have repeated here:</p>\n<figure><img src=\"/content-assets/2024-open-g-cards-small.png\" alt=\"Three cards: a filled circle, an unfilled circle, and an unfilled square\" /></figure>\n<p>Using these three cards, you make many observations and record them in a table. Each row of the table represents what happens over multiple times when Descriptron chooses the card in the first column and says the thing in the second column. Remember that Descriptron does not always say the same thing in response to the same card. The third column shows Identylizer's error rate (the percentage of times it chooses the wrong card when Descriptron chose the card in column 1 and said the thing in column 2). To be certain that you are getting good observations, you make sure you have seen each pair of a card and a description many times.</p>\n<p>For example, the table shows that every time Descriptron chooses the filled circle card and says “filled”, Identylizer always picks up the card with a filled circle. Its error rate is zero. Every time Descriptron chooses unfilled circle and says nothing, Identylizer only picks the “correct” card (the unfilled circle) one third of the time. Its error rate is 0.67.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Intended card</th><th>Descriptron's description</th><th>Identylizer's error rate</th></tr></thead>\n<tbody>\n<tr><td>Filled Circle</td><td>“Filled”</td><td>0.00</td></tr>\n<tr><td>Filled Circle</td><td>“Circle”</td><td>0.50</td></tr>\n<tr><td>Unfilled Square</td><td>“Unfilled Square”</td><td>0.00</td></tr>\n<tr><td>Unfilled Circle</td><td>“”</td><td>0.67</td></tr>\n<tr><td>Unfilled Circle</td><td>“Unfilled Circle”</td><td>(a)</td></tr>\n<tr><td>Unfilled Square</td><td>“”</td><td>(b)</td></tr>\n<tr><td>Unfilled Square</td><td>“Unfilled”</td><td>(c)</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>G4.</strong> Some cells in the table have been left blank. Use the examples that have been provided to figure out what strategy Identylizer uses to identify a card, and then fill in the missing cells in the table based on that strategy. Each of your answers should be one of the following values: 0.00, 0.33, 0.50, 0.67, 1.00.</p>\n<p>You show your table of data to Descriptron. After it looks at the table, a button starts flashing. The button has the word “Loss” printed on it in bright red letters. You push the button. Now, when you show Descriptron a card, it whirs, then says zero, one, or two words as before, but it also says “weight”, “error rate”, “cost”, and “loss” followed by some numbers. You notice that the values of these numbers can be different each time, so you record these outputs in the table below:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Intended Object</th><th>Description</th><th>Weight</th><th>Error Rate</th><th>Cost</th><th>Loss</th></tr></thead>\n<tbody>\n<tr><td>Filled Circle</td><td>“Filled”</td><td>2</td><td>0.00</td><td>1</td><td>2.00</td></tr>\n<tr><td>Filled Circle</td><td>“Circle”</td><td>3</td><td>0.50</td><td>1</td><td>3.50</td></tr>\n<tr><td>Unfilled Square</td><td>“Unfilled Square”</td><td>0.2</td><td>0.00</td><td>2</td><td>0.40</td></tr>\n<tr><td>Unfilled Circle</td><td>“”</td><td>10</td><td>0.67</td><td>0</td><td>0.67</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>G5.</strong> Loss can be computed based on the other outputs. Describe how it is computed by filling in the blanks in the equation below. There are two correct ways to fill in the blanks; you should only pick one (it doesn't matter which one). Each blank should be filled with one of the following terms: <strong>weight</strong>, <strong>error rate</strong>, or <strong>cost</strong>.</p>\n<p style=\"text-align:center\">Loss = _____(a)_____ + ( _____(b)_____ &#215; _____(c)_____ )</p>\n<p>You notice that Identylizer has a button on it labeled Rational Speech Acts. You push the button. Then you rerun your experiments from before (when you were computing Identylizer's error rate). But this time you get different results, as shown in the table below:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Intended Object</th><th>Description</th><th>Identylizer's Error Rate (in Rational Speech Acts mode)</th></tr></thead>\n<tbody>\n<tr><td>Filled Circle</td><td>“”</td><td>0.67</td></tr>\n<tr><td>Filled Circle</td><td>“Filled”</td><td>0.00</td></tr>\n<tr><td>Filled Circle</td><td>“Circle”</td><td>1.00</td></tr>\n<tr><td>Filled Circle</td><td>“Filled Circle”</td><td>0.00</td></tr>\n<tr><td>Unfilled Circle</td><td>“”</td><td>0.67</td></tr>\n<tr><td>Unfilled Circle</td><td>“Unfilled”</td><td>0.00</td></tr>\n<tr><td>Unfilled Circle</td><td>“Circle”</td><td>0.00</td></tr>\n<tr><td>Unfilled Circle</td><td>“Unfilled Circle”</td><td>0.00</td></tr>\n<tr><td>Unfilled Square</td><td>“”</td><td>0.67</td></tr>\n<tr><td>Unfilled Square</td><td>“Unfilled”</td><td>1.00</td></tr>\n<tr><td>Unfilled Square</td><td>“Square”</td><td>0.00</td></tr>\n<tr><td>Unfilled Square</td><td>“Unfilled Square”</td><td>0.00</td></tr>\n</tbody>\n</table>\n</div>\n<p>Suddenly you hear another loud whirring, and then Descriptron says “I HAVE DETECTED THAT IDENTYLIZER IS USING RATIONAL SPEECH ACTS MODE. RECALIBRATING... RECALIBRATING…” Then, after a pause, Descriptron says, “PLEASE SELECT A WEIGHT.” Seven buttons start flashing, labeled 0.1, 0.5, 0.7, 1, 5, 10, and 100. You push the button labeled 1. Descriptron then prints out an index card with the table below on it:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Intended Object</th><th>Description</th><th>Weight</th><th>Error Rate</th><th>Cost</th><th>Loss</th></tr></thead>\n<tbody>\n<tr><td>Filled Circle</td><td>“”</td><td>1</td><td>0.67</td><td>0</td><td>0.67</td></tr>\n<tr><td>Filled Circle</td><td>“Filled”</td><td>1</td><td>0.00</td><td>1</td><td>1.00</td></tr>\n<tr><td>Filled Circle</td><td>“Circle”</td><td>1</td><td>1.00</td><td>1</td><td>2.00</td></tr>\n<tr><td>Filled Circle</td><td>“Filled Circle”</td><td>1</td><td>0.00</td><td>2</td><td>2.00</td></tr>\n<tr><td>Unfilled Circle</td><td>“”</td><td>1</td><td>0.67</td><td>0</td><td>0.67</td></tr>\n<tr><td>Unfilled Circle</td><td>“Unfilled”</td><td>1</td><td>0.00</td><td>1</td><td>1.00</td></tr>\n<tr><td>Unfilled Circle</td><td>“Circle”</td><td>1</td><td>0.00</td><td>1</td><td>1.00</td></tr>\n<tr><td>Unfilled Circle</td><td>“Unfilled Circle”</td><td>1</td><td>0.00</td><td>2</td><td>2.00</td></tr>\n<tr><td>Unfilled Square</td><td>“”</td><td>1</td><td>0.67</td><td>0</td><td>0.67</td></tr>\n<tr><td>Unfilled Square</td><td>“Unfilled”</td><td>1</td><td>1.00</td><td>1</td><td>2.00</td></tr>\n<tr><td>Unfilled Square</td><td>“Square”</td><td>1</td><td>0.00</td><td>1</td><td>1.00</td></tr>\n<tr><td>Unfilled Square</td><td>“Unfilled Square”</td><td>1</td><td>0.00</td><td>2</td><td>2.00</td></tr>\n</tbody>\n</table>\n</div>\n<p>After printing the table, Descriptron says “SWITCHING TO BEST-DESCRIPTION MODE.” To figure out what that means, you show Descriptron the card with the unfilled square. Descriptron says, “THE BEST DESCRIPTION FOR THIS ITEM IS: &lt;SAY NOTHING&gt;” After experimenting some more, you figure out that the way Descriptron selects the best description is by finding the description that has the lowest loss. If there is a tie for the lowest loss, Descriptron chooses randomly between the tied options. The reason why it said “&lt;SAY NOTHING&gt;” for the unfilled square is that, in the table above, the option of saying nothing (written as “”) has a loss of 0.67, which is lower than the loss for the other options (2.00, 1.00, and 2.00).</p>\n<p><strong>G6.</strong> Currently, with the weight set to 1, Description says that “&lt;SAY NOTHING&gt;” is the best description for all three objects in the table above. However, by changing the weight, it is possible to get Descriptron to produce a one-word description for all 3 shapes. Circle <strong>all</strong> of the following weight values that would accomplish this. You can circle zero, one, or more than one values.</p>\n<p>a. 0.1&nbsp;&nbsp;&nbsp; b. 0.5&nbsp;&nbsp;&nbsp; c. 0.7&nbsp;&nbsp;&nbsp; d. 5&nbsp;&nbsp;&nbsp; e. 10&nbsp;&nbsp;&nbsp; f. 100</p>",
+  "assets": [
+    {
+      "src": "/content-assets/2024-open-g-cards-small.png",
+      "alt": "Three cards: a filled (solid black) circle, an unfilled circle, and an unfilled square"
+    },
+    {
+      "src": "/content-assets/2024-open-g-cards-medium.png",
+      "alt": "Five cards in a row: a filled triangle, a filled circle, an unfilled circle, an unfilled square, and a striped square"
+    },
+    {
+      "src": "/content-assets/2024-open-g-cards-large.png",
+      "alt": "Nine cards in two rows. Top row: filled triangle, unfilled triangle, striped square, unfilled square, filled square. Bottom row: striped circle, filled pentagon, spotted square, spotted hexagon"
+    }
+  ],
+  "questions": [
+    {
+      "id": "G1.a",
+      "part": "G1",
+      "partPrompt": "The other person (a rational speaker) is looking at the three cards - filled circle, unfilled circle, unfilled square - and tells you to choose the \"circle\". Which card do they want you to pick?",
+      "promptHtml": "<p>Which of the three cards does the speaker mean by “circle”?</p>",
+      "gradingMode": "exact",
+      "answerKey": "unfilled circle",
+      "acceptedVariants": [
+        "the unfilled circle",
+        "unfilled circle card"
+      ],
+      "choices": [
+        "filled circle",
+        "unfilled circle",
+        "unfilled square"
+      ],
+      "points": 1
+    },
+    {
+      "id": "G2.a",
+      "part": "G2",
+      "partPrompt": "For each of the five cards, give the number (1-11) of the cheapest description that a rational listener would still understand correctly. The five cards, left to right, are: filled triangle, filled circle, unfilled circle, unfilled square, striped square. Options: 1 \"filled\", 2 \"unfilled\", 3 \"striped\", 4 \"circle\", 5 \"triangle\", 6 \"square\", 7 \"filled triangle\", 8 \"filled circle\", 9 \"unfilled circle\", 10 \"unfilled square\", 11 \"striped square\".",
+      "promptHtml": "<p><strong>a.</strong> The filled triangle (first card).</p>",
+      "gradingMode": "exact",
+      "answerKey": "5",
+      "acceptedVariants": [
+        "triangle"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G2.b",
+      "part": "G2",
+      "promptHtml": "<p><strong>b.</strong> The filled circle (second card).</p>",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [
+        "filled"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G2.c",
+      "part": "G2",
+      "promptHtml": "<p><strong>c.</strong> The unfilled circle (third card). Two answers are tied here; give either one.</p>",
+      "gradingMode": "exact",
+      "answerKey": "4",
+      "acceptedVariants": [
+        "2",
+        "circle",
+        "unfilled"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G2.d",
+      "part": "G2",
+      "promptHtml": "<p><strong>d.</strong> The unfilled square (fourth card).</p>",
+      "gradingMode": "exact",
+      "answerKey": "6",
+      "acceptedVariants": [
+        "square"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G2.e",
+      "part": "G2",
+      "promptHtml": "<p><strong>e.</strong> The striped square (fifth card).</p>",
+      "gradingMode": "exact",
+      "answerKey": "3",
+      "acceptedVariants": [
+        "striped"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G3.a",
+      "part": "G3",
+      "partPrompt": "For each of the nine cards, give the number (1-18) of the shortest description that will still be understood. Options: 1 \"filled\", 2 \"unfilled\", 3 \"striped\", 4 \"spotted\", 5 \"triangle\", 6 \"square\", 7 \"circle\", 8 \"pentagon\", 9 \"hexagon\", 10 \"filled triangle\", 11 \"unfilled triangle\", 12 \"striped square\", 13 \"unfilled square\", 14 \"filled square\", 15 \"striped circle\", 16 \"filled pentagon\", 17 \"spotted square\", 18 \"spotted hexagon\".",
+      "promptHtml": "<p><strong>a.</strong> The filled triangle.</p>",
+      "gradingMode": "exact",
+      "answerKey": "10",
+      "acceptedVariants": [
+        "filled triangle"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G3.b",
+      "part": "G3",
+      "promptHtml": "<p><strong>b.</strong> The unfilled triangle.</p>",
+      "gradingMode": "exact",
+      "answerKey": "11",
+      "acceptedVariants": [
+        "unfilled triangle"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G3.c",
+      "part": "G3",
+      "promptHtml": "<p><strong>c.</strong> The striped square.</p>",
+      "gradingMode": "exact",
+      "answerKey": "3",
+      "acceptedVariants": [
+        "striped"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G3.d",
+      "part": "G3",
+      "promptHtml": "<p><strong>d.</strong> The unfilled square.</p>",
+      "gradingMode": "exact",
+      "answerKey": "13",
+      "acceptedVariants": [
+        "unfilled square"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G3.e",
+      "part": "G3",
+      "promptHtml": "<p><strong>e.</strong> The filled square.</p>",
+      "gradingMode": "exact",
+      "answerKey": "14",
+      "acceptedVariants": [
+        "filled square"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G3.f",
+      "part": "G3",
+      "promptHtml": "<p><strong>f.</strong> The striped circle.</p>",
+      "gradingMode": "exact",
+      "answerKey": "7",
+      "acceptedVariants": [
+        "circle"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G3.g",
+      "part": "G3",
+      "promptHtml": "<p><strong>g.</strong> The filled pentagon.</p>",
+      "gradingMode": "exact",
+      "answerKey": "8",
+      "acceptedVariants": [
+        "pentagon"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G3.h",
+      "part": "G3",
+      "promptHtml": "<p><strong>h.</strong> The spotted square.</p>",
+      "gradingMode": "exact",
+      "answerKey": "4",
+      "acceptedVariants": [
+        "spotted"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G3.i",
+      "part": "G3",
+      "promptHtml": "<p><strong>i.</strong> The spotted hexagon.</p>",
+      "gradingMode": "exact",
+      "answerKey": "9",
+      "acceptedVariants": [
+        "hexagon"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G4.a",
+      "part": "G4",
+      "partPrompt": "Work out Identylizer's strategy from the filled-in rows, then give the three missing error rates. Each answer must be one of: 0.00, 0.33, 0.50, 0.67, 1.00.",
+      "promptHtml": "<p><strong>(a)</strong> Intended card: Unfilled Circle; description: “Unfilled Circle”.</p>",
+      "gradingMode": "exact",
+      "answerKey": "0.00",
+      "acceptedVariants": [
+        "0",
+        "0.0"
+      ],
+      "points": 1
+    },
+    {
+      "id": "G4.b",
+      "part": "G4",
+      "promptHtml": "<p><strong>(b)</strong> Intended card: Unfilled Square; description: “” (says nothing).</p>",
+      "gradingMode": "exact",
+      "answerKey": "0.67",
+      "acceptedVariants": [
+        "0.67 (two thirds)",
+        "2/3"
+      ],
+      "points": 1
+    },
+    {
+      "id": "G4.c",
+      "part": "G4",
+      "promptHtml": "<p><strong>(c)</strong> Intended card: Unfilled Square; description: “Unfilled”.</p>",
+      "gradingMode": "exact",
+      "answerKey": "0.50",
+      "acceptedVariants": [
+        "0.5",
+        "1/2"
+      ],
+      "points": 1
+    },
+    {
+      "id": "G5.a",
+      "part": "G5",
+      "partPrompt": "Fill in the equation Loss = ___(a)___ + ( ___(b)___ x ___(c)___ ) using the terms weight, error rate, or cost. Blanks (b) and (c) can be filled in either order.",
+      "promptHtml": "<p>Blank <strong>(a)</strong>.</p>",
+      "gradingMode": "exact",
+      "answerKey": "error rate",
+      "acceptedVariants": [
+        "errorrate",
+        "error-rate"
+      ],
+      "choices": [
+        "weight",
+        "error rate",
+        "cost"
+      ],
+      "points": 1
+    },
+    {
+      "id": "G5.b",
+      "part": "G5",
+      "promptHtml": "<p>Blank <strong>(b)</strong>.</p>",
+      "gradingMode": "exact",
+      "answerKey": "cost",
+      "acceptedVariants": [
+        "weight"
+      ],
+      "choices": [
+        "weight",
+        "error rate",
+        "cost"
+      ],
+      "points": 1
+    },
+    {
+      "id": "G5.c",
+      "part": "G5",
+      "promptHtml": "<p>Blank <strong>(c)</strong>. (Must be the term you did not use in blank (b).)</p>",
+      "gradingMode": "exact",
+      "answerKey": "weight",
+      "acceptedVariants": [
+        "cost"
+      ],
+      "choices": [
+        "weight",
+        "error rate",
+        "cost"
+      ],
+      "points": 1
+    },
+    {
+      "id": "G6.a",
+      "part": "G6",
+      "partPrompt": "Which of the weight values would make Descriptron pick a one-word description for all three shapes? Give every value that works, as letters or numbers separated by commas (write \"none\" if no value works).",
+      "promptHtml": "<p>List all weight values from a. 0.1, b. 0.5, c. 0.7, d. 5, e. 10, f. 100 that would make Descriptron produce a one-word description for all three cards.</p>",
+      "gradingMode": "exact",
+      "answerKey": "a, b",
+      "acceptedVariants": [
+        "a,b",
+        "ab",
+        "b, a",
+        "a and b",
+        "0.1, 0.5",
+        "0.1 and 0.5",
+        "0.1,0.5"
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "For G2 and G3, start with the shapes that have a property nobody else shares. If exactly one card in the whole set is a triangle, or exactly one is a hexagon, that single word is already enough for a listener.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "A rational listener reasons about what the speaker would have said. Once a card is \"claimed\" by a cheap one-word description that only it would use, the listener can rule that card out when it hears a different word. That can free up an otherwise ambiguous word for a second card. For the later parts, notice that Identylizer (before its Rational Speech Acts button is pushed) is purely literal: it picks at random among every card the words could truthfully apply to, so its error rate is 1 minus 1 divided by the number of matching cards.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Worked example on data that is not graded: in the three-card set, if Descriptron says \"Circle\" while meaning the filled circle, two cards match (filled circle and unfilled circle), so a literal listener is right half the time and the error rate is 0.50 - exactly the number printed in the table. Use the same counting to fill the blank rows.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>The big idea: say as little as you can get away with</h3>\n<p>Rational Speech Acts (RSA) theory models a speaker who balances two things: how much an utterance <em>costs</em> (here, how many words it has) and how likely the listener is to understand it. So the speaker looks for the cheapest description that still lets the listener pick the right card. The listener, in turn, knows the speaker is doing this, and reasons backwards.</p>\n\n<h3>G1: why “circle” means the unfilled one</h3>\n<p>The three cards are a filled circle, an unfilled circle, and an unfilled square. Literally, “circle” fits two cards. But think about what the speaker would have said if they meant the <strong>filled</strong> circle: only one card is filled, so the single word “filled” would have been perfect and just as cheap. A rational speaker would have said “filled”. Since they said “circle” instead, they must mean the circle that could <em>not</em> be described as “filled” - the unfilled circle. (Notice “unfilled” would have been ambiguous between the unfilled circle and the unfilled square, so “circle” really is the speaker's best one-word choice for it.)</p>\n\n<h3>G2: five cards</h3>\n<p>Cards: filled triangle, filled circle, unfilled circle, unfilled square, striped square.</p>\n<ul>\n<li>Only one triangle: “triangle” (5) works, and no cheaper option exists.</li>\n<li>Only one striped shape: “striped” (3).</li>\n<li>Now, “filled” is literally true of both the triangle and the filled circle - but the triangle would be called “triangle”, so a rational listener hearing “filled” picks the filled circle (1).</li>\n<li>“Square” fits the unfilled square and the striped square - but the striped one would be called “striped”, so “square” (6) lands on the unfilled square.</li>\n<li>The unfilled circle: “circle” works (the filled circle is claimed by “filled”) and “unfilled” works too (the unfilled square is claimed by “square”). Both cost one word, so either 4 or 2 is accepted.</li>\n</ul>\n\n<h3>G3: nine cards</h3>\n<p>Same method, just more cards. Grab the unique properties first: only one circle (the striped circle, 7), only one pentagon (8), only one hexagon (9). Those three are done with a single word each.</p>\n<p>Now the freed-up words: “striped” no longer describes the circle in the listener's mind (it would have been called “circle”), so “striped” (3) picks out the striped square. Likewise “spotted” (4) picks out the spotted square, because the spotted hexagon is claimed by “hexagon”.</p>\n<p>The remaining squares are unfilled square and filled square. “Square” is still ambiguous between them, “unfilled” is still ambiguous (unfilled triangle), and “filled” is still ambiguous (filled triangle). So both squares need two words: 13 and 14. And the two triangles have the same problem in reverse - “triangle” cannot separate them - so they take 10 and 11.</p>\n\n<h3>G4: Identylizer is a literal listener</h3>\n<p>Before the Rational Speech Acts button is pushed, Identylizer does not reason about the speaker at all. It just picks at random among all cards the words could truthfully describe. If <em>n</em> cards match, it is right 1/<em>n</em> of the time, so the error rate is 1 - 1/<em>n</em>:</p>\n<ul>\n<li>Saying nothing matches all 3 cards: 1 - 1/3 = 0.67 (matches the given rows).</li>\n<li>(a) “Unfilled Circle” matches only 1 card, so error rate <strong>0.00</strong>.</li>\n<li>(b) Saying nothing matches all 3 cards, so <strong>0.67</strong>.</li>\n<li>(c) “Unfilled” matches 2 cards (unfilled circle, unfilled square), so 1 - 1/2 = <strong>0.50</strong>.</li>\n</ul>\n\n<h3>G5: the loss formula</h3>\n<p>Test the rows. Row 1: weight 2, error 0.00, cost 1, loss 2.00. Row 4: weight 10, error 0.67, cost 0, loss 0.67 - since the cost is 0 and the loss equals the error rate exactly, the weight must be multiplying the cost, not the error rate. Row 3 confirms it: 0.00 + (2 x 0.2) = 0.40. So</p>\n<p style=\"text-align:center\">Loss = error rate + (cost x weight)</p>\n<p>and because multiplication does not care about order, error rate + (weight x cost) is equally correct.</p>\n\n<h3>G6: turning the weight dial</h3>\n<p>The weight controls how much Descriptron cares about being brief. A big weight makes words expensive, so it prefers to say nothing; a small weight makes words cheap, so it prefers to describe.</p>\n<p>With a weight <em>w</em>, take the filled circle in RSA mode: saying nothing has loss 0.67 + 0 = 0.67; “filled” has loss 0.00 + <em>w</em>; “circle” has loss 1.00 + <em>w</em>; “filled circle” has loss 0.00 + 2<em>w</em>. The one-word “filled” beats saying nothing exactly when <em>w</em> is less than 0.67, and it always beats the two-word option (since <em>w</em> is less than 2<em>w</em>). The unfilled circle (“unfilled” or “circle”, both loss <em>w</em>) and the unfilled square (“square”, loss <em>w</em>) give the same condition.</p>\n<p>So any weight below 0.67 works: from the list, that is <strong>0.1 and 0.5</strong>. At 0.7 and above, silence is cheaper than any word.</p>\n\n<h3>Why this matters</h3>\n<p>People really do talk this way. If someone hands you a photo of two dogs, one brown and one white, and says “the brown one”, they are doing exactly this calculation: choosing the shortest phrase that still narrows things down, and trusting you to reason about what they could have said instead.</p>",
   "reviewStatus": "published"
 }

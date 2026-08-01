@@ -1,11 +1,13 @@
 {
   "id": "2023-open-D",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2023,
   "round": "open",
   "letter": "D",
   "title": "For the Sake of Their House",
-  "authors": [],
+  "authors": [
+    "Pavel Iosad"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
     "morphology"
@@ -17,10 +19,122 @@
   ],
   "officialPoints": 10,
   "officialTimeMinutes": 18,
-  "bodyHtml": "",
+  "bodyHtml": "<p>The Permyak language is spoken by around 60,000 people on the western slope of the Ural Mountains in Russia. It belongs to the Finno-Ugric language family, along with Finnish, Estonian, Hungarian, and other languages that are mostly spoken in Russia.</p>\n<p>Examine the following words in Permyak and their translations in English:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Permyak</th><th>English</th></tr></thead>\n<tbody>\n<tr><td>1.</td><td><span class=\"data\">cerkulaɲ</span></td><td>towards the house</td></tr>\n<tr><td>2.</td><td><span class=\"data\">pɨzannezɨtlən</span></td><td>of your (sg.) desks</td></tr>\n<tr><td>3.</td><td><span class=\"data\">ponɨt</span></td><td>your (sg.) dog</td></tr>\n<tr><td>4.</td><td><span class=\"data\">purtnɨs</span></td><td>their knife</td></tr>\n<tr><td>5.</td><td><span class=\"data\">kəinnezɨs</span></td><td>his wolves</td></tr>\n<tr><td>6.</td><td><span class=\"data\">vərələn</span></td><td>of my forest</td></tr>\n<tr><td>7.</td><td><span class=\"data\">purtəla</span></td><td>for the sake of my knife</td></tr>\n<tr><td>8.</td><td><span class=\"data\">tɨezɨtkət</span></td><td>with your (sg.) lakes</td></tr>\n<tr><td>9.</td><td><span class=\"data\">cerkuezliɕ</span></td><td>from the houses</td></tr>\n<tr><td>10.</td><td><span class=\"data\">juɕɕezə</span></td><td>my swans</td></tr>\n<tr><td>11.</td><td><span class=\"data\">kokɨskət</span></td><td>with his foot</td></tr>\n<tr><td>12.</td><td><span class=\"data\">ciɨtlaɲ</span></td><td>towards your (sg.) hand</td></tr>\n</tbody>\n</table>\n</div>\n<p><em>Notes:</em> <span class=\"data\">ɨ</span> and <span class=\"data\">ə</span> are special vowel sounds of Permyak; <span class=\"data\">c</span>, <span class=\"data\">ɕ</span>, and <span class=\"data\">ɲ</span> are pronounced similarly to k, s, and n, respectively. The abbreviations <em>sg.</em> and <em>pl.</em> stand for <em>singular</em> and <em>plural</em>. The word <em>their</em> has a plural meaning rather than a gender-neutral singular meaning.</p>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "D1.a",
+      "part": "D1",
+      "partPrompt": "Translate the following Permyak words into English.",
+      "promptHtml": "<p>a. <span class=\"data\">pɨzanɨsliɕ</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "from his desk",
+      "acceptedVariants": [
+        "his desk, from"
+      ],
+      "points": 1.25
+    },
+    {
+      "id": "D1.b",
+      "part": "D1",
+      "promptHtml": "<p>b. <span class=\"data\">vərrezlən</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "of the forests",
+      "acceptedVariants": [
+        "of forests"
+      ],
+      "points": 1.25
+    },
+    {
+      "id": "D1.c",
+      "part": "D1",
+      "promptHtml": "<p>c. <span class=\"data\">ponnɨt</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "your (pl.) dog",
+      "acceptedVariants": [
+        "your pl. dog",
+        "your plural dog",
+        "your dog (pl.)"
+      ],
+      "points": 1.25
+    },
+    {
+      "id": "D1.d",
+      "part": "D1",
+      "promptHtml": "<p>d. <span class=\"data\">juɕla</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "for the sake of the swan",
+      "acceptedVariants": [
+        "for the sake of a swan",
+        "for the sake of swan"
+      ],
+      "points": 1.25
+    },
+    {
+      "id": "D2.a",
+      "part": "D2",
+      "partPrompt": "Translate the following English phrases into Permyak.",
+      "promptHtml": "<p>a. his hands</p>",
+      "gradingMode": "exact",
+      "answerKey": "ciezɨs",
+      "acceptedVariants": [
+        "ciezis"
+      ],
+      "points": 1.25
+    },
+    {
+      "id": "D2.b",
+      "part": "D2",
+      "promptHtml": "<p>b. my dogs</p>",
+      "gradingMode": "exact",
+      "answerKey": "ponnezə",
+      "acceptedVariants": [
+        "ponneze"
+      ],
+      "points": 1.25
+    },
+    {
+      "id": "D2.c",
+      "part": "D2",
+      "promptHtml": "<p>c. of your (pl.) feet</p>",
+      "gradingMode": "exact",
+      "answerKey": "kokkeznɨtlən",
+      "acceptedVariants": [
+        "kokkeznitlen"
+      ],
+      "points": 1.25
+    },
+    {
+      "id": "D2.d",
+      "part": "D2",
+      "promptHtml": "<p>d. for the sake of their house</p>",
+      "gradingMode": "exact",
+      "answerKey": "cerkunɨla",
+      "acceptedVariants": [
+        "cerkunila",
+        "cerkunɨsla",
+        "cerkunisla"
+      ],
+      "points": 1.25
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Every Permyak word here is one root followed by a string of endings. Line up words that share a beginning, like cerkulaɲ \"towards the house\" and cerkuezliɕ \"from the houses\", to peel the endings off one at a time.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "The endings always come in the same order: root, then plural, then possessor (\"my\", \"your\", \"his\", \"their\"), then case (\"of\", \"towards\", \"with\", \"from\", \"for the sake of\"). Watch what happens to the consonant at the end of a root when the plural ending is added.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try kəinnezɨs \"his wolves\". Item 5 is the only wolf word, but compare it with juɕɕezə \"my swans\": both plurals contain ez, and in both the consonant just before it is doubled. So kəinnezɨs splits as kəin (wolf) + n-ez (plural) + ɨs (his). Now check that ɨs really means \"his\" against item 11.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What kind of puzzle is this?</h3>\n<p>Every Permyak word in the list is a single noun carrying a chain of endings (suffixes). Our job is to find where each ending starts and stops, and what each one means. This is called <em>morphological analysis</em>: cutting words into meaningful pieces (morphemes).</p>\n<h3>Step 1: find the roots</h3>\n<p>Look for English glosses that share a noun and Permyak words that share a beginning. \"Towards the house\" is <span class=\"data\">cerkulaɲ</span> and \"from the houses\" is <span class=\"data\">cerkuezliɕ</span>: both start with <span class=\"data\">cerku</span>, so <span class=\"data\">cerku</span> = \"house\". Doing the same across the list gives:</p>\n<dl class=\"gloss-list\"><dt>cerku</dt><dd>house</dd><dt>pɨzan</dt><dd>desk</dd><dt>pon</dt><dd>dog</dd><dt>purt</dt><dd>knife</dd><dt>tɨ</dt><dd>lake</dd><dt>vər</dt><dd>forest</dd><dt>kəin</dt><dd>wolf</dd><dt>juɕ</dt><dd>swan</dd><dt>kok</dt><dd>foot</dd><dt>ci</dt><dd>hand</dd></dl>\n<h3>Step 2: find the case endings (the last piece)</h3>\n<p>The last chunk of each word matches the English preposition:</p>\n<dl class=\"gloss-list\"><dt>-lən</dt><dd>of</dd><dt>-laɲ</dt><dd>towards</dd><dt>-la</dt><dd>for the sake of</dd><dt>-liɕ</dt><dd>from</dd><dt>-kət</dt><dd>with</dd></dl>\n<p>Check: <span class=\"data\">vərələn</span> \"of my forest\" is <span class=\"data\">vər</span> + something + <span class=\"data\">lən</span>, and <span class=\"data\">purtəla</span> \"for the sake of my knife\" is <span class=\"data\">purt</span> + the same something + <span class=\"data\">la</span>. That leftover <span class=\"data\">ə</span> must mean \"my\".</p>\n<h3>Step 3: the possessive endings</h3>\n<p>Comparing more words gives the possessors, which sit right before the case ending:</p>\n<dl class=\"gloss-list\"><dt>-ə</dt><dd>my</dd><dt>-ɨt</dt><dd>your (sg.)</dd><dt>-ɨs</dt><dd>his</dd><dt>-nɨs</dt><dd>their</dd></dl>\n<p>Notice the neat pattern: the plural possessor \"their\" is just \"his\" with an extra <span class=\"data\">n</span> in front. So \"your (pl.)\" should be \"your (sg.)\" with the same extra <span class=\"data\">n</span>: <span class=\"data\">-nɨt</span>. Item 3 confirms it in reverse: <span class=\"data\">ponɨt</span> is \"your (sg.) dog\", so <span class=\"data\">ponnɨt</span> (with an extra n that cannot be a plural marker, since there is no <span class=\"data\">ez</span>) has to mean \"your (pl.) dog\".</p>\n<h3>Step 4: the plural, and the doubling trick</h3>\n<p>The plural marker is <span class=\"data\">-ez</span>, and it goes immediately after the root: <span class=\"data\">cerku-ez-liɕ</span> \"from the houses\". But look at <span class=\"data\">juɕɕezə</span> \"my swans\" from root <span class=\"data\">juɕ</span>, and <span class=\"data\">pɨzannezɨtlən</span> \"of your (sg.) desks\" from root <span class=\"data\">pɨzan</span>. When the root ends in a consonant, that consonant is doubled before <span class=\"data\">-ez</span>. After a vowel (<span class=\"data\">cerku</span>, <span class=\"data\">tɨ</span>) nothing is doubled.</p>\n<h3>The whole template</h3>\n<p>root + (plural) + (possessive) + (case). Now the answers fall out.</p>\n<h3>D1: Permyak into English</h3>\n<ul>\n<li><span class=\"data\">pɨzanɨsliɕ</span> = pɨzan (desk) + ɨs (his) + liɕ (from). No <span class=\"data\">ez</span>, so singular: \"from his desk\".</li>\n<li><span class=\"data\">vərrezlən</span> = vər + doubled r + ez (plural) + lən (of). No possessor: \"of the forests\".</li>\n<li><span class=\"data\">ponnɨt</span> = pon + nɨt (your pl.): \"your (pl.) dog\".</li>\n<li><span class=\"data\">juɕla</span> = juɕ (swan) + la: \"for the sake of the swan\".</li>\n</ul>\n<h3>D2: English into Permyak</h3>\n<ul>\n<li>his hands = ci + ez (plural, no doubling after a vowel) + ɨs = <span class=\"data\">ciezɨs</span>.</li>\n<li>my dogs = pon + doubled n + ez + ə = <span class=\"data\">ponnezə</span>.</li>\n<li>of your (pl.) feet = kok + doubled k + ez + nɨt + lən = <span class=\"data\">kokkeznɨtlən</span>.</li>\n<li>for the sake of their house = cerku + \"their\" + la = <span class=\"data\">cerkunɨla</span> (the official key).</li>\n</ul>\n<p>That last one is worth a comment: from the pattern you would expect <span class=\"data\">cerkunɨsla</span>, since \"their\" is <span class=\"data\">-nɨs</span>. The official answer key drops the s, which suggests the s is lost before the case ending <span class=\"data\">-la</span>. If you wrote the fully regular form, you reasoned correctly, and it is accepted here too.</p>",
   "reviewStatus": "published"
 }

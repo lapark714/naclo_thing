@@ -1,24 +1,153 @@
 {
   "id": "2023-open-E",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2023,
   "round": "open",
   "letter": "E",
   "title": "Bengalese Finch Song",
-  "authors": [],
+  "authors": [
+    "Malcolm Kennedy"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
-    "semantics"
+    "writing systems",
+    "phonology"
   ],
   "formTag": "formal and computational",
   "difficulty": "intro",
-  "languages": [],
+  "languages": [
+    "Hawaiian",
+    "English"
+  ],
   "officialPoints": 5,
   "officialTimeMinutes": 10,
-  "bodyHtml": "",
+  "bodyHtml": "<p>One important feature of human language is unpredictability. If you knew what people were going to say beforehand, they wouldn't need to say it!</p>\n<p>But language isn't completely random either. If you've ever used the auto-complete feature on a phone, you'll know that it can often predict your next word based on the words you've already typed. For instance, after the word <em>know</em>, your phone might suggest <em>if</em>, or <em>when</em>, or <em>that</em>, since those are the words that are most frequent after <em>know</em>.</p>\n<p>This type of prediction is not just relevant for words: it can also be done with letters. For example, in English, after the letter <em>q</em>, we can predict with nearly 100% certainty that the next letter will be (you guessed it!) <em>u</em>. But for most letters in English, the next letter is less certain. After <em>t</em>, the most common next letter is <em>h</em>, which follows it around 40% of the time (mostly because of a few common words like <em>the</em>, <em>this</em>, <em>that</em>, and <em>then</em>) &mdash; but it is also frequently followed by the vowels <em>o</em>, <em>e</em>, and <em>i</em>.</p>\n<p>For a computer to predict what letter will come next, the computer needs to store transitional probabilities, which define how likely each letter is to appear after each other letter. For example, we might say:</p>\n<p style=\"text-align:center\"><strong>p(t gives h) = 0.40</strong></p>\n<p>This means “the probability that <em>t</em> will be followed by <em>h</em> is 0.40.” We can calculate transitional probabilities by using a piece of text. For instance, p(t gives h) would be estimated as the number of times that <em>th</em> occurs in the text, divided by the number of times that <em>t</em> occurs.</p>\n<p>Below is some text in Hawaiian, which uses 13 letters in its writing system. Spaces have been removed, and the symbol <span class=\"data\">`</span> is a letter like any other, not punctuation &mdash; it's pronounced like the sound in the middle of the English exclamation <em>uh-oh</em>. Below the text is a partially-filled table showing the steps to computing Hawaiian transitional probabilities (<em>L1</em> and <em>L2</em> stand for <em>letter 1</em> and <em>letter 2</em>).</p>\n<pre class=\"data\">ikinohihanakeakuaikalaniamekahonuahe`ano`ole\nkahonuaua`oloheloheamalunanookahohonukapouli\nho`opunanaiholaka`uhaneokeakuamalunaokawai</pre>\n<p><em>(The three lines are one continuous stretch of text; read them straight through.)</em></p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>L1</th><th>L2</th><th>Count of L1 followed by L2</th><th>Count of L1</th><th>P(L1 gives L2)</th></tr></thead>\n<tbody>\n<tr><td class=\"data\">i</td><td class=\"data\">h</td><td>3</td><td>8</td><td>3/8</td></tr>\n<tr><td class=\"data\">k</td><td class=\"data\">u</td><td>2</td><td>12</td><td>1/6</td></tr>\n<tr><td class=\"data\">k</td><td class=\"data\">e</td><td>2</td><td>12</td><td>1/6</td></tr>\n<tr><td class=\"data\">k</td><td class=\"data\">i</td><td>a.</td><td>b.</td><td>c.</td></tr>\n<tr><td class=\"data\">k</td><td class=\"data\">a</td><td>d.</td><td>e.</td><td>f.</td></tr>\n</tbody>\n</table>\n</div>\n<p>Below are four sequences of letters. Two of the sequences are Hawaiian written in code (each letter has been replaced with a different letter). Don't worry about trying to figure out which letter in the code stands for which Hawaiian letter &mdash; that is not necessary for solving the problem.</p>\n<p>The other two sequences are from the songs of two Bengalese finches, a species of songbird originally from Southeast Asia. In the case of the Bengalese finch song, the letters represent “syllables,” which are the basic units that biologists have identified in their songs.</p>\n<p>Bengalese finch song is interesting because, unlike many other types of birdsong, it is not entirely predictable &mdash; but it's still more predictable than human language. In other words, given that you hear one syllable, you can be more certain &mdash; on average &mdash; about which syllable you'll hear next, than you could be when reading human language.</p>\n<pre class=\"data\">Sequence A: abcbdaefbdgdabhijigdbcbhgdabkieidgdahbjaficblbfefkbcf\n\nSequence B: abacdefghahbhicdefghahbhgicdefgbjklcdefgammlcdefgajkl\n\nSequence C: abcdefbfcdefbfcdeaghijkbcdefafcdebcdeaghiffcdefafcdef\n\nSequence D: abcdedfgfdfgbahibjdkbghcbfcbffjdcbgbidgdldbgfdibjdgba</pre>\n<p>Below are the transitional probabilities for a few English letters, estimated based on Wikipedia. For example, p(R gives E) = 0.40. The dash symbol <span class=\"data\">-</span> is used to indicate a space. Each row is a first letter; each column is the letter that follows it.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>after &darr; / next &rarr;</th><th>E</th><th>L</th><th>R</th><th>S</th><th>T</th><th>-</th></tr></thead>\n<tbody>\n<tr><td>E</td><td>.05</td><td>.05</td><td>.15</td><td>.15</td><td>.05</td><td>.55</td></tr>\n<tr><td>L</td><td>.35</td><td>.20</td><td>.03</td><td>.05</td><td>.02</td><td>.35</td></tr>\n<tr><td>R</td><td>.40</td><td>.02</td><td>.03</td><td>.10</td><td>.15</td><td>.30</td></tr>\n<tr><td>S</td><td>.12</td><td>.03</td><td>.00</td><td>.05</td><td>.20</td><td>.60</td></tr>\n<tr><td>T</td><td>.35</td><td>.05</td><td>.10</td><td>.05</td><td>.03</td><td>.42</td></tr>\n<tr><td>-</td><td>.10</td><td>.10</td><td>.10</td><td>.20</td><td>.50</td><td>.00</td></tr>\n</tbody>\n</table>\n</div>\n<p>Given a piece of text, we can label each letter with its transitional probability based on the previous letter. For instance, TREES-TREES-TREES would be labeled as shown here (with no label on the first letter, since it has no previous letter to use for determining the transitional probability):</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td></td><td>.10</td><td>.40</td><td>.05</td><td>.15</td><td>.60</td><td>.50</td><td>.10</td><td>.40</td><td>.05</td><td>.15</td><td>.60</td><td>.50</td><td>.10</td><td>.40</td><td>.05</td><td>.15</td></tr>\n<tr><td>T</td><td>R</td><td>E</td><td>E</td><td>S</td><td>-</td><td>T</td><td>R</td><td>E</td><td>E</td><td>S</td><td>-</td><td>T</td><td>R</td><td>E</td><td>E</td><td>S</td></tr>\n</tbody>\n</table>\n</div>\n<p>Here is a phrase labeled in the same way &mdash; but all of the letters are missing, leaving just the transitional probabilities:</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td></td><td>.40</td><td>.15</td><td>.20</td><td>.05</td><td>.35</td><td>.15</td><td>.05</td><td>.60</td><td>.10</td><td>.35</td><td>.05</td><td>.03</td><td>.35</td><td>.15</td><td>.10</td></tr>\n<tr><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td></tr>\n</tbody>\n</table>\n</div>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
-  "reviewStatus": "published"
+  "questions": [
+    {
+      "id": "E1.a",
+      "part": "E1",
+      "partPrompt": "Fill in the blanks a-f in the Hawaiian transitional probability table. Give counts as whole numbers and probabilities as fractions.",
+      "promptHtml": "<p><strong>a.</strong> Count of <span class=\"data\">k</span> followed by <span class=\"data\">i</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "E1.b",
+      "part": "E1",
+      "promptHtml": "<p><strong>b.</strong> Count of <span class=\"data\">k</span> (in the row for <span class=\"data\">k</span> gives <span class=\"data\">i</span>)</p>",
+      "gradingMode": "exact",
+      "answerKey": "12",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "E1.c",
+      "part": "E1",
+      "promptHtml": "<p><strong>c.</strong> P(<span class=\"data\">k</span> gives <span class=\"data\">i</span>)</p>",
+      "gradingMode": "exact",
+      "answerKey": "1/12",
+      "acceptedVariants": [
+        "0.083",
+        ".083",
+        "0.0833",
+        "8.3%"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "E1.d",
+      "part": "E1",
+      "promptHtml": "<p><strong>d.</strong> Count of <span class=\"data\">k</span> followed by <span class=\"data\">a</span></p>",
+      "gradingMode": "exact",
+      "answerKey": "7",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "E1.e",
+      "part": "E1",
+      "promptHtml": "<p><strong>e.</strong> Count of <span class=\"data\">k</span> (in the row for <span class=\"data\">k</span> gives <span class=\"data\">a</span>)</p>",
+      "gradingMode": "exact",
+      "answerKey": "12",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "E1.f",
+      "part": "E1",
+      "promptHtml": "<p><strong>f.</strong> P(<span class=\"data\">k</span> gives <span class=\"data\">a</span>)</p>",
+      "gradingMode": "exact",
+      "answerKey": "7/12",
+      "acceptedVariants": [
+        "0.583",
+        ".583",
+        "0.5833",
+        "58.3%"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "E2.1",
+      "part": "E2",
+      "partPrompt": "Suppose a Hawaiian speaker is typing, and the last letter they have typed is k. Based on the text above, what is the next letter most likely to be?",
+      "promptHtml": "<p>The most likely next letter after <span class=\"data\">k</span> is:</p>",
+      "gradingMode": "exact",
+      "answerKey": "a",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "E3.1",
+      "part": "E3",
+      "partPrompt": "Which two of the four sequences (A, B, C, D) are Bengalese finch song? Note that the code used might be different between two texts of the same type.",
+      "promptHtml": "<p>The two finch-song sequences are:</p>",
+      "gradingMode": "exact",
+      "answerKey": "B and C",
+      "acceptedVariants": [
+        "B, C",
+        "BC",
+        "C and B",
+        "Sequence B and Sequence C",
+        "B C"
+      ],
+      "points": 1.5
+    },
+    {
+      "id": "E4.1",
+      "part": "E4",
+      "partPrompt": "The phrase below is labeled with transitional probabilities, but all of the letters are missing. What is the phrase? Capitalization does not matter, and you can use either a space or a dash to indicate a space.",
+      "promptHtml": "<p>The phrase is:</p>",
+      "gradingMode": "exact",
+      "answerKey": "RESTLESS LETTERS",
+      "acceptedVariants": [
+        "restless letters",
+        "RESTLESS-LETTERS",
+        "restless-letters"
+      ],
+      "points": 1.5
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "For E1, remember that the two count columns are counted over the whole Hawaiian text read as one continuous string (the line breaks are not spaces). The right-hand count column is just the total number of times the first letter appears anywhere.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "For E3, “more predictable” means that after a given letter there are fewer different letters that can come next. Instead of doing arithmetic, scan each sequence for long chunks that repeat over and over: highly predictable text is built out of the same blocks again and again, while less predictable text keeps producing new neighbours for the same letter. For E4, notice that some probability values in the table appear only once in the whole grid, so a single number can pin down both letters of a pair.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Practice the counting method on the row that is already filled in for you. Read the Hawaiian text straight through: the letter i appears eight times in total (five in the first line, one at the very end of the second line, two in the third line), and three of those are immediately followed by h — including the i at the end of line two, because the next letter is the h that starts line three. That is why the table shows 3, 8, 3/8. Now do exactly the same bookkeeping for k.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What a “transitional probability” is</h3>\n<p>A transitional probability answers the question: <em>given that I just saw letter X, how likely is the next letter to be Y?</em> You measure it by counting. Take a chunk of text, count how many times the pair XY occurs, and divide by how many times X occurs at all. Written out: p(X gives Y) = (number of XY pairs) / (number of X's).</p>\n\n<h3>E1: counting k in the Hawaiian text</h3>\n<p>The three printed lines are one continuous string, so read them straight through without inserting anything at the line breaks. Now hunt for every <span class=\"data\">k</span> and write down what comes right after it.</p>\n<ul>\n<li>Line 1 (<span class=\"data\">ikinohihanakeakuaikalaniamekahonuahe`ano`ole</span>): <span class=\"data\">ki</span>, <span class=\"data\">ke</span>, <span class=\"data\">ku</span>, <span class=\"data\">ka</span>, <span class=\"data\">ka</span> &mdash; five k's.</li>\n<li>Line 2 (<span class=\"data\">kahonuaua`oloheloheamalunanookahohonukapouli</span>): <span class=\"data\">ka</span>, <span class=\"data\">ka</span>, <span class=\"data\">ka</span> &mdash; three k's.</li>\n<li>Line 3 (<span class=\"data\">ho`opunanaiholaka`uhaneokeakuamalunaokawai</span>): <span class=\"data\">ka</span>, <span class=\"data\">ke</span>, <span class=\"data\">ku</span>, <span class=\"data\">ka</span> &mdash; four k's.</li>\n</ul>\n<p>Total: 5 + 3 + 4 = 12 k's, which matches the 12 already printed in the table &mdash; a good sign your count is right. Sorting the followers: <span class=\"data\">ku</span> twice, <span class=\"data\">ke</span> twice (both already in the table), <span class=\"data\">ki</span> once, and <span class=\"data\">ka</span> seven times. And 2 + 2 + 1 + 7 = 12, so every k is accounted for.</p>\n<p>So a = 1, b = 12, c = 1/12, d = 7, e = 12, f = 7/12.</p>\n\n<h3>E2: what comes after k?</h3>\n<p>The counts you just made are your prediction model. The largest number by far is <span class=\"data\">ka</span> with 7 out of 12, so the most likely next letter after <span class=\"data\">k</span> is <strong>a</strong>. (This makes sense for Hawaiian: every consonant must be followed by a vowel, and <span class=\"data\">a</span> is the commonest vowel.)</p>\n\n<h3>E3: telling finch song from human language</h3>\n<p>You are told the finch songs are <em>more predictable</em> than the human-language texts. Predictable means: after any given syllable, there are only a small number of things that can come next, so the song is built out of chunks that repeat almost identically.</p>\n<p>Look at Sequence B: <span class=\"data\">abacdefghahbhicdefghahbhgicdefgbjklcdefgammlcdefgajkl</span>. The block <span class=\"data\">cdefg</span> shows up four times, and <span class=\"data\">jkl</span> shows up twice. Sequence C does the same thing: <span class=\"data\">cdef</span> and <span class=\"data\">cde</span> appear again and again, and the chunk <span class=\"data\">aghi</span> turns up twice. Once you are inside one of these blocks, the next letter is almost guaranteed.</p>\n<p>Sequences A and D never settle into blocks like that. Trace the letter <span class=\"data\">b</span> in Sequence A and you find it followed by <span class=\"data\">c</span>, <span class=\"data\">d</span>, <span class=\"data\">h</span>, <span class=\"data\">c</span>, <span class=\"data\">k</span>, <span class=\"data\">j</span>, <span class=\"data\">l</span>, <span class=\"data\">f</span>, <span class=\"data\">c</span> — a scatter of different letters. That is the messier, less predictable behaviour of human language (in this case coded Hawaiian). So the finch songs are <strong>B and C</strong>.</p>\n\n<h3>E4: reading a phrase from probabilities alone</h3>\n<p>Treat the probability table like a code book. Some values are unique in the whole grid, so they identify a letter pair on their own. For instance .60 occurs only once (S then a space), .50 only once (space then T), .40 only once (R then E), .20 twice, and so on. Work along the strip, keeping in mind that whatever letter you decide is second in one pair must be the first letter of the next pair — the chain has to link up.</p>\n<p>Start at the left: .40 must be R then E. The next value, .15, has to start from E, and .15 in the E row is either R or S. Then .20 has to start from whatever that was; .20 exists only in the L row (L then L) and the S row (S then T) and the space row (space then S), so the previous letter must have been S, giving S then T. Continuing this chain — and using .60 as “S then space” and .50 as “space then T” whenever they appear — the whole strip resolves to <strong>RESTLESS LETTERS</strong>.</p>\n<p>Check it: R-E .40, E-S .15, S-T .20, T-L .05, L-E .35, E-S .15, S-S .05, S-space .60, space-L .10, L-E .35, E-T .05, T-T .03, T-E .35, E-R .15, R-S .10. Every value matches.</p>\n\n<h3>The big idea</h3>\n<p>Human language sits in a sweet spot: predictable enough that autocomplete works and that you can reconstruct a whole phrase from nothing but transition numbers, yet unpredictable enough to carry new information. Bengalese finch song is further toward the predictable end — it is not a fixed recording, but it recycles the same syllable blocks far more rigidly than we do.</p>",
+  "reviewStatus": "published",
+  "questionsNote": null
 }
