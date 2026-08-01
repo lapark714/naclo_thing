@@ -45,7 +45,7 @@ export function ProblemView({
   const parts = useMemo(() => {
     const out: { key: string; prompt?: string; questions: ClientQuestion[] }[] = [];
     for (const q of questions) {
-      const key = q.part ?? "—";
+      const key = q.part ?? "";
       const last = out[out.length - 1];
       if (last && last.key === key) last.questions.push(q);
       else out.push({ key, prompt: q.partPrompt, questions: [q] });
@@ -68,7 +68,7 @@ export function ProblemView({
       const solved = Object.values(next).filter(Boolean).length === questions.length;
       // Revealed parts earn nothing, which is the whole point of the trade.
       const earned = questions
-        .filter((q) => next[q.id] && !revealed.includes(q.part ?? "—"))
+        .filter((q) => next[q.id] && !revealed.includes(q.part ?? ""))
         .reduce((n, q) => n + q.points, 0);
 
       updateProblem(problemId, (p) => ({
@@ -249,7 +249,7 @@ export function ProblemView({
                 ? "You have every part. Here is how a solver would get there."
                 : attempted
                   ? "The full walkthrough gives away the whole problem. Open it when you are done working."
-                  : "Try the questions first — and use Stuck? next to any part if you need a nudge."}
+                  : "Try the questions first. Use the Hint button next to any part if you need a nudge."}
             </p>
             <button
               type="button"
@@ -259,7 +259,7 @@ export function ProblemView({
               Show explanation
             </button>
             <p className="mt-2 text-[0.78rem] text-ink-faint">
-              Free — reading the explanation costs no XP. Worth {officialPoints} points in the real
+              Reading the explanation is free and costs no XP. Worth {officialPoints} points in the real
               exam.
             </p>
           </div>

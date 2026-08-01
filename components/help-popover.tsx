@@ -115,7 +115,7 @@ export function HelpPopover({
             : "border-rule-strong bg-white text-ink-soft hover:border-ink hover:text-ink"
         }`}
       >
-        Stuck?
+        Hint
         {spent > 0 && (
           <span className={open ? "text-paper/70" : "text-mark"} aria-label={`${spent} XP spent`}>
             −{spent}

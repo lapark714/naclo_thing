@@ -192,7 +192,7 @@ function Feedback({
   if (verdict.state === "correct") {
     return (
       <p className="mt-1.5 text-[0.82rem] text-good">
-        Correct{verdict.reason ? <span className="text-ink-soft"> — {verdict.reason}</span> : null}
+        Correct{verdict.reason ? <span className="text-ink-soft">. {verdict.reason}</span> : null}
       </p>
     );
   }
@@ -246,7 +246,7 @@ function Feedback({
     <div className="mt-1.5">
       <p className="text-[0.82rem] text-mark">
         Not yet
-        {verdict.reason ? <span className="text-ink-soft"> — {verdict.reason}</span> : null}
+        {verdict.reason ? <span className="text-ink-soft">. {verdict.reason}</span> : null}
       </p>
       <div className="mt-1 flex flex-wrap gap-3">
         <button
@@ -267,7 +267,7 @@ function Feedback({
         )}
         {flagged && (
           <span className="text-[0.78rem] text-ink-faint">
-            Flagged for review. Thanks — flags are checked by a person.
+            Flagged for review. Thanks, a person checks every flag.
           </span>
         )}
       </div>
