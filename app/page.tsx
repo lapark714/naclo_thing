@@ -65,7 +65,7 @@ export default function Home() {
 
       <footer className="mt-16 border-t border-rule pt-6 text-[0.8rem] text-ink-soft">
         <p className="max-w-[60ch]">
-          Unofficial practice for the North American Computational Linguistics Open Competition.
+          Unofficial practice for the North American Computational Linguistics Olympiad.
           We credit the original authors on every problem page. You do not need an account, and
           your browser keeps your progress.
         </p>
