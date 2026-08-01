@@ -246,7 +246,7 @@ export function ProblemView({
           <div className="border border-rule bg-white px-4 py-4">
             <p className="max-w-[58ch] text-[0.9rem] text-ink-soft">
               {allDone
-                ? "You have every part. Here is how a solver would get there."
+                ? "You have every part. Read how a solver would get there."
                 : attempted
                   ? "The full walkthrough gives away the whole problem. Open it when you are done working."
                   : "Try the questions first. Use the Hint button next to any part if you need a nudge."}
@@ -259,7 +259,7 @@ export function ProblemView({
               Show explanation
             </button>
             <p className="mt-2 text-[0.78rem] text-ink-faint">
-              Reading the explanation is free and costs no XP. Worth {officialPoints} points in the real
+              Reading the explanation costs no XP. Worth {officialPoints} points in the real
               exam.
             </p>
           </div>

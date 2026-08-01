@@ -10,13 +10,13 @@ export default function Home() {
     <main className="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
       <h1 className="font-heading text-5xl leading-none sm:text-6xl">gloss.</h1>
       <p className="mt-5 max-w-[54ch] text-lg leading-relaxed text-ink-soft">
-        Past NACLO problems you can search by concept, with hints that stop short of the answer.
+        Work past NACLO problems by concept. Ask for a hint instead of falling back on the full
+        solution.
       </p>
 
       <p className="mt-4 max-w-[54ch] text-[0.95rem] leading-relaxed text-ink-soft">
-        NACLO posts its past exams as PDFs. Everything is in there, but you cannot search them,
-        you cannot pick out one kind of problem, and when you get stuck the only thing left to do
-        is read the full solution. Here you get a nudge first.
+        NACLO puts its past exams online as PDFs. You cannot search them or filter for one kind
+        of problem, and when you get stuck your only option is to read the whole solution.
       </p>
 
       <section className="mt-10">
@@ -27,22 +27,23 @@ export default function Home() {
           <div>
             <dt className="font-heading text-[1.05rem]">Hints cost XP</dt>
             <dd className="mt-1 text-[0.88rem] leading-relaxed text-ink-soft">
-              Three per problem, unlocked in order. The first says where to look. The last works
-              through a step on data you are not being graded on. You see the cost before you spend.
+              You unlock three per problem, in order. Hint one tells you where to look. Hint three
+              works through a step on data you are not graded on. You see what each one costs before
+              you spend.
             </dd>
           </div>
           <div>
-            <dt className="font-heading text-[1.05rem]">Explanations, not keys</dt>
+            <dt className="font-heading text-[1.05rem]">Worked explanations</dt>
             <dd className="mt-1 text-[0.88rem] leading-relaxed text-ink-soft">
-              NACLO&rsquo;s own solutions give the answer and rarely the reasoning. Every problem
-              here walks through how you would get there.
+              NACLO&rsquo;s own solutions give the answer and skip the reasoning. Read the steps a
+              solver takes to get there.
             </dd>
           </div>
           <div>
             <dt className="font-heading text-[1.05rem]">A clock you control</dt>
             <dd className="mt-1 text-[0.88rem] leading-relaxed text-ink-soft">
-              Untimed unless you ask for a timer. If one runs out you get a banner, not a locked
-              screen, and your answers keep working.
+              Nothing runs on a timer unless you set one. When it runs out you get a banner and
+              your answers keep working.
             </dd>
           </div>
         </dl>
@@ -65,8 +66,8 @@ export default function Home() {
       <footer className="mt-16 border-t border-rule pt-6 text-[0.8rem] text-ink-soft">
         <p className="max-w-[60ch]">
           Unofficial practice for the North American Computational Linguistics Open Competition.
-          All problems are the work of their original authors and are credited on every page. No
-          account and no sign-up. Your progress is stored in this browser.
+          We credit the original authors on every problem page. You do not need an account, and
+          your browser keeps your progress.
         </p>
       </footer>
     </main>

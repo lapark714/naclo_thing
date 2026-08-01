@@ -70,9 +70,9 @@ export default async function ProblemPage({
           </p>
           <p className="mt-2 max-w-[58ch] text-[0.95rem] leading-relaxed text-ink-soft">
             This problem is in the catalogue so you can find it by concept, but
-            it has not been transcribed for practice yet. Transcribing a problem
-            means checking every data table cell by cell, which is done by hand
-            — so it arrives one problem at a time.
+            nobody has transcribed it for practice yet. Transcribing one means
+            checking every data table cell by cell by hand, so we add them a few
+            at a time.
           </p>
           <p className="mt-3 max-w-[58ch] text-[0.95rem] leading-relaxed text-ink-soft">
             You can still work it from the original booklet.

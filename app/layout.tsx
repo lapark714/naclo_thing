@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "gloss.",
   description:
-    "Practice the NACLO back catalogue by concept, with hints, worked explanations, and a clock you control.",
+    "Work past NACLO problems by concept, with hints you unlock one at a time.",
 };
 
 export default function RootLayout({
