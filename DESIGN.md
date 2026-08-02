@@ -14,9 +14,9 @@ colors:
   verdigris: "#2f6b4f"
   verdigris-tint: "#ebf2ee"
   surface: "#ffffff"
-  accent: "oklch(0.42 0.115 250)"
-  accent-hover: "oklch(0.33 0.1 250)"
-  accent-tint: "oklch(0.96 0.018 250)"
+  action: "oklch(0.42 0.115 250)"
+  action-hover: "oklch(0.33 0.1 250)"
+  action-tint: "oklch(0.96 0.018 250)"
   c-historical: "oklch(0.5 0.09 72)"
   c-sociolinguistics: "oklch(0.5 0.09 110)"
   c-number-systems: "oklch(0.5 0.09 142)"
@@ -138,7 +138,7 @@ so treat category habit as unresolved rather than forbidden.
 - Hairline rules and tonal blocks carry structure instead of shadows
 - Serif display for identity, humanist sans for interface, a dedicated
   linguistics face for language data
-- One accent, spent on cost and error, not on decoration
+- Four colour roles, each with a job: action, subject, cost/error, correct
 
 ## Colors
 
@@ -153,7 +153,7 @@ A paper-and-ink neutral field with two signal colours held in reserve.
 
 ### Secondary
 
-- **Oxblood** (#a4342a): The single accent. It appears on XP costs, on a wrong
+- **Oxblood** (#a4342a): Cost and error. It appears on XP costs, on a wrong
   answer, and on a flagged verdict. Deep and muted rather than alarming, because
   a student seeing it is mid-problem, not in danger.
 - **Oxblood Tint** (#f8efed): The wash behind an incorrect answer row.
@@ -183,8 +183,9 @@ A paper-and-ink neutral field with two signal colours held in reserve.
 ### Named Rules
 
 **The Every Colour Has A Job Rule.** Four colour roles exist and nothing else
-is chromatic. Oxblood means cost or error. Verdigris means correct. Accent
-means action or brand: the primary button, a selected control, a link, the
+is chromatic. Oxblood means cost or error. Verdigris means correct. Action
+(`--action`, never `--accent`: the shadcn scaffold owns that name and the
+production minifier will silently take its value) means action or brand: the primary button, a selected control, a link, the
 `-eme` of the wordmark. The concept ring means subject, one hue per tag in
 `content/taxonomy.ts`. If something needs to stand out and is none of those, it
 stands out through weight, rule, or ink fill. Decoration is not a role, and
@@ -422,7 +423,7 @@ the page.
 - **Don't** let the interface drift toward a generic SaaS dashboard: no blue
   accent, no rounded cards, no sidebar chrome, no soft elevation. This is the
   one confirmed rejection.
-- **Don't** add a third accent colour. If something needs emphasis and is not a
+- **Don't** add a fifth colour role. If something needs emphasis and is not a
   cost, an error, or a correct answer, use weight, rule, or ink fill.
 - **Don't** reflow or wrap a data table to fit a narrow screen. Column
   alignment is often the problem itself, and breaking it destroys the puzzle.

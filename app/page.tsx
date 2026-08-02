@@ -13,7 +13,7 @@ export default function Home() {
           grapheme, sememe. The colour lands on a piece of the word that means
           something, so the mark states the idea rather than decorating it. */}
       <h1 className="wordmark text-[2.75rem] sm:text-[3.5rem]">
-        morph<span className="text-accent">eme</span>
+        morph<span className="text-action">eme</span>
       </h1>
       {/* Puzzle first. The casual puzzler will not read past a sentence about
           a contest they have not entered, and the contest student loses nothing
@@ -39,7 +39,7 @@ export default function Home() {
       <div className="mt-9 flex flex-wrap items-center gap-x-5 gap-y-3">
         <Link
           href="/practice"
-          className="bg-accent border-accent hover:bg-accent-hover hover:border-accent-hover inline-flex items-center border px-8 py-4 text-[0.85rem] font-semibold tracking-[0.12em] text-paper uppercase transition-colors"
+          className="bg-action border-action hover:bg-action-hover hover:border-action-hover inline-flex items-center border px-8 py-4 text-[0.85rem] font-semibold tracking-[0.12em] text-paper uppercase transition-colors"
         >
           Start practicing
         </Link>

@@ -112,7 +112,7 @@ export function HomeDemo() {
             solved it without being taught a thing.{" "}
             <Link
               href="/practice/2023-open-D"
-              className="text-accent underline underline-offset-2"
+              className="text-action underline underline-offset-2"
             >
               Finish it
             </Link>
@@ -137,7 +137,7 @@ export function HomeDemo() {
             enough to get there, which is the whole idea.{" "}
             <Link
               href="/practice/2023-open-D"
-              className="text-accent underline underline-offset-2"
+              className="text-action underline underline-offset-2"
             >
               See the rest of this problem
             </Link>
