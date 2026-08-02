@@ -141,6 +141,31 @@ function strippable(text: string): string {
     .replace(/[‐-―−]/g, "-");
 }
 
+/* ---------------------------------------------------------------------------
+   Answer slots
+
+   A body may mark where the booklet prints a blank with
+   `<span class="blank" data-q="F1.a"></span>`, and the interface renders that
+   question's input there instead of in the list below. A slot naming a
+   question that does not exist would render nothing at all — a blank a student
+   can never fill — and a question slotted twice would give it two boxes whose
+   state disagrees. Both are silent in the browser, so they are caught here.
+   --------------------------------------------------------------------------- */
+
+function badAnswerSlots(problem: Problem): string[] {
+  const bad: string[] = [];
+  const known = new Set(problem.questions.map((q) => q.id));
+  const seen = new Set<string>();
+
+  for (const m of problem.bodyHtml.matchAll(/data-q="([^"]*)"/g)) {
+    const id = m[1];
+    if (!known.has(id)) bad.push(`answer slot data-q="${id}" names no question`);
+    else if (seen.has(id)) bad.push(`question ${id} has more than one answer slot`);
+    seen.add(id);
+  }
+  return bad;
+}
+
 function untypeableAnswers(problem: Problem): string[] {
   const bad: string[] = [];
   for (const q of problem.questions) {
@@ -196,6 +221,10 @@ function checkDir(
         `${file}: characters with no font coverage — ${list}${bad.size > 8 ? ` (+${bad.size - 8} more)` : ""}. ` +
           `Add a subset in ${CSS_FILE} before shipping this script.`,
       );
+    }
+
+    for (const slot of badAnswerSlots(problem)) {
+      issues.push(`${file}: ${slot}`);
     }
 
     for (const answer of untypeableAnswers(problem)) {

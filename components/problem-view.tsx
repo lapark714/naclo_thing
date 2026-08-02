@@ -1,15 +1,28 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import type { Hint } from "@/content/schema";
 import type { ClientQuestion } from "@/lib/content";
 import { QuestionRow } from "@/components/question-row";
+import { InlineAnswer } from "@/components/inline-answer";
 import { HelpPopover } from "@/components/help-popover";
 import { PracticeTimer } from "@/components/practice-timer";
 import { updateProblem, useProblemProgress } from "@/lib/progress";
 
 /** Anything outside plain ASCII: the letters a US keyboard cannot produce. */
 const NON_ASCII = /[^\u0000-\u007F]/;
+
+/**
+ * The slot a record leaves in its own body for the interface to fill:
+ * `<span class="blank" data-q="F1.a"></span>`, exactly where the booklet
+ * prints its blank. A record with no slots renders as it always did.
+ */
+function slotIds(html: string): Set<string> {
+  const out = new Set<string>();
+  for (const m of html.matchAll(/data-q="([^"]+)"/g)) out.add(m[1]);
+  return out;
+}
 
 type Props = {
   problemId: string;
@@ -65,6 +78,63 @@ export function ProblemView({
     }
     return out;
   }, [questions]);
+
+  /* -------------------------------------------------------------------------
+     Answering in place.
+
+     A booklet prints its blank inside the sentence or the table cell, and that
+     is where a student expects to write. Records mark those spots with empty
+     slot elements; after the body is in the DOM we portal the real controls
+     into them. The body HTML is never rebuilt, so the table structure the
+     problem depends on stays exactly as authored.
+     ------------------------------------------------------------------------- */
+
+  const bodyRef = useRef<HTMLDivElement>(null);
+  const inlineQuestionIds = useMemo(() => slotIds(bodyHtml), [bodyHtml]);
+  const [blankSlots, setBlankSlots] = useState<[string, HTMLElement][]>([]);
+
+  /**
+   * Memoized so React keeps the identical element across re-renders and skips
+   * reconciling this subtree. Without that it re-applies the innerHTML when
+   * state changes, which silently replaces the slot nodes and leaves the
+   * portals rendering into detached spans: inputs exist, but not on the page.
+   */
+  const body = useMemo(
+    () => (
+      <div
+        ref={bodyRef}
+        className="problem-body"
+        dangerouslySetInnerHTML={{ __html: bodyHtml }}
+      />
+    ),
+    [bodyHtml],
+  );
+
+  useEffect(() => {
+    const root = bodyRef.current;
+    if (!root) return;
+    setBlankSlots(
+      [...root.querySelectorAll<HTMLElement>("[data-q]")].map((el) => [
+        el.getAttribute("data-q") as string,
+        el,
+      ]),
+    );
+  }, [bodyHtml]);
+
+  /**
+   * Every part still appears below, because that is where its Hint and reveal
+   * live, but a part answered in place lists no rows: the whole complaint was
+   * seeing the same blank twice.
+   */
+  const shownParts = useMemo(
+    () =>
+      parts.map((p) => {
+        const remaining = p.questions.filter((q) => !inlineQuestionIds.has(q.id));
+        return { ...p, remaining, allInline: remaining.length === 0 };
+      }),
+    [parts, inlineQuestionIds],
+  );
+  const anyListed = shownParts.some((p) => !p.allInline);
 
   const hintCost = useMemo(
     () =>
@@ -148,22 +218,36 @@ export function ProblemView({
 
   return (
     <>
-      <div className="problem-body" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+      {body}
 
-      {/* The blanks in a booklet are printed as bare letters in a table cell, so
-          a student reads "fill in a. to g." with nothing on screen to fill in.
-          The boxes are below, past the timer, and nothing said so. */}
-      <p className="mt-8 border-t border-rule pt-4 text-[0.9rem] leading-relaxed text-ink-soft">
-        You answer below, under{" "}
-        <a
-          href="#questions-heading"
-          className="underline underline-offset-2 hover:text-ink"
-        >
-          Questions
-        </a>
-        . Every blank has its own box there, labeled with the same letter as the
-        problem.
-      </p>
+      {blankSlots.map(([qid, el]) => {
+        const q = questions.find((x) => x.id === qid);
+        if (!q) return null;
+        return createPortal(
+          <InlineAnswer
+            problemId={problemId}
+            question={q}
+            onResolved={onResolved}
+            revealedAnswer={revealedAnswers[q.id]}
+          />,
+          el,
+          qid,
+        );
+      })}
+
+      {/* Only worth saying when something is in fact answered further down. */}
+      {anyListed && (
+        <p className="mt-8 border-t border-rule pt-4 text-[0.9rem] leading-relaxed text-ink-soft">
+          The rest of the questions are below, under{" "}
+          <a
+            href="#questions-heading"
+            className="underline underline-offset-2 hover:text-ink"
+          >
+            Questions
+          </a>
+          .
+        </p>
+      )}
 
       <PracticeTimer problemId={problemId} suggestedMinutes={officialTimeMinutes} />
 
@@ -173,7 +257,7 @@ export function ProblemView({
             id="questions-heading"
             className="text-[0.7rem] font-semibold tracking-[0.14em] text-ink-soft uppercase"
           >
-            Questions
+            {anyListed ? "Questions" : "Hints and answers"}
           </h2>
           <span className="text-[0.78rem] text-ink-soft tabular-nums">
             {correctCount} of {questions.length} correct
@@ -189,8 +273,11 @@ export function ProblemView({
           </p>
         )}
 
-        {parts.map((part) => (
-          <div key={part.key} className="mb-8 flex gap-4 sm:gap-6">
+        {shownParts.map((part) => (
+          <div
+            key={part.key}
+            className={`flex gap-4 sm:gap-6 ${part.allInline ? "mb-5" : "mb-8"}`}
+          >
             {/* The gutter rail: part labels against a hairline rule. */}
             <div className="w-8 shrink-0 border-r border-rule pt-1 sm:w-12">
               <span className="text-[0.72rem] font-semibold tracking-wider text-ink-soft">
@@ -200,7 +287,11 @@ export function ProblemView({
 
             <div className="min-w-0 flex-1">
               <div className="mb-3 flex items-start justify-between gap-3">
-                {part.prompt ? (
+                {part.allInline ? (
+                  <p className="max-w-[58ch] text-[0.92rem] text-ink-faint">
+                    Answered in the problem above.
+                  </p>
+                ) : part.prompt ? (
                   <p className="max-w-[58ch] text-[0.92rem] text-ink-soft">{part.prompt}</p>
                 ) : (
                   <span />
@@ -220,7 +311,7 @@ export function ProblemView({
                 </div>
               </div>
 
-              {part.questions.map((q) => (
+              {part.remaining.map((q) => (
                 <QuestionRow
                   key={q.id}
                   problemId={problemId}

@@ -560,6 +560,17 @@ body > * {
   font-family: var(--data-stack);
 }
 
+/* A blank the record left for the interface to fill. Until the answer box is
+   mounted the slot is empty, so it draws itself as the ruled gap the booklet
+   prints; once the input is inside, :empty stops matching and the rule goes,
+   leaving the input to carry its own underline. */
+.blank:empty {
+  display: inline-block;
+  min-width: 7ch;
+  border-bottom: 1px solid var(--rule-strong);
+  vertical-align: baseline;
+}
+
 /* Some booklets annotate data by underlining part of a word — the vowel of a
    syllable, the segment a rule applies to. The mark has to clear descenders,
    or an ogonek (ą) becomes indistinguishable from a plain a and the underline

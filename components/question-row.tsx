@@ -1,16 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import type { ClientQuestion } from "@/lib/content";
-import { checkExact } from "@/lib/grading";
+import { useAnswer, type Verdict } from "@/components/use-answer";
 
-export type Verdict =
-  | { state: "unanswered" }
-  | { state: "checking" }
-  | { state: "correct"; reason?: string }
-  | { state: "incorrect"; reason?: string }
-  | { state: "revealed" }
-  | { state: "error"; reason: string };
+export type { Verdict };
 
 type Props = {
   problemId: string;
@@ -21,59 +14,8 @@ type Props = {
 };
 
 export function QuestionRow({ problemId, question, onResolved, revealedAnswer }: Props) {
-  const [value, setValue] = useState("");
-  const [verdict, setVerdict] = useState<Verdict>({ state: "unanswered" });
-  const [flagged, setFlagged] = useState(false);
-
-  const settled =
-    verdict.state === "correct" || verdict.state === "revealed" || Boolean(revealedAnswer);
-
-  async function check() {
-    if (question.gradingMode === "exact") {
-      const { correct } = checkExact(
-        value,
-        question.answerKey ?? "",
-        question.acceptedVariants ?? [],
-      );
-      setVerdict({ state: correct ? "correct" : "incorrect" });
-      if (correct) onResolved(question.id, true, false);
-      return;
-    }
-
-    if (question.gradingMode === "self") {
-      setVerdict({ state: "revealed" });
-      return;
-    }
-
-    setVerdict({ state: "checking" });
-    try {
-      const res = await fetch("/api/grade", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ problemId, questionId: question.id, answer: value }),
-      });
-      if (!res.ok) {
-        const body = (await res.json().catch(() => ({}))) as { error?: string };
-        setVerdict({
-          state: "error",
-          reason: body.error ?? "Grading is unavailable right now. Mark it yourself below.",
-        });
-        return;
-      }
-      const body = (await res.json()) as { correct: boolean; reason: string };
-      setVerdict({ state: body.correct ? "correct" : "incorrect", reason: body.reason });
-      if (body.correct) onResolved(question.id, true, false);
-    } catch {
-      setVerdict({
-        state: "error",
-        reason: "Could not reach the grader. Mark it yourself below.",
-      });
-    }
-  }
-
-  function reveal() {
-    setVerdict({ state: "revealed" });
-  }
+  const { value, setValue, verdict, settled, flagged, setFlagged, check, reveal, selfMark } =
+    useAnswer(problemId, question, onResolved, revealedAnswer);
 
   const useDropdown = (question.choices?.length ?? 0) > 5;
 
@@ -161,10 +103,7 @@ export function QuestionRow({ problemId, question, onResolved, revealedAnswer }:
         verdict={verdict}
         question={question}
         onReveal={reveal}
-        onSelfMark={(correct) => {
-          setVerdict({ state: "correct" });
-          onResolved(question.id, correct, true);
-        }}
+        onSelfMark={selfMark}
         flagged={flagged}
         onFlag={() => setFlagged(true)}
       />
