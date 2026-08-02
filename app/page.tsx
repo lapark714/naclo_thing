@@ -10,7 +10,7 @@ export default function Home() {
     <main className="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
       <h1 className="wordmark text-[2.75rem] sm:text-[3.5rem]">morpheme</h1>
       <p className="mt-5 max-w-[54ch] text-lg leading-relaxed text-ink">
-        Practice computational linguistics puzzles and prepare for the North American Computational Linguistics Olympiad. Past exam problems, searchable and filterable, with hints that unblock you one step at a time and full explanations of how each solution works.
+        Practice computational linguistics puzzles and prepare for the North American Computational Linguistics Olympiad.
       </p>
 
       <p className="mt-4 max-w-[54ch] text-[0.95rem] leading-relaxed text-ink-soft">
