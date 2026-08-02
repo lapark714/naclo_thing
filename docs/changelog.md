@@ -50,8 +50,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 - Per-problem author bylines for 2023 and 2024 F-H, read off the credits page of each booklet
 - `components/coming-soon.tsx` and `getUpcoming()` in `lib/content.ts`: the untranscribed remainder is stated once at the foot of `/practice` as a count and a year breakdown
 - A global `u` rule in `app/globals.css` with `text-underline-offset: 0.3em`, so a booklet's syllable-nucleus underlining clears an ogonek instead of colliding with it
-- A line between the problem body and the timer pointing at the answer boxes. A booklet prints its blanks as bare letters in a table cell, so a student read "fill in a. to g." with nothing on screen to fill in and no sign the inputs were a thousand pixels below
+- **Answering in place.** A record can mark where its booklet prints a blank with `<span class="blank" data-q="F1.a"></span>`, and the site renders that question's input there: inside the table cell, or inside the sentence for a cloze like `Ne grette ge _____`. 87 blanks across 10 problems. A part answered entirely in place lists no rows below, so the same blank is never shown twice. `components/inline-answer.tsx` and `components/use-answer.ts` (the grading logic both surfaces share, so they cannot diverge)
+- A line between the problem body and the timer pointing at whatever is still answered below
 - A note in the questions header, shown only when some answer needs a letter a US keyboard lacks, saying the plain spelling counts and accents can be dropped. This was already true of all 21 such questions and nothing said so
+- Answer-slot gate in `scripts/ingest/validate.ts`: a slot naming no question would render a blank nobody can fill, and a question with two slots would give it two boxes whose state disagrees. Both are invisible in the browser
 - Typeable-answer gate in `scripts/ingest/validate.ts`: an `exact` typed answer whose key and every accepted variant need a non-ASCII letter fails the build. Grading forgives accents but not distinct letters, so a key of `þu` with no `thu` variant is unanswerable however well it is solved
 
 ### Changed

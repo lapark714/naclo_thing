@@ -27,6 +27,12 @@ Batch drafting is reliable; per-glyph review is the thing that cannot be skipped
 
 One font limit worth knowing: the shipped Charis SIL subsets do not carry U+1DC6 (combining macron-grave), which 2023 F's Nizaa data uses. Substituted `ḕ` (U+1E15), which keeps the tone contour and is covered. A plain macron would have dropped it.
 
+**Answering moved into the problem**
+
+Reported from use: the answer box being below the problem, when the blank is inside it, reads as two separate blanks and is confusing on a first problem. Records now mark the spot (`<span class="blank" data-q="F1.a">`) and the input is rendered there, in the table cell or mid-sentence. 87 blanks across 10 problems; a part answered entirely in place lists nothing below.
+
+The implementation detail worth remembering: portaling into nodes created by `dangerouslySetInnerHTML` silently breaks unless the body element is memoized. Without `useMemo`, the state update that stores the slot nodes triggers a re-render, React re-applies the innerHTML, and the captured nodes are replaced. The portals then render into detached spans, so the inputs exist in memory and nothing appears on the page. No error, no warning. Caught by checking `document.contains(el)`.
+
 **Answering was not discoverable, reported from actual use**
 
 A booklet prints its blanks as bare letters in a table cell (`a.`, `b.`, ...), followed by "Fill in the blanks a. to g." The answer boxes are in the Questions section, past the rest of the body and the timer, which on 2025 F is about a thousand pixels down. Nothing connected the two, so the reasonable read was that filling blanks is not supported. Added a line under the body pointing at Questions and saying the boxes carry the same letters.
