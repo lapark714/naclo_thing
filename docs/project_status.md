@@ -27,6 +27,12 @@ Batch drafting is reliable; per-glyph review is the thing that cannot be skipped
 
 One font limit worth knowing: the shipped Charis SIL subsets do not carry U+1DC6 (combining macron-grave), which 2023 F's Nizaa data uses. Substituted `ḕ` (U+1E15), which keeps the tone contour and is covered. A plain macron would have dropped it.
 
+**Answering was not discoverable, reported from actual use**
+
+A booklet prints its blanks as bare letters in a table cell (`a.`, `b.`, ...), followed by "Fill in the blanks a. to g." The answer boxes are in the Questions section, past the rest of the body and the timer, which on 2025 F is about a thousand pixels down. Nothing connected the two, so the reasonable read was that filling blanks is not supported. Added a line under the body pointing at Questions and saying the boxes carry the same letters.
+
+Separately: 21 typed answers need a letter a US keyboard does not have (`þ`, `ŋ`, `ɨ`, `ɾ`). All 21 already accepted a plain-letter variant, so they were answerable, but only by accident of the student guessing. There is now a note in the questions header on exactly those problems, and `validate.ts` fails the build if any typed answer has no enterable spelling, so the note cannot become a lie.
+
 **Carried over / needs fixing**
 
 - 34 problems (2018, 2020-2022) still catalogue-only. 2019 has a page map but no records at all — it was never catalogued, so it does not appear in the coming-soon tally either
