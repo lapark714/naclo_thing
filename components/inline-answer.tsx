@@ -34,6 +34,25 @@ export function InlineAnswer({ problemId, question, onResolved, revealedAnswer }
         ? "border-mark"
         : "border-rule-strong";
 
+  // Once the answer is showing and nothing was typed, the empty box is just a
+  // stray rule beside it.
+  const keyOnly =
+    !value && (Boolean(revealedAnswer) || verdict.state === "revealed");
+
+  if (keyOnly) {
+    return (
+      <Trailing
+        settled={settled}
+        value={value}
+        verdict={verdict}
+        onCheck={check}
+        onReveal={reveal}
+        revealedAnswer={revealedAnswer}
+        answerKey={question.answerKey}
+      />
+    );
+  }
+
   // Same threshold as the question rows: a short option set reads better as
   // buttons, and in a table cell two "G"/"U" buttons are far tighter than a
   // select whose placeholder is wider than any of its options.
