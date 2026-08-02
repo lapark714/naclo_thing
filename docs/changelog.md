@@ -60,6 +60,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ### Changed
 
+- Home page leads with a real problem. `components/home-demo.tsx` puts three verbatim rows of 2023 D (Permyak, Pavel Iosad) and its question (b) on the landing page, graded by the same `checkExact` the site uses, so a visitor solves a genuine NACLO blank before committing to anything. Writes no progress: a demonstration should not mark a problem nobody opened
+- Primary action moved above the explainer. Measured on a 390px viewport: the CTA was at 896px against an 844px fold and is now at 744px, fully visible without scrolling
+- Opening copy leads with the puzzle rather than the contest, since PRODUCT.md commits to an audience that has never heard of NACLO. The "drafted with AI, checked by a person" line moved out of the second sentence to sit under the CTA as a guarantee rather than a process disclosure
+
+
 - **A colour system with four roles.** `--accent` (deep azure, `oklch(0.42 0.115 250)`) for action and brand: the primary button, a selected control, the `-eme` of the wordmark. A ring of eight hues, one per concept tag, for subject: dots beside the tag name in the practice list, the coverage list and the problem header, and the fill of a selected filter chip. Oxblood and verdigris keep cost/error and correct. Nothing else is chromatic, and there are no gradients, tinted cards, or coloured surfaces
 - The concept ring skips the hues oxblood (~27) and verdigris (~158) occupy and runs a step lower in chroma, so a subject marker cannot be read as a verdict. Measured, not eyeballed: accent 8.09:1 on paper, every concept 5.4-6.0:1, all above the 4.5:1 AA floor as both a dot and a chip fill
 - Taxonomy gate in `scripts/ingest/validate.ts`: concept and form tags must come from `content/taxonomy.ts`. 2025 D had duplicated its form tag into its concept list, which now renders as a grey dot among coloured ones
