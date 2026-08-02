@@ -14,6 +14,17 @@ colors:
   verdigris: "#2f6b4f"
   verdigris-tint: "#ebf2ee"
   surface: "#ffffff"
+  accent: "oklch(0.42 0.115 250)"
+  accent-hover: "oklch(0.33 0.1 250)"
+  accent-tint: "oklch(0.96 0.018 250)"
+  c-historical: "oklch(0.5 0.09 72)"
+  c-sociolinguistics: "oklch(0.5 0.09 110)"
+  c-number-systems: "oklch(0.5 0.09 142)"
+  c-writing-systems: "oklch(0.5 0.09 190)"
+  c-morphology: "oklch(0.5 0.09 220)"
+  c-syntax: "oklch(0.5 0.09 255)"
+  c-semantics: "oklch(0.5 0.09 295)"
+  c-phonology: "oklch(0.5 0.09 335)"
 typography:
   wordmark:
     fontFamily: '"Wordmark", "Helvetica Neue", Arial, sans-serif'
@@ -171,11 +182,24 @@ A paper-and-ink neutral field with two signal colours held in reserve.
 
 ### Named Rules
 
-**The One Accent Rule.** Oxblood is the only chromatic colour in the interface,
-and it means cost or error. Verdigris answers it and means correct. Neither is
-ever decorative, and no third accent is introduced for emphasis, category, or
-brand. If something needs to stand out and is not a cost, an error, or a
-correct answer, it stands out through weight, rule, or ink fill.
+**The Every Colour Has A Job Rule.** Four colour roles exist and nothing else
+is chromatic. Oxblood means cost or error. Verdigris means correct. Accent
+means action or brand: the primary button, a selected control, a link, the
+`-eme` of the wordmark. The concept ring means subject, one hue per tag in
+`content/taxonomy.ts`. If something needs to stand out and is none of those, it
+stands out through weight, rule, or ink fill. Decoration is not a role, and
+there are no gradients, tinted cards, or coloured surfaces anywhere.
+
+This replaces an earlier One Accent Rule that allowed only oxblood and
+verdigris. The brief asked for the colour of a learning platform; the
+discipline that keeps it from reading as a template is that every hue still
+answers to a job.
+
+**The Colour Is Never Alone Rule.** A concept's colour always sits beside that
+concept's name, so the code is redundant and learnable rather than something to
+memorise. The ring skips the hues oxblood and verdigris occupy, and runs a step
+lower in chroma than either, so a subject marker can never be mistaken for a
+verdict.
 
 **The White Means Above Rule.** The page is paper; white is a raised surface.
 Anything painted #ffffff is claiming to sit above the page, so use it only for

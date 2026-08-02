@@ -27,6 +27,16 @@ Batch drafting is reliable; per-glyph review is the thing that cannot be skipped
 
 One font limit worth knowing: the shipped Charis SIL subsets do not carry U+1DC6 (combining macron-grave), which 2023 F's Nizaa data uses. Substituted `ḕ` (U+1E15), which keeps the tone contour and is covered. A plain macron would have dropped it.
 
+**Colour, with a job for every hue**
+
+Brief was "more colourful, like other learning platforms, but never vibecoded". The two pull against each other, so the resolution is that no hue is decorative: accent for action and brand, one hue per concept for subject, oxblood and verdigris unchanged for cost and correct. The warm paper ground stays, which is what keeps it from reading as a template.
+
+The 21st.dev MCP catalogue was queried for direction and returned almost nothing but WebGL gradient shaders and pastel blends, and its theme catalogue is empty. Useful only as an anti-reference, which is worth knowing before reaching for it again.
+
+Contrast was measured, not eyeballed. Chrome returns `oklch()` verbatim from `getComputedStyle`, so a naive parse reads the three numbers as RGB and reports every colour as near-black; the real figures came from painting each value to a canvas and reading the pixel. Accent 8.09:1 on paper, concepts 5.4-6.0:1.
+
+Two hue collisions were caught and fixed: the first `writing systems` green sat almost on verdigris "correct", and `historical` brick on oxblood "error". The ring now skips both bands.
+
 **Renamed to morpheme**
 
 Wordmark set in a geometric sans, ink on paper. Gotham was asked for but is a licensed Hoefler & Co face that cannot be redistributed, so the shipped file is a 5KB Montserrat subset behind a `Wordmark` family; real Gotham is a one-line swap once licensed. The reference art reverses the mark out of charcoal, which is kept for the app icon rather than applied to the page: the site has no dark mode and inverting a page to suit a logo is backwards.

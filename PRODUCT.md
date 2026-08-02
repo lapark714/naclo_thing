@@ -113,8 +113,12 @@ but nothing should be built toward that direction until it is chosen.
 
 - The product is **morpheme**, lower case, no full stop. The wordmark is set
   in a geometric sans (Gotham where licensed, Montserrat as the shipped
-  stand-in), ink on paper. The reference art reverses it out of charcoal; that
-  lockup is kept for the app icon, not for the page.
+  stand-in), split at its own morpheme boundary: `morph` in ink, `eme` in the
+  accent. The reference art reverses it out of charcoal; that lockup is kept
+  for the app icon, not for the page.
+- Colour answers to a job or it is not used. Four roles: accent for action and
+  brand, one hue per concept tag for subject, oxblood for cost and error,
+  verdigris for correct. No gradients, no tinted cards, no coloured surfaces.
 - Copy is written for a 12 to 17 year old on their first problem: plain,
   encouraging, brief. No linguistics jargon without a plain-English gloss.
 - US spelling.

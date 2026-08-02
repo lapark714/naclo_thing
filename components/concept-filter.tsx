@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { ProblemSummary } from "@/lib/content";
 import { useProgress } from "@/lib/progress";
+import { conceptColor } from "@/lib/concept-color";
 
 type Props = { problems: ProblemSummary[] };
 
@@ -43,18 +44,33 @@ export function ConceptFilter({ problems }: Props) {
           </span>
           {allConcepts.map(([tag, count]) => {
             const on = concepts.includes(tag);
+            const hue = conceptColor(tag);
             return (
               <button
                 key={tag}
                 type="button"
                 onClick={() => toggleConcept(tag)}
                 aria-pressed={on}
-                className={`border px-2.5 py-1 text-[0.82rem] transition-colors ${
-                  on ? "border-ink bg-ink text-paper" : "border-rule-strong bg-white hover:bg-tint"
+                style={
+                  on
+                    ? { background: hue, borderColor: hue }
+                    : { borderColor: "var(--rule-strong)" }
+                }
+                className={`inline-flex items-center gap-1.5 border px-2.5 py-1 text-[0.82rem] transition-colors ${
+                  on ? "text-paper" : "bg-white hover:bg-tint"
                 }`}
               >
+                {/* The dot repeats the chip's colour while it is unselected, so
+                    the code is learnable before you ever press one. */}
+                {!on && (
+                  <span
+                    aria-hidden
+                    className="h-[7px] w-[7px] shrink-0 rounded-full"
+                    style={{ background: hue }}
+                  />
+                )}
                 {tag}
-                <span className={`ml-1.5 tabular-nums ${on ? "text-paper/60" : "text-ink-faint"}`}>
+                <span className={`tabular-nums ${on ? "text-paper/70" : "text-ink-faint"}`}>
                   {count}
                 </span>
               </button>
@@ -120,10 +136,19 @@ export function ConceptFilter({ problems }: Props) {
                   <span className="font-heading text-[1.05rem] text-ink group-hover:underline group-hover:underline-offset-4">
                     {p.title}
                   </span>
-                  <span className="mt-0.5 block text-[0.8rem] text-ink-soft">
-                    {p.conceptTags.join(" · ")}
+                  <span className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-[0.8rem] text-ink-soft">
+                    {p.conceptTags.map((tag) => (
+                      <span key={tag} className="inline-flex items-center gap-1.5">
+                        <span
+                          aria-hidden
+                          className="h-[7px] w-[7px] shrink-0 rounded-full"
+                          style={{ background: conceptColor(tag) }}
+                        />
+                        {tag}
+                      </span>
+                    ))}
                     {p.languages.length > 0 && (
-                      <span className="text-ink-faint"> · {p.languages.join(", ")}</span>
+                      <span className="text-ink-faint">{p.languages.join(", ")}</span>
                     )}
                   </span>
                 </span>

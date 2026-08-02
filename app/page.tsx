@@ -8,7 +8,12 @@ export default function Home() {
 
   return (
     <main className="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
-      <h1 className="wordmark text-[2.75rem] sm:text-[3.5rem]">morpheme</h1>
+      {/* Split at the real morpheme boundary: morph + the -eme of phoneme,
+          grapheme, sememe. The colour lands on a piece of the word that means
+          something, so the mark states the idea rather than decorating it. */}
+      <h1 className="wordmark text-[2.75rem] sm:text-[3.5rem]">
+        morph<span className="text-accent">eme</span>
+      </h1>
       <p className="mt-5 max-w-[54ch] text-lg leading-relaxed text-ink">
         Practice computational linguistics puzzles and prepare for the North American Computational Linguistics Olympiad.
       </p>
@@ -49,7 +54,7 @@ export default function Home() {
       <div className="mt-10 flex flex-wrap items-center gap-5">
         <Link
           href="/practice"
-          className="inline-flex items-center border border-ink bg-ink px-8 py-4 text-[0.85rem] font-semibold tracking-[0.12em] text-paper uppercase transition-colors hover:bg-paper hover:text-ink"
+          className="bg-accent border-accent hover:bg-accent-hover hover:border-accent-hover inline-flex items-center border px-8 py-4 text-[0.85rem] font-semibold tracking-[0.12em] text-paper uppercase transition-colors"
         >
           Start practicing
         </Link>

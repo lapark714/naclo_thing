@@ -16,6 +16,8 @@
  *   - fields that the site renders as plain text carry no markup. Only the
  *     *Html fields are ever passed through dangerouslySetInnerHTML; a <span>
  *     in a hint reaches the student as literal angle brackets.
+ *   - concept and form tags come from content/taxonomy.ts. A tag outside the
+ *     vocabulary has no colour in the interface and shows as a grey dot.
  *   - every typed answer has at least one accepted spelling a student can
  *     actually enter. Grading forgives accents but not distinct letters, so a
  *     key of "þu" with no plain-letter variant is unanswerable by design.
@@ -27,6 +29,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { Problem } from "../../content/schema";
+import { CONCEPT_TAGS, FORM_TAGS } from "../../content/taxonomy";
 
 const PROBLEMS_DIR = process.env.CONTENT_DIR ?? "content/problems";
 const DRAFTS_DIR = "content/drafts";
@@ -142,6 +145,28 @@ function strippable(text: string): string {
 }
 
 /* ---------------------------------------------------------------------------
+   Taxonomy
+
+   The schema types these as plain strings, which is how a form tag once ended
+   up in a record's concept list. It also has to hold because the interface now
+   gives every concept its own colour: a tag outside the vocabulary has no hue
+   and renders as a grey dot among coloured ones, which reads as a bug.
+   --------------------------------------------------------------------------- */
+
+function offTaxonomyTags(problem: Problem): string[] {
+  const bad: string[] = [];
+  for (const tag of problem.conceptTags) {
+    if (!(CONCEPT_TAGS as readonly string[]).includes(tag)) {
+      bad.push(`conceptTags has "${tag}", which is not in CONCEPT_TAGS`);
+    }
+  }
+  if (!(FORM_TAGS as readonly string[]).includes(problem.formTag)) {
+    bad.push(`formTag "${problem.formTag}" is not in FORM_TAGS`);
+  }
+  return bad;
+}
+
+/* ---------------------------------------------------------------------------
    Answer slots
 
    A body may mark where the booklet prints a blank with
@@ -221,6 +246,10 @@ function checkDir(
         `${file}: characters with no font coverage — ${list}${bad.size > 8 ? ` (+${bad.size - 8} more)` : ""}. ` +
           `Add a subset in ${CSS_FILE} before shipping this script.`,
       );
+    }
+
+    for (const issue of offTaxonomyTags(problem)) {
+      issues.push(`${file}: ${issue}`);
     }
 
     for (const slot of badAnswerSlots(problem)) {

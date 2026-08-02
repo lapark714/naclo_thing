@@ -60,6 +60,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ### Changed
 
+- **A colour system with four roles.** `--accent` (deep azure, `oklch(0.42 0.115 250)`) for action and brand: the primary button, a selected control, the `-eme` of the wordmark. A ring of eight hues, one per concept tag, for subject: dots beside the tag name in the practice list, the coverage list and the problem header, and the fill of a selected filter chip. Oxblood and verdigris keep cost/error and correct. Nothing else is chromatic, and there are no gradients, tinted cards, or coloured surfaces
+- The concept ring skips the hues oxblood (~27) and verdigris (~158) occupy and runs a step lower in chroma, so a subject marker cannot be read as a verdict. Measured, not eyeballed: accent 8.09:1 on paper, every concept 5.4-6.0:1, all above the 4.5:1 AA floor as both a dot and a chip fill
+- Taxonomy gate in `scripts/ingest/validate.ts`: concept and form tags must come from `content/taxonomy.ts`. 2025 D had duplicated its form tag into its concept list, which now renders as a grey dot among coloured ones
+
+
 - No suggested or allowed time anywhere. The timer starts empty, Start stays disabled until a number is entered, and the only figure offered is the one the student saved themselves. A booklet's budget is a contest constraint, not advice to someone practising at their own pace, and printing it turns a limit the student chose into one they are measured against. `officialTimeMinutes` stays in the schema as booklet metadata; it is simply never shown
 - The pointer to the questions below appears only on a problem answered in both places. Where every question is below, the list is not "the rest" of anything and there is nothing above it to mistake for the answer area
 
