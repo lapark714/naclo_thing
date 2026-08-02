@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "gloss.",
+  title: "morpheme",
   description:
     "Work past NACLO problems by concept, with hints you unlock one at a time.",
 };

@@ -72,6 +72,26 @@
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
+/* The wordmark, and nothing else.
+ *
+ * The brief asks for Gotham, which is licensed from Hoefler & Co and cannot be
+ * redistributed, so this is Montserrat: the same geometric-signage lineage and
+ * the usual stand-in for Gotham in a lowercase logotype. Subset to letters,
+ * digits and three marks, which is 5KB rather than the 16KB full latin cut.
+ *
+ * To use real Gotham once licensed: drop the woff2 in /fonts, change the src
+ * here, and nothing else moves. font-display is block because a wordmark that
+ * swaps face after paint reads as a glitch.
+ */
+@font-face {
+  font-family: "Wordmark";
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url("/fonts/Montserrat-700-wordmark.woff2") format("woff2");
+  unicode-range: U+0020, U+002D-002E, U+0030-0039, U+0041-005A, U+0061-007A;
+}
+
 @font-face {
   font-family: "Noto Serif Display";
   font-style: normal;
@@ -506,6 +526,7 @@
   --font-heading: "Noto Serif Display", Georgia, serif;
   --font-display: "Noto Serif Display", Georgia, serif;
   --font-data: var(--data-stack);
+  --font-wordmark: "Wordmark", "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
 
   --radius-sm: 2px;
@@ -553,6 +574,17 @@ body > * {
 }
 .problem-body strong {
   font-weight: 600;
+}
+
+/* The wordmark. Ink on paper, because the page is paper: the reference art is
+   reversed out of charcoal, and inverting the page to suit a logo would be the
+   tail wagging the dog. The reversed lockup still exists for a dark ground. */
+.wordmark {
+  font-family: var(--font-wordmark);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--ink);
 }
 
 /* The signature: primary language data is always set in Charis SIL. */

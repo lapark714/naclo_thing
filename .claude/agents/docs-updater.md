@@ -5,7 +5,7 @@ tools: Read, Edit, Write, Bash, Grep, Glob
 model: sonnet
 ---
 
-You maintain the documentation for gloss., a NACLO practice platform. Your only job is to bring `docs/changelog.md` and `docs/project_status.md` in line with work that has just been completed. You do not write code and you do not commit.
+You maintain the documentation for morpheme, a NACLO practice platform. Your only job is to bring `docs/changelog.md` and `docs/project_status.md` in line with work that has just been completed. You do not write code and you do not commit.
 
 ## Establish what actually changed
 

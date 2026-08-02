@@ -1,5 +1,5 @@
 ---
-name: gloss.
+name: morpheme
 description: A reference grammar you can type into. Past NACLO linguistics problems, set for study.
 colors:
   paper: "#fbfaf7"
@@ -15,6 +15,12 @@ colors:
   verdigris-tint: "#ebf2ee"
   surface: "#ffffff"
 typography:
+  wordmark:
+    fontFamily: '"Wordmark", "Helvetica Neue", Arial, sans-serif'
+    fontSize: "3.5rem"
+    fontWeight: 700
+    lineHeight: 1
+    letterSpacing: "-0.02em"
   display:
     fontFamily: '"Noto Serif Display", Georgia, serif'
     fontSize: "3rem"
@@ -91,7 +97,7 @@ components:
     typography: "{typography.label}"
 ---
 
-# Design System: gloss.
+# Design System: morpheme
 
 ## Overview
 
@@ -177,6 +183,11 @@ tables, inputs, popovers, and unselected controls.
 
 ## Typography
 
+**Wordmark Font:** Wordmark, a geometric sans used for the logotype and nothing
+else. The brief specifies Gotham, which is licensed and cannot be redistributed,
+so what ships is a 5KB subset of Montserrat, the usual stand-in for Gotham in a
+lowercase logotype. Swapping in real Gotham is one `src:` line in `globals.css`.
+
 **Display Font:** Noto Serif Display (with Georgia, serif)
 **Body Font:** Noto Sans (with ui-sans-serif, system-ui)
 **Data Font:** Charis SIL, backed by a stack of Noto script faces and
@@ -195,7 +206,11 @@ adding the file.
 
 ### Hierarchy
 
-- **Display** (600, 3rem, 1): The wordmark on the landing page only.
+- **Wordmark** (700, 3.5rem, -0.02em): The logotype, and only the logotype. Ink
+  on paper, because the page is paper. The reference art reverses it out of
+  charcoal; that lockup is kept for the app icon, never for the page.
+- **Display** (600, 3rem, 1): Reserved. The landing page's opening is now the
+  wordmark, so nothing currently uses this step.
 - **Headline** (600, 2.25rem, 1.25): Problem titles.
 - **Title** (600, 1.05rem, 1.4): Card and section headings inside a page.
 - **Body** (400, 1rem, 1.5): Prose. Measure is capped between 54ch and 68ch

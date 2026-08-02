@@ -27,6 +27,12 @@ Batch drafting is reliable; per-glyph review is the thing that cannot be skipped
 
 One font limit worth knowing: the shipped Charis SIL subsets do not carry U+1DC6 (combining macron-grave), which 2023 F's Nizaa data uses. Substituted `ḕ` (U+1E15), which keeps the tone contour and is covered. A plain macron would have dropped it.
 
+**Renamed to morpheme**
+
+Wordmark set in a geometric sans, ink on paper. Gotham was asked for but is a licensed Hoefler & Co face that cannot be redistributed, so the shipped file is a 5KB Montserrat subset behind a `Wordmark` family; real Gotham is a one-line swap once licensed. The reference art reverses the mark out of charcoal, which is kept for the app icon rather than applied to the page: the site has no dark mode and inverting a page to suit a logo is backwards.
+
+localStorage keys still say `gloss.` on purpose. They are internal and renaming them would wipe saved progress for no visible gain.
+
 **Answering moved into the problem**
 
 Reported from use: the answer box being below the problem, when the blank is inside it, reads as two separate blanks and is confusing on a first problem. Records now mark the spot (`<span class="blank" data-q="F1.a">`) and the input is rendered there, in the table cell or mid-sentence. 87 blanks across 10 problems; a part answered entirely in place lists nothing below.

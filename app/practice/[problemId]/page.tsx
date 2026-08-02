@@ -21,7 +21,7 @@ export async function generateMetadata({
   const problem = getProblem(problemId);
   if (!problem) return { title: "Problem not found" };
   return {
-    title: `${problem.title} · gloss.`,
+    title: `${problem.title} · morpheme`,
     description: `NACLO ${problem.year} ${problem.round} round, problem ${problem.letter}. ${problem.conceptTags.join(", ")}.`,
   };
 }

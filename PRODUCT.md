@@ -31,7 +31,7 @@ technically available, and almost none of it is usable: the archive cannot be
 searched, one kind of problem cannot be picked out, and a stuck solver's only
 option is to read the full solution and lose the problem.
 
-gloss. turns that archive into something you can work in. Problems are
+morpheme turns that archive into something you can work in. Problems are
 transcribed to real HTML with real tables, tagged by concept, and fitted with a
 graduated hint ladder, a worked explanation, and grading that happens as you go.
 
@@ -103,7 +103,7 @@ either way: help always costing XP and hints never giving the answer; every
 problem carrying its author byline and a link to the original PDF; only
 human-reviewed records reaching a student.
 
-**Explicitly undecided:** what gloss. becomes beyond the current MVP. Whole-paper
+**Explicitly undecided:** what morpheme becomes beyond the current MVP. Whole-paper
 timed exam mode, cross-device progress, and staying a pure practice library are
 all open. Records already carry `year`, `round`, `officialPoints`, and
 `officialTimeMinutes`, so assembling whole papers later needs no schema change,
@@ -111,7 +111,10 @@ but nothing should be built toward that direction until it is chosen.
 
 ## Brand Commitments
 
-- The product is **gloss.**, lower case, with the full stop.
+- The product is **morpheme**, lower case, no full stop. The wordmark is set
+  in a geometric sans (Gotham where licensed, Montserrat as the shipped
+  stand-in), ink on paper. The reference art reverses it out of charcoal; that
+  lockup is kept for the app icon, not for the page.
 - Copy is written for a 12 to 17 year old on their first problem: plain,
   encouraging, brief. No linguistics jargon without a plain-English gloss.
 - US spelling.
@@ -128,8 +131,8 @@ but nothing should be built toward that direction until it is chosen.
   `public/fonts/` covering Latin, IPA, Armenian, Devanagari, Georgian, Cherokee,
   Ethiopic, N'Ko, Greek, Cyrillic, katakana, and nasal-vowel blocks.
 - Author bylines and links to the original booklets on every problem page.
-- Live at naclo-thing.vercel.app. The deployment is still named for the old
-  project, so the URL does not match the product name.
+- Live at naclo-prep.vercel.app; naclo-thing.vercel.app redirects to it. The
+  URL still does not match the product name.
 
 There are no users yet, no testimonials, no usage numbers, no press, and no
 endorsement from NACLO. The site is unofficial. Future work must not invent any

@@ -5,7 +5,7 @@ import { ConceptFilter } from "@/components/concept-filter";
 import { ComingSoon } from "@/components/coming-soon";
 
 export const metadata: Metadata = {
-  title: "Practice · gloss.",
+  title: "Practice · morpheme",
   description: "Filter NACLO problems by concept and difficulty.",
 };
 
@@ -19,7 +19,7 @@ export default function PracticePage() {
         href="/"
         className="text-[0.8rem] text-ink-soft underline underline-offset-2 hover:text-ink"
       >
-        ← gloss.
+        ← morpheme
       </Link>
 
       <h1 className="font-heading mt-6 text-3xl leading-tight sm:text-4xl">Practice</h1>

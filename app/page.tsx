@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <main className="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
-      <h1 className="font-heading text-5xl leading-none sm:text-6xl">gloss.</h1>
+      <h1 className="wordmark text-[2.75rem] sm:text-[3.5rem]">morpheme</h1>
       <p className="mt-5 max-w-[54ch] text-lg leading-relaxed text-ink">
         Work past NACLO problems by concept. Ask for a hint instead of falling back on the full
         solution.

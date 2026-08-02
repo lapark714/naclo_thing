@@ -60,6 +60,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ### Changed
 
+- Renamed the product from `gloss.` to **morpheme**, set in a geometric sans wordmark. The brief asked for Gotham, which is licensed from Hoefler & Co and cannot be redistributed, so what ships is a 5KB subset of Montserrat wired behind a `Wordmark` family: swapping in real Gotham is one `src:` line. Ink on paper on the page, since the page is paper; the reference art's charcoal lockup is kept for `app/icon.svg`, which replaces the default Next.js favicon
+- The `gloss.progress.v1` and `gloss.timer.*` localStorage keys are deliberately unchanged. They are internal, never shown, and renaming them would silently wipe every saved answer and timer
+
+
 - Renamed the site to `gloss.` — browser title in `app/layout.tsx`, landing heading in `app/page.tsx`
 - Moved `project_spec.md` and `brainstorm.md` into `docs/`, leaving only tooling-required config at the repo root
 - `.gitignore` broadened from `.env` to `.env*`
