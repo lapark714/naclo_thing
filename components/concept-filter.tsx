@@ -132,7 +132,7 @@ export function ConceptFilter({ problems }: Props) {
                     <span className="text-good">solved</span>
                   ) : (
                     <>
-                      {p.questionCount} parts · {p.officialTimeMinutes} min
+                      {p.questionCount} parts
                     </>
                   )}
                 </span>

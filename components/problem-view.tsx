@@ -31,7 +31,6 @@ type Props = {
   hints: Hint[];
   explanationHtml: string;
   officialPoints: number;
-  officialTimeMinutes: number;
 };
 
 const AI_HINT_COST = 2;
@@ -43,7 +42,6 @@ export function ProblemView({
   hints,
   explanationHtml,
   officialPoints,
-  officialTimeMinutes,
 }: Props) {
   // localStorage is the single source of truth for anything scored.
   const saved = useProblemProgress(problemId);
@@ -359,8 +357,10 @@ export function ProblemView({
         );
       })}
 
-      {/* Only worth saying when something is in fact answered further down. */}
-      {anyListed && (
+      {/* Only worth saying on a problem that is answered in both places. If
+          every question is below, the list is not "the rest" of anything and
+          there is nothing above it to be mistaken for the answer area. */}
+      {anyListed && inlineQuestionIds.size > 0 && (
         <p className="mt-8 border-t border-rule pt-4 text-[0.9rem] leading-relaxed text-ink-soft">
           The rest of the questions are below, under{" "}
           <a
@@ -373,10 +373,7 @@ export function ProblemView({
         </p>
       )}
 
-      <PracticeTimer
-        problemId={problemId}
-        suggestedMinutes={officialTimeMinutes}
-      />
+      <PracticeTimer problemId={problemId} />
 
       <section aria-labelledby="questions-heading" className="mt-10">
         <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2 border-b border-ink pb-2">

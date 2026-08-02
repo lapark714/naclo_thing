@@ -14,14 +14,13 @@ import { setDefaultTimerMinutes, useProgress } from "@/lib/progress";
  * A pacing tool, not a punishment. At expiry a banner appears and the input
  * stays live — cutting someone off mid-thought interrupts them at the worst
  * possible moment.
+ *
+ * No suggested length. The booklet's own budget is a contest constraint, not
+ * advice to someone practising at their own pace, and printing it turns a limit
+ * the student chose into one they are measured against. The only number offered
+ * is the one they saved themselves.
  */
-export function PracticeTimer({
-  problemId,
-  suggestedMinutes,
-}: {
-  problemId: string;
-  suggestedMinutes: number;
-}) {
+export function PracticeTimer({ problemId }: { problemId: string }) {
   const saved = useStoredTimer(problemId);
   const { defaultTimerMinutes } = useProgress();
   const [draft, setDraft] = useState<string | null>(null);
@@ -35,7 +34,9 @@ export function PracticeTimer({
     return () => window.clearInterval(id);
   }, [saved]);
 
-  const minutes = draft ?? String(defaultTimerMinutes ?? suggestedMinutes);
+  const minutes = draft ?? (defaultTimerMinutes ? String(defaultTimerMinutes) : "");
+  const parsed = Number(minutes);
+  const usable = Number.isFinite(parsed) && parsed > 0;
   const left = saved ? remainingMs(saved, now) : 0;
   const expired = Boolean(saved) && left <= 0;
 
@@ -60,25 +61,27 @@ export function PracticeTimer({
           </label>
           <button
             type="button"
+            disabled={!usable}
             onClick={() => {
-              const m = Number(minutes);
-              if (!Number.isFinite(m) || m <= 0) return;
+              if (!usable) return;
               setNow(Date.now());
-              startTimer(problemId, m);
+              startTimer(problemId, parsed);
             }}
-            className="border border-ink px-3 py-1 text-xs font-semibold tracking-wide uppercase hover:bg-ink hover:text-paper"
+            className="border border-ink px-3 py-1 text-xs font-semibold tracking-wide uppercase transition-colors hover:bg-ink hover:text-paper disabled:cursor-not-allowed disabled:opacity-35"
           >
             Start
           </button>
-          <button
-            type="button"
-            onClick={() => setDefaultTimerMinutes(Number(minutes) || null)}
-            className="text-[0.78rem] text-ink-soft underline underline-offset-2 hover:text-ink"
-          >
-            Save as my default
-          </button>
+          {usable && (
+            <button
+              type="button"
+              onClick={() => setDefaultTimerMinutes(parsed)}
+              className="text-[0.78rem] text-ink-soft underline underline-offset-2 hover:text-ink"
+            >
+              Save as my default
+            </button>
+          )}
           <span className="text-[0.78rem] text-ink-faint">
-            NACLO allows about {suggestedMinutes} minutes for this problem.
+            Optional. Set whatever limit suits you.
           </span>
         </div>
       ) : (

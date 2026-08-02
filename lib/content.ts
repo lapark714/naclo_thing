@@ -72,7 +72,6 @@ export type ProblemSummary = {
   difficulty: Problem["difficulty"];
   languages: string[];
   officialPoints: number;
-  officialTimeMinutes: number;
   questionCount: number;
 };
 
@@ -89,7 +88,6 @@ export function getProblemIndex(): ProblemSummary[] {
     difficulty: p.difficulty,
     languages: p.languages,
     officialPoints: p.officialPoints,
-    officialTimeMinutes: p.officialTimeMinutes,
     questionCount: p.questions.length,
   }));
 }

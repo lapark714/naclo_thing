@@ -60,6 +60,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ### Changed
 
+- No suggested or allowed time anywhere. The timer starts empty, Start stays disabled until a number is entered, and the only figure offered is the one the student saved themselves. A booklet's budget is a contest constraint, not advice to someone practising at their own pace, and printing it turns a limit the student chose into one they are measured against. `officialTimeMinutes` stays in the schema as booklet metadata; it is simply never shown
+- The pointer to the questions below appears only on a problem answered in both places. Where every question is below, the list is not "the rest" of anything and there is nothing above it to mistake for the answer area
+
+
 - Renamed the product from `gloss.` to **morpheme**, set in a geometric sans wordmark. The brief asked for Gotham, which is licensed from Hoefler & Co and cannot be redistributed, so what ships is a 5KB subset of Montserrat wired behind a `Wordmark` family: swapping in real Gotham is one `src:` line. Ink on paper on the page, since the page is paper; the reference art's charcoal lockup is kept for `app/icon.svg`, which replaces the default Next.js favicon
 - The `gloss.progress.v1` and `gloss.timer.*` localStorage keys are deliberately unchanged. They are internal, never shown, and renaming them would silently wipe every saved answer and timer
 

@@ -95,7 +95,6 @@ export default async function ProblemPage({
             hints={problem.hints}
             explanationHtml={problem.explanationHtml}
             officialPoints={problem.officialPoints}
-            officialTimeMinutes={problem.officialTimeMinutes}
           />
         </div>
       )}
