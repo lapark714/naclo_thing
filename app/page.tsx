@@ -10,13 +10,11 @@ export default function Home() {
     <main className="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
       <h1 className="wordmark text-[2.75rem] sm:text-[3.5rem]">morpheme</h1>
       <p className="mt-5 max-w-[54ch] text-lg leading-relaxed text-ink">
-        Work past NACLO problems by concept. Ask for a hint instead of falling back on the full
-        solution.
+        Practice computational linguistics puzzles and prepare for the North American Computational Linguistics Olympiad. Past exam problems, searchable and filterable, with hints that unblock you one step at a time and full explanations of how each solution works.
       </p>
 
       <p className="mt-4 max-w-[54ch] text-[0.95rem] leading-relaxed text-ink-soft">
-        NACLO puts its past exams online as PDFs. You cannot search them or filter for one kind
-        of problem, and when you get stuck your only option is to read the whole solution.
+        NACLO publishes its past exams as PDFs: unsearchable, unfilterable, and when you get stuck the only way forward is reading the full solution. Morpheme tags every problem so you can practice by type, adding hints and worked explanations, written with AI and human-reviewed.
       </p>
 
       <section className="mt-10">
