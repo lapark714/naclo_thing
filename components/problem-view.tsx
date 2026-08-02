@@ -8,6 +8,9 @@ import { HelpPopover } from "@/components/help-popover";
 import { PracticeTimer } from "@/components/practice-timer";
 import { updateProblem, useProblemProgress } from "@/lib/progress";
 
+/** Anything outside plain ASCII: the letters a US keyboard cannot produce. */
+const NON_ASCII = /[^\u0000-\u007F]/;
+
 type Props = {
   problemId: string;
   bodyHtml: string;
@@ -41,6 +44,16 @@ export function ProblemView({
   const [showExplanation, setShowExplanation] = useState(false);
   const [plainExplanation, setPlainExplanation] = useState<string | null>(null);
   const [plainBusy, setPlainBusy] = useState(false);
+
+  /**
+   * True when some answer needs a letter a US keyboard does not have (þ, ŋ, ɨ).
+   * Every such record carries a plain-letter accepted variant — `validate.ts`
+   * fails the build otherwise — but nothing on screen told the student that.
+   */
+  const needsPlainSpelling = useMemo(
+    () => questions.some((q) => !q.choices && NON_ASCII.test(q.answerKey ?? "")),
+    [questions],
+  );
 
   const parts = useMemo(() => {
     const out: { key: string; prompt?: string; questions: ClientQuestion[] }[] = [];
@@ -137,6 +150,21 @@ export function ProblemView({
     <>
       <div className="problem-body" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
 
+      {/* The blanks in a booklet are printed as bare letters in a table cell, so
+          a student reads "fill in a. to g." with nothing on screen to fill in.
+          The boxes are below, past the timer, and nothing said so. */}
+      <p className="mt-8 border-t border-rule pt-4 text-[0.9rem] leading-relaxed text-ink-soft">
+        You answer below, under{" "}
+        <a
+          href="#questions-heading"
+          className="underline underline-offset-2 hover:text-ink"
+        >
+          Questions
+        </a>
+        . Every blank has its own box there, labeled with the same letter as the
+        problem.
+      </p>
+
       <PracticeTimer problemId={problemId} suggestedMinutes={officialTimeMinutes} />
 
       <section aria-labelledby="questions-heading" className="mt-10">
@@ -152,6 +180,14 @@ export function ProblemView({
             {hintCost > 0 && <span className="text-mark"> · −{hintCost} XP from help</span>}
           </span>
         </div>
+
+        {needsPlainSpelling && (
+          <p className="mb-5 max-w-[58ch] text-[0.85rem] leading-relaxed text-ink-soft">
+            Some answers use letters your keyboard does not have. Type the
+            closest plain spelling instead and it still counts, and you can
+            leave accents off.
+          </p>
+        )}
 
         {parts.map((part) => (
           <div key={part.key} className="mb-8 flex gap-4 sm:gap-6">

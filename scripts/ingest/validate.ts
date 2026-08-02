@@ -16,6 +16,9 @@
  *   - fields that the site renders as plain text carry no markup. Only the
  *     *Html fields are ever passed through dangerouslySetInnerHTML; a <span>
  *     in a hint reaches the student as literal angle brackets.
+ *   - every typed answer has at least one accepted spelling a student can
+ *     actually enter. Grading forgives accents but not distinct letters, so a
+ *     key of "þu" with no plain-letter variant is unanswerable by design.
  *
  * Records in content/drafts/ (AI output awaiting review) are checked too, but
  * their failures are warnings — the gate is at publish, not at draft.
@@ -99,6 +102,9 @@ function allText(value: unknown): string {
 
 const MARKUP = /<[a-zA-Z/][^>]*>|&(?:[a-zA-Z]+|#\d+);/;
 
+/** Anything outside plain ASCII: what a US keyboard cannot produce. */
+const NON_ASCII = /[^\u0000-\u007F]/;
+
 function markupInTextFields(problem: Problem): string[] {
   const bad: string[] = [];
   problem.hints.forEach((h, i) => {
@@ -111,6 +117,39 @@ function markupInTextFields(problem: Problem): string[] {
     q.choices?.forEach((c, i) => {
       if (MARKUP.test(c)) bad.push(`question ${q.id} choices[${i}]`);
     });
+  }
+  return bad;
+}
+
+/* ---------------------------------------------------------------------------
+   Typeable answers
+
+   Grading strips combining marks, so an acute or a macron costs a student
+   nothing. It does not touch distinct letters: þ, ŋ, ɨ, ɛ, ɾ survive
+   normalization, and none of them are on the keyboard a 14-year-old is using.
+   Every typed answer therefore needs at least one accepted form a student can
+   actually produce, or the question is unanswerable however well they solved
+   it. Questions with `choices` are exempt: those are picked, never typed.
+   --------------------------------------------------------------------------- */
+
+/** Mirrors normalize() in lib/grading.ts closely enough for this check. */
+function strippable(text: string): string {
+  return text
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[‘’ʼʻ`´]/g, "'")
+    .replace(/[‐-―−]/g, "-");
+}
+
+function untypeableAnswers(problem: Problem): string[] {
+  const bad: string[] = [];
+  for (const q of problem.questions) {
+    if (q.gradingMode !== "exact" || q.choices) continue;
+    const forms = [q.answerKey, ...q.acceptedVariants];
+
+    if (!forms.some((f) => !NON_ASCII.test(strippable(f)))) {
+      bad.push(`question ${q.id} ("${q.answerKey}")`);
+    }
   }
   return bad;
 }
@@ -156,6 +195,13 @@ function checkDir(
       issues.push(
         `${file}: characters with no font coverage — ${list}${bad.size > 8 ? ` (+${bad.size - 8} more)` : ""}. ` +
           `Add a subset in ${CSS_FILE} before shipping this script.`,
+      );
+    }
+
+    for (const answer of untypeableAnswers(problem)) {
+      issues.push(
+        `${file}: ${answer} cannot be typed on a US keyboard, and no acceptedVariant can either. ` +
+          `Add a plain-letter spelling, or the question is unanswerable however well it is solved.`,
       );
     }
 
