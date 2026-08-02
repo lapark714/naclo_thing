@@ -53,7 +53,9 @@ export function ProblemView({
   const attempted = Object.keys(answered).length > 0;
 
   const [revealedParts, setRevealedParts] = useState<string[]>([]);
-  const [revealedAnswers, setRevealedAnswers] = useState<Record<string, string>>({});
+  const [revealedAnswers, setRevealedAnswers] = useState<
+    Record<string, string>
+  >({});
   const [showExplanation, setShowExplanation] = useState(false);
   const [plainExplanation, setPlainExplanation] = useState<string | null>(null);
   const [plainBusy, setPlainBusy] = useState(false);
@@ -64,12 +66,14 @@ export function ProblemView({
    * fails the build otherwise — but nothing on screen told the student that.
    */
   const needsPlainSpelling = useMemo(
-    () => questions.some((q) => !q.choices && NON_ASCII.test(q.answerKey ?? "")),
+    () =>
+      questions.some((q) => !q.choices && NON_ASCII.test(q.answerKey ?? "")),
     [questions],
   );
 
   const parts = useMemo(() => {
-    const out: { key: string; prompt?: string; questions: ClientQuestion[] }[] = [];
+    const out: { key: string; prompt?: string; questions: ClientQuestion[] }[] =
+      [];
     for (const q of questions) {
       const key = q.part ?? "";
       const last = out[out.length - 1];
@@ -91,7 +95,8 @@ export function ProblemView({
 
   const bodyRef = useRef<HTMLDivElement>(null);
   const inlineQuestionIds = useMemo(() => slotIds(bodyHtml), [bodyHtml]);
-  const [blankSlots, setBlankSlots] = useState<[string, HTMLElement][]>([]);
+  const [blankSlots, setBlankSlots] = useState<HTMLElement[]>([]);
+  const [helpSlots, setHelpSlots] = useState<[string, HTMLElement][]>([]);
 
   /**
    * Memoized so React keeps the identical element across re-renders and skips
@@ -113,12 +118,86 @@ export function ProblemView({
   useEffect(() => {
     const root = bodyRef.current;
     if (!root) return;
-    setBlankSlots(
-      [...root.querySelectorAll<HTMLElement>("[data-q]")].map((el) => [
-        el.getAttribute("data-q") as string,
-        el,
-      ]),
-    );
+
+    const blanks = [...root.querySelectorAll<HTMLElement>("[data-q]")];
+    setBlankSlots(blanks);
+
+    /**
+     * A part answered in place needs its Hint beside those blanks rather than
+     * at the foot of the page. Anchor it after the top-level block holding the
+     * part's last blank, which is the table or paragraph just filled in.
+     */
+    const topLevel = [...root.children] as HTMLElement[];
+    const lastBlockByPart = new Map<string, HTMLElement>();
+
+    const anchorFor = (part: string, block: HTMLElement) => {
+      const prev = lastBlockByPart.get(part);
+      const at = topLevel.indexOf(block);
+      if (!prev || topLevel.indexOf(prev) < at)
+        lastBlockByPart.set(part, block);
+    };
+
+    for (const el of blanks) {
+      const part = (el.getAttribute("data-q") as string).split(".", 1)[0];
+      let block: HTMLElement = el;
+      while (block.parentElement && block.parentElement !== root) {
+        block = block.parentElement;
+      }
+      anchorFor(part, block);
+    }
+
+    // A booklet often prints the instruction after the table it refers to
+    // ("F1. Fill in the blanks a. to g."). Sit below that too, so the Hint
+    // never splits an instruction from the data it is about.
+    for (const part of [...lastBlockByPart.keys()]) {
+      for (const block of topLevel) {
+        if (new RegExp(`^\\s*${part}[.\\s]`).test(block.textContent ?? "")) {
+          anchorFor(part, block);
+        }
+      }
+    }
+
+    // Carry past a lead-in and its list ("Hints:" followed by a <ul>), so the
+    // control never lands between a sentence and the list it introduces.
+    for (const [part, block] of lastBlockByPart) {
+      let end = block;
+      const isList = (el: Element | null) =>
+        el?.tagName === "UL" || el?.tagName === "OL";
+      for (;;) {
+        const next = end.nextElementSibling as HTMLElement | null;
+        if (isList(next)) {
+          end = next as HTMLElement;
+          continue;
+        }
+        // A lead-in only counts when a list actually follows it. "Hints:" does;
+        // "Here are some more sentences:" introduces the next table and must
+        // not be swallowed into this part.
+        if (
+          next?.tagName === "P" &&
+          /:\s*$/.test(next.textContent ?? "") &&
+          isList(next.nextElementSibling)
+        ) {
+          end = next.nextElementSibling as HTMLElement;
+          continue;
+        }
+        break;
+      }
+      lastBlockByPart.set(part, end);
+    }
+
+    const anchors: [string, HTMLElement][] = [];
+    for (const [part, block] of lastBlockByPart) {
+      const existing = root.querySelector<HTMLElement>(
+        `[data-part-help="${part}"]`,
+      );
+      const anchor = existing ?? document.createElement("div");
+      if (!existing) {
+        anchor.setAttribute("data-part-help", part);
+        block.after(anchor);
+      }
+      anchors.push([part, anchor]);
+    }
+    setHelpSlots(anchors);
   }, [bodyHtml]);
 
   /**
@@ -129,7 +208,9 @@ export function ProblemView({
   const shownParts = useMemo(
     () =>
       parts.map((p) => {
-        const remaining = p.questions.filter((q) => !inlineQuestionIds.has(q.id));
+        const remaining = p.questions.filter(
+          (q) => !inlineQuestionIds.has(q.id),
+        );
         return { ...p, remaining, allInline: remaining.length === 0 };
       }),
     [parts, inlineQuestionIds],
@@ -138,7 +219,9 @@ export function ProblemView({
 
   const hintCost = useMemo(
     () =>
-      hints.filter((h) => h.tier <= hintsRevealed).reduce((n, h) => n + h.xpCost, 0) +
+      hints
+        .filter((h) => h.tier <= hintsRevealed)
+        .reduce((n, h) => n + h.xpCost, 0) +
       aiHintsUsed * AI_HINT_COST,
     [hints, hintsRevealed, aiHintsUsed],
   );
@@ -147,8 +230,14 @@ export function ProblemView({
   const allDone = correctCount === questions.length;
 
   const persist = useCallback(
-    (next: Record<string, boolean>, revealed: string[], selfGraded: boolean, cost: number) => {
-      const solved = Object.values(next).filter(Boolean).length === questions.length;
+    (
+      next: Record<string, boolean>,
+      revealed: string[],
+      selfGraded: boolean,
+      cost: number,
+    ) => {
+      const solved =
+        Object.values(next).filter(Boolean).length === questions.length;
       // Revealed parts earn nothing, which is the whole point of the trade.
       const earned = questions
         .filter((q) => next[q.id] && !revealed.includes(q.part ?? ""))
@@ -167,13 +256,21 @@ export function ProblemView({
 
   const onResolved = useCallback(
     (questionId: string, correct: boolean, selfGraded: boolean) => {
-      persist({ ...answered, [questionId]: correct }, revealedParts, selfGraded, hintCost);
+      persist(
+        { ...answered, [questionId]: correct },
+        revealedParts,
+        selfGraded,
+        hintCost,
+      );
     },
     [persist, answered, revealedParts, hintCost],
   );
 
   function revealHint(tier: number) {
-    updateProblem(problemId, (p) => ({ ...p, hintsUsed: Math.max(p.hintsUsed, tier) }));
+    updateProblem(problemId, (p) => ({
+      ...p,
+      hintsUsed: Math.max(p.hintsUsed, tier),
+    }));
   }
 
   function noteAiHint() {
@@ -220,7 +317,8 @@ export function ProblemView({
     <>
       {body}
 
-      {blankSlots.map(([qid, el]) => {
+      {blankSlots.map((el) => {
+        const qid = el.getAttribute("data-q") as string;
         const q = questions.find((x) => x.id === qid);
         if (!q) return null;
         return createPortal(
@@ -229,9 +327,35 @@ export function ProblemView({
             question={q}
             onResolved={onResolved}
             revealedAnswer={revealedAnswers[q.id]}
+            label={el.getAttribute("data-label") ?? undefined}
           />,
           el,
           qid,
+        );
+      })}
+
+      {helpSlots.map(([part, el]) => {
+        const shown = shownParts.find((p) => p.key === part);
+        if (!shown?.allInline) return null;
+        return createPortal(
+          <div className="mt-3 mb-6 flex items-baseline justify-between gap-3 border-t border-rule pt-3">
+            <span className="text-[0.72rem] font-semibold tracking-wider text-ink-soft">
+              {part}
+            </span>
+            <HelpPopover
+              problemId={problemId}
+              part={part}
+              hints={hints}
+              hintsRevealed={hintsRevealed}
+              onRevealHint={revealHint}
+              aiHintsUsed={aiHintsUsed}
+              onAiHint={noteAiHint}
+              onRevealPart={() => revealPart(part)}
+              partRevealed={revealedParts.includes(part)}
+            />
+          </div>,
+          el,
+          `help-${part}`,
         );
       })}
 
@@ -249,7 +373,10 @@ export function ProblemView({
         </p>
       )}
 
-      <PracticeTimer problemId={problemId} suggestedMinutes={officialTimeMinutes} />
+      <PracticeTimer
+        problemId={problemId}
+        suggestedMinutes={officialTimeMinutes}
+      />
 
       <section aria-labelledby="questions-heading" className="mt-10">
         <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2 border-b border-ink pb-2">
@@ -257,11 +384,13 @@ export function ProblemView({
             id="questions-heading"
             className="text-[0.7rem] font-semibold tracking-[0.14em] text-ink-soft uppercase"
           >
-            {anyListed ? "Questions" : "Hints and answers"}
+            {anyListed ? "Questions" : "Progress"}
           </h2>
           <span className="text-[0.78rem] text-ink-soft tabular-nums">
             {correctCount} of {questions.length} correct
-            {hintCost > 0 && <span className="text-mark"> · −{hintCost} XP from help</span>}
+            {hintCost > 0 && (
+              <span className="text-mark"> · −{hintCost} XP from help</span>
+            )}
           </span>
         </div>
 
@@ -273,56 +402,53 @@ export function ProblemView({
           </p>
         )}
 
-        {shownParts.map((part) => (
-          <div
-            key={part.key}
-            className={`flex gap-4 sm:gap-6 ${part.allInline ? "mb-5" : "mb-8"}`}
-          >
-            {/* The gutter rail: part labels against a hairline rule. */}
-            <div className="w-8 shrink-0 border-r border-rule pt-1 sm:w-12">
-              <span className="text-[0.72rem] font-semibold tracking-wider text-ink-soft">
-                {part.key}
-              </span>
-            </div>
-
-            <div className="min-w-0 flex-1">
-              <div className="mb-3 flex items-start justify-between gap-3">
-                {part.allInline ? (
-                  <p className="max-w-[58ch] text-[0.92rem] text-ink-faint">
-                    Answered in the problem above.
-                  </p>
-                ) : part.prompt ? (
-                  <p className="max-w-[58ch] text-[0.92rem] text-ink-soft">{part.prompt}</p>
-                ) : (
-                  <span />
-                )}
-                <div className="shrink-0">
-                  <HelpPopover
-                    problemId={problemId}
-                    part={part.key}
-                    hints={hints}
-                    hintsRevealed={hintsRevealed}
-                    onRevealHint={revealHint}
-                    aiHintsUsed={aiHintsUsed}
-                    onAiHint={noteAiHint}
-                    onRevealPart={() => revealPart(part.key)}
-                    partRevealed={revealedParts.includes(part.key)}
-                  />
-                </div>
+        {shownParts
+          .filter((part) => !part.allInline)
+          .map((part) => (
+            <div key={part.key} className="mb-8 flex gap-4 sm:gap-6">
+              {/* The gutter rail: part labels against a hairline rule. */}
+              <div className="w-8 shrink-0 border-r border-rule pt-1 sm:w-12">
+                <span className="text-[0.72rem] font-semibold tracking-wider text-ink-soft">
+                  {part.key}
+                </span>
               </div>
 
-              {part.remaining.map((q) => (
-                <QuestionRow
-                  key={q.id}
-                  problemId={problemId}
-                  question={q}
-                  onResolved={onResolved}
-                  revealedAnswer={revealedAnswers[q.id]}
-                />
-              ))}
+              <div className="min-w-0 flex-1">
+                <div className="mb-3 flex items-start justify-between gap-3">
+                  {part.prompt ? (
+                    <p className="max-w-[58ch] text-[0.92rem] text-ink-soft">
+                      {part.prompt}
+                    </p>
+                  ) : (
+                    <span />
+                  )}
+                  <div className="shrink-0">
+                    <HelpPopover
+                      problemId={problemId}
+                      part={part.key}
+                      hints={hints}
+                      hintsRevealed={hintsRevealed}
+                      onRevealHint={revealHint}
+                      aiHintsUsed={aiHintsUsed}
+                      onAiHint={noteAiHint}
+                      onRevealPart={() => revealPart(part.key)}
+                      partRevealed={revealedParts.includes(part.key)}
+                    />
+                  </div>
+                </div>
+
+                {part.remaining.map((q) => (
+                  <QuestionRow
+                    key={q.id}
+                    problemId={problemId}
+                    question={q}
+                    onResolved={onResolved}
+                    revealedAnswer={revealedAnswers[q.id]}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </section>
 
       <section aria-labelledby="explanation-heading" className="mt-10">
@@ -357,7 +483,10 @@ export function ProblemView({
                   In plain words
                 </p>
                 {plainExplanation.split(/\n{2,}/).map((para, i) => (
-                  <p key={i} className="mb-2 max-w-[62ch] text-[0.92rem] leading-relaxed">
+                  <p
+                    key={i}
+                    className="mb-2 max-w-[62ch] text-[0.92rem] leading-relaxed"
+                  >
                     {para}
                   </p>
                 ))}
@@ -386,8 +515,8 @@ export function ProblemView({
               Show explanation
             </button>
             <p className="mt-2 text-[0.78rem] text-ink-faint">
-              Reading the explanation costs no XP. Worth {officialPoints} points in the real
-              exam.
+              Reading the explanation costs no XP. Worth {officialPoints} points
+              in the real exam.
             </p>
           </div>
         )}

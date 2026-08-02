@@ -6,9 +6,25 @@ import { useAnswer } from "@/components/use-answer";
 type Props = {
   problemId: string;
   question: ClientQuestion;
-  onResolved: (questionId: string, correct: boolean, selfGraded: boolean) => void;
+  onResolved: (
+    questionId: string,
+    correct: boolean,
+    selfGraded: boolean,
+  ) => void;
   revealedAnswer?: string;
+  /** The blank's printed label, e.g. "(a)" or "a.", exactly as the booklet has it. */
+  label?: string;
 };
+
+/**
+ * The booklet labels each blank, and its instructions refer to those labels
+ * ("fill in a. to g."). Without them on screen a student cannot tell which
+ * blank the instruction means, so the label is shown beside its box.
+ */
+function Label({ label }: { label?: string }) {
+  if (!label) return null;
+  return <span className="mr-1 text-[0.85rem] text-ink-soft">{label}</span>;
+}
 
 /**
  * The answer box where the booklet prints its blank: inside the sentence, or in
@@ -19,7 +35,13 @@ type Props = {
  * so it carries no prompt of its own and no permanent button: Enter checks, and
  * the Check button appears only once there is something to check.
  */
-export function InlineAnswer({ problemId, question, onResolved, revealedAnswer }: Props) {
+export function InlineAnswer({
+  problemId,
+  question,
+  onResolved,
+  revealedAnswer,
+  label,
+}: Props) {
   const { value, setValue, verdict, settled, check, reveal } = useAnswer(
     problemId,
     question,
@@ -41,15 +63,18 @@ export function InlineAnswer({ problemId, question, onResolved, revealedAnswer }
 
   if (keyOnly) {
     return (
-      <Trailing
-        settled={settled}
-        value={value}
-        verdict={verdict}
-        onCheck={check}
-        onReveal={reveal}
-        revealedAnswer={revealedAnswer}
-        answerKey={question.answerKey}
-      />
+      <span className="inline-flex flex-wrap items-baseline gap-1.5 align-baseline">
+        <Label label={label} />
+        <Trailing
+          settled={settled}
+          value={value}
+          verdict={verdict}
+          onCheck={check}
+          onReveal={reveal}
+          revealedAnswer={revealedAnswer}
+          answerKey={question.answerKey}
+        />
+      </span>
     );
   }
 
@@ -59,6 +84,7 @@ export function InlineAnswer({ problemId, question, onResolved, revealedAnswer }
   if (question.choices && question.choices.length <= 5) {
     return (
       <span className="inline-flex flex-wrap items-baseline gap-1.5 align-baseline">
+        <Label label={label} />
         <span className="inline-flex flex-wrap gap-1">
           {question.choices.map((c) => (
             <button
@@ -92,6 +118,7 @@ export function InlineAnswer({ problemId, question, onResolved, revealedAnswer }
   if (question.choices) {
     return (
       <span className="inline-flex flex-wrap items-baseline gap-1.5 align-baseline">
+        <Label label={label} />
         <select
           value={value}
           onChange={(e) => setValue(e.target.value)}
@@ -121,6 +148,7 @@ export function InlineAnswer({ problemId, question, onResolved, revealedAnswer }
 
   return (
     <span className="inline-flex flex-wrap items-baseline gap-1.5 align-baseline">
+      <Label label={label} />
       <input
         type="text"
         value={value}
@@ -170,12 +198,18 @@ function Trailing({
 }) {
   if (revealedAnswer && verdict.state !== "correct") {
     return (
-      <span className="data text-[0.85rem] font-semibold text-ink">{revealedAnswer}</span>
+      <span className="data text-[0.85rem] font-semibold text-ink">
+        {revealedAnswer}
+      </span>
     );
   }
 
   if (verdict.state === "revealed") {
-    return <span className="data text-[0.85rem] font-semibold text-ink">{answerKey}</span>;
+    return (
+      <span className="data text-[0.85rem] font-semibold text-ink">
+        {answerKey}
+      </span>
+    );
   }
 
   if (verdict.state === "correct") {
