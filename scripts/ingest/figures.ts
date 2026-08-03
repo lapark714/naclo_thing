@@ -75,10 +75,17 @@ export function reconcileRegions(record: Problem, reviewNotes: string): Flag[] {
 export function cropCommand(
   file: string, region: Region, pageW: number, pageH: number, outBase: string,
 ): string[] {
-  const x = Math.max(0, Math.round((region.xPct / 100) * pageW));
-  const y = Math.max(0, Math.round((region.yPct / 100) * pageH));
-  const w = Math.min(pageW - x, Math.round((region.wPct / 100) * pageW));
-  const h = Math.min(pageH - y, Math.round((region.hPct / 100) * pageH));
+  // The model's percentages are untrusted input — parseRegions accepts any
+  // non-negative number, not just 0-100. x/y are clamped to the page on both
+  // ends first; w/h are then clamped from below at 0 as well as from above,
+  // so a box that starts past the page edge (x already at pageW) or that
+  // overshoots it can never yield a negative -W/-H. pdftoppm rejects a
+  // negative width/height and execFileSync throws on that, which is exactly
+  // the crash this stage exists to prevent for one bad box among many.
+  const x = Math.min(pageW, Math.max(0, Math.round((region.xPct / 100) * pageW)));
+  const y = Math.min(pageH, Math.max(0, Math.round((region.yPct / 100) * pageH)));
+  const w = Math.max(0, Math.min(pageW - x, Math.round((region.wPct / 100) * pageW)));
+  const h = Math.max(0, Math.min(pageH - y, Math.round((region.hPct / 100) * pageH)));
 
   return [
     "-png", "-r", String(DPI),
@@ -86,6 +93,20 @@ export function cropCommand(
     "-x", String(x), "-y", String(y), "-W", String(w), "-H", String(h),
     file, outBase,
   ];
+}
+
+/**
+ * True when a crop box has no area once clamped to the page — either
+ * because it started past the page edge (a >100% or otherwise out-of-range
+ * percentage from an unreliable vision model) or because it lands exactly
+ * on the edge (xPct/yPct = 100). cropCommand can no longer return a negative
+ * width or height, but a zero-area box is still useless to hand to
+ * pdftoppm, so this is checked before the subprocess ever runs.
+ */
+export function isDegenerateBox(cmd: string[]): boolean {
+  const w = Number(cmd[cmd.indexOf("-W") + 1]);
+  const h = Number(cmd[cmd.indexOf("-H") + 1]);
+  return !(w > 0 && h > 0);
 }
 
 function pageSize(file: string, page: number): { w: number; h: number } {
@@ -175,18 +196,51 @@ export async function cropFigures(
       });
       continue;
     }
-    const size = pageSize(target.problem.file, bookletPage);
+
+    // A batch of 58 problems must survive one bad box or one broken PDF.
+    // pageSize and the pdftoppm call below both shell out, and a subprocess
+    // failure (corrupt page, disk full, poppler missing) throws — that must
+    // become a flag and a parked problem, not an exception that aborts every
+    // problem still queued behind this one.
+    let size: { w: number; h: number };
+    try {
+      size = pageSize(target.problem.file, bookletPage);
+    } catch (err) {
+      flags.push({
+        kind: "figure", path: asset.src,
+        note: `could not read the page size: ${err instanceof Error ? err.message : String(err)}`,
+      });
+      continue;
+    }
 
     let box = { ...region, page: bookletPage };
     let verdict = "";
     let cut = false;
+    let failureNote: string | null = null;
 
     for (let attempt = 0; attempt < 3; attempt++) {
       const base = onDisk.replace(/\.png$/, "");
-      execFileSync("pdftoppm", cropCommand(target.problem.file, box, size.w, size.h, base));
+      const cmd = cropCommand(target.problem.file, box, size.w, size.h, base);
+      if (isDegenerateBox(cmd)) {
+        failureNote =
+          `crop region has no area once clamped to the page (x=${box.xPct} y=${box.yPct} ` +
+          `w=${box.wPct} h=${box.hPct})`;
+        break;
+      }
+
+      try {
+        execFileSync("pdftoppm", cmd);
+      } catch (err) {
+        failureNote = `pdftoppm failed: ${err instanceof Error ? err.message : String(err)}`;
+        break;
+      }
+
       const produced = [`${base}-${box.page}.png`, `${base}-0${box.page}.png`, `${base}-00${box.page}.png`, `${base}.png`]
         .find((p) => existsSync(p));
-      if (!produced) break;
+      if (!produced) {
+        failureNote = "pdftoppm did not produce the expected output file";
+        break;
+      }
       if (produced !== onDisk) renameSync(produced, onDisk);
 
       verdict = await confirm(client, onDisk, asset.alt);
@@ -197,7 +251,7 @@ export async function cropFigures(
     if (!cut) {
       flags.push({
         kind: "figure", path: asset.src,
-        note: `crop not confirmed after 3 attempts (last verdict: ${verdict || "none"})`,
+        note: failureNote ?? `crop not confirmed after 3 attempts (last verdict: ${verdict || "none"})`,
       });
     }
   }
