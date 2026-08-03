@@ -14,6 +14,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { readFileSync } from "node:fs";
 import type { Problem } from "../../content/schema";
+import { GradingMode } from "../../content/schema";
 import type { Flag } from "./types";
 import type { Target } from "./manifest";
 import { normalizeForWitness } from "./witness";
@@ -91,9 +92,21 @@ export function applyResolutions(
         continue;
       }
       if (q[2] === "key") target.answerKey = r.value;
-      else if (q[2] === "mode") target.gradingMode = r.value as Problem["questions"][number]["gradingMode"];
-      else if (q[2] === "points") target.points = Number(r.value);
-      else if (q[2] === "variants") target.acceptedVariants = r.value.split("|").filter(Boolean);
+      else if (q[2] === "mode") {
+        const parsed = GradingMode.safeParse(r.value);
+        if (!parsed.success) {
+          unresolved.push({ kind: "diff", path: r.path, a: r.value, note: "arbitration returned an invalid grading mode" });
+          continue;
+        }
+        target.gradingMode = parsed.data;
+      } else if (q[2] === "points") {
+        const n = Number(r.value);
+        if (!Number.isFinite(n)) {
+          unresolved.push({ kind: "diff", path: r.path, a: r.value, note: "arbitration returned a non-numeric value for points" });
+          continue;
+        }
+        target.points = n;
+      } else if (q[2] === "variants") target.acceptedVariants = r.value.split("|").filter(Boolean);
       else target.choices = r.value.split("|").filter(Boolean);
       continue;
     }
