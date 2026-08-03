@@ -2,6 +2,34 @@
 
 This file will hold the project's development status and thus document whatever large updates/accomplishments on the project have been made day-by-day. It is meant to help keep track of where things were left off from the previous day, as a personal reminder.
 
+## 2026-08-03
+
+**Done**
+
+- Built a consensus ingest pipeline that replaces human review as the publish gate. `manifest.ts` pins page spans, official points, and author bylines straight off each booklet's own text layer, so the model never owns a fact machine-readable text already states. `draft.ts` drafts every problem twice — pass A at 150dpi, reading tables strictly cell by cell; pass B at 300dpi, reading each page holistically first — because two passes that fail differently give the rest of the pipeline something to check. `diff.ts` compares the two drafts on fact only (keys, grading modes, points, choices, figure counts), skipping hints, explanations, and invented answer variants, since those are prose a model will always word two different ways. `witness.ts` checks language data against the booklet's own text layer, which can't repeat a misreading the way a second model pass can. `arbitrate.ts` spends one model call per disagreement, given the page image and the extracted text, and answers UNRESOLVED rather than guess when the evidence isn't clear. `figures.ts` crops automatically with a confirm-and-retry loop, up to three attempts. `fonts.ts` fetches a Noto subset from the Google Fonts CSS API for any script the corpus introduces. `publish.ts` publishes only a record with zero flags and parks everything else in `content/parked/` with its reasons attached. `run.ts` orchestrates all seven stages per year and writes a dated report to `docs/ingest-runs/`
+- 2019 is never auto-published, by policy, no matter what its two passes agree on. Its booklets return a substitution cipher, so there is no witness check to catch a correlated misread, and two passes agreeing with each other is not evidence when neither had anything independent to be wrong against. It is still drafted and diffed, so what a human eventually reviews is a short check against real candidate answers rather than a transcription from scratch
+- Ran the pipeline for real for the first time, on 2016 Open Round: [COUNT NEEDED — published vs. parked, and a one-line reason per parked problem]. The run report lives in `docs/ingest-runs/2026-08-03.md` and is what later years' park/publish decisions get judged against
+- Reconciled the site's copy and the project docs with what the pipeline actually does, now that publishing no longer waits on a person. `app/page.tsx`'s guarantee under the call to action no longer promises a human check before anything ships; it now says what is actually true — two independent transcriptions cross-checked against NACLO's official solutions, and any answer flaggable as wrong. `CLAUDE.md`'s content-integrity rules and architecture tree, `PRODUCT.md`'s process description and one stale "current behaviour" bullet, and `docs/architecture.md`'s whole ingest data-flow diagram were rewritten to match. `CLAUDE.md`'s tree had also drifted on its own, independent of this change: missing components (`coming-soon.tsx`, `home-demo.tsx`, `inline-answer.tsx`, `use-answer.ts`) and `content/parked/`, and a `scripts/ingest/` listing that still named the four original files instead of the pipeline's real modules
+
+**Where things stand**
+
+The pipeline runs end to end and is unit-tested stage by stage (`tests/ingest/*.test.ts`). The target corpus is 2016-2022, 58 problems that predate the archive's existing 30 playable, human-reviewed records (2023-2026), which this pipeline does not touch or re-run. The first real run, on 2016, parked most of what it attempted; every park looked legitimate on inspection — a swapped answer pair, hints that named their own graded answer, a pass that produced no table at all, and genuine disagreements about how an answer should be written down. That is closer to what "working as designed" looks like than a pipeline that publishes everything: park is the default failure mode on purpose, since an unresolved disagreement reaching a student is the expensive mistake and a parked problem waiting for a person is the cheap one.
+
+Numeric counts across `PRODUCT.md` (`64 problem records`, `30... playable`, `441 sub-questions`, the exact/llm grading split) describe only the pre-pipeline archive and were deliberately left untouched this round rather than guessed — they need a real update once more years finish running, not before.
+
+**Carried over / needs fixing**
+
+- 2017 through 2022 (about 50 more problems) still need a pipeline run
+- The parked queue from the 2016 run needs an actual human review pass — nothing has looked at `content/parked/2016-open-*.json` yet beyond the pipeline's own flags
+- `PRODUCT.md`'s Capabilities/Evidence counts and the "Currently 427 exact, 14 llm, 0 self" grading split will be stale as soon as a second year publishes; hold off updating them until the runs are done
+- `CLAUDE.md`'s content-integrity bullet on written hints/explanations still says they are "human-reviewed," which is no longer guaranteed for a record the consensus pipeline published on its own — not touched this round, flagged here instead
+
+**Next up**
+
+1. Run the pipeline on 2017-2022
+2. Do the first real human review pass over `content/parked/`
+3. Fill in the counts this round deliberately left blank, once the runs are done
+
 ## 2026-08-01
 
 **Done**

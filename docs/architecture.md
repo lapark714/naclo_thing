@@ -4,22 +4,43 @@ High-level system architecture, data flow, and component relationships for the N
 
 ## System Overview
 
-A statically generated Next.js site over reviewed JSON content files, with no database. NACLO PDFs are processed offline into problem records, a person reviews each one, and the build turns `published` records into static pages. AI runs in three places: offline it drafts content a human then reviews; at request time `/api/grade` grades free text; and `/api/help` gives AI hints and a plain-language explanation on top of the reviewed written ladder (see Notes in `docs/changelog.md` — a deliberate departure from the spec's offline-only stance).
+A statically generated Next.js site over JSON content files, with no database. NACLO PDFs are processed offline by a pipeline that drafts each problem twice, cross-checks the two passes against each other and against the booklet's own text layer, and arbitrates what disagrees; a record reaches `content/problems/` only when every gate clears, and anything else parks in `content/parked/` for a person to review later. The build turns `published` records into static pages. AI runs in three places: offline it drafts, cross-checks, and arbitrates in the ingest pipeline; at request time `/api/grade` grades free text; and `/api/help` gives AI hints and a plain-language explanation on top of the written ladder (see Notes in `docs/changelog.md` — a deliberate departure from the spec's offline-only stance).
 
 ## Data Flow
 
-### Ingest — offline (`draft.ts` exists; no `fetch`/`transcribe` scripts)
+### Ingest — offline (`scripts/ingest/run.ts`, `npm run ingest -- <year...>`)
 ```
 problem PDF + solution PDF        → /pdfs (gitignored), downloaded by hand
-   ↓  draft.ts                    → pdftoppm images → Claude. Flags figures, can't crop them
-content/drafts/<id>.json                                reviewStatus: 'drafted'
-   ↓  REVIEW BY A HUMAN           → keys checked against the official solution;
-                                    figures cropped by hand → content/assets/
-content/problems/<id>.json                              reviewStatus: 'published'
+   ↓  manifest.ts                 → pages, title, official points, and author
+                                    bylines read straight off the booklet's own
+                                    text layer, then pinned — the model never
+                                    owns these fields
+   ↓  draft.ts (two passes)       → pass A: 150dpi, cell-by-cell. pass B: 300dpi,
+                                    holistic. content/drafts/<id>.{a,b}.json
+   ↓  diff.ts                     → the two passes compared on fact only
+   ↓  witness.ts                  → language data checked against pdftotext
+                                    output; skipped for 2019, whose booklets
+                                    return a substitution cipher
+   ↓  arbitrate.ts                → one model call per disagreement, given the
+                                    page crop and the extracted text; never run
+                                    for 2019, which has no independent evidence
+   ↓  figures.ts                  → a coarse crop box, then a confirm pass;
+                                    widened and retried up to three times
+   ↓  fonts.ts                    → uncovered codepoints mapped to a Noto subset
+                                    fetched from the Google Fonts CSS API
+   ↓  publish.ts                  → every gate green  → content/problems/<id>.json
+                                                          (reviewStatus: 'published')
+                                    anything else       → content/parked/<id>.json
+                                                          with its `_parkReasons`
    ↓  validate.ts                 → Zod + assets + keys + glyph coverage. Blocks
-                                    the build; drafts warn but never block.
+                                    the build.
    ↓  sync-assets.ts              → content/assets → public/content-assets (predev/prebuild)
 ```
+
+Human review is no longer a publish gate. It is a follow-on pass over
+`content/parked/` — committed on purpose, so it reads as a diff — and over
+answers a student flags as wrong. A dated report of each run (attempted /
+published / parked, and every park reason) lands in `docs/ingest-runs/`.
 
 ### Attempt — request time
 ```
@@ -66,13 +87,17 @@ content/problems/<id>.json                              reviewStatus: 'published
 ### Content & Ingest
 - `content/schema.ts` — Zod `Problem`/`Question`, imported by both the scripts and the site
 - `content/taxonomy.ts` — Concept + form tag vocabulary (NACLO publishes none)
-- `content/problems/*.json` — One reviewed record per problem; `content/assets/` holds cropped figures. `tier` is `full` (playable) or `catalogue` (metadata, links out to the booklet). `content/drafts/*.json` is machine output; `lib/content.ts` never reads it, so promotion is a human move rather than a flag flip
+- `content/problems/*.json` — One published record per problem; `content/assets/` holds cropped figures. `tier` is `full` (playable) or `catalogue` (metadata, links out to the booklet). `publish.ts` decides which directory a record lands in, based on whether every pipeline gate cleared — not a human move
+- `content/drafts/*.json` — the two per-pass drafts (`<id>.a.json`, `<id>.b.json`) `draft.ts` writes before `diff.ts` compares them. Machine output only; `lib/content.ts` never reads it
+- `content/parked/*.json` — problems the pipeline could not vouch for, carrying a `_parkReasons` array of what disagreed or went unresolved. Committed on purpose: it is the human-review queue and is meant to be read as a diff. `lib/content.ts` reads neither it nor `content/drafts/`
 - Two gates in `lib/content.ts`, not one. `getPublishedProblems()` is the review gate; `getPlayableProblems()` narrows it to `full` and is what `getProblemIndex()` maps over, so no count anywhere in the UI can quietly include a problem nobody can work. `getUpcoming()` returns the catalogue remainder as a total and a per-year tally, which is all the site says about it
-- `scripts/ingest/draft.ts` — `npm run draft [--list | <id> | <year> | --all]`. Holds the booklet page maps, hand-checked where the text layer is mojibake
-- `scripts/ingest/validate.ts` — Zod + assets + keys + glyph coverage, blocks the build; allowed `unicode-range`s come from `app/globals.css` so the fonts stay the single source of truth. `scripts/ingest/sync-assets.ts` — copies `content/assets` to `public/content-assets`. Offline only, never at request time.
+- `scripts/ingest/manifest.ts` — booklet page maps and `pdftotext` parsers; hand-checked where the text layer is mojibake (2019)
+- `scripts/ingest/run.ts` — orchestrates all seven pipeline stages for one or more years; `npm run ingest -- <year...> | --all | --dry`. Resumable — a re-run after an interruption skips drafts that already exist rather than paying for them twice
+- `scripts/ingest/validate.ts` — Zod + assets + keys + glyph coverage, blocks the build; allowed `unicode-range`s come from `app/globals.css` so the fonts stay the single source of truth
+- `scripts/ingest/sync-assets.ts` — copies `content/assets` to `public/content-assets`. Offline only, never at request time
 
 ## Design Decisions
 
 - **No database.** A few hundred read-only records that change once a year get version history and diffable review for free from git.
 - **`gradingMode` is per sub-question.** One problem routinely mixes a table to fill in with a rule to state; tagging at the problem level would force the harder case onto everything.
-- **`reviewStatus` gates the build.** It is the single mechanism keeping unreviewed AI output away from students.
+- **Directory plus `reviewStatus` gate the build.** `lib/content.ts` only reads `content/problems/`, filtered to `reviewStatus: 'published'`. `publish.ts` is what decides which directory a record lands in, based on whether every pipeline gate cleared — not a human sign-off.

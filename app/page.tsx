@@ -58,8 +58,9 @@ export default function Home() {
       {/* The guarantee, where it reassures. It used to sit in the second
           sentence of the page, which sold a process detail as a headline. */}
       <p className="mt-4 max-w-[58ch] text-[0.85rem] leading-relaxed text-ink-soft">
-        Hints and explanations are drafted with AI, then checked by a person
-        against NACLO&rsquo;s official solution before anything goes up.
+        Every problem is transcribed twice and cross-checked against
+        NACLO&rsquo;s official solutions before it goes up. If an answer still
+        looks wrong, you can flag it.
       </p>
 
       <section className="mt-12">

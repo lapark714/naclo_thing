@@ -64,8 +64,10 @@ same work:
 - Problem data is the interface. Alignment in a table is often the puzzle
   itself, and the languages involved use scripts a default font stack does not
   cover. A missing glyph does not make a problem ugly, it makes it unsolvable.
-- Content is authored offline and reviewed by a person before it ships. Drafting
-  is assisted by a model; publishing is a human act.
+- Content is authored offline. Each problem is transcribed twice by a model,
+  the two passes are cross-checked against each other and against the
+  booklet's own text layer, and anything the checks cannot settle is parked
+  for a person rather than published.
 
 ## Capabilities and Constraints
 
@@ -101,7 +103,9 @@ enforced in code and in CLAUDE.md, but the init interview did not commit them as
 inviolable, so future work may revisit them deliberately rather than assuming
 either way: help always costing XP and hints never giving the answer; every
 problem carrying its author byline and a link to the original PDF; only
-human-reviewed records reaching a student.
+records the pipeline's cross-checks could vouch for reaching a student, with
+human review moved to a follow-on pass over what gets parked instead of
+sitting on the publish path.
 
 **Explicitly undecided:** what morpheme becomes beyond the current MVP. Whole-paper
 timed exam mode, cross-device progress, and staying a pure practice library are

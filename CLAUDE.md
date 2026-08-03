@@ -7,7 +7,7 @@
 
 ## Architecture Overview
 
-Statically generated Next.js site over JSON content files. No database. Problem content is drafted offline in `scripts/ingest/` and human-reviewed before it ships; the only request-time AI is free-text grading.
+Statically generated Next.js site over JSON content files. No database. Problem content is drafted offline in `scripts/ingest/` by two independent model passes, cross-checked against each other and against the booklet's own text layer before it ships; the only request-time AI is free-text grading.
 
 ```
 naclo_tool/
@@ -24,7 +24,11 @@ naclo_tool/
 │   ├── help-popover.tsx          # Per-part help: hints, AI, reveal
 │   ├── practice-timer.tsx        # Countdown display
 │   ├── concept-filter.tsx        # Client-side filtering
-│   └── concept-coverage.tsx      # Per-concept progress
+│   ├── concept-coverage.tsx      # Per-concept progress
+│   ├── coming-soon.tsx           # Untranscribed remainder, count + year breakdown
+│   ├── home-demo.tsx             # Playable demo question on the landing page
+│   ├── inline-answer.tsx         # Answer input rendered inside the problem body
+│   └── use-answer.ts             # Grading hook shared by inline and row inputs
 ├── lib/
 │   ├── grading.ts                # exact-match normalization
 │   ├── progress.ts               # localStorage via useSyncExternalStore
@@ -33,12 +37,18 @@ naclo_tool/
 ├── content/
 │   ├── schema.ts                 # Zod schema, shared by pipeline and site
 │   ├── taxonomy.ts               # Concept + form tag vocabulary
-│   ├── problems/*.json           # One reviewed record per problem, in git
+│   ├── problems/*.json           # Published records, in git
+│   ├── parked/*.json             # Records the pipeline couldn't vouch for; human review queue
 │   └── assets/                   # Cropped glyph specimens and diagrams
-├── scripts/ingest/               # Run by hand, offline
-│   ├── fetch.ts                  # Download PDFs from NACLO
-│   ├── transcribe.ts             # PDF → Unicode HTML + real tables
-│   ├── draft.ts                  # AI pass: tags, hints, explanation, grading
+├── scripts/ingest/               # Consensus pipeline, run by hand offline — see docs/architecture.md
+│   ├── manifest.ts               # Pins page/points/author facts from the booklet's text layer
+│   ├── draft.ts                  # Two model passes per problem, different dpi and reading order
+│   ├── diff.ts                   # Compares the two passes on fact only
+│   ├── witness.ts                # Checks language data against the text layer
+│   ├── arbitrate.ts              # One model call per disagreement
+│   ├── figures.ts                # Crops figures, confirms, retries
+│   ├── fonts.ts                  # Fetches font subsets for uncovered scripts
+│   ├── publish.ts                # Publishes clean records, parks the rest
 │   └── validate.ts               # Zod + assets + answer keys, blocks the build
 ├── public/fonts/                 # Self-hosted Noto Sans + Charis SIL for IPA
 └── docs/                         # Project documentation
@@ -84,7 +94,8 @@ naclo_tool/
 - Collect no personal information
 
 **Content integrity — MUST Follow:**
-- Only `published` records ship; unreviewed AI drafts never reach a student
+- A record publishes only when its two independent transcription passes agree, the booklet's own text layer confirms the language data, and `validate.ts` is clean; anything else parks in `content/parked/`, which the site never loads
+- Human review is no longer on the publish path. It is a follow-on pass over the parked queue and over answers students flag as wrong
 - The written hints and explanations are authored at ingest and human-reviewed. `/api/help` adds request-time AI hints on top; it never replaces them, is prompted against revealing answers, and costs more XP than the reviewed ladder
 - `llm` answer keys stay server-side; only `exact` keys ship in the content bundle
 - `validate.ts` blocks the build — never bypass it
