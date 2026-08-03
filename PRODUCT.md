@@ -58,7 +58,7 @@ same work:
 - Students study at a computer, so the site is designed desktop-first, but it
   must hold up on a phone. A wide data table scrolls inside its own container
   and never pushes the page sideways.
-- The source material is the NACLO Open Round booklets, 2018 to 2026, published
+- The source material is the NACLO Open Round booklets, 2016 to 2026, published
   as PDFs at naclo.org. Problem PDFs are copyrighted and stay out of the
   repository.
 - Problem data is the interface. Alignment in a table is often the puzzle
@@ -71,16 +71,21 @@ same work:
 
 ## Capabilities and Constraints
 
-**Today:** 64 problem records covering 2018 to 2026. 30 are fully playable with
-441 sub-questions, and 2023 through 2026 are complete. The other 34 are
+**Today:** 68 problem records covering 2016 to 2026. 41 are fully playable with
+598 sub-questions, and 2023 through 2026 are complete. The other 27 are
 catalogue entries: transcribed metadata, not yet a problem anyone can work. They
 are counted at the foot of the practice page as "more coming soon" rather than
 listed, because a row a student cannot open is not a problem, and mixing the two
 made the library look larger than it is.
 
+A further 47 sit in `content/parked/`, drafted twice and cross-checked but
+holding at least one disagreement the pipeline could not settle. Each carries the
+specific flags that stopped it, so reviewing one is a matter of resolving named
+questions rather than transcribing from scratch.
+
 - **Grading** is decided per sub-question at ingest: `exact` runs in the browser
   with forgiving normalization, `llm` calls a server route for free-text
-  translation, `self` is unused. Currently 427 exact, 14 llm, 0 self.
+  translation, `self` is unused. Currently 573 exact, 25 llm, 0 self.
 - **Help** is a three-tier written hint ladder with XP costs, plus a
   request-time route offering an extra AI hint, a plain-language explanation,
   and an answer reveal that zeroes that part's XP.
@@ -134,7 +139,7 @@ but nothing should be built toward that direction until it is chosen.
 
 ## Evidence on Hand
 
-- 64 reviewed problem records in `content/problems/`, with answer keys checked
+- 68 problem records in `content/problems/`, with answer keys checked
   against NACLO's official solution pages.
 - Cropped figures in `content/assets/`, and self-hosted font subsets in
   `public/fonts/` covering Latin, IPA, Armenian, Devanagari, Georgian, Cherokee,
