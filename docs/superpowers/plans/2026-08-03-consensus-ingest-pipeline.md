@@ -17,7 +17,7 @@
 - **Model id:** `process.env.INGEST_MODEL || "claude-opus-5"`. Never hardcode a different one.
 - **Concurrency cap: 4.** Higher trips rate limits on image-heavy requests.
 - **Corpus: 2016, 2017, 2018, 2019, 2020, 2021, 2022.** 58 problems. 2023–2026 are already published and must never be touched or overwritten.
-- **2019 is the exception year.** Its booklets return a substitution cipher from `pdftotext`. It gets no deterministic extraction, no witness check, and **no arbitration** — its two passes agree or the problem parks.
+- **2019 is the exception year.** Its booklets return a substitution cipher from `pdftotext`. It gets no deterministic extraction, no witness check, and no arbitration, and it is **never auto-published** — all eight problems park for human review by policy. Two passes agreeing cannot catch a correlated misread, and the witness that would is exactly what 2019 lacks. It is still drafted and diffed, because a parked record with two passes and a flag list is a short review rather than a transcription from scratch.
 - **Park, never publish, on doubt.** A problem that fails any gate is written to `content/parked/`, never to `content/problems/`.
 - **`content/drafts/` stays gitignored** (transient scratch). `content/parked/` is new and **committed**.
 - **User-facing copy rules** (from `PRODUCT.md`): US spelling, no em dashes, written for a 12–17 year old.
@@ -2178,6 +2178,24 @@ async function processOne(client: Anthropic, target: Target): Promise<Outcome | 
     mkdirSync(workDir, { recursive: true });
 
     // Stage 4 — arbitration, except for 2019.
+    //
+    // A booklet with no text layer is never auto-published, even when the two
+    // passes agree on everything. Agreement cannot catch a correlated misread
+    // (both passes reading ɲ as ŋ), and the witness that would is exactly what
+    // is missing here. Drafting and diffing it is still worth the few dollars:
+    // it turns eight untranscribed problems into eight nearly-finished records
+    // that need a short review rather than a transcription.
+    if (!target.hasTextLayer) {
+      flags.push({
+        kind: "diff",
+        path: "(verification)",
+        note:
+          "this booklet has no usable text layer, so neither the witness check " +
+          "nor arbitration can run. Parked for human review by policy, not by " +
+          "a specific disagreement",
+      });
+    }
+
     if (flags.length > 0 && target.hasTextLayer) {
       const images = renderForArbitration(target, workDir);
       const pages = readText(target.problem.file).split("\f");
@@ -2186,11 +2204,6 @@ async function processOne(client: Anthropic, target: Target): Promise<Outcome | 
       const applied = applyResolutions(record, resolutions);
       record = applied.record;
       flags = applied.unresolved;
-    } else if (flags.length > 0) {
-      flags.push({
-        kind: "diff", path: "(arbitration)",
-        note: "skipped: this booklet has no text layer, so there is no independent evidence to arbitrate against",
-      });
     }
 
     // Stage 5 — figures.
