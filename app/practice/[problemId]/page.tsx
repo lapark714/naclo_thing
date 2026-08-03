@@ -7,7 +7,6 @@ import {
   toClientQuestions,
 } from "@/lib/content";
 import { ProblemView } from "@/components/problem-view";
-import { conceptColor } from "@/lib/concept-color";
 
 export function generateStaticParams() {
   return getPublishedProblems().map((p) => ({ problemId: p.id }));
@@ -58,18 +57,8 @@ export default async function ProblemPage({
         </h1>
         <p className="mt-2 text-[0.88rem] text-ink-soft">
           {problem.authors.length > 0 && <>{problem.authors.join(" & ")} · </>}
-          <span className="inline-flex flex-wrap items-center gap-x-3">
-            {problem.conceptTags.map((tag) => (
-              <span key={tag} className="inline-flex items-center gap-1.5">
-                <span
-                  aria-hidden
-                  className="h-[7px] w-[7px] shrink-0 rounded-full"
-                  style={{ background: conceptColor(tag) }}
-                />
-                {tag}
-              </span>
-            ))}
-            <span className="text-ink-faint">{problem.formTag}</span>
+          <span className="text-ink-faint">
+            {problem.conceptTags.join(" · ")} · {problem.formTag}
           </span>
         </p>
       </header>

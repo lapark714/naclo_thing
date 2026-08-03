@@ -451,29 +451,10 @@
      body text without shouting. Every learning platform lands on a blue for
      this; the discipline is keeping it dark and low-chroma rather than the
      bright product blue, which fights a warm ground. */
-  --action: oklch(0.42 0.115 250);
-  --action-hover: oklch(0.33 0.1 250);
-  --action-tint: oklch(0.96 0.018 250);
+  --action: oklch(0.46 0.12 62);
+  --action-hover: oklch(0.37 0.1 62);
+  --action-tint: oklch(0.96 0.025 62);
 
-  /* Concept wayfinding. One hue per tag in the taxonomy, all at the same
-     lightness and chroma so no subject shouts over another, and set well
-     lighter than --action so a category marker never reads as an action. This
-     is an index, the way a reference grammar colours its section tabs: it
-     appears as a dot beside a name or as the fill of a chip you selected, and
-     never as decoration on a surface.
-
-     The ring deliberately skips the two hues already spoken for: oxblood sits
-     near 27 and verdigris near 158, and a subject dot that reads as "wrong" or
-     "correct" would be worse than no colour at all. Chroma is a step below the
-     semantics too, so a category never competes with a verdict. */
-  --c-historical: oklch(0.5 0.09 72);
-  --c-sociolinguistics: oklch(0.5 0.09 110);
-  --c-number-systems: oklch(0.5 0.09 142);
-  --c-writing-systems: oklch(0.5 0.09 190);
-  --c-morphology: oklch(0.5 0.09 220);
-  --c-syntax: oklch(0.5 0.09 255);
-  --c-semantics: oklch(0.5 0.09 295);
-  --c-phonology: oklch(0.5 0.09 335);
 
   --radius: 3px;
 

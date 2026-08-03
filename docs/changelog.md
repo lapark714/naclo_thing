@@ -60,6 +60,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ### Changed
 
+- Dropped the difficulty filter from `/practice`. Concept is the axis that answers "what do I want to work on"; difficulty was a second axis nobody asked for, and it narrowed a 30-problem library to slices of five
+- Retired the concept colour ring. Eight coded dots across a library page read as decoration rather than wayfinding, which is the opposite of what colour is for here. Concepts are named in words and the words were always doing the work. `lib/concept-color.ts` and the `--c-*` tokens are gone
+- Action colour is warm now (`oklch(0.46 0.12 62)`, a burnt amber) rather than the cool blue-violet that reads as a generated default. 7.02:1 on paper, and it runs darker and far less red than oxblood, which it never shares a role with: one fills a button, the other is small text beside a wrong answer
+
+
 - Home page leads with a real problem. `components/home-demo.tsx` puts three verbatim rows of 2023 D (Permyak, Pavel Iosad) and its question (b) on the landing page, graded by the same `checkExact` the site uses, so a visitor solves a genuine NACLO blank before committing to anything. Writes no progress: a demonstration should not mark a problem nobody opened
 - Primary action moved above the explainer. Measured on a 390px viewport: the CTA was at 896px against an 844px fold and is now at 744px, fully visible without scrolling
 - Opening copy leads with the puzzle rather than the contest, since PRODUCT.md commits to an audience that has never heard of NACLO. The "drafted with AI, checked by a person" line moved out of the second sentence to sit under the CTA as a guarantee rather than a process disclosure

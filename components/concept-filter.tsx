@@ -4,35 +4,38 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { ProblemSummary } from "@/lib/content";
 import { useProgress } from "@/lib/progress";
-import { conceptColor } from "@/lib/concept-color";
 
 type Props = { problems: ProblemSummary[] };
 
 /**
- * Client-side filtering over the index generated at build. Filters stack, so
- * "morphology, hard" is a valid request.
+ * Client-side filtering over the index generated at build. Concept only, and
+ * filters stack: "morphology, syntax" narrows to problems carrying both.
  */
 export function ConceptFilter({ problems }: Props) {
   const [concepts, setConcepts] = useState<string[]>([]);
-  const [difficulty, setDifficulty] = useState<string | null>(null);
   const progress = useProgress();
 
   const allConcepts = useMemo(() => {
     const counts = new Map<string, number>();
     for (const p of problems) {
-      for (const tag of p.conceptTags) counts.set(tag, (counts.get(tag) ?? 0) + 1);
+      for (const tag of p.conceptTags)
+        counts.set(tag, (counts.get(tag) ?? 0) + 1);
     }
-    return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    return [...counts.entries()].sort(
+      (a, b) => b[1] - a[1] || a[0].localeCompare(b[0]),
+    );
   }, [problems]);
 
   const filtered = problems.filter((p) => {
-    if (difficulty && p.difficulty !== difficulty) return false;
-    if (concepts.length && !concepts.every((c) => p.conceptTags.includes(c))) return false;
+    if (concepts.length && !concepts.every((c) => p.conceptTags.includes(c)))
+      return false;
     return true;
   });
 
   function toggleConcept(tag: string) {
-    setConcepts((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]));
+    setConcepts((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag],
+    );
   }
 
   return (
@@ -44,33 +47,22 @@ export function ConceptFilter({ problems }: Props) {
           </span>
           {allConcepts.map(([tag, count]) => {
             const on = concepts.includes(tag);
-            const hue = conceptColor(tag);
             return (
               <button
                 key={tag}
                 type="button"
                 onClick={() => toggleConcept(tag)}
                 aria-pressed={on}
-                style={
+                className={`border px-2.5 py-1 text-[0.82rem] transition-colors ${
                   on
-                    ? { background: hue, borderColor: hue }
-                    : { borderColor: "var(--rule-strong)" }
-                }
-                className={`inline-flex items-center gap-1.5 border px-2.5 py-1 text-[0.82rem] transition-colors ${
-                  on ? "text-paper" : "bg-white hover:bg-tint"
+                    ? "bg-action border-action text-paper"
+                    : "border-rule-strong bg-white hover:bg-tint"
                 }`}
               >
-                {/* The dot repeats the chip's colour while it is unselected, so
-                    the code is learnable before you ever press one. */}
-                {!on && (
-                  <span
-                    aria-hidden
-                    className="h-[7px] w-[7px] shrink-0 rounded-full"
-                    style={{ background: hue }}
-                  />
-                )}
                 {tag}
-                <span className={`tabular-nums ${on ? "text-paper/70" : "text-ink-faint"}`}>
+                <span
+                  className={`ml-1.5 tabular-nums ${on ? "text-paper/70" : "text-ink-faint"}`}
+                >
                   {count}
                 </span>
               </button>
@@ -78,39 +70,17 @@ export function ConceptFilter({ problems }: Props) {
           })}
         </div>
 
-        <div className="mt-3 flex flex-wrap items-baseline gap-2">
-          <span className="mr-1 text-[0.7rem] font-semibold tracking-[0.14em] text-ink-soft uppercase">
-            Difficulty
-          </span>
-          {["intro", "standard", "hard"].map((d) => {
-            const on = difficulty === d;
-            return (
-              <button
-                key={d}
-                type="button"
-                onClick={() => setDifficulty(on ? null : d)}
-                aria-pressed={on}
-                className={`border px-2.5 py-1 text-[0.82rem] transition-colors ${
-                  on ? "border-ink bg-ink text-paper" : "border-rule-strong bg-white hover:bg-tint"
-                }`}
-              >
-                {d}
-              </button>
-            );
-          })}
-          {(concepts.length > 0 || difficulty) && (
+        {concepts.length > 0 && (
+          <div className="mt-3">
             <button
               type="button"
-              onClick={() => {
-                setConcepts([]);
-                setDifficulty(null);
-              }}
-              className="ml-1 text-[0.8rem] text-ink-soft underline underline-offset-2 hover:text-ink"
+              onClick={() => setConcepts([])}
+              className="text-[0.8rem] text-ink-soft underline underline-offset-2 hover:text-ink"
             >
               Clear
             </button>
-          )}
-        </div>
+          </div>
+        )}
       </div>
 
       <p className="mt-4 text-[0.8rem] text-ink-soft tabular-nums">
@@ -119,7 +89,8 @@ export function ConceptFilter({ problems }: Props) {
 
       {filtered.length === 0 ? (
         <p className="mt-8 max-w-[52ch] text-[0.95rem] text-ink-soft">
-          Nothing matches all of those filters at once. Remove one to widen the search.
+          Nothing carries all of those concepts at once. Remove one to widen the
+          search.
         </p>
       ) : (
         <ul className="mt-4 border-t border-rule">
@@ -136,19 +107,13 @@ export function ConceptFilter({ problems }: Props) {
                   <span className="font-heading text-[1.05rem] text-ink group-hover:underline group-hover:underline-offset-4">
                     {p.title}
                   </span>
-                  <span className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-[0.8rem] text-ink-soft">
-                    {p.conceptTags.map((tag) => (
-                      <span key={tag} className="inline-flex items-center gap-1.5">
-                        <span
-                          aria-hidden
-                          className="h-[7px] w-[7px] shrink-0 rounded-full"
-                          style={{ background: conceptColor(tag) }}
-                        />
-                        {tag}
-                      </span>
-                    ))}
+                  <span className="mt-0.5 block text-[0.8rem] text-ink-soft">
+                    {p.conceptTags.join(" · ")}
                     {p.languages.length > 0 && (
-                      <span className="text-ink-faint">{p.languages.join(", ")}</span>
+                      <span className="text-ink-faint">
+                        {" "}
+                        · {p.languages.join(", ")}
+                      </span>
                     )}
                   </span>
                 </span>
@@ -156,9 +121,7 @@ export function ConceptFilter({ problems }: Props) {
                   {progress.problems[p.id]?.solved ? (
                     <span className="text-good">solved</span>
                   ) : (
-                    <>
-                      {p.questionCount} parts
-                    </>
+                    <>{p.questionCount} parts</>
                   )}
                 </span>
               </Link>

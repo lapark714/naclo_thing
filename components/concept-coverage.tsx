@@ -4,7 +4,6 @@ import { useMemo } from "react";
 import Link from "next/link";
 import type { ProblemSummary } from "@/lib/content";
 import { useProgress } from "@/lib/progress";
-import { conceptColor } from "@/lib/concept-color";
 
 /**
  * Coverage per concept rather than a lifetime point total. For a student
@@ -41,19 +40,12 @@ export function ConceptCoverage({ problems }: { problems: ProblemSummary[] }) {
       <ul className="mt-4 grid gap-x-8 gap-y-2 sm:grid-cols-2">
         {entries.map(([tag, { solved, total }]) => (
           <li key={tag} className="flex items-baseline gap-3">
-            <span className="flex flex-1 items-center gap-2 text-[0.9rem]">
-              <span
-                aria-hidden
-                className="h-[7px] w-[7px] shrink-0 rounded-full"
-                style={{ background: conceptColor(tag) }}
-              />
-              {tag}
-            </span>
+            <span className="flex-1 text-[0.9rem]">{tag}</span>
             <span
               aria-hidden
               className="h-[3px] w-20 shrink-0 bg-rule"
               style={{
-                backgroundImage: `linear-gradient(to right, ${conceptColor(tag)} ${(solved / total) * 100}%, transparent ${(solved / total) * 100}%)`,
+                backgroundImage: `linear-gradient(to right, var(--action) ${(solved / total) * 100}%, transparent ${(solved / total) * 100}%)`,
               }}
             />
             <span className="w-9 shrink-0 text-right text-[0.82rem] text-ink-soft tabular-nums">
@@ -66,7 +58,10 @@ export function ConceptCoverage({ problems }: { problems: ProblemSummary[] }) {
       {!anySolved && (
         <p className="mt-4 text-[0.85rem] text-ink-soft">
           Nothing solved yet.{" "}
-          <Link href="/practice" className="underline underline-offset-2 hover:text-ink">
+          <Link
+            href="/practice"
+            className="underline underline-offset-2 hover:text-ink"
+          >
             Pick a concept
           </Link>{" "}
           and the bars fill in.

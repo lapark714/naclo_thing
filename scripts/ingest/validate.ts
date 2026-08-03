@@ -16,8 +16,8 @@
  *   - fields that the site renders as plain text carry no markup. Only the
  *     *Html fields are ever passed through dangerouslySetInnerHTML; a <span>
  *     in a hint reaches the student as literal angle brackets.
- *   - concept and form tags come from content/taxonomy.ts. A tag outside the
- *     vocabulary has no colour in the interface and shows as a grey dot.
+ *   - concept and form tags come from content/taxonomy.ts, so the filter never
+ *     grows an option that belongs to a different axis.
  *   - every typed answer has at least one accepted spelling a student can
  *     actually enter. Grading forgives accents but not distinct letters, so a
  *     key of "þu" with no plain-letter variant is unanswerable by design.
@@ -148,9 +148,9 @@ function strippable(text: string): string {
    Taxonomy
 
    The schema types these as plain strings, which is how a form tag once ended
-   up in a record's concept list. It also has to hold because the interface now
-   gives every concept its own colour: a tag outside the vocabulary has no hue
-   and renders as a grey dot among coloured ones, which reads as a bug.
+   up in a record's concept list, where it showed up as a filter nobody could
+   use. The vocabulary is small on purpose; a filter with forty options filters
+   nothing.
    --------------------------------------------------------------------------- */
 
 function offTaxonomyTags(problem: Problem): string[] {
