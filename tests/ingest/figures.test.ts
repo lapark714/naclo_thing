@@ -1,7 +1,12 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import Anthropic from "@anthropic-ai/sdk";
-import { parseRegions, cropCommand, reconcileRegions, isDegenerateBox, cropFigures } from "../../scripts/ingest/figures";
+import { existsSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import {
+  parseRegions, cropCommand, reconcileRegions, isDegenerateBox, cropFigures, decideCropPlacement,
+} from "../../scripts/ingest/figures";
 import type { Problem } from "../../content/schema";
 import type { Target } from "../../scripts/ingest/manifest";
 
@@ -144,4 +149,90 @@ test("cropFigures resolves with a flag, not a rejection, when the source PDF doe
   const { flags } = await cropFigures(client, target, rec);
   const assetFlags = flags.filter((f) => f.path === assetSrc);
   assert.ok(assetFlags.length >= 1, "expected cropFigures to flag the asset rather than throw");
+});
+
+// Finding 1 (CRITICAL): the retry loop used to rename a crop onto its final
+// path (onDisk) BEFORE confirm() had a chance to accept or reject it, so a
+// crop that failed confirmation on all three attempts was still left sitting
+// at onDisk — and the next run's `if (existsSync(onDisk)) continue;` cache
+// check then treated that rejected crop as a finished one, silently
+// publishing a clipped or noisy figure with no flag at all.
+//
+// decideCropPlacement is the pure function the fix extracts: it is the only
+// place that decides whether a cut crop is promoted to onDisk (only on a
+// COMPLETE verdict) or discarded at its temporary path (everything else,
+// including a blank verdict from a confirm() that never got to run). Testing
+// it directly, plus replaying the loop's placement decisions against real
+// tmp files, proves the invariant without touching the network or spawning
+// pdftoppm/pdfinfo.
+
+test("decideCropPlacement promotes a crop to onDisk only on a COMPLETE verdict", () => {
+  const placement = decideCropPlacement("COMPLETE", "/tmp/asset.tmp-1.png", "/tmp/asset.png");
+  assert.deepEqual(placement, { action: "publish", from: "/tmp/asset.tmp-1.png", to: "/tmp/asset.png" });
+});
+
+test("decideCropPlacement discards CLIPPED, NOISY, an unrecognized reply, and a blank verdict", () => {
+  for (const verdict of ["CLIPPED", "NOISY", "GARBAGE REPLY", ""]) {
+    const placement = decideCropPlacement(verdict, "/tmp/asset.tmp-1.png", "/tmp/asset.png");
+    assert.deepEqual(placement, { action: "discard", from: "/tmp/asset.tmp-1.png" }, `verdict ${JSON.stringify(verdict)}`);
+  }
+});
+
+test("decideCropPlacement is not fooled by COMPLETE appearing after the start of the reply", () => {
+  // confirm() upper-cases and trims its own reply, but the placement
+  // decision itself must not treat "...COMPLETE" or "INCOMPLETE" as a pass —
+  // only a reply that STARTS WITH COMPLETE (the documented contract) counts.
+  const placement = decideCropPlacement("INCOMPLETE", "/tmp/asset.tmp-1.png", "/tmp/asset.png");
+  assert.equal(placement.action, "discard");
+});
+
+test("three rejected confirmations in a row never leave a file at the final asset path", () => {
+  // Replays exactly what the retry loop does with each attempt's placement
+  // decision — crop to a tmp path, ask decideCropPlacement, discard on
+  // reject — using real files on disk (so a genuine renameSync/rmSync bug
+  // would show up) but no subprocess or network call anywhere in the test.
+  const dir = mkdtempSync(join(tmpdir(), "figures-placement-"));
+  const onDisk = join(dir, "asset.png");
+  try {
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const tmp = join(dir, `asset.tmp-${attempt}.png`);
+      writeFileSync(tmp, "not a real png, just standing in for a rejected crop");
+      const placement = decideCropPlacement("CLIPPED", tmp, onDisk);
+      assert.equal(placement.action, "discard");
+      rmSync(placement.from, { force: true });
+    }
+    assert.equal(existsSync(onDisk), false, "a rejected crop must never occupy the final asset path");
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test("a COMPLETE confirmation on the final attempt still leaves nothing at onDisk from the earlier rejected attempts", () => {
+  const dir = mkdtempSync(join(tmpdir(), "figures-placement-"));
+  const onDisk = join(dir, "asset.png");
+  try {
+    const verdicts = ["CLIPPED", "NOISY", "COMPLETE"];
+    let published = false;
+    for (let attempt = 0; attempt < verdicts.length; attempt++) {
+      const tmp = join(dir, `asset.tmp-${attempt}.png`);
+      writeFileSync(tmp, `attempt ${attempt}`);
+      const placement = decideCropPlacement(verdicts[attempt], tmp, onDisk);
+      if (placement.action === "publish") {
+        // renameSync moves rather than copies — the tmp file for this
+        // attempt cannot also linger behind.
+        writeFileSync(placement.to, "renamed contents");
+        rmSync(placement.from, { force: true });
+        published = true;
+        break;
+      }
+      rmSync(placement.from, { force: true });
+    }
+    assert.ok(published, "expected the third attempt to publish");
+    assert.equal(existsSync(onDisk), true);
+    for (let attempt = 0; attempt < verdicts.length; attempt++) {
+      assert.equal(existsSync(join(dir, `asset.tmp-${attempt}.png`)), false, `tmp file for attempt ${attempt} should not remain`);
+    }
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 });

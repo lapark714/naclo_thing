@@ -14,7 +14,7 @@
 
 import Anthropic from "@anthropic-ai/sdk";
 import { execFileSync } from "node:child_process";
-import { existsSync, readFileSync, mkdirSync, renameSync } from "node:fs";
+import { existsSync, readFileSync, mkdirSync, renameSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import type { Problem } from "../../content/schema";
 import type { Flag } from "./types";
@@ -107,6 +107,27 @@ export function isDegenerateBox(cmd: string[]): boolean {
   const w = Number(cmd[cmd.indexOf("-W") + 1]);
   const h = Number(cmd[cmd.indexOf("-H") + 1]);
   return !(w > 0 && h > 0);
+}
+
+export type CropPlacement =
+  | { action: "publish"; from: string; to: string }
+  | { action: "discard"; from: string };
+
+/**
+ * The one place that decides whether a cut crop becomes the asset the site
+ * serves. `onDisk` is the path both validate.ts and the NEXT run's
+ * `existsSync(onDisk)` cache check trust as "this asset is finished" — so a
+ * crop only ever lands there once `confirm()` has actually returned
+ * COMPLETE. Every other verdict (CLIPPED, NOISY, garbage, or the empty
+ * string a never-awaited confirm() leaves behind) discards the crop at its
+ * temporary path instead. Pulled out as a pure function so the placement
+ * rule itself — not the subprocess/network calls around it — is what gets
+ * tested directly.
+ */
+export function decideCropPlacement(verdict: string, tmpPath: string, onDisk: string): CropPlacement {
+  return verdict.startsWith("COMPLETE")
+    ? { action: "publish", from: tmpPath, to: onDisk }
+    : { action: "discard", from: tmpPath };
 }
 
 function pageSize(file: string, page: number): { w: number; h: number } {
@@ -230,35 +251,68 @@ export async function cropFigures(
       let verdict = "";
       let cut = false;
       let failureNote: string | null = null;
+      // Tracks a produced-but-not-yet-placed tmp crop across the retry loop
+      // so the finally block can clean it up no matter how the loop exits —
+      // including confirm() throwing (a network error), which otherwise
+      // leaves a rejected crop sitting on disk under nothing's ownership.
+      let pendingTmp: string | null = null;
 
-      for (let attempt = 0; attempt < 3; attempt++) {
-        const base = onDisk.replace(/\.png$/, "");
-        const cmd = cropCommand(target.problem.file, box, size.w, size.h, base);
-        if (isDegenerateBox(cmd)) {
-          failureNote =
-            `crop region has no area once clamped to the page (x=${box.xPct} y=${box.yPct} ` +
-            `w=${box.wPct} h=${box.hPct})`;
-          break;
+      try {
+        for (let attempt = 0; attempt < 3; attempt++) {
+          // A crop is cut to a tmp path, never straight to onDisk. onDisk is
+          // only ever written by the rename below, and only after confirm()
+          // says COMPLETE — see decideCropPlacement. That is what keeps the
+          // top-of-loop `existsSync(onDisk)` cache check honest on a re-run:
+          // a rejected crop can never occupy the path that check trusts.
+          const tmpBase = `${onDisk.replace(/\.png$/, "")}.tmp`;
+          const cmd = cropCommand(target.problem.file, box, size.w, size.h, tmpBase);
+          if (isDegenerateBox(cmd)) {
+            failureNote =
+              `crop region has no area once clamped to the page (x=${box.xPct} y=${box.yPct} ` +
+              `w=${box.wPct} h=${box.hPct})`;
+            break;
+          }
+
+          try {
+            execFileSync("pdftoppm", cmd);
+          } catch (err) {
+            failureNote = `pdftoppm failed: ${err instanceof Error ? err.message : String(err)}`;
+            break;
+          }
+
+          const produced = [`${tmpBase}-${box.page}.png`, `${tmpBase}-0${box.page}.png`, `${tmpBase}-00${box.page}.png`, `${tmpBase}.png`]
+            .find((p) => existsSync(p));
+          if (!produced) {
+            failureNote = "pdftoppm did not produce the expected output file";
+            break;
+          }
+          pendingTmp = produced;
+
+          verdict = await confirm(client, produced, asset.alt);
+          const placement = decideCropPlacement(verdict, produced, onDisk);
+          if (placement.action === "publish") {
+            renameSync(placement.from, placement.to);
+            pendingTmp = null;
+            cut = true;
+            break;
+          }
+
+          // Rejected: clear the tmp crop before the next attempt (or before
+          // this asset gives up) so nothing rejected ever accumulates or
+          // gets mistaken for a finished asset.
+          rmSync(placement.from, { force: true });
+          pendingTmp = null;
+          box = widen(box);
         }
-
-        try {
-          execFileSync("pdftoppm", cmd);
-        } catch (err) {
-          failureNote = `pdftoppm failed: ${err instanceof Error ? err.message : String(err)}`;
-          break;
+      } finally {
+        // Belt-and-braces for any exit the loop body did not already clean
+        // up after itself — most notably confirm() throwing between
+        // producing the tmp crop and this asset reaching a placement
+        // decision. Whatever happens, a crop that was never confirmed
+        // COMPLETE must not survive at any path once this asset is done.
+        if (pendingTmp && existsSync(pendingTmp)) {
+          try { rmSync(pendingTmp, { force: true }); } catch { /* best-effort cleanup */ }
         }
-
-        const produced = [`${base}-${box.page}.png`, `${base}-0${box.page}.png`, `${base}-00${box.page}.png`, `${base}.png`]
-          .find((p) => existsSync(p));
-        if (!produced) {
-          failureNote = "pdftoppm did not produce the expected output file";
-          break;
-        }
-        if (produced !== onDisk) renameSync(produced, onDisk);
-
-        verdict = await confirm(client, onDisk, asset.alt);
-        if (verdict.startsWith("COMPLETE")) { cut = true; break; }
-        box = widen(box);
       }
 
       if (!cut) {
