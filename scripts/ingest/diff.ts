@@ -5,7 +5,10 @@
  * creative prose: two passes will word them differently every time, and
  * diffing them would bury the real signal in noise. They are constrained
  * elsewhere (three tiers, no answer revealed, no uncovered glyph) rather than
- * cross-checked.
+ * cross-checked. acceptedVariants is the same kind of creative judgment — a
+ * list of alternate spellings the model invents, not a fact read off the
+ * booklet — so it is excluded for the same reason, even though it lives on
+ * the answer key that otherwise IS compared.
  */
 
 import type { Problem } from "../../content/schema";
@@ -52,7 +55,6 @@ export function factualLayer(p: Problem): Map<string, string> {
     m.set(`q:${qid}:mode`, q.gradingMode);
     m.set(`q:${qid}:key`, q.answerKey);
     m.set(`q:${qid}:points`, String(q.points));
-    m.set(`q:${qid}:variants`, [...q.acceptedVariants].sort().join("|"));
     if (q.choices) m.set(`q:${qid}:choices`, q.choices.join("|"));
   }
   m.set(`cells:count`, String(tableCells(p.bodyHtml).length));
