@@ -9,6 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "tsx --test tests/ingest/*.test.ts",
     "validate": "tsx scripts/ingest/validate.ts",
     "sync-assets": "tsx scripts/ingest/sync-assets.ts",
     "draft": "tsx scripts/ingest/draft.ts"
