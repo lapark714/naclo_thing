@@ -41,11 +41,19 @@ export function factualLayer(p: Problem): Map<string, string> {
   const m = new Map<string, string>();
 
   for (const q of p.questions) {
-    m.set(`q:${q.id}:mode`, q.gradingMode);
-    m.set(`q:${q.id}:key`, q.answerKey);
-    m.set(`q:${q.id}:points`, String(q.points));
-    m.set(`q:${q.id}:variants`, [...q.acceptedVariants].sort().join("|"));
-    if (q.choices) m.set(`q:${q.id}:choices`, q.choices.join("|"));
+    // Lowercased for the key only. The two passes transcribe the same
+    // booklet independently, and a proper name inside a question id (a
+    // person, a place) routinely comes back capitalised by one pass and not
+    // the other — that is not a different question. Keying on the exact id
+    // would read every field of that question as absent from both sides.
+    // applyResolutions matches back on this id case-insensitively too, so a
+    // resolution still finds the record's actual (non-lowercased) question.
+    const qid = q.id.toLowerCase();
+    m.set(`q:${qid}:mode`, q.gradingMode);
+    m.set(`q:${qid}:key`, q.answerKey);
+    m.set(`q:${qid}:points`, String(q.points));
+    m.set(`q:${qid}:variants`, [...q.acceptedVariants].sort().join("|"));
+    if (q.choices) m.set(`q:${qid}:choices`, q.choices.join("|"));
   }
   m.set(`cells:count`, String(tableCells(p.bodyHtml).length));
   tableCells(p.bodyHtml).forEach((cell, i) => m.set(`cell:${i}`, cell));

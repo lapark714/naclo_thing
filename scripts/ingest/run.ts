@@ -25,6 +25,17 @@ import { ensureCoverage } from "./fonts";
 import { decide, writeRecord, renderReport, type Outcome } from "./publish";
 import type { Flag } from "./types";
 
+/**
+ * Arbitration is one API call per flag. Past this many flags on a single
+ * problem, the two passes have not disagreed on a value — they have
+ * disagreed on the shape of the problem itself (2016-B: one pass read part
+ * B1 as 3 blanks, the other as 4, turning 6 questions into 18 and every
+ * field comparison into a flag). No per-field arbitration call can rescue
+ * that; a human has to re-read the problem either way. Skipping straight to
+ * park saves the cost of finding that out the expensive way.
+ */
+const ARBITRATION_FLAG_CAP = 25;
+
 function loadEnv() {
   if (!existsSync(".env")) return;
   for (const line of readFileSync(".env", "utf8").split("\n")) {
@@ -103,9 +114,20 @@ async function processOne(client: Anthropic, target: Target): Promise<Outcome | 
           "nor arbitration can run. Parked for human review by policy, not by " +
           "a specific disagreement",
       });
-    }
-
-    if (flags.length > 0 && target.hasTextLayer) {
+    } else if (flags.length > ARBITRATION_FLAG_CAP) {
+      // See ARBITRATION_FLAG_CAP: this many flags means the two passes read
+      // different problems, not different values, so arbitrating field by
+      // field would just be an expensive way to arrive at "park it".
+      flags.push({
+        kind: "diff",
+        path: "(arbitration)",
+        note:
+          `skipped arbitration: ${flags.length} flags exceeds the cap of ` +
+          `${ARBITRATION_FLAG_CAP}, so the two passes disagree too broadly to ` +
+          "arbitrate field by field. Parked for human review instead of " +
+          `spending ~${flags.length} API calls that would not resolve it`,
+      });
+    } else if (flags.length > 0) {
       const images = renderForArbitration(target, workDir);
       const pages = readText(target.problem.file).split("\f");
       const scope = target.problem.pages.map((p) => pages[p - 1] ?? "").join("\n");

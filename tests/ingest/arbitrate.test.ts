@@ -95,6 +95,15 @@ test("a choices resolution writes choices and does not touch acceptedVariants", 
   assert.deepEqual(unresolved, []);
 });
 
+test("a path whose id case differs from the record's stored id still finds the question and writes the value", () => {
+  const rec = record();
+  rec.questions[0].id = "D1.Althea-dessert";
+  const { record: out, unresolved } = applyResolutions(rec, [{ path: "q:d1.althea-dessert:key", value: "right" }]);
+  assert.equal(out.questions[0].id, "D1.Althea-dessert");
+  assert.equal(out.questions[0].answerKey, "right");
+  assert.deepEqual(unresolved, []);
+});
+
 test("a q: path naming a non-existent question returns unresolved and writes nothing", () => {
   const { record: out, unresolved } = applyResolutions(record(), [{ path: "q:nonexistent:key", value: "something" }]);
   assert.equal(out.questions[0].answerKey, "wrong");

@@ -44,7 +44,7 @@ test("a differing answer key is flagged with both candidates", () => {
     record({ questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "kecantikaan", acceptedVariants: [], points: 1 }] } as Partial<Problem>),
   );
   assert.equal(flags.length, 1);
-  assert.equal(flags[0].path, "q:A1.a:key");
+  assert.equal(flags[0].path, "q:a1.a:key");
   assert.equal(flags[0].a, "kecantikan");
   assert.equal(flags[0].b, "kecantikaan");
 });
@@ -150,6 +150,25 @@ test("matching asset counts with different src names do NOT flag on assets", () 
     } as Partial<Problem>),
   );
   assert.ok(!flags.some((f) => f.path === "assets:count" || f.path === "figures:count"));
+});
+
+test("question ids differing only in case, with identical answer keys, produce no flags", () => {
+  const flags = diffRecords(
+    record({ questions: [{ id: "D1.Althea-dessert", promptHtml: "p", gradingMode: "exact", answerKey: "cake", acceptedVariants: [], points: 1 }] } as Partial<Problem>),
+    record({ questions: [{ id: "D1.althea-dessert", promptHtml: "p", gradingMode: "exact", answerKey: "cake", acceptedVariants: [], points: 1 }] } as Partial<Problem>),
+  );
+  assert.deepEqual(flags, []);
+});
+
+test("question ids differing only in case but with different answer keys still flags the answer-key difference", () => {
+  const flags = diffRecords(
+    record({ questions: [{ id: "D1.Althea-dessert", promptHtml: "p", gradingMode: "exact", answerKey: "cake", acceptedVariants: [], points: 1 }] } as Partial<Problem>),
+    record({ questions: [{ id: "D1.althea-dessert", promptHtml: "p", gradingMode: "exact", answerKey: "pie", acceptedVariants: [], points: 1 }] } as Partial<Problem>),
+  );
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].path, "q:d1.althea-dessert:key");
+  assert.equal(flags[0].a, "cake");
+  assert.equal(flags[0].b, "pie");
 });
 
 test("agreeing assets and figures counts produce no flags on those keys", () => {

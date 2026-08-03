@@ -86,7 +86,13 @@ export function applyResolutions(
     }
     const q = r.path.match(/^q:(.+):(key|mode|points|variants|choices)$/);
     if (q) {
-      const target = record.questions.find((x) => x.id === q[1]);
+      // diff.ts lowercases the question id when it builds this path (a name
+      // like Althea transcribed as althea by the other pass is not a
+      // different question), so the id captured here may not match the
+      // record's stored casing. Compare case-insensitively, or every
+      // resolution for a mixed-case id silently becomes "names no question
+      // in the record" instead of being applied.
+      const target = record.questions.find((x) => x.id.toLowerCase() === q[1].toLowerCase());
       if (!target) {
         unresolved.push({ kind: "diff", path: r.path, note: "names no question in the record" });
         continue;
