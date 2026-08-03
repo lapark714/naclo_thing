@@ -11,7 +11,7 @@ function record(over: Partial<Problem> = {}): Problem {
   return {
     id: "2016-open-A", tier: "full", year: 2016, round: "open", letter: "A",
     title: "T", authors: ["X"], sourcePdfUrl: "https://naclo.org/practice.php",
-    conceptTags: ["morphology"], formTag: "rosetta-stone", difficulty: "intro",
+    conceptTags: ["morphology"], formTag: "rosetta-stone translation", difficulty: "intro",
     languages: [], officialPoints: 5, officialTimeMinutes: 10,
     bodyHtml: "<p>body</p>", assets: [],
     questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "k", acceptedVariants: [], points: 1 }],
@@ -29,6 +29,56 @@ test("a clean record publishes", () => {
   const o = decide(record(), []);
   assert.equal(o.status, "published");
   assert.equal(o.questionCount, 1);
+});
+
+// --- build gate parity ----------------------------------------------------
+//
+// decide() is the publish gate; validate.ts is the build gate. A record
+// decide() calls "published" must never be a record `npm run validate`
+// rejects, or the pipeline reports success while the build refuses to ship
+// (2021-open-A: markup inside two hint texts published, then failed the
+// build for all 42 published records at once).
+
+test("a record with markup in a hint's text does not publish, and the flag names the field", () => {
+  const withMarkup = record({
+    hints: [
+      { tier: 1, text: "one", xpCost: 1 },
+      { tier: 2, text: 'Look at the <span class="data">root</span>.', xpCost: 2 },
+      { tier: 3, text: "three", xpCost: 3 },
+    ],
+  } as Partial<Problem>);
+  const o = decide(withMarkup, []);
+  assert.equal(o.status, "parked");
+  assert.ok(
+    o.flags.some((f) => f.path === "hints[1].text"),
+    "the flag should name the offending field",
+  );
+});
+
+test("a record with an off-taxonomy concept tag does not publish", () => {
+  const offTaxonomy = record({ conceptTags: ["not-a-real-concept"] } as Partial<Problem>);
+  const o = decide(offTaxonomy, []);
+  assert.equal(o.status, "parked");
+  assert.ok(o.flags.some((f) => f.note?.includes("not-a-real-concept")));
+});
+
+test("a record with an answer slot naming no question does not publish", () => {
+  const badSlot = record({
+    bodyHtml: '<p>Fill in <span class="blank" data-q="Z9.z"></span>.</p>',
+  } as Partial<Problem>);
+  const o = decide(badSlot, []);
+  assert.equal(o.status, "parked");
+  assert.ok(o.flags.some((f) => f.note?.includes('data-q="Z9.z"')));
+});
+
+test("a record that passes every build-gate check still publishes (guard against over-blocking)", () => {
+  // Genuinely clean: real taxonomy values (content/taxonomy.ts), no markup
+  // in a text field, no answer slots, an ASCII-typeable exact answer, a
+  // non-empty answer key, and no referenced assets to go missing.
+  const clean = record();
+  const o = decide(clean, []);
+  assert.equal(o.status, "published");
+  assert.deepEqual(o.flags, []);
 });
 
 test("any flag parks the record", () => {

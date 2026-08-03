@@ -12,6 +12,17 @@ import { existsSync, mkdirSync, unlinkSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { Problem } from "../../content/schema";
 import type { Flag } from "./types";
+import {
+  allText,
+  badAnswerSlots,
+  badQuestions,
+  coveredRanges,
+  markupInTextFields,
+  missingAssets,
+  offTaxonomyTags,
+  uncoveredChars,
+  untypeableAnswers,
+} from "./validate";
 
 const PUBLISHED_DIR = "content/problems";
 const PARKED_DIR = "content/parked";
@@ -116,6 +127,72 @@ export function hintsLeakAnswers(record: Problem): Flag[] {
   return flags;
 }
 
+/**
+ * Everything validate.ts (the build gate) checks beyond the Zod schema,
+ * reduced to Flags so decide() can park on the same rules that would
+ * otherwise fail `npm run build` after the fact. A record this returns no
+ * flags for is a record `npm run validate` will also accept.
+ *
+ * Takes the payload as it will actually be written — the caller passes the
+ * schema-parsed, "published"-stamped record, not the raw draft — so an
+ * internal-only field like `_reviewNotes` (present on the raw record, always
+ * stripped by the Zod parse before writeRecord ever writes a published file)
+ * can never trip a check meant for the shipped file. See publishedPayload's
+ * doc comment below for why the parse strips it.
+ */
+function buildGateFlags(problem: Problem): Flag[] {
+  const flags: Flag[] = [];
+
+  const uncovered = uncoveredChars(allText(problem), coveredRanges());
+  if (uncovered.size > 0) {
+    const list = [...uncovered.entries()]
+      .slice(0, 8)
+      .map(([ch, cp]) => `"${ch}" U+${cp.toString(16).toUpperCase().padStart(4, "0")}`)
+      .join(", ");
+    flags.push({
+      kind: "diff",
+      path: "(glyph coverage)",
+      note:
+        `characters with no font coverage — ${list}${uncovered.size > 8 ? ` (+${uncovered.size - 8} more)` : ""}. ` +
+        `Add a subset in app/globals.css before this can ship.`,
+    });
+  }
+
+  for (const issue of offTaxonomyTags(problem)) {
+    flags.push({ kind: "diff", path: "(taxonomy)", note: issue });
+  }
+
+  for (const issue of badAnswerSlots(problem)) {
+    flags.push({ kind: "diff", path: "(answer slots)", note: issue });
+  }
+
+  for (const issue of untypeableAnswers(problem)) {
+    flags.push({
+      kind: "diff",
+      path: "(typeable)",
+      note: `${issue} cannot be typed on a US keyboard, and no acceptedVariant can either`,
+    });
+  }
+
+  for (const field of markupInTextFields(problem)) {
+    flags.push({
+      kind: "diff",
+      path: field,
+      note: `${field} contains markup, but the site renders that field as plain text`,
+    });
+  }
+
+  for (const issue of badQuestions(problem)) {
+    flags.push({ kind: "diff", path: "(questions)", note: issue });
+  }
+
+  for (const issue of missingAssets(problem)) {
+    flags.push({ kind: "diff", path: "(assets)", note: issue });
+  }
+
+  return flags;
+}
+
 export function decide(record: Problem, flags: Flag[]): Outcome {
   const all = [...flags, ...hintsLeakAnswers(record)];
 
@@ -130,6 +207,11 @@ export function decide(record: Problem, flags: Flag[]): Outcome {
         note: `schema: ${issue.message}`,
       });
     }
+  } else {
+    // Run the build gate's rules against the payload that would actually be
+    // written, so a record decide() calls "published" can never fail
+    // `npm run build`.
+    all.push(...buildGateFlags(parsed.data));
   }
 
   return {

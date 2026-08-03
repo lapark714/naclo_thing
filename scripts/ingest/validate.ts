@@ -108,7 +108,7 @@ const MARKUP = /<[a-zA-Z/][^>]*>|&(?:[a-zA-Z]+|#\d+);/;
 /** Anything outside plain ASCII: what a US keyboard cannot produce. */
 const NON_ASCII = /[^\u0000-\u007F]/;
 
-function markupInTextFields(problem: Problem): string[] {
+export function markupInTextFields(problem: Problem): string[] {
   const bad: string[] = [];
   problem.hints.forEach((h, i) => {
     if (MARKUP.test(h.text)) bad.push(`hints[${i}].text`);
@@ -153,7 +153,7 @@ function strippable(text: string): string {
    nothing.
    --------------------------------------------------------------------------- */
 
-function offTaxonomyTags(problem: Problem): string[] {
+export function offTaxonomyTags(problem: Problem): string[] {
   const bad: string[] = [];
   for (const tag of problem.conceptTags) {
     if (!(CONCEPT_TAGS as readonly string[]).includes(tag)) {
@@ -177,7 +177,7 @@ function offTaxonomyTags(problem: Problem): string[] {
    state disagrees. Both are silent in the browser, so they are caught here.
    --------------------------------------------------------------------------- */
 
-function badAnswerSlots(problem: Problem): string[] {
+export function badAnswerSlots(problem: Problem): string[] {
   const bad: string[] = [];
   const known = new Set(problem.questions.map((q) => q.id));
   const seen = new Set<string>();
@@ -191,7 +191,7 @@ function badAnswerSlots(problem: Problem): string[] {
   return bad;
 }
 
-function untypeableAnswers(problem: Problem): string[] {
+export function untypeableAnswers(problem: Problem): string[] {
   const bad: string[] = [];
   for (const q of problem.questions) {
     if (q.gradingMode !== "exact" || q.choices) continue;
@@ -200,6 +200,56 @@ function untypeableAnswers(problem: Problem): string[] {
     if (!forms.some((f) => !NON_ASCII.test(strippable(f)))) {
       bad.push(`question ${q.id} ("${q.answerKey}")`);
     }
+  }
+  return bad;
+}
+
+/* ---------------------------------------------------------------------------
+   Per-question answer key checks
+
+   Shared with scripts/ingest/publish.ts's decide(), which is the publish
+   gate: these three rules must not exist as two copies that could drift.
+   --------------------------------------------------------------------------- */
+
+export function badQuestions(problem: Problem): string[] {
+  const bad: string[] = [];
+  for (const q of problem.questions) {
+    if (!q.answerKey.trim()) {
+      bad.push(`question ${q.id} has an empty answer key`);
+    }
+    if (q.choices && !q.choices.includes(q.answerKey)) {
+      bad.push(`question ${q.id} has an answer key that is not one of its choices`);
+    }
+    if (q.gradingMode === "self" && !q.rubric) {
+      bad.push(`question ${q.id} is self-graded but has no rubric`);
+    }
+  }
+  return bad;
+}
+
+/* ---------------------------------------------------------------------------
+   Assets
+
+   A missing figure in a problem where the figure is the puzzle makes the
+   problem unsolvable, not merely uglier. Shared with publish.ts's decide()
+   for the same reason as badQuestions above.
+   --------------------------------------------------------------------------- */
+
+export function missingAssets(problem: Problem): string[] {
+  const bad: string[] = [];
+  const referenced = new Set<string>();
+  for (const asset of problem.assets) referenced.add(asset.src);
+  for (const match of problem.bodyHtml.matchAll(/src="([^"]+)"/g)) referenced.add(match[1]);
+  for (const q of problem.questions) {
+    for (const match of q.promptHtml.matchAll(/src="([^"]+)"/g)) referenced.add(match[1]);
+  }
+  for (const src of referenced) {
+    if (!src.startsWith(ASSETS_PREFIX)) {
+      bad.push(`asset "${src}" is not under ${ASSETS_PREFIX}`);
+      continue;
+    }
+    const onDisk = join(ASSETS_DIR, src.slice(ASSETS_PREFIX.length));
+    if (!existsSync(onDisk)) bad.push(`asset file missing — ${onDisk}`);
   }
   return bad;
 }
@@ -270,21 +320,8 @@ function checkDir(
       );
     }
 
-    // Referenced assets must exist. A missing figure in a problem where the
-    // figure is the puzzle makes the problem unsolvable, not merely uglier.
-    const referenced = new Set<string>();
-    for (const asset of problem.assets) referenced.add(asset.src);
-    for (const match of problem.bodyHtml.matchAll(/src="([^"]+)"/g)) referenced.add(match[1]);
-    for (const q of problem.questions) {
-      for (const match of q.promptHtml.matchAll(/src="([^"]+)"/g)) referenced.add(match[1]);
-    }
-    for (const src of referenced) {
-      if (!src.startsWith(ASSETS_PREFIX)) {
-        issues.push(`${file}: asset "${src}" is not under ${ASSETS_PREFIX}`);
-        continue;
-      }
-      const onDisk = join(ASSETS_DIR, src.slice(ASSETS_PREFIX.length));
-      if (!existsSync(onDisk)) issues.push(`${file}: asset file missing — ${onDisk}`);
+    for (const issue of missingAssets(problem)) {
+      issues.push(`${file}: ${issue}`);
     }
 
     for (const q of problem.questions) {
@@ -292,15 +329,10 @@ function checkDir(
         stats.questions += 1;
         stats.modes[q.gradingMode] += 1;
       }
-      if (!q.answerKey.trim()) {
-        issues.push(`${file}: question ${q.id} has an empty answer key`);
-      }
-      if (q.choices && !q.choices.includes(q.answerKey)) {
-        issues.push(`${file}: question ${q.id} has an answer key that is not one of its choices`);
-      }
-      if (q.gradingMode === "self" && !q.rubric) {
-        issues.push(`${file}: question ${q.id} is self-graded but has no rubric`);
-      }
+    }
+
+    for (const issue of badQuestions(problem)) {
+      issues.push(`${file}: ${issue}`);
     }
   }
   return issues;
