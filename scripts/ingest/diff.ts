@@ -8,7 +8,15 @@
  * cross-checked. acceptedVariants is the same kind of creative judgment — a
  * list of alternate spellings the model invents, not a fact read off the
  * booklet — so it is excluded for the same reason, even though it lives on
- * the answer key that otherwise IS compared.
+ * the answer key that otherwise IS compared. Per-question points is derived
+ * the same way, not read off the booklet: the drafting prompt distributes
+ * officialPoints across questions using the official per-part breakdown when
+ * the solution shows one, else evenly, so two passes that land on a
+ * different question count are REQUIRED to divide points differently even
+ * when every answer key agrees. The number that actually matters,
+ * officialPoints, is pinned deterministically from the booklet header by
+ * manifest.ts before either pass runs — it is never left to the model — so
+ * there is nothing to cross-check here, only noise to skip.
  */
 
 import type { Problem } from "../../content/schema";
@@ -54,7 +62,6 @@ export function factualLayer(p: Problem): Map<string, string> {
     const qid = q.id.toLowerCase();
     m.set(`q:${qid}:mode`, q.gradingMode);
     m.set(`q:${qid}:key`, q.answerKey);
-    m.set(`q:${qid}:points`, String(q.points));
     if (q.choices) m.set(`q:${qid}:choices`, q.choices.join("|"));
   }
   m.set(`cells:count`, String(tableCells(p.bodyHtml).length));

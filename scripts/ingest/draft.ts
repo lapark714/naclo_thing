@@ -129,6 +129,14 @@ PLAIN TEXT vs HTML — only the fields whose names end in Html are rendered as H
 HINTS — exactly 3, each shaped {"tier": <1|2|3>, "text": "...", "xpCost": <n>} with xpCost 1/2/3 (or 2/3/4 for 15-point problems):
 1. Orientation: where to look. 2. Method: the insight, stated but not applied. 3. Partial work: ONE step worked through on data that is NOT one of the graded questions. Never reveal an answer.
 
+FORMAT CONSISTENCY — you are one of two independent passes over this same booklet. The two of you must not just agree on the content, you must write it down the same way, or a real match reads as a disagreement:
+- Answer format must match what the booklet prints. If the booklet's options are lettered or numbered and the student is meant to write the letter, the key is that letter alone. If the booklet spells the option out and the student is meant to write the word, the key is the word. Never substitute one for the other: a key in the wrong form marks every correct answer wrong, even when the student clearly understood the problem.
+- Copy answer keys verbatim from the official solution. Never paraphrase, reword, abbreviate or re-order them — write down exactly what the solution page prints, not your own restatement of it.
+- Transcribe "choices" verbatim from the booklet, in the order the booklet prints them, using the same wording the answer key uses. A key must appear character-for-character among its own choices.
+- One question per blank the booklet actually prints. Do not split a single printed blank into several questions, and do not merge several printed blanks into one. If a part asks for four words on one line under one label, that is ONE question whose answer lists all four, not four questions.
+- Question ids use the booklet's own label, copied exactly, including its capitalisation. Do not lowercase, renumber or otherwise normalise it.
+- A hint must never contain any graded answer, in any tier. Before you write a hint, check it against every graded answerKey in the problem and confirm none of them appears in it. Tier 3's worked example must use data that is NOT one of the graded blanks.
+
 EXPLANATION — a genuine walkthrough for a 12-17 year old: the path a solver takes, not just the answers. Use <h3> section headers, work concrete examples, and gloss any linguistics term in plain English. This is the main thing the site adds over the PDF.`;
 
 export type Pass = "a" | "b";

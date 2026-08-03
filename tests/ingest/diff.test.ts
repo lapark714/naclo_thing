@@ -68,6 +68,25 @@ test("a record differing in acceptedVariants AND answerKey still flags the answe
   assert.equal(flags[0].b, "kecantikaan");
 });
 
+test("records differing only in per-question points produce no flags", () => {
+  const flags = diffRecords(
+    record({ questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "kecantikan", acceptedVariants: [], points: 0.65 }] } as Partial<Problem>),
+    record({ questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "kecantikan", acceptedVariants: [], points: 0.74 }] } as Partial<Problem>),
+  );
+  assert.deepEqual(flags, []);
+});
+
+test("a record differing in points AND answerKey still flags only the answer key", () => {
+  const flags = diffRecords(
+    record({ questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "kecantikan", acceptedVariants: [], points: 0.65 }] } as Partial<Problem>),
+    record({ questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "kecantikaan", acceptedVariants: [], points: 0.74 }] } as Partial<Problem>),
+  );
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].path, "q:a1.a:key");
+  assert.equal(flags[0].a, "kecantikan");
+  assert.equal(flags[0].b, "kecantikaan");
+});
+
 test("differing prose does NOT flag", () => {
   const flags = diffRecords(
     record({ explanationHtml: "<p>one way of saying it</p>", hints: [{ tier: 1, text: "look here", xpCost: 1 }] } as Partial<Problem>),
