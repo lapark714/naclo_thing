@@ -1,0 +1,87 @@
+{
+  "id": "2019-open-E",
+  "tier": "full",
+  "year": 2019,
+  "round": "open",
+  "letter": "E",
+  "title": "(title unknown)",
+  "authors": [
+    "Jonathan Moodie",
+    "Rosey Bilington"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "syntax"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "standard",
+  "languages": [
+    "Lopit"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>Lopit is a language spoken by around 50,000 people in the Eastern Equatoria province of South Sudan. The Lopit people live in around 60 villages along the Lopit mountain range. They grow a range of crops and farm cattle, sheep and goats.</p>\n<p>Below are some sentences in the Dorik dialect of Lopit. There is no official writing system for the language, but the spelling used here is what many Lopit people use. In Lopit, when a word-initial ‘e’ comes before an ‘o’ or a ‘u’, the ‘e’ is instead pronounced as an ‘o’.</p>\n<dl class=\"gloss-list\">\n<dt>eitiyena Iliwa aina</dt><dd>Iliwa teaches today.</dd>\n<dt>eremo Lohidong waraga ho iguarit</dt><dd>Lohidong spears the paper with the pen.</dd>\n<dt>oromo haboroni de mana</dt><dd>The big man digs in the field.</dd>\n<dt>oboro habarani</dt><dd>The cattle owner is big.</dd>\n<dt>eibongo haidoloni ho haromoni de lecari</dt><dd>The singer meets with the field hand at the dancehall.</dd>\n<dt>eifuo Ihidong de leitiyenari</dt><dd>Ihidong cooks at the school.</dd>\n<dt>efer hingohu de halu na haji</dt><dd>The dog lies at the back of the house.</dd>\n<dt>eiyoma haromok de iferit</dt><dd>The field hands rest on the mat.</dd>\n<dt>eramita wurre ho hingohu</dt><dd>The children play with the dog.</dd>\n</dl>\n<p>Translate the following sentences into Lopit and write them on the answer sheets.</p>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "E1.1",
+      "promptHtml": "<p>The big men dance with the shovel in the kitchen.</p>",
+      "part": "E1",
+      "partPrompt": "Translate the following sentence into Lopit: The big men dance with the shovel in the kitchen.",
+      "gradingMode": "exact",
+      "answerKey": "eca haborok ho iromoit de leifuori",
+      "acceptedVariants": [],
+      "points": 4
+    },
+    {
+      "id": "E2.1",
+      "promptHtml": "<p>The teacher sings.</p>",
+      "part": "E2",
+      "partPrompt": "Translate the following sentence into Lopit: The teacher sings.",
+      "gradingMode": "exact",
+      "answerKey": "eidolo haitayenani",
+      "acceptedVariants": [
+        "eidolo haitiyenani"
+      ],
+      "points": 3
+    },
+    {
+      "id": "E3.1",
+      "promptHtml": "<p>The cattle owners draw in the playground.</p>",
+      "part": "E3",
+      "partPrompt": "Translate the following sentence into Lopit: The cattle owners draw in the playground.",
+      "gradingMode": "exact",
+      "answerKey": "oguar habarak de leramitari",
+      "acceptedVariants": [],
+      "points": 3
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start by lining up words that share a chunk of sound. Notice that the sentence about the singer contains haidoloni, and that the word for “dancehall”, lecari, looks related to something else in the data. Lopit builds many nouns out of verb roots by adding a prefix and sometimes a suffix.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "There are four patterns to find: verbs begin with e- (spelled o- when the next vowel is o or u); “person who does X” nouns begin with ha-; place nouns begin with le- and end in -ri; instrument nouns begin with i- and end in -it. Also work out how singular and plural person-nouns differ, and which little word means “with” and which means “at/in/on”. Word order is verb first, then subject, then the rest.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Worked example not in the questions: “The field hand rests on the mat.” The verb “rest” appears as eiyoma, the singular of haromok is haromoni, and “on the mat” is de iferit, so the sentence is eiyoma haromoni de iferit. Build your answers the same way: verb, then subject noun with the right singular or plural ending, then the phrases with ho or de.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: find the word order</h3>\n<p>Compare <span class=\"data\">oromo haboroni de mana</span> “The big man digs in the field” with <span class=\"data\">eramita wurre ho hingohu</span> “The children play with the dog.” In both cases the first Lopit word is the verb, the second is the subject, and anything else comes afterwards. So Lopit puts the verb first: verb, subject, then object or prepositional phrase.</p>\n<p>Two small words appear in front of nouns: <span class=\"data\">ho</span> means “with” (<span class=\"data\">ho iguarit</span> “with the pen”, <span class=\"data\">ho hingohu</span> “with the dog”) and <span class=\"data\">de</span> means “at / in / on” (<span class=\"data\">de mana</span> “in the field”, <span class=\"data\">de lecari</span> “at the dancehall”, <span class=\"data\">de iferit</span> “on the mat”).</p>\n<h3>Step 2: verbs all start with e-</h3>\n<p>Look at the first word of each sentence: <span class=\"data\">eitiyena</span>, <span class=\"data\">eremo</span>, <span class=\"data\">oromo</span>, <span class=\"data\">oboro</span>, <span class=\"data\">eibongo</span>, <span class=\"data\">eifuo</span>, <span class=\"data\">efer</span>, <span class=\"data\">eiyoma</span>, <span class=\"data\">eramita</span>. Every verb begins with <span class=\"data\">e-</span>, except that the introduction tells us a word-initial “e” is pronounced (and here written) “o” when the next vowel is “o” or “u”. That explains <span class=\"data\">oromo</span> (root <span class=\"data\">romo</span> “dig”) and <span class=\"data\">oboro</span> (root <span class=\"data\">boro</span> “be big”). So a verb is e- plus a root, with e becoming o before o or u.</p>\n<h3>Step 3: nouns are built from the same roots</h3>\n<p>Now hunt for the same roots inside the nouns. This is <em>derivation</em> — making new words out of a root by adding pieces:</p>\n<ul>\n<li><strong>People (“one who Xs”): ha- ... -ni.</strong> <span class=\"data\">haboroni</span> “big man” from <span class=\"data\">boro</span> “be big”; <span class=\"data\">haidoloni</span> “singer” from a root <span class=\"data\">idolo</span> “sing”; <span class=\"data\">haromoni</span> “field hand” from <span class=\"data\">romo</span> “dig”; <span class=\"data\">habarani</span> “cattle owner”.</li>\n<li><strong>Plural people: ha- ... -k.</strong> <span class=\"data\">haromok</span> “field hands” beside <span class=\"data\">haromoni</span> “field hand”. So the singular ending <span class=\"data\">-ni</span> is replaced by <span class=\"data\">-k</span> (and the root vowel before it is trimmed): <span class=\"data\">haboroni</span> gives <span class=\"data\">haborok</span>, <span class=\"data\">habarani</span> gives <span class=\"data\">habarak</span>.</li>\n<li><strong>Places: le- ... -ri.</strong> <span class=\"data\">lecari</span> “dancehall” from a root <span class=\"data\">ca</span> “dance”; <span class=\"data\">leitiyenari</span> “school” from <span class=\"data\">itiyena</span> “teach”; and by the same recipe <span class=\"data\">leifuori</span> “kitchen” from <span class=\"data\">ifuo</span> “cook”.</li>\n<li><strong>Instruments: i- ... -it.</strong> <span class=\"data\">iferit</span> “mat” from <span class=\"data\">fer</span> “lie” (the thing you lie on); <span class=\"data\">iguarit</span> “pen” from a root <span class=\"data\">guar</span> “write, draw”; so “shovel”, the thing you dig with, is <span class=\"data\">i-romo-it</span> = <span class=\"data\">iromoit</span>.</li>\n</ul>\n<h3>Step 4: build the three sentences</h3>\n<p><strong>E1. “The big men dance with the shovel in the kitchen.”</strong> The verb “dance” uses the root <span class=\"data\">ca</span> found in <span class=\"data\">lecari</span>, so it is <span class=\"data\">eca</span> (the next vowel is a, so no change to o). “Big men” is the plural of <span class=\"data\">haboroni</span>: <span class=\"data\">haborok</span>. “With the shovel” is <span class=\"data\">ho iromoit</span>, and “in the kitchen” is <span class=\"data\">de leifuori</span>. Result: <span class=\"data\">eca haborok ho iromoit de leifuori</span>.</p>\n<p><strong>E2. “The teacher sings.”</strong> “Sing” comes from the root inside <span class=\"data\">haidoloni</span> “singer”, giving the verb <span class=\"data\">eidolo</span> (the vowel after e is i, so the e stays e). “Teacher” is a person-noun from “teach”: ha- plus the root plus -ni, giving <span class=\"data\">haitayenani</span>. Result: <span class=\"data\">eidolo haitayenani</span>.</p>\n<p><strong>E3. “The cattle owners draw in the playground.”</strong> “Draw” uses the root <span class=\"data\">guar</span> from <span class=\"data\">iguarit</span> “pen”; because the next vowel is u, the prefix e- is written o-, giving <span class=\"data\">oguar</span>. “Cattle owners” is the plural of <span class=\"data\">habarani</span>, namely <span class=\"data\">habarak</span>. “Playground” is a place-noun from <span class=\"data\">ramita</span> “play”: <span class=\"data\">le-ramita-ri</span> = <span class=\"data\">leramitari</span>, and “in” is <span class=\"data\">de</span>. Result: <span class=\"data\">oguar habarak de leramitari</span>.</p>\n<h3>Why this is neat</h3>\n<p>Lopit lets you spin a whole family of words off one root: from <span class=\"data\">romo</span> “dig” you get the verb <span class=\"data\">oromo</span>, the worker <span class=\"data\">haromoni</span>, the workers <span class=\"data\">haromok</span>, and the tool <span class=\"data\">iromoit</span>. Once you spot the four templates, you can build words the problem never showed you.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys copied verbatim from the official solution page (E1 eca haborok ho iromoit de leifuori; E2 eidolo haitayenani; E3 oguar habarak de leramitari). Parts are named after the booklet's own labels E1/E2/E3, one question each; ids E1.1, E2.1, E3.1. Points split 4/3/3 (official sheet gives no per-item breakdown for the 10 points). Note the official solution spells the teacher noun 'haitayenani' (with 'a', not 'i' as in 'eitiyena'); I added 'eidolo haitiyenani' as an accepted variant in case a solver regularizes the vowel — please confirm whether that leniency is desired. No figures.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "(verification)",
+      "note": "this booklet has no usable text layer, so neither the witness check nor arbitration can run. Parked for human review by policy, not by a specific disagreement"
+    }
+  ]
+}

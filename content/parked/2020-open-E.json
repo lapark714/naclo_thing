@@ -1,0 +1,192 @@
+{
+  "id": "2020-open-E",
+  "tier": "full",
+  "year": 2020,
+  "round": "open",
+  "letter": "E",
+  "title": "Breton Numbers",
+  "authors": [
+    "Michael Salter"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "number systems",
+    "morphology"
+  ],
+  "formTag": "calendrical and counting",
+  "difficulty": "hard",
+  "languages": [
+    "Breton"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>Breton is a language spoken by approximately 200,000 people in Brittany, France. Part of the Celtic family of the Indo-European languages, it is distantly related to English, as well as other European languages such as French and Russian.</p>\n<p>Below are some equations in Breton:</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td><span class=\"data\">trizek + daouzek</span></td><td>=</td><td><span class=\"data\">pemp warn ugent</span></td></tr>\n<tr><td><span class=\"data\">unan ha pevar-ugent ÷ nav</span></td><td>=</td><td><span class=\"data\">nav</span></td></tr>\n<tr><td><span class=\"data\">pevar ha tri-ugent – ugent</span></td><td>=</td><td><span class=\"data\">pevar ha daou-ugent</span></td></tr>\n<tr><td><span class=\"data\">seizh warn ugent + pevarzek</span></td><td>=</td><td><span class=\"data\">unan ha daou-ugent</span></td></tr>\n<tr><td><span class=\"data\">daou × seizh</span></td><td>=</td><td><span class=\"data\">pevarzek</span></td></tr>\n<tr><td><span class=\"data\">kant ÷ daou</span></td><td>=</td><td><span class=\"data\">hanter kant</span></td></tr>\n<tr><td><span class=\"data\">nav × c’hwec’h</span></td><td>=</td><td><span class=\"data\">pevar ha hanter kant</span></td></tr>\n<tr><td><span class=\"data\">c’hwec’h ha tri-ugent ÷ tri</span></td><td>=</td><td><span class=\"data\">daou warn ugent</span></td></tr>\n<tr><td><span class=\"data\">c’hwezek × c’hwec’h</span></td><td>=</td><td><span class=\"data\">c’hwezek ha pevar-ugent</span></td></tr>\n<tr><td><span class=\"data\">daouzek × pemp</span></td><td>=</td><td><span class=\"data\">tri-ugent</span></td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>E1.</strong> In the Answer Sheets, fill in the gaps in the following equations.</p>\n<ol type=\"a\">\n<li><span class=\"data\">pevar-ugent ÷ pemp</span> = <span class=\"blank\" data-q=\"E1.1\"></span></li>\n<li><span class=\"data\">pemp ha hanter kant – daouzek</span> = <span class=\"blank\" data-q=\"E1.2\"></span></li>\n<li><span class=\"data\">nav warn ugent</span> + <span class=\"blank\" data-q=\"E1.3\"></span> = <span class=\"data\">tri ha daou-ugent</span></li>\n<li><span class=\"data\">kant ÷</span> <span class=\"blank\" data-q=\"E1.4\"></span> = <span class=\"data\">pemp</span></li>\n</ol>\n<p><strong>E2.</strong> As well as an interesting numbering system, Breton has an unusual method of forming the plurals of some nouns, which is partly connected to the numbering system. Here are three plural nouns in Breton: which of them means &ldquo;(one person&rsquo;s) eyes&rdquo;? Record your answer in the Answer Sheets.</p>\n<p>(a) <span class=\"data\">elerc’h</span> &nbsp;&nbsp;&nbsp; (b) <span class=\"data\">daoulagad</span> &nbsp;&nbsp;&nbsp; (c) <span class=\"data\">perennoù</span></p>\n<p><strong>E3.</strong> An &ldquo;irregular&rdquo; number in the Breton system is <em><span class=\"data\">triwec’h</span></em>. It represents a number between 10 and 20. Which one? Record your answer in the Answer Sheets.</p>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "E1.1",
+      "promptHtml": "<p>a. <span class=\"data\">pevar-ugent ÷ pemp</span> = ?</p>",
+      "part": "E1",
+      "partPrompt": "In the Answer Sheets, fill in the gaps in the following equations.",
+      "gradingMode": "exact",
+      "answerKey": "c’hwezek",
+      "acceptedVariants": [
+        "c'hwezek",
+        "chwezek"
+      ],
+      "points": 2
+    },
+    {
+      "id": "E1.2",
+      "promptHtml": "<p>b. <span class=\"data\">pemp ha hanter kant – daouzek</span> = ?</p>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "tri ha daou-ugent",
+      "acceptedVariants": [
+        "tri ha daou ugent"
+      ],
+      "points": 2
+    },
+    {
+      "id": "E1.3",
+      "promptHtml": "<p>c. <span class=\"data\">nav warn ugent</span> + ? = <span class=\"data\">tri ha daou-ugent</span></p>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "pevarzek",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "E1.4",
+      "promptHtml": "<p>d. <span class=\"data\">kant ÷</span> ? = <span class=\"data\">pemp</span></p>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "ugent",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "E2.1",
+      "promptHtml": "<p>Which of the three plural nouns means &ldquo;(one person&rsquo;s) eyes&rdquo;?</p>",
+      "part": "E2",
+      "partPrompt": "Which of these three Breton plural nouns means \"(one person's) eyes\"?",
+      "gradingMode": "exact",
+      "answerKey": "daoulagad",
+      "acceptedVariants": [
+        "b",
+        "(b)"
+      ],
+      "choices": [
+        "elerc’h",
+        "daoulagad",
+        "perennoù"
+      ],
+      "points": 3
+    },
+    {
+      "id": "E3.1",
+      "promptHtml": "<p>Which number between 10 and 20 does <em><span class=\"data\">triwec’h</span></em> represent? Give a figure.</p>",
+      "part": "E3",
+      "partPrompt": "The \"irregular\" Breton number triwec'h represents a number between 10 and 20. Which one?",
+      "gradingMode": "exact",
+      "answerKey": "18",
+      "acceptedVariants": [
+        "eighteen"
+      ],
+      "points": 4
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start with the shortest lines, the ones where a multiplication or a division has simple one-word inputs, such as the lines built from daou, seizh, kant and nav. Those pin down the basic digit words before you worry about the long compound expressions.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Breton does not count in tens: its base is twenty. One word means 20, and larger round numbers are built from it, so a prefix like tri- or pevar- attached to that word gives 60 and 80. The little word ha means \"and\" (addition), warn signals \"plus twenty\", and hanter means \"half\", so hanter kant is half of a hundred.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Try the line kant divided by daou = hanter kant. If daou is 2, then hanter kant is half of kant, which fits hanter meaning \"half\". Now test the line nav times c'hwec'h = pevar ha hanter kant: 9 times 6 is 54, and 54 is 4 plus 50, so ha really does join an extra unit onto a round number.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>Turning the equations into arithmetic</h3><p>Each line is a genuine sum, so the trick is to find one line with few unknowns and use it as an anchor. Look at line 2: <span class=\"data\">unan ha pevar-ugent</span> divided by <span class=\"data\">nav</span> equals <span class=\"data\">nav</span>. If a number divided by <em>nav</em> gives <em>nav</em> back, that number must be <em>nav</em> squared. The only squares that a short Breton phrase like this is likely to hide are 81 (9 times 9) or 100 (10 times 10) or 64 (8 times 8). Line 6, <span class=\"data\">kant</span> divided by <span class=\"data\">daou</span> = <span class=\"data\">hanter kant</span>, shows that <em>kant</em> is a round number and <em>hanter</em> means \"half\" (\"half a hundred\"). So <em>kant</em> is 100, <em>daou</em> is 2, and <em>hanter kant</em> is 50. Then in line 7, <em>nav</em> times <span class=\"data\">c'hwec'h</span> equals <span class=\"data\">pevar ha hanter kant</span>, that is something plus 50. Nine times six is 54, which is 4 plus 50: so <em>nav</em> is 9, <em>c'hwec'h</em> is 6, <em>pevar</em> is 4, and <em>ha</em> means \"plus\".</p><p>Back to line 2: <em>nav</em> squared is 81, and 81 is 1 plus 80. So <em>unan</em> is 1 and <span class=\"data\">pevar-ugent</span> is 80.</p><h3>A base-twenty (vigesimal) system</h3><p>Because <em>pevar</em> is 4 and <em>pevar-ugent</em> is 80, the element <span class=\"data\">ugent</span> must be 20: \"four twenties\". That is what linguists call a <em>vigesimal</em> system, counting in twenties rather than tens. French does something similar with <em>quatre-vingts</em> \"four twenties\" for 80.</p><p>Line 10 confirms it: <span class=\"data\">daouzek</span> times <span class=\"data\">pemp</span> = <span class=\"data\">tri-ugent</span>. If <em>tri</em> is 3, then <em>tri-ugent</em> is 60, and 60 is 12 times 5, so <em>daouzek</em> is 12 and <em>pemp</em> is 5. Line 5, <em>daou</em> times <span class=\"data\">seizh</span> = <span class=\"data\">pevarzek</span>, gives 2 times 7 equals 14, so <em>seizh</em> is 7 and <em>pevarzek</em> is 14.</p><h3>The word warn</h3><p>Line 1 says <span class=\"data\">trizek</span> plus <em>daouzek</em> equals <span class=\"data\">pemp warn ugent</span>. Since <em>pemp</em> is 5 and the whole thing is 13 plus 12 = 25, <em>warn ugent</em> must add 20: \"five on twenty\". Line 8 checks out too: (6 plus 60) divided by 3 is 22, written <span class=\"data\">daou warn ugent</span>, \"two on twenty\". So numbers from 21 to 29 use <em>warn ugent</em>, while multiples of twenty plus a remainder use <em>ha</em>: <span class=\"data\">unan ha daou-ugent</span> is 1 plus 40 = 41, which matches line 4 (27 plus 14).</p><h3>The teens</h3><p>Notice a pattern: <em>daouzek</em> 12, <em>trizek</em> 13, <em>pevarzek</em> 14. The digit word plus the ending <em>-zek</em> gives 10 plus that digit. So 16 is built from <em>c'hwec'h</em> in the same way, and line 9 shows the word: <span class=\"data\">c'hwezek</span> times <em>c'hwec'h</em> = <span class=\"data\">c'hwezek ha pevar-ugent</span>, i.e. 16 times 6 = 96 = 16 plus 80. Consistent.</p><h3>Solving E1</h3><ul><li><strong>a.</strong> 80 divided by 5 is 16 &mdash; the teen word built on \"six\".</li><li><strong>b.</strong> <em>pemp ha hanter kant</em> is 5 plus 50 = 55; 55 minus 12 is 43, which is 3 plus 40, so it is expressed as \"three and two-twenties\".</li><li><strong>c.</strong> <em>nav warn ugent</em> is 9 plus 20 = 29; the answer 43 minus 29 is 14, a teen word already seen in the data.</li><li><strong>d.</strong> 100 divided by what gives 5? Twenty &mdash; the base word of the whole system.</li></ul><h3>E2: eyes come in pairs</h3><p>Some languages have special \"dual\" plurals for things that naturally come in twos: eyes, ears, hands. The Breton plural for \"eyes\" is built with the number 2, <em>daou</em>, at the front, which is exactly the connection to the numeral system the problem hints at. Of the three candidates, only <span class=\"data\">daoulagad</span> begins with <em>daou-</em>, so that is the one. (<span class=\"data\">elerc'h</span> is \"swans\" and <span class=\"data\">perennoù</span> is \"pears\".)</p><h3>E3: triwec'h</h3><p>The regular teens use <em>-zek</em> on a digit. <em>triwec'h</em> instead looks like <em>tri</em> \"three\" fused with <em>c'hwec'h</em> \"six\" &mdash; not \"three plus six\" but \"three sixes\", 3 times 6 = 18. Multiplying inside a numeral is natural in a language that already says \"four twenties\" for 80, and it explains why the number is called irregular: it is the odd one out among the teens.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution page (E1 a c’hwezek, b tri ha daou-ugent, c pevarzek, d ugent; E2 (b) daoulagad; E3 18). Note the solution page is headed \"Breton Numerals\" while the problem page is headed \"Breton Numbers\" — the problem title used here follows the problem page. Point split across the six blanks (2/2/2/2/3/4 = 15) is my own; the booklet gives no per-part breakdown. Apostrophes in Breton data are transcribed as the curly right single quote as printed; ASCII-apostrophe variants accepted where relevant.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "cell:3",
+      "a": "unan ha pevar-ugent ÷ nav",
+      "b": "unan ha pevar-ugent / nav"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:6",
+      "a": "pevar ha tri-ugent – ugent",
+      "b": "pevar ha tri-ugent &ndash; ugent"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:12",
+      "a": "daou × seizh",
+      "b": "daou x seizh"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:15",
+      "a": "kant ÷ daou",
+      "b": "kant / daou"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:18",
+      "a": "nav × c’hwec’h",
+      "b": "nav x c&rsquo;hwec&rsquo;h"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:21",
+      "a": "c’hwec’h ha tri-ugent ÷ tri",
+      "b": "c&rsquo;hwec&rsquo;h ha tri-ugent / tri"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:24",
+      "a": "c’hwezek × c’hwec’h",
+      "b": "c&rsquo;hwezek x c&rsquo;hwec&rsquo;h"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:26",
+      "a": "c’hwezek ha pevar-ugent",
+      "b": "c&rsquo;hwezek ha pevar-ugent"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:27",
+      "a": "daouzek × pemp",
+      "b": "daouzek x pemp"
+    },
+    {
+      "kind": "witness",
+      "path": "data:4",
+      "a": "pevar ha tri-ugent – ugent",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:21",
+      "a": "pemp ha hanter kant – daouzek",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 11 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~11 API calls that would not resolve it"
+    }
+  ]
+}

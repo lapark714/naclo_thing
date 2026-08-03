@@ -1,0 +1,149 @@
+{
+  "id": "2020-open-F",
+  "tier": "full",
+  "year": 2020,
+  "round": "open",
+  "letter": "F",
+  "title": "Coming into Focus",
+  "authors": [
+    "Sam Ahmed"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "syntax"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "hard",
+  "languages": [
+    "Paiwan"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>Paiwan is an Austronesian language spoken by around 66,000 people in southern Taiwan. One of the major components of Paiwan sentence structure is “focus,” which marks a new piece of information conveyed by the sentence. In English, we might represent this through phrasing, such as in sentence “It is <strong>the dog</strong> which the man likes”. In this example, <strong>the dog</strong> is focused.</p>\n<p>Below are some sentences in Paiwan with their English translations. Sentence elements in <strong>bold</strong> are focused.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Paiwan</th><th>English</th></tr></thead>\n<tbody>\n<tr><td>1. <span class=\"data\">kanan nua uqaɬay tua kuka a quma nua tsakaw</span></td><td>The man eats the chicken in <strong>the thief’s field</strong>.</td></tr>\n<tr><td>2. <span class=\"data\">tjmalaw tua vavuy a kuvatu</span></td><td><strong>My dog</strong> angers the pig.</td></tr>\n<tr><td>3. <span class=\"data\">djavisen nua tsemas a kukama</span></td><td>The spirit snatches <strong>my father</strong>.</td></tr>\n<tr><td>4. <span class=\"data\">sitarang nua uqaɬay a vuluq</span></td><td>The man protects (it) with <strong>the spear</strong>.</td></tr>\n<tr><td>5. <span class=\"data\">tjalawen nua suvavuy i tua umaq a aɬak nua vavaian</span></td><td>Your pig angers <strong>the woman’s child</strong> in the house.</td></tr>\n<tr><td>6. <span class=\"data\">kman tua kuka a tsemas</span></td><td><strong>The spirit</strong> eats the chicken.</td></tr>\n<tr><td>7. <span class=\"data\">djavisan nua pulingaw tua vuluq a gadu</span></td><td>The shaman snatches the spear in <strong>the mountain</strong>.</td></tr>\n<tr><td>8. <span class=\"data\">langedaen nua sivitay a qaya-qayam</span></td><td>The soldier hears <strong>the bird</strong>.</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>F1</strong>. How would you say these sentences in Paiwan?</p>\n<ol type=\"a\">\n<li>The man protects the field with <strong>the dog</strong>. <span class=\"blank\" data-q=\"F1.1\" data-label=\"a.\"></span></li>\n<li>Your shaman angers my bird in <strong>the spirit’s mountain</strong>. <span class=\"blank\" data-q=\"F1.2\" data-label=\"b.\"></span></li>\n<li><strong>The woman</strong> snatches the pig. <span class=\"blank\" data-q=\"F1.3\" data-label=\"c.\"></span></li>\n</ol>\n<p>Now look at the following question-answer dialogues. The first answer has been translated for you.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Question</th><th>Answer</th></tr></thead>\n<tbody>\n<tr><td>9. <span class=\"data\">inu a tmarang a tsakaw?</span></td><td><span class=\"data\">tmarang a tsakaw i tua quma</span><br />The thief who protects (it) is in the field.</td></tr>\n<tr><td>10. <span class=\"data\">anema a sitjalaw nua sukama tua vatu?</span></td><td><span class=\"data\">sitjalaw nua kukama tua vatu a kuvuluq</span></td></tr>\n<tr><td>11. <span class=\"data\">anema a sudjavisen?</span></td><td><span class=\"data\">kudjavisen a qaya-qayam nua vavaian</span></td></tr>\n<tr><td>12. <span class=\"data\">inu a kanan nua uqaɬay?</span></td><td><span class=\"data\">kanan nua uqaɬay a gadu</span></td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>F2</strong>. Based on these examples, translate the following responses into English, underlining focused elements, and saying what questions (in Paiwan) could have prompted them.</p>\n<ol type=\"a\">\n<li><span class=\"data\">susitarang tua qaya-qayam nua pulingaw a tsemas</span> <span class=\"blank\" data-q=\"F2.1\" data-label=\"a.\"></span></li>\n<li><span class=\"data\">kanen nua uqaɬay a vavuy i tua gadu</span> <span class=\"blank\" data-q=\"F2.2\" data-label=\"b.\"></span></li>\n<li><span class=\"data\">kutjalawan tua suvatu a kuquma</span> <span class=\"blank\" data-q=\"F2.3\" data-label=\"c.\"></span></li>\n</ol>\n<p><em>(The letter pairs <strong>dj</strong> and <strong>tj</strong> each represent a single sound. The word <strong>langedaen</strong> in sentence 8 is actually <strong>langedain</strong>, but this was edited for the sake of simplicity.)</em></p>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "F1.1",
+      "promptHtml": "<p>a. The man protects the field with <strong>the dog</strong>.</p>",
+      "part": "F1",
+      "partPrompt": "How would you say these sentences in Paiwan?",
+      "gradingMode": "exact",
+      "answerKey": "sitarang nua uqaɬay tua quma a vatu",
+      "acceptedVariants": [
+        "sitarang nua uqalay tua quma a vatu"
+      ],
+      "points": 2
+    },
+    {
+      "id": "F1.2",
+      "promptHtml": "<p>b. Your shaman angers my bird in <strong>the spirit’s mountain</strong>.</p>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "tjalawan nua supulingaw tua kuqaya-qayam a gadu nua tsemas",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "F1.3",
+      "promptHtml": "<p>c. <strong>The woman</strong> snatches the pig.</p>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "djmavis tua vavuy a vavaian",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "F2.1",
+      "promptHtml": "<p>a. <span class=\"data\">susitarang tua qaya-qayam nua pulingaw a tsemas</span></p>",
+      "part": "F2",
+      "partPrompt": "For each response, give the English translation (marking the focused element) and a Paiwan question that could have prompted it. Write the translation first, then the Paiwan question.",
+      "gradingMode": "llm",
+      "answerKey": "You protect the shaman's bird with the spirit. (focused: the spirit) / anema a kusitarang tua qaya-qayam nua pulingaw?",
+      "acceptedVariants": [],
+      "points": 3
+    },
+    {
+      "id": "F2.2",
+      "promptHtml": "<p>b. <span class=\"data\">kanen nua uqaɬay a vavuy i tua gadu</span></p>",
+      "part": "F2",
+      "gradingMode": "llm",
+      "answerKey": "The man eats the pig in the mountain. (focused: the pig) / anema a kanen nua uqaɬay i tua gadu?",
+      "acceptedVariants": [],
+      "points": 3
+    },
+    {
+      "id": "F2.3",
+      "promptHtml": "<p>c. <span class=\"data\">kutjalawan tua suvatu a kuquma</span></p>",
+      "part": "F2",
+      "gradingMode": "llm",
+      "answerKey": "I anger your dog in my field. (focused: my field) / inu a sutjalawan tua kuvatu?",
+      "acceptedVariants": [],
+      "points": 3
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Line up the eight sentences by which English phrase is in bold. Then compare the little words in front of each Paiwan noun (nua, tua, i tua, a) and the shape of the first word in the sentence. Both change depending on which element is focused.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "The particle a always sits in front of the focused phrase, and the verb carries a marker that tells you what kind of thing is focused: doer, thing acted on, place, or tool. There are four different verb shapes in the data (an added -m-, a suffix, another suffix, and a prefix). Also watch for ku- and su- glued onto nouns and verbs: they mean “my/I” and “your/you”. A possessor is expressed with nua after the noun.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Try sentence 7 as practice: djavisan nua pulingaw tua vuluq a gadu = “The shaman snatches the spear in the mountain”, with the mountain focused. So djavis- “snatch” takes -an when the place is focused, the doer is nua pulingaw, the thing snatched is tua vuluq, and the focused place comes last after a. Compare that with sentence 3, where the thing snatched is focused instead, and note which part of the verb changes.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What “focus” means here</h3><p>In Paiwan, exactly one phrase in the sentence is singled out as the new, highlighted information. That phrase is marked by the particle <span class=\"data\">a</span>, and the verb wears a badge saying <em>what kind of role</em> the highlighted phrase plays: the doer, the thing acted on, the place, or the instrument. English does something similar with “It is the dog that the man likes”, but English does not change the verb.</p>\n<h3>Step 1: the little words</h3><p>Sort out the particles first. Every noun phrase has one:</p><ul><li><span class=\"data\">a</span> marks the focused phrase, and it comes last in the sentence.</li><li><span class=\"data\">nua</span> marks the doer when the doer is <em>not</em> focused (sentence 3: <span class=\"data\">nua tsemas</span> “the spirit” does the snatching). It also marks a possessor: <span class=\"data\">quma nua tsakaw</span> “the thief’s field”.</li><li><span class=\"data\">tua</span> marks the thing acted on when it is not focused (sentence 6: <span class=\"data\">tua kuka</span> “the chicken”).</li><li><span class=\"data\">i tua</span> marks a place when the place is not focused (sentence 5: <span class=\"data\">i tua umaq</span> “in the house”).</li></ul>\n<h3>Step 2: the four verb shapes</h3><p>Now compare the verbs. The root for “anger” is <span class=\"data\">tjalaw</span>, for “eat” <span class=\"data\">kan</span>, for “snatch” <span class=\"data\">djavis</span>, for “protect” <span class=\"data\">tarang</span>, for “hear” <span class=\"data\">langed</span>.</p><ul><li><strong>Doer focused:</strong> an <span class=\"data\">-m-</span> is slipped in after the first consonant. <span class=\"data\">kan</span> becomes <span class=\"data\">kman</span> (6), <span class=\"data\">tjalaw</span> becomes <span class=\"data\">tjmalaw</span> (2), <span class=\"data\">tarang</span> becomes <span class=\"data\">tmarang</span> (9).</li><li><strong>Thing acted on focused:</strong> suffix <span class=\"data\">-en</span>. <span class=\"data\">djavisen</span> (3), <span class=\"data\">tjalawen</span> (5), <span class=\"data\">langedaen</span> (8).</li><li><strong>Place focused:</strong> suffix <span class=\"data\">-an</span>. <span class=\"data\">kanan</span> (1), <span class=\"data\">djavisan</span> (7).</li><li><strong>Instrument focused:</strong> prefix <span class=\"data\">si-</span>. <span class=\"data\">sitarang</span> (4).</li></ul><p>The word order is: verb, then the doer with <span class=\"data\">nua</span>, then the thing acted on with <span class=\"data\">tua</span>, then a non-focused place with <span class=\"data\">i tua</span>, and finally the focused phrase with <span class=\"data\">a</span>.</p>\n<h3>Step 3: my and your</h3><p><span class=\"data\">ku-</span> means “my” and <span class=\"data\">su-</span> means “your” when attached to a noun: <span class=\"data\">kuvatu</span> “my dog”, <span class=\"data\">suvavuy</span> “your pig”, <span class=\"data\">kukama</span> “my father”. Attached to a verb they name the doer instead: <span class=\"data\">sudjavisen</span> “you snatch (it)”, <span class=\"data\">kudjavisen</span> “I snatch (it)” — which is why no separate <span class=\"data\">nua</span> phrase is needed in sentence 11.</p>\n<h3>Building the F1 sentences</h3><p>“The man protects the field with <strong>the dog</strong>”: the highlighted phrase is a tool, so use the <span class=\"data\">si-</span> verb; doer <span class=\"data\">nua uqaɬay</span>, thing protected <span class=\"data\">tua quma</span>, focused tool last with <span class=\"data\">a</span>. That gives <span class=\"data\">sitarang nua uqaɬay tua quma a vatu</span>.</p><p>“Your shaman angers my bird in <strong>the spirit’s mountain</strong>”: a place is focused, so <span class=\"data\">tjalaw</span> takes <span class=\"data\">-an</span>; then <span class=\"data\">nua supulingaw</span>, <span class=\"data\">tua kuqaya-qayam</span>, and finally <span class=\"data\">a gadu nua tsemas</span> (“mountain of the spirit”).</p><p>“<strong>The woman</strong> snatches the pig”: the doer is focused, so infix <span class=\"data\">-m-</span> into <span class=\"data\">djavis</span>, giving <span class=\"data\">djmavis tua vavuy a vavaian</span>.</p>\n<h3>The question-answer pairs</h3><p><span class=\"data\">inu</span> means “where” and <span class=\"data\">anema</span> means “what”. A question simply puts the question word where the focused phrase would be, using the matching verb form: <span class=\"data\">inu a kanan nua uqaɬay?</span> “Where does the man eat?” has the place-focus verb <span class=\"data\">kanan</span>, and the answer replaces <span class=\"data\">inu</span> with <span class=\"data\">a gadu</span>.</p><p>Notice one more thing in pairs 10 and 11: the question says “your” (<span class=\"data\">su-</span>) and the answer says “my/I” (<span class=\"data\">ku-</span>). That is just the ordinary conversational switch — what is “you” to the asker is “I” to the answerer. So to reconstruct a question from an answer, swap <span class=\"data\">ku-</span> and <span class=\"data\">su-</span>, replace the focused <span class=\"data\">a</span> phrase with <span class=\"data\">anema</span> (for a thing or tool) or <span class=\"data\">inu</span> (for a place), and keep the verb shape the same.</p><p>For example, <span class=\"data\">kanen nua uqaɬay a vavuy i tua gadu</span> has the <span class=\"data\">-en</span> verb, so the pig is the focused thing eaten: “The man eats <u>the pig</u> in the mountain.” The prompting question keeps <span class=\"data\">kanen</span>, keeps <span class=\"data\">nua uqaɬay</span> and <span class=\"data\">i tua gadu</span>, and starts with <span class=\"data\">anema</span>.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution page. Note that the character in uqaɬay / aɬak is a barred/belted l (U+026C) as printed. F2 items a, b, c each require TWO things (an English translation with the focused element underlined, plus a Paiwan question); the booklet prints one label per item, so each is transcribed as a single question whose answerKey holds both lines, graded by LLM. If the site's answer sheet splits these into separate translation and question blanks, the part may need to be re-split into six questions. Point split (2/2/2 for F1, 3/3/3 for F2) is inferred; the solution page gives no per-item breakdown. No figures in this problem.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "questions:count",
+      "a": "6",
+      "b": "9",
+      "note": "differing question counts make a per-question comparison meaningless"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:2",
+      "a": "1. kanan nua uqaɬay tua kuka a quma nua tsakaw",
+      "b": "1. kanan nua uqałay tua kuka a quma nua tsakaw"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:8",
+      "a": "4. sitarang nua uqaɬay a vuluq",
+      "b": "4. sitarang nua uqałay a vuluq"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:10",
+      "a": "5. tjalawen nua suvavuy i tua umaq a aɬak nua vavaian",
+      "b": "5. tjalawen nua suvavuy i tua umaq a ałak nua vavaian"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:26",
+      "a": "12. inu a kanan nua uqaɬay?",
+      "b": "12. inu a kanan nua uqałay?"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:27",
+      "a": "kanan nua uqaɬay a gadu",
+      "b": "kanan nua uqałay a gadu"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 6 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~6 API calls that would not resolve it"
+    }
+  ]
+}

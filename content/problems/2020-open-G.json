@@ -1,24 +1,212 @@
 {
   "id": "2020-open-G",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2020,
   "round": "open",
   "letter": "G",
   "title": "Password Confusion",
-  "authors": [],
+  "authors": [
+    "Tom McCoy"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
-    "writing systems"
+    "syntax",
+    "semantics"
   ],
-  "formTag": "formal and computational",
+  "formTag": "table completion",
   "difficulty": "standard",
-  "languages": [],
+  "languages": [
+    "English"
+  ],
   "officialPoints": 10,
   "officialTimeMinutes": 18,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Mary, Larry, and Harry are three friends sharing an apartment. Unfortunately, their nosy neighbor Perry is always trying to use their wifi, so Mary changes their wifi password frequently to thwart Perry's efforts. Whenever she changes the password, Mary texts the new password to Larry and Harry.</p>\n<p>One day, Mary opens their wifi bill and can tell from the exorbitant charge that Perry has been using it again. Since this can only mean that Perry is somehow reading their texts, Mary hires a company called the Rearranging Expressions Organization (or REOrganization for short) to give her advice on making her messages more secure. REOrganization advises her to send messages that can be decoded by the following 2-step process:</p>\n<ol><li>Convert the sentence to a question;</li><li>Read the first letter of each word in the question to yield the password.</li></ol>\n<p>As it turns out, Larry and Harry are not very inquisitive people, so they have never encountered questions before. Therefore, Mary gives them the following example messages to show how the system works:</p>\n<div class=\"table-scroll\"><table><thead><tr><th>Text message</th><th>Text message converted to a question</th><th>Decoded password</th></tr></thead><tbody>\n<tr><td>Deciphering each Alaskan license plate abbreviation is lovely.</td><td>Is deciphering each Alaskan license plate abbreviation lovely?</td><td>IDEAL PAL</td></tr>\n<tr><td>A new German exchange rate beneath a newspaper did assist national ambassadors.</td><td>Did a new German exchange rate beneath a newspaper assist national ambassadors?</td><td>DANGER BANANA</td></tr>\n<tr><td>Every industrial geographer hired through your legal action was yelling enthusiastic random stuff.</td><td>Was every industrial geographer hired through your legal action yelling enthusiastic random stuff?</td><td>WEIGHTY LAYERS</td></tr>\n</tbody></table></div>\n<p>Why have this extra step of forming a question? The idea is that the initial letters from the original text messages can also spell two-word chunks (DEAL PAIL, ANGER BANDANA, and EIGHTY LAWYERS), so perhaps Perry will be thrown off the scent by these distractor phrases.</p>\n<h3>G1</h3>\n<p>Larry and Harry both seemed to understand the examples Mary showed them, so she began using this system to encode the new passwords. It went swimmingly for the first few weeks, but then Larry and Harry occasionally began to get the password wrong. Below are all of the messages Mary sent out, along with the passwords that her roommates extracted from the messages. A few cells of the table have been left blank; fill them in.</p>\n<div class=\"table-scroll\"><table><thead><tr><th>Text message</th><th>Distractor password</th><th>Larry's password guess</th><th>Harry's password guess</th><th>Correct password</th></tr></thead><tbody>\n<tr><td>Uplifting tales told extremely rapidly in New Guinea and Romania may reveal each storyteller's trade secrets.</td><td>UTTERING ARMRESTS</td><td>MUTTERING ARRESTS</td><td>MUTTERING ARRESTS</td><td>MUTTERING ARRESTS</td></tr>\n<tr><td>Lively orangutans using discarded branches as tambourines can harmonize.</td><td>LOUD BATCH</td><td>CLOUD BATH</td><td>CLOUD BATH</td><td>CLOUD BATH</td></tr>\n<tr><td>Horned owls should endure every modern orange tree iguanas can offer next summer.</td><td>HOSE EMOTICONS</td><td>CHOSE EMOTIONS</td><td>SHOE EMOTICONS</td><td>SHOE EMOTICONS</td></tr>\n<tr><td>Every loud electronic creature that interesting odd numbers should provide at reunions should escape.</td><td>ELECTION SPARSE</td><td>SELECTION SPARE</td><td>SELECTION PARSE</td><td>SELECTION SPARE</td></tr>\n<tr><td>Alligators that can launch airplanes may prosper.</td><td>AT CLAMP</td><td>MAT CLAP</td><td>CAT LAMP</td><td>MAT CLAP</td></tr>\n<tr><td>Unions should identify novel geometric systems that one may possibly seek.</td><td>USING STOMPS</td><td>MUSING STOPS</td><td>SUING STOMPS</td><td>SUING STOMPS</td></tr>\n<tr><td>Happy animals that will investigate telescopes can hop.</td><td>HAT WITCH</td><td><span class=\"blank\" data-q=\"G1.1\"></span></td><td><span class=\"blank\" data-q=\"G1.2\"></span></td><td><span class=\"blank\" data-q=\"G1.3\"></span></td></tr>\n<tr><td>All North Dakotan deviled eggs should seem especially radiant today.</td><td>AND DESSERT</td><td><span class=\"blank\" data-q=\"G1.4\"></span></td><td><span class=\"blank\" data-q=\"G1.5\"></span></td><td><span class=\"blank\" data-q=\"G1.6\"></span></td></tr>\n<tr><td>Aardvarks may publicly label each spanning tree algorithm talented unicorns should enthusiastically see.</td><td>AMPLE STATUSES</td><td><span class=\"blank\" data-q=\"G1.7\"></span></td><td><span class=\"blank\" data-q=\"G1.8\"></span></td><td><span class=\"blank\" data-q=\"G1.9\"></span></td></tr>\n<tr><td>Anyone rabbits might surprise has elicited a response that has satisfied.</td><td>ARMS HEARTHS</td><td><span class=\"blank\" data-q=\"G1.10\"></span></td><td><span class=\"blank\" data-q=\"G1.11\"></span></td><td><span class=\"blank\" data-q=\"G1.12\"></span></td></tr>\n</tbody></table></div>\n<p>Mary does not want all this confusion about the password scheme, so she switches to a different encoding scheme: She will still send out a message, but her roommates will now need to <em>negate</em> the message so that it means the opposite of its original meaning, rather than turning it into a question as previously. Shockingly, Larry and Harry are such positive people that they have never encountered negation before, so Mary sends them the following examples of how the encoding scheme works:</p>\n<div class=\"table-scroll\"><table><thead><tr><th>Text message</th><th>Negated text message</th><th>Decoded password</th></tr></thead><tbody>\n<tr><td>Charming refrigerator operators will waltz into Greenland.</td><td>Charming refrigerator operators will not waltz into Greenland.</td><td>CROWN WIG</td></tr>\n<tr><td>Quiet utilitarians in crowded Kenyan city halls are talking.</td><td>Quiet utilitarians in crowded Kenyan city halls are not talking.</td><td>QUICK CHANT</td></tr>\n</tbody></table></div>\n<h3>G2</h3>\n<p>Larry and Harry understood these examples just fine, but once again Mary found them making some errors in future weeks when she sent out the actual encoded passwords! The following table contains some of the messages Mary sent out; fill in the blank spaces.</p>\n<div class=\"table-scroll\"><table><thead><tr><th>Text message</th><th>Distractor password</th><th>Larry's password guess</th><th>Harry's password guess</th><th>Correct password</th></tr></thead><tbody>\n<tr><td>Denmark's emptiest factory is exporting some pasta Russia is cooking each Saturday.</td><td>DEFIES PRICES</td><td><span class=\"blank\" data-q=\"G2.1\"></span></td><td><span class=\"blank\" data-q=\"G2.2\"></span></td><td><span class=\"blank\" data-q=\"G2.3\"></span></td></tr>\n<tr><td>Unions Nepal is forbidding over recent major events during breakfast are keeping exceptional records.</td><td>UNIFORMED BAKER</td><td><span class=\"blank\" data-q=\"G2.4\"></span></td><td><span class=\"blank\" data-q=\"G2.5\"></span></td><td><span class=\"blank\" data-q=\"G2.6\"></span></td></tr>\n</tbody></table></div>\n<p>At this point, Mary decides to simply tell Larry and Harry the passwords in person.</p>\n<p><em>Note: The problem that these three friends face is that the examples Mary sent out were consistent with multiple possible rules. In linguistics, this type of problem is called the poverty of the stimulus, and it is a central topic in language acquisition: How is it that all children with English-speaking parents learn essentially the same version of English, even though the sentences that they hear are consistent with many possible rules for defining the structure of the language?</em></p>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "G1.1",
+      "promptHtml": "<p>\"Happy animals that will investigate telescopes can hop.\" — Larry's password guess</p>",
+      "part": "G1",
+      "partPrompt": "Fill in the blank cells of the G1 table (Larry's guess, Harry's guess, and the correct password for the last four messages).",
+      "gradingMode": "exact",
+      "answerKey": "CHAT WITH",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "G1.2",
+      "promptHtml": "<p>\"Happy animals that will investigate telescopes can hop.\" — Harry's password guess</p>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "WHAT ITCH",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "G1.3",
+      "promptHtml": "<p>\"Happy animals that will investigate telescopes can hop.\" — Correct password</p>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "CHAT WITH",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "G1.4",
+      "promptHtml": "<p>\"All North Dakotan deviled eggs should seem especially radiant today.\" — Larry's password guess</p>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "SAND DESERT",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "G1.5",
+      "promptHtml": "<p>\"All North Dakotan deviled eggs should seem especially radiant today.\" — Harry's password guess</p>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "SAND DESERT",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "G1.6",
+      "promptHtml": "<p>\"All North Dakotan deviled eggs should seem especially radiant today.\" — Correct password</p>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "SAND DESERT",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "G1.7",
+      "promptHtml": "<p>\"Aardvarks may publicly label each spanning tree algorithm talented unicorns should enthusiastically see.\" — Larry's password guess</p>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "SAMPLE STATUES",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "G1.8",
+      "promptHtml": "<p>\"Aardvarks may publicly label each spanning tree algorithm talented unicorns should enthusiastically see.\" — Harry's password guess</p>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "MAPLE STATUSES",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "G1.9",
+      "promptHtml": "<p>\"Aardvarks may publicly label each spanning tree algorithm talented unicorns should enthusiastically see.\" — Correct password</p>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "MAPLE STATUSES",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "G1.10",
+      "promptHtml": "<p>\"Anyone rabbits might surprise has elicited a response that has satisfied.\" — Larry's password guess</p>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "HARMS HEARTS",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "G1.11",
+      "promptHtml": "<p>\"Anyone rabbits might surprise has elicited a response that has satisfied.\" — Harry's password guess</p>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "MARS HEARTHS",
+      "acceptedVariants": [
+        "MARSH EARTHS"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.12",
+      "promptHtml": "<p>\"Anyone rabbits might surprise has elicited a response that has satisfied.\" — Correct password</p>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "HARMS EARTHS",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "G2.1",
+      "promptHtml": "<p>\"Denmark's emptiest factory is exporting some pasta Russia is cooking each Saturday.\" — Larry's password guess</p>",
+      "part": "G2",
+      "partPrompt": "Fill in the blank cells of the G2 table (Larry's guess, Harry's guess, and the correct password for each message) under the new negation scheme.",
+      "gradingMode": "exact",
+      "answerKey": "DEFIES PRINCES",
+      "acceptedVariants": [],
+      "points": 0.67
+    },
+    {
+      "id": "G2.2",
+      "promptHtml": "<p>\"Denmark's emptiest factory is exporting some pasta Russia is cooking each Saturday.\" — Harry's password guess</p>",
+      "part": "G2",
+      "gradingMode": "exact",
+      "answerKey": "DEFINES PRICES",
+      "acceptedVariants": [],
+      "points": 0.67
+    },
+    {
+      "id": "G2.3",
+      "promptHtml": "<p>\"Denmark's emptiest factory is exporting some pasta Russia is cooking each Saturday.\" — Correct password</p>",
+      "part": "G2",
+      "gradingMode": "exact",
+      "answerKey": "DEFINES PRICES",
+      "acceptedVariants": [],
+      "points": 0.67
+    },
+    {
+      "id": "G2.4",
+      "promptHtml": "<p>\"Unions Nepal is forbidding over recent major events during breakfast are keeping exceptional records.\" — Larry's password guess</p>",
+      "part": "G2",
+      "gradingMode": "exact",
+      "answerKey": "UNIFORMED BANKER",
+      "acceptedVariants": [],
+      "points": 0.67
+    },
+    {
+      "id": "G2.5",
+      "promptHtml": "<p>\"Unions Nepal is forbidding over recent major events during breakfast are keeping exceptional records.\" — Harry's password guess</p>",
+      "part": "G2",
+      "gradingMode": "exact",
+      "answerKey": "UNINFORMED BAKER",
+      "acceptedVariants": [],
+      "points": 0.66
+    },
+    {
+      "id": "G2.6",
+      "promptHtml": "<p>\"Unions Nepal is forbidding over recent major events during breakfast are keeping exceptional records.\" — Correct password</p>",
+      "part": "G2",
+      "gradingMode": "exact",
+      "answerKey": "UNIFORMED BANKER",
+      "acceptedVariants": [],
+      "points": 0.66
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "The distractor password is just the first letters of the message exactly as written. So compare a password to the distractor: the extra letter at the front tells you which helping verb (can, should, may, will, is, are, has, might) got moved to the front of the sentence, and the missing letter later on tells you where that helping verb was taken from.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Every message contains more than one helping verb, and each roommate has settled on a different consistent rule for choosing which one to move. Look only at rows where one roommate got it wrong, and ask: did he pick the helping verb that comes earliest in the sentence, or the one that comes latest? The correct English rule uses neither position — it uses the helping verb belonging to the main clause, the one whose subject is the subject of the whole sentence.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try the already-filled row \"Alligators that can launch airplanes may prosper.\" The helping verbs are can (inside the little clause describing the alligators) and may (belonging to the main sentence). Taking the earliest one gives \"Can alligators that launch airplanes may prosper?\", whose initials read CAT LAMP — which is exactly what one roommate wrote in that row. Taking the main-clause one gives the correct password in that same row. Now apply the same test to the blank rows.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What the passwords are made of</h3>\n<p>Every password is just the string of first letters of the words in a sentence. The <strong>distractor password</strong> comes from the message exactly as Mary typed it. The <strong>correct password</strong> comes from the message after it has been turned into a question (part G1) or negated (part G2).</p>\n<p>Because forming a question moves one helping verb (an auxiliary, like <em>can, should, may, will, is, are, has, might</em>) to the very front, the correct password looks like the distractor with one extra letter at the front and one letter deleted from the middle. Example from the samples: \"Horned owls should endure every modern orange tree iguanas can offer next summer\" gives the distractor HOSE EMOTICONS; fronting <em>should</em> gives \"Should horned owls endure ...\", so we get an extra S at the front and lose the S of <em>should</em>: SHOE EMOTICONS.</p>\n<h3>Which helping verb should move?</h3>\n<p>The real English rule is: the auxiliary of the <strong>main clause</strong> moves, not just any auxiliary in the sentence. In \"Alligators that can launch airplanes may prosper\", the main statement is \"Alligators ... may prosper\", so <em>may</em> is the one that fronts: \"May alligators that can launch airplanes prosper?\" That gives MAT CLAP.</p>\n<p>Larry and Harry never learned that rule, so each of them invented a simpler one based on word order.</p>\n<h3>Larry's rule: the LAST auxiliary</h3>\n<p>Look at \"Horned owls should endure every modern orange tree iguanas can offer next summer.\" Larry wrote CHOSE EMOTIONS. The C at the front means he fronted <em>can</em>, and the missing letter is the C of <em>can</em>. But <em>can</em> is the second, later auxiliary. Check him again on \"Unions should identify novel geometric systems that one may possibly seek\": he wrote MUSING STOPS, fronting <em>may</em> — again the later one. So Larry always grabs the last auxiliary in the sentence.</p>\n<h3>Harry's rule: the FIRST auxiliary</h3>\n<p>Now \"Every loud electronic creature that interesting odd numbers should provide at reunions should escape.\" Harry wrote SELECTION PARSE. Both auxiliaries are <em>should</em>, but notice where the missing letter is: the S vanished from the <em>first</em> <em>should</em> (in \"numbers should provide\"), leaving \"... at reunions should escape\" to spell PARSE. And in the alligator sentence he wrote CAT LAMP, fronting <em>can</em>, the earlier one. So Harry always grabs the first auxiliary.</p>\n<p>Whenever a sentence has only one auxiliary, all three rules agree — which is why the system worked for a few weeks.</p>\n<h3>Working the G1 blanks</h3>\n<p><em>\"Happy animals that will investigate telescopes can hop.\"</em> Auxiliaries: <em>will</em> (inside the clause describing the animals) and <em>can</em> (main clause). Main clause and last are both <em>can</em>: \"Can happy animals that will investigate telescopes hop?\" gives C-H-A-T W-I-T-H. Harry takes the first one, <em>will</em>: \"Will happy animals that investigate telescopes can hop?\" gives W-H-A-T I-T-C-H.</p>\n<p><em>\"All North Dakotan deviled eggs should seem especially radiant today.\"</em> Only one auxiliary, so everyone agrees: front <em>should</em> and delete it.</p>\n<p><em>\"Aardvarks may publicly label each spanning tree algorithm talented unicorns should enthusiastically see.\"</em> Here the main-clause auxiliary is <em>may</em>, which is also the first, so Harry matches the correct answer. Larry takes the last one, <em>should</em>: \"Should aardvarks may publicly label ... talented unicorns enthusiastically see?\" — front an S, delete the S of <em>should</em>.</p>\n<p><em>\"Anyone rabbits might surprise has elicited a response that has satisfied.\"</em> Three auxiliaries: <em>might</em> (in \"anyone rabbits might surprise\"), <em>has</em> (main clause), <em>has</em> (in \"that has satisfied\"). Correct: front the main-clause <em>has</em> and delete it. Larry: front a copy of the final <em>has</em> and delete that one. Harry: front <em>might</em> and delete it — his letters can be split into words in two ways, and the official solution accepts either split.</p>\n<h3>The negation scheme (G2)</h3>\n<p>Negation works the same way, except that instead of moving an auxiliary to the front you insert <em>not</em> right after one. That adds exactly one N to the letter string, at the position right after the chosen auxiliary. From the samples: \"Charming refrigerator operators will not waltz into Greenland\" adds the N of <em>not</em> after <em>will</em>, turning CROW WIG into CROWN WIG.</p>\n<p>So for \"Denmark's emptiest factory is exporting some pasta Russia is cooking each Saturday\" (distractor DEFIES PRICES), the correct rule negates the main clause: \"is not exporting\", so the N lands in the first chunk. Larry, using the last auxiliary, negates \"Russia is not cooking\", so his N lands in the second chunk instead. Harry's first-auxiliary rule happens to pick the main-clause <em>is</em>, so he gets it right this time.</p>\n<p>For \"Unions Nepal is forbidding over recent major events during breakfast are keeping exceptional records\" (distractor UNIFORMED BAKER), the main clause is \"Unions ... are keeping exceptional records\", so <em>are not keeping</em> puts the N in the second chunk. Larry's last-auxiliary rule picks the same <em>are</em>, so he agrees. Harry picks the first auxiliary, the <em>is</em> inside \"Unions Nepal is forbidding\", so his N lands in the first chunk.</p>\n<h3>Why linguists care</h3>\n<p>Mary's examples were all consistent with three different rules, so Larry and Harry had no way to tell which one she meant. Human children face the same situation with real English and yet they all converge on the main-clause rule rather than a first-word or last-word rule. That puzzle is called the <em>poverty of the stimulus</em>.</p>",
   "reviewStatus": "published"
 }

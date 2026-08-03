@@ -1,0 +1,1008 @@
+{
+  "id": "2021-open-E",
+  "tier": "full",
+  "year": 2021,
+  "round": "open",
+  "letter": "E",
+  "title": "The Script of Your Dreams",
+  "authors": [
+    "Ryan Chi"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "writing systems",
+    "phonology"
+  ],
+  "formTag": "transliteration",
+  "difficulty": "hard",
+  "languages": [
+    "Kongo"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>Mandombe is a script, or writing system, created in 1978 by Wabeladio Payi. Today, it is used to write the Democratic Republic of the Congo's four national languages — Kongo, Lingala, Tshiluba, and Swahili. According to legend, the script was revealed to Payi by Congolese prophet Simon Kimbangu in a dream.<sup>1</sup></p>\n<figure><img src=\"/content-assets/2021-open-E-words.png\" alt=\"Numbered list, items 1 to 22, of Kongo words written in the Mandombe script; each word is made up of two or three angular block-like glyphs.\" /></figure>\n<p class=\"footnote\"><sup>1</sup> That's not all for the backstory — at one point, the script landed Payi in trouble with the authorities. The problem was related to the fact that in traditional Kongo culture, mirrors are powerful, magical devices. Evidently, something about the script was too mirror-like.</p>\n<p>Above, in an arbitrary order, are 22 words of the Kongo language<sup>2</sup> written in the Mandombe script. Below are the same Kongo words, written in the Roman alphabet, each one accompanied by its English translation.</p>\n<dl class=\"gloss-list\">\n<dt>A. wonso</dt><dd>“at all”</dd>\n<dt>B. tewa</dt><dd>“bang”</dd>\n<dt>C. tuti</dt><dd>“cloud”</dd>\n<dt>D. mfumvu</dt><dd>“cord”</dd>\n<dt>E. ngombe</dt><dd>“cow”</dd>\n<dt>F. fumbuka</dt><dd>“dead”</dd>\n<dt>G. kutu</dt><dd>“ear”</dd>\n<dt>H. tiya</dt><dd>“fire”</dd>\n<dt>I. mfinda</dt><dd>“forest”</dd>\n<dt>J. mpunda</dt><dd>“horse”</dd>\n<dt>K. lumonso</dt><dd>“left”</dd>\n<dt>L. mongo</dt><dd>“mountain”</dd>\n<dt>M. mpuku</dt><dd>“mouse”</dd>\n<dt>N. mwisi</dt><dd>“smoke”</dd>\n<dt>O. fula</dt><dd>“to blow”</dd>\n<dt>P. zenga</dt><dd>“to cut”</dd>\n<dt>Q. zuba</dt><dd>“to hit”</dd>\n<dt>R. simba</dt><dd>“to hold”</dd>\n<dt>S. yimbila</dt><dd>“to sing”</dd>\n<dt>T. venza</dt><dd>“to strike”</dd>\n<dt>U. maza</dt><dd>“water”</dd>\n<dt>V. nani</dt><dd>“who”</dd>\n</dl>\n<p><strong>E1.</strong> Match the words written in Mandombe to their Romanized equivalents.</p>\n<p><strong>E2.</strong> Given the numerals 1, 2, 3, and 4, how would you write 5 in Mandombe? Choose from W, X, Y, and Z:</p>\n<figure><img src=\"/content-assets/2021-open-E-numerals.png\" alt=\"Table of the Mandombe numerals 1, 2, 3 and 4, each shown as a small angular hook-shaped glyph in a different orientation.\" /></figure>\n<figure><img src=\"/content-assets/2021-open-E-options.png\" alt=\"Table of four answer options labelled W, X, Y and Z, each a small angular glyph.\" /></figure>\n<p class=\"footnote\"><sup>2</sup> Kongo, also called Kikongo, is a language of the Bantu family spoken natively by about 7 million people in central Africa. It is also widely learned and used as a second language in the Democratic Republic of the Congo, and has served as a basis of several creole languages in Africa and the Americas.</p>",
+  "assets": [
+    {
+      "src": "/content-assets/2021-open-E-words.png",
+      "alt": "Numbered list, items 1 to 22, of Kongo words written in the Mandombe script; each word is made up of two or three angular block-like glyphs."
+    },
+    {
+      "src": "/content-assets/2021-open-E-numerals.png",
+      "alt": "Table of the Mandombe numerals 1, 2, 3 and 4, each shown as a small angular hook-shaped glyph in a different orientation."
+    },
+    {
+      "src": "/content-assets/2021-open-E-options.png",
+      "alt": "Table of four answer options labelled W, X, Y and Z, each a small angular glyph."
+    }
+  ],
+  "questions": [
+    {
+      "id": "E1.1",
+      "promptHtml": "Mandombe word 1",
+      "part": "E1",
+      "partPrompt": "Match the words written in Mandombe to their Romanized equivalents. For each numbered Mandombe word, give the letter (A-V) of the matching Romanized word.",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "wonso",
+        "A. wonso"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.2",
+      "promptHtml": "Mandombe word 2",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [
+        "tiya",
+        "H. tiya"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.3",
+      "promptHtml": "Mandombe word 3",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "M",
+      "acceptedVariants": [
+        "mpuku",
+        "M. mpuku"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.4",
+      "promptHtml": "Mandombe word 4",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [
+        "mfinda",
+        "I. mfinda"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.5",
+      "promptHtml": "Mandombe word 5",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "fumbuka",
+        "F. fumbuka"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.6",
+      "promptHtml": "Mandombe word 6",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "tewa",
+        "B. tewa"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.7",
+      "promptHtml": "Mandombe word 7",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "R",
+      "acceptedVariants": [
+        "simba",
+        "R. simba"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.8",
+      "promptHtml": "Mandombe word 8",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "tuti",
+        "C. tuti"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.9",
+      "promptHtml": "Mandombe word 9",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "ngombe",
+        "E. ngombe"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.10",
+      "promptHtml": "Mandombe word 10",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [
+        "kutu",
+        "G. kutu"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.11",
+      "promptHtml": "Mandombe word 11",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "O",
+      "acceptedVariants": [
+        "fula",
+        "O. fula"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.12",
+      "promptHtml": "Mandombe word 12",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "mwisi",
+        "N. mwisi"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.13",
+      "promptHtml": "Mandombe word 13",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "P",
+      "acceptedVariants": [
+        "zenga",
+        "P. zenga"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.14",
+      "promptHtml": "Mandombe word 14",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "Q",
+      "acceptedVariants": [
+        "zuba",
+        "Q. zuba"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.15",
+      "promptHtml": "Mandombe word 15",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "mfumvu",
+        "D. mfumvu"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.16",
+      "promptHtml": "Mandombe word 16",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "V",
+      "acceptedVariants": [
+        "nani",
+        "V. nani"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.17",
+      "promptHtml": "Mandombe word 17",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "L",
+      "acceptedVariants": [
+        "mongo",
+        "L. mongo"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.18",
+      "promptHtml": "Mandombe word 18",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "U",
+      "acceptedVariants": [
+        "maza",
+        "U. maza"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.19",
+      "promptHtml": "Mandombe word 19",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "S",
+      "acceptedVariants": [
+        "yimbila",
+        "S. yimbila"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.20",
+      "promptHtml": "Mandombe word 20",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [
+        "lumonso",
+        "K. lumonso"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.21",
+      "promptHtml": "Mandombe word 21",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "J",
+      "acceptedVariants": [
+        "mpunda",
+        "J. mpunda"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.22",
+      "promptHtml": "Mandombe word 22",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "T",
+      "acceptedVariants": [
+        "venza",
+        "T. venza"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E2.1",
+      "promptHtml": "The Mandombe numeral for 5",
+      "part": "E2",
+      "partPrompt": "Given the numerals 1, 2, 3, and 4, how would you write 5 in Mandombe? Choose from W, X, Y, and Z.",
+      "gradingMode": "exact",
+      "answerKey": "W",
+      "acceptedVariants": [],
+      "choices": [
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "points": 4
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start by counting things instead of reading them. Count how many separate block-shaped glyphs each Mandombe word contains, and count how many syllables each Romanized word has when you break it up as consonant-plus-vowel chunks (for example ku-tu). Only a few words in the list will stand out as longer than the rest.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Mandombe is a syllabary: one glyph stands for one whole syllable. Each glyph is built from a base shape that carries the consonant, attached to a small hook that carries the vowel, and the hook is drawn in a different rotation or mirror image for each vowel. So two syllables that share a consonant share a base shape, and two syllables that share a vowel share a hook orientation. Hunt for glyphs that recur in more than one word and line them up with syllables that recur in more than one Romanized word.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Here is the counting step on a name from the introduction rather than on the puzzle data. \"Kimbangu\" splits into the syllables Ki-mba-ngu, so in Mandombe it would take three glyphs, and the first and third glyphs would end up looking related because ki and ngu use different consonant bases but you can still compare their vowel hooks. Now do the same splitting for every word in the A-V list and sort the list into two-glyph words and three-glyph words before you try to match anything.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What kind of writing system is this?</h3>\n<p>An alphabet gives one letter per sound (c, a, t). A <em>syllabary</em> gives one symbol per syllable (one symbol for \"ka\", another for \"ki\"). Mandombe is a syllabary, and it is built in a very regular way: every glyph is a base shape that tells you the consonant, plus a small hook attached to it that tells you the vowel. The hook is the same shape every time; only its rotation and its mirror image change from vowel to vowel. (That is also the joke in the footnote about mirrors!)</p>\n<p>This means you do not have to \"read\" anything to solve the problem. You only have to compare shapes with each other.</p>\n<h3>Step 1: count syllables and count glyphs</h3>\n<p>Split each Romanized word into consonant-plus-vowel chunks. Nasal consonants like the <em>mp</em> of <span class=\"data\">mpuku</span> or the <em>mb</em> of <span class=\"data\">ngombe</span> stay attached to the vowel that follows them, so:</p>\n<ul>\n<li><span class=\"data\">ku-tu</span>, <span class=\"data\">ti-ya</span>, <span class=\"data\">mpu-ku</span>, <span class=\"data\">ngo-mbe</span>, <span class=\"data\">ma-za</span> — two syllables each</li>\n<li><span class=\"data\">fu-mbu-ka</span>, <span class=\"data\">yi-mbi-la</span>, <span class=\"data\">lu-mo-nso</span> — three syllables each</li>\n</ul>\n<p>Now look at the Mandombe page. Almost every entry is made of two glyphs, but exactly three entries are made of three glyphs. Those three entries must be the three-syllable words, in some order. That single observation cuts the puzzle down enormously: 19 two-glyph words to match against 19 two-syllable words, and a tiny three-way puzzle on the side.</p>\n<h3>Step 2: use repeated glyphs</h3>\n<p>Because one glyph equals one syllable, any syllable that shows up in two different words must be drawn with the very same glyph in both. So scan for glyphs that appear twice on the page and ask which syllables appear twice in the word list.</p>\n<p>Useful repeats to look for: <span class=\"data\">tu</span> appears in both <span class=\"data\">ku-tu</span> and <span class=\"data\">tu-ti</span>; <span class=\"data\">mpu</span> appears in both <span class=\"data\">mpu-ku</span> and <span class=\"data\">mpu-nda</span>; <span class=\"data\">nso</span> appears in both <span class=\"data\">wo-nso</span> and <span class=\"data\">lu-mo-nso</span>; <span class=\"data\">mo</span> appears in both <span class=\"data\">mo-ngo</span> and <span class=\"data\">lu-mo-nso</span>. Each of these links a pair of entries on the Mandombe page, and once one member of a pair is pinned down the other comes free.</p>\n<h3>Step 3: separate consonant from vowel</h3>\n<p>When two syllables share a consonant but not a vowel (<span class=\"data\">tu</span> versus <span class=\"data\">ti</span>, <span class=\"data\">zu</span> versus <span class=\"data\">ze</span>, <span class=\"data\">mo</span> versus <span class=\"data\">ma</span>), their glyphs share the big base shape and differ only in how the little hook is turned. When two syllables share a vowel but not a consonant (<span class=\"data\">zu</span> versus <span class=\"data\">tu</span>), the hooks match and the bases differ. Sorting the two-glyph entries by \"which base?\" and \"which hook orientation?\" is enough to finish the whole matching.</p>\n<p>Working this through gives the official matching: 1-A, 2-H, 3-M, 4-I, 5-F, 6-B, 7-R, 8-C, 9-E, 10-G, 11-O, 12-N, 13-P, 14-Q, 15-D, 16-V, 17-L, 18-U, 19-S, 20-K, 21-J, 22-T.</p>\n<h3>E2: the numerals</h3>\n<p>Now look again at the four numeral shapes for 1, 2, 3 and 4. They are exactly the little vowel hooks you have just been comparing, and they come in the four orientations used for the four vowels <span class=\"data\">i</span>, <span class=\"data\">u</span>, <span class=\"data\">e</span> and <span class=\"data\">o</span>. In other words, in this script the vowel signs and the digits are the same set of shapes: the syllable glyphs can be read as \"consonant base plus digit 1, 2, 3 or 4\".</p>\n<p>But Kongo has five vowels, not four. The fifth vowel is <span class=\"data\">a</span>, and in the syllable glyphs you found for <span class=\"data\">ma-za</span>, <span class=\"data\">ti-ya</span> and so on, the <span class=\"data\">a</span> hook has its own distinctive shape. If <span class=\"data\">i</span>, <span class=\"data\">u</span>, <span class=\"data\">e</span>, <span class=\"data\">o</span> correspond to 1, 2, 3, 4, then <span class=\"data\">a</span> corresponds to 5. So the numeral 5 must be the same shape as the <span class=\"data\">a</span> hook that you can already see inside the words on the first page — which is option W.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "All Mandombe data is graphical and cannot be transcribed as text, so the 22-word table and both numeral tables are supplied as image crops; please verify the crops capture every glyph cleanly and legibly.\nCROP /content-assets/2021-open-E-words.png page=1 x=14 y=20 w=70 h=70\nCROP /content-assets/2021-open-E-numerals.png page=2 x=14 y=63 w=70 h=11\nCROP /content-assets/2021-open-E-options.png page=2 x=14 y=73 w=70 h=11\nAnswer keys are taken directly from the official solution page (E1: 1-A, 2-H, 3-M, 4-I, 5-F, 6-B, 7-R, 8-C, 9-E, 10-G, 11-O, 12-N, 13-P, 14-Q, 15-D, 16-V, 17-L, 18-U, 19-S, 20-K, 21-J, 22-T; E2: W).\nThe official booklet gives no per-part point split; 11 points were spread over the 22 E1 matches (0.5 each) and 4 points assigned to E2 - adjust if an official breakdown exists.\nE1 answers are stored as bare letters, matching the solution page; the Romanized word is also accepted as a variant.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:e1.1:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.2:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.3:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.4:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.5:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.6:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.7:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.8:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.9:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.10:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.11:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.12:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.13:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.14:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.15:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.16:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.17:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.18:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.19:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.20:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.21:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e1.22:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 22 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~22 API calls that would not resolve it"
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "id": "2022-open-F",
+  "tier": "full",
+  "year": 2022,
+  "round": "open",
+  "letter": "F",
+  "title": "Splash to Save",
+  "authors": [
+    "Catherine Scanlon"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "syntax",
+    "semantics",
+    "morphology"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "standard",
+  "languages": [
+    "Ende"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>Ende is a Pahoturi River language spoken by 600 to 1,000 people in Western Province, Papua New Guinea. Ende speakers are often multilingual due to marriages with speakers of other languages (e.g., Taeme and Kawam). However, in this problem we focus only on Ende. The first part of an Ende story is given below, with the English translation of each sentence directly below the Ende.<sup>1</sup></p>\n<p>(1) <span class=\"data\">Ankom a tärko ubi eragwaeya ddobae ai abal nag dagwaeya.</span><br />Ant and Small Fish, they were really very good friends.</p>\n<p>(2) <span class=\"data\">Ankom obo ma me daeya llo toko me.</span><br />Ant was in his house on top of a tree.</p>\n<p>(3) <span class=\"data\">Tärko walle me daeya ddob kollba nagnag oba peyang.</span><br />Small Fish was in the river with some fish friends.</p>\n<p>(4) <span class=\"data\">Ttongo ag me däbe ttängäm a säresäremang gogon.</span><br />One morning that place was about to rain.</p>\n<p>(5) <span class=\"data\">Yäbäd de ddapall käkan da dakonewän.</span><br />Clouds covered the sun.</p>\n<p>(6) <span class=\"data\">Malla wätali gogon, wel ulle da gongkamän.</span><br />It wasn't long before a big wind began.</p>\n<hr />\n<p><strong>1. Pronunciation notes:</strong></p>\n<ul><li><span class=\"data\">ä</span> is a vowel similar to the first syllable of the English word <em>about</em>.</li><li><span class=\"data\">tt</span> is similar to <em>ch</em> in English (as in <em>church</em>), except that <span class=\"data\">tt</span> is retroflex, meaning that it is pronounced with the tip of the tongue facing the back of the mouth.</li><li><span class=\"data\">dd</span> is similar to the first and last sounds of the English word <em>judge</em>, except that <span class=\"data\">dd</span> is retroflex.</li><li><span class=\"data\">ll</span> is similar to English <em>r</em> (as in <em>read</em>).</li></ul>\n<h3>The rest of the story</h3>\n<p>The English translation for the rest of the story is presented below. The Ende sentences follow, in scrambled order.</p>\n<p><span class=\"blank\" data-q=\"F1.1\"></span> (7) It blew down and broke the tree.</p>\n<p><span class=\"blank\" data-q=\"F1.2\"></span> (8) The wind tore Ant's house and threw Ant into the river.</p>\n<p><span class=\"blank\" data-q=\"F1.3\"></span> (9) When Small Fish saw, he moved closer to him.</p>\n<p><span class=\"blank\" data-q=\"F1.4\"></span> (10) But some big fish were trying to kill him.</p>\n<p><span class=\"blank\" data-q=\"F1.5\"></span> (11) A catfish was about to swallow him.</p>\n<p><span class=\"blank\" data-q=\"F1.6\"></span> (12) Small Fish quickly splashed with his tail, and with water threw Ant on top of the grass, and he was saved.</p>\n<p>(A) <span class=\"data\">Bunkuttang a mäse ngänygäny e dängkamän.</span></p>\n<p>(B) <span class=\"data\">Tärko da mängalae källa gokätaemän a ine peyang ankom bom towall toko we daspunän a ttam gogän.</span></p>\n<p>(C) <span class=\"data\">Ankom bo ma de wel a dapisamän a ankom bom daspunän walle we.</span></p>\n<p>(D) <span class=\"data\">Be ddob kollba ulleulle da gäz e de ada däganeyo.</span></p>\n<p>(E) <span class=\"data\">Llo de duduaibnegnän a dattkaemnegnän.</span></p>\n<p>(F) <span class=\"data\">Tärko da angde ikop dägagän, obo dowae e guinggolän.</span></p>\n<h3>F2.</h3>\n<p>Please provide English translations for the following Ende words:</p>\n<p>a. <span class=\"data\">tärko</span> <span class=\"blank\" data-q=\"F2.1\"></span></p>\n<p>b. <span class=\"data\">walle</span> <span class=\"blank\" data-q=\"F2.2\"></span></p>\n<p>c. <span class=\"data\">daspunän</span> <span class=\"blank\" data-q=\"F2.3\"></span></p>\n<p>d. <span class=\"data\">gongkamän</span> <span class=\"blank\" data-q=\"F2.4\"></span></p>\n<p>e. <span class=\"data\">yäbäd</span> <span class=\"blank\" data-q=\"F2.5\"></span></p>\n<h3>F3.</h3>\n<p>Please provide Ende translations for the following words:</p>\n<p>a. Ant <span class=\"blank\" data-q=\"F3.1\"></span></p>\n<p>b. and <span class=\"blank\" data-q=\"F3.2\"></span></p>\n<p>c. tree <span class=\"blank\" data-q=\"F3.3\"></span></p>\n<p>d. catfish <span class=\"blank\" data-q=\"F3.4\"></span></p>\n<h3>F4.</h3>\n<p>List all of the words from the following list that would appear in the Ende translation for \"Ant got on top of his house.\" You should give at least one word.</p>\n<p><span class=\"data\">tärko, kollba, llo, me, toko, towall, ulleulle, we, wel</span></p>\n<p><span class=\"blank\" data-q=\"F4.1\"></span></p>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "F1.1",
+      "promptHtml": "<p>(7) It blew down and broke the tree.</p>",
+      "part": "F1",
+      "partPrompt": "The English translation for the rest of the story is given as sentences (7)-(12), and the Ende sentences follow in scrambled order as (A)-(F). Match the sentences with their translations by writing the letter of the Ende sentence for each numbered English translation.",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "(E)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F1.2",
+      "promptHtml": "<p>(8) The wind tore Ant's house and threw Ant into the river.</p>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "(C)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F1.3",
+      "promptHtml": "<p>(9) When Small Fish saw, he moved closer to him.</p>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "(F)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F1.4",
+      "promptHtml": "<p>(10) But some big fish were trying to kill him.</p>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "(D)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F1.5",
+      "promptHtml": "<p>(11) A catfish was about to swallow him.</p>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "(A)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F1.6",
+      "promptHtml": "<p>(12) Small Fish quickly splashed with his tail, and with water threw Ant on top of the grass, and he was saved.</p>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "(B)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F2.1",
+      "promptHtml": "<p>a. <span class=\"data\">tärko</span></p>",
+      "part": "F2",
+      "partPrompt": "Please provide English translations for the following Ende words.",
+      "gradingMode": "exact",
+      "answerKey": "small fish",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "F2.2",
+      "promptHtml": "<p>b. <span class=\"data\">walle</span></p>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "river",
+      "acceptedVariants": [
+        "the river"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F2.3",
+      "promptHtml": "<p>c. <span class=\"data\">daspunän</span></p>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "(it) threw (it)",
+      "acceptedVariants": [
+        "threw",
+        "throw",
+        "throws",
+        "thrown",
+        "threw it",
+        "it threw it",
+        "he threw it"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F2.4",
+      "promptHtml": "<p>d. <span class=\"data\">gongkamän</span></p>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "(it) began",
+      "acceptedVariants": [
+        "began",
+        "begin",
+        "begins",
+        "begun",
+        "it began",
+        "started"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F2.5",
+      "promptHtml": "<p>e. <span class=\"data\">yäbäd</span></p>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "(the) sun",
+      "acceptedVariants": [
+        "sun",
+        "the sun"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F3.1",
+      "promptHtml": "<p>a. Ant</p>",
+      "part": "F3",
+      "partPrompt": "Please provide Ende translations for the following words.",
+      "gradingMode": "exact",
+      "answerKey": "ankom",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "F3.2",
+      "promptHtml": "<p>b. and</p>",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "a",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "F3.3",
+      "promptHtml": "<p>c. tree</p>",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "llo",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "F3.4",
+      "promptHtml": "<p>d. catfish</p>",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "bunkuttang",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "F4.1",
+      "promptHtml": "<p>Which words from the list would appear in the Ende translation for \"Ant got on top of his house.\"?</p>",
+      "part": "F4",
+      "partPrompt": "List all of the words from this list that would appear in the Ende translation for \"Ant got on top of his house.\" Give at least one word: tärko, kollba, llo, me, toko, towall, ulleulle, we, wel",
+      "gradingMode": "exact",
+      "answerKey": "toko, we",
+      "acceptedVariants": [
+        "we, toko",
+        "toko we",
+        "we toko"
+      ],
+      "points": 2.5
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start with the two characters. Sentences (1)-(3) tell you which Ende word names each of the two friends, and those names show up again in the scrambled sentences (A)-(F). Any scrambled sentence whose English translation does not mention a character should not begin with a character's name.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Match on three kinds of clue at once: repeated nouns you can pin down from (1)-(6), sentence length (a long English sentence needs a long Ende sentence), and the little grammatical words. Ende puts short markers right after the subject and right after the object of a clause, and it also distinguishes being at rest in a place from moving into a place with different little words after the place expression. Comparing sentence (2) with sentence (12) is the key to the last question.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Here is the little-word method on data that is not graded. In sentence (2) the verb is daeya, since the same form appears in (3), which is also a \"was in ...\" sentence. That leaves two short place expressions in (2), and both end in the same word me, matching the English \"in his house\" and \"on top of a tree\". So me is a location word meaning roughly \"in, at\", and the place noun stands in front of it. Now check what happens in sentence (12), where somebody is moved to a new place.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: find the two characters</h3><p>Sentence (1) says \"Ant and Small Fish, they were really very good friends\" and begins <span class=\"data\">Ankom a tärko ...</span>. Sentence (2) is about Ant and begins <span class=\"data\">Ankom</span>; sentence (3) is about Small Fish and begins <span class=\"data\">Tärko</span>. So <span class=\"data\">ankom</span> names Ant, <span class=\"data\">tärko</span> names Small Fish, and the little word <span class=\"data\">a</span> squeezed between them in (1) is \"and\". You will see <span class=\"data\">a</span> again joining two verbs in some of the scrambled sentences, exactly like English \"and\".</p>\n<h3>Step 2: mine sentences (2)-(6) for nouns</h3><p>Sentence (2): <span class=\"data\">Ankom obo ma me daeya llo toko me</span> = \"Ant was in his house on top of a tree.\" <span class=\"data\">daeya</span> is the \"was\" (it turns up again in (3), another \"was in ...\" sentence), <span class=\"data\">obo</span> is \"his\", and the two place expressions <span class=\"data\">ma me</span> and <span class=\"data\">llo toko me</span> must be \"in his house\" and \"on top of a tree\". Both end in <span class=\"data\">me</span>, so <span class=\"data\">me</span> is the location word \"in / at\", <span class=\"data\">ma</span> is \"house\", <span class=\"data\">llo</span> is \"tree\", and <span class=\"data\">toko</span> adds \"on top\".</p><p>Sentence (3): <span class=\"data\">Tärko walle me daeya ddob kollba nagnag oba peyang</span> = \"Small Fish was in the river with some fish friends.\" Since <span class=\"data\">daeya</span> is \"was\" and <span class=\"data\">me</span> is \"in\", <span class=\"data\">walle</span> is \"river\"; <span class=\"data\">ddob kollba</span> is \"fish\" and <span class=\"data\">peyang</span> is \"friends\".</p><p>Sentence (5): <span class=\"data\">Yäbäd de ddapall käkan da dakonewän</span> = \"Clouds covered the sun.\" Notice the two little markers: <span class=\"data\">de</span> after the first noun and <span class=\"data\">da</span> after the second. Everywhere in this story <span class=\"data\">da</span> (and sometimes <span class=\"data\">a</span>) follows the subject of a clause, while <span class=\"data\">de</span> and <span class=\"data\">bom</span> follow the object. So <span class=\"data\">ddapall käkan</span> is the subject \"clouds\" and <span class=\"data\">yäbäd</span> is the object, \"the sun\".</p><p>Sentence (6): <span class=\"data\">Malla wätali gogon, wel ulle da gongkamän</span> = \"It wasn't long before a big wind began.\" <span class=\"data\">wel</span> with the subject marker <span class=\"data\">da</span> is \"wind\", <span class=\"data\">ulle</span> is \"big\", and the final verb <span class=\"data\">gongkamän</span> means \"(it) began\".</p>\n<h3>Step 3: match the scrambled sentences</h3><p>Now go looking for those known words.</p><ul><li>(E) <span class=\"data\">Llo de duduaibnegnän a dattkaemnegnän.</span> starts with <span class=\"data\">llo</span> \"tree\" plus the object marker <span class=\"data\">de</span>, then two verbs joined by <span class=\"data\">a</span> \"and\". English (7) \"It blew down and broke the tree\" is the only translation with two verbs joined by \"and\" acting on the tree.</li><li>(C) <span class=\"data\">Ankom bo ma de wel a dapisamän a ankom bom daspunän walle we.</span> contains \"house\" as an object (<span class=\"data\">ma de</span>), \"wind\" as a subject (<span class=\"data\">wel a</span>), Ant twice, and <span class=\"data\">walle</span> \"river\". That is English (8).</li><li>(F) <span class=\"data\">Tärko da angde ikop dägagän, obo dowae e guinggolän.</span> has Small Fish as subject and two clauses, matching (9) \"When Small Fish saw, he moved closer to him.\"</li><li>(D) <span class=\"data\">Be ddob kollba ulleulle da gäz e de ada däganeyo.</span> has \"fish\" plus a doubled form of \"big\" (<span class=\"data\">ulleulle</span>, for plural \"big fish\"), which is (10).</li><li>(A) <span class=\"data\">Bunkuttang a mäse ngänygäny e dängkamän.</span> is the only short sentence left, and it starts with a brand-new noun followed by the subject marker <span class=\"data\">a</span>. English (11) introduces one brand-new animal, a catfish, so <span class=\"data\">bunkuttang</span> is \"catfish\".</li><li>(B) is by far the longest Ende sentence and (12) is by far the longest English sentence: it contains Small Fish as subject, Ant with the object marker <span class=\"data\">bom</span>, and <span class=\"data\">towall toko we</span> for \"on top of the grass\".</li></ul>\n<h3>Step 4: the verb \"threw\"</h3><p>Compare (C) <span class=\"data\">... ankom bom daspunän walle we</span> \"threw Ant into the river\" with (B) <span class=\"data\">... ankom bom towall toko we daspunän</span> \"threw Ant on top of the grass\". Both have Ant marked as object by <span class=\"data\">bom</span> and both share the verb <span class=\"data\">daspunän</span>, so <span class=\"data\">daspunän</span> is \"(it) threw (it)\".</p>\n<h3>Step 5: \"in\" versus \"into\" for the last question</h3><p>Look at what follows the place words. In (2) the place expressions end in <span class=\"data\">me</span>, and nothing moves: Ant simply <em>is</em> in his house on top of a tree. In (C) and (B) the place expressions end in <span class=\"data\">we</span>, and something is thrown to a new place: <span class=\"data\">walle we</span> \"into the river\", <span class=\"data\">towall toko we</span> \"onto the top of the grass\". So <span class=\"data\">me</span> is \"in / at\" (no motion) and <span class=\"data\">we</span> is \"into / onto\" (motion). \"Ant got on top of his house\" describes motion to a new position, so the Ende version needs the \"on top\" word together with the motion marker, and none of the other listed words (\"small fish\", \"fish\", \"tree\", \"grass\", \"big\", \"wind\", and the no-motion location marker) belong in that sentence.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken verbatim from the official solution pages (F1: 7=E, 8=C, 9=F, 10=D, 11=A, 12=B; F2 a-e; F3 a-d; F4 = toko and we). The official solution gives no per-part point breakdown, so the 10 points were distributed evenly across the 15 short blanks (0.5 each) with the remaining 2.5 assigned to F4 - adjust if a rubric surfaces. The booklet prints two decorative clip-art images (an ant and a fish) on page 1; they carry no data and were omitted rather than cropped. F4 is printed as a 'circle all the words' task; here it is a single text blank whose key lists both words.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:f1.1:choices",
+      "a": "A|B|C|D|E|F",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.2:choices",
+      "a": "A|B|C|D|E|F",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.3:choices",
+      "a": "A|B|C|D|E|F",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.4:choices",
+      "a": "A|B|C|D|E|F",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.5:choices",
+      "a": "A|B|C|D|E|F",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.6:choices",
+      "a": "A|B|C|D|E|F",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 6 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~6 API calls that would not resolve it"
+    }
+  ]
+}

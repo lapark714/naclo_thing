@@ -1,11 +1,13 @@
 {
   "id": "2021-open-F",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2021,
   "round": "open",
   "letter": "F",
   "title": "The Wiles of Reptiles",
-  "authors": [],
+  "authors": [
+    "Daniel Lovsted"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
     "morphology",
@@ -18,10 +20,190 @@
   ],
   "officialPoints": 15,
   "officialTimeMinutes": 27,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Here are eight sentences in Dime.<sup>1</sup> The first seven are given along with their English translations.</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>1.</td><td><span class=\"data\">guurafis kénim šuiftin</span></td><td>The crocodiles deceived them.</td></tr>\n<tr><td>2.</td><td><span class=\"data\">ʔaté goštú gúdúmubim ʔóllóχ kúbit</span></td><td>I carried a tall man slowly.</td></tr>\n<tr><td>3.</td><td><span class=\"data\">wúdúr čək’k’ind s’áámisim yefin</span></td><td>A small girl saw the eagle.</td></tr>\n<tr><td>4.</td><td><span class=\"data\">guuru bášmubis ʔeftafim gáʔin</span></td><td>The fearful crocodile bit birds.</td></tr>\n<tr><td>5.</td><td><span class=\"data\">zimaf daχidis zití s’anubim ʔólóχ maddin</span></td><td>The strong chiefs helped a black ox quickly.</td></tr>\n<tr><td>6.</td><td><span class=\"data\">kété ʔámzi kitimindim kóχin</span></td><td>They loved a selfish woman.</td></tr>\n<tr><td>7.</td><td><span class=\"data\">goštáf koχsimid s’ááme koχsimubisim šiʔin</span></td><td>Pleasant men washed the pleasant eagle.</td></tr>\n<tr><td>8.</td><td><span class=\"data\">ʔámzaf gúdúmidis zime bášmubim kúbin</span></td><td></td></tr>\n</tbody>\n</table>\n</div>\n<p><em>Notes:</em></p>\n<p><em>In this problem, an accent above a vowel (e.g., in “kété”) indicates that the vowel has high tone. Unmarked vowels have low tone. A consonant or vowel written twice in a row (e.g., in “guurafis”) is pronounced for a longer time by the speaker. An apostrophe following a consonant (e.g., in “s’anubim”) indicates that the consonant is pronounced ejectively (i.e., with air pressure produced in the throat instead of the lungs).</em></p>\n<p>The six sentences below were uttered by a linguist who had been trying to learn Dime. Unfortunately, only three of them were fully understood by native speakers; the other three were deemed incorrect, meaning they contained mistakes or were not understood at all.</p>\n<p><strong>(a)</strong> <span class=\"data\">ʔaté s’ááme s’anubim kóχin</span></p>\n<ul>\n<li>W. The sentence is correct as is (change nothing).</li>\n<li>X. Change “<span class=\"data\">kóχin</span>” to “<span class=\"data\">kóχit</span>”.</li>\n<li>Y. Change “<span class=\"data\">s’anubim</span>” to “<span class=\"data\">s’anudim</span>”.</li>\n<li>Z. Change “<span class=\"data\">s’ááme</span>” to “<span class=\"data\">s’áámaf</span>”.</li>\n</ul>\n<p><strong>(b)</strong> <span class=\"data\">wúdúraf gúdúmid zime kitimubisim ʔóllóχ šuiftin</span></p>\n<ul>\n<li>W. The sentence is correct as is (change nothing).</li>\n<li>X. Change “<span class=\"data\">wúdúraf gúdúmid</span>” to “<span class=\"data\">wúdúrid gúdúmaf</span>”.</li>\n<li>Y. Change “<span class=\"data\">šuiftin</span>” to “<span class=\"data\">šuiftit</span>”.</li>\n<li>Z. Change “<span class=\"data\">ʔóllóχ</span>” to “<span class=\"data\">ʔámzi</span>”.</li>\n</ul>\n<p><strong>(c)</strong> <span class=\"data\">goštú zitáfisim koχsim yefin</span></p>\n<ul>\n<li>W. The sentence is correct as is (change nothing).</li>\n<li>X. Change “<span class=\"data\">goštú zitáfisim</span>” to “<span class=\"data\">goštáfis zitáfid</span>”.</li>\n<li>Y. Change “<span class=\"data\">zitáfisim</span>” to “<span class=\"data\">zitidim</span>”.</li>\n<li>Z. Change “<span class=\"data\">zitáfisim koχsim</span>” to “<span class=\"data\">zitáf koχsimidisim</span>”.</li>\n</ul>\n<p><strong>(d)</strong> <span class=\"data\">wúdúris guuru s’anisubim maddin</span></p>\n<ul>\n<li>W. The sentence is correct as is (change nothing).</li>\n<li>X. Change “<span class=\"data\">s’anisubim</span>” to “<span class=\"data\">s’anindisim</span>”.</li>\n<li>Y. Change “<span class=\"data\">s’anisubim</span>” to “<span class=\"data\">s’anubisim</span>”.</li>\n<li>Z. Change “<span class=\"data\">s’anisubim</span>” to “<span class=\"data\">s’anisim</span>”.</li>\n</ul>\n<p><strong>(e)</strong> <span class=\"data\">goštú čək’k’ubis kénim šiʔin</span></p>\n<ul>\n<li>W. The sentence is correct as is (change nothing).</li>\n<li>X. Change “<span class=\"data\">čək’k’ubis kénim</span>” to “<span class=\"data\">čək’k’im kété</span>”.</li>\n<li>Y. Change “<span class=\"data\">goštú čək’k’ubis</span>” to “<span class=\"data\">goštaf čək’k’idis</span>”.</li>\n<li>Z. Change “<span class=\"data\">šiʔin</span>” to “<span class=\"data\">šiʔit</span>”.</li>\n</ul>\n<p><strong>(f)</strong> <span class=\"data\">kété s’ááme bášmubisim ʔólóχ gáʔin</span></p>\n<ul>\n<li>W. The sentence is correct as is (change nothing).</li>\n<li>X. Change “<span class=\"data\">ʔólóχ</span>” to “<span class=\"data\">ʔámzi</span>”.</li>\n<li>Y. Change “<span class=\"data\">s’ááme</span>” to “<span class=\"data\">s’áámim</span>”.</li>\n<li>Z. Change “<span class=\"data\">bášmubisim</span>” to “<span class=\"data\">bášmidisim</span>”.</li>\n</ul>\n<p><small><sup>1</sup> Dime is an Afroasiatic language spoken in Ethiopia. Estimates of the number of speakers of Dime vary from a few hundred, on the low end, up to a few thousand; all studies agree, however, that the number of speakers is decreasing, and the language is threatened with extinction. Dime speakers live in a series of farming communities located along a mountain range and have relatively little contact with outside groups. The speakers are skilled metal producers, with techniques for extracting and smelting ores forming an important part of their traditional cultural knowledge.</small></p>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "F1.1",
+      "promptHtml": "<p>8. <span class=\"data\">ʔámzaf gúdúmidis zime bášmubim kúbin</span></p>",
+      "part": "F1",
+      "partPrompt": "Translate the eighth sentence into English.",
+      "gradingMode": "llm",
+      "answerKey": "The tall women carried a fearful chief.",
+      "acceptedVariants": [],
+      "points": 3
+    },
+    {
+      "id": "F2.1",
+      "promptHtml": "<p><strong>(a)</strong> <span class=\"data\">ʔaté s’ááme s’anubim kóχin</span></p>",
+      "part": "F2",
+      "partPrompt": "For each of the following six sentences, choose from the options provided to convert it into a grammatically correct Dime sentence. (Remember that three of the sentences are already grammatically correct - for these three sentences, you should choose option W.) For every sentence, only one option will successfully produce a grammatically correct sentence. Answer with the letter W, X, Y or Z.",
+      "gradingMode": "exact",
+      "answerKey": "X",
+      "acceptedVariants": [],
+      "choices": [
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "points": 1
+    },
+    {
+      "id": "F2.2",
+      "promptHtml": "<p><strong>(b)</strong> <span class=\"data\">wúdúraf gúdúmid zime kitimubisim ʔóllóχ šuiftin</span></p>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "W",
+      "acceptedVariants": [],
+      "choices": [
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "points": 1
+    },
+    {
+      "id": "F2.3",
+      "promptHtml": "<p><strong>(c)</strong> <span class=\"data\">goštú zitáfisim koχsim yefin</span></p>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "Z",
+      "acceptedVariants": [],
+      "choices": [
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "points": 1
+    },
+    {
+      "id": "F2.4",
+      "promptHtml": "<p><strong>(d)</strong> <span class=\"data\">wúdúris guuru s’anisubim maddin</span></p>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "Y",
+      "acceptedVariants": [],
+      "choices": [
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "points": 1
+    },
+    {
+      "id": "F2.5",
+      "promptHtml": "<p><strong>(e)</strong> <span class=\"data\">goštú čək’k’ubis kénim šiʔin</span></p>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "W",
+      "acceptedVariants": [],
+      "choices": [
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "points": 1
+    },
+    {
+      "id": "F2.6",
+      "promptHtml": "<p><strong>(f)</strong> <span class=\"data\">kété s’ááme bášmubisim ʔólóχ gáʔin</span></p>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "W",
+      "acceptedVariants": [],
+      "choices": [
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "points": 1
+    },
+    {
+      "id": "F3.1",
+      "promptHtml": "<p><strong>(a)</strong> <span class=\"data\">ʔaté s’ááme s’anubim kóχin</span> (corrected version)</p>",
+      "part": "F3",
+      "partPrompt": "Translate the corrected versions (or the original versions, for the sentences that were already correct) of the six sentences above into English.",
+      "gradingMode": "llm",
+      "answerKey": "I loved a black eagle.",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "F3.2",
+      "promptHtml": "<p><strong>(b)</strong> <span class=\"data\">wúdúraf gúdúmid zime kitimubisim ʔóllóχ šuiftin</span> (corrected version)</p>",
+      "part": "F3",
+      "gradingMode": "llm",
+      "answerKey": "Tall girls deceived the selfish chief slowly.",
+      "acceptedVariants": [
+        "Tall girls slowly deceived the selfish chief."
+      ],
+      "points": 1
+    },
+    {
+      "id": "F3.3",
+      "promptHtml": "<p><strong>(c)</strong> <span class=\"data\">goštú zitáfisim koχsim yefin</span> (corrected version)</p>",
+      "part": "F3",
+      "gradingMode": "llm",
+      "answerKey": "A man saw the pleasant oxen.",
+      "acceptedVariants": [
+        "A man saw the pleasant oxes."
+      ],
+      "points": 1
+    },
+    {
+      "id": "F3.4",
+      "promptHtml": "<p><strong>(d)</strong> <span class=\"data\">wúdúris guuru s’anisubim maddin</span> (corrected version)</p>",
+      "part": "F3",
+      "gradingMode": "llm",
+      "answerKey": "The girl helped the black crocodile.",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "F3.5",
+      "promptHtml": "<p><strong>(e)</strong> <span class=\"data\">goštú čək’k’ubis kénim šiʔin</span> (corrected version)</p>",
+      "part": "F3",
+      "gradingMode": "llm",
+      "answerKey": "The small man washed them.",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "F3.6",
+      "promptHtml": "<p><strong>(f)</strong> <span class=\"data\">kété s’ááme bášmubisim ʔólóχ gáʔin</span> (corrected version)</p>",
+      "part": "F3",
+      "gradingMode": "llm",
+      "answerKey": "They bit a fearful eagle quickly.",
+      "acceptedVariants": [
+        "They quickly bit a fearful eagle.",
+        "They bit the fearful eagle quickly."
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start by lining up the word order. In every sentence the subject comes first, then the object, then the verb, and inside a noun phrase the noun comes before its adjective. Once you know which chunk is subject and which is object, compare the endings that get piled onto the ends of those chunks.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Each noun phrase carries up to three pieces of information in a fixed order: gender/number first, then definiteness (\"the\" versus \"a\"), then case (whether it is the object). The key discovery is that these endings attach to the noun only when there is no adjective; when an adjective follows the noun, the endings move onto the adjective, and the noun keeps just a plural marker if it is plural. The verb also ends differently depending on whether the subject is \"I\" or a third person.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Work sentence 1 as a model: guurafis kénim šuiftin, \"The crocodiles deceived them.\" There is no adjective, so all the endings sit on the noun: guura (crocodile) + af (plural) + is (definite), and no object ending because it is the subject. Compare sentence 4, guuru bášmubis, where the same word for crocodile appears bare and the endings -ub (masculine singular) and -is (definite) sit on the adjective bášm- instead. Now try the same slot-by-slot analysis on the sentences the linguist produced.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: find the skeleton of a sentence</h3>\n<p>Compare sentence 4: <span class=\"data\">guuru bášmubis ʔeftafim gáʔin</span> = \"The fearful crocodile bit birds.\" The word for the biter comes first, the bitten things second, and the verb last. That is <strong>Subject - Object - Verb</strong> order (SOV). Inside the phrase \"the fearful crocodile\" the noun (<span class=\"data\">guuru</span>, crocodile) comes before the adjective (<span class=\"data\">bášm-</span>, fearful), so noun phrases are <strong>Noun - Adjective</strong>.</p>\n<p>Sentences 2 and 5 show that an adverb such as <span class=\"data\">ʔóllóχ</span> \"slowly\" or <span class=\"data\">ʔólóχ</span> \"quickly\" sits just before the verb. Notice that these two words differ only in how long the <em>ll</em> is - length is meaningful in Dime.</p>\n<h3>Step 2: the verb endings</h3>\n<p>Every verb here ends in <span class=\"data\">-i-</span> plus a final consonant: <span class=\"data\">šuift-i-n</span>, <span class=\"data\">kúb-i-t</span>, <span class=\"data\">yef-i-n</span>. The <span class=\"data\">-i-</span> marks past tense. The final consonant agrees with the subject: <strong>-t</strong> when the subject is \"I\" (<span class=\"data\">ʔaté ... kúbit</span> \"I carried\"), <strong>-n</strong> when the subject is a third person (\"the crocodiles\", \"they\", \"a girl\").</p>\n<h3>Step 3: the noun-phrase endings</h3>\n<p>When there is <em>no</em> adjective, the endings stack on the noun in a fixed order:</p>\n<ul><li>gender/number: <span class=\"data\">-af</span> plural, nothing for singular</li><li>definiteness: <span class=\"data\">-is</span> for \"the\", nothing for \"a\"</li><li>case: <span class=\"data\">-im</span> when the phrase is the object, nothing when it is the subject</li></ul>\n<p>So <span class=\"data\">guura-af-is</span> gives <span class=\"data\">guurafis</span> \"the crocodiles\" (subject), and <span class=\"data\">ʔefta-af-im</span> gives <span class=\"data\">ʔeftafim</span> \"birds\" (object, indefinite). Also compare <span class=\"data\">s’ááme</span> \"eagle\" in sentence 7 with <span class=\"data\">s’áám-is-im</span> \"the eagle (object)\" in sentence 3: the final vowel of the root drops before an ending.</p>\n<p>When an adjective <em>is</em> present, the endings move onto the adjective, and the noun keeps only its plural marker:</p>\n<ul><li>gender/number on the adjective: <span class=\"data\">-ub</span> masculine singular, <span class=\"data\">-ind</span> feminine singular, <span class=\"data\">-id</span> plural</li><li>then <span class=\"data\">-is</span> definite, then <span class=\"data\">-im</span> accusative, as before</li></ul>\n<p>Examples: <span class=\"data\">guuru bášm-ub-is</span> \"the fearful crocodile\" (subject, masculine singular); <span class=\"data\">ʔámzi kitim-ind-im</span> \"a selfish woman\" (object, feminine singular); <span class=\"data\">zimaf daχ-id-is</span> \"the strong chiefs\" (noun keeps plural <span class=\"data\">-af</span>, adjective takes plural <span class=\"data\">-id</span> plus definite <span class=\"data\">-is</span>). Animals and chiefs count as masculine by default. One extra detail: a noun whose singular ends in a high-tone vowel keeps that high tone in its plural, so <span class=\"data\">goštú</span> \"man\" becomes <span class=\"data\">goštáf</span> \"men\" (not <span class=\"data\">goštaf</span>).</p>\n<h3>Step 4: the vocabulary</h3>\n<p>Nouns: <span class=\"data\">guura</span> crocodile, <span class=\"data\">ʔefta</span> bird, <span class=\"data\">s’ááme</span> eagle, <span class=\"data\">wúdúr</span> girl, <span class=\"data\">goštú</span> man, <span class=\"data\">ʔámzi</span> woman, <span class=\"data\">zime</span> chief, <span class=\"data\">zití</span> ox. Pronouns: <span class=\"data\">ʔaté</span> I, <span class=\"data\">kété</span> they, <span class=\"data\">kénim</span> them. Adjectives: <span class=\"data\">gúdúm</span> tall, <span class=\"data\">čək’k’</span> small, <span class=\"data\">bášm</span> fearful, <span class=\"data\">kitim</span> selfish, <span class=\"data\">s’an</span> black, <span class=\"data\">daχ</span> strong, <span class=\"data\">koχsim</span> pleasant. Verbs: <span class=\"data\">šuift-</span> deceive, <span class=\"data\">kúb-</span> carry, <span class=\"data\">yef-</span> see, <span class=\"data\">gáʔ-</span> bite, <span class=\"data\">madd-</span> help, <span class=\"data\">kóχ-</span> love, <span class=\"data\">šiʔ-</span> wash.</p>\n<h3>Step 5: sentence 8</h3>\n<p><span class=\"data\">ʔámzaf gúdúmidis zime bášmubim kúbin</span>: the subject is <span class=\"data\">ʔámza-af</span> \"women\" plus <span class=\"data\">gúdúm-id-is</span> \"tall\" (plural, definite, no object ending); the object is <span class=\"data\">zime bášm-ub-im</span> \"a fearful chief\" (masculine singular, indefinite, object); the verb <span class=\"data\">kúb-i-n</span> is past with a third-person subject. Hence: <em>The tall women carried a fearful chief.</em></p>\n<h3>Step 6: judging the linguist's six sentences</h3>\n<p><strong>(a)</strong> <span class=\"data\">ʔaté s’ááme s’anubim kóχin</span>: the subject is <span class=\"data\">ʔaté</span> \"I\", so the verb must end in <strong>-t</strong>, not -n. Option X fixes it: <span class=\"data\">kóχit</span>. Meaning: \"I loved a black eagle.\"</p>\n<p><strong>(b)</strong> <span class=\"data\">wúdúraf gúdúmid zime kitimubisim ʔóllóχ šuiftin</span>: subject \"tall girls\" (plural, indefinite), object \"the selfish chief\" (masculine singular, definite, accusative), adverb \"slowly\", verb third person past. Everything fits, so option W. Meaning: \"Tall girls deceived the selfish chief slowly.\"</p>\n<p><strong>(c)</strong> <span class=\"data\">goštú zitáfisim koχsim yefin</span>: the endings sit on the noun even though an adjective follows - not allowed. Option Z rebuilds the object as <span class=\"data\">zitáf koχsimidisim</span> (noun keeps plural <span class=\"data\">-af</span>; adjective takes plural + definite + accusative). Meaning: \"A man saw the pleasant oxen.\"</p>\n<p><strong>(d)</strong> <span class=\"data\">wúdúris guuru s’anisubim maddin</span>: here the definite <span class=\"data\">-is</span> comes before the gender marker <span class=\"data\">-ub</span>, which is the wrong order. Option Y gives <span class=\"data\">s’anubisim</span> (gender, then definiteness, then case). Meaning: \"The girl helped the black crocodile.\"</p>\n<p><strong>(e)</strong> <span class=\"data\">goštú čək’k’ubis kénim šiʔin</span>: \"the small man\" as subject, \"them\" as object, third-person past verb - all correct, so option W. Meaning: \"The small man washed them.\" (Option Y fails because <span class=\"data\">goštaf</span> is missing the high tone that <span class=\"data\">goštáf</span> must keep.)</p>\n<p><strong>(f)</strong> <span class=\"data\">kété s’ááme bášmubisim ʔólóχ gáʔin</span>: \"they\" as subject, an eagle described as fearful as object, \"quickly\", third-person past verb - correct, so option W. The official translation is \"They bit a fearful eagle quickly.\"</p>",
   "reviewStatus": "published"
 }

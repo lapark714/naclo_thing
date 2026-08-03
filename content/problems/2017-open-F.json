@@ -1,0 +1,216 @@
+{
+  "id": "2017-open-F",
+  "tier": "full",
+  "year": 2017,
+  "round": "open",
+  "letter": "F",
+  "title": "Transition(al) Numbers",
+  "authors": [
+    "Harold Somers"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "number systems"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "standard",
+  "languages": [
+    "English"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>The following diagram represents a “transition network” (also known as a “finite state automaton”). The circles represent “states” while the boxes represent letter sequence that can be “generated” from any given state, as indicated by the lines (the “transitions”). The aim is to start at “S” and get to the end state “0”. For some boxes there is a choice of transition. The lines are directional (it would have been even more messy to add the arrowheads), so note that you can only enter a state from the front (left). So you can go from “ty” to “S”, but not the other direction.</p>\n<figure><img src=\"/content-assets/2017-open-F-network.png\" alt=\"Transition network with a start state S on the left, an end state 0 on the right, and states 1 and 2 in the middle. Boxes between them are labelled one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thir, fif, twen, for, plus a box teen leading out of state 1 and a box ty leading out of state 2.\" /></figure>\n<p>The above diagram is already quite messy, and it can be represented more neatly by a set of rules as on the next page. Each rule is identified (in square brackets) but this is ONLY for ease of reference in answering the questions. Apart from that, each rule consists of a state (the symbol before the “:”), a text string, and then, after the arrow (“-&gt;”), a list of states to which you can then move. Starting at position “S”, you generate the text indicated, and then continue to any ONE of the states listed after the arrow. State “0” is a special case meaning “finish”.</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>[a]</td><td><span class=\"data\">S: one -&gt; 0</span></td></tr>\n<tr><td>[b]</td><td><span class=\"data\">S: two -&gt; 0</span></td></tr>\n<tr><td>[c]</td><td><span class=\"data\">S: three -&gt; 0</span></td></tr>\n<tr><td>[d]</td><td><span class=\"data\">S: four -&gt; 0,1</span></td></tr>\n<tr><td>[e]</td><td><span class=\"data\">S: five -&gt; 0</span></td></tr>\n<tr><td>[f]</td><td><span class=\"data\">S: six -&gt; 0,1,2</span></td></tr>\n<tr><td>[g]</td><td><span class=\"data\">S: seven -&gt; 0,1,2</span></td></tr>\n<tr><td>[h]</td><td><span class=\"data\">S: eight -&gt; 0,1,2</span></td></tr>\n<tr><td>[i]</td><td><span class=\"data\">S: nine -&gt; 0,1,2</span></td></tr>\n<tr><td>[j]</td><td><span class=\"data\">S: ten -&gt; 0</span></td></tr>\n<tr><td>[k]</td><td><span class=\"data\">S: eleven -&gt; 0</span></td></tr>\n<tr><td>[l]</td><td><span class=\"data\">S: twelve -&gt; 0</span></td></tr>\n<tr><td>[m]</td><td><span class=\"data\">S: thir -&gt; 1,2</span></td></tr>\n<tr><td>[n]</td><td><span class=\"data\">S: fif -&gt; 1,2</span></td></tr>\n<tr><td>[o]</td><td><span class=\"data\">S: twen -&gt; 2</span></td></tr>\n<tr><td>[p]</td><td><span class=\"data\">S: for -&gt; 2</span></td></tr>\n<tr><td>[q]</td><td><span class=\"data\">1: teen -&gt; 0</span></td></tr>\n<tr><td>[r]</td><td><span class=\"data\">2: ty -&gt; S,0</span></td></tr>\n</tbody>\n</table>\n</div>\n<p>So for example, we can generate “fourteen” by taking rule [d] then rule [q]. We cannot generate “twelveteen” because rule [l] only allows one way to progress, namely to finish.</p>\n<p>Answer the following questions in the Answer Sheets.</p>",
+  "assets": [
+    {
+      "src": "/content-assets/2017-open-F-network.png",
+      "alt": "Transition network with a start state S on the left, an end state 0 on the right, and states 1 and 2 in the middle. Boxes between them are labelled one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thir, fif, twen, for, plus a box teen leading out of state 1 and a box ty leading out of state 2."
+    }
+  ],
+  "questions": [
+    {
+      "id": "F1.1",
+      "promptHtml": "a. <span class=\"data\">sixteen</span>",
+      "part": "F1",
+      "partPrompt": "Write out the sequence of rules and states followed to generate the following words. For example, for \"fourteen,\" you would write \"d 1 q 0\".",
+      "gradingMode": "exact",
+      "answerKey": "f 1 q 0",
+      "acceptedVariants": [
+        "f1q0",
+        "f, 1, q, 0"
+      ],
+      "points": 1
+    },
+    {
+      "id": "F1.2",
+      "promptHtml": "b. <span class=\"data\">ninetythree</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "i 2 r S c 0",
+      "acceptedVariants": [
+        "i2rSc0",
+        "i, 2, r, S, c, 0"
+      ],
+      "points": 1
+    },
+    {
+      "id": "F1.3",
+      "promptHtml": "c. <span class=\"data\">twentyeight</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "o 2 r S h 0",
+      "acceptedVariants": [
+        "o2rSh0",
+        "o, 2, r, S, h, 0"
+      ],
+      "points": 1
+    },
+    {
+      "id": "F1.4",
+      "promptHtml": "d. <span class=\"data\">fifteen</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "n 1 q 0",
+      "acceptedVariants": [
+        "n1q0",
+        "n, 1, q, 0"
+      ],
+      "points": 1
+    },
+    {
+      "id": "F2.1",
+      "promptHtml": "a. <span class=\"data\">oneten</span>",
+      "part": "F2",
+      "partPrompt": "The network above \"overgenerates\", that is, it allows us to create words which are not valid numbers. For each of the following words, write Y if the word can be generated by the network, or write N if the word cannot be generated by the network.",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "No"
+      ],
+      "choices": [
+        "Y",
+        "N"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F2.2",
+      "promptHtml": "b. <span class=\"data\">fiftytwelve</span>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "Y",
+      "acceptedVariants": [
+        "Yes"
+      ],
+      "choices": [
+        "Y",
+        "N"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F2.3",
+      "promptHtml": "c. <span class=\"data\">sixteensix</span>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "No"
+      ],
+      "choices": [
+        "Y",
+        "N"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F2.4",
+      "promptHtml": "d. <span class=\"data\">twentyfourteen</span>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "Y",
+      "acceptedVariants": [
+        "Yes"
+      ],
+      "choices": [
+        "Y",
+        "N"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F2.5",
+      "promptHtml": "e. <span class=\"data\">fortythirty</span>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "Y",
+      "acceptedVariants": [
+        "Yes"
+      ],
+      "choices": [
+        "Y",
+        "N"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F2.6",
+      "promptHtml": "f. <span class=\"data\">eleventythree</span>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "No"
+      ],
+      "choices": [
+        "Y",
+        "N"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F2.7",
+      "promptHtml": "g. <span class=\"data\">fivety</span>",
+      "part": "F2",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "No"
+      ],
+      "choices": [
+        "Y",
+        "N"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "F3.1",
+      "promptHtml": "<p>Write the two new rules that replace rule [h].</p>",
+      "part": "F3",
+      "partPrompt": "The above network currently generates a misspelling in the case of \"eighteen\" as well as any number beginning with \"eighty.\" This can be fixed by removing rule [h] and replacing it with two new rules (both of which will be similar to rule [h]). Write the two new rules that need to replace rule [h]. NOTE: For full points, make sure that the modified network still generates \"eight\" without misspelling it.",
+      "gradingMode": "llm",
+      "answerKey": "Solution (1): Change rule [h] as follows S : eight -> 0. And add new rule S: eigh -> 1,2. Solution (2): Add new rule: S: eigh -> 1, 2, 3. Add a second new rule: 3: t -> 0. There may be other (less elegant) solutions.",
+      "acceptedVariants": [],
+      "points": 2.5
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Treat the rule list as the whole puzzle; you do not need the messy diagram at all. Each rule tells you three things: which state you must be in to use it, what letters it writes, and which states you are allowed to move to next. A word is only generatable if you can start at S, spell it out piece by piece, and land in state 0 exactly as the last letter is written.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Work left to right through the word, and at each step ask two questions: is there a rule in my current state whose text matches the letters coming next, and does that rule list a state that lets me continue? Rule [r] is the interesting one, because \"ty\" can send you either to 0 (finish) or back to S (start over), which is why tens-plus-units words work. Rules that only list 0, like [a], [j], [k] and [l], are dead ends: nothing can follow them.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Practice on \"thirteen\", which is not one of the graded items. From S the only rule matching \"thir\" is [m], which allows a move to state 1 or state 2. Take state 1. In state 1 the only rule is [q], writing \"teen\" and moving to 0. So the trace is written as the rule letter, then the state you moved to, then the next rule letter, then the state you moved to: m 1 q 0. Notice that the answer alternates rule, state, rule, state and always ends in 0.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What a transition network is</h3>\n<p>A transition network (or finite state automaton) is a tiny machine for spelling words. It has <em>states</em> (here S, 1, 2 and 0) and <em>rules</em>. Each rule says: “if you are in this state, you may write out this piece of text, and then you must move to one of these states.” You always start in S, and you have succeeded only if you end up in state 0 with nothing left to write.</p>\n<p>So rule [d] <span class=\"data\">S: four -&gt; 0,1</span> means: from S you may write <span class=\"data\">four</span>, and then choose to finish (0) or go to state 1. From state 1 the only rule is [q] <span class=\"data\">1: teen -&gt; 0</span>, which writes <span class=\"data\">teen</span> and finishes. That is why [d] then [q] gives <span class=\"data\">fourteen</span>, written as the trace <span class=\"data\">d 1 q 0</span>: rule, the state you moved to, rule, the state you moved to.</p>\n<h3>F1: tracing a word</h3>\n<p>Chop the word into pieces that match rule texts, then check the states line up.</p>\n<p><span class=\"data\">sixteen</span> splits as <span class=\"data\">six</span> + <span class=\"data\">teen</span>. From S, rule [f] writes <span class=\"data\">six</span> and offers 0, 1 or 2. We need <span class=\"data\">teen</span> next, and <span class=\"data\">teen</span> only exists in state 1, so choose 1. Then [q] writes <span class=\"data\">teen</span> and moves to 0. Trace: <span class=\"data\">f 1 q 0</span>.</p>\n<p><span class=\"data\">ninetythree</span> splits as <span class=\"data\">nine</span> + <span class=\"data\">ty</span> + <span class=\"data\">three</span>. Rule [i] writes <span class=\"data\">nine</span> and offers 0, 1 or 2; <span class=\"data\">ty</span> lives in state 2, so go to 2. Rule [r] <span class=\"data\">2: ty -&gt; S,0</span> writes <span class=\"data\">ty</span>; because there is still <span class=\"data\">three</span> to come, we take the other option and go back to S. From S, rule [c] writes <span class=\"data\">three</span> and finishes. Trace: <span class=\"data\">i 2 r S c 0</span>. This loop back to S is exactly what lets English glue a tens word onto a units word.</p>\n<p>The same reasoning gives <span class=\"data\">twen</span> + <span class=\"data\">ty</span> + <span class=\"data\">eight</span> and <span class=\"data\">fif</span> + <span class=\"data\">teen</span>. Note that a trace always alternates rule letter and state, and always ends with 0.</p>\n<h3>F2: can the machine make this word?</h3>\n<p>Here you only have to decide yes or no, so look for the point where the machine gets stuck. Two things stop a word:</p>\n<ul>\n<li><strong>A dead-end rule.</strong> Rules whose only continuation is 0 (for example [a] <span class=\"data\">one</span>, [j] <span class=\"data\">ten</span>, [k] <span class=\"data\">eleven</span>, [l] <span class=\"data\">twelve</span>, [e] <span class=\"data\">five</span>) must finish immediately. So any word that starts with one of those and then continues is impossible — the machine has no way to keep going.</li>\n<li><strong>Stopping in the wrong place.</strong> If you reach the end of the word but you are sitting in state 1 or 2 rather than 0, the word is not generated either.</li>\n</ul>\n<p>A word that <em>does</em> work: <span class=\"data\">sixtythree</span> (not one of the graded items) goes [f] to 2, [r] back to S, [c] to 0. A word that fails: <span class=\"data\">tenty</span>, because [j] <span class=\"data\">ten</span> allows only 0, and <span class=\"data\">ty</span> requires state 2.</p>\n<p>The important idea is that the network <em>overgenerates</em>: it happily produces strings that are not real English numbers, such as a tens word followed by a teen. A network is a rough model of a language, and part of doing computational linguistics is noticing where the model is too generous.</p>\n<h3>F3: fixing the “eight” spelling</h3>\n<p>Rule [h] writes the letters <span class=\"data\">eight</span> and then permits 0, 1 or 2. That is fine for the word <span class=\"data\">eight</span> on its own, but if you continue to state 1 you get <span class=\"data\">eightteen</span> with two t's, and going to state 2 gives <span class=\"data\">eightty</span>. English spells these with a single t: <span class=\"data\">eighteen</span>, <span class=\"data\">eighty</span>.</p>\n<p>So the letters <span class=\"data\">eight</span> and the letters <span class=\"data\">eigh</span> need different continuations. The cleanest repair splits rule [h] in two: one rule that writes the full <span class=\"data\">eight</span> and can only finish, and one rule that writes just <span class=\"data\">eigh</span> and goes on to the <span class=\"data\">teen</span> or <span class=\"data\">ty</span> states, so the single t comes from those suffixes.</p>\n<p>A different but equally valid repair invents a brand-new state whose only job is to write the letter <span class=\"data\">t</span> and finish, so that <span class=\"data\">eigh</span> can reach either a suffix state or that new state. Both repairs keep the plain word <span class=\"data\">eight</span> spelled correctly, which the problem specifically asks you to check — a very common trap when you patch a grammar: the fix for one word breaks another.</p>",
+  "reviewStatus": "published"
+}

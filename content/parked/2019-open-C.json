@@ -1,0 +1,455 @@
+{
+  "id": "2019-open-C",
+  "tier": "full",
+  "year": 2019,
+  "round": "open",
+  "letter": "C",
+  "title": "(title unknown)",
+  "authors": [
+    "Daniel Lovsted"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "number systems",
+    "morphology"
+  ],
+  "formTag": "calendrical and counting",
+  "difficulty": "hard",
+  "languages": [
+    "Catio"
+  ],
+  "officialPoints": 20,
+  "officialTimeMinutes": 36,
+  "bodyHtml": "<p>Catio is a language in the Chocoan family spoken by about 15,000 people in Colombia and Panama. Here are some words in Catio, given in no particular order:</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>1. <span class=\"data\">umé</span></td><td>7. <span class=\"data\">kakua ába audu umé</span></td></tr>\n<tr><td>2. <span class=\"data\">kakua ume audu kʰimárẽ</span></td><td>8. <span class=\"data\">huwua ába audu umé</span></td></tr>\n<tr><td>3. <span class=\"data\">huwua ũbéa audu kʰimárẽ</span></td><td>9. <span class=\"data\">huwua ũbéa</span></td></tr>\n<tr><td>4. <span class=\"data\">huwua ume audu ába</span></td><td>10. <span class=\"data\">kakua umé</span></td></tr>\n<tr><td>5. <span class=\"data\">ũbéa</span></td><td>11. <span class=\"data\">kakua kʰimárẽ audu ũbéa</span></td></tr>\n<tr><td>6. <span class=\"data\">kakua</span></td><td>12. <span class=\"data\">huwua</span></td></tr>\n</tbody>\n</table>\n</div>\n<p>And here are their English translations, in alphabetical order:</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>A. eighty-three</td><td>G. seven</td></tr>\n<tr><td>B. eleven</td><td>H. three</td></tr>\n<tr><td>C. forty-four</td><td>I. three hands</td></tr>\n<tr><td>D. hand</td><td>J. twenty-two</td></tr>\n<tr><td>E. nineteen</td><td>K. two</td></tr>\n<tr><td>F. person</td><td>L. two people</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>C1.</strong> Write the letters (A-L) of the English translation corresponding to the Catio words on the answer sheets.</p>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "C1.1",
+      "promptHtml": "1. <span class=\"data\">umé</span>",
+      "part": "C1",
+      "partPrompt": "Write the letter (A-L) of the English translation corresponding to each Catio word.",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [
+        "two"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 2
+    },
+    {
+      "id": "C1.2",
+      "promptHtml": "2. <span class=\"data\">kakua ume audu kʰimárẽ</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "forty-four",
+        "forty four",
+        "44"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 2
+    },
+    {
+      "id": "C1.3",
+      "promptHtml": "3. <span class=\"data\">huwua ũbéa audu kʰimárẽ</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "nineteen",
+        "19"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 2
+    },
+    {
+      "id": "C1.4",
+      "promptHtml": "4. <span class=\"data\">huwua ume audu ába</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "eleven",
+        "11"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 2
+    },
+    {
+      "id": "C1.5",
+      "promptHtml": "5. <span class=\"data\">ũbéa</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [
+        "three",
+        "3"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 2
+    },
+    {
+      "id": "C1.6",
+      "promptHtml": "6. <span class=\"data\">kakua</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "person"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 2
+    },
+    {
+      "id": "C1.7",
+      "promptHtml": "7. <span class=\"data\">kakua ába audu umé</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "J",
+      "acceptedVariants": [
+        "twenty-two",
+        "twenty two",
+        "22"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 2
+    },
+    {
+      "id": "C1.8",
+      "promptHtml": "8. <span class=\"data\">huwua ába audu umé</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [
+        "seven",
+        "7"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 2
+    },
+    {
+      "id": "C1.9",
+      "promptHtml": "9. <span class=\"data\">huwua ũbéa</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [
+        "three hands"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.10",
+      "promptHtml": "10. <span class=\"data\">kakua umé</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "L",
+      "acceptedVariants": [
+        "two people"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.11",
+      "promptHtml": "11. <span class=\"data\">kakua kʰimárẽ audu ũbéa</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "eighty-three",
+        "eighty three",
+        "83"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.12",
+      "promptHtml": "12. <span class=\"data\">huwua</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "hand"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Sort the Catio words by shape before you translate anything. Two words appear alone (items 6 and 12), two are pairs of words, and the rest all have the shape (word) (word) audu (word). Notice that only two different words ever stand in first position, and only four different words ever fill the other slots.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "This is not a base-ten system. The two words that can start a long expression are body-part or people words that act as multipliers, the four small words that follow them are the numerals one through four, and audu joins the big part of the number to the leftover part, like an English \"and\". Compare which English translations are large numbers and which are small: the size of the multiplier tells you which is which.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "The arithmetic works like this: in a phrase (multiplier word) (numeral) audu (numeral), the value is the multiplier's value times the first numeral, plus the second numeral. So if a multiplier word were worth 5, and the numerals after it were four and three, the whole phrase would come to 5 times 4 plus 3, that is 23. Use the two long phrases that share the same first word to pin down what that first word is worth.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: Group the words by shape</h3><p>Nothing here is in order, so the first job is to look at the <em>shapes</em> of the Catio expressions rather than their meanings.</p><ul><li>Single words: <span class=\"data\">umé</span>, <span class=\"data\">ũbéa</span>, <span class=\"data\">kakua</span>, <span class=\"data\">huwua</span></li><li>Two words: <span class=\"data\">huwua ũbéa</span>, <span class=\"data\">kakua umé</span></li><li>Four words with <span class=\"data\">audu</span> in the middle: items 2, 3, 4, 7, 8, 11</li></ul><p>In every long expression the first word is either <span class=\"data\">kakua</span> or <span class=\"data\">huwua</span>. The other slots are always filled by one of just four words: <span class=\"data\">ába</span>, <span class=\"data\">umé</span> (also spelled <span class=\"data\">ume</span> without the accent in items 2 and 4), <span class=\"data\">ũbéa</span>, <span class=\"data\">kʰimárẽ</span>. That strongly suggests those four are the small numerals, and that <span class=\"data\">kakua</span> and <span class=\"data\">huwua</span> do a different job.</p><h3>Step 2: What is audu?</h3><p>The English side has six plain numbers that are not tiny: seven, eleven, nineteen, twenty-two, forty-four, eighty-three. There are exactly six long expressions. In a lot of the world's languages, big numbers are built as \"(some multiple) and (a remainder)\". So <span class=\"data\">audu</span> is almost certainly \"and\" (plus), and the last word of a long expression is the remainder.</p><h3>Step 3: Find the multipliers</h3><p>Catio counts by body parts, which is common in the Americas: a hand is 5 fingers and a whole person is 20 fingers and toes. Test that idea. Suppose <span class=\"data\">huwua</span> = hand = 5 and <span class=\"data\">kakua</span> = person = 20, and the numerals are <span class=\"data\">ába</span> = 1, <span class=\"data\">umé</span> = 2, <span class=\"data\">ũbéa</span> = 3, <span class=\"data\">kʰimárẽ</span> = 4.</p><div class=\"table-scroll\"><table><thead><tr><th>Catio</th><th>Arithmetic</th><th>Value</th></tr></thead><tbody><tr><td><span class=\"data\">huwua ába audu umé</span></td><td>5 x 1 + 2</td><td>7</td></tr><tr><td><span class=\"data\">huwua ume audu ába</span></td><td>5 x 2 + 1</td><td>11</td></tr><tr><td><span class=\"data\">huwua ũbéa audu kʰimárẽ</span></td><td>5 x 3 + 4</td><td>19</td></tr><tr><td><span class=\"data\">kakua ába audu umé</span></td><td>20 x 1 + 2</td><td>22</td></tr><tr><td><span class=\"data\">kakua ume audu kʰimárẽ</span></td><td>20 x 2 + 4</td><td>44</td></tr><tr><td><span class=\"data\">kakua kʰimárẽ audu ũbéa</span></td><td>20 x 4 + 3</td><td>83</td></tr></tbody></table></div><p>Every one of the six English numbers comes out exactly once, with no leftovers and no clashes. That is the proof that the guess is right: a wrong pair of multipliers would not fit all six numbers at the same time.</p><h3>Step 4: The short items</h3><p>Now the leftovers on the English side are: two, three, hand, person, three hands, two people. These match the short Catio items:</p><ul><li><span class=\"data\">umé</span> and <span class=\"data\">ũbéa</span> are bare numerals, so they are \"two\" and \"three\" - and we already know which is which from the arithmetic above.</li><li><span class=\"data\">huwua</span> and <span class=\"data\">kakua</span> on their own are the body-part words themselves: \"hand\" and \"person\".</li><li>A body-part word plus a numeral, with no <span class=\"data\">audu</span> and no remainder, is glossed literally: <span class=\"data\">huwua ũbéa</span> is \"three hands\" and <span class=\"data\">kakua umé</span> is \"two people\". (English happens to have separate words for 15 and 40, so the translator chose the literal reading here.)</li></ul><h3>Step 5: Final matching</h3><div class=\"table-scroll\"><table><thead><tr><th>Item</th><th>Catio</th><th>Answer</th></tr></thead><tbody><tr><td>1</td><td><span class=\"data\">umé</span></td><td>K. two</td></tr><tr><td>2</td><td><span class=\"data\">kakua ume audu kʰimárẽ</span></td><td>C. forty-four</td></tr><tr><td>3</td><td><span class=\"data\">huwua ũbéa audu kʰimárẽ</span></td><td>E. nineteen</td></tr><tr><td>4</td><td><span class=\"data\">huwua ume audu ába</span></td><td>B. eleven</td></tr><tr><td>5</td><td><span class=\"data\">ũbéa</span></td><td>H. three</td></tr><tr><td>6</td><td><span class=\"data\">kakua</span></td><td>F. person</td></tr><tr><td>7</td><td><span class=\"data\">kakua ába audu umé</span></td><td>J. twenty-two</td></tr><tr><td>8</td><td><span class=\"data\">huwua ába audu umé</span></td><td>G. seven</td></tr><tr><td>9</td><td><span class=\"data\">huwua ũbéa</span></td><td>I. three hands</td></tr><tr><td>10</td><td><span class=\"data\">kakua umé</span></td><td>L. two people</td></tr><tr><td>11</td><td><span class=\"data\">kakua kʰimárẽ audu ũbéa</span></td><td>A. eighty-three</td></tr><tr><td>12</td><td><span class=\"data\">huwua</span></td><td>D. hand</td></tr></tbody></table></div><p>The general lesson: many number systems are not base ten. Catio is <em>vigesimal</em> (base twenty) with a five as an intermediate step, and the words for those units are still transparently the words for \"hand\" and \"person\".</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken verbatim from the official solution page (1. K, 2. C, 3. E, 4. B, 5. H, 6. F, 7. J, 8. G, 9. I, 10. L, 11. A, 12. D). The solution gives no per-item point breakdown; 20 points were split as 2 points for items 1-8 and 1 point for items 9-12 to total exactly 20 - adjust if an even split is preferred. Note the booklet prints <span class=\"data\">ume</span> without the accent in items 2 and 4 but <span class=\"data\">umé</span> elsewhere; this inconsistency is reproduced as printed. The aspirated k is transcribed with the modifier letter U+02B0 (kʰ), matching the booklet's superscript h. Choices are given as bare letters A-L because the official key is a bare letter; the full option wording appears in bodyHtml.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:c1.1:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.2:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.3:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.4:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.5:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.6:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.7:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.8:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.9:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.10:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.11:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.12:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:2",
+      "a": "2. kakua ume audu kʰimárẽ",
+      "b": "2. kakua ume audu k h imárẽ"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:4",
+      "a": "3. huwua ũbéa audu kʰimárẽ",
+      "b": "3. huwua ũbéa audu k h imárẽ"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:9",
+      "a": "11. kakua kʰimárẽ audu ũbéa",
+      "b": "11. kakua k h imárẽ audu ũbéa"
+    },
+    {
+      "kind": "diff",
+      "path": "(verification)",
+      "note": "this booklet has no usable text layer, so neither the witness check nor arbitration can run. Parked for human review by policy, not by a specific disagreement"
+    }
+  ]
+}

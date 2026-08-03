@@ -1,27 +1,103 @@
 {
   "id": "2022-open-B",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2022,
   "round": "open",
   "letter": "B",
   "title": "Who Saw the Bear?",
-  "authors": [],
+  "authors": [
+    "Tom McCoy"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
     "morphology",
     "syntax"
   ],
-  "formTag": "rosetta-stone translation",
+  "formTag": "table completion",
   "difficulty": "standard",
   "languages": [
     "Turkish"
   ],
   "officialPoints": 10,
   "officialTimeMinutes": 18,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Turkish is the national language of Turkey, spoken by approximately 80 million people in Turkey and elsewhere.</p>\n<p><strong>B1.</strong> Below are some sentences in Turkish, along with their English translations. Fill in the entries that are missing from the table.</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th>Turkish</th><th>English</th></tr>\n</thead>\n<tbody>\n<tr><td><span class=\"data\">Balık yüzdü.</span></td><td>The fish swam.</td></tr>\n<tr><td><span class=\"data\">Zürafa atladı.</span></td><td>The giraffe jumped.</td></tr>\n<tr><td><span class=\"data\">Fil koştu.</span></td><td>The elephant ran.</td></tr>\n<tr><td><span class=\"data\">Kaplan kaplumbağa için atladı.</span></td><td>The tiger jumped for the turtle.<sup>1</sup></td></tr>\n<tr><td><span class=\"data\">Balık kaplan gibi yüzdü.</span></td><td>The fish swam like the tiger.</td></tr>\n<tr><td><span class=\"data\">Fil ayı gibi yüzdü.</span></td><td>The elephant swam like the bear.</td></tr>\n<tr><td><span class=\"data\">Fil atladı.</span></td><td><span class=\"blank\" data-q=\"B1.1\" data-label=\"a.\"></span></td></tr>\n<tr><td><span class=\"blank\" data-q=\"B1.2\" data-label=\"b.\"></span></td><td>The turtle ran for the fish.</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>B2.</strong> Here are some more Turkish sentences with English translations. Fill in the entries that are missing from the table.</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td><span class=\"data\">Kurbağa zürafayı gördü.</span></td><td>The frog saw the giraffe.</td></tr>\n<tr><td><span class=\"data\">Zürafa martıyı gördü.</span></td><td>The giraffe saw the seagull.</td></tr>\n<tr><td><span class=\"data\">Arı kurbağayı gördü.</span></td><td>The bee saw the frog.</td></tr>\n<tr><td><span class=\"data\">Kim martıyı gördü?</span></td><td>Who saw the seagull?</td></tr>\n<tr><td><span class=\"data\">Kim arıyı gördü?</span></td><td>Who saw the bee?</td></tr>\n<tr><td><span class=\"data\">Arı kimi gördü?</span></td><td>Whom did the bee see?</td></tr>\n<tr><td><span class=\"data\">Balina kimi gördü?</span></td><td>Whom did the whale see?</td></tr>\n<tr><td><span class=\"data\">Martı kaplumbağayı gördü.</span></td><td><span class=\"blank\" data-q=\"B2.1\" data-label=\"a.\"></span></td></tr>\n<tr><td><span class=\"blank\" data-q=\"B2.2\" data-label=\"b.\"></span></td><td>Who saw the bear?</td></tr>\n<tr><td><span class=\"blank\" data-q=\"B2.3\" data-label=\"c.\"></span></td><td>Whom did the bear see?</td></tr>\n</tbody>\n</table>\n</div>\n<p><small>1. Whenever &ldquo;for&rdquo; appears in a translation in this problem, it means &ldquo;for the benefit of,&rdquo; not &ldquo;toward.&rdquo; (This information is not relevant for solving the problem.)</small></p>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "B1.1",
+      "promptHtml": "<p>(a) English translation of <span class=\"data\">Fil atladı.</span></p>",
+      "part": "B1",
+      "partPrompt": "Below are some sentences in Turkish, along with their English translations. Fill in the entries that are missing from the table.",
+      "gradingMode": "exact",
+      "answerKey": "The elephant jumped.",
+      "acceptedVariants": [
+        "elephant jumped"
+      ],
+      "points": 2
+    },
+    {
+      "id": "B1.2",
+      "promptHtml": "<p>(b) Turkish for &ldquo;The turtle ran for the fish.&rdquo;</p>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "Kaplumbağa balık için koştu.",
+      "acceptedVariants": [
+        "Kaplumbaga balik icin kostu."
+      ],
+      "points": 2
+    },
+    {
+      "id": "B2.1",
+      "promptHtml": "<p>(a) English translation of <span class=\"data\">Martı kaplumbağayı gördü.</span></p>",
+      "part": "B2",
+      "partPrompt": "Here are some more Turkish sentences with English translations. Fill in the entries that are missing from the table.",
+      "gradingMode": "exact",
+      "answerKey": "The seagull saw the turtle.",
+      "acceptedVariants": [
+        "seagull saw the turtle"
+      ],
+      "points": 2
+    },
+    {
+      "id": "B2.2",
+      "promptHtml": "<p>(b) Turkish for &ldquo;Who saw the bear?&rdquo;</p>",
+      "part": "B2",
+      "gradingMode": "exact",
+      "answerKey": "Kim ayıyı gördü?",
+      "acceptedVariants": [
+        "Kim ayiyi gordu?"
+      ],
+      "points": 2
+    },
+    {
+      "id": "B2.3",
+      "promptHtml": "<p>(c) Turkish for &ldquo;Whom did the bear see?&rdquo;</p>",
+      "part": "B2",
+      "gradingMode": "exact",
+      "answerKey": "Ayı kimi gördü?",
+      "acceptedVariants": [
+        "Ayi kimi gordu?"
+      ],
+      "points": 2
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start by lining up the words one by one. In every Turkish sentence here the verb comes last, so whatever sits in front of the verb is doing the grammatical work. Compare where the animal names sit in a one-animal sentence versus a two-animal sentence.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "In B1 the extra words için (\"for\") and gibi (\"like\") come after the noun they belong with, not before it, and the noun itself is unchanged. In B2 something new happens: the animal that is seen carries an extra ending, while the animal that does the seeing does not. Work out what that ending is and how its vowel is chosen; then notice that the question word behaves exactly like the noun it replaces, taking the same ending when it is the one being seen.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Take a row that is already given: Arı kurbağayı gördü means \"The bee saw the frog.\" The plain word for frog is kurbağa (you can see it in kaplumbağa-style words and in \"The bee saw the frog\" versus \"Kurbağa zürafayı gördü\", where kurbağa is the seer and carries nothing). So the object ending here is -yı: a -y- appears because kurbağa ends in a vowel, and the vowel of the ending matches the back, unrounded vowels of the stem. Do the same reasoning for martı in Kim martıyı gördü? and you will have the rule you need.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: find the word order</h3>\n<p>Look at the simplest sentences in B1:</p>\n<ul><li><span class=\"data\">Balık yüzdü.</span> = \"The fish swam.\"</li><li><span class=\"data\">Fil koştu.</span> = \"The elephant ran.\"</li></ul>\n<p>So <span class=\"data\">balık</span> = fish, <span class=\"data\">fil</span> = elephant, <span class=\"data\">yüzdü</span> = swam, <span class=\"data\">koştu</span> = ran, <span class=\"data\">atladı</span> = jumped. Notice there is no separate word for \"the\": Turkish simply has no definite article. And the verb comes last.</p>\n<h3>Step 2: words that come after their noun</h3>\n<p>Compare:</p>\n<ul><li><span class=\"data\">Kaplan kaplumbağa için atladı.</span> = \"The tiger jumped for the turtle.\"</li><li><span class=\"data\">Balık kaplan gibi yüzdü.</span> = \"The fish swam like the tiger.\"</li></ul>\n<p>English puts \"for\" and \"like\" <em>before</em> the noun (\"for the turtle\"); Turkish puts <span class=\"data\">için</span> and <span class=\"data\">gibi</span> <em>after</em> it (<span class=\"data\">kaplumbağa için</span>). Words like these are called <strong>postpositions</strong> - prepositions that follow rather than precede. The order in the whole sentence is: subject, then the \"for/like\" phrase, then the verb.</p>\n<p>That gives both B1 answers straight away. <span class=\"data\">Fil atladı.</span> is subject + verb: \"The elephant jumped.\" And \"The turtle ran for the fish\" is turtle + fish + <span class=\"data\">için</span> + ran: <span class=\"data\">Kaplumbağa balık için koştu.</span></p>\n<h3>Step 3: the object ending in B2</h3>\n<p>Now two animals appear in one sentence, and one of them is being seen. Compare the two rows where <span class=\"data\">kurbağa</span> (frog) appears:</p>\n<ul><li><span class=\"data\">Kurbağa zürafayı gördü.</span> = \"The frog saw the giraffe.\" - the frog is the seer, and <span class=\"data\">kurbağa</span> is bare.</li><li><span class=\"data\">Arı kurbağayı gördü.</span> = \"The bee saw the frog.\" - now the frog is seen, and it appears as <span class=\"data\">kurbağayı</span>.</li></ul>\n<p>So the animal that is seen gets an extra ending. Linguists call this the <strong>accusative</strong> case: a marker on the noun that says \"this one is the object of the verb.\" English does this only with pronouns (\"he\" versus \"him\", \"who\" versus \"whom\").</p>\n<h3>Step 4: what shape does the ending take?</h3>\n<p>Collect the object forms in the data:</p>\n<ul><li><span class=\"data\">zürafa</span> + <span class=\"data\">-yı</span> = <span class=\"data\">zürafayı</span></li><li><span class=\"data\">martı</span> + <span class=\"data\">-yı</span> = <span class=\"data\">martıyı</span></li><li><span class=\"data\">kurbağa</span> + <span class=\"data\">-yı</span> = <span class=\"data\">kurbağayı</span></li><li><span class=\"data\">arı</span> + <span class=\"data\">-yı</span> = <span class=\"data\">arıyı</span></li><li><span class=\"data\">kaplumbağa</span> + <span class=\"data\">-yı</span> = <span class=\"data\">kaplumbağayı</span></li><li><span class=\"data\">kim</span> + <span class=\"data\">-i</span> = <span class=\"data\">kimi</span></li></ul>\n<p>Two things are going on. First, the stems ending in a vowel add a <span class=\"data\">y</span> to keep two vowels apart - <span class=\"data\">arı-y-ı</span> - while <span class=\"data\">kim</span>, which ends in a consonant, needs no <span class=\"data\">y</span>. Second, the vowel of the ending changes to agree with the vowel already in the word: words with <span class=\"data\">a</span> and <span class=\"data\">ı</span> take <span class=\"data\">ı</span>, and <span class=\"data\">kim</span> with its <span class=\"data\">i</span> takes <span class=\"data\">i</span>. This agreement is called <strong>vowel harmony</strong>, and it runs through the whole of Turkish.</p>\n<h3>Step 5: the question word</h3>\n<p><span class=\"data\">kim</span> means \"who / whom,\" and the crucial point is that it simply stands where the noun it replaces would stand:</p>\n<ul><li><span class=\"data\">Kim martıyı gördü?</span> - <span class=\"data\">kim</span> is first, bare, so it is the seer: \"Who saw the seagull?\"</li><li><span class=\"data\">Arı kimi gördü?</span> - <span class=\"data\">kimi</span> is second and carries the object ending, so it is the one seen: \"Whom did the bee see?\"</li></ul>\n<p>Unlike English, Turkish does not move the question word to the front of the sentence or add a helper verb like \"did.\"</p>\n<h3>Step 6: fill in B2</h3>\n<p>(a) <span class=\"data\">Martı kaplumbağayı gördü.</span> - <span class=\"data\">martı</span> is bare (the seer), <span class=\"data\">kaplumbağa</span> carries <span class=\"data\">-yı</span> (the one seen): \"The seagull saw the turtle.\"</p>\n<p>(b) and (c) both need the word for bear, which appears in B1 in <span class=\"data\">Fil ayı gibi yüzdü.</span> = \"The elephant swam like the bear\": <span class=\"data\">ayı</span>. For \"Who saw the bear?\" the bear is the object, so it takes the ending, with <span class=\"data\">y</span> inserted after its final vowel and <span class=\"data\">ı</span> by harmony, and <span class=\"data\">kim</span> stays bare in first position. For \"Whom did the bear see?\" the bear is the seer, so it stays bare in first position and <span class=\"data\">kim</span> takes the object ending as <span class=\"data\">kimi</span>. The verb <span class=\"data\">gördü</span> stays at the end in both.</p>",
   "reviewStatus": "published"
 }

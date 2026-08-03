@@ -1,0 +1,482 @@
+{
+  "id": "2018-open-F",
+  "tier": "full",
+  "year": 2018,
+  "round": "open",
+  "letter": "F",
+  "title": "A Match Made in Vietnam",
+  "authors": [
+    "Tom McCoy"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "semantics"
+  ],
+  "formTag": "table completion",
+  "difficulty": "hard",
+  "languages": [
+    "Vietnamese"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>Below on the left are 23 words and phrases in Vietnamese, with their English translations on the right. The translations are in a different order than the original Vietnamese entries.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th colspan=\"2\">Vietnamese</th></tr></thead>\n<tbody>\n<tr><td>1.</td><td><span class=\"data\">băng</span></td></tr>\n<tr><td>2.</td><td><span class=\"data\">bó</span></td></tr>\n<tr><td>3.</td><td><span class=\"data\">bó hoa</span></td></tr>\n<tr><td>4.</td><td><span class=\"data\">cánh hoa</span></td></tr>\n<tr><td>5.</td><td><span class=\"data\">đá</span></td></tr>\n<tr><td>6.</td><td><span class=\"data\">đá lửa</span></td></tr>\n<tr><td>7.</td><td><span class=\"data\">đá phấn</span></td></tr>\n<tr><td>8.</td><td><span class=\"data\">đường</span></td></tr>\n<tr><td>9.</td><td><span class=\"data\">đường vòng</span></td></tr>\n<tr><td>10.</td><td><span class=\"data\">hoa</span></td></tr>\n<tr><td>11.</td><td><span class=\"data\">lửa</span></td></tr>\n<tr><td>12.</td><td><span class=\"data\">mở</span></td></tr>\n<tr><td>13.</td><td><span class=\"data\">mở đường</span></td></tr>\n<tr><td>14.</td><td><span class=\"data\">mở mắt</span></td></tr>\n<tr><td>15.</td><td><span class=\"data\">núi</span></td></tr>\n<tr><td>16.</td><td><span class=\"data\">núi băng</span></td></tr>\n<tr><td>17.</td><td><span class=\"data\">núi lửa</span></td></tr>\n<tr><td>18.</td><td><span class=\"data\">nước đá</span></td></tr>\n<tr><td>19.</td><td><span class=\"data\">nước mắt</span></td></tr>\n<tr><td>20.</td><td><span class=\"data\">phấn</span></td></tr>\n<tr><td>21.</td><td><span class=\"data\">phấn hoa</span></td></tr>\n<tr><td>22.</td><td><span class=\"data\">vòng</span></td></tr>\n<tr><td>23.</td><td><span class=\"data\">vòng hoa</span></td></tr>\n</tbody>\n</table>\n</div>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th colspan=\"2\">English</th></tr></thead>\n<tbody>\n<tr><td>A.</td><td>bouquet (a bunch of flowers)</td></tr>\n<tr><td>B.</td><td>chalk</td></tr>\n<tr><td>C.</td><td>circle</td></tr>\n<tr><td>D.</td><td>cluster</td></tr>\n<tr><td>E.</td><td>detour</td></tr>\n<tr><td>F.</td><td>fire</td></tr>\n<tr><td>G.</td><td>flint (a stone used to make sparks)</td></tr>\n<tr><td>H.</td><td>flower</td></tr>\n<tr><td>I.</td><td>ice</td></tr>\n<tr><td>J.</td><td>iceberg</td></tr>\n<tr><td>K.</td><td>mountain</td></tr>\n<tr><td>L.</td><td>petal</td></tr>\n<tr><td>M.</td><td>pollen</td></tr>\n<tr><td>N.</td><td>powder</td></tr>\n<tr><td>O.</td><td>road</td></tr>\n<tr><td>P.</td><td>rock</td></tr>\n<tr><td>Q.</td><td>tear (as in teardrop)</td></tr>\n<tr><td>R.</td><td>to make aware</td></tr>\n<tr><td>S.</td><td>to open</td></tr>\n<tr><td>T.</td><td>to pave the way</td></tr>\n<tr><td>U.</td><td>volcano</td></tr>\n<tr><td>V.</td><td>wreath</td></tr>\n</tbody>\n</table>\n</div>\n<p>Answer the following questions in the Answer Sheets:</p>\n<p><strong>F1.</strong> Match the Vietnamese entries to their English translations.</p>\n<p><em>Note:</em> One of the English translations will be used twice.</p>\n<p><em>Hint:</em> The Vietnamese word for “wing” is “<span class=\"data\">cánh</span>.” The Vietnamese word for “water” is “<span class=\"data\">nước</span>.”</p>\n<p><strong>F2.</strong> What is the English translation of “<span class=\"data\">mắt</span>”?</p>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "F1.1",
+      "promptHtml": "1. <span class=\"data\">băng</span>",
+      "part": "F1",
+      "partPrompt": "Match the Vietnamese entries to their English translations. Give the letter (A-V) of the English translation. One of the English translations will be used twice. Hint: the Vietnamese word for \"wing\" is \"cánh\"; the Vietnamese word for \"water\" is \"nước\".",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [
+        "ice",
+        "I. ice"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.2",
+      "promptHtml": "2. <span class=\"data\">bó</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "cluster",
+        "D. cluster"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.3",
+      "promptHtml": "3. <span class=\"data\">bó hoa</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "bouquet",
+        "A. bouquet"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.4",
+      "promptHtml": "4. <span class=\"data\">cánh hoa</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "L",
+      "acceptedVariants": [
+        "petal",
+        "L. petal"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.5",
+      "promptHtml": "5. <span class=\"data\">đá</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "P",
+      "acceptedVariants": [
+        "rock",
+        "P. rock"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.6",
+      "promptHtml": "6. <span class=\"data\">đá lửa</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [
+        "flint",
+        "G. flint"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.7",
+      "promptHtml": "7. <span class=\"data\">đá phấn</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "chalk",
+        "B. chalk"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.8",
+      "promptHtml": "8. <span class=\"data\">đường</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "O",
+      "acceptedVariants": [
+        "road",
+        "O. road"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.9",
+      "promptHtml": "9. <span class=\"data\">đường vòng</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "detour",
+        "E. detour"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.10",
+      "promptHtml": "10. <span class=\"data\">hoa</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [
+        "flower",
+        "H. flower"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.11",
+      "promptHtml": "11. <span class=\"data\">lửa</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "fire",
+        "F. fire"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.12",
+      "promptHtml": "12. <span class=\"data\">mở</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "S",
+      "acceptedVariants": [
+        "to open",
+        "S. to open"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.13",
+      "promptHtml": "13. <span class=\"data\">mở đường</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "T",
+      "acceptedVariants": [
+        "to pave the way",
+        "T. to pave the way"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.14",
+      "promptHtml": "14. <span class=\"data\">mở mắt</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "R",
+      "acceptedVariants": [
+        "to make aware",
+        "R. to make aware"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.15",
+      "promptHtml": "15. <span class=\"data\">núi</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [
+        "mountain",
+        "K. mountain"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.16",
+      "promptHtml": "16. <span class=\"data\">núi băng</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "J",
+      "acceptedVariants": [
+        "iceberg",
+        "J. iceberg"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.17",
+      "promptHtml": "17. <span class=\"data\">núi lửa</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "U",
+      "acceptedVariants": [
+        "volcano",
+        "U. volcano"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.18",
+      "promptHtml": "18. <span class=\"data\">nước đá</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [
+        "ice",
+        "I. ice"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.19",
+      "promptHtml": "19. <span class=\"data\">nước mắt</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "Q",
+      "acceptedVariants": [
+        "tear",
+        "Q. tear"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.20",
+      "promptHtml": "20. <span class=\"data\">phấn</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "powder",
+        "N. powder"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.21",
+      "promptHtml": "21. <span class=\"data\">phấn hoa</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "M",
+      "acceptedVariants": [
+        "pollen",
+        "M. pollen"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.22",
+      "promptHtml": "22. <span class=\"data\">vòng</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "circle",
+        "C. circle"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F1.23",
+      "promptHtml": "23. <span class=\"data\">vòng hoa</span>",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "V",
+      "acceptedVariants": [
+        "wreath",
+        "V. wreath"
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "F2.1",
+      "promptHtml": "<p>English translation of <span class=\"data\">mắt</span>:</p>",
+      "part": "F2",
+      "partPrompt": "What is the English translation of \"mắt\"?",
+      "gradingMode": "exact",
+      "answerKey": "eye(s)",
+      "acceptedVariants": [
+        "eye",
+        "eyes"
+      ],
+      "points": 1.2
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Sort the Vietnamese list into one-word entries and two-word entries. Every two-word entry is built out of words that also appear on their own somewhere in the list (or that the problem's hint tells you about). Match the short ones first, since their English translations are the plainest words in the right-hand column.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Each two-word entry is a compound: one word names the general thing you are talking about, the other narrows it down. Work out which position carries the general meaning by testing a compound whose English translation you can guess, then apply the same order everywhere. The English translations of compounds are often single everyday words rather than literal two-word phrases, so translate the compound literally first and then ask which English word means that.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Here is the same reasoning on data outside this list. English builds compounds the other way round from Vietnamese: in \"houseboat\" the last part, \"boat\", tells you what kind of object it is, and \"house\" only describes it. In Vietnamese the describing word comes second instead. So if you know a language has a word for \"water\" and a word for \"eye\" but never combines them in English order, the combination beginning with the general word will literally read \"water of the eye\" - and then you look in the English column for the ordinary one-word name of that substance. Notice also that 23 Vietnamese entries share only 22 English translations, so exactly two entries mean the same thing.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What kind of puzzle is this?</h3>\n<p>Twenty-three Vietnamese items, twenty-two English translations, and no glossary. The way in is that most of the Vietnamese items are <em>compounds</em>: two words stuck together to name something new. Almost every word used inside a compound also appears by itself somewhere in the list, so you can solve the list from the inside out.</p>\n<h3>Step 1: split the list</h3>\n<p>Single words: <span class=\"data\">băng</span>, <span class=\"data\">bó</span>, <span class=\"data\">đá</span>, <span class=\"data\">đường</span>, <span class=\"data\">hoa</span>, <span class=\"data\">lửa</span>, <span class=\"data\">mở</span>, <span class=\"data\">núi</span>, <span class=\"data\">phấn</span>, <span class=\"data\">vòng</span>. Everything else is two words. The problem also hands you two words that never appear alone: <span class=\"data\">cánh</span> = wing and <span class=\"data\">nước</span> = water.</p>\n<h3>Step 2: find the order inside a compound</h3>\n<p>Look at <span class=\"data\">hoa</span>, which turns up in four compounds, always as the second word: <span class=\"data\">bó hoa</span>, <span class=\"data\">cánh hoa</span>, <span class=\"data\">phấn hoa</span>, <span class=\"data\">vòng hoa</span>. The English column has a set of flower-related words: bouquet, petal, pollen, wreath - and none of these <em>is</em> a flower. A bouquet is a bunch, a petal is a part shaped like a wing, pollen is a powder, a wreath is a ring. So in Vietnamese the first word names the thing and the second word tells you what it belongs to: <span class=\"data\">hoa</span> is the modifier, \"of flowers\". That is the opposite of English, where in \"houseboat\" the last part tells you it is a boat.</p>\n<p>Now the flower group falls out. <span class=\"data\">bó</span> on its own must be \"cluster\", so <span class=\"data\">bó hoa</span> is literally \"flower cluster\" - a bouquet. <span class=\"data\">vòng</span> is \"circle\", so <span class=\"data\">vòng hoa</span> is a \"flower circle\" - a wreath. <span class=\"data\">phấn</span> is \"powder\", so <span class=\"data\">phấn hoa</span> is \"flower powder\" - pollen. And with the hint that <span class=\"data\">cánh</span> is \"wing\", <span class=\"data\">cánh hoa</span> is a \"flower wing\" - a petal.</p>\n<h3>Step 3: the same trick with rock, fire, ice and mountain</h3>\n<p>The single words <span class=\"data\">đá</span>, <span class=\"data\">lửa</span>, <span class=\"data\">băng</span>, <span class=\"data\">núi</span> match the plain English words rock, fire, ice, mountain - the question is which is which. Test the compounds:</p>\n<ul>\n<li><span class=\"data\">núi lửa</span> = \"fire mountain\" and <span class=\"data\">núi băng</span> = \"ice mountain\". English has exactly two words for those: volcano and iceberg. That fixes <span class=\"data\">núi</span> = mountain, <span class=\"data\">lửa</span> = fire, <span class=\"data\">băng</span> = ice.</li>\n<li>So <span class=\"data\">đá</span> = rock, and <span class=\"data\">đá lửa</span> is a \"fire rock\" - flint, the stone you strike for sparks.</li>\n<li><span class=\"data\">đá phấn</span> is a \"powder rock\" - chalk.</li>\n<li><span class=\"data\">nước đá</span> is \"rock water\", i.e. water in a solid lump. English calls that ice - which is why one translation is used twice: it matches both <span class=\"data\">băng</span> and <span class=\"data\">nước đá</span>.</li>\n</ul>\n<h3>Step 4: roads, opening, and the leftover word</h3>\n<p><span class=\"data\">đường</span> = road, so <span class=\"data\">đường vòng</span> is a \"circle road\" - a detour. <span class=\"data\">mở</span> = \"to open\", so <span class=\"data\">mở đường</span> is \"to open a road\" - to pave the way (an idiom: to make something possible for others).</p>\n<p>That leaves <span class=\"data\">mắt</span>, which appears only inside compounds: <span class=\"data\">mở mắt</span> and <span class=\"data\">nước mắt</span>. Two English translations are still unused: \"to make aware\" and \"tear (as in teardrop)\". Since <span class=\"data\">nước</span> is water, <span class=\"data\">nước mắt</span> is \"<span class=\"data\">mắt</span>-water\" - and a teardrop is water from the eye. And <span class=\"data\">mở mắt</span> literally \"to open <span class=\"data\">mắt</span>\" matches \"to make aware\", exactly the English idiom \"to open someone's eyes\". So <span class=\"data\">mắt</span> means eye(s), which answers F2.</p>\n<h3>The big idea</h3>\n<p>Languages coin new words by combining old ones, and the two languages here put the pieces in opposite orders: Vietnamese is head-first (the general word comes first, its modifier second), English is head-last. Once you spot that, a two-word Vietnamese phrase can be translated literally and then matched to whatever single English word names the same thing.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution page (F1 letters, F2 eye(s)). Booklet's English column prints longer glosses than the solution table (e.g. 'bouquet (a bunch of flowers)', 'flint (a stone used to make sparks)', 'tear (as in teardrop)'); keys are the letters, with the short word accepted as a variant. Points split 0.6 per F1 item (13.8) plus 1.2 for F2 to total 15 - adjust if a different official breakdown is preferred. Vietnamese diacritics should be checked character by character (băng, bó, cánh, đá, lửa, đường, mở, mắt, núi, nước, phấn, vòng).",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:f1.1:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.2:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.3:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.4:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.5:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.6:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.7:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.8:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.9:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.10:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.11:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.12:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.13:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.14:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.15:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.16:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.17:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.18:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.19:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.20:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.21:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.22:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f1.23:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 23 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~23 API calls that would not resolve it"
+    }
+  ]
+}

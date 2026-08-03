@@ -1,0 +1,258 @@
+{
+  "id": "2016-open-E",
+  "tier": "full",
+  "year": 2016,
+  "round": "open",
+  "letter": "E",
+  "title": "Be There, or Be Squared",
+  "authors": [
+    "Bill Huang"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "number systems",
+    "morphology"
+  ],
+  "formTag": "calendrical and counting",
+  "difficulty": "hard",
+  "languages": [
+    "Huli"
+  ],
+  "officialPoints": 20,
+  "officialTimeMinutes": 36,
+  "bodyHtml": "<p>The Huli language is a Trans-New Guinea language spoken in Papua New Guinea. Answer these questions in the Answer Sheets.</p>\n<p><strong>E1.</strong> The perfect squares from 1 to 100 are written in Huli below, in scrambled order. Perfect squares are the numbers 1, 4, 9, 16, 25, … that are the products of multiplying a whole number by itself (e.g. 4 = 2 * 2). On your answer sheet, write the corresponding numbers in Arabic numerals (e.g., the number <em>twelve</em> is written as 12 in Arabic numerals).</p>\n<ol type=\"a\">\n<li><span class=\"data\">ngui ki, ngui tebone-gonaga waragaria</span></li>\n<li><span class=\"data\">mbira</span></li>\n<li><span class=\"data\">ngui dau, ngui waragane-gonaga waragaria</span></li>\n<li><span class=\"data\">nguira-ni pira</span></li>\n<li><span class=\"data\">nguira-ni mbira</span></li>\n<li><span class=\"data\">dira</span></li>\n<li><span class=\"data\">maria</span></li>\n<li><span class=\"data\">ngui tebo, ngui mane-gonaga maria</span></li>\n<li><span class=\"data\">ngui ma, ngui dauni-gonaga maria</span></li>\n<li><span class=\"data\">ngui waraga, ngui kane-gonaga pira</span></li>\n</ol>\n<p><strong>E2.</strong> Four consecutive numbers are written in Huli below, in increasing order. Write the corresponding numbers in Arabic numerals.</p>\n<p><span class=\"data\">ngui ka, ngui haline-gonaga bearia</span><br /><span class=\"data\">ngui ka, ngui haline-gonaga hombearia</span><br /><span class=\"data\">ngui ka, ngui haline-gonaga haleria</span><br /><span class=\"data\">ngui ka, ngui haline-gonaga deria</span></p>\n<p><strong>E3.</strong> Write the following numbers in Huli.</p>\n<ol type=\"a\">\n<li>2</li>\n<li>4</li>\n<li>6</li>\n<li>7</li>\n<li>22</li>\n<li>44</li>\n<li>66</li>\n<li>77</li>\n<li>88</li>\n<li>173</li>\n</ol>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "E1.1",
+      "promptHtml": "a. <span class=\"data\">ngui ki, ngui tebone-gonaga waragaria</span>",
+      "part": "E1",
+      "partPrompt": "The perfect squares from 1 to 100 are written in Huli, in scrambled order. Write the corresponding number in Arabic numerals.",
+      "gradingMode": "exact",
+      "answerKey": "36",
+      "acceptedVariants": [],
+      "points": 0.75
+    },
+    {
+      "id": "E1.2",
+      "promptHtml": "b. <span class=\"data\">mbira</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [],
+      "points": 0.75
+    },
+    {
+      "id": "E1.3",
+      "promptHtml": "c. <span class=\"data\">ngui dau, ngui waragane-gonaga waragaria</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "81",
+      "acceptedVariants": [],
+      "points": 0.75
+    },
+    {
+      "id": "E1.4",
+      "promptHtml": "d. <span class=\"data\">nguira-ni pira</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "25",
+      "acceptedVariants": [],
+      "points": 0.75
+    },
+    {
+      "id": "E1.5",
+      "promptHtml": "e. <span class=\"data\">nguira-ni mbira</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "16",
+      "acceptedVariants": [],
+      "points": 0.75
+    },
+    {
+      "id": "E1.6",
+      "promptHtml": "f. <span class=\"data\">dira</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "9",
+      "acceptedVariants": [],
+      "points": 0.75
+    },
+    {
+      "id": "E1.7",
+      "promptHtml": "g. <span class=\"data\">maria</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "4",
+      "acceptedVariants": [],
+      "points": 0.75
+    },
+    {
+      "id": "E1.8",
+      "promptHtml": "h. <span class=\"data\">ngui tebo, ngui mane-gonaga maria</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "49",
+      "acceptedVariants": [],
+      "points": 0.75
+    },
+    {
+      "id": "E1.9",
+      "promptHtml": "i. <span class=\"data\">ngui ma, ngui dauni-gonaga maria</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "64",
+      "acceptedVariants": [],
+      "points": 0.75
+    },
+    {
+      "id": "E1.10",
+      "promptHtml": "j. <span class=\"data\">ngui waraga, ngui kane-gonaga pira</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "100",
+      "acceptedVariants": [],
+      "points": 0.75
+    },
+    {
+      "id": "E2.1",
+      "promptHtml": "<p><span class=\"data\">ngui ka, ngui haline-gonaga bearia</span><br /><span class=\"data\">ngui ka, ngui haline-gonaga hombearia</span><br /><span class=\"data\">ngui ka, ngui haline-gonaga haleria</span><br /><span class=\"data\">ngui ka, ngui haline-gonaga deria</span></p>",
+      "part": "E2",
+      "partPrompt": "Four consecutive numbers are written in Huli, in increasing order. Write the corresponding numbers in Arabic numerals, in the same order, separated by commas.",
+      "gradingMode": "exact",
+      "answerKey": "116, 117, 118, 119",
+      "acceptedVariants": [
+        "116 117 118 119",
+        "116,117,118,119"
+      ],
+      "points": 2.5
+    },
+    {
+      "id": "E3.1",
+      "promptHtml": "a. 2",
+      "part": "E3",
+      "partPrompt": "Write the following numbers in Huli.",
+      "gradingMode": "exact",
+      "answerKey": "kira",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "E3.2",
+      "promptHtml": "b. 4",
+      "part": "E3",
+      "gradingMode": "exact",
+      "answerKey": "maria",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "E3.3",
+      "promptHtml": "c. 6",
+      "part": "E3",
+      "gradingMode": "exact",
+      "answerKey": "waragaria",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "E3.4",
+      "promptHtml": "d. 7",
+      "part": "E3",
+      "gradingMode": "exact",
+      "answerKey": "karia",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "E3.5",
+      "promptHtml": "e. 22",
+      "part": "E3",
+      "gradingMode": "exact",
+      "answerKey": "nguira-ni karia",
+      "acceptedVariants": [
+        "nguira ni karia"
+      ],
+      "points": 1
+    },
+    {
+      "id": "E3.6",
+      "promptHtml": "f. 44",
+      "part": "E3",
+      "gradingMode": "exact",
+      "answerKey": "ngui ki, ngui tebone-gonaga deria",
+      "acceptedVariants": [
+        "ngui ki ngui tebone-gonaga deria",
+        "ngui ki, ngui tebone gonaga deria"
+      ],
+      "points": 1
+    },
+    {
+      "id": "E3.7",
+      "promptHtml": "g. 66",
+      "part": "E3",
+      "gradingMode": "exact",
+      "answerKey": "ngui ma, ngui dauni-gonaga waragaria",
+      "acceptedVariants": [
+        "ngui ma ngui dauni-gonaga waragaria",
+        "ngui ma, ngui dauni gonaga waragaria"
+      ],
+      "points": 1
+    },
+    {
+      "id": "E3.8",
+      "promptHtml": "h. 77",
+      "part": "E3",
+      "gradingMode": "exact",
+      "answerKey": "ngui dau, ngui waragane-gonaga kira",
+      "acceptedVariants": [
+        "ngui dau ngui waragane-gonaga kira",
+        "ngui dau, ngui waragane gonaga kira"
+      ],
+      "points": 1
+    },
+    {
+      "id": "E3.9",
+      "promptHtml": "i. 88",
+      "part": "E3",
+      "gradingMode": "exact",
+      "answerKey": "ngui dau, ngui waragane-gonaga haleria",
+      "acceptedVariants": [
+        "ngui dau ngui waragane-gonaga haleria",
+        "ngui dau, ngui waragane gonaga haleria"
+      ],
+      "points": 1
+    },
+    {
+      "id": "E3.10",
+      "promptHtml": "j. 173",
+      "part": "E3",
+      "gradingMode": "exact",
+      "answerKey": "ngui bea, ngui hombeane-gonaga halira",
+      "acceptedVariants": [
+        "ngui bea ngui hombeane-gonaga halira",
+        "ngui bea, ngui hombeane gonaga halira"
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start with the shortest expressions. Four of the perfect squares in E1 are single words, and the perfect squares between 1 and 100 are 1, 4, 9, 16, 25, 36, 49, 64, 81 and 100. Sort the ten Huli items by length and see which squares can only be the short ones.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Huli does not count in tens. The word ngui is the key: the two-word items of the shape nguira-ni X are one group of that base plus X, and the long two-clause items say how many complete groups have gone by before adding a final word. Work out the size of the group from the two shortest squares that use ngui, then check it against the long items.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "In the long numerals the two clauses say the same thing twice. The first clause counts the groups that are already finished; the second clause, ending in -gonaga, names the group you are currently inside, and that name is always one higher than the count in the first clause. So a numeral built on \"nine finished groups\" covers the stretch that begins after 9 groups, and the final word tells you how far into that stretch you are: add it to 9 times the base. No numeral in this problem falls in that stretch, so you can safely test the idea there before applying it.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What kind of counting system is this?</h3>\n<p>English counts in tens: after nine we start a new group (ten, twenty, thirty…). A language can pick any group size; the group size is called the <em>base</em>. Huli uses <strong>base 15</strong>. That single fact makes the whole problem fall into place.</p>\n<h3>Step 1: the one-word squares</h3>\n<p>The perfect squares from 1 to 100 are 1, 4, 9, 16, 25, 36, 49, 64, 81, 100. Four of the E1 items are single words: <span class=\"data\">mbira</span>, <span class=\"data\">dira</span>, <span class=\"data\">maria</span> and (in part E3) similar short words. In any counting system the smallest numbers get the shortest names, so the single words must be the small squares 1, 4 and 9. Two items instead have the shape <span class=\"data\">nguira-ni X</span>, where X is one of those short words, and six items are long two-clause phrases. That gives us three size classes matching three ranges of number.</p>\n<h3>Step 2: cracking nguira-ni</h3>\n<p>The two <span class=\"data\">nguira-ni</span> items are <span class=\"data\">nguira-ni mbira</span> and <span class=\"data\">nguira-ni pira</span>. If <span class=\"data\">nguira</span> is the base (15) and <span class=\"data\">-ni</span> means roughly \"and\", then these are 15 + something. Among the squares, only 16 and 25 are between 16 and 29, so these two words must be 15 + 1 and 15 + 10. Since <span class=\"data\">mbira</span> is also one of the single-word squares, <span class=\"data\">mbira</span> = 1 and therefore <span class=\"data\">pira</span> = 10. That confirms the base is 15, not 10 or 20 (with base 10 there would be nothing to add 10 to; with base 20 the two-word range would be wrong).</p>\n<p>Now the other single words follow: <span class=\"data\">maria</span> and <span class=\"data\">dira</span> are the remaining small squares 4 and 9. To decide which is which, look at the long phrases.</p>\n<h3>Step 3: the long numerals</h3>\n<p>A long numeral looks like this:</p>\n<div class=\"table-scroll\"><table><thead><tr><th>Huli</th><th>first clause</th><th>second clause</th><th>final word</th></tr></thead><tbody>\n<tr><td><span class=\"data\">ngui ki, ngui tebone-gonaga waragaria</span></td><td><span class=\"data\">ngui ki</span> = 2 fifteens finished</td><td><span class=\"data\">ngui tebone-gonaga</span> = of the 3rd fifteen</td><td><span class=\"data\">waragaria</span></td></tr>\n<tr><td><span class=\"data\">ngui tebo, ngui mane-gonaga maria</span></td><td>3 fifteens finished</td><td>of the 4th fifteen</td><td><span class=\"data\">maria</span></td></tr>\n<tr><td><span class=\"data\">ngui waraga, ngui kane-gonaga pira</span></td><td>6 fifteens finished</td><td>of the 7th fifteen</td><td><span class=\"data\">pira</span></td></tr>\n</tbody></table></div>\n<p>Notice the pattern: the number in the second clause is always one more than the number in the first, and it carries the ending <span class=\"data\">-ne</span> (an ordinal, \"the third\", \"the fourth\") plus <span class=\"data\">-gonaga</span> (\"of\"). The two clauses are redundant on purpose, which is lucky for us, because it lets us match up the short counting forms with their ordinals: <span class=\"data\">ki</span>/<span class=\"data\">tebone</span>, <span class=\"data\">tebo</span>/<span class=\"data\">mane</span>, <span class=\"data\">ma</span>/<span class=\"data\">dauni</span>, <span class=\"data\">dau</span>/<span class=\"data\">waragane</span>, <span class=\"data\">waraga</span>/<span class=\"data\">kane</span>, <span class=\"data\">ka</span>/<span class=\"data\">haline</span>. Reading down that chain gives the counting forms 2 <span class=\"data\">ki</span>, 3 <span class=\"data\">tebo</span>, 4 <span class=\"data\">ma</span>, 5 <span class=\"data\">dau</span>, 6 <span class=\"data\">waraga</span>, 7 <span class=\"data\">ka</span>, 8 <span class=\"data\">hali(ne)</span>.</p>\n<p>The value of the whole numeral is 15 times the first number, plus the final word. Test it: <span class=\"data\">ngui tebo, ngui mane-gonaga maria</span> = 45 + <span class=\"data\">maria</span>. The only square in the 46-60 stretch is 49, so <span class=\"data\">maria</span> = 4 (and therefore <span class=\"data\">dira</span> = 9). Then <span class=\"data\">ngui ki, ngui tebone-gonaga waragaria</span> = 30 + <span class=\"data\">waragaria</span>, and the only square between 31 and 45 is 36, so <span class=\"data\">waragaria</span> = 6. Every other E1 item checks out the same way, and <span class=\"data\">ngui waraga, ngui kane-gonaga pira</span> = 90 + 10 = 100, exactly as expected for the largest square.</p>\n<h3>Step 4: E2 fills the gaps in the word list</h3>\n<p>All four E2 lines share the same first two clauses, <span class=\"data\">ngui ka, ngui haline-gonaga</span> = 7 fifteens finished, inside the 8th fifteen, so they all start from 105. They are consecutive and increasing, so their final words <span class=\"data\">bearia, hombearia, haleria, deria</span> are four consecutive values, and adding them to 105 gives the four consecutive numbers in E2. That in turn tells us the plain words for 11, 12, 13 and 14 — the ones we had no other way to learn.</p>\n<h3>Step 5: writing numbers back in Huli (E3)</h3>\n<p>Now just run the machine backwards.</p>\n<ul>\n<li>Numbers 1-15 are a single plain word.</li>\n<li>Numbers 16-29 are <span class=\"data\">nguira-ni</span> plus the plain word for the amount over 15.</li>\n<li>Numbers 30 and up: divide by 15. If n = 15q + r with r between 1 and 15, write <span class=\"data\">ngui</span> plus the counting form of q, comma, <span class=\"data\">ngui</span> plus the ordinal of q + 1 with <span class=\"data\">-gonaga</span>, then the plain word for r.</li>\n</ul>\n<p>For example 173: 173 = 15 x 11 + 8. Eleven fifteens are finished, so the first clause uses the counting form of 11 and the second clause the ordinal of 12, and the final word is the plain word for 8. Careful here: the plain word for 8 (<span class=\"data\">halira</span>) and the plain word for 13 (<span class=\"data\">haleria</span>) look almost identical, and the ordinal \"8th\" is <span class=\"data\">haline</span>. Mixing those up is the easiest way to lose a point on this problem.</p>",
+  "reviewStatus": "published"
+}

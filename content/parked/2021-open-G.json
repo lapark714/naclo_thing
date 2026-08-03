@@ -1,0 +1,685 @@
+{
+  "id": "2021-open-G",
+  "tier": "full",
+  "year": 2021,
+  "round": "open",
+  "letter": "G",
+  "title": "The Skates of Wrath",
+  "authors": [
+    "Ryan Chi"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "semantics"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "hard",
+  "languages": [
+    "Sauk"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>Here are some words in Sauk<sup>1</sup> and their unmatched English translations in alphabetical order.</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>1. <span class=\"data\">âchimowa</span></td><td><em>A. computer</em></td></tr>\n<tr><td>2. <span class=\"data\">anemôha</span></td><td><em>B. dog</em></td></tr>\n<tr><td>3. <span class=\"data\">anemôhêha</span></td><td><em>C. Ferris wheel</em></td></tr>\n<tr><td>4. <span class=\"data\">chîtapikâneki</span></td><td><em>D. foal<sup>2</sup></em></td></tr>\n<tr><td>5. <span class=\"data\">chîtapiwa</span></td><td><em>E. laundromat</em></td></tr>\n<tr><td>6. <span class=\"data\">kôkenikâneki</span></td><td><em>F. library</em></td></tr>\n<tr><td>7. <span class=\"data\">mehikowîthenikâneki</span></td><td><em>G. living room</em></td></tr>\n<tr><td>8. <span class=\"data\">meshitêtêpithoni</span></td><td><em>H. metal</em></td></tr>\n<tr><td>9. <span class=\"data\">meshotêneki</span></td><td><em>I. Mexican restaurant</em></td></tr>\n<tr><td>10. <span class=\"data\">methenahikanani âchimôni</span></td><td><em>J. newspaper</em></td></tr>\n<tr><td>11. <span class=\"data\">methenahikani</span></td><td><em>K. oats / hay</em></td></tr>\n<tr><td>12. <span class=\"data\">methenahikanikâneki</span></td><td><em>L. Oklahoma City<sup>2</sup></em></td></tr>\n<tr><td>13. <span class=\"data\">pîwâpehkwi</span></td><td><em>M. paper</em></td></tr>\n<tr><td>14. <span class=\"data\">pîwâpehkwi âchimôni</span></td><td><em>N. puppy</em></td></tr>\n<tr><td>15. <span class=\"data\">pîwâpehkwi wînêtepi</span></td><td><em>O. roller skates</em></td></tr>\n<tr><td>16. <span class=\"data\">têtêpithonani mahkathêhani</span></td><td><em>P. telephone</em></td></tr>\n<tr><td>17. <span class=\"data\">tôskashi wîtheniweni</span></td><td><em>Q. to sit</em></td></tr>\n<tr><td>18. <span class=\"data\">tôskashêhâ</span></td><td><em>R. to tell</em></td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>G1.</strong> Determine the correct correspondences.</p>\n<p><strong>G2.</strong> Translate the following into English: <span class=\"data\">tôskashâ</span>, <span class=\"data\">kôkenêwa</span></p>\n<p><strong>G3.</strong> Translate the following into Sauk: <em>brain, shoe store, town</em></p>\n<hr />\n<p><sup>1</sup> Sauk is an Algonquian language spoken in Iowa, Kansas, and Oklahoma. Like many Indigenous languages of North America, Sauk was negatively impacted by European colonization and is now at risk of extinction. Today, Sauk is spoken by several hundred people; of these people, only a handful speak Sauk monolingually (i.e., as their only language). However, recent revitalization efforts, including courses on Sauk offered in schools, may help slow or reverse its decline.</p>\n<p><sup>2</sup> A foal is a young horse. Oklahoma City is Oklahoma's capital and largest city.</p>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "G1.1",
+      "promptHtml": "1. <span class=\"data\">âchimowa</span>",
+      "part": "G1",
+      "partPrompt": "Determine the correct correspondences. For each Sauk word, write the letter of its English translation.",
+      "gradingMode": "exact",
+      "answerKey": "R",
+      "acceptedVariants": [
+        "to tell"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.2",
+      "promptHtml": "2. <span class=\"data\">anemôha</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "dog"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.3",
+      "promptHtml": "3. <span class=\"data\">anemôhêha</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "puppy"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.4",
+      "promptHtml": "4. <span class=\"data\">chîtapikâneki</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [
+        "living room"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.5",
+      "promptHtml": "5. <span class=\"data\">chîtapiwa</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "Q",
+      "acceptedVariants": [
+        "to sit"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.6",
+      "promptHtml": "6. <span class=\"data\">kôkenikâneki</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "laundromat"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.7",
+      "promptHtml": "7. <span class=\"data\">mehikowîthenikâneki</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [
+        "Mexican restaurant"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.8",
+      "promptHtml": "8. <span class=\"data\">meshitêtêpithoni</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "Ferris wheel"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.9",
+      "promptHtml": "9. <span class=\"data\">meshotêneki</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "L",
+      "acceptedVariants": [
+        "Oklahoma City"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.10",
+      "promptHtml": "10. <span class=\"data\">methenahikanani âchimôni</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "J",
+      "acceptedVariants": [
+        "newspaper"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.11",
+      "promptHtml": "11. <span class=\"data\">methenahikani</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "M",
+      "acceptedVariants": [
+        "paper"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.12",
+      "promptHtml": "12. <span class=\"data\">methenahikanikâneki</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "library"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.13",
+      "promptHtml": "13. <span class=\"data\">pîwâpehkwi</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [
+        "metal"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.14",
+      "promptHtml": "14. <span class=\"data\">pîwâpehkwi âchimôni</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "P",
+      "acceptedVariants": [
+        "telephone"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.15",
+      "promptHtml": "15. <span class=\"data\">pîwâpehkwi wînêtepi</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "computer"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.16",
+      "promptHtml": "16. <span class=\"data\">têtêpithonani mahkathêhani</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "O",
+      "acceptedVariants": [
+        "roller skates"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.17",
+      "promptHtml": "17. <span class=\"data\">tôskashi wîtheniweni</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [
+        "oats / hay",
+        "oats",
+        "hay"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G1.18",
+      "promptHtml": "18. <span class=\"data\">tôskashêhâ</span>",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "foal"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "G2.1",
+      "promptHtml": "<span class=\"data\">tôskashâ</span>",
+      "part": "G2",
+      "partPrompt": "Translate the following into English.",
+      "gradingMode": "exact",
+      "answerKey": "horse",
+      "acceptedVariants": [
+        "a horse"
+      ],
+      "points": 1.5
+    },
+    {
+      "id": "G2.2",
+      "promptHtml": "<span class=\"data\">kôkenêwa</span>",
+      "part": "G2",
+      "gradingMode": "exact",
+      "answerKey": "to wash",
+      "acceptedVariants": [
+        "wash"
+      ],
+      "points": 1.5
+    },
+    {
+      "id": "G3.1",
+      "promptHtml": "brain",
+      "part": "G3",
+      "partPrompt": "Translate the following into Sauk.",
+      "gradingMode": "exact",
+      "answerKey": "wînêtepi",
+      "acceptedVariants": [
+        "winetepi"
+      ],
+      "points": 1
+    },
+    {
+      "id": "G3.2",
+      "promptHtml": "shoe store",
+      "part": "G3",
+      "gradingMode": "exact",
+      "answerKey": "mahkathêhanikâneki",
+      "acceptedVariants": [
+        "mahkathehanikaneki",
+        "mahkathêhikâneki",
+        "mahkathehikaneki"
+      ],
+      "points": 1
+    },
+    {
+      "id": "G3.3",
+      "promptHtml": "town",
+      "part": "G3",
+      "gradingMode": "exact",
+      "answerKey": "otêneki",
+      "acceptedVariants": [
+        "oteneki",
+        "têneki",
+        "teneki",
+        "otênekéhi",
+        "otenekehi",
+        "tênekéhi",
+        "tenekehi",
+        "otênehéki",
+        "oteneheki",
+        "tênehéki",
+        "teneheki"
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Do not start from the English. First sort the eighteen Sauk items into families that share a beginning: the two anemôh- words, the two chîtapi- words, the three methenahikan- words, the three pîwâpehkwi words, the two tôskash- words. Within a family the English meanings must be related too.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Sauk builds long words out of pieces. Look for one recurring ending that turns a word into the name of a place, another that means \"little\" or \"young\", one that marks the \"to X\" form of a verb, and one that marks plurals. Some items are two words side by side, which means a compound: a word for a material or an animal plus a second word. Match the English glosses that are themselves transparent compounds (a place where something happens, a young animal, a thing made of metal) to the Sauk items with the matching shape.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Here is the kind of step you need, done on structure rather than on any of the answers. Items 13, 14 and 15 all begin with the same free-standing word pîwâpehkwi, so 14 and 15 must each be that word compounded with something else, and whatever pîwâpehkwi means alone will show up inside both English glosses. Notice also that item 16 has the same ending -ani appearing twice, an ending you can see again in item 10, so item 16 is two nouns that are both marked the same way. Sorting the items by shape like this narrows the English candidates before you commit to any single pairing.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>The plan: shapes first, meanings second</h3><p>With eighteen words and eighteen glosses there are far too many possible matchings to guess. The way in is to notice that Sauk words are built out of smaller pieces (morphemes), and that several of the English glosses are also built out of pieces we can see: a <em>puppy</em> is a young dog, a <em>foal</em> is a young horse, a <em>laundromat</em> is a place where you wash, a <em>living room</em> is a place where you sit. So group the Sauk items by their shared parts, group the English items by their shared parts, and line the two groupings up.</p><h3>Families of Sauk words</h3><p>Sorting the list by shared beginnings gives:</p><ul><li><span class=\"data\">anemôha</span> / <span class=\"data\">anemôhêha</span></li><li><span class=\"data\">chîtapiwa</span> / <span class=\"data\">chîtapikâneki</span></li><li><span class=\"data\">kôkenikâneki</span>, <span class=\"data\">mehikowîthenikâneki</span></li><li><span class=\"data\">methenahikani</span> / <span class=\"data\">methenahikanikâneki</span> / <span class=\"data\">methenahikanani âchimôni</span></li><li><span class=\"data\">pîwâpehkwi</span> / <span class=\"data\">pîwâpehkwi âchimôni</span> / <span class=\"data\">pîwâpehkwi wînêtepi</span></li><li><span class=\"data\">tôskashi wîtheniweni</span> / <span class=\"data\">tôskashêhâ</span></li><li><span class=\"data\">meshitêtêpithoni</span> / <span class=\"data\">meshotêneki</span> (both begin <span class=\"data\">mesh-</span>)</li><li><span class=\"data\">âchimowa</span>, <span class=\"data\">chîtapiwa</span> (both end <span class=\"data\">-wa</span>)</li><li><span class=\"data\">têtêpithonani mahkathêhani</span></li></ul><h3>The recurring pieces</h3><p><strong>-kâneki = \"place\" (a locative ending).</strong> Four items end in it: a place for sitting is a <em>living room</em>, a place for washing is a <em>laundromat</em>, a place for paper is a <em>library</em>, and a place for Mexican food is a <em>Mexican restaurant</em>. That single ending pins down four glosses at once.</p><p><strong>-êha / -êhâ = \"little, young\" (a diminutive ending).</strong> <span class=\"data\">anemôha</span> plus this ending is the young version of whatever <span class=\"data\">anemôha</span> is, and <span class=\"data\">tôskash-</span> plus this ending is the young version of whatever <span class=\"data\">tôskash-</span> is. The English list contains exactly two young-animal words, <em>puppy</em> and <em>foal</em>, and footnote 2 tells you a foal is a young horse. So the <span class=\"data\">anemôh-</span> pair must be the dog pair and the <span class=\"data\">tôskash-</span> pair must be the horse pair.</p><p><strong>-wa = the \"to X\" form of a verb (an infinitive).</strong> Only two glosses are verbs, <em>to sit</em> and <em>to tell</em>. <span class=\"data\">chîtapiwa</span> is the verb whose place-form is the <em>living room</em>, so it is <em>to sit</em>, and <span class=\"data\">âchimowa</span> is <em>to tell</em>.</p><p><strong>-ani = plural.</strong> Compare <span class=\"data\">methenahikani</span> with <span class=\"data\">methenahikanani</span>: the second is the plural of the first. In <span class=\"data\">têtêpithonani mahkathêhani</span> both nouns carry that plural marking, which fits <em>roller skates</em> (wheels plus shoes, both plural).</p><p><strong>mesh- = \"big\".</strong> <span class=\"data\">meshitêtêpithoni</span> contains <span class=\"data\">têtêpithon-</span> \"wheel\" (seen again in the skates item), so a big wheel is the <em>Ferris wheel</em>. <span class=\"data\">meshotêneki</span> is then \"big town\", which the footnote helps you read as <em>Oklahoma City</em>, the state's largest city.</p><h3>Compounds with âchimôni</h3><p><span class=\"data\">âchimôni</span> is built on the same root as <em>to tell</em>, so it means something like \"telling, message\". A telling made of paper is a <em>newspaper</em>; a telling made of metal is a <em>telephone</em>. That means <span class=\"data\">methenahikani</span> is <em>paper</em> and <span class=\"data\">pîwâpehkwi</span> is <em>metal</em>. The remaining <span class=\"data\">pîwâpehkwi</span> compound, with <span class=\"data\">wînêtepi</span>, is the <em>computer</em> - a \"metal brain\" - so <span class=\"data\">wînêtepi</span> on its own means <em>brain</em>, which answers part of G3.</p><h3>Finishing the leftovers</h3><p><span class=\"data\">tôskashi wîtheniweni</span> is \"horse food\", which matches <em>oats / hay</em>. That confirms <span class=\"data\">tôskash-</span> is the horse root, and the leftover animal item <span class=\"data\">anemôha</span> is <em>dog</em> with <span class=\"data\">anemôhêha</span> its <em>puppy</em>.</p><h3>G2: reading new words</h3><p><span class=\"data\">tôskashâ</span> is the horse root with no diminutive ending, so it is simply <em>horse</em>. <span class=\"data\">kôkenêwa</span> has the infinitive <span class=\"data\">-wa</span> on the root found in the laundromat word, so it is <em>to wash</em>.</p><h3>G3: building new words</h3><p><em>brain</em> is <span class=\"data\">wînêtepi</span>, extracted from the computer compound. For <em>shoe store</em>, take the shoe word from the skates item and add the place ending: <span class=\"data\">mahkathêhanikâneki</span> (shoe-PL-LOC); the solution also accepts <span class=\"data\">mahkathêhikâneki</span> (shoe-LOC) if you strip the plural first. For <em>town</em>, remove \"big\" from <span class=\"data\">meshotêneki</span> to get <span class=\"data\">otêneki</span>; because the boundary between <span class=\"data\">mesh-</span> and the town word can be cut in more than one sensible place, the official key also accepts <span class=\"data\">têneki</span>, <span class=\"data\">otênekéhi</span>, <span class=\"data\">tênekéhi</span>, <span class=\"data\">otênehéki</span> and <span class=\"data\">tênehéki</span>.</p><h3>The moral</h3><p>Matching puzzles like this are really morphology puzzles: find the affixes and the compounds, and the meanings sort themselves out. Almost every match here was forced by a piece of structure rather than guessed from meaning.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution page. G1 keys are the option letters (solution prints e.g. \"1. R (tell-INF)\"); the parenthetical morpheme glosses were not included in the keys. Points distributed as G1 0.5 each (9), G2 1.5 each (3), G3 1 each (3) = 15; the official solution shows no per-part breakdown, so please confirm. G1 choices are given as bare letters A-R so the key matches character-for-character; the booklet prints them as \"A. computer\" etc. The booklet prints no fill-in blanks (answers go on separate answer sheets), so no answer slots were embedded in bodyHtml. Check all circumflex/acute diacritics in Sauk data, especially otênekéhi / tênekéhi / otênehéki / tênehéki in the G3 accepted variants.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "cells:count",
+      "a": "36",
+      "note": "resolved, but this path is inside bodyHtml and is not written back automatically"
+    }
+  ]
+}

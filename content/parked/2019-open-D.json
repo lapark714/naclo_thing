@@ -1,0 +1,229 @@
+{
+  "id": "2019-open-D",
+  "tier": "full",
+  "year": 2019,
+  "round": "open",
+  "letter": "D",
+  "title": "(title unknown)",
+  "authors": [
+    "Daniel Lovsted"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "semantics"
+  ],
+  "formTag": "table completion",
+  "difficulty": "hard",
+  "languages": [
+    "English"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>Sentences can be true, false, or, sometimes, truly nonsensical. For sentences of the form, “The [subject] is [predicate]”, we can divide them into “sensible” and “nonsensical” groups:</p>\n<div class=\"table-scroll\"><table><thead><tr><th>sensible</th><th></th><th>nonsensical</th><th></th></tr></thead><tbody><tr><td>The moon is purple.</td><td>✓</td><td>The idea is purple.</td><td>*</td></tr><tr><td>The game is an hour long.</td><td>✓</td><td>The pig is an hour long.</td><td>*</td></tr><tr><td>The girl is sorry.</td><td>✓</td><td>The fear is sorry.</td><td>*</td></tr></tbody></table></div>\n<p>In 1959, philosopher Fred Sommers theorized that the predicates of any language were organized in a binary tree structure, according to which subjects they could be used sensibly with. In 1979, psychologist Frank C. Keil tested Sommers’ tree theory by asking children whether given English sentences made sense or not and diagramming the results. He confirmed Sommers’ theory, producing trees like this one:</p>\n<figure><img src=\"/content-assets/2019-open-D-keil-tree.png\" alt=\"Tree of English predicates: interesting at the top, branching down through nearby, true and love; purple and an hour long; tall, pourable, on purpose and thunderstorm; sick, fixed, milk and kiss; asleep, wilted and refrigerator; sorry, rabbit and maple; and girl at the bottom.\" /></figure>\n<p>Tree diagram adapted from: Frank C. Keil. <em>Semantic and Conceptual Development: An Ontological Perspective.</em> Cambridge, MA: Harvard University Press, 1979</p>\n<p>Here are some English sentences that use words you may not be familiar with:</p>\n<div class=\"table-scroll\"><table><tbody><tr><td>The <span class=\"data\">morkle</span> is <span class=\"data\">phlebular</span>.</td><td>✓</td><td>The <span class=\"data\">groob</span> is <span class=\"data\">brastic</span>.</td><td>✓</td></tr><tr><td>The <span class=\"data\">humbrid</span> is <span class=\"data\">phlebular</span>.</td><td>✓</td><td>The <span class=\"data\">vippage</span> is <span class=\"data\">molistic</span>.</td><td>*</td></tr><tr><td>The <span class=\"data\">morkle</span> is <span class=\"data\">luctious</span>.</td><td>*</td><td>The <span class=\"data\">quexor</span> is <span class=\"data\">molistic</span>.</td><td>*</td></tr><tr><td>The <span class=\"data\">quexor</span> is <span class=\"data\">luctious</span>.</td><td>✓</td><td>The <span class=\"data\">thalf</span> is <span class=\"data\">molistic</span>.</td><td>✓</td></tr><tr><td>The <span class=\"data\">pladry</span> is <span class=\"data\">luctious</span>.</td><td>✓</td><td>The <span class=\"data\">humbrid</span> is <span class=\"data\">molistic</span>.</td><td>✓</td></tr><tr><td>The <span class=\"data\">groob</span> is <span class=\"data\">efrimious</span>.</td><td>*</td><td>The <span class=\"data\">groob</span> is <span class=\"data\">frungent</span>.</td><td>*</td></tr><tr><td>The <span class=\"data\">vippage</span> is <span class=\"data\">efrimious</span>.</td><td>✓</td><td>The <span class=\"data\">thalf</span> is <span class=\"data\">frungent</span>.</td><td>*</td></tr><tr><td>The <span class=\"data\">pladry</span> is <span class=\"data\">frungent</span>.</td><td>*</td><td>The <span class=\"data\">thalf</span> is <span class=\"data\">stibbly</span>.</td><td>*</td></tr><tr><td>The <span class=\"data\">groob</span> is <span class=\"data\">stibbly</span>.</td><td>*</td><td>The <span class=\"data\">groob</span> is <span class=\"data\">luctious</span>.</td><td>*</td></tr></tbody></table></div>\n<p>Here is a tree that shows the semantic structure of the words used in these sentences. Note that each number and letter in the tree corresponds to exactly one word.</p>\n<figure><img src=\"/content-assets/2019-open-D-abstract-tree.png\" alt=\"Abstract tree: node A at the top with children B, C and a dashed leaf 1; B has children D, a dashed leaf 2 and E; D has children F, a dashed leaf 4 and G; C has dashed leaf 3; E has dashed leaf 5; F has dashed leaf 6; G has dashed leaf 7.\" /></figure>\n<p>Tree diagram typeset by Daniel Lovsted.</p>\n<p><strong>D1.</strong> Fill in the following table. Some of the answers have already been entered:</p>\n<div class=\"table-scroll\"><table><tbody><tr><th>Predicate:</th><td><span class=\"data\">brastic</span></td><td><span class=\"data\">efrimious</span></td><td><span class=\"data\">frungent</span></td><td><span class=\"data\">luctious</span></td><td><span class=\"data\">molistic</span></td><td><span class=\"data\">phlebular</span></td><td><span class=\"data\">stibbly</span></td></tr><tr><th>Position:</th><td><span class=\"blank\" data-q=\"D1.1\"></span></td><td><span class=\"blank\" data-q=\"D1.2\"></span></td><td><span class=\"blank\" data-q=\"D1.3\"></span></td><td><span class=\"blank\" data-q=\"D1.4\"></span></td><td><span class=\"blank\" data-q=\"D1.5\"></span></td><td><span class=\"blank\" data-q=\"D1.6\"></span></td><td>G</td></tr><tr><th>Subject:</th><td><span class=\"data\">groob</span></td><td><span class=\"data\">humbrid</span></td><td><span class=\"data\">morkle</span></td><td><span class=\"data\">pladry</span></td><td><span class=\"data\">quexor</span></td><td><span class=\"data\">thalf</span></td><td><span class=\"data\">vippage</span></td></tr><tr><th>Position:</th><td><span class=\"blank\" data-q=\"D1.7\"></span></td><td><span class=\"blank\" data-q=\"D1.8\"></span></td><td><span class=\"blank\" data-q=\"D1.9\"></span></td><td><span class=\"blank\" data-q=\"D1.10\"></span></td><td>2</td><td><span class=\"blank\" data-q=\"D1.11\"></span></td><td><span class=\"blank\" data-q=\"D1.12\"></span></td></tr></tbody></table></div>\n<p><strong>D2.</strong> Mark each of the following sentences with ✓ or * again, as usual:</p>\n<p>A. The <span class=\"data\">humbrid</span> is <span class=\"data\">frungent</span>.</p>\n<p>B. The <span class=\"data\">morkle</span> is <span class=\"data\">stibbly</span>.</p>\n<p>C. The <span class=\"data\">pladry</span> is <span class=\"data\">phlebular</span>.</p>\n<p>D. The <span class=\"data\">groob</span> is <span class=\"data\">molistic</span>.</p>",
+  "assets": [
+    {
+      "src": "/content-assets/2019-open-D-keil-tree.png",
+      "alt": "Tree of English predicates: interesting at the top, branching down through nearby, true and love; purple and an hour long; tall, pourable, on purpose and thunderstorm; sick, fixed, milk and kiss; asleep, wilted and refrigerator; sorry, rabbit and maple; and girl at the bottom."
+    },
+    {
+      "src": "/content-assets/2019-open-D-abstract-tree.png",
+      "alt": "Abstract tree: node A at the top with children B, C and a dashed leaf 1; B has children D, a dashed leaf 2 and E; D has children F, a dashed leaf 4 and G; C has dashed leaf 3; E has dashed leaf 5; F has dashed leaf 6; G has dashed leaf 7."
+    }
+  ],
+  "questions": [
+    {
+      "id": "D1.1",
+      "promptHtml": "Position of the predicate <span class=\"data\">brastic</span>",
+      "part": "D1",
+      "partPrompt": "Fill in the table: give the position in the tree (a letter for each predicate, a number for each subject). Some of the answers have already been entered: stibbly is G and quexor is 2.",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D1.2",
+      "promptHtml": "Position of the predicate <span class=\"data\">efrimious</span>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D1.3",
+      "promptHtml": "Position of the predicate <span class=\"data\">frungent</span>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D1.4",
+      "promptHtml": "Position of the predicate <span class=\"data\">luctious</span>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D1.5",
+      "promptHtml": "Position of the predicate <span class=\"data\">molistic</span>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D1.6",
+      "promptHtml": "Position of the predicate <span class=\"data\">phlebular</span>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D1.7",
+      "promptHtml": "Position of the subject <span class=\"data\">groob</span>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "3",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D1.8",
+      "promptHtml": "Position of the subject <span class=\"data\">humbrid</span>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "6",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D1.9",
+      "promptHtml": "Position of the subject <span class=\"data\">morkle</span>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D1.10",
+      "promptHtml": "Position of the subject <span class=\"data\">pladry</span>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "7",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D1.11",
+      "promptHtml": "Position of the subject <span class=\"data\">thalf</span>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "4",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D1.12",
+      "promptHtml": "Position of the subject <span class=\"data\">vippage</span>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "5",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D2.1",
+      "promptHtml": "A. The <span class=\"data\">humbrid</span> is <span class=\"data\">frungent</span>.",
+      "part": "D2",
+      "partPrompt": "Mark each of the following sentences with the check mark (sensible) or * (nonsensical).",
+      "gradingMode": "exact",
+      "answerKey": "✓",
+      "acceptedVariants": [],
+      "choices": [
+        "✓",
+        "*"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "D2.2",
+      "promptHtml": "B. The <span class=\"data\">morkle</span> is <span class=\"data\">stibbly</span>.",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "*",
+      "acceptedVariants": [],
+      "choices": [
+        "✓",
+        "*"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "D2.3",
+      "promptHtml": "C. The <span class=\"data\">pladry</span> is <span class=\"data\">phlebular</span>.",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "✓",
+      "acceptedVariants": [],
+      "choices": [
+        "✓",
+        "*"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "D2.4",
+      "promptHtml": "D. The <span class=\"data\">groob</span> is <span class=\"data\">molistic</span>.",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "*",
+      "acceptedVariants": [],
+      "choices": [
+        "✓",
+        "*"
+      ],
+      "points": 0.75
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "In the second tree, every capital letter stands for one predicate and every number stands for one subject. Before touching the tree, make two short lists for each predicate from the sentence data: the subjects it is sensible with, and the subjects it is nonsensical with.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "The tree works like this: a predicate sitting at a node is sensible with exactly those numbered subjects that hang somewhere below that node, and nonsensical with all the others. So a predicate near the top is sensible with many subjects, and a predicate at the end of a branch is sensible with only one. Match the size of each predicate's sensible list against the number of leaves below each letter, and remember that if two predicates share a subject, one of their nodes must sit above the other.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Test the idea on the English tree first: \"purple\" sits above \"tall\", so anything that can be tall (a girl, a rabbit) can also be purple, while a thunderstorm sits under \"an hour long\" on a different branch and so cannot be purple. Now count leaves in the second tree: A has all seven numbers below it, B has five of them, D has three, and C, E, F and G each have exactly one. Those counts tell you which predicates can possibly go where before you work out any single word.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What the tree means</h3><p>A <em>predicate</em> is the part after “is” (“... is purple”), and the <em>subject</em> is the thing being described. Sommers’ idea is that predicates live in a tree, and a predicate can be used sensibly with exactly those subjects that hang somewhere below it. In the English tree, “purple” sits high up, so almost anything can be purple; “wilted” sits low, so only a maple (and things near it) can wilt sensibly. A pig cannot be an hour long because “pig” is not below “an hour long”.</p><h3>Reading the shape of the second tree</h3><p>Letters are predicates, numbers are subjects. Counting which numbered leaves hang under each letter:</p><ul><li>A: 1, 2, 3, 4, 5, 6, 7 (all seven)</li><li>B: 2, 4, 5, 6, 7 (five)</li><li>C: 3 (one)</li><li>D: 4, 6, 7 (three)</li><li>E: 5 (one)</li><li>F: 6 (one)</li><li>G: 7 (one)</li></ul><p>So exactly one predicate works with everything, one works with five subjects, one with three, and four of them work with a single subject each.</p><h3>Sorting the sentence data</h3><p>From the sentences: <span class=\"data\">phlebular</span> is fine with <span class=\"data\">morkle</span> and <span class=\"data\">humbrid</span>; <span class=\"data\">luctious</span> is fine with <span class=\"data\">quexor</span> and <span class=\"data\">pladry</span> but bad with <span class=\"data\">morkle</span> and <span class=\"data\">groob</span>; <span class=\"data\">molistic</span> is fine with <span class=\"data\">thalf</span> and <span class=\"data\">humbrid</span> but bad with <span class=\"data\">vippage</span> and <span class=\"data\">quexor</span>; <span class=\"data\">brastic</span> is fine with <span class=\"data\">groob</span>; <span class=\"data\">efrimious</span> is fine with <span class=\"data\">vippage</span> but bad with <span class=\"data\">groob</span>; <span class=\"data\">frungent</span> is fine with <span class=\"data\">humbrid</span> but bad with <span class=\"data\">groob</span>, <span class=\"data\">thalf</span> and <span class=\"data\">pladry</span>; <span class=\"data\">stibbly</span> is bad with <span class=\"data\">groob</span> and <span class=\"data\">thalf</span>.</p><h3>Using the two given answers</h3><p>We are told <span class=\"data\">quexor</span> is 2. Leaf 2 hangs under A and B only, so a predicate that is sensible with <span class=\"data\">quexor</span> must sit at A or B, and a predicate that is nonsensical with it cannot. Since <span class=\"data\">quexor</span> is <span class=\"data\">luctious</span>, <span class=\"data\">luctious</span> is at A or B; since <span class=\"data\">quexor</span> is not <span class=\"data\">molistic</span>, <span class=\"data\">molistic</span> is neither A nor B.</p><h3>Which subjects sit outside B?</h3><p>Both <span class=\"data\">morkle</span> and <span class=\"data\">groob</span> reject <span class=\"data\">luctious</span>. If <span class=\"data\">luctious</span> were at A, it would work with everything, so <span class=\"data\">luctious</span> is at B, and <span class=\"data\">morkle</span> and <span class=\"data\">groob</span> must be the two leaves outside B: they are 1 and 3, in some order.</p><p>Leaf 1 has only A above it, so a subject at 1 can be sensible with just one predicate (the one at A). But <span class=\"data\">groob</span> is sensible with <span class=\"data\">brastic</span>, while <span class=\"data\">morkle</span> is sensible with <span class=\"data\">phlebular</span>, which also works with <span class=\"data\">humbrid</span> — so <span class=\"data\">phlebular</span> must cover more than one subject and therefore cannot be the single node above leaf 3 (which is C, covering only leaf 3). That forces <span class=\"data\">morkle</span> to be leaf 1, with <span class=\"data\">phlebular</span> at A, and <span class=\"data\">groob</span> to be leaf 3, with <span class=\"data\">brastic</span> at C.</p><h3>Down the middle branch</h3><p><span class=\"data\">molistic</span> covers <span class=\"data\">thalf</span> and <span class=\"data\">humbrid</span> but not <span class=\"data\">quexor</span> or <span class=\"data\">vippage</span>, and it is not A or B. The only remaining node with more than one leaf is D (leaves 4, 6, 7), so <span class=\"data\">molistic</span> is D, and <span class=\"data\">thalf</span> and <span class=\"data\">humbrid</span> are two of 4, 6, 7.</p><p><span class=\"data\">frungent</span> works with <span class=\"data\">humbrid</span> but not <span class=\"data\">thalf</span>, so it is a one-leaf node under D: F or G. We are given that <span class=\"data\">stibbly</span> is G, so <span class=\"data\">frungent</span> is F and <span class=\"data\">humbrid</span> is leaf 6. <span class=\"data\">thalf</span> is then 4 or 7, but <span class=\"data\">thalf</span> is not <span class=\"data\">stibbly</span>, and <span class=\"data\">stibbly</span> = G covers leaf 7, so <span class=\"data\">thalf</span> is 4.</p><h3>The last two subjects</h3><p>Only <span class=\"data\">efrimious</span> is left for node E, so <span class=\"data\">efrimious</span> is E, which covers leaf 5 alone. Since <span class=\"data\">vippage</span> is <span class=\"data\">efrimious</span>, <span class=\"data\">vippage</span> is 5, and the last remaining leaf, 7, is <span class=\"data\">pladry</span>. Check: <span class=\"data\">pladry</span> is <span class=\"data\">luctious</span> (leaf 7 does sit under B) and not <span class=\"data\">frungent</span> (7 is not under F) — both match the data.</p><h3>Part D2</h3><p>Now just ask whether the subject's leaf sits below the predicate's node.</p><ul><li>A. <span class=\"data\">humbrid</span> is 6, <span class=\"data\">frungent</span> is F, and 6 hangs under F: sensible.</li><li>B. <span class=\"data\">morkle</span> is 1, <span class=\"data\">stibbly</span> is G, which covers only 7: nonsensical.</li><li>C. <span class=\"data\">pladry</span> is 7, <span class=\"data\">phlebular</span> is A, which covers everything: sensible.</li><li>D. <span class=\"data\">groob</span> is 3, <span class=\"data\">molistic</span> is D, which covers 4, 6, 7 only: nonsensical.</li></ul>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution page (D1: A phlebular, B luctious, C brastic, D molistic, E efrimious, F frungent, G stibbly; 1 morkle, 2 quexor, 3 groob, 4 thalf, 5 vippage, 6 humbrid, 7 pladry; D2 check, *, check, *). D2 keys use the check-mark character U+2713 as printed in the booklet - confirm font coverage, otherwise switch to 'check'. Point split is an even guess: D1 12 x 1 point, D2 4 x 0.75 point (no official breakdown given).\nCROP /content-assets/2019-open-D-keil-tree.png page=1 x=13 y=43 w=76 h=45\nCROP /content-assets/2019-open-D-abstract-tree.png page=2 x=17 y=42 w=62 h=50",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "(verification)",
+      "note": "this booklet has no usable text layer, so neither the witness check nor arbitration can run. Parked for human review by policy, not by a specific disagreement"
+    },
+    {
+      "kind": "figure",
+      "path": "/content-assets/2019-open-D-keil-tree.png",
+      "note": "crop not confirmed after 3 attempts (last verdict: NOISY)"
+    }
+  ]
+}

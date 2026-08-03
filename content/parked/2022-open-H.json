@@ -1,0 +1,366 @@
+{
+  "id": "2022-open-H",
+  "tier": "full",
+  "year": 2022,
+  "round": "open",
+  "letter": "H",
+  "title": "From Soup to Nuts",
+  "authors": [
+    "Simi Hellsten"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "semantics"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "hard",
+  "languages": [
+    "Tseltal"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>Tseltal is a Mayan language spoken by about 590,000 people in the Mexican state of Chiapas. Below are some Tseltal sentences about what people ate, along with their loose English translations. <em>Sg.</em> and <em>pl.</em> are short for <em>singular</em> and <em>plural</em>.</p>\n<p><em>Note:</em> A <u>chicken comb</u> is the crest on top of a chicken's head. A <u>gizzard</u> is an organ that birds use for grinding up food. A <u>tamale</u> is a traditional Mesoamerican dish, made of dough that is steamed in a corn husk or banana leaf. An <u>avocado</u> is a fruit that has a large seed and green flesh with green to purple or black skin. As an avocado ripens, it becomes significantly softer; unlike other fruits, however, it does not become sweet. <u>Panela</u> is a block of unprocessed brown sugar. A <u>tortilla</u> is a thin, circular flatbread usually made from corn rather than wheat, as many other breads are. A <u>radish</u> is a crunchy vegetable with a sharp flavor often used in salads. <u>Marrow</u> is a fatty substance contained in bones, sometimes spread over bread or vegetables. <u>Greens</u> refers to green leafy vegetables that cook down into a mushy mass.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Tseltal</th><th>English</th></tr></thead>\n<tbody>\n<tr><td>1</td><td><span class=\"data\">la jtiʔ te stsalub mute</span></td><td>I ate the chicken comb.</td></tr>\n<tr><td>2</td><td><span class=\"data\">la jweʔ kaxlan waj</span></td><td>I ate bread.</td></tr>\n<tr><td>3</td><td><span class=\"data\">la achik' kaxlan waj ta kajpe</span></td><td>You (sg.) ate bread soaked in coffee.</td></tr>\n<tr><td>4</td><td><span class=\"data\">la sloʔik chab</span></td><td>They ate honey.</td></tr>\n<tr><td>5</td><td><span class=\"data\">la atiʔ ʔich</span></td><td>You (sg.) ate chili peppers.</td></tr>\n<tr><td>6</td><td><span class=\"data\">la ak'ux kajan</span></td><td>You (sg.) ate my corn.</td></tr>\n<tr><td>7</td><td><span class=\"data\">la jweʔtik jwajtik</span></td><td>We ate our tortillas.</td></tr>\n<tr><td>8</td><td><span class=\"data\">la sk'ux chenek'</span></td><td>She ate beans.</td></tr>\n<tr><td>9</td><td><span class=\"data\">la sloʔ manko</span></td><td>She ate a ripe mango.</td></tr>\n<tr><td>10</td><td><span class=\"data\">la jk'ux te mankoe</span></td><td>I ate the unripe mango.</td></tr>\n<tr><td>11</td><td><span class=\"data\">la sloʔik jloʔbaltik</span></td><td>They ate our bananas.</td></tr>\n<tr><td>12</td><td><span class=\"data\">la atiʔ te xchaʔ mute</span></td><td>You (sg.) ate the chicken gizzard.</td></tr>\n<tr><td>13</td><td><span class=\"data\">la ak'ux kalwanextik</span></td><td>You (sg.) ate our radishes.</td></tr>\n<tr><td>14</td><td><span class=\"data\">la sweʔik te pats'e</span></td><td>They ate the tamales.</td></tr>\n<tr><td>15</td><td><span class=\"data\">la sk'ux yaskal</span></td><td>She ate her panela chunks.</td></tr>\n<tr><td>16</td><td><span class=\"data\">la jchik'tik yaʔlel tiʔbal</span></td><td>We ate meat soup.</td></tr>\n<tr><td>17</td><td><span class=\"data\">la jk'uxtik awajanik</span></td><td>We ate your (pl.) corn.</td></tr>\n<tr><td>18</td><td><span class=\"data\">la aweʔ te waje</span></td><td>You (sg.) ate the tortillas.</td></tr>\n<tr><td>19</td><td><span class=\"data\">la sk'ux bok</span></td><td>She ate raw greens.</td></tr>\n<tr><td>20</td><td><span class=\"data\">la jtiʔ awich</span></td><td>I ate your (sg.) chili peppers.</td></tr>\n<tr><td>21</td><td><span class=\"data\">la jloʔ te ʔone</span></td><td>I ate the avocados.</td></tr>\n<tr><td>22</td><td><span class=\"data\">la stiʔik te yoʔtan mute</span></td><td>They ate the chicken heart.</td></tr>\n<tr><td>23</td><td><span class=\"data\">la sloʔ yonik</span></td><td>She ate their avocados.</td></tr>\n<tr><td>24</td><td><span class=\"data\">la aloʔ achab</span></td><td>You (sg.) ate your (sg.) honey.</td></tr>\n<tr><td>25</td><td><span class=\"data\">la stiʔ sejkub wakax</span></td><td>She ate cow liver.</td></tr>\n<tr><td>26</td><td><span class=\"data\">la sk'ux sp'olik</span></td><td>She ate their popcorn.</td></tr>\n</tbody>\n</table>\n</div>\n<p>Here are some more words in Tseltal (you will need them from H2 onwards):</p>\n<dl class=\"gloss-list\"><dt>k'in</dt><dd>kidney</dd><dt>kaxlan chenek'</dt><dd>peanuts</dd><dt>tsukum</dt><dd>stomach</dd><dt>chin bak</dt><dd>marrow</dd><dt>k'oxox</dt><dd>toasted tortillas</dd></dl>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "H1.1",
+      "promptHtml": "<p>Which food is the exception? Write your answer in English.</p>",
+      "part": "H1",
+      "partPrompt": "One of the foods above is an exception: the phrase(s) with this food do not follow the normal rules that determine the rest of Tseltal phrases. Which food is it? Write your answer in English.",
+      "gradingMode": "exact",
+      "answerKey": "chili pepper",
+      "acceptedVariants": [
+        "chili peppers",
+        "chile pepper",
+        "chili pepper (ʔich)",
+        "chili pepper (?ich)",
+        "ʔich",
+        "?ich"
+      ],
+      "points": 2
+    },
+    {
+      "id": "H2.1",
+      "promptHtml": "<p>Translate into English: <span class=\"data\">la jtiʔ sk'in wakax</span></p>",
+      "part": "H2",
+      "partPrompt": "Translate the following sentence into English: la jtiʔ sk'in wakax",
+      "gradingMode": "exact",
+      "answerKey": "I ate cow kidney.",
+      "acceptedVariants": [
+        "I ate cow kidney",
+        "I ate her cow kidney",
+        "I ate the cow's kidney",
+        "I ate cow's kidney"
+      ],
+      "points": 2
+    },
+    {
+      "id": "H3.1",
+      "promptHtml": "<p>a. We ate the peanuts.</p>",
+      "part": "H3",
+      "partPrompt": "Translate the following sentences into Tseltal.",
+      "gradingMode": "exact",
+      "answerKey": "la jk'uxtik te kaxlan chenek'e",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "H3.2",
+      "promptHtml": "<p>b. You (pl.) ate cow stomach.</p>",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "la atiʔik stsukum wakax",
+      "acceptedVariants": [
+        "la ati?ik stsukum wakax",
+        "la atiʔik tsukum wakax",
+        "la ati?ik tsukum wakax"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H3.3",
+      "promptHtml": "<p>c. They ate meat.</p>",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "la stiʔik tiʔbal",
+      "acceptedVariants": [
+        "la sti?ik ti?bal"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H3.4",
+      "promptHtml": "<p>d. You (sg.) ate your (pl.) avocados.</p>",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "la aloʔ awonik",
+      "acceptedVariants": [
+        "la alo? awonik"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H3.5",
+      "promptHtml": "<p>e. I ate my honey.</p>",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "la jweʔ jchab",
+      "acceptedVariants": [
+        "la jwe? jchab"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H3.6",
+      "promptHtml": "<p>f. She ate cooked greens.</p>",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "la sloʔ bok",
+      "acceptedVariants": [
+        "la slo? bok"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H3.7",
+      "promptHtml": "<p>g. She ate bean soup.</p>",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "la xchik' yaʔlel chenek'",
+      "acceptedVariants": [
+        "la xchik' ya?lel chenek'",
+        "la schik' yaʔlel chenek'",
+        "la schik' ya?lel chenek'"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H4.1",
+      "promptHtml": "<p>What word should replace <span class=\"data\">jtiʔ</span> in <span class=\"data\">la jtiʔ chin bak</span> (\"I ate marrow\")?</p>",
+      "part": "H4",
+      "partPrompt": "One of your friends is learning Tseltal. He translates \"I ate marrow\" as la jtiʔ chin bak, and he is told that this translation is incorrect: the correct form has a different word instead of jtiʔ. What is this other word?",
+      "gradingMode": "exact",
+      "answerKey": "jloʔ",
+      "acceptedVariants": [
+        "jlo?"
+      ],
+      "points": 1
+    },
+    {
+      "id": "H5.1",
+      "promptHtml": "<p>What word should replace <span class=\"data\">sweʔ</span> in <span class=\"data\">la sweʔ ak'oxox</span> (\"She ate your (sg.) toasted tortillas\")?</p>",
+      "part": "H5",
+      "partPrompt": "Another Tseltal learner translates \"She ate your (sg.) toasted tortillas\" as la sweʔ ak'oxox, but it turns out that this translation is incorrect: the correct form has a different word instead of sweʔ. What is this other word?",
+      "gradingMode": "exact",
+      "answerKey": "sk'ux",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "H6.1",
+      "promptHtml": "<p>Given that <span class=\"data\">ixim</span> means \"corn,\" what plant does <span class=\"data\">kaxlan ixim</span> translate to in English?</p>",
+      "part": "H6",
+      "partPrompt": "Given that ixim means \"corn,\" what plant does kaxlan ixim translate to in English?",
+      "gradingMode": "exact",
+      "answerKey": "wheat",
+      "acceptedVariants": [],
+      "points": 2
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Every sentence starts with la, but the word that follows it is not always the same, even though the English always says \"ate\". Sort the sentences by which \"eat\" word they use and look at what kind of food each group contains.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Tseltal picks its verb for eating according to the texture or type of the food: soft mushy things, hard crunchy or countable things, breads, and soupy or soaked things each get their own verb. Then, separately, the prefixes and suffixes on the verb mark who ate, and the very same prefixes and suffixes on the noun mark the possessor. A final -e together with te before the noun marks definiteness (\"the\").",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Take sentence 13, la ak'ux kalwanextik = \"You (sg.) ate our radishes\". The verb carries a- for a 2nd person singular subject; the noun alwanex carries the 1st person prefix k- plus the plural -tik, giving \"our\". So the person marking on the verb and the possessor marking on the noun use one and the same set of affixes: j-/k- for 1st person, a-/aw- for 2nd, s-/y-/xch- for 3rd, with -tik for 1st person plural and -ik for 2nd/3rd person plural.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: la is the easy part</h3>\n<p>Every single sentence begins with <span class=\"data\">la</span>, and every English translation is in the past tense. So <span class=\"data\">la</span> just marks a completed action (linguists call this <em>perfective</em>). You cannot work out anything more precise than that from the data, and you do not need to.</p>\n<h3>Step 2: there is more than one word for \"eat\"</h3>\n<p>Look at the second word of each sentence, stripping off the prefix that changes from row to row. You keep meeting the same handful of stems:</p>\n<ul>\n<li><span class=\"data\">tiʔ</span> in row 1 (chicken comb), 12 (gizzard), 22 (heart), 25 (liver), 5 and 20 (chili peppers)</li>\n<li><span class=\"data\">loʔ</span> in row 4 (honey), 9 (ripe mango), 11 (bananas), 21 and 23 (avocados)</li>\n<li><span class=\"data\">k'ux</span> in row 6 and 17 (corn), 8 (beans), 10 (unripe mango), 13 (radishes), 15 (panela chunks), 19 (raw greens), 26 (popcorn)</li>\n<li><span class=\"data\">weʔ</span> in row 2 (bread), 7 and 18 (tortillas), 14 (tamales)</li>\n<li><span class=\"data\">chik'</span> in row 3 (bread soaked in coffee) and 16 (meat soup)</li>\n</ul>\n<p>A pattern jumps out: the verb depends on the <em>kind</em> of food.</p>\n<ul>\n<li><span class=\"data\">tiʔ</span> = eat meat and meat-like organs (and, oddly, chili peppers)</li>\n<li><span class=\"data\">loʔ</span> = eat soft, mushy things (honey, banana, avocado, a ripe mango)</li>\n<li><span class=\"data\">k'ux</span> = eat hard, crunchy or countable things (radish, panela chunks, corn, popcorn, beans, an unripe mango)</li>\n<li><span class=\"data\">weʔ</span> = eat breads (bread, tortilla, tamale)</li>\n<li><span class=\"data\">chik'</span> = eat soups and things soaked in liquid</li>\n</ul>\n<p>Two foods appear twice with two different verbs, and that confirms the rule beautifully: mango is <span class=\"data\">loʔ</span> when ripe (soft) but <span class=\"data\">k'ux</span> when unripe (hard), and greens are <span class=\"data\">k'ux</span> when raw (crunchy) but would take <span class=\"data\">loʔ</span> once cooked into mush.</p>\n<h3>Step 3: which food breaks the pattern?</h3>\n<p>Every group above makes sense from the food's texture, with one exception: chili peppers are not meat, yet rows 5 and 20 use <span class=\"data\">tiʔ</span>, the meat verb. That is the odd one out asked for in H1. (In the real language, mushrooms behave the same way.)</p>\n<h3>Step 4: the prefixes and suffixes</h3>\n<p>Now compare rows that differ only in who ate:</p>\n<ul>\n<li>row 1 <span class=\"data\">jtiʔ</span> \"I ate\", row 5 <span class=\"data\">atiʔ</span> \"you (sg.) ate\", row 25 <span class=\"data\">stiʔ</span> \"she ate\", row 22 <span class=\"data\">stiʔik</span> \"they ate\", row 16 <span class=\"data\">jchik'tik</span> \"we ate\"</li>\n</ul>\n<p>So the subject markers are <strong>j-</strong> (1st person), <strong>a-</strong> (2nd), <strong>s-</strong> (3rd), with <strong>-tik</strong> for \"we\" and <strong>-ik</strong> for plural 2nd/3rd person. The prefixes change shape depending on the following sound: <span class=\"data\">j-</span> becomes <span class=\"data\">k-</span> before a consonant like <span class=\"data\">k'ux</span> (giving <span class=\"data\">jk'ux</span> is written with j, but on nouns you see <span class=\"data\">kajan</span> \"my corn\"), <span class=\"data\">a-</span> becomes <span class=\"data\">aw-</span> before a vowel (<span class=\"data\">awajanik</span> \"your (pl.) corn\"), and <span class=\"data\">s-</span> becomes <span class=\"data\">y-</span> before a vowel (<span class=\"data\">yonik</span> \"their avocados\") and <span class=\"data\">xch-</span> before <span class=\"data\">ch</span> (<span class=\"data\">xchaʔ</span> \"its gizzard\").</p>\n<p>The clever part: the very same affixes mark possession on nouns. Row 6 <span class=\"data\">kajan</span> \"my corn\", row 24 <span class=\"data\">achab</span> \"your honey\", row 15 <span class=\"data\">yaskal</span> \"her panela chunks\", row 26 <span class=\"data\">sp'olik</span> \"their popcorn\", row 7 <span class=\"data\">jwajtik</span> \"our tortillas\". Note that a plural suffix on the noun tells you the number of the <em>possessor</em>, not of the thing possessed.</p>\n<h3>Step 5: \"the\"</h3>\n<p>When the English says \"the\", the noun phrase is wrapped in <span class=\"data\">te ... -e</span>: row 10 <span class=\"data\">te mankoe</span>, row 18 <span class=\"data\">te waje</span>, row 21 <span class=\"data\">te ʔone</span>, row 14 <span class=\"data\">te pats'e</span>. Notice that when the noun already ends in a vowel the extra <span class=\"data\">-e</span> is still written (<span class=\"data\">mankoe</span>). Unpossessed plurals get <span class=\"data\">-etik</span> (<span class=\"data\">kalwanextik</span> shows the possessed form instead).</p>\n<h3>Step 6: building the answers</h3>\n<p>Take H3f \"She ate cooked greens\": cooked greens are mushy, so the verb stem is <span class=\"data\">loʔ</span>; \"she\" gives <span class=\"data\">s-</span>; the noun <span class=\"data\">bok</span> is bare (no \"the\", no possessor). Result: <span class=\"data\">la sloʔ bok</span> — exactly the opposite of row 19, where the greens are raw.</p>\n<p>Take H3a \"We ate the peanuts\": peanuts are hard and countable, so <span class=\"data\">k'ux</span>; \"we\" gives <span class=\"data\">j-...-tik</span>; \"the\" gives <span class=\"data\">te ... -e</span> around <span class=\"data\">kaxlan chenek'</span>. Result: <span class=\"data\">la jk'uxtik te kaxlan chenek'e</span>.</p>\n<p>For H4, marrow is a soft fatty substance, so the meat verb is wrong and the mushy-food verb with a 1st person prefix is right. For H5, toasted tortillas are hard and crunchy rather than soft bread, so the bread verb loses out to the hard-food verb, keeping the 3rd person prefix.</p>\n<h3>Step 7: kaxlan</h3>\n<p>Compare row 2 <span class=\"data\">kaxlan waj</span> \"bread\" with <span class=\"data\">waj</span> \"tortilla\" (rows 7, 18), and <span class=\"data\">chenek'</span> \"beans\" with <span class=\"data\">kaxlan chenek'</span> \"peanuts\". <span class=\"data\">kaxlan</span> marks a foreign or non-indigenous version of a familiar thing (it comes from \"Castilian\"). So <span class=\"data\">kaxlan ixim</span>, literally \"foreign corn\", is the grain that Europeans brought: wheat. The proportion also works out neatly: <span class=\"data\">waj</span> is to <span class=\"data\">kaxlan waj</span> (tortilla to bread) as <span class=\"data\">ixim</span> is to <span class=\"data\">kaxlan ixim</span> (corn to wheat).</p>\n<h3>A note on body parts</h3>\n<p>In \"cow kidney\" the official solution writes <span class=\"data\">sk'in wakax</span>, with the 3rd person prefix <span class=\"data\">s-</span> literally giving \"cow's kidney\" — that is what Tseltal really does, and it matches <span class=\"data\">stsalub mute</span>, <span class=\"data\">sejkub wakax</span> and <span class=\"data\">yoʔtan mute</span> in the data. But the data also allows a solver to conclude there is no prefix there at all, so consistently prefix-free answers were accepted too.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Glottal stop transcribed as U+0294 (ʔ) throughout, matching the booklet's IPA-style character; ASCII '?' added as an accepted variant on every affected key. Apostrophes in Tseltal data are typographic right single quotes in the PDF but transcribed as ASCII ' for typability — confirm graders accept both. Points split (H1=2, H2=2, H3 a-g=1 each, H4=1, H5=1, H6=2) is inferred; the official pages show no per-part breakdown. H2/H3b/H3g alternate (prefix-free) answers from the solution's note are included as accepted variants.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:h3.1:key",
+      "a": "la jk'uxtik te kaxlan chenek'e",
+      "b": "la jk’uxtik te kaxlan chenek’e"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h3.7:key",
+      "a": "la xchik' yaʔlel chenek'",
+      "b": "la xchik’ yaʔlel chenek’"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h5.1:key",
+      "a": "sk'ux",
+      "b": "sk’ux"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:10",
+      "a": "la achik' kaxlan waj ta kajpe",
+      "b": "la achik’ kaxlan waj ta kajpe"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:19",
+      "a": "la ak'ux kajan",
+      "b": "la ak’ux kajan"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:25",
+      "a": "la sk'ux chenek'",
+      "b": "la sk’ux chenek’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:31",
+      "a": "la jk'ux te mankoe",
+      "b": "la jk’ux te mankoe"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:40",
+      "a": "la ak'ux kalwanextik",
+      "b": "la ak’ux kalwanextik"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:43",
+      "a": "la sweʔik te pats'e",
+      "b": "la sweʔik te pats’e"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:46",
+      "a": "la sk'ux yaskal",
+      "b": "la sk’ux yaskal"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:49",
+      "a": "la jchik'tik yaʔlel tiʔbal",
+      "b": "la jchik’tik yaʔlel tiʔbal"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:52",
+      "a": "la jk'uxtik awajanik",
+      "b": "la jk’uxtik awajanik"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:58",
+      "a": "la sk'ux bok",
+      "b": "la sk’ux bok"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:79",
+      "a": "la sk'ux sp'olik",
+      "b": "la sk’ux sp’olik"
+    },
+    {
+      "kind": "witness",
+      "path": "data:2",
+      "a": "la achik' kaxlan waj ta kajpe",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:5",
+      "a": "la ak'ux kajan",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:7",
+      "a": "la sk'ux chenek'",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:9",
+      "a": "la jk'ux te mankoe",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:12",
+      "a": "la ak'ux kalwanextik",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:13",
+      "a": "la sweʔik te pats'e",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:14",
+      "a": "la sk'ux yaskal",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:15",
+      "a": "la jchik'tik yaʔlel tiʔbal",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:16",
+      "a": "la jk'uxtik awajanik",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:18",
+      "a": "la sk'ux bok",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:25",
+      "a": "la sk'ux sp'olik",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:26",
+      "a": "k'in",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:28",
+      "a": "kaxlan chenek'",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:34",
+      "a": "k'oxox",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 28 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~28 API calls that would not resolve it"
+    }
+  ]
+}

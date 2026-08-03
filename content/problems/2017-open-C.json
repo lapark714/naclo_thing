@@ -1,0 +1,208 @@
+{
+  "id": "2017-open-C",
+  "tier": "full",
+  "year": 2017,
+  "round": "open",
+  "letter": "C",
+  "title": "LOLWUT",
+  "authors": [
+    "Jordan Ho",
+    "Patrick Littell",
+    "Tom McCoy"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "sociolinguistics",
+    "writing systems"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "standard",
+  "languages": [
+    "English"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>Recognizing words &mdash; like that the sequence of letters &ldquo;c-a-t&rdquo; represents the word &ldquo;cat&rdquo; &mdash; is the foundation to any technology that works on text&hellip; but it&rsquo;s not always so easy, especially on the internet where writers so often vary their spelling to express emphasis, emotion, surprise, etc. How can you recognize the word &ldquo;what&rdquo; when it could appear as &ldquo;whaaaat&rdquo; or &ldquo;whaaa&rdquo; or &ldquo;wat&rdquo; or &ldquo;waaat&rdquo; or &ldquo;whut&rdquo; or &ldquo;wut&rdquo; or&hellip;?</p>\n<p>One way to recognize many variants at once is to use a <em>regular expression</em> (also called a &ldquo;regex&rdquo;) &mdash; a special sequence of symbols where you can indicate that a letter is optional, that it can occur many times, that one of several letters might occur, etc. For example, the regular expression</p>\n<p style=\"text-align:center\"><code>wh?a+t*</code></p>\n<p>means that the &ldquo;h&rdquo; can occur exactly once or not at all, the &ldquo;a&rdquo; can occur one or more times, and the &ldquo;t&rdquo; can occur any number of times (including zero times). The symbols used in this regex are defined as follows (in this example, <em>unit</em> refers to single letters, but as you will see below, a unit can be larger):</p>\n<ul>\n<li><code>?</code> The previous unit can occur zero or one times</li>\n<li><code>*</code> The previous unit can occur zero or more times</li>\n<li><code>+</code> The previous unit can occur one or more times.</li>\n</ul>\n<p>So the regular expression &ldquo;<code>wh?a+t*</code>&rdquo; would &ldquo;recognize&rdquo; the words below (and infinitely many more):</p>\n<p><span class=\"data\">what</span>, <span class=\"data\">wha</span>, <span class=\"data\">whaaa</span>, <span class=\"data\">wat</span>, <span class=\"data\">waaaa</span>, <span class=\"data\">watt</span>, <span class=\"data\">waaaatttt</span>, <span class=\"data\">waaaaat</span></p>\n<p>It won&rsquo;t, however, recognize the word &ldquo;wht&rdquo; (because there&rsquo;s no &ldquo;a&rdquo; in this word and it requires at least one &ldquo;a&rdquo;), &ldquo;whut&rdquo; (there&rsquo;s no &ldquo;u&rdquo; allowed here), &ldquo;whhhat&rdquo; (because it only allows zero or one &ldquo;h&rdquo; and this word has three), or \"waaaah\" (because the \"h\", if it occurs, must precede the \"a\"; no reordering is allowed).</p>\n<p>There are many more symbols that can appear in regular expressions, but for this problem you only need the above three symbols and parentheses. Parentheses group letters into units that themselves can be operated on by symbols, so that <code>L(OL)+</code> would recognize any of the words below (and infinitely many more):</p>\n<p><span class=\"data\">LOL</span>, <span class=\"data\">LOLOL</span>, <span class=\"data\">LOLOLOL</span>, <span class=\"data\">LOLOLOLOL</span></p>\n<p>It won&rsquo;t, however, recognize the word &ldquo;L&rdquo; (because it needs at least one instance of &ldquo;OL&rdquo;), or &ldquo;LOOOOL&rdquo; (because the entire &ldquo;OL&rdquo; part needs to be repeated, not just the &ldquo;O&rdquo;), or &ldquo;LOOLL&rdquo; (because the &ldquo;OL&rdquo; needs to repeated as a unit).</p>\n<p><strong>C1.</strong> We&rsquo;ve put together a small crossword puzzle entirely of internet laughter, and clued each entry with a regular expression like &ldquo;<code>L(OL)+</code>&rdquo;.</p>\n<p>The clues do not appear in any particular order, so you&rsquo;ll have to work out for yourself where each entry goes, but each clue corresponds to only one entry. To help you get started, we&rsquo;ve entered one answer into the grid already (there is no clue for this pre-entered answer).</p>\n<p>Clues:</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td><code>L(OL)+</code></td><td><code>(HO)+</code></td><td><code>K(EK)*E</code></td><td><code>(HAR+)+</code></td></tr>\n<tr><td><code>H(EH)+</code></td><td><code>ROT?FL</code></td><td><code>TE(HE+)+</code></td><td><code>LAW*L</code></td></tr>\n<tr><td><code>MWA(HA)+</code></td><td><code>HE(HE)+</code></td><td><code>LO+L</code></td><td><code>HAHA*</code></td></tr>\n<tr><td><code>(AH)+A+</code></td><td><code>HA+</code></td><td><code>(JA)+</code></td><td></td></tr>\n</tbody>\n</table>\n</div>\n<p>Puzzle:</p>\n<figure><img src=\"/content-assets/2017-open-C-grid.png\" alt=\"Empty crossword grid with the answer LULZ already entered vertically near the middle\" /></figure>\n<p><strong>C2.</strong> For each of the following regexes, write the shortest word that it could describe.</p>\n<ol type=\"a\">\n<li><code>LOL*LO?(OL)?O+L</code></li>\n<li><code>(A?HA)+(LO)?O*</code></li>\n</ol>",
+  "assets": [
+    {
+      "src": "/content-assets/2017-open-C-grid.png",
+      "alt": "Empty crossword grid with the answer LULZ already entered vertically near the middle"
+    }
+  ],
+  "questions": [
+    {
+      "id": "C1.1",
+      "promptHtml": "Clue: <code>L(OL)+</code>",
+      "part": "C1",
+      "partPrompt": "Each clue below matches exactly one entry in the crossword grid. For each clue, write the entry (the word) that fits into the grid.",
+      "gradingMode": "exact",
+      "answerKey": "LOLOLOL",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.2",
+      "promptHtml": "Clue: <code>(HO)+</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "HOHO",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.3",
+      "promptHtml": "Clue: <code>K(EK)*E</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "KEKE",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.4",
+      "promptHtml": "Clue: <code>(HAR+)+</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "HARRHARR",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.5",
+      "promptHtml": "Clue: <code>H(EH)+</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "HEH",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.6",
+      "promptHtml": "Clue: <code>ROT?FL</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "ROTFL",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.7",
+      "promptHtml": "Clue: <code>TE(HE+)+</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "TEHEHEHE",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.8",
+      "promptHtml": "Clue: <code>LAW*L</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "LAWL",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.9",
+      "promptHtml": "Clue: <code>MWA(HA)+</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "MWAHA",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.10",
+      "promptHtml": "Clue: <code>HE(HE)+</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "HEHEHE",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.11",
+      "promptHtml": "Clue: <code>LO+L</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "LOOL",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.12",
+      "promptHtml": "Clue: <code>HAHA*</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "HAHAAA",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.13",
+      "promptHtml": "Clue: <code>(AH)+A+</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "AHAHA",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.14",
+      "promptHtml": "Clue: <code>HA+</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "HAA",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.15",
+      "promptHtml": "Clue: <code>(JA)+</code>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "JAJAJAJAJA",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C2.1",
+      "promptHtml": "a. <code>LOL*LO?(OL)?O+L</code>",
+      "part": "C2",
+      "partPrompt": "For each of the following regexes, write the shortest word that it could describe.",
+      "gradingMode": "exact",
+      "answerKey": "LOLOL",
+      "acceptedVariants": [],
+      "points": 1.25
+    },
+    {
+      "id": "C2.2",
+      "promptHtml": "b. <code>(A?HA)+(LO)?O*</code>",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "HA",
+      "acceptedVariants": [],
+      "points": 1.25
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Before you look at the grid at all, work out for each clue which word lengths it can possibly produce. Some clues are very restrictive: a clue built out of a repeated two-letter unit can only produce words of certain lengths. Then compare those possible lengths with the lengths of the slots in the grid.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Two things pin each clue down. First, length: the slot tells you exactly how many letters the word has, which usually tells you exactly how many times the repeated unit occurs. Second, crossings: wherever an across slot and a down slot share a square, the two words must have the same letter there, and the pre-entered word already fixes several squares. Look also for letters that only one clue can produce at all, and place those entries first.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Here is the technique on a made-up clue. Suppose a clue were W(EE)+. The W is fixed and each repetition adds two letters, so the possible lengths are 3 (WEE), 5 (WEEEE), 7 (WEEEEEE), and so on - never an even number. So if the only free slot with a W-friendly crossing is 5 squares long, the entry has to be WEEEE, and every square after the first must be an E, which then constrains any word crossing it.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What the three symbols really mean</h3>\n<p>A regular expression (regex) is a recipe for a whole family of spellings. Reading it left to right, each piece is a <em>unit</em>, and the symbol just after a unit says how many copies of it you may use:</p>\n<ul>\n<li><code>?</code> means zero or one copy (optional),</li>\n<li><code>*</code> means zero or more copies,</li>\n<li><code>+</code> means one or more copies.</li>\n</ul>\n<p>Parentheses turn several letters into one unit. So <code>(HO)+</code> repeats the whole block <span class=\"data\">HO</span>: it gives <span class=\"data\">HO</span>, <span class=\"data\">HOHO</span>, <span class=\"data\">HOHOHO</span>&hellip; but never <span class=\"data\">HOO</span>, because only the pair repeats, not the O alone.</p>\n<h3>Step 1: turn each clue into a list of possible lengths</h3>\n<p>This is the key move, because a crossword slot tells you the length exactly. A few examples:</p>\n<ul>\n<li><code>ROT?FL</code>: the T is optional and everything else is fixed, so only <span class=\"data\">ROFL</span> (4 letters) or <span class=\"data\">ROTFL</span> (5 letters) are possible.</li>\n<li><code>HE(HE)+</code>: two fixed letters plus at least one repetition of the pair, so lengths 4, 6, 8&hellip; and the word always alternates H, E, H, E&hellip;</li>\n<li><code>(JA)+</code>: lengths 2, 4, 6, 8, 10&hellip; always alternating J and A, always starting with J.</li>\n<li><code>HA+</code>: an H followed by at least one A, so <span class=\"data\">HA</span>, <span class=\"data\">HAA</span>, <span class=\"data\">HAAA</span>&hellip; The only H is at the front.</li>\n<li><code>LAW*L</code>: L, A, any number of Ws, L. So <span class=\"data\">LAL</span> (3), <span class=\"data\">LAWL</span> (4), <span class=\"data\">LAWWL</span> (5)&hellip;</li>\n</ul>\n<h3>Step 2: use rare letters as anchors</h3>\n<p>Some letters appear in only one clue. Only <code>ROT?FL</code> can give you a T at the start of a word together with an F; only <code>MWA(HA)+</code> can give an M; only <code>(JA)+</code> can give a J; only <code>K(EK)*E</code> can give a K. Find the slot whose length matches and drop those entries in first. The ten-square across slot along the bottom, for instance, can only be filled by <code>(JA)+</code> once the crossings are taken into account, and ten squares means five repetitions: <span class=\"data\">JAJAJAJAJA</span>.</p>\n<h3>Step 3: let the crossings finish the job</h3>\n<p>The pre-entered word <span class=\"data\">LULZ</span> is a free gift: it has no clue, and its U and Z are letters no clue can produce, so nothing else could ever have gone there. Its third letter, an L, sits in the seven-square across slot, and the only clue that can make a seven-letter word alternating L and O is <code>L(OL)+</code>: <span class=\"data\">LOLOLOL</span>.</p>\n<p>From there the grid unzips. The eight-square across slot takes <code>TE(HE+)+</code> as <span class=\"data\">TEHEHEHE</span>; the eight-square down slot on the right takes <code>(HAR+)+</code> as <span class=\"data\">HARRHARR</span> (two copies of <span class=\"data\">HARR</span>, since each copy is HA plus one or more Rs); the six-square across slot at the top right takes <code>HAHA*</code> as <span class=\"data\">HAHAAA</span> (HAHA plus two more As, because the star only repeats the final A). The down word crossing it near the right edge is <code>(AH)+A+</code>, which must be <span class=\"data\">AHAHA</span> (AH twice, then one A).</p>\n<h3>The whole answer key for C1</h3>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td><code>L(OL)+</code></td><td>LOLOLOL</td></tr>\n<tr><td><code>(HO)+</code></td><td>HOHO</td></tr>\n<tr><td><code>K(EK)*E</code></td><td>KEKE</td></tr>\n<tr><td><code>(HAR+)+</code></td><td>HARRHARR</td></tr>\n<tr><td><code>H(EH)+</code></td><td>HEH</td></tr>\n<tr><td><code>ROT?FL</code></td><td>ROTFL</td></tr>\n<tr><td><code>TE(HE+)+</code></td><td>TEHEHEHE</td></tr>\n<tr><td><code>LAW*L</code></td><td>LAWL</td></tr>\n<tr><td><code>MWA(HA)+</code></td><td>MWAHA</td></tr>\n<tr><td><code>HE(HE)+</code></td><td>HEHEHE</td></tr>\n<tr><td><code>LO+L</code></td><td>LOOL</td></tr>\n<tr><td><code>HAHA*</code></td><td>HAHAAA</td></tr>\n<tr><td><code>(AH)+A+</code></td><td>AHAHA</td></tr>\n<tr><td><code>HA+</code></td><td>HAA</td></tr>\n<tr><td><code>(JA)+</code></td><td>JAJAJAJAJA</td></tr>\n</tbody>\n</table>\n</div>\n<h3>C2: shortest words</h3>\n<p>For a shortest word, take every optional piece zero times and every <code>+</code> piece exactly once.</p>\n<p><strong>a.</strong> <code>LOL*LO?(OL)?O+L</code> breaks up as L, O, L* , L, O?, (OL)?, O+, L. Take zero Ls for the star, zero Os for the <code>O?</code>, zero OLs for the <code>(OL)?</code>, and exactly one O for the <code>O+</code>. Reading the survivors in order: L, O, L, O, L, which is <span class=\"data\">LOLOL</span> (5 letters).</p>\n<p><strong>b.</strong> <code>(A?HA)+(LO)?O*</code> breaks up as (A?HA)+, (LO)?, O*. The <code>+</code> forces one copy of the unit <code>A?HA</code>; inside it the A is optional, so the shortest copy is just <span class=\"data\">HA</span>. Then skip the LO and skip all the extra Os. The answer is <span class=\"data\">HA</span> (2 letters).</p>\n<h3>Why linguists care</h3>\n<p>Internet spelling is deliberately variable: lengthening letters shows emphasis or emotion. Software that has to read that text (search engines, sentiment analysis, chatbots) often uses exactly this kind of pattern to bundle <span class=\"data\">haha</span>, <span class=\"data\">hahaha</span> and <span class=\"data\">hahahaaa</span> into a single recognized word.</p>",
+  "reviewStatus": "published"
+}

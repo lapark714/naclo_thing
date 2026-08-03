@@ -1,0 +1,153 @@
+{
+  "id": "2022-open-A",
+  "tier": "full",
+  "year": 2022,
+  "round": "open",
+  "letter": "A",
+  "title": "Lines in the Sand",
+  "authors": [
+    "Michael Salter"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "writing systems"
+  ],
+  "formTag": "transliteration",
+  "difficulty": "standard",
+  "languages": [
+    "Bislama"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>The Avoiuli writing system is used on Pentecost Island in Vanuatu, a Pacific island country (near the center of the map below). With a design inspired by traditional sand drawings, Avoiuli was developed over fourteen years by Chief Viraleo Boborenvanua, as part of a movement he leads to revitalize Vanuatuan culture and language.</p>\n<figure><img src=\"/content-assets/2022-open-A-map.png\" alt=\"Map of Oceania showing the regions Micronesia, Melanesia, Polynesia and Australasia, with countries such as Vanuatu, Fiji, Papua New Guinea, Samoa and New Zealand labelled.\" /></figure>\n<p>One of the languages that Avoiuli is used for is Bislama, one of the official languages of Vanuatu. As you will see, Bislama is a creole language<sup>1</sup> &mdash; many of its words come from English, some come from French, and others from the indigenous languages of Vanuatu.</p>\n<p class=\"footnote\">1. When multiple groups of people who speak different languages need to communicate, they often develop a simplified system called a <em>pidgin</em>, which mixes words from their various languages but lacks the grammatical complexity of a language. When a pidgin is taught to a new generation of children, they typically develop it into a fully complex language called a <em>creole</em>.</p>\n<p>Below is a sign written in Bislama, using the Avoiuli script, on the front of a college on Pentecost Island. For the purposes of this problem, each of the words in the script below has been allotted a number:</p>\n<figure><img src=\"/content-assets/2022-open-A-sign.png\" alt=\"Fifteen numbered words written in the looping Avoiuli script, arranged in five lines: line 1 has words 1 to 3, line 2 has words 4 and 5, line 3 has words 6 to 9, line 4 has words 10 to 12, and line 5 has words 13 to 15.\" /></figure>\n<p><strong>A1.</strong> Give the number of a word (any one, if there are multiple) which corresponds to these Bislama words:</p>\n<p><span class=\"data\">filosofi</span> <span class=\"blank\" data-q=\"A1.1\" data-label=\"a.\"></span> <span class=\"data\">institiut</span> <span class=\"blank\" data-q=\"A1.2\" data-label=\"b.\"></span> <span class=\"data\">blong</span> <span class=\"blank\" data-q=\"A1.3\" data-label=\"c.\"></span></p>\n<p><strong>A2.</strong> Give the number of a word (any one, if there are multiple) which means:</p>\n<p>village <span class=\"blank\" data-q=\"A2.1\" data-label=\"a.\"></span> center <span class=\"blank\" data-q=\"A2.2\" data-label=\"b.\"></span> teach(ing) <span class=\"blank\" data-q=\"A2.3\" data-label=\"c.\"></span> technology <span class=\"blank\" data-q=\"A2.4\" data-label=\"d.\"></span> humanity <span class=\"blank\" data-q=\"A2.5\" data-label=\"e.\"></span></p>\n<p><strong>A3.</strong> Which geographical area of the Pacific is mentioned in the text on the sign? <span class=\"blank\" data-q=\"A3.1\"></span></p>",
+  "assets": [
+    {
+      "src": "/content-assets/2022-open-A-map.png",
+      "alt": "Map of Oceania showing the regions Micronesia, Melanesia, Polynesia and Australasia, with countries such as Vanuatu, Fiji, Papua New Guinea, Samoa and New Zealand labelled."
+    },
+    {
+      "src": "/content-assets/2022-open-A-sign.png",
+      "alt": "Fifteen numbered words written in the looping Avoiuli script, arranged in five lines: line 1 has words 1 to 3, line 2 has words 4 and 5, line 3 has words 6 to 9, line 4 has words 10 to 12, and line 5 has words 13 to 15."
+    }
+  ],
+  "questions": [
+    {
+      "id": "A1.1",
+      "promptHtml": "a. <span class=\"data\">filosofi</span>",
+      "part": "A1",
+      "partPrompt": "Give the number of a word (any one, if there are multiple) which corresponds to these Bislama words.",
+      "gradingMode": "exact",
+      "answerKey": "9",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A1.2",
+      "promptHtml": "b. <span class=\"data\">institiut</span>",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "4",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A1.3",
+      "promptHtml": "c. <span class=\"data\">blong</span>",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "3",
+      "acceptedVariants": [
+        "6",
+        "3 or 6",
+        "3, 6"
+      ],
+      "points": 1
+    },
+    {
+      "id": "A2.1",
+      "promptHtml": "a. village",
+      "part": "A2",
+      "partPrompt": "Give the number of a word (any one, if there are multiple) which means the following.",
+      "gradingMode": "exact",
+      "answerKey": "14",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A2.2",
+      "promptHtml": "b. center",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "2",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A2.3",
+      "promptHtml": "c. teach(ing)",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "7",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A2.4",
+      "promptHtml": "d. technology",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "10",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A2.5",
+      "promptHtml": "e. humanity",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "12",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A3.1",
+      "promptHtml": "Name the geographical area.",
+      "part": "A3",
+      "partPrompt": "Which geographical area of the Pacific is mentioned in the text on the sign?",
+      "gradingMode": "exact",
+      "answerKey": "Melanesia",
+      "acceptedVariants": [
+        "Melanesia (word number 5)",
+        "melenisian"
+      ],
+      "points": 2
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "You do not need to know Avoiuli letter values in advance. Start by comparing the shapes of the fifteen words with each other: count how many letters each word has, and look for words that are written with exactly the same string of shapes. Then think about the order in which the lines of a sign like this might actually be read.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Two things unlock the sign. First, the lines do not all run the same way: Avoiuli texts are often written boustrophedon, meaning the first line runs left-to-right, the second right-to-left, the third left-to-right again, and so on (the lines themselves are ordered top to bottom here). Second, Bislama respells English (and a few French) words the way they sound, so a Bislama word usually has the same number of sounds as its English source and repeats letters in the same places. Match letter counts and repeated letters against the English meanings you are given.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try it on word 11, which is not one of the graded blanks. It is the shortest word on the sign, only two letters, and it sits in the middle of the fourth line between two long words. A two-letter Bislama word joining two nouns is almost certainly mo, meaning \"and\". That fixes the shapes for m and o, and you can now hunt for those same two shapes inside the longer words.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What the sign is</h3>\n<p>The sign is a name-plate on a college building. It is written in Bislama, the English-based creole of Vanuatu, using the Avoiuli script. Nobody expects you to know Avoiuli, so the whole problem is about the <em>shapes</em>: how long each word is, and which shapes repeat.</p>\n<h3>Step 1: the lines snake back and forth</h3>\n<p>Avoiuli texts are often written <em>boustrophedon</em> (a Greek word meaning \"as the ox turns while ploughing\"): line 1 runs left-to-right, line 2 runs right-to-left, line 3 left-to-right again, and so on. On this sign the lines themselves go top to bottom. So although the words are numbered 1 to 15 in the order they sit on the page, the reading order of the sign is:</p>\n<p>line 1: 1, 2, 3 &middot; line 2: 5, 4 &middot; line 3: 6, 7, 8, 9 &middot; line 4: 12, 11, 10 &middot; line 5: 13, 14, 15</p>\n<p>Notice that this only matters for lines 2 and 4, which is why the two words on line 2 come out \"backwards\" compared with their numbers.</p>\n<h3>Step 2: find the repeated word</h3>\n<p>Words 3 and 6 are written with exactly the same shapes. A short word that turns up twice in a phrase like this is a very good candidate for a grammatical word. In Bislama, the everywhere-word of that shape is <span class=\"data\">blong</span> (from English <em>belong</em>), which does the job of English \"of\" or \"for\". So either occurrence is a correct answer for that item.</p>\n<h3>Step 3: use letter counts</h3>\n<p>Now line up the English meanings you are given with words of the right length, remembering that Bislama spells things phonetically:</p>\n<ul>\n<li>\"center\" gives <span class=\"data\">senta</span> &mdash; five letters, early in the sign, right where a building's name would start.</li>\n<li>\"teach\" gives <span class=\"data\">tijim</span> (the <em>-im</em> ending marks a verb with an object).</li>\n<li>\"philosophy\" gives <span class=\"data\">filosofi</span> &mdash; eight letters, and crucially the same shape appears twice with the same vowel pattern (f-o repeated), which makes it easy to spot.</li>\n<li>\"technology\" gives <span class=\"data\">teknoloji</span> and \"humanity\" gives <span class=\"data\">hiumaniti</span> &mdash; both nine letters, so you separate them by their repeated letters and by their positions around the two-letter word <span class=\"data\">mo</span> \"and\".</li>\n<li>\"institute\" gives <span class=\"data\">institiut</span>, and \"village\" gives <span class=\"data\">vilij</span> &mdash; a five-letter word on the last line, next to a place name.</li>\n</ul>\n<h3>Step 4: the geographical name</h3>\n<p>One long word on line 2 is a place name shaped like <span class=\"data\">melenisian</span>. Compare it with the map on the first page: the Pacific region containing Vanuatu is <em>Melanesia</em>, and \"Melanesian Institute\" is exactly the sort of thing a college is named after. Because line 2 reads right-to-left, this word is the one printed on the right of that line.</p>\n<h3>The whole inscription</h3>\n<p>Read in boustrophedon order the sign says: <span class=\"data\">sab senta blong melenisian institiut blong tijim saen filosofi hiumaniti mo teknoloji lisa vilij lolovini</span> &mdash; \"Sap Centre of the Melanesian Institute for teaching science, philosophy, humanity and technology, Lisaa village, Central Pentecost\".</p>\n<h3>Why this works</h3>\n<p>Creole spellings are conservative about sounds: <span class=\"data\">saen</span> for <em>science</em>, <span class=\"data\">teknoloji</span> for <em>technology</em>. That means an unknown script can be cracked without knowing a single letter value, purely by matching word lengths and internal repetitions to words you can guess from the context of the text.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution page (A1: a. 9, b. 4, c. 3 or 6; A2: a. 14 vilij, b. 2 senta, c. 7 tijim, d. 10 teknoloji, e. 12 hiumaniti; A3: Melanesia). Points split 1 per blank for A1/A2 and 2 for A3 to total 10; the official breakdown is not printed, please confirm. The Avoiuli word images cannot be transcribed as text, so both figures must be cropped.\nCROP /content-assets/2022-open-A-map.png page=1 x=6 y=21 w=87 h=54\nCROP /content-assets/2022-open-A-sign.png page=2 x=10 y=18 w=78 h=42",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:a1.3:key",
+      "note": "arbitration returned UNRESOLVED"
+    }
+  ]
+}

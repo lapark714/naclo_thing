@@ -1,0 +1,474 @@
+{
+  "id": "2022-open-C",
+  "tier": "full",
+  "year": 2022,
+  "round": "open",
+  "letter": "C",
+  "title": "To Make a Long Story Short",
+  "authors": [
+    "Ryan Chi"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "semantics",
+    "syntax"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "hard",
+  "languages": [
+    "English"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>Every day, the Internet brings a flood of new information: scientific articles, blog posts, Tweets, news stories, Wikipedia pages, and more. One way we can take advantage of this information without being overwhelmed is through <strong>automatic summarization</strong>, where a computer condenses a long document into a summary that is much shorter. With this summary, you can get the main points of the document without reading the whole thing. You can also read the summaries of many documents to help decide which of the documents are worth reading in their entirety.</p>\n<p>Below is a news article that we wish to summarize (written out as a list of numbered sentences):</p>\n<hr />\n<p><em>The Final Word on Language</em> &mdash; <strong>The NACLO News</strong> &mdash; Are Wickelphones making a comeback? Story on G2.</p>\n<p style=\"text-align:center\"><strong>A STICKY SITUATION</strong></p>\n<p><strong>SS1:</strong> On January 22, Ronald McBubble, president of the Bigger Bubble corporation, was found chewing a stick of gum from rival company Made to Stick.</p>\n<p><strong>SS2:</strong> The incident set off an uproar among Bigger Bubble faithfuls, with over 10,000 gum enthusiasts in just one week signing a petition for McBubble to step down.</p>\n<p><strong>SS3</strong>: According to <em>USA Today</em>, the nine-year-long \"great gum war\" may soon be over, as Bigger Bubble's stock price has fallen 50 percent since that fateful day.</p>\n<p><strong>SS4</strong>: McBubble maintains that the gum was \"planted\" on him and that the whole incident was \"100 percent a set-up.\"</p>\n<p><strong>SS5:</strong> Why did he continue chewing after reading the label?</p>\n<p><strong>SS6:</strong> \"Because the gum was too sticky to remove.\"</p>\n<p><strong>SS7:</strong> One must hope that McBubble has since managed to render the gum less adhesive, although the fiasco does make for some . . . <em>sticky</em> headlines.</p>\n<hr />\n<p>How would a computer summarize this story? One approach is to have the computer select a few sentences from the document to serve as the summary. In order to choose which sentences to use, the computer first assigns values to <strong>features</strong> of every sentence. In this context, features are things that you can observe or count that help determine whether the sentence will be useful in a summary.</p>\n<p><strong>C1.</strong> Below, on the left, are definitions of the features that we will use. Further down is a table showing the feature values that would be assigned to each sentence. Unfortunately, some words are missing from the feature definitions! In addition, in the table, the sentences are in scrambled order, and some of the sentence numbers are missing.</p>\n<p>i. Fill in the blanks a. through g. by choosing words or numbers from the word bank. You will not use all of the entries in the word bank; you might use some entries more than once.</p>\n<p>ii. Determine which sentences correspond to h. through k. You should answer using the sentence numbers that start with SS.</p>\n<p><u>F1</u>: Assign 1 point if the sentence contains at least one <span class=\"blank\" data-q=\"C1.1\" data-label=\"a.\"></span>; otherwise, assign 0 points.</p>\n<p><u>F2</u>: Assign 1 point for every proper noun in the sentence.</p>\n<p><u>F3</u>: Take the number of words in the sentence minus <span class=\"blank\" data-q=\"C1.2\" data-label=\"b.\"></span>. If this value is negative, give the sentence that many points. Otherwise, give the sentence 0 points.</p>\n<p><u>F4</u>: Assign 1 point for every <span class=\"blank\" data-q=\"C1.3\" data-label=\"c.\"></span> in the sentence.</p>\n<p><u>F5</u>: Assign 1 point for every <span class=\"blank\" data-q=\"C1.4\" data-label=\"d.\"></span> or <span class=\"blank\" data-q=\"C1.5\" data-label=\"e.\"></span> that is repeated in at least one other sentence in the story.</p>\n<p><u>F6</u>: Assign 1 point if this sentence is the <span class=\"blank\" data-q=\"C1.6\" data-label=\"f.\"></span> or <span class=\"blank\" data-q=\"C1.7\" data-label=\"g.\"></span> one in the story; otherwise, assign 0 points.</p>\n<div class=\"table-scroll\"><table><thead><tr><th colspan=\"5\">WORD BANK</th></tr></thead><tbody><tr><td colspan=\"2\">italicized word</td><td colspan=\"3\">capitalized word</td></tr><tr><td colspan=\"2\">underlined word</td><td colspan=\"3\">hyphenated word</td></tr><tr><td colspan=\"2\">common noun</td><td colspan=\"3\">past-tense verb</td></tr><tr><td colspan=\"2\">adjective</td><td colspan=\"3\">verb</td></tr><tr><td colspan=\"2\">number</td><td colspan=\"3\">plural noun</td></tr><tr><td colspan=\"5\">abbreviation</td></tr><tr><td colspan=\"5\">word that appears in the title</td></tr><tr><td colspan=\"5\">noun referring to candy or gum</td></tr><tr><td colspan=\"2\">colon</td><td>comma</td><td colspan=\"2\">period</td></tr><tr><td colspan=\"2\">first</td><td>second</td><td colspan=\"2\">third</td></tr><tr><td colspan=\"2\">last</td><td>second-to-last</td><td colspan=\"2\">third-to-last</td></tr><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr><tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr></tbody></table></div>\n<p><em>Notes: A proper noun is a word or phrase, usually capitalized, that describes a specific entity such as a person, place, or organization. Examples of proper nouns are Brazil and Alice. A common noun is a noun that is not a proper noun. For some terms in the feature definitions, there might be multiple ways to count (e.g., multiple ways to count proper nouns for F2). It is up to you to figure out exactly how the computer is counting each category.</em></p>\n<div class=\"table-scroll\"><table><thead><tr><th rowspan=\"2\">Sentence</th><th colspan=\"6\">Features</th><th rowspan=\"2\">Sum of Scores</th></tr><tr><th>F1</th><th>F2</th><th>F3</th><th>F4</th><th>F5</th><th>F6</th></tr></thead><tbody><tr><td><span class=\"blank\" data-q=\"C1.8\" data-label=\"h.\"></span></td><td>0</td><td>1</td><td>0</td><td>1</td><td>2</td><td>0</td><td><strong>4</strong></td></tr><tr><td><strong>SS1</strong></td><td>0</td><td>4</td><td>0</td><td>1</td><td>1</td><td>1</td><td><strong>7</strong></td></tr><tr><td><span class=\"blank\" data-q=\"C1.9\" data-label=\"i.\"></span></td><td>0</td><td>0</td><td>-1</td><td>0</td><td>0</td><td>0</td><td><strong>-1</strong></td></tr><tr><td><strong>SS3</strong></td><td>1</td><td>2</td><td>0</td><td>2</td><td>1</td><td>0</td><td><strong>6</strong></td></tr><tr><td><span class=\"blank\" data-q=\"C1.10\" data-label=\"j.\"></span></td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>1</td><td><strong>5</strong></td></tr><tr><td><span class=\"blank\" data-q=\"C1.11\" data-label=\"k.\"></span></td><td>0</td><td>0</td><td>-2</td><td>0</td><td>2</td><td>0</td><td><strong>0</strong></td></tr><tr><td><strong>SS2</strong></td><td>0</td><td>2</td><td>0</td><td>2</td><td>2</td><td>0</td><td><strong>6</strong></td></tr></tbody></table></div>\n<p>The overall score for a sentence is determined by adding together all of its feature values. The sentences with the highest scores are the ones chosen to serve as the summary (in this problem, we will be using the 3 highest-scoring sentences). For this particular article, since sentences SS1, SS2, and SS3 have the highest summed scores (7, 6, and 6), they would comprise the summary. In the summary, the sentences are presented in the same order as they appear in the original story - in this case, SS1 followed by SS2 followed by SS3.</p>\n<p><strong>C2.</strong> Below are two more news articles and their accompanying feature scores. (The features, F1 through F6, are the same as those used for the previous story.) Unfortunately, due to some serious data corruption, the rows in the tables have been scrambled, and various feature scores have been erased! Your job is to fill in all the blanks.</p>\n<hr />\n<p><em>The Final Word on Language</em> &mdash; <strong>The NACLO News</strong> &mdash; <em>REPORT:</em> The elephant is sleeping. More on E1.</p>\n<p style=\"text-align:center\"><strong>IN HOT WATER</strong></p>\n<p><strong>HW1:</strong> Specialty soup restaurant Hot Water Village came under scrutiny last week, after an expos&eacute; was published in <em>The Wall Street Journal.</em></p>\n<p><strong>HW2:</strong> No fewer than three sources (including <em>WikiLeaks</em>) accused the restaurant of re-serving unfinished soup, salvaged from the bowls of previous customers.</p>\n<p><strong>HW3:</strong> One witness further claimed, \"the bowls are never washed.\"</p>\n<p><strong>HW4:</strong> \"They're just refilled where the last customers left off, one bowl after another.\"</p>\n<p><strong>HW5:</strong> Hot Water Village firmly denies any such wrongdoing, with one spokesperson noting that \"these blatantly false accusations degrade our bowls, restaurant, and very soup\" and \"cause the hot water to flow from my eyes.\"</p>\n<p><strong>HW6:</strong> If the accusations are to be believed, Hot Water Village, it seems, has succeeded in implementing not only a farm-to-table but also a <em>table-to-kitchen</em> approach.</p>\n<hr />\n<div class=\"table-scroll\"><table><thead><tr><th rowspan=\"2\">Sentence</th><th colspan=\"6\">Features</th><th rowspan=\"2\">Sum of Scores</th></tr><tr><th>F1</th><th>F2</th><th>F3</th><th>F4</th><th>F5</th><th>F6</th></tr></thead><tbody><tr><td><span class=\"blank\" data-q=\"C2.1\" data-label=\"a.\"></span></td><td>0</td><td>1</td><td><span class=\"blank\" data-q=\"C2.2\" data-label=\"b.\"></span></td><td>1</td><td>4</td><td>0</td><td><strong>6</strong></td></tr><tr><td><strong>HW4</strong></td><td><span class=\"blank\" data-q=\"C2.3\" data-label=\"c.\"></span></td><td>0</td><td>0</td><td>1</td><td>2</td><td><span class=\"blank\" data-q=\"C2.4\" data-label=\"d.\"></span></td><td><span class=\"blank\" data-q=\"C2.5\" data-label=\"e.\"></span></td></tr><tr><td><span class=\"blank\" data-q=\"C2.6\" data-label=\"f.\"></span></td><td>0</td><td>0</td><td><span class=\"blank\" data-q=\"C2.7\" data-label=\"g.\"></span></td><td><span class=\"blank\" data-q=\"C2.8\" data-label=\"h.\"></span></td><td>1</td><td>0</td><td><strong>1</strong></td></tr><tr><td><strong>HW6</strong></td><td>1</td><td><span class=\"blank\" data-q=\"C2.9\" data-label=\"i.\"></span></td><td>0</td><td>0</td><td>1</td><td>1</td><td><span class=\"blank\" data-q=\"C2.10\" data-label=\"j.\"></span></td></tr><tr><td><span class=\"blank\" data-q=\"C2.11\" data-label=\"k.\"></span></td><td>1</td><td>2</td><td>0</td><td>0</td><td>3</td><td><span class=\"blank\" data-q=\"C2.12\" data-label=\"l.\"></span></td><td><span class=\"blank\" data-q=\"C2.13\" data-label=\"m.\"></span></td></tr><tr><td><span class=\"blank\" data-q=\"C2.14\" data-label=\"n.\"></span></td><td>1</td><td>1</td><td>0</td><td><span class=\"blank\" data-q=\"C2.15\" data-label=\"o.\"></span></td><td>4</td><td>0</td><td><span class=\"blank\" data-q=\"C2.16\" data-label=\"p.\"></span></td></tr></tbody></table></div>\n<hr />\n<p><em>The Final Word on Language</em> &mdash; <strong>The NACLO News</strong> &mdash; <em>Feature:</em> The latest in self-reference. Turn to C4.</p>\n<p style=\"text-align:center\"><strong>THE STICKY SAGA CONTINUES</strong></p>\n<p><strong>SSC1:</strong> After suffering a PR disaster and a sorbitol shortage, Ronald McBubble faces tough times ahead.</p>\n<p><strong>SSC2:</strong> \"We really gummed up the works,\" he notes miserably.</p>\n<p><strong>SSC3:</strong> Meanwhile, his rival, Chicle \"Colonel\" Sanders, is experiencing problems of his own, including a disappointing quarterly report.</p>\n<p><strong>SSC4:</strong> Perhaps most seriously, he is being investigated by the government&rsquo;s Bubble Safety Bureau on two counts of alleged wrapper forgery.</p>\n<p><strong>SSC5:</strong> One thing is for certain: it&rsquo;s a difficult time to be in the bubblegum business.</p>\n<hr />\n<div class=\"table-scroll\"><table><thead><tr><th rowspan=\"2\">Sentence</th><th colspan=\"6\">Features</th><th rowspan=\"2\">Sum of Scores</th></tr><tr><th>F1</th><th>F2</th><th>F3</th><th>F4</th><th>F5</th><th>F6</th></tr></thead><tbody><tr><td><span class=\"blank\" data-q=\"C2.17\" data-label=\"q.\"></span></td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td><strong>2</strong></td></tr><tr><td><span class=\"blank\" data-q=\"C2.18\" data-label=\"r.\"></span></td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td><strong>1</strong></td></tr><tr><td><span class=\"blank\" data-q=\"C2.19\" data-label=\"s.\"></span></td><td>0</td><td>0</td><td>-1</td><td>0</td><td>0</td><td>0</td><td><strong>-1</strong></td></tr><tr><td><span class=\"blank\" data-q=\"C2.20\" data-label=\"t.\"></span></td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td><strong>2</strong></td></tr><tr><td><span class=\"blank\" data-q=\"C2.21\" data-label=\"u.\"></span></td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td><strong>2</strong></td></tr></tbody></table></div>\n<p><strong>C3.</strong> Which three sentences make up the summary for &ldquo;In Hot Water&rdquo;? You should answer using the sentence numbers that start with HW.</p>\n<p><strong>C4.</strong> Which three sentences make up the summary for &ldquo;The Sticky Saga Continues&rdquo;? You should answer using the sentence numbers that start with SSC.</p>\n<p>The approach illustrated above (selecting a few sentences from the document to serve as the summary) is called <strong>extractive summarization</strong>. An alternative approach is called <strong>abstractive summarization</strong>. Instead of selecting sentences from the story, an abstractive summarization system generates its own summary, without being restricted to the sentences in the original story. This approach is closer to how humans summarize, but it is also more challenging because abstractive summarization systems can often introduce factual errors. Below is a one-sentence abstractive summary for the story &ldquo;A Sticky Situation.&rdquo;</p>\n<p><strong><em>Abstractive summary:</em></strong> <em>Made to Stick corporation is facing serious problems after its vice president was found chewing a stick of gum from rival company Bigger Bubble on February 22.</em></p>\n<p><strong>C5.</strong> This summary contains several types of errors that are common in standard abstractive summary systems. Specifically:</p>\n<ol type=\"a\"><li>The abstractive summary includes one word that should be deleted. Which word?</li><li>In the abstractive summary, there are two phrases that should be swapped (each of these phrases is two or three words long). What are these phrases?</li><li>In the abstractive summary, there is a single word that should be replaced with a different word. What word should be replaced, and what word should be its replacement?</li></ol>\n<p><strong>C6.</strong> As it turns out, even extractive summary systems can sometimes create factual errors! Consider the extractive summaries that were generated for &ldquo;A Sticky Situation,&rdquo; &ldquo;In Hot Water&rdquo; and &ldquo;The Sticky Saga Continues.&rdquo; (For &ldquo;A Sticky Situation,&rdquo; we told you what the summary was: SS1, SS2, and SS3. For the other stories, the summaries are the ones that you specified in your answers to C3 and C4.) In one of those three summaries, there is a single word that has an incorrect meaning in the summary.</p>\n<ol type=\"a\"><li>Which sentence does this word appear in (you should answer using the sentence numbers that start with SS, HW or SSC)?</li><li>Which word is it?</li></ol>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "C1.1",
+      "promptHtml": "Blank (a): the thing F1 checks for.",
+      "part": "C1",
+      "partPrompt": "Fill in the blanks a. through g. in the feature definitions by choosing words or numbers from the word bank (you will not use all of the entries; you might use some more than once). Then determine which sentences correspond to h. through k., answering with the sentence numbers that start with SS.",
+      "gradingMode": "exact",
+      "answerKey": "italicized word",
+      "acceptedVariants": [
+        "italicized"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "C1.2",
+      "promptHtml": "Blank (b): the number subtracted in F3.",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "10",
+      "acceptedVariants": [
+        "ten"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "C1.3",
+      "promptHtml": "Blank (c): what F4 counts.",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "number",
+      "acceptedVariants": [
+        "numbers"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "C1.4",
+      "promptHtml": "Blank (d): the first category counted by F5.",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "adjective",
+      "acceptedVariants": [
+        "common noun"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "C1.5",
+      "promptHtml": "Blank (e): the second category counted by F5.",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "common noun",
+      "acceptedVariants": [
+        "adjective"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "C1.6",
+      "promptHtml": "Blank (f): the first position rewarded by F6.",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "first",
+      "acceptedVariants": [
+        "last"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "C1.7",
+      "promptHtml": "Blank (g): the second position rewarded by F6.",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "last",
+      "acceptedVariants": [
+        "first"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "C1.8",
+      "promptHtml": "Blank (h): which sentence is this row of the table?",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "SS4",
+      "acceptedVariants": [
+        "4"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "C1.9",
+      "promptHtml": "Blank (i): which sentence is this row of the table?",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "SS5",
+      "acceptedVariants": [
+        "5"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "C1.10",
+      "promptHtml": "Blank (j): which sentence is this row of the table?",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "SS7",
+      "acceptedVariants": [
+        "7"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "C1.11",
+      "promptHtml": "Blank (k): which sentence is this row of the table?",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "SS6",
+      "acceptedVariants": [
+        "6"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "C2.1",
+      "promptHtml": "Blank (a): which sentence is this row of the \"In Hot Water\" table?",
+      "part": "C2",
+      "partPrompt": "Fill in all the blanks in the two tables: for a sentence blank give the sentence number (HW1-HW6 or SSC1-SSC5), and for a score blank give the number.",
+      "gradingMode": "exact",
+      "answerKey": "HW5",
+      "acceptedVariants": [
+        "5"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "C2.2",
+      "promptHtml": "Blank (b): the F3 value in that row.",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "0",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.3",
+      "promptHtml": "Blank (c): the F1 value for HW4.",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "0",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.4",
+      "promptHtml": "Blank (d): the F6 value for HW4.",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "0",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.5",
+      "promptHtml": "Blank (e): the sum of scores for HW4.",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "3",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.6",
+      "promptHtml": "Blank (f): which sentence is this row?",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "HW3",
+      "acceptedVariants": [
+        "3"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "C2.7",
+      "promptHtml": "Blank (g): the F3 value in that row.",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "-1",
+      "acceptedVariants": [
+        "minus 1"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "C2.8",
+      "promptHtml": "Blank (h): the F4 value in that row.",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.9",
+      "promptHtml": "Blank (i): the F2 value for HW6.",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.10",
+      "promptHtml": "Blank (j): the sum of scores for HW6.",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "4",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.11",
+      "promptHtml": "Blank (k): which sentence is this row?",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "HW1",
+      "acceptedVariants": [
+        "1"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "C2.12",
+      "promptHtml": "Blank (l): the F6 value in that row.",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.13",
+      "promptHtml": "Blank (m): the sum of scores in that row.",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "7",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.14",
+      "promptHtml": "Blank (n): which sentence is this row?",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "HW2",
+      "acceptedVariants": [
+        "2"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "C2.15",
+      "promptHtml": "Blank (o): the F4 value in that row.",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.16",
+      "promptHtml": "Blank (p): the sum of scores in that row.",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "7",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.17",
+      "promptHtml": "Blank (q): which sentence is this row of the \"The Sticky Saga Continues\" table?",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "SSC5",
+      "acceptedVariants": [
+        "5"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "C2.18",
+      "promptHtml": "Blank (r): which sentence is this row?",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "SSC3",
+      "acceptedVariants": [
+        "3"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "C2.19",
+      "promptHtml": "Blank (s): which sentence is this row?",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "SSC2",
+      "acceptedVariants": [
+        "2"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "C2.20",
+      "promptHtml": "Blank (t): which sentence is this row?",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "SSC1",
+      "acceptedVariants": [
+        "1"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "C2.21",
+      "promptHtml": "Blank (u): which sentence is this row?",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "SSC4",
+      "acceptedVariants": [
+        "4"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "C3.1",
+      "promptHtml": "The three sentences of the \"In Hot Water\" summary.",
+      "part": "C3",
+      "partPrompt": "Which three sentences make up the summary for \"In Hot Water\"? Answer using the sentence numbers that start with HW.",
+      "gradingMode": "exact",
+      "answerKey": "HW1, HW2, HW5",
+      "acceptedVariants": [
+        "HW1 HW2 HW5",
+        "HW1,HW2,HW5",
+        "HW1, HW2 and HW5"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C4.1",
+      "promptHtml": "The three sentences of the \"The Sticky Saga Continues\" summary.",
+      "part": "C4",
+      "partPrompt": "Which three sentences make up the summary for \"The Sticky Saga Continues\"? Answer using the sentence numbers that start with SSC.",
+      "gradingMode": "exact",
+      "answerKey": "SSC1, SSC4, SSC5",
+      "acceptedVariants": [
+        "SSC1 SSC4 SSC5",
+        "SSC1,SSC4,SSC5",
+        "SSC1, SSC4 and SSC5"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C5.1",
+      "promptHtml": "a. Which one word in the abstractive summary should be deleted?",
+      "part": "C5",
+      "partPrompt": "The abstractive summary contains several typical errors. Identify them.",
+      "gradingMode": "exact",
+      "answerKey": "Vice",
+      "acceptedVariants": [],
+      "points": 0.45
+    },
+    {
+      "id": "C5.2",
+      "promptHtml": "b. Which two phrases should be swapped?",
+      "part": "C5",
+      "gradingMode": "exact",
+      "answerKey": "Made to Stick, Bigger Bubble",
+      "acceptedVariants": [
+        "Bigger Bubble, Made to Stick",
+        "Made to Stick and Bigger Bubble",
+        "Made to Stick / Bigger Bubble"
+      ],
+      "points": 0.45
+    },
+    {
+      "id": "C5.3",
+      "promptHtml": "c. Which word should be replaced, and by what word?",
+      "part": "C5",
+      "gradingMode": "exact",
+      "answerKey": "February should be replaced with January",
+      "acceptedVariants": [
+        "February should be replaced by January",
+        "February, January",
+        "February - January"
+      ],
+      "points": 0.45
+    },
+    {
+      "id": "C6.1",
+      "promptHtml": "a. Which sentence does this word appear in? Answer with a sentence number starting with SS, HW or SSC.",
+      "part": "C6",
+      "partPrompt": "One of the three extractive summaries contains a single word whose meaning becomes incorrect in the summary.",
+      "gradingMode": "exact",
+      "answerKey": "SSC4",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "C6.2",
+      "promptHtml": "b. Which word is it?",
+      "part": "C6",
+      "gradingMode": "exact",
+      "answerKey": "He",
+      "acceptedVariants": [],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start with the rows of the first table that are already labelled (SS1, SS3, SS2). For each of the six features, ask what those three sentences do or do not contain that could produce exactly the printed value. The word bank is full of decoys, so test a candidate against all three labelled rows before accepting it.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Notice the shape of each column. A column that is 0 nearly everywhere is counting something rare and visible on the page; the only nonzero F3 values are negative, which means F3 compares the sentence's word count with a fixed cutoff and only punishes sentences below it, so counting the words of the shortest sentences pins the cutoff down. Once the features are understood, match scrambled rows by their most distinctive cells: a negative F3 can only belong to a very short sentence, and an F6 of 1 can only belong to an outer sentence of the story.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Check the arithmetic on a row that is fully printed: SS2 shows 0 + 2 + 0 + 2 + 2 + 0 = 6, exactly its printed sum. That gives you a second way into the corrupted tables - if a row is missing one feature value but shows its sum, subtract the known values from the sum; if it shows all six features but no sum, just add them up. Do the two kinds of blanks in whichever order lets each one feed the next.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What the machine is doing</h3>\n<p>An <strong>extractive summarizer</strong> does not write anything new. It scores every sentence of the article with a handful of simple, countable properties (the \"features\" F1-F6), adds the six scores up, and keeps the top-scoring sentences in their original order. Our job is to reverse-engineer the six counting rules from the scores the machine already produced.</p>\n<h3>Cracking the feature definitions (C1)</h3>\n<p>Three rows of the first table are labelled, so use them as your control group.</p>\n<p><strong>F1</strong> is 1 for SS3 and for one unlabelled row, 0 for SS1 and SS2. What does SS3 have that SS1 and SS2 do not? It contains <em>USA Today</em> in italics. Nothing is underlined anywhere, and every sentence has capital letters, so those word-bank entries are decoys. The other row with F1 = 1 must therefore be the other sentence containing italics.</p>\n<p><strong>F2</strong> counts proper nouns, and the labelled rows tell you <em>how</em> they are counted: SS1 gets 4. Its proper nouns are January, Ronald McBubble, Bigger Bubble and Made to Stick - four multi-word names counted as units, not eight separate capitalized words. SS3 gets 2 (USA Today, Bigger Bubble), which confirms the phrase-level count.</p>\n<p><strong>F3</strong> is the only column with negative numbers, and it is 0 for every labelled (long) sentence. So it compares the word count with a fixed cutoff and gives a penalty only to short sentences. Count the words of the two short sentences in the story and see which cutoff turns those counts into the printed -1 and -2. The two candidates in the word bank that are near-misses (for example a cutoff one higher or lower) will not fit both rows at once - always test against both.</p>\n<p><strong>F4</strong> is 1 for SS1, 2 for SS2, 2 for SS3. SS1 contains one quantity (the date 22); SS2 contains two (10,000 and one); SS3 contains two (nine and 50). Words spelled out count too, which is why \"nine-year-long\" counts.</p>\n<p><strong>F5</strong> counts words shared with at least one other sentence, but only from two grammatical categories. The word <em>gum</em> shows up in almost every sentence, which explains most of the 1s; the sentence with the second-highest F5 shares both <em>gum</em> and the descriptive word <em>sticky</em> with another sentence, so the two categories are the two you would use to describe an ordinary thing and a quality of a thing. Proper nouns are already handled by F2 and verbs like <em>was</em> repeat everywhere without adding points, so those word-bank entries fail.</p>\n<p><strong>F6</strong> is 1 for exactly two sentences of the story - SS1 and one other. SS1 is the opening sentence, so F6 rewards the outer positions of the article.</p>\n<p>With the rules in hand, matching the scrambled rows is mechanical. The row with F3 = -1 must be the 9-word sentence; the row with F3 = -2 must be the 8-word one; the remaining row that has F1 = 1 and F6 = 1 must be the closing sentence that uses italics; and the last blank row is whatever sentence is left.</p>\n<h3>The corrupted tables (C2)</h3>\n<p>Work back and forth between two facts: each row's six features add to its printed sum, and each sentence has features you can compute directly from the text.</p>\n<p>Example on HW4: it has no italics, so F1 = 0; it is neither the first nor the last sentence, so F6 = 0; its word count is 13, comfortably above the cutoff, so F3 = 0. Adding the row gives its sum.</p>\n<p>For the sentence-identity blanks in \"In Hot Water\", HW4 and HW6 are already labelled, leaving HW1, HW2, HW3 and HW5 for the four blank rows. The row with a negative F3 must be the short one (\"One witness further claimed...\", 9 words). Two blank rows have F1 = 1, and only two sentences contain italics - <em>The Wall Street Journal</em> and <em>WikiLeaks</em> - so those two rows are the first two sentences; their F2 values (two named entities versus one) tell you which is which. The remaining row, with F1 = 0 and a big F5, is the one long sentence left.</p>\n<p>The same logic works for \"The Sticky Saga Continues\": the -1 in F3 fingers the 9-word quotation, the rows with F6 = 1 must be the opening and closing sentences (distinguished by their other columns), and the two rows with F2 = 1 and F6 = 0 are separated by F4, since only one of them mentions a quantity (\"two counts\").</p>\n<h3>Choosing the summaries (C3, C4)</h3>\n<p>Once every sum is filled in, take the three highest and print them in story order. In \"The Sticky Saga Continues\" three sentences tie at the top, which conveniently settles it.</p>\n<h3>Why abstractive summaries go wrong (C5)</h3>\n<p>Compare the generated sentence with SS1 word by word. The original says McBubble is <em>president</em> of Bigger Bubble; the summary invents an extra rank, so one word has to go. The original says the president of Bigger Bubble was caught with a rival's gum; the summary has the two company names in the wrong slots, so a pair of two-to-three-word phrases must be exchanged. Finally the date is wrong: SS1 gives the month, and the summary supplies a different one. These three error types - hallucinated words, swapped arguments and wrong facts - are exactly what real neural summarizers do.</p>\n<h3>Why even extraction can lie (C6)</h3>\n<p>Extraction copies sentences verbatim, so it cannot invent facts - but it can break a pronoun's link to what it refers to. In \"The Sticky Saga Continues\", the fourth sentence begins with a pronoun whose antecedent is introduced only in the third sentence (McBubble's rival). The summary keeps the fourth sentence but drops the third, so the pronoun now looks back to the only man mentioned earlier, McBubble - and the summary accuses the wrong executive. The technical name for this is a <em>dangling anaphora</em>: an anaphor is a word like \"he\", \"she\" or \"it\" that points back to something already named, and it dangles when that something has been deleted.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "All answer keys taken from the official 3-page solution. Official solution explicitly notes that C1 (d) and (e) may be swapped and (f) and (g) may be swapped - handled via acceptedVariants. Point breakdown is not given in the booklet (15 points total, no per-part split); points were distributed by hand as C1 0.4 x 11, C2 0.25 x 21, C3 1, C4 1, C5 0.45 x 3, C6 1 x 2 = 15.0 - adjust if a rubric is found. Question ids are positional: C1.1-C1.7 are booklet blanks a-g, C1.8-C1.11 are h-k; C2.1-C2.16 are the 'In Hot Water' table blanks a-p in print order, C2.17-C2.21 are the SSC table blanks q-u. The newspaper mastheads (blackletter 'The NACLO News' banner and the side blurbs) are transcribed as plain text rather than cropped as images; check that this is acceptable. Italics preserved in SS3 (USA Today), SS7 (sticky), HW1 (The Wall Street Journal), HW2 (WikiLeaks), HW6 (table-to-kitchen), and the abstractive summary.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:c5.3:mode",
+      "note": "arbitration returned UNRESOLVED"
+    },
+    {
+      "kind": "diff",
+      "path": "cells:count",
+      "note": "arbitration returned UNRESOLVED"
+    }
+  ]
+}

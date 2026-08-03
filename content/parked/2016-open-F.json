@@ -20,410 +20,328 @@
   ],
   "officialPoints": 15,
   "officialTimeMinutes": 27,
-  "bodyHtml": "<p>Hittite is an extinct language that belongs to the Anatolian branch of the Indo-European language family. It was spoken in the ancient Hittite Empire in second millennium BCE. Hittite was written using a script, called cuneiform, composed of many wedge shapes; an example of cuneiform unrelated to this problem is below.</p>\n<figure><img src=\"/content-assets/2016-open-F-cuneiform.png\" alt=\"Two lines of cuneiform writing made up of wedge-shaped signs\" /></figure>\n<p>The excerpt below is a (simplified) phonetic rendering of a cuneiform passage found on a tablet. You do not need to know how the text is pronounced to solve this problem.</p>\n<blockquote class=\"data\">\n<p>našta illuyankan<br />ḫattešnaz šarā kallišta<br />kāšawa ezenan iyami<br />nuwa adanna akuwanna eḫu</p>\n<p>našta illuyankaš qadu dumumeššu<br />šarā úēr nuza eter ekuer<br />našta palḫan ḫūmandan ekuer<br />neza ninkēr</p>\n<p>ne namma ḫattešnaš kattanta<br />nūmān pānzi ḫupašiyašša úit<br />nu illuyankan išḫimanta kalēliēt</p>\n<p>imaš úit nukán illuyankan<br />kuenta dingirmešša kattišši ešer</p>\n</blockquote>\n<p>Its translation into English:</p>\n<p>And he called up the snake from the hole: “Behold the feast I’m making! Come to eat and to drink!” And the snake came up with his sons. And they ate and drank. And they drank all the kettles. And they could no longer go down into the hole again. And Hupasiyas came and tied the snake with a rope. The Stormgod came and killed the snake; and the gods were with him.”</p>\n<h3>F1</h3>\n<p>Match the following Hittite word forms with their English translations.</p>\n<p class=\"data\">a. eter<br />b. ḫatteššar<br />c. úit<br />d. illuyankaš<br />e. našta<br />f. šarā<br />g. ekuer</p>\n<p>(1) snake<br />(2) hole<br />(3) came<br />(4) and<br />(5) up<br />(6) drank<br />(7) ate</p>\n<h3>F2</h3>\n<p>Match the following suffixes with their grammatical roles.</p>\n<p class=\"data\">a. –aš<br />b. –ša<br />c. –meš<br />d. –er/ēr<br />e. –an<br />f. –anna<br />g. –it</p>\n<p>(1) marker of the infinitive (infinitives are verbs translated with <em>to</em>, such as “<em>to</em> sleep” or “<em>to</em> walk”)<br />(2) plural marker<br />(3) marker of 3<sup>rd</sup> person plural past tense verbs (these are past tense verbs with a subject of <em>they</em> or a plural noun, such as <em>walked</em> in “they <em>walked</em>” or <em>drank</em> in “the cats <em>drank</em> milk”)<br />(4) marker of the direct object (the direct object is the recipient of the action, such as <em>him</em> in “she hit <em>him</em>” or <em>a pizza</em> in “he made <em>a pizza</em>”)<br />(5) marker of the subject (the subject is the entity performing the action, such as <em>the dog</em> in “<em>the dog</em> chased the cat”)<br />(6) marker for 3rd person singular past tense verbs (these are past tense verbs with a subject of <em>he</em>, <em>she</em>, <em>it</em>, or a singular noun, such as <em>walked</em> in “he <em>walked</em>” or <em>drank</em> in “the cat <em>drank</em> milk”)<br />(7) marker denoting “and”</p>",
+  "bodyHtml": "<p>Hittite is an extinct language that belongs to the Anatolian branch of the Indo-European language family. It was spoken in the ancient Hittite Empire in second millennium BCE. Hittite was written using a script, called cuneiform, composed of many wedge shapes; an example of cuneiform unrelated to this problem is below.</p>\n<figure><img src=\"/content-assets/2016-open-F-cuneiform.png\" alt=\"Two lines of cuneiform wedge-shaped signs, an example unrelated to the problem\" /></figure>\n<p>The excerpt below is a (simplified) phonetic rendering of a cuneiform passage found on a tablet. You do not need to know how the text is pronounced to solve this problem.</p>\n<blockquote>\n<p><span class=\"data\">našta illuyankan</span><br /><span class=\"data\">ḫattešnaz šarā kallišta</span><br /><span class=\"data\">kāšawa ezenan iyami</span><br /><span class=\"data\">nuwa adanna akuwanna eḫu</span></p>\n<p><span class=\"data\">našta illuyankaš qadu dumumeššu</span><br /><span class=\"data\">šarā úēr nuza eter ekuer</span><br /><span class=\"data\">našta palḫan ḫūmandan ekuer</span><br /><span class=\"data\">neza ninkēr</span></p>\n<p><span class=\"data\">ne namma ḫattešnaš kattanta</span><br /><span class=\"data\">nūmān pānzi ḫupašiyašša úit</span><br /><span class=\"data\">nu illuyankan išḫimanta kalēliēt</span></p>\n<p><span class=\"data\">imaš úit nukán illuyankan</span><br /><span class=\"data\">kuenta dingirmešša kattišši ešer</span></p>\n</blockquote>\n<p>Its translation into English:</p>\n<p>And he called up the snake from the hole: “Behold the feast I’m making! Come to eat and to drink!” And the snake came up with his sons. And they ate and drank. And they drank all the kettles. And they could no longer go down into the hole again. And Hupasiyas came and tied the snake with a rope. The Stormgod came and killed the snake; and the gods were with him.”</p>",
   "assets": [
     {
       "src": "/content-assets/2016-open-F-cuneiform.png",
-      "alt": "Two lines of cuneiform writing made up of wedge-shaped signs"
+      "alt": "Two lines of cuneiform wedge-shaped signs, an example unrelated to the problem"
     }
   ],
   "questions": [
     {
-      "id": "F1.a",
+      "id": "F1.1",
       "promptHtml": "a. <span class=\"data\">eter</span>",
       "part": "F1",
-      "partPrompt": "Match the following Hittite word forms with their English translations. Give the number of the English translation for each Hittite form.",
+      "partPrompt": "Match the following Hittite word forms with their English translations. Options: (1) snake, (2) hole, (3) came, (4) and, (5) up, (6) drank, (7) ate. Write the number of the matching translation.",
       "gradingMode": "exact",
-      "answerKey": "(7) ate",
+      "answerKey": "(7)",
       "acceptedVariants": [
         "7",
-        "(7)",
         "ate"
-      ],
-      "choices": [
-        "(1) snake",
-        "(2) hole",
-        "(3) came",
-        "(4) and",
-        "(5) up",
-        "(6) drank",
-        "(7) ate"
       ],
       "points": 1
     },
     {
-      "id": "F1.b",
+      "id": "F1.2",
       "promptHtml": "b. <span class=\"data\">ḫatteššar</span>",
       "part": "F1",
       "gradingMode": "exact",
-      "answerKey": "(2) hole",
+      "answerKey": "(2)",
       "acceptedVariants": [
         "2",
-        "(2)",
         "hole"
-      ],
-      "choices": [
-        "(1) snake",
-        "(2) hole",
-        "(3) came",
-        "(4) and",
-        "(5) up",
-        "(6) drank",
-        "(7) ate"
       ],
       "points": 1
     },
     {
-      "id": "F1.c",
+      "id": "F1.3",
       "promptHtml": "c. <span class=\"data\">úit</span>",
       "part": "F1",
       "gradingMode": "exact",
-      "answerKey": "(3) came",
+      "answerKey": "(3)",
       "acceptedVariants": [
         "3",
-        "(3)",
         "came"
-      ],
-      "choices": [
-        "(1) snake",
-        "(2) hole",
-        "(3) came",
-        "(4) and",
-        "(5) up",
-        "(6) drank",
-        "(7) ate"
       ],
       "points": 1
     },
     {
-      "id": "F1.d",
+      "id": "F1.4",
       "promptHtml": "d. <span class=\"data\">illuyankaš</span>",
       "part": "F1",
       "gradingMode": "exact",
-      "answerKey": "(1) snake",
+      "answerKey": "(1)",
       "acceptedVariants": [
         "1",
-        "(1)",
         "snake"
-      ],
-      "choices": [
-        "(1) snake",
-        "(2) hole",
-        "(3) came",
-        "(4) and",
-        "(5) up",
-        "(6) drank",
-        "(7) ate"
       ],
       "points": 1
     },
     {
-      "id": "F1.e",
+      "id": "F1.5",
       "promptHtml": "e. <span class=\"data\">našta</span>",
       "part": "F1",
       "gradingMode": "exact",
-      "answerKey": "(4) and",
+      "answerKey": "(4)",
       "acceptedVariants": [
         "4",
-        "(4)",
         "and"
-      ],
-      "choices": [
-        "(1) snake",
-        "(2) hole",
-        "(3) came",
-        "(4) and",
-        "(5) up",
-        "(6) drank",
-        "(7) ate"
       ],
       "points": 1
     },
     {
-      "id": "F1.f",
+      "id": "F1.6",
       "promptHtml": "f. <span class=\"data\">šarā</span>",
       "part": "F1",
       "gradingMode": "exact",
-      "answerKey": "(5) up",
+      "answerKey": "(5)",
       "acceptedVariants": [
         "5",
-        "(5)",
         "up"
-      ],
-      "choices": [
-        "(1) snake",
-        "(2) hole",
-        "(3) came",
-        "(4) and",
-        "(5) up",
-        "(6) drank",
-        "(7) ate"
       ],
       "points": 1
     },
     {
-      "id": "F1.g",
+      "id": "F1.7",
       "promptHtml": "g. <span class=\"data\">ekuer</span>",
       "part": "F1",
       "gradingMode": "exact",
-      "answerKey": "(6) drank",
+      "answerKey": "(6)",
       "acceptedVariants": [
         "6",
-        "(6)",
         "drank"
-      ],
-      "choices": [
-        "(1) snake",
-        "(2) hole",
-        "(3) came",
-        "(4) and",
-        "(5) up",
-        "(6) drank",
-        "(7) ate"
       ],
       "points": 1
     },
     {
-      "id": "F2.a",
+      "id": "F2.1",
       "promptHtml": "a. <span class=\"data\">–aš</span>",
       "part": "F2",
-      "partPrompt": "Match the following suffixes with their grammatical roles. Give the number of the role for each suffix.",
+      "partPrompt": "Match the following suffixes with their grammatical roles. Options: (1) marker of the infinitive (infinitives are verbs translated with to, such as \"to sleep\" or \"to walk\"), (2) plural marker, (3) marker of 3rd person plural past tense verbs, (4) marker of the direct object, (5) marker of the subject, (6) marker for 3rd person singular past tense verbs, (7) marker denoting \"and\". Write the number of the matching role.",
       "gradingMode": "exact",
-      "answerKey": "(5) marker of the subject",
+      "answerKey": "(5)",
       "acceptedVariants": [
-        "5",
-        "(5)",
-        "marker of the subject"
+        "5"
       ],
-      "choices": [
-        "(1) marker of the infinitive",
-        "(2) plural marker",
-        "(3) marker of 3rd person plural past tense verbs",
-        "(4) marker of the direct object",
-        "(5) marker of the subject",
-        "(6) marker of 3rd person singular past tense verbs",
-        "(7) marker denoting \"and\""
-      ],
-      "points": 2
+      "points": 1
     },
     {
-      "id": "F2.b",
+      "id": "F2.2",
       "promptHtml": "b. <span class=\"data\">–ša</span>",
       "part": "F2",
       "gradingMode": "exact",
-      "answerKey": "(7) marker denoting \"and\"",
+      "answerKey": "(7)",
       "acceptedVariants": [
-        "7",
-        "(7)",
-        "marker denoting and",
-        "and"
-      ],
-      "choices": [
-        "(1) marker of the infinitive",
-        "(2) plural marker",
-        "(3) marker of 3rd person plural past tense verbs",
-        "(4) marker of the direct object",
-        "(5) marker of the subject",
-        "(6) marker of 3rd person singular past tense verbs",
-        "(7) marker denoting \"and\""
+        "7"
       ],
       "points": 1
     },
     {
-      "id": "F2.c",
+      "id": "F2.3",
       "promptHtml": "c. <span class=\"data\">–meš</span>",
       "part": "F2",
       "gradingMode": "exact",
-      "answerKey": "(2) plural marker",
+      "answerKey": "(2)",
       "acceptedVariants": [
-        "2",
-        "(2)",
-        "plural marker",
-        "plural"
-      ],
-      "choices": [
-        "(1) marker of the infinitive",
-        "(2) plural marker",
-        "(3) marker of 3rd person plural past tense verbs",
-        "(4) marker of the direct object",
-        "(5) marker of the subject",
-        "(6) marker of 3rd person singular past tense verbs",
-        "(7) marker denoting \"and\""
+        "2"
       ],
       "points": 1
     },
     {
-      "id": "F2.d",
+      "id": "F2.4",
       "promptHtml": "d. <span class=\"data\">–er/ēr</span>",
       "part": "F2",
       "gradingMode": "exact",
-      "answerKey": "(3) marker of 3rd person plural past tense verbs",
+      "answerKey": "(3)",
       "acceptedVariants": [
-        "3",
-        "(3)",
-        "marker of 3rd person plural past tense verbs"
-      ],
-      "choices": [
-        "(1) marker of the infinitive",
-        "(2) plural marker",
-        "(3) marker of 3rd person plural past tense verbs",
-        "(4) marker of the direct object",
-        "(5) marker of the subject",
-        "(6) marker of 3rd person singular past tense verbs",
-        "(7) marker denoting \"and\""
+        "3"
       ],
       "points": 1
     },
     {
-      "id": "F2.e",
+      "id": "F2.5",
       "promptHtml": "e. <span class=\"data\">–an</span>",
       "part": "F2",
       "gradingMode": "exact",
-      "answerKey": "(4) marker of the direct object",
+      "answerKey": "(4)",
       "acceptedVariants": [
-        "4",
-        "(4)",
-        "marker of the direct object",
-        "direct object"
-      ],
-      "choices": [
-        "(1) marker of the infinitive",
-        "(2) plural marker",
-        "(3) marker of 3rd person plural past tense verbs",
-        "(4) marker of the direct object",
-        "(5) marker of the subject",
-        "(6) marker of 3rd person singular past tense verbs",
-        "(7) marker denoting \"and\""
+        "4"
       ],
       "points": 1
     },
     {
-      "id": "F2.f",
+      "id": "F2.6",
       "promptHtml": "f. <span class=\"data\">–anna</span>",
       "part": "F2",
       "gradingMode": "exact",
-      "answerKey": "(1) marker of the infinitive",
+      "answerKey": "(1)",
       "acceptedVariants": [
-        "1",
-        "(1)",
-        "marker of the infinitive",
-        "infinitive"
-      ],
-      "choices": [
-        "(1) marker of the infinitive",
-        "(2) plural marker",
-        "(3) marker of 3rd person plural past tense verbs",
-        "(4) marker of the direct object",
-        "(5) marker of the subject",
-        "(6) marker of 3rd person singular past tense verbs",
-        "(7) marker denoting \"and\""
+        "1"
       ],
       "points": 1
     },
     {
-      "id": "F2.g",
+      "id": "F2.7",
       "promptHtml": "g. <span class=\"data\">–it</span>",
       "part": "F2",
       "gradingMode": "exact",
-      "answerKey": "(6) marker of 3rd person singular past tense verbs",
+      "answerKey": "(6)",
       "acceptedVariants": [
-        "6",
-        "(6)",
-        "marker for 3rd person singular past tense verbs",
-        "marker of 3rd person singular past tense verbs"
+        "6"
       ],
-      "choices": [
-        "(1) marker of the infinitive",
-        "(2) plural marker",
-        "(3) marker of 3rd person plural past tense verbs",
-        "(4) marker of the direct object",
-        "(5) marker of the subject",
-        "(6) marker of 3rd person singular past tense verbs",
-        "(7) marker denoting \"and\""
-      ],
-      "points": 1
+      "points": 2
     }
   ],
   "hints": [
     {
       "tier": 1,
-      "text": "The Hittite passage is laid out in four short stanzas, and the English translation follows the same order. Line the two up sentence by sentence before you try to identify single words: the first two Hittite lines correspond to “And he called up the snake from the hole”, and so on.",
+      "text": "The Hittite passage is printed in four stanzas and the English translation follows the same order, sentence by sentence. Before worrying about suffixes, chop both texts into matching chunks: which Hittite words sit in the stretch that becomes \"And the snake came up with his sons\"?",
       "xpCost": 2
     },
     {
       "tier": 2,
-      "text": "Look for the same root turning up with different endings. The root for “snake” appears three times, once as the one doing something and twice as the one being acted on. Similarly, the verb for “came” appears once with a single subject (Hupasiyas) and once with a plural subject (the snake with his sons). Comparing those pairs tells you what each ending does, and the differences also tell you which part of the word is the root.",
+      "text": "Several Hittite words show up more than once with slightly different endings. Write those families out side by side, decide what part is the shared stem and what part is the ending, and then look at what the English does differently in each case (who is doing the action, how many of them, whether the word is the doer or the thing acted on). Each ending in F2 can be pinned down by finding two forms of the same stem that differ only in that ending.",
       "xpCost": 3
     },
     {
       "tier": 3,
-      "text": "Here is a worked step on a word that is not graded. The phrase ḫattešnaz šarā kallišta corresponds to “called up ... from the hole”. Since šarā is one word and kallišta is another, ḫattešnaz must carry both “hole” and “from” — that is, the ending –naz supplies the meaning “from”. Two useful lessons: Hittite packs grammatical relations into endings rather than separate little words, and the verb tends to come at the end of its clause.",
+      "text": "Here is the method on a line that is not asked about. The line \"kāšawa ezenan iyami\" matches \"Behold the feast I'm making!\" Three Hittite words, three English pieces: kāšawa lines up with \"Behold\", ezenan with \"the feast\", and iyami with \"I'm making\". Notice that the thing being made comes before the verb, so in Hittite the verb tends to sit at the end of its clause. Use that word order to decide, in the longer lines, which word must be the verb and which must be the noun it acts on.",
       "xpCost": 4
     }
   ],
-  "explanationHtml": "<h3>Step 1: cut the text into sentences</h3><p>The four Hittite stanzas run parallel to the English translation. Reading them side by side:</p><ul><li><span class=\"data\">našta illuyankan ḫattešnaz šarā kallišta</span> = “And he called up the snake from the hole”</li><li><span class=\"data\">kāšawa ezenan iyami</span> = “Behold the feast I’m making!”</li><li><span class=\"data\">nuwa adanna akuwanna eḫu</span> = “Come to eat and to drink!”</li><li><span class=\"data\">našta illuyankaš qadu dumumeššu šarā úēr</span> = “And the snake came up with his sons”</li><li><span class=\"data\">nuza eter ekuer</span> = “And they ate and drank”</li><li><span class=\"data\">našta palḫan ḫūmandan ekuer</span> = “And they drank all the kettles”</li><li><span class=\"data\">ḫupašiyašša úit</span> = “And Hupasiyas came”</li><li><span class=\"data\">nu illuyankan išḫimanta kalēliēt</span> = “and tied the snake with a rope”</li><li><span class=\"data\">imaš úit nukán illuyankan kuenta</span> = “The Stormgod came and killed the snake”</li><li><span class=\"data\">dingirmešša kattišši ešer</span> = “and the gods were with him”</li></ul><h3>Step 2: the easy anchors</h3><p>The word <span class=\"data\">našta</span> begins three lines, and each of those lines begins with “And” in English — so <span class=\"data\">našta</span> is a connector meaning “and”. <span class=\"data\">šarā</span> shows up in two lines, and both of those are the lines with “up” (“called <em>up</em>”, “came <em>up</em>”); everything else in those two lines is different, so <span class=\"data\">šarā</span> = “up”.</p><p>The root <span class=\"data\">illuyanka-</span> appears four times and “snake” appears four times in the translation, so that root means “snake”. That fixes <span class=\"data\">illuyankaš</span> as the “snake” form (F1.d).</p><h3>Step 3: same root, different endings</h3><p>Compare the two shapes of “snake”:</p><ul><li><span class=\"data\">illuyankan</span> in “he called up <em>the snake</em>” and “killed <em>the snake</em>” — here the snake is being acted upon, i.e. the direct object.</li><li><span class=\"data\">illuyankaš</span> in “<em>the snake</em> came up” — here the snake is the one doing the action, i.e. the subject.</li></ul><p>So <span class=\"data\">–an</span> marks the direct object (F2.e) and <span class=\"data\">–aš</span> marks the subject (F2.a). Notice that the word list in F1 gives <span class=\"data\">ḫatteššar</span> for “hole” — the plain, dictionary-like form, whereas in the text it appears as <span class=\"data\">ḫattešnaz</span> (“from the hole”) and <span class=\"data\">ḫattešnaš</span>. Because the root clearly means “hole”, F1.b is “hole”.</p><h3>Step 4: singular versus plural verbs</h3><p>Two forms of the verb “come” occur: <span class=\"data\">úēr</span> in “the snake came up with his sons” (two or more comers) and <span class=\"data\">úit</span> in “Hupasiyas came” and “The Stormgod came” (one comer). So <span class=\"data\">úit</span> is “came” with a singular subject (F1.c), and the difference between the two forms is the ending: <span class=\"data\">–ēr/–er</span> for “they did” (third person plural past) and <span class=\"data\">–it</span> for “he/she/it did” (third person singular past). That is F2.d and F2.g.</p><p>Now the line “And they ate and drank” contains exactly two verbs, <span class=\"data\">eter</span> and <span class=\"data\">ekuer</span>, both with the plural ending <span class=\"data\">–er</span>. Which is which? The next line, “And they drank all the kettles”, uses <span class=\"data\">ekuer</span> again — and its only verb is “drank”. So <span class=\"data\">ekuer</span> = “drank” (F1.g) and by elimination <span class=\"data\">eter</span> = “ate” (F1.a).</p><h3>Step 5: the remaining suffixes</h3><p>“Come to eat and to drink!” contains <span class=\"data\">adanna akuwanna</span>. Compare their roots with the past-tense verbs: <span class=\"data\">ad-</span> matches <span class=\"data\">eter</span> (“ate”) and <span class=\"data\">akuw-</span> matches <span class=\"data\">ekuer</span> (“drank”). What is left in each word is <span class=\"data\">–anna</span>, which therefore marks the infinitive, the “to eat / to drink” form (F2.f).</p><p>In “the snake came up with his sons” we find <span class=\"data\">dumumeššu</span>, and in “the gods were with him” we find <span class=\"data\">dingirmešša</span>. Both English phrases are plural (“sons”, “gods”) and both Hittite words contain <span class=\"data\">–meš–</span>, so <span class=\"data\">–meš</span> is the plural marker (F2.c).</p><p>Finally, two words end in <span class=\"data\">–ša</span>: <span class=\"data\">ḫupašiyašša</span> in “<em>And</em> Hupasiyas came” and <span class=\"data\">dingirmešša</span> in “<em>and</em> the gods were with him”. In both places the English has an extra “and” that no other Hittite word accounts for, so <span class=\"data\">–ša</span> is an attached “and” (F2.b). This kind of “and” that clings to the end of a word instead of standing alone is common in old Indo-European languages — Latin <span class=\"data\">-que</span> works the same way.</p><h3>Answers</h3><p>F1: a. (7) ate, b. (2) hole, c. (3) came, d. (1) snake, e. (4) and, f. (5) up, g. (6) drank.</p><p>F2: a. (5) subject, b. (7) “and”, c. (2) plural, d. (3) third person plural past, e. (4) direct object, f. (1) infinitive, g. (6) third person singular past.</p>",
+  "explanationHtml": "<h3>Step 1: line up the two texts</h3><p>Hittite and English tell the same story in the same order, so the first job is to cut both into matching pieces. Working stanza by stanza gives roughly:</p><div class=\"table-scroll\"><table><thead><tr><th>Hittite</th><th>English</th></tr></thead><tbody><tr><td><span class=\"data\">našta illuyankan ḫattešnaz šarā kallišta</span></td><td>And he called up the snake from the hole</td></tr><tr><td><span class=\"data\">kāšawa ezenan iyami</span></td><td>Behold the feast I'm making!</td></tr><tr><td><span class=\"data\">nuwa adanna akuwanna eḫu</span></td><td>Come to eat and to drink!</td></tr><tr><td><span class=\"data\">našta illuyankaš qadu dumumeššu šarā úēr</span></td><td>And the snake came up with his sons</td></tr><tr><td><span class=\"data\">nuza eter ekuer</span></td><td>And they ate and drank</td></tr><tr><td><span class=\"data\">našta palḫan ḫūmandan ekuer</span></td><td>And they drank all the kettles</td></tr><tr><td><span class=\"data\">ne namma ḫattešnaš kattanta nūmān pānzi</span></td><td>And they could no longer go down into the hole again</td></tr><tr><td><span class=\"data\">ḫupašiyašša úit</span></td><td>And Hupasiyas came</td></tr><tr><td><span class=\"data\">nu illuyankan išḫimanta kalēliēt</span></td><td>and tied the snake with a rope</td></tr><tr><td><span class=\"data\">imaš úit nukán illuyankan kuenta</span></td><td>The Stormgod came and killed the snake</td></tr><tr><td><span class=\"data\">dingirmešša kattišši ešer</span></td><td>and the gods were with him</td></tr></tbody></table></div><p>Every English sentence starts with \"And\", and every Hittite line starts with a short word beginning with n-: <span class=\"data\">našta</span>, <span class=\"data\">nuwa</span>, <span class=\"data\">nuza</span>, <span class=\"data\">ne</span>, <span class=\"data\">nu</span>. That is the sentence connector, so <span class=\"data\">našta</span> means \"and\".</p><h3>Step 2: the snake and the hole</h3><p>The word for \"snake\" appears three times: <span class=\"data\">illuyankan</span> (twice, where the snake is the thing being called up or killed), and <span class=\"data\">illuyankaš</span> (where the snake is the one doing the coming up). So the stem is <span class=\"data\">illuyanka-</span> and the ending tells you the snake's job in the sentence. In grammar terms, the <em>subject</em> is the doer and the <em>direct object</em> is the thing the action happens to. <span class=\"data\">illuyankaš</span> is the subject form, so it translates \"snake\"; and the two endings we have just isolated are <span class=\"data\">-aš</span> = subject and <span class=\"data\">-an</span> = direct object.</p><p>Two other words confirm this. <span class=\"data\">imaš</span> \"the Stormgod\" takes <span class=\"data\">-aš</span> and is the doer of \"came\" and \"killed\". And <span class=\"data\">palḫan ḫūmandan</span> \"all the kettles\" both take <span class=\"data\">-an</span>, because the kettles are what got drunk.</p><p>\"Hole\" appears as <span class=\"data\">ḫattešnaz</span> \"from the hole\" and <span class=\"data\">ḫattešnaš</span> \"into the hole\", so its stem is <span class=\"data\">ḫattešn-</span>. The plain dictionary form offered in the list, <span class=\"data\">ḫatteššar</span>, is therefore the one that means \"hole\".</p><h3>Step 3: singular and plural past-tense verbs</h3><p>Compare the verb \"came\":</p><ul><li><span class=\"data\">úēr</span> in \"the snake came up <em>with his sons</em>\" — more than one comer</li><li><span class=\"data\">úit</span> in \"Hupasiyas came\" and \"The Stormgod came\" — one comer</li></ul><p>Same stem <span class=\"data\">ú-</span>, different endings, and the only difference in English is how many people are doing it. So <span class=\"data\">-ēr</span> marks a past-tense verb with a plural subject (\"they came\") and <span class=\"data\">-it</span> marks one with a singular subject (\"he came\"). That gives <span class=\"data\">úit</span> = \"came\" for F1, and the F2 answers <span class=\"data\">-er/ēr</span> = 3rd person plural past and <span class=\"data\">-it</span> = 3rd person singular past.</p><p>Now \"And they ate and drank\" is <span class=\"data\">eter ekuer</span> — two verbs, both with the plural ending <span class=\"data\">-er</span>. English gives them in the order \"ate\", \"drank\", so <span class=\"data\">eter</span> = \"ate\" and <span class=\"data\">ekuer</span> = \"drank\". The next line, <span class=\"data\">našta palḫan ḫūmandan ekuer</span> \"And they drank all the kettles\", double-checks <span class=\"data\">ekuer</span> = \"drank\".</p><h3>Step 4: the leftovers</h3><p><span class=\"data\">šarā</span> shows up in exactly the two sentences that contain \"up\" (\"called <em>up</em> the snake\", \"came <em>up</em> with his sons\"), so <span class=\"data\">šarā</span> = \"up\".</p><p><span class=\"data\">-meš</span> appears in <span class=\"data\">dumumeššu</span> \"his sons\" and <span class=\"data\">dingirmešša</span> \"and the gods\" — both plural, so it is the plural marker.</p><p><span class=\"data\">-ša</span> appears on <span class=\"data\">ḫupašiyašša</span> (\"<em>And</em> Hupasiyas came\") and on <span class=\"data\">dingirmešša</span> (\"<em>and</em> the gods were with him\"). Both are clause-initial words carrying an extra \"and\", so <span class=\"data\">-ša</span> is a suffix meaning \"and\".</p><p>Finally, \"Come to eat and to drink!\" contains <span class=\"data\">adanna akuwanna</span>. An <em>infinitive</em> is the \"to\" form of a verb, and both Hittite words end in <span class=\"data\">-anna</span>, so that ending marks the infinitive.</p><h3>Answers</h3><p>F1: a. (7) ate, b. (2) hole, c. (3) came, d. (1) snake, e. (4) and, f. (5) up, g. (6) drank.</p><p>F2: a. (5) subject marker, b. (7) \"and\", c. (2) plural, d. (3) 3rd plural past, e. (4) direct object, f. (1) infinitive, g. (6) 3rd singular past.</p>",
   "reviewStatus": "drafted",
-  "_reviewNotes": "Answer keys taken directly from the official solution page (F1 a-g = 7,2,3,1,4,5,6; F2 a-g = 5,7,2,3,4,1,6). CROP /content-assets/2016-open-F-cuneiform.png page=1 x=20 y=20 w=62 h=10 (decorative cuneiform specimen, unrelated to the data per the problem text). Point distribution: the official booklet gives 15 points for 14 sub-answers with no per-item breakdown; I assigned 1 point each and put the extra point on F2.a — adjust if a breakdown is found. F2 choices are shortened one-line versions of the long role descriptions, which are printed in full in bodyHtml.",
+  "_reviewNotes": "Answer keys taken from the official solution page (F1: a7 b2 c3 d1 e4 f5 g6; F2: a5 b7 c2 d3 e4 f1 g6). Keys are written as the printed option number in parentheses, with the bare digit (and, for F1, the English word) as accepted variants; no 'choices' array was used so that keys stay verbatim with the solution. Point split is unofficial: the booklet gives 15 points with no per-item breakdown, so 14 blanks got 1 point each and F2.7 got 2 to reach 15 — adjust if a breakdown exists.\nCROP /content-assets/2016-open-F-cuneiform.png page=1 x=22 y=20 w=58 h=10",
   "_parkReasons": [
     {
       "kind": "diff",
-      "path": "q:f2.a:points",
-      "note": "arbitration returned UNRESOLVED"
+      "path": "q:f1.1:key",
+      "a": "(7)",
+      "b": "7"
     },
     {
       "kind": "diff",
-      "path": "q:f2.a:choices",
-      "note": "arbitration returned UNRESOLVED"
+      "path": "q:f1.2:key",
+      "a": "(2)",
+      "b": "2"
     },
     {
       "kind": "diff",
-      "path": "q:f2.b:choices",
-      "note": "arbitration returned UNRESOLVED"
+      "path": "q:f1.3:key",
+      "a": "(3)",
+      "b": "3"
     },
     {
       "kind": "diff",
-      "path": "q:f2.c:choices",
-      "note": "arbitration returned UNRESOLVED"
+      "path": "q:f1.4:key",
+      "a": "(1)",
+      "b": "1"
     },
     {
       "kind": "diff",
-      "path": "q:f2.d:choices",
-      "note": "arbitration returned UNRESOLVED"
+      "path": "q:f1.5:key",
+      "a": "(4)",
+      "b": "4"
     },
     {
       "kind": "diff",
-      "path": "q:f2.e:choices",
-      "note": "arbitration returned UNRESOLVED"
+      "path": "q:f1.6:key",
+      "a": "(5)",
+      "b": "5"
     },
     {
       "kind": "diff",
-      "path": "q:f2.f:choices",
-      "note": "arbitration returned UNRESOLVED"
+      "path": "q:f1.7:key",
+      "a": "(6)",
+      "b": "6"
     },
     {
       "kind": "diff",
-      "path": "q:f2.g:key",
-      "note": "arbitration returned UNRESOLVED"
+      "path": "q:f2.1:key",
+      "a": "(5)",
+      "b": "5"
     },
     {
       "kind": "diff",
-      "path": "q:f2.g:points",
-      "note": "arbitration returned UNRESOLVED"
+      "path": "q:f2.2:key",
+      "a": "(7)",
+      "b": "7"
     },
     {
       "kind": "diff",
-      "path": "q:f2.g:choices",
-      "note": "arbitration returned UNRESOLVED"
+      "path": "q:f2.3:key",
+      "a": "(2)",
+      "b": "2"
     },
     {
       "kind": "diff",
-      "path": "data:count",
-      "note": "arbitration returned UNRESOLVED"
+      "path": "q:f2.4:key",
+      "a": "(3)",
+      "b": "3"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f2.5:key",
+      "a": "(4)",
+      "b": "4"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f2.6:key",
+      "a": "(1)",
+      "b": "1"
+    },
+    {
+      "kind": "diff",
+      "path": "q:f2.7:key",
+      "a": "(6)",
+      "b": "6"
+    },
+    {
+      "kind": "witness",
+      "path": "data:1",
+      "a": "ḫattešnaz šarā kallišta",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:3",
+      "a": "nuwa adanna akuwanna eḫu",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:6",
+      "a": "našta palḫan ḫūmandan ekuer",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:8",
+      "a": "ne namma ḫattešnaš kattanta",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:9",
+      "a": "nūmān pānzi ḫupašiyašša úit",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:10",
+      "a": "nu illuyankan išḫimanta kalēliēt",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 20 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~20 API calls that would not resolve it"
     },
     {
       "kind": "figure",
       "path": "/content-assets/2016-open-F-cuneiform.png",
-      "note": "the record declares an asset with no crop region described"
+      "note": "crop not confirmed after 3 attempts (last verdict: NOISY)"
     }
   ]
 }

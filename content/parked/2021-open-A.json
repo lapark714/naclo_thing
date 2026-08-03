@@ -1,0 +1,116 @@
+{
+  "id": "2021-open-A",
+  "tier": "full",
+  "year": 2021,
+  "round": "open",
+  "letter": "A",
+  "title": "The Tortoise and the Rabbit",
+  "authors": [
+    "Tom McCoy"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "syntax",
+    "morphology"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "standard",
+  "languages": [
+    "Malagasy"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>Malagasy is a language with 25 million speakers, most of them living in Madagascar. Even though Madagascar is in Africa, Malagasy belongs to the Austronesian language family, making it a relative of Indonesian, Hawaiian, and many other languages spoken throughout the Pacific and Indian Oceans. Below are some sentences in Malagasy along with their English translations.</p>\n<p><strong>A1.</strong> Fill in the blanks in the table:</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td><span class=\"data\">Nitsiky ny bitro kely.</span></td><td>The small rabbit smiled.</td></tr>\n<tr><td><span class=\"data\">Mitsiky ny bitro kely.</span></td><td>The small rabbit smiles.</td></tr>\n<tr><td><span class=\"data\">Mitsiky ny bitro mainty.</span></td><td>The black rabbit smiles.</td></tr>\n<tr><td><span class=\"data\">Mihaona ny sokatra ny alika.</span></td><td>The dog meets the tortoise.</td></tr>\n<tr><td><span class=\"data\">Niaro ny bitro ny sokatra.</span></td><td>The tortoise protected the rabbit.</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A1.1\" data-label=\"(a)\"></span></td><td>The tortoise meets the dog.</td></tr>\n<tr><td><span class=\"data\">Nitsiky ny sokatra mainty.</span></td><td><span class=\"blank\" data-q=\"A1.2\" data-label=\"(b)\"></span></td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>A2.</strong> Here are a few more Malagasy sentences. Fill in the blanks in this second table:</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td><span class=\"data\">Nihaona ny vorona ity bitro lehibe ity.</span></td><td>This large rabbit met the bird.</td></tr>\n<tr><td><span class=\"data\">Miaro ny sokatra lehibe iny alika iny.</span></td><td>That dog protects the large tortoise.</td></tr>\n<tr><td><span class=\"data\">Miarahaba ity sahona maitso ity ny saka.</span></td><td>The cat greets this green frog.</td></tr>\n<tr><td><span class=\"data\">Niteny ity alika kely ity.</span></td><td>This small dog spoke.</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.1\" data-label=\"(a)\"></span></td><td>This small dog speaks.</td></tr>\n<tr><td><span class=\"data\">Niaro ny saka ity bitro lehibe ity.</span></td><td><span class=\"blank\" data-q=\"A2.2\" data-label=\"(b)\"></span></td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.3\" data-label=\"(c)\"></span></td><td>This green bird greeted that small frog.</td></tr>\n</tbody>\n</table>\n</div>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "A1.1",
+      "promptHtml": "<p>(a) Give the Malagasy for “The tortoise meets the dog.”</p>",
+      "part": "A1",
+      "partPrompt": "Fill in the blanks in the first table.",
+      "gradingMode": "exact",
+      "answerKey": "Mihaona ny alika ny sokatra.",
+      "acceptedVariants": [
+        "Mihaona ny alika ny sokatra"
+      ],
+      "points": 2
+    },
+    {
+      "id": "A1.2",
+      "promptHtml": "<p>(b) Give the English for <span class=\"data\">Nitsiky ny sokatra mainty.</span></p>",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "The black tortoise smiled.",
+      "acceptedVariants": [
+        "The black tortoise smiled"
+      ],
+      "points": 2
+    },
+    {
+      "id": "A2.1",
+      "promptHtml": "<p>(a) Give the Malagasy for “This small dog speaks.”</p>",
+      "part": "A2",
+      "partPrompt": "Fill in the blanks in the second table.",
+      "gradingMode": "exact",
+      "answerKey": "Miteny ity alika kely ity.",
+      "acceptedVariants": [
+        "Miteny ity alika kely ity"
+      ],
+      "points": 2
+    },
+    {
+      "id": "A2.2",
+      "promptHtml": "<p>(b) Give the English for <span class=\"data\">Niaro ny saka ity bitro lehibe ity.</span></p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "This large rabbit protected the cat.",
+      "acceptedVariants": [
+        "This large rabbit protected the cat"
+      ],
+      "points": 2
+    },
+    {
+      "id": "A2.3",
+      "promptHtml": "<p>(c) Give the Malagasy for “This green bird greeted that small frog.”</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "Niarahaba iny sahona kely iny ity vorona maitso ity.",
+      "acceptedVariants": [
+        "Niarahaba iny sahona kely iny ity vorona maitso ity"
+      ],
+      "points": 2
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Compare the first two sentences of the first table. They differ by a single letter at the very start of the first word, and the English differs only in whether the action already happened. That tells you where tense is marked.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Now look at where the doer and the done-to sit. In each Malagasy sentence the verb comes first, and the two noun phrases after it are NOT in English order: the thing being acted on comes first and the actor comes last. Also notice that words like “small”, “black” and “green” follow their noun, while <span>ny</span> (“the”) comes before it, and “this”/“that” are marked twice, once before and once after the noun phrase.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try building a sentence that is not asked for, such as “That black cat greets the bird.” Verb first: <span>miarahaba</span> (present, m-). Then the object “the bird”: <span>ny vorona</span>. Then the subject “that black cat”: the noun and its adjective sit inside the <span>iny ... iny</span> pair, giving <span>iny saka mainty iny</span>. Result: <span>Miarahaba ny vorona iny saka mainty iny.</span> Use the same recipe on the graded items, remembering to switch m- to n- for the past.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: find the tense marker</h3>\n<p>The first two rows of table A1 are almost identical:</p>\n<ul>\n<li><span class=\"data\">Nitsiky ny bitro kely.</span> = “The small rabbit smiled.”</li>\n<li><span class=\"data\">Mitsiky ny bitro kely.</span> = “The small rabbit smiles.”</li>\n</ul>\n<p>Only the first letter of the verb changes. So <strong>m-</strong> at the start of a verb means present tense (“smiles”) and <strong>n-</strong> means past tense (“smiled”). Every verb in the problem follows this: <span class=\"data\">mihaona</span> “meets” / <span class=\"data\">nihaona</span> “met”, <span class=\"data\">miaro</span> “protects” / <span class=\"data\">niaro</span> “protected”, <span class=\"data\">miteny</span> “speaks” / <span class=\"data\">niteny</span> “spoke”, <span class=\"data\">miarahaba</span> “greets” / <span class=\"data\">niarahaba</span> “greeted”.</p>\n<h3>Step 2: build a vocabulary list</h3>\n<p>Lining the sentences up gives: <span class=\"data\">sokatra</span> tortoise, <span class=\"data\">alika</span> dog, <span class=\"data\">bitro</span> rabbit, <span class=\"data\">vorona</span> bird, <span class=\"data\">saka</span> cat, <span class=\"data\">sahona</span> frog; <span class=\"data\">kely</span> small, <span class=\"data\">mainty</span> black, <span class=\"data\">lehibe</span> large, <span class=\"data\">maitso</span> green; <span class=\"data\">ny</span> “the”, <span class=\"data\">ity ... ity</span> “this”, <span class=\"data\">iny ... iny</span> “that”.</p>\n<h3>Step 3: work out the word order</h3>\n<p>Look at <span class=\"data\">Mihaona ny sokatra ny alika.</span> = “The dog meets the tortoise.” The verb is first. Then comes <span class=\"data\">ny sokatra</span> “the tortoise”, which is the <em>object</em> (the one being met), and last comes <span class=\"data\">ny alika</span> “the dog”, the <em>subject</em> (the one doing the meeting). So Malagasy order here is Verb - Object - Subject, the mirror image of the English Subject - Verb - Object.</p>\n<p>Inside a noun phrase: adjectives come <em>after</em> the noun (<span class=\"data\">bitro kely</span> = “rabbit small” = “small rabbit”). <span class=\"data\">ny</span> “the” comes before the noun. The demonstratives “this” and “that” are written <em>twice</em>, wrapping around the whole noun-plus-adjective group: <span class=\"data\">ity alika kely ity</span> = “this small dog”, <span class=\"data\">iny alika iny</span> = “that dog”.</p>\n<h3>Step 4: apply it</h3>\n<p>For an English sentence, first find the verb and choose m- or n- for its tense. Write that verb first. Then write the object noun phrase, then the subject noun phrase, each with its own determiner and with any adjective placed after its noun.</p>\n<p>Example that is not graded: “The large tortoise met that dog.” Verb: past of “meet” = <span class=\"data\">nihaona</span>. Object “that dog” = <span class=\"data\">iny alika iny</span>. Subject “the large tortoise” = <span class=\"data\">ny sokatra lehibe</span>. Result: <span class=\"data\">Nihaona iny alika iny ny sokatra lehibe.</span></p>\n<p>Going the other way, from Malagasy to English, read the verb, then remember that the noun phrase directly after the verb is the object and the last one is the subject, so you have to swap them when you write the English.</p>\n<h3>Why this matters</h3>\n<p>Verb-Object-Subject order is rare among the world's languages, and Malagasy is one of the best-known examples. Notice also how it keeps a consistent habit: modifiers such as adjectives follow the word they describe, the opposite of English.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken verbatim from the official solution page. Note that the solution's A2(c) key places the object first: 'Niarahaba iny sahona kely iny ity vorona maitso ity.' Only the trailing-period variants are listed since grading already ignores case and trailing punctuation. No figures to crop.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "hints[1].text",
+      "note": "hints[1].text contains markup, but the site renders that field as plain text"
+    },
+    {
+      "kind": "diff",
+      "path": "hints[2].text",
+      "note": "hints[2].text contains markup, but the site renders that field as plain text"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "id": "2018-open-D",
+  "tier": "full",
+  "year": 2018,
+  "round": "open",
+  "letter": "D",
+  "title": "Intergalactic Grammars",
+  "authors": [
+    "Ali Sharman"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "syntax"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "intro",
+  "languages": [
+    "Turkish",
+    "Malagasy",
+    "English"
+  ],
+  "officialPoints": 5,
+  "officialTimeMinutes": 10,
+  "bodyHtml": "<p>Your job as a linguist in the space federation is to translate between languages for the international team aboard the <em>U.S.S. Enterprise</em>. One day, you see some words flashing on your switchboard:</p>\n<blockquote>\n<p>“Houston, we have a problem. Houston, we have a problem.”</p>\n<p>“The Klingons?” you ask.</p>\n<p>“Roger that. Klag is frantic. He won’t go back to the Pagh until we answer him,” came the reply.</p>\n<p>“Copy. We are working on it. We will report back ASAP,” you respond.</p>\n</blockquote>\n<p>You know that the Klingons are grammarians, so you must make sure that you accurately translate your message into the Klingon language to avoid upsetting them further.</p>\n<p>You think back to the last time you had to translate something. In that case, you needed to translate the Turkish sentence <span class=\"data\">bir kız bir kitap okudu</span> into English. First you looked up all of the Turkish words:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>Turkish</th><th>English</th></tr></thead>\n<tbody>\n<tr><td><span class=\"data\">bir</span></td><td>a</td></tr>\n<tr><td><span class=\"data\">kız</span></td><td>girl</td></tr>\n<tr><td><span class=\"data\">kitap</span></td><td>book</td></tr>\n<tr><td><span class=\"data\">okudu</span></td><td>read</td></tr>\n</tbody>\n</table>\n</div>\n<p>By replacing each Turkish word with its English equivalent, you got the translation <em>a girl a book read</em>...which didn’t seem quite right. Luckily, at that point your boss came over. (Your boss is very wise, as are all linguists, especially those who organize linguistics Olympiads). She told you that you can’t just translate Turkish to English word-for-word because Turkish and English use different word orders. She then handed you a file of Synchronous Context Free Grammars (SCFGs). An SCFG provides you with two systems of rules for constructing sentences in the correct word order, one system for each language. This way, you can translate not only words, but also word order, from one language to another. Here is the English-Turkish SCFG from the file she gave you:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>&lt;English, Turkish&gt; SCFG</th></tr></thead>\n<tbody>\n<tr><td>S -&gt; &lt;NP VP, NP VP&gt;</td></tr>\n<tr><td>VP -&gt; &lt;V NP, NP V&gt;</td></tr>\n<tr><td>NP -&gt; &lt;a book, <span class=\"data\">bir kitap</span>&gt;</td></tr>\n<tr><td>NP -&gt; &lt;a cat, <span class=\"data\">bir kedi</span>&gt;</td></tr>\n<tr><td>NP -&gt; &lt;a girl, <span class=\"data\">bir kız</span>&gt;</td></tr>\n<tr><td>NP -&gt; &lt;a turtle, <span class=\"data\">bir kaplumbağa</span>&gt;</td></tr>\n<tr><td>V -&gt; &lt;ate, <span class=\"data\">yedi</span> &gt;</td></tr>\n<tr><td>V -&gt; &lt;bit, <span class=\"data\">ısırdı</span>&gt;</td></tr>\n<tr><td>V -&gt; &lt;chased, <span class=\"data\">kovaladı</span> &gt;</td></tr>\n<tr><td>V -&gt; &lt;read, <span class=\"data\">okudu</span> &gt;</td></tr>\n<tr><td>V -&gt; &lt;saw, <span class=\"data\">gördü</span> &gt;</td></tr>\n</tbody>\n</table>\n</div>\n<p>Using this SCFG, you correctly translated <span class=\"data\">bir kız bir kitap okudu</span> into <em>a girl read a book</em>. You were also able to translate in the other direction, for example to translate <em>a turtle saw a cat</em> as <span class=\"data\">bir kaplumbağa bir kedi gördü</span>.</p>\n<p>Answer the following questions in the Answer Sheets:</p>\n<p><strong>D2.</strong> Before you can answer the Klingons, you have to clarify something between the members on board the <em>U.S.S. Enterprise</em>. You have already translated something that Elif, who speaks Turkish, told Tovo, who speaks Malagasy, using the Turkish-Malagasy SCFG below on the left. The Malagasy sentences you generated are shown in the table on the right. Now, you need to translate the sentences for Elisabeth, who speaks English.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>&lt;Turkish, Malagasy&gt; SCFG</th></tr></thead>\n<tbody>\n<tr><td>S -&gt; &lt;NP VP, VP NP &gt;</td></tr>\n<tr><td>VP -&gt; &lt;NP V, V NP &gt;</td></tr>\n<tr><td>NP -&gt; &lt;<span class=\"data\">bir kaplumbağa</span>, <span class=\"data\">sokatra</span>&gt;</td></tr>\n<tr><td>NP -&gt; &lt;<span class=\"data\">bir kedi</span> , <span class=\"data\">saka</span>&gt;</td></tr>\n<tr><td>V -&gt; &lt; <span class=\"data\">gördü</span>, <span class=\"data\">nahita</span>&gt;</td></tr>\n<tr><td>V -&gt; &lt; <span class=\"data\">ısırdı</span>, <span class=\"data\">nanaikitra</span> &gt;</td></tr>\n<tr><td>V -&gt; &lt; <span class=\"data\">kovaladı</span>, <span class=\"data\">nanenjika</span> &gt;</td></tr>\n<tr><td>V -&gt; &lt; <span class=\"data\">yedi</span>, <span class=\"data\">nihinana</span> &gt;</td></tr>\n</tbody>\n</table>\n</div>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Malagasy</th></tr></thead>\n<tbody>\n<tr><td>a.</td><td><span class=\"data\">nahita sokatra saka</span></td></tr>\n<tr><td>b.</td><td><span class=\"data\">nanenjika saka sokatra</span></td></tr>\n<tr><td>c.</td><td><span class=\"data\">nanaikitra saka sokatra</span></td></tr>\n<tr><td>d.</td><td><span class=\"data\">nihinana saka sokatra</span></td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>D3.</strong> You should probably get around to answering Klag, who is by now even more irate than before because you’ve spent so much time reminiscing about Turkish and Malagasy. Use the SCFG for English to Klingon (below) to translate the following sentences into Klingon.</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>&lt;English, Klingon&gt; SCFG</th></tr></thead>\n<tbody>\n<tr><td>S -&gt; &lt;NP VP, VP NP&gt;</td></tr>\n<tr><td>S -&gt; &lt;Comp S, S Comp&gt;</td></tr>\n<tr><td>VP -&gt; &lt;V NP, NP V &gt;</td></tr>\n<tr><td>VP -&gt; &lt;V S, S V&gt;</td></tr>\n<tr><td>VP -&gt; &lt;bites, <span class=\"data\">chop</span>&gt;</td></tr>\n<tr><td>Comp -&gt; &lt;that, <span class=\"data\">’e’</span>&gt;</td></tr>\n<tr><td>NP -&gt; &lt;the commander, <span class=\"data\">la’</span>&gt;</td></tr>\n<tr><td>NP -&gt; &lt;the Klingons, <span class=\"data\">tlhInganpu’</span>&gt;</td></tr>\n<tr><td>NP -&gt; &lt;the leaders, <span class=\"data\">DevwI’pu’</span>&gt;</td></tr>\n<tr><td>NP -&gt; &lt;a pet, <span class=\"data\">Saj</span>&gt;</td></tr>\n<tr><td>NP -&gt; &lt;the pet, <span class=\"data\">Saj</span>&gt;</td></tr>\n<tr><td>NP -&gt; &lt;a spy, <span class=\"data\">ghoqwI’</span>&gt;</td></tr>\n<tr><td>NP -&gt; &lt;the U.S.S. Enterprise, <span class=\"data\">'ejDo' 'entepray'</span>&gt;</td></tr>\n<tr><td>V -&gt; &lt;have, <span class=\"data\">lughaj</span>&gt;</td></tr>\n<tr><td>V -&gt; &lt;know, <span class=\"data\">SovTah</span>&gt;</td></tr>\n<tr><td>V -&gt; &lt;learned, <span class=\"data\">ghojpu’</span>&gt;</td></tr>\n<tr><td>V -&gt; &lt;saw, <span class=\"data\">leghpu’</span>&gt;</td></tr>\n<tr><td>V -&gt; &lt;will battle, <span class=\"data\">ghobrupqa’</span>&gt;</td></tr>\n</tbody>\n</table>\n</div>\n<p>Context Free Grammars provide a set of rules to describe a natural (ie, human) language. Because of the ability of these rules to construct longer phrases and sentences from a finite list of smaller units, Context Free Grammars have been used in computer science as components of parsing and translation algorithms. Synchronous Context Free Grammars provide the CFGs of two languages simultaneously and matched up with each other. This is especially useful for translation purposes.</p>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "D1.1",
+      "promptHtml": "<p><strong>a.</strong> Write an English sentence, built only from the &lt;English, Turkish&gt; SCFG, that is exactly 20 letters long (excluding spaces and punctuation). Any sentence the grammar can generate with exactly 20 letters is correct.</p>",
+      "part": "D1",
+      "partPrompt": "Using only words in the <English, Turkish> SCFG presented above: a. Write an English sentence that is exactly 20 letters long (excluding spaces and punctuation). b. Translate your sentence into Turkish.",
+      "gradingMode": "llm",
+      "answerKey": "A turtle chased a turtle. (Any sentence generated by the <English, Turkish> SCFG whose letters, excluding spaces and punctuation, total exactly 20 is correct, e.g. a girl chased a turtle.)",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "D1.2",
+      "promptHtml": "<p><strong>b.</strong> Translate your sentence into Turkish.</p>",
+      "part": "D1",
+      "gradingMode": "llm",
+      "answerKey": "Bir kaplumbağa bir kaplumbağa kovaladı. (Must be the correct Turkish translation, in Turkish word order, of the English sentence the student wrote in part a.)",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "D2.1",
+      "promptHtml": "<p><strong>a.</strong> <span class=\"data\">nahita sokatra saka</span></p>",
+      "part": "D2",
+      "partPrompt": "Write the English translations of the four Malagasy sentences a-d, using the <Turkish, Malagasy> SCFG together with the <English, Turkish> SCFG.",
+      "gradingMode": "exact",
+      "answerKey": "A cat saw a turtle.",
+      "acceptedVariants": [
+        "a cat saw a turtle"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D2.2",
+      "promptHtml": "<p><strong>b.</strong> <span class=\"data\">nanenjika saka sokatra</span></p>",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "A turtle chased a cat.",
+      "acceptedVariants": [
+        "a turtle chased a cat"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D2.3",
+      "promptHtml": "<p><strong>c.</strong> <span class=\"data\">nanaikitra saka sokatra</span></p>",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "A turtle bit a cat.",
+      "acceptedVariants": [
+        "a turtle bit a cat"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D2.4",
+      "promptHtml": "<p><strong>d.</strong> <span class=\"data\">nihinana saka sokatra</span></p>",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "A turtle ate a cat.",
+      "acceptedVariants": [
+        "a turtle ate a cat"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D3.1",
+      "promptHtml": "<p><strong>a.</strong> The pet bites.</p>",
+      "part": "D3",
+      "partPrompt": "Use the <English, Klingon> SCFG to translate the following sentences into Klingon.",
+      "gradingMode": "exact",
+      "answerKey": "chop Saj.",
+      "acceptedVariants": [
+        "chop Saj"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D3.2",
+      "promptHtml": "<p><strong>b.</strong> The <em>U.S.S. Enterprise</em> will battle the Klingons.</p>",
+      "part": "D3",
+      "gradingMode": "exact",
+      "answerKey": "tlhInganpu’ ghobrupqa’ 'ejDo' 'entepray'.",
+      "acceptedVariants": [
+        "tlhInganpu' ghobrupqa' 'ejDo' 'entepray'",
+        "tlhInganpu’ ghobrupqa’ ’ejDo’ ’entepray’"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D3.3",
+      "promptHtml": "<p><strong>c.</strong> The leaders know that the Klingons know that the commander learned that a spy saw that the Klingons have a pet.</p>",
+      "part": "D3",
+      "gradingMode": "exact",
+      "answerKey": "Saj lughaj tlhInganpu’ ’e’ leghpu’ ghoqwI’ ’e’ ghojpu’ la’ ’e’ SovTah tlhInganpu’ ’e’ SovTah DevwI’pu’.",
+      "acceptedVariants": [
+        "Saj lughaj tlhInganpu' 'e' leghpu' ghoqwI' 'e' ghojpu' la' 'e' SovTah tlhInganpu' 'e' SovTah DevwI'pu'"
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Each rule has two halves separated by a comma: the left half is the order for the first language named in the box, the right half is the order for the second. Compare the two halves of the S and VP rules and ask yourself which pieces swap places.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Build the sentence like a tree. Start from S, replace a symbol (S, VP, NP, V, Comp) using a rule, and do the replacement in BOTH halves at the same time, keeping each half in its own order. When every symbol has been replaced by real words, the two halves are translations of each other. To go backwards from a finished sentence, figure out which rules must have been used to produce that word order.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Practice on the example the problem already gives you: a turtle saw a cat. Using the English-Turkish box, S becomes NP VP in both languages, so English has NP(a turtle) then VP, and Turkish has NP(bir kaplumbağa) then VP. Then VP becomes V NP in English but NP V in Turkish, so the verb slides to the end on the Turkish side: bir kaplumbağa bir kedi gördü. The Malagasy and Klingon boxes work the same way, except that their S rule is NP VP on one side and VP NP on the other, so the whole verb phrase moves to the front.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What a synchronous grammar is</h3>\n<p>A <em>context free grammar</em> is a set of rewrite rules for building sentences. A symbol like S (sentence), NP (noun phrase), VP (verb phrase) or V (verb) is a placeholder that you replace using a rule until only real words are left. A <em>synchronous</em> context free grammar does this for two languages at once: every rule has two halves, <code>&lt;left, right&gt;</code>, and every time you use a rule you replace the symbol in both halves. Because the two halves may list the parts in different orders, the finished sentences come out in each language's own word order.</p>\n<h3>Warm-up: English and Turkish</h3>\n<p>Take <em>a turtle saw a cat</em>. Start with S:</p>\n<ul>\n<li>S becomes &lt;NP VP, NP VP&gt;. Both languages put the subject first.</li>\n<li>The first NP becomes &lt;a turtle, bir kaplumbağa&gt;.</li>\n<li>VP becomes &lt;V NP, NP V&gt;. Here the halves differ: English puts the verb before the object, Turkish puts the verb last.</li>\n<li>V becomes &lt;saw, gördü&gt; and the second NP becomes &lt;a cat, bir kedi&gt;.</li>\n</ul>\n<p>English: a turtle saw a cat. Turkish: bir kaplumbağa bir kedi gördü. That is exactly the pair the problem gives, so the machinery works.</p>\n<h3>D1: counting letters</h3>\n<p>You just need any sentence this grammar can make, with exactly 20 letters once you ignore spaces and the final period. The noun phrases are <em>a book</em> (5 letters), <em>a cat</em> (4), <em>a girl</em> (5), <em>a turtle</em> (7); the verbs are <em>ate</em> (3), <em>bit</em> (3), <em>chased</em> (6), <em>read</em> (4), <em>saw</em> (3). A sentence is subject + verb + object, so you need three numbers from those lists adding to 20. For instance 7 + 6 + 7 = 20 works. Then translate word for word into Turkish, remembering to move the verb to the end.</p>\n<h3>D2: Malagasy word order</h3>\n<p>The Turkish-Malagasy box says S becomes &lt;NP VP, VP NP&gt; and VP becomes &lt;NP V, V NP&gt;. Follow the Malagasy half: the sentence is VP then subject, and the VP is verb then object. So Malagasy order is <strong>verb, object, subject</strong> - the opposite arrangement from Turkish, which is subject, object, verb.</p>\n<p>Now read a Malagasy sentence with that template. In <span class=\"data\">nanenjika saka sokatra</span>, <span class=\"data\">nanenjika</span> is the verb (Turkish <span class=\"data\">kovaladı</span>, English <em>chased</em>), <span class=\"data\">saka</span> is the <strong>object</strong> (a cat) because it comes right after the verb inside the VP, and <span class=\"data\">sokatra</span> is the <strong>subject</strong> (a turtle). English wants subject, verb, object: <em>A turtle chased a cat.</em> The other three sentences work identically - watch out for the first one, where the nouns appear in the other order.</p>\n<h3>D3: Klingon, and nesting sentences inside sentences</h3>\n<p>The Klingon half of S is VP NP, so the whole verb phrase comes first and the subject comes last. The Klingon half of VP is NP V, so inside the verb phrase the object comes before the verb. That gives Klingon <strong>object, verb, subject</strong>.</p>\n<p>The easy case is <em>The pet bites.</em> Here VP becomes &lt;bites, chop&gt; all by itself, and S becomes VP NP in Klingon, so the verb comes before the subject.</p>\n<p>The interesting part is the long sentence. Two rules make sentences grow without limit: VP becomes &lt;V S, S V&gt; (a verb whose object is a whole sentence, as in <em>know that ...</em>), and S becomes &lt;Comp S, S Comp&gt;, where Comp is <em>that</em> (Klingon <span class=\"data\">’e’</span>). Notice that in Klingon both of these put the embedded material <em>before</em> its verb and put <span class=\"data\">’e’</span> <em>after</em> the clause it introduces, whereas English puts them after and before respectively.</p>\n<p>The practical consequence: to translate a chain like <em>A knows that B knows that C learned that ...</em>, you write the innermost clause first, then follow it with <span class=\"data\">’e’</span>, then the verb of the clause above it, then that clause's subject, then <span class=\"data\">’e’</span> again, and so on outward. The English order is completely reversed. So work from the deepest clause outward, and check that you end with the outermost subject.</p>\n<h3>Why linguists care</h3>\n<p>Synchronous grammars are a real tool in machine translation: they let a computer translate word choice and word order at the same time, instead of swapping words one by one and producing nonsense like <em>a girl a book read</em>.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys for D2 and D3 are taken verbatim from the official solution page. D1 is open-ended (any 20-letter sentence generated by the grammar plus its Turkish translation), graded by LLM; the official sample answer is quoted in the key. NOTE ON NOTATION: the booklet prints the rewrite arrow as a right arrow glyph; it is transcribed here as ASCII '->' to stay inside the site's font coverage - please confirm this substitution is acceptable. Apostrophes follow the booklet exactly: curly right single quote in tlhInganpu', ’e’, la’, DevwI’pu’, ghoqwI’, ghojpu’, leghpu’, ghobrupqa’, but STRAIGHT apostrophes in 'ejDo' 'entepray'. All-straight-apostrophe variants are accepted. The Malagasy table's first column has no header in the booklet (it holds the labels a.-d.). The D3 sentence list and the Klingon SCFG appear on separate booklet pages (2 and 3) but are merged here for readability.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:d1.1:key",
+      "note": "arbitration returned UNRESOLVED"
+    },
+    {
+      "kind": "diff",
+      "path": "q:d1.2:key",
+      "note": "arbitration returned UNRESOLVED"
+    },
+    {
+      "kind": "diff",
+      "path": "q:d3.2:key",
+      "note": "arbitration returned UNRESOLVED"
+    },
+    {
+      "kind": "diff",
+      "path": "q:d3.3:key",
+      "note": "arbitration returned UNRESOLVED"
+    }
+  ]
+}

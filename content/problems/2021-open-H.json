@@ -1,24 +1,265 @@
 {
   "id": "2021-open-H",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2021,
   "round": "open",
   "letter": "H",
   "title": "Sequitur",
-  "authors": [],
+  "authors": [
+    "Pranav Krishna",
+    "Daniel Lovsted"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
-    "writing systems"
+    "syntax"
   ],
   "formTag": "formal and computational",
   "difficulty": "intro",
   "languages": [],
   "officialPoints": 5,
   "officialTimeMinutes": 10,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Space is valuable, so it's often desirable to compress data — that is, to use less space to convey the same information. One common data compression strategy is to identify repeated patterns within the data and somehow consolidate these repetitions.<sup>1</sup> First, let's look at Sequitur, a fast compression algorithm that uses the repeated pattern strategy. The table below shows Sequitur running on the input “abcdbcabcd”, with its output at the very bottom:</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th>Step Number</th><th>Column 1</th><th>Column 2</th></tr>\n</thead>\n<tbody>\n<tr><td>1)</td><td><span class=\"data\">a</span></td><td><span class=\"data\">S = a</span></td></tr>\n<tr><td>2)</td><td><span class=\"data\">ab</span></td><td><span class=\"data\">S = ab</span></td></tr>\n<tr><td>3)</td><td><span class=\"data\">abc</span></td><td><span class=\"data\">S = abc</span></td></tr>\n<tr><td>4)</td><td><span class=\"blank\" data-q=\"H1.1\" data-label=\"(a)\"></span></td><td><span class=\"data\">S = abcd</span></td></tr>\n<tr><td>5)</td><td><span class=\"data\">abcdb</span></td><td><span class=\"blank\" data-q=\"H1.2\" data-label=\"(b)\"></span></td></tr>\n<tr><td>6)</td><td><span class=\"data\">abcdbc</span></td><td><span class=\"data\">S = abcdbc</span></td></tr>\n<tr><td></td><td><span class=\"data\">aXdX</span></td><td><span class=\"data\">S = aXdX</span><br /><span class=\"data\">X = bc</span></td></tr>\n<tr><td>7)</td><td><span class=\"blank\" data-q=\"H1.3\" data-label=\"(c)\"></span></td><td><span class=\"blank\" data-q=\"H1.4\" data-label=\"(d)\"></span><br /><span class=\"blank\" data-q=\"H1.5\" data-label=\"(e)\"></span></td></tr>\n<tr><td>8)</td><td><span class=\"data\">aXdXab</span></td><td><span class=\"blank\" data-q=\"H1.6\" data-label=\"(f)\"></span><br /><span class=\"data\">X = bc</span></td></tr>\n<tr><td>9)</td><td><span class=\"data\">aXdXabc</span></td><td><span class=\"data\">S = aXdXabc</span><br /><span class=\"data\">X = bc</span></td></tr>\n<tr><td></td><td><span class=\"data\">aXdXaX</span></td><td><span class=\"data\">S = aXdXaX</span><br /><span class=\"blank\" data-q=\"H1.7\" data-label=\"(g)\"></span></td></tr>\n<tr><td></td><td><span class=\"blank\" data-q=\"H1.8\" data-label=\"(h)\"></span></td><td><span class=\"blank\" data-q=\"H1.9\" data-label=\"(i)\"></span><br /><span class=\"data\">X = bc</span><br /><span class=\"data\">Y = aX</span></td></tr>\n<tr><td>10)</td><td><span class=\"blank\" data-q=\"H1.10\" data-label=\"(j)\"></span></td><td><span class=\"blank\" data-q=\"H1.11\" data-label=\"(k)\"></span><br /><span class=\"data\">X = bc</span><br /><span class=\"data\">Y = aX</span></td></tr>\n<tr><td></td><td><span class=\"data\">ZXZ</span></td><td><span class=\"data\">S = ZXZ</span><br /><span class=\"data\">X = bc</span><br /><span class=\"data\">Y = aX</span><br /><span class=\"data\">Z = Yd</span></td></tr>\n<tr><td colspan=\"3\"><span class=\"data\">S = ZXZ; X = bc; Y = aX; Z = Yd</span></td></tr>\n</tbody>\n</table>\n</div>\n<p><sup>1</sup> It just so happens that identifying repeated patterns in a human language can tell us a lot about how that language works. If you want to know more about how linguists (and especially computational linguists) use compression in language technologies, try problem (I), Non Sequitur, in this booklet. Be aware, however, that solving problem (I) will not give you any advantage in solving this problem.</p>\n<p><strong>H1.</strong> Fill in the blanks (marked with bolded letters) in the table above.</p>\n<p>Next, take a look at Byte Pair Encoding (BPE), a widely used compression algorithm that also uses the repeated pattern strategy. Like in the previous example, BPE is running with an input of “abcdbcabcd”, and its output is shown at the bottom of the table:</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th>Step Number</th><th>Column 1</th><th>Column 2</th></tr>\n</thead>\n<tbody>\n<tr><td>1)</td><td><span class=\"data\">abcdbcabcd</span></td><td><span class=\"data\">S = abcdbcabcd</span></td></tr>\n<tr><td>2)</td><td><span class=\"blank\" data-q=\"H2.1\" data-label=\"(a)\"></span></td><td><span class=\"blank\" data-q=\"H2.2\" data-label=\"(b)\"></span><br /><span class=\"data\">X = bc</span></td></tr>\n<tr><td>3)</td><td><span class=\"data\">YdXYd</span></td><td><span class=\"data\">S = YdXYd</span><br /><span class=\"data\">X = bc</span><br /><span class=\"blank\" data-q=\"H2.3\" data-label=\"(c)\"></span></td></tr>\n<tr><td>4)</td><td><span class=\"data\">ZXZ</span></td><td><span class=\"data\">S = ZXZ</span><br /><span class=\"data\">X = bc</span><br /><span class=\"data\">Y = aX</span><br /><span class=\"data\">Z = Yd</span></td></tr>\n<tr><td colspan=\"3\"><span class=\"data\">S = ZXZ; X = bc; Y = aX; Z = Yd</span></td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>H2.</strong> Fill in the blanks (marked with bolded letters) in the table above.</p>\n<p>As you can see, for the input “abcdbcabcd”, Sequitur and BPE produce the same output! But this isn't always the case.</p>\n<p><strong>H3.</strong> For each of the following inputs, say whether Sequitur and BPE give the same or different outputs:</p>\n<ol type=\"a\">\n<li><span class=\"data\">abcabdbcbc</span></li>\n<li><span class=\"data\">abbcaddca</span></li>\n<li><span class=\"data\">bacbcbabacbcba</span></li>\n<li><span class=\"data\">ccdbccdbccacc</span></li>\n<li><span class=\"data\">ccdbccdbccaccacca</span></li>\n</ol>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "H1.1",
+      "promptHtml": "(a) Step 4, Column 1",
+      "part": "H1",
+      "partPrompt": "Fill in the blanks (marked with bolded letters) in the Sequitur table.",
+      "gradingMode": "exact",
+      "answerKey": "abcd",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "H1.2",
+      "promptHtml": "(b) Step 5, Column 2",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "S = abcdb",
+      "acceptedVariants": [
+        "S=abcdb",
+        "abcdb"
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "H1.3",
+      "promptHtml": "(c) Step 7, Column 1",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "aXdXa",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "H1.4",
+      "promptHtml": "(d) Step 7, Column 2, first line",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "S = aXdXa",
+      "acceptedVariants": [
+        "S=aXdXa",
+        "aXdXa"
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "H1.5",
+      "promptHtml": "(e) Step 7, Column 2, second line",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "X = bc",
+      "acceptedVariants": [
+        "X=bc",
+        "bc"
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "H1.6",
+      "promptHtml": "(f) Step 8, Column 2, first line",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "S = aXdXab",
+      "acceptedVariants": [
+        "S=aXdXab",
+        "aXdXab"
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "H1.7",
+      "promptHtml": "(g) Column 2 of the row whose Column 1 reads <span class=\"data\">aXdXaX</span>, second line",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "X = bc",
+      "acceptedVariants": [
+        "X=bc",
+        "bc"
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "H1.8",
+      "promptHtml": "(h) Column 1 of the row just after <span class=\"data\">aXdXaX</span>",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "YdXY",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "H1.9",
+      "promptHtml": "(i) Column 2 of that same row, first line",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "S = YdXY",
+      "acceptedVariants": [
+        "S=YdXY",
+        "YdXY"
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "H1.10",
+      "promptHtml": "(j) Step 10, Column 1",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "YdXYd",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "H1.11",
+      "promptHtml": "(k) Step 10, Column 2, first line",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "S = YdXYd",
+      "acceptedVariants": [
+        "S=YdXYd",
+        "YdXYd"
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "H2.1",
+      "promptHtml": "(a) Step 2, Column 1",
+      "part": "H2",
+      "partPrompt": "Fill in the blanks (marked with bolded letters) in the BPE table.",
+      "gradingMode": "exact",
+      "answerKey": "aXdXaXd",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "H2.2",
+      "promptHtml": "(b) Step 2, Column 2, first line",
+      "part": "H2",
+      "gradingMode": "exact",
+      "answerKey": "S = aXdXaXd",
+      "acceptedVariants": [
+        "S=aXdXaXd",
+        "aXdXaXd"
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "H2.3",
+      "promptHtml": "(c) Step 3, Column 2, third line",
+      "part": "H2",
+      "gradingMode": "exact",
+      "answerKey": "Y = aX",
+      "acceptedVariants": [
+        "Y=aX",
+        "aX"
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "H3.1",
+      "promptHtml": "a) <span class=\"data\">abcabdbcbc</span>",
+      "part": "H3",
+      "partPrompt": "For each of the following inputs, say whether Sequitur and BPE give the same or different outputs.",
+      "gradingMode": "exact",
+      "answerKey": "Different",
+      "acceptedVariants": [],
+      "choices": [
+        "Same",
+        "Different"
+      ],
+      "points": 0.44
+    },
+    {
+      "id": "H3.2",
+      "promptHtml": "b) <span class=\"data\">abbcaddca</span>",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "Same",
+      "acceptedVariants": [],
+      "choices": [
+        "Same",
+        "Different"
+      ],
+      "points": 0.44
+    },
+    {
+      "id": "H3.3",
+      "promptHtml": "c) <span class=\"data\">bacbcbabacbcba</span>",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "Different",
+      "acceptedVariants": [],
+      "choices": [
+        "Same",
+        "Different"
+      ],
+      "points": 0.44
+    },
+    {
+      "id": "H3.4",
+      "promptHtml": "d) <span class=\"data\">ccdbccdbccacc</span>",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "Same",
+      "acceptedVariants": [],
+      "choices": [
+        "Same",
+        "Different"
+      ],
+      "points": 0.44
+    },
+    {
+      "id": "H3.5",
+      "promptHtml": "e) <span class=\"data\">ccdbccdbccaccacca</span>",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "Different",
+      "acceptedVariants": [],
+      "choices": [
+        "Same",
+        "Different"
+      ],
+      "points": 0.44
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Compare how the two tables move. In the first table, Column 1 grows by exactly one symbol per step, so the algorithm is reading the input from left to right. In the second table, Column 1 starts as the whole input and gets rewritten all at once. Column 2 always lists the current string S plus every naming rule created so far.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Sequitur works online: as soon as some two-symbol pair occurs twice in the string built so far, it invents a new capital-letter name for that pair and replaces every occurrence, then keeps checking (a replacement can create a brand-new repeated pair, which must be named too). BPE works globally: it counts every two-symbol pair in the whole string, names the most frequent one (leftmost wins a tie), rewrites, and repeats. Because Sequitur reacts to the first repetition it meets and BPE reacts to the commonest one, the two can end up with unlike sets of rules.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try the small input dede, which is not one of the graded items. Sequitur reads d, then de, then ded, then dede; at that point the pair de has occurred twice, so it names it, say W, and the string becomes WW with the rule W = de. BPE looks at dede as a whole: the pair de occurs twice, ed once, so it names de first and gets the same WW. Now notice why bigger inputs can split the two apart: whichever pair Sequitur happens to meet twice first need not be the pair that occurs most often overall.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What the tables are showing</h3><p>Both algorithms compress a string by inventing short names for repeated chunks. A capital letter such as X is a <em>nonterminal</em>: it is not part of the data, it is a name that stands for a longer piece, defined by a rule like <span class=\"data\">X = bc</span>. Column 1 shows the string the algorithm is currently holding; Column 2 lists that string (as <span class=\"data\">S = ...</span>) together with every rule created so far.</p>\n<h3>How Sequitur works</h3><p>Sequitur reads the input one symbol at a time, left to right. After each new symbol it asks: does any pair of adjacent symbols occur twice in what I am holding? If yes, it invents a new name for that pair and replaces <em>all</em> its occurrences; then it checks again, because a replacement can create a new repetition.</p><p>Follow the given input <span class=\"data\">abcdbcabcd</span>:</p><ul><li>Steps 1 to 4 just add letters: <span class=\"data\">a</span>, <span class=\"data\">ab</span>, <span class=\"data\">abc</span>, and then the fourth letter <span class=\"data\">d</span> gives the string in Column 1 that matches <span class=\"data\">S = abcd</span> in Column 2. No pair repeats yet.</li><li>Step 5 adds <span class=\"data\">b</span>. Column 1 is <span class=\"data\">abcdb</span>, so Column 2 must simply record that string as S.</li><li>Step 6 adds <span class=\"data\">c</span>, giving <span class=\"data\">abcdbc</span>. Now the pair <span class=\"data\">bc</span> occurs twice (positions 2-3 and 5-6), so Sequitur names it X. Both copies are replaced, giving <span class=\"data\">aXdX</span>, and the rule <span class=\"data\">X = bc</span> is added. That is why step 6 has two rows.</li><li>Step 7 adds the next input letter <span class=\"data\">a</span> to <span class=\"data\">aXdX</span>. Column 1 becomes <span class=\"data\">aXdXa</span>. Its pairs are aX, Xd, dX, Xa - nothing repeats, so nothing is replaced, and Column 2 just repeats the string plus the rule already in force.</li><li>Step 8 adds <span class=\"data\">b</span>: <span class=\"data\">aXdXab</span>, still no repeated pair, so again the string is just recorded.</li><li>Step 9 adds <span class=\"data\">c</span>: <span class=\"data\">aXdXabc</span>. The letters <span class=\"data\">bc</span> at the end are exactly what X already stands for, so they are replaced: <span class=\"data\">aXdXaX</span>. But now the pair <span class=\"data\">aX</span> occurs twice, so a second nonterminal is needed: Y stands for <span class=\"data\">aX</span>, and both copies collapse. The string in Column 1 of the next row is therefore four symbols long, and Column 2 records it as S with the rules for X and Y.</li><li>Step 10 adds the last letter <span class=\"data\">d</span>. That makes the pair ending in d occur twice, so Sequitur names it Z and the string shrinks to <span class=\"data\">ZXZ</span> with <span class=\"data\">Z = Yd</span>.</li></ul><p>Final output: <span class=\"data\">S = ZXZ; X = bc; Y = aX; Z = Yd</span>.</p>\n<h3>How BPE works</h3><p>Byte Pair Encoding looks at the entire input at once. It counts every adjacent pair, replaces the commonest one everywhere (leftmost pair wins a tie), and repeats until no pair occurs more than once.</p><p>In <span class=\"data\">abcdbcabcd</span> the pairs are ab, bc, cd, db, bc, ca, ab, bc, cd. So <span class=\"data\">bc</span> wins with three occurrences: <span class=\"data\">X = bc</span> and the string becomes a seven-symbol string alternating a, X and d. In that string the pairs aX and Xd both occur twice, so the leftmost one, <span class=\"data\">aX</span>, is named Y, giving <span class=\"data\">YdXYd</span> - which is what the booklet already shows for step 3. There, <span class=\"data\">Yd</span> occurs twice, so <span class=\"data\">Z = Yd</span> and we finish at <span class=\"data\">ZXZ</span>. Same output as Sequitur, but reached in four steps instead of ten.</p>\n<h3>H3: when do they disagree?</h3><p>The key difference: Sequitur reacts to the <em>first</em> repetition it bumps into while reading, BPE to the <em>most frequent</em> repetition in the whole string. When those are the same pair, the algorithms usually stay in step.</p><p><strong>a) <span class=\"data\">abcabdbcbc</span></strong> - Sequitur reads a, ab, abc, abca, abcab; at that moment <span class=\"data\">ab</span> has occurred twice, so it names ab first and continues, later naming bc. BPE counts the whole string and finds bc three times but ab only twice, so BPE names bc first. Different first choice, different final grammars: the outputs differ.</p><p><strong>b) <span class=\"data\">abbcaddca</span></strong> - the only pair that ever repeats is <span class=\"data\">ca</span>, and both algorithms find it, so the outputs match.</p><p><strong>c) <span class=\"data\">bacbcbabacbcba</span></strong> - Sequitur, reading left to right, meets <span class=\"data\">cb</span> as its first repetition, while BPE's global count picks <span class=\"data\">ba</span> first. From then on the two build different hierarchies, so the outputs differ.</p><p><strong>d) <span class=\"data\">ccdbccdbccacc</span></strong> - trace Sequitur: c, cc, ccd, ccdb, ccdbc, ccdbcc; now <span class=\"data\">cc</span> repeats, so X = cc and the string is <span class=\"data\">XdbX</span>. Adding d makes Xd repeat, so Y = Xd, giving <span class=\"data\">YbY</span>; adding b makes Yb repeat, so Z = Yb, giving <span class=\"data\">ZZ</span>. The remaining letters give <span class=\"data\">ZZXaX</span>. BPE's global counts pick cc first as well and it lands on the same grammar, so the outputs match.</p><p><strong>e) <span class=\"data\">ccdbccdbccaccacca</span></strong> - this is (d) with more repetition at the end, and now the tail changes which pair is commonest for BPE. Sequitur, still working left to right, keeps its earlier choices. The results end up structurally similar but built from different rules, so they count as different. (The official solution notes that because the two outputs differ only in which nonterminal symbols are used, the answer “Same” was given partial credit here.)</p>\n<h3>Why linguists care</h3><p>Finding the repeated chunks of a string and naming them is very close to what a linguist does when discovering the words, prefixes and phrases of a language. Sequitur was designed to “identify hierarchical structure in sequences,” and BPE is used today to split text into subword units for language technologies.</p>",
   "reviewStatus": "published"
 }

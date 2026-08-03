@@ -1,0 +1,184 @@
+{
+  "id": "2021-open-B",
+  "tier": "full",
+  "year": 2021,
+  "round": "open",
+  "letter": "B",
+  "title": "Junk Mail: Letters We Don’t Need",
+  "authors": [
+    "Tom McCoy"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "writing systems",
+    "phonology"
+  ],
+  "formTag": "transliteration",
+  "difficulty": "standard",
+  "languages": [
+    "English"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>Recently, a group of researchers decided that the alphabet had too many letters. The letters could not fit conveniently on cell phone keyboards, there were too many options when filling in crosswords, and children were wasting time chanting all 26 letters in the alphabet song. Luckily, the researchers noticed that many letters were unnecessary. For example, <em>p</em> and <em>b</em> sound a lot alike, so they decided to replace every <em>p</em> with a <em>b</em> (while every <em>b</em> remained unchanged). For example, <em>plug</em> would be rewritten <em>blug</em>, but <em>bug</em> would stay written as <em>bug</em>. They continued this process until they narrowed down the alphabet to just 9 letters. This writing system was named &ldquo;Duw Ulbubud,&rdquo; and the media went wild. Here is one of the headlines that ran that day:</p>\n<p style=\"text-align:center\"><em><span class=\"data\">WURDZ&nbsp; WULL&nbsp; BU&nbsp; ZBULLUD&nbsp; DUVVURUDDLU</span></em><br /><em><span class=\"data\">BUGUUZU&nbsp; UV&nbsp; &ldquo;DUW&nbsp; ULBUBUD&rdquo;</span></em></p>\n<p>The article ended with the following words:</p>\n<blockquote><p><em><span class=\"data\">Vur buddur ur vur wurzu, du drudzvurbud ulbubud wull bugu wrududg luug lugu u buzzludg zubblu uv ruddub luddurz. Wu zuzd uvu udu buzur gwuuzduud: uz ud zuzduvuud? Ugzbugd ludz uv gubbluuddz vrub buublu wu gruw ub wud du uld zuzdub.</span></em></p></blockquote>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "B1.1",
+      "promptHtml": "<p><em>words</em></p>",
+      "part": "B1",
+      "partPrompt": "Rewrite each of the following words in Duw Ulbubud: words, the, fifth, squeaky, jazz, bagpipes, vertex, calming",
+      "gradingMode": "exact",
+      "answerKey": "wurdz",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "B1.2",
+      "promptHtml": "<p><em>the</em></p>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "du",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "B1.3",
+      "promptHtml": "<p><em>fifth</em></p>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "vuvd",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "B1.4",
+      "promptHtml": "<p><em>squeaky</em></p>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "zguuugu",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "B1.5",
+      "promptHtml": "<p><em>jazz</em></p>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "zuzz",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "B1.6",
+      "promptHtml": "<p><em>bagpipes</em></p>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "bugbubuz",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "B1.7",
+      "promptHtml": "<p><em>vertex</em></p>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "vurdugz",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "B1.8",
+      "promptHtml": "<p><em>calming</em></p>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "gulbudg",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "B2.1",
+      "promptHtml": "<p>How is <em>Moby Dick</em> written in Duw Ulbubud?</p>",
+      "part": "B2",
+      "partPrompt": "One major problem with Duw Ulbubud is ambiguity. For example, after Duw Ulbubud was adopted, many people grew up assuming that the book Moby Dick was about a young bird. How is Moby Dick written in Duw Ulbubud? What were people mistakenly interpreting this Duw Ulbubud title to mean?",
+      "gradingMode": "exact",
+      "answerKey": "Bubu Dugg",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "B2.2",
+      "promptHtml": "<p>What were people mistakenly interpreting this Duw Ulbubud title to mean?</p>",
+      "part": "B2",
+      "gradingMode": "exact",
+      "answerKey": "Baby Duck",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "B3.1",
+      "promptHtml": "<p>What was the fruit?</p>",
+      "part": "B3",
+      "partPrompt": "TV shows began to use Duw Ulbubud's ambiguity as a source of humor. In one show, the main character texted two friends a message that was intended to say, \"Give me a minute.\" But then one friend handed her a fruit, and the other handed her a vegetable. What was the fruit? What was the vegetable?",
+      "gradingMode": "exact",
+      "answerKey": "banana",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "B3.2",
+      "promptHtml": "<p>What was the vegetable?</p>",
+      "part": "B3",
+      "gradingMode": "exact",
+      "answerKey": "potato",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "B4.1",
+      "promptHtml": "<p>What does <em><span class=\"data\">Zduvvu-Duzu Dulg</span></em> translate to?</p>",
+      "part": "B4",
+      "partPrompt": "Although the writing system was initially called Duw Ulbubud, people quickly shifted to a new name, Zduvvu-Duzu Dulg, a name based on how the words sound when read aloud. What does Zduvvu-Duzu Dulg translate to?",
+      "gradingMode": "exact",
+      "answerKey": "Stuffy-Nose Talk",
+      "acceptedVariants": [
+        "Stuffy Nose Talk"
+      ],
+      "points": 2
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "The headline is ordinary English, just respelled. Try guessing what a newspaper headline about a new writing system would say, then line it up letter by letter with WURDZ WULL BU ZBULLUD DUVVURUDDLU. Notice that only nine different letters ever appear in the whole text.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Each surviving letter stands for a whole group of English letters that sound alike, exactly as b swallowed up p in the example. Every vowel letter (including y) collapses into one single vowel symbol. Work out the groups from the headline and the article, and watch for one English letter that simply disappears and one that has to be written with two symbols because it stands for two sounds.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Practice on a word that is not asked about: picnic. Replace p with b, i with u, c with g, n with d, i with u, c with g, and you get bugdug. Going the other direction is harder, because one Duw Ulbubud spelling can come from several English words - that is exactly what parts B2 and B3 are about.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: crack the headline</h3><p>The trick with a puzzle like this is to guess the English text first and then read the letter correspondences off the guess. The headline has the shape of a newspaper headline about a new alphabet, and the last two words are given to us already: <span class=\"data\">DUW ULBUBUD</span> is &ldquo;Duw Ulbubud,&rdquo; which the article says is the name of the system. Lined up with the first word of the second line, <span class=\"data\">BUGUUZU UV</span>, we get:</p><p><span class=\"data\">WURDZ WULL BU ZBULLUD DUVVURUDDLU BUGUUZU UV &ldquo;DUW ULBUBUD&rdquo;</span> = WORDS WILL BE SPELLED DIFFERENTLY BECAUSE OF &ldquo;NEW ALPHABET&rdquo;</p><p>So <span class=\"data\">DUW ULBUBUD</span> itself means NEW ALPHABET.</p><h3>Step 2: build the letter table</h3><p>Now compare the two spellings letter by letter. WORDS becomes <span class=\"data\">WURDZ</span>: o became u and s became z. DIFFERENTLY becomes <span class=\"data\">DUVVURUDDLU</span>: i and e and y all became u, f became v, t became d. BECAUSE becomes <span class=\"data\">BUGUUZU</span>: c became g, a became u, s became z. ALPHABET becomes <span class=\"data\">ULBUBUD</span>: the p became b (as promised in the introduction), and the <em>h</em> vanished completely.</p><p>Keep doing this with the article text and the nine surviving letters sort themselves out. Each one covers a group of English letters that are pronounced in a similar way:</p><div class=\"table-scroll\"><table><thead><tr><th>English letters</th><th>Duw Ulbubud</th></tr></thead><tbody><tr><td>a, e, i, o, u, y</td><td>u</td></tr><tr><td>b, m, p</td><td>b</td></tr><tr><td>d, n, t</td><td>d</td></tr><tr><td>c, g, k, q</td><td>g</td></tr><tr><td>l</td><td>l</td></tr><tr><td>r</td><td>r</td></tr><tr><td>f, v</td><td>v</td></tr><tr><td>w</td><td>w</td></tr><tr><td>j, s, z</td><td>z</td></tr><tr><td>h</td><td>nothing (deleted)</td></tr><tr><td>x</td><td>gz</td></tr></tbody></table></div><p>The groupings are phonetic. Say b, m and p out loud: all three are made by closing the lips, so they got merged into b. The same goes for d, n, t (tongue tip behind the teeth) and c, g, k (back of the tongue). The letter x is special because it actually spells two sounds, k plus s, so it needs two symbols: <span class=\"data\">gz</span>. And h was dropped because it is so often silent (<em>hour</em>, <em>what</em>) or swallowed in fast speech.</p><h3>Step 3: rewriting words (B1)</h3><p>Now just apply the table, letter by letter, without worrying about English spelling logic. For example <em>squeaky</em>: s gives z, q gives g, u gives u, e gives u, a gives u, k gives g, y gives u, giving a word with a run of three u's in the middle. Silent letters get transformed too, which is why a word like <em>fifth</em> comes out looking so odd: the <em>th</em> is treated as two separate letters, t and h, so the t becomes d and the h simply disappears.</p><h3>Step 4: why it goes wrong (B2 and B3)</h3><p>Because many English letters collapse into one Duw Ulbubud letter, going backwards is ambiguous. <em>Moby</em> and <em>baby</em> both come out as <span class=\"data\">Bubu</span> (m and b both give b, o and a both give u). <em>Dick</em> and <em>duck</em> both come out as <span class=\"data\">Dugg</span>. So the famous novel's title, spelled in Duw Ulbubud, is indistinguishable from &ldquo;Baby Duck&rdquo; - hence the young bird.</p><p>For the TV joke, write out &ldquo;Give me a minute&rdquo;: <em>give</em> gives <span class=\"data\">Guvu</span>, <em>me</em> gives <span class=\"data\">bu</span>, <em>a</em> gives <span class=\"data\">u</span>, and <em>minute</em> gives <span class=\"data\">bududu</span>. Now ask what other English words also spell out as <span class=\"data\">bududu</span>: every vowel is u, and b covers b/m/p while d covers d/n/t. A six-letter fruit and a six-letter vegetable both fit that pattern - one is a fruit whose name has three of the same vowel, the other a vegetable with alternating consonants and vowels. That is why she received one of each.</p><h3>Step 5: the new name (B4)</h3><p>Part B4 asks you to decode <span class=\"data\">Zduvvu-Duzu Dulg</span> the same way. Take it symbol by symbol: <span class=\"data\">Z</span> could be j, s or z; <span class=\"data\">d</span> could be d, n or t; each <span class=\"data\">u</span> could be any vowel; <span class=\"data\">v</span> is f or v; <span class=\"data\">g</span> is c, g or k. Look for a three-word phrase that describes how English would sound if you actually pronounced all these merged letters - the b/m and d/n merges mean the nasal sounds are gone, which is exactly what happens to your voice when your nose is blocked.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken verbatim from the official solution pages (B1 words: wurdz, du, vuvd, zguuugu, zuzz, bugbubuz, vurdugz, gulbudg; B2 Bubu Dugg / Baby Duck; B3 banana / potato; B4 Stuffy-Nose Talk). The solution gives no per-part point breakdown, so the 10 points were split as B1 = 4 (0.5 per word), B2 = 2, B3 = 2, B4 = 2 - adjust if the official rubric differs. B1 is transcribed as eight separate answer slots (one per listed word) matching the eight items in the solution. Note: the reverse table in the solution lists q gives g; the explanation's summary table folds q into the c/g/k row. No figures to crop.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "data:1",
+      "a": "BUGUUZU UV “DUW ULBUBUD”",
+      "note": "resolved, but this path is inside bodyHtml and is not written back automatically"
+    },
+    {
+      "kind": "diff",
+      "path": "hints[0]",
+      "a": "wurdz",
+      "note": "hint 1 contains the graded answer \"wurdz\""
+    }
+  ]
+}

@@ -1,26 +1,175 @@
 {
   "id": "2018-open-E",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2018,
   "round": "open",
   "letter": "E",
   "title": "Parties in Palauan",
-  "authors": [],
+  "authors": [
+    "Michael Salter"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
-    "morphology"
+    "morphology",
+    "number systems"
   ],
-  "formTag": "rule discovery",
+  "formTag": "rosetta-stone translation",
   "difficulty": "intro",
   "languages": [
     "Palauan"
   ],
   "officialPoints": 5,
   "officialTimeMinutes": 10,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Palau is a country in the Pacific Ocean composed of eight islands and over 200 islets. In addition to English, the Austronesian language Palauan is an official language of Palau. Below are some noun phrases from the Palauan language, with their English translations:</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th>Palauan</th><th>English</th></tr>\n</thead>\n<tbody>\n<tr><td><span class=\"data\">eru ęl buil</span></td><td>two months</td></tr>\n<tr><td><span class=\"data\">ede ęl sils</span></td><td>three days</td></tr>\n<tr><td><span class=\"data\">tede ęl chad</span></td><td>three people</td></tr>\n<tr><td><span class=\"data\">kllolem ęl malk</span></td><td>six chickens</td></tr>\n<tr><td><span class=\"data\">teim ęl sensei</span></td><td>five teachers</td></tr>\n<tr><td><span class=\"data\">eim ęl rak</span></td><td>five years</td></tr>\n<tr><td><span class=\"data\">etiu ęl klębęse</span></td><td>nine nights</td></tr>\n<tr><td><span class=\"data\">kltiu ęl hong</span></td><td>nine books</td></tr>\n<tr><td><span class=\"data\">kllolem ęl lius</span></td><td>six coconuts</td></tr>\n<tr><td><span class=\"data\">teai ęl ngalęk</span></td><td>eight children</td></tr>\n<tr><td><span class=\"data\">tęruich me a tede ęl buik</span></td><td>thirteen boys</td></tr>\n<tr><td><span class=\"data\">tęruich me a euid ęl sikang</span></td><td>seventeen hours</td></tr>\n<tr><td><span class=\"data\">ongeru ęl buil</span></td><td>February</td></tr>\n<tr><td><span class=\"data\">ongede ęl ureor</span></td><td>Wednesday</td></tr>\n</tbody>\n</table>\n</div>\n<p>Answer the following questions below.</p>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "E1.1",
+      "promptHtml": "a. <span class=\"data\">telolem ęl sensei</span>",
+      "part": "E1",
+      "partPrompt": "Give the English for:",
+      "gradingMode": "exact",
+      "answerKey": "six teachers",
+      "acceptedVariants": [
+        "6 teachers"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.2",
+      "promptHtml": "b. <span class=\"data\">tęruich me a etiu ęl buil</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "nineteen months",
+      "acceptedVariants": [
+        "19 months"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.3",
+      "promptHtml": "c. <span class=\"data\">ongetęruich me a ongeru ęl buil</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "December",
+      "acceptedVariants": [
+        "twelfth month"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E1.4",
+      "promptHtml": "d. <span class=\"data\">ongeim ęl ureor</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "Friday",
+      "acceptedVariants": [
+        "fifth day"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "E2.1",
+      "promptHtml": "a. eight days",
+      "part": "E2",
+      "partPrompt": "Give the Palauan for:",
+      "gradingMode": "exact",
+      "answerKey": "eai ęl sils",
+      "acceptedVariants": [
+        "eai el sils"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "E2.2",
+      "promptHtml": "b. nineteen people",
+      "part": "E2",
+      "gradingMode": "exact",
+      "answerKey": "tęruich me a tetiu ęl chad",
+      "acceptedVariants": [
+        "teruich me a tetiu el chad"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "E2.3",
+      "promptHtml": "c. seven teachers",
+      "part": "E2",
+      "gradingMode": "exact",
+      "answerKey": "teuid ęl sensei",
+      "acceptedVariants": [
+        "teuid el sensei"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "E2.4",
+      "promptHtml": "d. June",
+      "part": "E2",
+      "gradingMode": "exact",
+      "answerKey": "ongelolem ęl buil",
+      "acceptedVariants": [
+        "ongelolem el buil"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "E2.5",
+      "promptHtml": "e. August",
+      "part": "E2",
+      "gradingMode": "exact",
+      "answerKey": "ongeai ęl buil",
+      "acceptedVariants": [
+        "ongeai el buil"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "E3.1",
+      "promptHtml": "a. <strong>three</strong> hours",
+      "part": "E3",
+      "partPrompt": "For each of the following phrases, write the Palauan word that would be used to translate the bolded word:",
+      "gradingMode": "exact",
+      "answerKey": "ede",
+      "acceptedVariants": [],
+      "points": 0.33
+    },
+    {
+      "id": "E3.2",
+      "promptHtml": "b. <strong>three</strong> girls",
+      "part": "E3",
+      "gradingMode": "exact",
+      "answerKey": "tede",
+      "acceptedVariants": [],
+      "points": 0.33
+    },
+    {
+      "id": "E3.3",
+      "promptHtml": "c. <strong>three</strong> dolphins",
+      "part": "E3",
+      "gradingMode": "exact",
+      "answerKey": "klde",
+      "acceptedVariants": [],
+      "points": 0.34
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Compare the number words for the same numeral across different rows: \"five teachers\" and \"five years\" do not use the same word for \"five\", and neither does \"six chickens\" match the shape of \"three days\". Look at what comes at the start of each number word, and what kind of thing is being counted.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Each numeral has a bare stem plus a prefix chosen by the class of noun it counts: one prefix for units of time, another for people, another for animals, fruits and certain objects. Teens are built as the word for ten, then me a, then the ones digit carrying the right prefix. A separate prefix turns a cardinal number into an ordinal (\"second\", \"third\"), which is how month names and weekday names are made.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Work an example that is not asked about: \"nine nights\" is etiu ęl klębęse and \"nine books\" is kltiu ęl hong, so the stem for nine is -tiu, taking e- with a time unit and kl- with a book. That means \"nine chickens\" would be kltiu ęl malk, and \"nine people\" would take the people prefix on the same stem instead.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: The same numeral, several shapes</h3>\n<p>Line up the rows that share a numeral. \"five teachers\" is <span class=\"data\">teim ęl sensei</span> but \"five years\" is <span class=\"data\">eim ęl rak</span>. Both contain <span class=\"data\">-im</span>; the difference is the piece in front: <span class=\"data\">te-</span> before a word for people, nothing extra (just <span class=\"data\">e-</span>) before a unit of time. Do the same for nine: <span class=\"data\">etiu ęl klębęse</span> \"nine nights\" versus <span class=\"data\">kltiu ęl hong</span> \"nine books\". Again the stem is shared (<span class=\"data\">-tiu</span>) and the prefix changes.</p>\n<h3>Step 2: The three prefixes</h3>\n<p>A <em>noun class</em> is a group of nouns that a language treats the same way grammatically. Palauan numbers pick their prefix from the class of the noun being counted:</p>\n<ul>\n<li><span class=\"data\">e-</span> for units of time (months, days, years, nights, hours)</li>\n<li><span class=\"data\">te-</span> for people (teachers, boys, children, people)</li>\n<li><span class=\"data\">kl-</span> for animals, fruits and some inanimate objects (chickens, coconuts, books)</li>\n</ul>\n<p>So from <span class=\"data\">ede ęl sils</span> \"three days\" and <span class=\"data\">tede ęl chad</span> \"three people\" we can read off the stem for three, and from <span class=\"data\">kllolem ęl malk</span> / <span class=\"data\">kllolem ęl lius</span> we get six in the animal-and-object shape. The little word <span class=\"data\">ęl</span> just links the number to the noun.</p>\n<h3>Step 3: Numbers above ten</h3>\n<p><span class=\"data\">tęruich me a tede ęl buik</span> is \"thirteen boys\" and <span class=\"data\">tęruich me a euid ęl sikang</span> is \"seventeen hours\". So a teen is <span class=\"data\">tęruich</span> (ten) + <span class=\"data\">me a</span> + the ones digit, and it is the <em>ones digit</em> that carries the class prefix: <span class=\"data\">tede</span> (people class) with boys, <span class=\"data\">euid</span> (time class) with hours. To say \"nineteen months\" you therefore keep the time-class nine; to say \"nineteen people\" you swap in the people-class nine.</p>\n<h3>Step 4: Ordinals, months and weekdays</h3>\n<p><span class=\"data\">ongeru ęl buil</span> means February and <span class=\"data\">ongede ęl ureor</span> means Wednesday. Notice <span class=\"data\">-ru</span> (two) and <span class=\"data\">-de</span> (three): February is literally \"second month\" and Wednesday is \"third day\". The extra piece <span class=\"data\">onge-</span> is the ordinal marker, so <span class=\"data\">onge-</span> plus a number gives \"second\", \"third\", \"fifth\", and so on. Month names are that ordinal plus <span class=\"data\">buil</span> \"month\"; weekday names are the ordinal plus <span class=\"data\">ureor</span>. Counting from Sunday as day one, the third day is Wednesday, so the fifth day lands on Friday.</p>\n<p>Two details fall out of this. First, <span class=\"data\">sils</span> and <span class=\"data\">ureor</span> both translate as \"day\", but <span class=\"data\">sils</span> is the 24-hour unit of time while <span class=\"data\">ureor</span> is a named day of the week. Second, for an ordinal above ten the <span class=\"data\">onge-</span> marker attaches to the \"ten\" part as well, which is why a form like <span class=\"data\">ongetęruich me a ongeru</span> reads as \"twelfth\" and, with <span class=\"data\">buil</span>, names the twelfth month.</p>\n<h3>Step 5: Answering E3</h3>\n<p>E3 only asks for the number word, so all you need is the class of the noun after it: hours are a unit of time, girls are people, and dolphins are animals. Take the stem for three that you extracted in Step 2 and attach the matching prefix from the list above.</p>",
   "reviewStatus": "published"
 }

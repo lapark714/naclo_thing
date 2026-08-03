@@ -1,0 +1,321 @@
+{
+  "id": "2021-open-I",
+  "tier": "full",
+  "year": 2021,
+  "round": "open",
+  "letter": "I",
+  "title": "Non Sequitur",
+  "authors": [
+    "Daniel Lovsted"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "semantics"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "standard",
+  "languages": [
+    "English"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>At this very moment, scientists at NACLO Labs are hard at work on <em>Def21</em>, a definition-generating machine for English words. If they can just fix a few small problems, <em>Def21</em> is sure to be a huge popular success.</p>\n<p><em>Def21</em> has access to a word list, L1, that includes some common English words and abbreviations, along with their definitions:</p>\n<p><strong>L1</strong></p>\n<dl class=\"gloss-list\"><dt>al</dt><dd>American League</dd><dt>cent</dt><dd>a penny</dd><dt>grate</dt><dd>a grid of metal bars</dd><dt>in</dt><dd>contained by</dd><dt>ion</dt><dd>a charged particle</dd><dt>rate</dt><dd>give a score</dd><dt>real</dt><dd>truly existing</dd><dt>rest</dt><dd>stay still</dd><dt>st</dt><dd>a street</dd><dt>stat</dt><dd>a quantitative fact</dd><dt>sting</dt><dd>sharply injure</dd><dt>sure</dt><dd>certain</dd><dt>union</dt><dd>a worker’s organization</dd></dl>\n<p>The NACLO Labs team also compiled a second list, L2, for <em>Def21</em> to use, by scanning many English words with their compressor machine.<sup>1</sup> The compressor identified patterns of letters that showed up frequently in the words it scanned, and it turned out that many of these word pieces had meanings of their own! For instance, when the compressor scanned the words “redo” (meaning “do again”), “regrow” (meaning “grow again”), and “replay” (meaning “play again”), it picked out “re” as a frequent repetition. Even better, with a little clever programming, the scientists were able to find out the meaning of “re” automatically (that is, based only on the meanings of the scanned words).</p>\n<p>Here are the items in L2, and for each one, a sample of three words that it was found in:</p>\n<p><strong>L2:</strong></p>\n<dl class=\"gloss-list\"><dt>ation</dt><dd>(adaptation, consideration, installation)</dd><dt>ing</dt><dd>(jumping, knowing, wandering)</dd><dt>ize</dt><dd>(equalize, publicize, randomize)</dd><dt>pre</dt><dd>(predawn, prehistoric, premodern)</dd><dt>re</dt><dd>(redo, regrow, replay)</dd><dt>un</dt><dd>(uncertainty, uncommon, untie)</dd></dl>\n<p>Finally, <em>Def21</em> has a sophisticated way of combining definitions from L1 with the meanings of its L2 items to guess the definition of a word it does not recognize. So, when <em>Def21</em> is given the word “unsure”, which it does not recognize, <em>Def21</em> should recognize the pieces “un” from L2 and “sure” from L1 and produce the definition “the opposite of certain”. In this case, <em>Def21</em> is confident about its result; when <em>Def21</em> is unsure about its guess, it will flag the result with one or more question marks.</p>\n<p class=\"footnote\"><sup>1</sup> If you want to know more about how NACLO Labs’ compressor machine works, try problem (H), Sequitur, in this booklet. The NACLO Labs machine operates on the same basic principles as the algorithms shown there. Be aware, however, that solving problem (H) will not give you any advantage in solving this problem.</p>\n<p>What <em>Def21</em> still struggles with is dividing unrecognized words into pieces. The great minds at NACLO Labs are trying out four different strategies — <em>1, 2, 3,</em> and <em>4</em> — for this task. Here are some words that <em>Def21</em> did not recognize, and the results of each strategy:</p>\n<p><span class=\"data\">ingrate</span></p>\n<ul><li><em>1:</em> contained by give a score (?)</li><li><em>2:</em> contained by a grid of metal bars</li><li><em>3:</em> continually give a score</li><li><em>4:</em> contained by a grid of metal bars</li></ul>\n<p><span class=\"data\">resting</span></p>\n<ul><li><em>1:</em> contained by a street again (?)</li><li><em>2:</em> sharply injure again</li><li><em>3:</em> continually stay still</li><li><em>4:</em> sharply injure again</li></ul>\n<p><span class=\"data\">unionize</span></p>\n<ul><li><em>1:</em> make into the opposite of a charged particle</li><li><em>2:</em> make into a workers’ organization</li><li><em>3:</em> make into a workers’ organization</li><li><em>4:</em> make into a workers’ organization</li></ul>\n<p><span class=\"data\">predation</span></p>\n<ul><li><em>1:</em> a charged particle again (????)</li><li><em>2:</em> not yet a charged particle (???)</li><li><em>3:</em> not yet the result of (?)</li><li><em>4:</em> not yet the result of (?)</li></ul>\n<p><span class=\"data\">realize</span></p>\n<ul><li><em>1:</em> make into American League again</li><li><em>2:</em> make into truly existing</li><li><em>3:</em> make into truly existing</li><li><em>4:</em> make into truly existing</li></ul>\n<p><span class=\"data\">station</span></p>\n<ul><li><em>1:</em> a street a charged particle (??)</li><li><em>2:</em> a quantitative fact a charged particle</li><li><em>3:</em> the result of a street</li><li><em>4:</em> the result of a street</li></ul>\n<p>Here are brief descriptions the designers wrote up of the four strategies, with a few key words removed:</p>\n<p><em>1: Choose the</em> <span class=\"blank\" data-q=\"I1.1\" data-label=\"(a)\"></span> <em>piece from</em> <span class=\"blank\" data-q=\"I1.2\" data-label=\"(b)\"></span> <em>at each step.</em></p>\n<p><em>2: At the first step, choose the</em> <span class=\"blank\" data-q=\"I1.3\" data-label=\"(c)\"></span> <em>piece from</em> <span class=\"blank\" data-q=\"I1.4\" data-label=\"(d)\"></span><em>. At each step after this, choose the</em> <span class=\"blank\" data-q=\"I1.5\" data-label=\"(e)\"></span> <em>piece from</em> <span class=\"blank\" data-q=\"I1.6\" data-label=\"(f)\"></span><em>.</em></p>\n<p><em>3: At the first step, choose the</em> <span class=\"blank\" data-q=\"I1.7\" data-label=\"(g)\"></span> <em>piece from</em> <span class=\"blank\" data-q=\"I1.8\" data-label=\"(h)\"></span><em>. At each step after this, choose the</em> <span class=\"blank\" data-q=\"I1.9\" data-label=\"(i)\"></span> <em>piece from</em> <span class=\"blank\" data-q=\"I1.10\" data-label=\"(j)\"></span><em>.</em></p>\n<p><em>4: Choose the</em> <span class=\"blank\" data-q=\"I1.11\" data-label=\"(k)\"></span> <em>piece from</em> <span class=\"blank\" data-q=\"I1.12\" data-label=\"(l)\"></span> <em>at each step.</em></p>\n<p>Inputs for I2:</p>\n<ul><li><span class=\"blank\" data-q=\"I2.1\" data-label=\"(a)\"></span> <span class=\"data\">reunion</span></li><li><span class=\"blank\" data-q=\"I2.2\" data-label=\"(b)\"></span> <span class=\"data\">unrest</span></li><li><span class=\"blank\" data-q=\"I2.3\" data-label=\"(c)\"></span> <span class=\"data\">presto</span></li></ul>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "I1.1",
+      "promptHtml": "<p>(a) — strategy 1: “Choose the (a) piece from (b) at each step.”</p>",
+      "part": "I1",
+      "partPrompt": "From the options longest, shortest, L1, L2, and L1 or L2, fill in the blanks (a) to (l).",
+      "gradingMode": "exact",
+      "answerKey": "shortest",
+      "acceptedVariants": [],
+      "choices": [
+        "longest",
+        "shortest",
+        "L1",
+        "L2",
+        "L1 or L2"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "I1.2",
+      "promptHtml": "<p>(b) — strategy 1: “Choose the (a) piece from (b) at each step.”</p>",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "L1 or L2",
+      "acceptedVariants": [
+        "L2 or L1",
+        "either"
+      ],
+      "choices": [
+        "longest",
+        "shortest",
+        "L1",
+        "L2",
+        "L1 or L2"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "I1.3",
+      "promptHtml": "<p>(c) — strategy 2, first step: “choose the (c) piece from (d)”</p>",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "longest",
+      "acceptedVariants": [],
+      "choices": [
+        "longest",
+        "shortest",
+        "L1",
+        "L2",
+        "L1 or L2"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "I1.4",
+      "promptHtml": "<p>(d) — strategy 2, first step: “choose the (c) piece from (d)”</p>",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "L1",
+      "acceptedVariants": [],
+      "choices": [
+        "longest",
+        "shortest",
+        "L1",
+        "L2",
+        "L1 or L2"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "I1.5",
+      "promptHtml": "<p>(e) — strategy 2, later steps: “choose the (e) piece from (f)”</p>",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "longest",
+      "acceptedVariants": [],
+      "choices": [
+        "longest",
+        "shortest",
+        "L1",
+        "L2",
+        "L1 or L2"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "I1.6",
+      "promptHtml": "<p>(f) — strategy 2, later steps: “choose the (e) piece from (f)”</p>",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "L1 or L2",
+      "acceptedVariants": [
+        "L2 or L1",
+        "either"
+      ],
+      "choices": [
+        "longest",
+        "shortest",
+        "L1",
+        "L2",
+        "L1 or L2"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "I1.7",
+      "promptHtml": "<p>(g) — strategy 3, first step: “choose the (g) piece from (h)”</p>",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "longest",
+      "acceptedVariants": [],
+      "choices": [
+        "longest",
+        "shortest",
+        "L1",
+        "L2",
+        "L1 or L2"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "I1.8",
+      "promptHtml": "<p>(h) — strategy 3, first step: “choose the (g) piece from (h)”</p>",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "L2",
+      "acceptedVariants": [],
+      "choices": [
+        "longest",
+        "shortest",
+        "L1",
+        "L2",
+        "L1 or L2"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "I1.9",
+      "promptHtml": "<p>(i) — strategy 3, later steps: “choose the (i) piece from (j)”</p>",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "longest",
+      "acceptedVariants": [],
+      "choices": [
+        "longest",
+        "shortest",
+        "L1",
+        "L2",
+        "L1 or L2"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "I1.10",
+      "promptHtml": "<p>(j) — strategy 3, later steps: “choose the (i) piece from (j)”</p>",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "L1 or L2",
+      "acceptedVariants": [
+        "L2 or L1",
+        "either"
+      ],
+      "choices": [
+        "longest",
+        "shortest",
+        "L1",
+        "L2",
+        "L1 or L2"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "I1.11",
+      "promptHtml": "<p>(k) — strategy 4: “Choose the (k) piece from (l) at each step.”</p>",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "longest",
+      "acceptedVariants": [],
+      "choices": [
+        "longest",
+        "shortest",
+        "L1",
+        "L2",
+        "L1 or L2"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "I1.12",
+      "promptHtml": "<p>(l) — strategy 4: “Choose the (k) piece from (l) at each step.”</p>",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "L1 or L2",
+      "acceptedVariants": [
+        "L2 or L1",
+        "either"
+      ],
+      "choices": [
+        "longest",
+        "shortest",
+        "L1",
+        "L2",
+        "L1 or L2"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "I2.1",
+      "promptHtml": "<p>(a) <span class=\"data\">reunion</span> — give the result of strategies 1, 2, 3 and 4.</p>",
+      "part": "I2",
+      "partPrompt": "Give the results of each strategy 1-4 on each of the inputs below. In a case where there is not enough information to choose between multiple possible results, you may enter any result that is consistent with the examples given.",
+      "gradingMode": "llm",
+      "answerKey": "1: the opposite of a charged particle again; 2: a workers’ organization again; 3: a workers’ organization again (also acceptable: the opposite of a charged particle again); 4: a workers’ organization again",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "I2.2",
+      "promptHtml": "<p>(b) <span class=\"data\">unrest</span> — give the result of strategies 1, 2, 3 and 4.</p>",
+      "part": "I2",
+      "gradingMode": "llm",
+      "answerKey": "1: the opposite of a street again; 2: the opposite of stay still; 3: the opposite of stay still (also acceptable: the opposite of a street again); 4: the opposite of stay still",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "I2.3",
+      "promptHtml": "<p>(c) <span class=\"data\">presto</span> — give the result of strategies 1, 2, 3 and 4.</p>",
+      "part": "I2",
+      "gradingMode": "llm",
+      "answerKey": "1: a street again (??); 2: stay still (??); 3: not yet a street (?); 4: stay still (??)",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "I3.1",
+      "promptHtml": "<p>The other word</p>",
+      "part": "I3",
+      "partPrompt": "In a recent test, a Canadian scientist asked Def21 for the definition of “centre” (which Americans typically spell “center”). This time, all four strategies 1-4 agreed on a result. What’s more, Def21 noticed that this result was the same as that given by all four strategies for a different unrecognized English word. What is the other word, and what definition was given to both words by all strategies?",
+      "gradingMode": "exact",
+      "answerKey": "recent",
+      "acceptedVariants": [],
+      "points": 1.1
+    },
+    {
+      "id": "I3.2",
+      "promptHtml": "<p>The definition given to both words by all four strategies</p>",
+      "part": "I3",
+      "gradingMode": "exact",
+      "answerKey": "a penny again",
+      "acceptedVariants": [],
+      "points": 1.1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Take one word at a time and line up its four answers side by side. For each answer, ask which pieces of L1 and L2 must have been used to build it. Then count the question marks: they match the number of letters in the word that no chosen piece covered.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Every strategy builds its answer by grabbing one piece at a time from the word. Only two things can differ between strategies: whether a strategy prefers a big piece or a small one, and which list a piece is allowed to come from. Notice also that two of the four descriptions give a special rule for the very first grab, so compare what happens on the first piece with what happens afterwards.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Work with the given word resting (r-e-s-t-i-n-g). Every piece hiding inside it, with its list and length, is: re (L2, 2), rest (L1, 4), st (L1, 2), sting (L1, 5), in (L1, 2), ing (L2, 3). Strategy 1 returned “contained by a street again (?)”, which can only come from in + st + re; those three cover six of the seven letters, and the leftover g explains the single question mark. Making a list like this for each word is what makes each strategy’s preference visible.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What the machine is doing</h3>\n<p><em>Def21</em> takes a word it does not know, finds pieces of it in list L1 (whole words with dictionary definitions) or list L2 (recurring word chunks like <span class=\"data\">re</span> and <span class=\"data\">un</span>), and glues the meanings together. Any letter that no chosen piece covers is a letter <em>Def21</em> could not explain, and each such letter earns one question mark.</p>\n<p>First, work out what the L2 pieces mean. The samples tell you: <span class=\"data\">re</span> = “... again” (redo = do again), <span class=\"data\">un</span> = “the opposite of ...” (uncommon), <span class=\"data\">ing</span> = “continually ...” (jumping), <span class=\"data\">ize</span> = “make into ...” (equalize), <span class=\"data\">pre</span> = “not yet ...” (predawn), <span class=\"data\">ation</span> = “the result of ...” (adaptation).</p>\n<h3>Reading a strategy off a single word</h3>\n<p>Take <span class=\"data\">ingrate</span>. The pieces hiding in it are: in (L1, 2), ing (L2, 3), rate (L1, 4), grate (L1, 5).</p>\n<ul><li>Strategy 1 gave “contained by give a score (?)” = in + rate. Those are the two <em>small</em> pieces, taken from either list, and the leftover g gives one question mark.</li><li>Strategy 2 gave “contained by a grid of metal bars” = in + grate. Its first grab was grate, the biggest L1 piece.</li><li>Strategy 3 gave “continually give a score” = ing + rate. Its first grab was ing, the biggest (here, the only) L2 piece; after that it took the biggest thing left, rate.</li><li>Strategy 4 gave the same as strategy 2: grate first, the biggest piece from either list.</li></ul>\n<p>So the four descriptions in I1 are: strategy 1 always takes the <strong>shortest</strong> piece from <strong>L1 or L2</strong>; strategy 2 takes the <strong>longest</strong> piece from <strong>L1</strong> first, then the <strong>longest</strong> from <strong>L1 or L2</strong>; strategy 3 takes the <strong>longest</strong> piece from <strong>L2</strong> first, then the <strong>longest</strong> from <strong>L1 or L2</strong>; strategy 4 always takes the <strong>longest</strong> piece from <strong>L1 or L2</strong>.</p>\n<p>Check this against <span class=\"data\">predation</span>: strategy 3 grabs the longest L2 piece, ation (“the result of”), then the longest remaining piece, pre (“not yet”), leaving only d uncovered — “not yet the result of (?)”, exactly as printed. Strategy 2 must start from L1, and the only L1 piece inside predation is ion, so it gets “not yet a charged particle (???)” with three stray letters (d, a, t).</p>\n<h3>Running the strategies yourself (I2)</h3>\n<p><strong>reunion</strong>: pieces are re (L2, 2), un (L2, 2), union (L1, 5), ion (L1, 3).</p>\n<ul><li>1 (shortest, either list): re and un are the smallest, then ion is left — “the opposite of a charged particle again”, no leftovers.</li><li>2 (longest from L1 first): union, then re — “a workers’ organization again”.</li><li>3 (longest from L2 first): re and un tie at two letters, so either may be picked. Picking re leaves union: “a workers’ organization again”. Picking un leaves ion and re: “the opposite of a charged particle again”. Both are accepted, because the data does not settle ties.</li><li>4 (longest, either list): union, then re — “a workers’ organization again”.</li></ul>\n<p><strong>unrest</strong>: pieces are un (L2, 2), re (L2, 2), st (L1, 2), rest (L1, 4).</p>\n<ul><li>1: three two-letter pieces un + re + st cover the whole word — “the opposite of a street again”.</li><li>2: longest L1 piece is rest, then un — “the opposite of stay still”.</li><li>3: un and re tie for longest L2 piece, so either “the opposite of stay still” (un first, then rest) or “the opposite of a street again” (re first, then un and st).</li><li>4: rest, then un — “the opposite of stay still”.</li></ul>\n<p><strong>presto</strong>: pieces are pre (L2, 3), re (L2, 2), st (L1, 2), rest (L1, 4). Note the o and the p can never be covered by two of the strategies, so watch the question marks.</p>\n<ul><li>1: smallest pieces first, re then st, leaving p and o — “a street again (??)”.</li><li>2: longest L1 piece rest, leaving p and o — “stay still (??)”.</li><li>3: longest L2 piece is pre (three letters, longer than re), then st, leaving only o — “not yet a street (?)”.</li><li>4: longest overall is rest — “stay still (??)”.</li></ul>\n<h3>The Canadian spelling (I3)</h3>\n<p>In <span class=\"data\">centre</span> the pieces are cent (L1, 4) and re (L2, 2), and together they cover every letter, so no strategy has any real choice: whichever order they pick them in, the answer is “a penny again” with no question marks. Now ask what other unknown word is made of exactly the same two pieces — rearrange them and you get <span class=\"data\">recent</span> (re + cent), which every strategy also reads as “a penny again”. That is the joke: <em>Def21</em> confidently gives a Canadian spelling of “center” the same wrong meaning it gives “recent”.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken verbatim from the official solution page. The solution gives no per-part point breakdown, so the 10 points were split by number of blanks: I1 twelve blanks at 0.4 each (4.8), I2 three inputs at 1 each (3.0), I3 two blanks at 1.1 each (2.2). I2 is graded by LLM because the solution explicitly allows alternative results for strategy 3 on (a) reunion and (b) unrest (ties between equal-length L2 pieces); each I2 question expects all four strategy results in one answer, matching the single printed label per input. Note the booklet prints “a worker’s organization” in L1 (page 1) but “a workers’ organization” in the strategy results and solution — both transcribed as printed. No figures to crop.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:i2.1:key",
+      "note": "arbitration returned UNRESOLVED"
+    },
+    {
+      "kind": "diff",
+      "path": "q:i2.2:key",
+      "note": "arbitration returned UNRESOLVED"
+    },
+    {
+      "kind": "diff",
+      "path": "q:i2.3:key",
+      "note": "arbitration returned UNRESOLVED"
+    },
+    {
+      "kind": "diff",
+      "path": "cells:count",
+      "note": "arbitration returned UNRESOLVED"
+    }
+  ]
+}

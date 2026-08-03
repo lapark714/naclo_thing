@@ -1,0 +1,137 @@
+{
+  "id": "2019-open-B",
+  "tier": "full",
+  "year": 2019,
+  "round": "open",
+  "letter": "B",
+  "title": "(title unknown)",
+  "authors": [
+    "Michael Salter"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "syntax"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "hard",
+  "languages": [
+    "Ndebele"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>Below are some phrases from the Ndebele language, spoken by 1.6 million in parts of southern Africa (mainly Zimbabwe), along with their English translations.</p>\n<dl class=\"gloss-list\">\n<dt>Yebo, ngiyafuna.</dt><dd>Yes, I do (want to).</dd>\n<dt>Sifuna ukuhamba.</dt><dd>We want to go.</dd>\n<dt>Umfana uyapheka.</dt><dd>The boy is cooking.</dd>\n<dt>Ngifunda ukupheka.</dt><dd>I am learning to cook.</dd>\n<dt>Abafana bayahamba.</dt><dd>The boys are going.</dd>\n<dt>Abangane bayahamba na?</dt><dd>Are the friends going?</dd>\n<dt>Umngane uyahamba angithi?</dt><dd>The friend is going, isn't he?</dd>\n<dt>Abafana banatha itiye na?</dt><dd>Are the boys drinking tea?</dd>\n<dt>Umngane uyanatha.</dt><dd>The friend is drinking.</dd>\n<dt>Banjani abantwana?</dt><dd>How are the children?</dd>\n<dt>Uthunga njani?</dt><dd>How do you sew?</dd>\n<dt>Ufuna ukufunda angithi?</dt><dd>He wants to learn, doesn't he?</dd>\n<dt>Yebo, uyafuna.</dt><dd>Yes, he does (want to).</dd>\n<dt>Bangaphi abafana?</dt><dd>Where are the boys?</dd>\n<dt>Ubaba ubona umfana.</dt><dd>Father sees the boy.</dd>\n<dt>Ufuna ukunatha itiye na?</dt><dd>Do you want to drink tea?</dd>\n<dt>Ngifunda ukukhuluma indebele ngaphi?</dt><dd>Where do I learn to speak Ndebele?</dd>\n</dl>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "B1.1",
+      "promptHtml": "(a) <span class=\"data\">Yebo, bafuna ukubona.</span>",
+      "part": "B1",
+      "partPrompt": "Translate the following sentences into English.",
+      "gradingMode": "llm",
+      "answerKey": "Yes, they want to see.",
+      "acceptedVariants": [
+        "Yes, they do (want to see).",
+        "Yes, they do want to see."
+      ],
+      "points": 2
+    },
+    {
+      "id": "B1.2",
+      "promptHtml": "(b) <span class=\"data\">Umfana ufunda ukuthunga njani?</span>",
+      "part": "B1",
+      "gradingMode": "llm",
+      "answerKey": "How is the boy learning to sew?",
+      "acceptedVariants": [
+        "How does the boy learn to sew?"
+      ],
+      "points": 2
+    },
+    {
+      "id": "B1.3",
+      "promptHtml": "(c) <span class=\"data\">Singaphi?</span>",
+      "part": "B1",
+      "gradingMode": "llm",
+      "answerKey": "Where are we?",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "B1.4",
+      "promptHtml": "(d) <span class=\"data\">Ngipheka itiye.</span>",
+      "part": "B1",
+      "gradingMode": "llm",
+      "answerKey": "I am cooking tea.",
+      "acceptedVariants": [
+        "I cook tea."
+      ],
+      "points": 2
+    },
+    {
+      "id": "B2.1",
+      "promptHtml": "(a) How is the child?",
+      "part": "B2",
+      "partPrompt": "Translate the following sentences into Ndebele.",
+      "gradingMode": "exact",
+      "answerKey": "Unjani umntwana?",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "B2.2",
+      "promptHtml": "(b) We are learning to cook, aren't we?",
+      "part": "B2",
+      "gradingMode": "exact",
+      "answerKey": "Sifunda ukupheka angithi?",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "B2.3",
+      "promptHtml": "(c) Yes, they are speaking.",
+      "part": "B2",
+      "gradingMode": "exact",
+      "answerKey": "Yebo, bayakhuluma.",
+      "acceptedVariants": [
+        "Yebo bayakhuluma."
+      ],
+      "points": 2
+    },
+    {
+      "id": "B2.4",
+      "promptHtml": "(d) Do they want to see the father?",
+      "part": "B2",
+      "gradingMode": "exact",
+      "answerKey": "Bafuna ukubona ubaba na?",
+      "acceptedVariants": [],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Every Ndebele verb here starts with a short piece that tells you who the subject is. Line up the sentences whose English subjects are \"I\", \"we\", \"he/you\" and \"they\" and see which opening syllable each one uses.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Two more building blocks matter. One prefix marks an infinitive (\"to do something\"), and one extra piece sits between the subject prefix and the verb stem, appearing only when nothing follows the verb except possibly a question particle. Also notice that the question words for \"how\" and \"where\" can themselves take the subject prefixes, so \"Where are the boys?\" is literally \"The boys where?\"",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Compare two of the given sentences: \"Abafana bayahamba\" (The boys are going) has -ya- because nothing follows the verb, while \"Abafana banatha itiye na?\" (Are the boys drinking tea?) drops -ya- because the object itiye follows. Note also that na goes at the very end of a plain yes/no question, and angithi at the end of a tag question.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: find the subject prefixes</h3>\n<p>Ndebele verbs do not need separate words for \"I\", \"we\" or \"they\": a small piece glued to the front of the verb (a <em>prefix</em>) does the job. Compare:</p>\n<ul>\n<li><span class=\"data\">Ngifunda ukupheka.</span> \"I am learning to cook.\" gives <span class=\"data\">ngi-</span> = I</li>\n<li><span class=\"data\">Sifuna ukuhamba.</span> \"We want to go.\" gives <span class=\"data\">si-</span> = we</li>\n<li><span class=\"data\">Umfana uyapheka.</span> \"The boy is cooking.\" and <span class=\"data\">Uthunga njani?</span> \"How do you sew?\" give <span class=\"data\">u-</span> = he/she/it or you (singular)</li>\n<li><span class=\"data\">Abafana bayahamba.</span> \"The boys are going.\" gives <span class=\"data\">ba-</span> = they</li>\n</ul>\n<p>So <span class=\"data\">u-</span> is ambiguous: <span class=\"data\">Ufuna ukufunda angithi?</span> is translated \"He wants to learn, doesn't he?\" but <span class=\"data\">Ufuna ukunatha itiye na?</span> is \"Do you want to drink tea?\" Either reading is possible; context decides.</p>\n<h3>Step 2: nouns come in pairs</h3>\n<p>The nouns here are marked <span class=\"data\">um-</span> in the singular and <span class=\"data\">aba-</span> in the plural: <span class=\"data\">umfana</span> / <span class=\"data\">abafana</span> (boy/boys), <span class=\"data\">umngane</span> / <span class=\"data\">abangane</span> (friend/friends). From <span class=\"data\">abantwana</span> \"children\" you can work backwards to the singular \"child\": <span class=\"data\">umntwana</span>. Note that when a noun subject is present, the verb <em>still</em> carries the matching prefix (<span class=\"data\">Umfana u-yapheka</span>, <span class=\"data\">Abafana ba-yahamba</span>).</p>\n<h3>Step 3: the infinitive prefix uku-</h3>\n<p><span class=\"data\">ukuhamba</span> \"to go\", <span class=\"data\">ukupheka</span> \"to cook\", <span class=\"data\">ukufunda</span> \"to learn\", <span class=\"data\">ukunatha</span> \"to drink\", <span class=\"data\">ukukhuluma</span> \"to speak\". So the stems are <span class=\"data\">-hamba-</span>, <span class=\"data\">-pheka-</span> and so on, and <span class=\"data\">uku-</span> is added when a second verb depends on the first one (\"want to go\", \"learning to cook\").</p>\n<h3>Step 4: the mysterious -ya-</h3>\n<p>Sometimes an extra <span class=\"data\">-ya-</span> appears between the subject prefix and the stem, sometimes not:</p>\n<ul>\n<li>with <span class=\"data\">-ya-</span>: <span class=\"data\">uyapheka</span>, <span class=\"data\">bayahamba</span>, <span class=\"data\">uyanatha</span>, <span class=\"data\">ngiyafuna</span></li>\n<li>without: <span class=\"data\">Ngifunda ukupheka</span>, <span class=\"data\">Abafana banatha itiye na?</span>, <span class=\"data\">Ubaba ubona umfana</span>, <span class=\"data\">Uthunga njani?</span></li>\n</ul>\n<p>The pattern: <span class=\"data\">-ya-</span> appears when nothing follows the verb - no object, no infinitive, no adverb. It survives when the only thing after the verb is the question particle <span class=\"data\">na</span> (plain yes/no question, as in <span class=\"data\">Abangane bayahamba na?</span>) or <span class=\"data\">angithi</span> (tag question, as in <span class=\"data\">Umngane uyahamba angithi?</span>), because those are particles rather than real \"following words\".</p>\n<h3>Step 5: question words behave like verbs</h3>\n<p><span class=\"data\">njani</span> \"how\" and <span class=\"data\">ngaphi</span> \"where\" can take the subject prefixes themselves: <span class=\"data\">Banjani abantwana?</span> is literally \"They-how the children?\" = \"How are the children?\", and <span class=\"data\">Bangaphi abafana?</span> is \"Where are the boys?\" When they are ordinary adverbs of a real verb they stand at the end: <span class=\"data\">Uthunga njani?</span>, <span class=\"data\">Ngifunda ukukhuluma indebele ngaphi?</span></p>\n<h3>Putting it together</h3>\n<p>For an English-to-Ndebele item, choose the subject prefix, decide whether a following word exists (which tells you whether to insert <span class=\"data\">-ya-</span>), attach <span class=\"data\">uku-</span> to any dependent verb, and put <span class=\"data\">na</span> or <span class=\"data\">angithi</span> last for the two question types. For example, \"Yes, I am cooking\" would need the first-person prefix plus <span class=\"data\">-ya-</span>, since nothing follows: <span class=\"data\">Yebo, ngiyapheka.</span> Add an object and the <span class=\"data\">-ya-</span> disappears.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys copied verbatim from the official solution page (solution titled \"(B) Ndebele\"; problem booklet title is \"You Speak Ndebele, Don't You?\" - kept the booklet title). Points split 2/2/2/2 for B1 and 2/2/2/1 for B2 to total 15; the official page gives no per-item breakdown, so adjust if a breakdown is found. B1 uses llm grading because English wordings vary; B2 uses exact. Check the spelling of 'itiye' (booklet prints a ti ligature) and 'indebele' (lowercase in the booklet).",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "(verification)",
+      "note": "this booklet has no usable text layer, so neither the witness check nor arbitration can run. Parked for human review by policy, not by a specific disagreement"
+    }
+  ]
+}

@@ -1,15 +1,17 @@
 {
   "id": "2018-open-A",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2018,
   "round": "open",
   "letter": "A",
   "title": "At Ease in Gilbertese",
-  "authors": [],
+  "authors": [
+    "Michael Salter"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
-    "morphology",
-    "syntax"
+    "syntax",
+    "morphology"
   ],
   "formTag": "rosetta-stone translation",
   "difficulty": "standard",
@@ -18,10 +20,105 @@
   ],
   "officialPoints": 10,
   "officialTimeMinutes": 18,
-  "bodyHtml": "",
+  "bodyHtml": "<p>The Gilbertese language is spoken by most of the over 100,000 people who live in the Pacific island nation of Kiribati. Here are some sentences in Gilbertese with their English translations:</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th>Gilbertese</th><th>English</th></tr>\n</thead>\n<tbody>\n<tr><td><span class=\"data\">ko nakonako ŋkoe</span></td><td>You are walking.</td></tr>\n<tr><td><span class=\"data\">e nakonako te aiine</span></td><td>A woman is walking.</td></tr>\n<tr><td><span class=\"data\">i takaakaro ŋai</span></td><td>I am playing.</td></tr>\n<tr><td><span class=\"data\">e nakonako nakon te titooa Meeri</span></td><td>Mary is walking to the store.</td></tr>\n<tr><td><span class=\"data\">a tekateka irarikin taian auti taian aiine</span></td><td>The women are sitting next to the houses.</td></tr>\n<tr><td><span class=\"data\">a tebotebo taian nakekei n te bong aei</span></td><td>The people are bathing today.</td></tr>\n<tr><td><span class=\"data\">i tebotebo inanon te auti ŋai</span></td><td>I am bathing in the house.</td></tr>\n<tr><td><span class=\"data\">a takaakaro inanon te titooa taian ataei</span></td><td>The children are playing in the store.</td></tr>\n<tr><td><span class=\"data\">ko tekateka ŋkoe ningaabong</span></td><td>You will sit tomorrow.</td></tr>\n<tr><td><span class=\"data\">a takaakaro irarikin te kawai taian ataei n te bong aei</span></td><td>The children are playing next to the road today.</td></tr>\n</tbody>\n</table>\n</div>\n<p>Answer the following questions in the Answer Sheets:</p>\n<p><strong>A1.</strong> Below are some Gilbertese sentences with their words in scrambled order:</p>\n<ol type=\"a\">\n<li><span class=\"data\">bong n Meeri auti e nakon te te nakonako aei</span></li>\n<li><span class=\"data\">inanon ŋai kawai i te tekateka</span></li>\n<li><span class=\"data\">ataei a nakon taian ningaabong kawai nakonako te</span></li>\n</ol>\n<p>For each of these three sentences:</p>\n<ol type=\"i\">\n<li>Rearrange the words in the sentence into the correct Gilbertese word order.</li>\n<li>Translate the rearranged sentence into English.</li>\n</ol>\n<p><strong>A2.</strong> Translate into Gilbertese:</p>\n<ol type=\"a\">\n<li>The women will play tomorrow.</li>\n<li>You are sitting next to the store today.</li>\n</ol>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "A1.1",
+      "promptHtml": "<p>a. <span class=\"data\">bong n Meeri auti e nakon te te nakonako aei</span></p><p>(i) Rearrange into correct Gilbertese word order.</p>",
+      "part": "A1",
+      "partPrompt": "Below are some Gilbertese sentences with their words in scrambled order. For each one, (i) rearrange the words into the correct Gilbertese word order, and (ii) translate the rearranged sentence into English.",
+      "gradingMode": "exact",
+      "answerKey": "e nakonako nakon te auti Meeri n te bong aei",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A1.2",
+      "promptHtml": "<p>a. (ii) Translate your rearranged sentence into English.</p>",
+      "part": "A1",
+      "gradingMode": "llm",
+      "answerKey": "Mary is walking to the house today.",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A1.3",
+      "promptHtml": "<p>b. <span class=\"data\">inanon ŋai kawai i te tekateka</span></p><p>(i) Rearrange into correct Gilbertese word order.</p>",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "i tekateka inanon te kawai ŋai",
+      "acceptedVariants": [
+        "i tekateka inanon te kawai ngai"
+      ],
+      "points": 1
+    },
+    {
+      "id": "A1.4",
+      "promptHtml": "<p>b. (ii) Translate your rearranged sentence into English.</p>",
+      "part": "A1",
+      "gradingMode": "llm",
+      "answerKey": "I am sitting (on) in the road.",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A1.5",
+      "promptHtml": "<p>c. <span class=\"data\">ataei a nakon taian ningaabong kawai nakonako te</span></p><p>(i) Rearrange into correct Gilbertese word order.</p>",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "a nakonako nakon te kawai taian ataei ningaabong",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A1.6",
+      "promptHtml": "<p>c. (ii) Translate your rearranged sentence into English.</p>",
+      "part": "A1",
+      "gradingMode": "llm",
+      "answerKey": "The children will be walking to the road tomorrow.",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A2.1",
+      "promptHtml": "<p>a. The women will play tomorrow.</p>",
+      "part": "A2",
+      "partPrompt": "Translate into Gilbertese.",
+      "gradingMode": "exact",
+      "answerKey": "a takaakaro taian aiine ningaabong",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "A2.2",
+      "promptHtml": "<p>b. You are sitting next to the store today.</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "ko tekateka irarikin te titooa ŋkoe n te bong aei",
+      "acceptedVariants": [
+        "ko tekateka irarikin te titooa ngkoe n te bong aei"
+      ],
+      "points": 2
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Look at the very first word of every Gilbertese sentence in the table: it is always one of i, ko, e or a. Compare those with who the subject is in the English translation (I, you, one person or thing, several people or things).",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Every sentence in the table uses the same fixed sequence of slots, and each slot may be empty. In order the slots are: the little person word, the verb, any phrase saying where (nakon, inanon, irarikin plus a noun phrase), then the pronoun or noun that names the subject, then finally the time expression. Also work out which small word marks a singular noun and which marks a plural noun, and which time expression means today and which means tomorrow.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try the method on a table sentence first. In \"a takaakaro irarikin te kawai taian ataei n te bong aei\" the slots are: a (subject is third person plural), takaakaro (the verb, playing), irarikin te kawai (next to the road), taian ataei (the children), n te bong aei (today). Notice that the subject noun phrase comes AFTER the where-phrase, and that te marks one road while taian marks more than one child. Now scramble-solve your own sentences by filling the same five slots.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What kind of puzzle is this?</h3><p>You are given ten Gilbertese sentences with English translations. Nothing is hidden: every Gilbertese word appears often enough that you can match it to an English meaning, and the real work is figuring out the <em>order</em> in which Gilbertese lines its words up. That order is what lets you unscramble the sentences in A1 and build new ones in A2.</p><h3>Step 1: the little word at the front</h3><p>Every sentence begins with <span class=\"data\">i</span>, <span class=\"data\">ko</span>, <span class=\"data\">e</span> or <span class=\"data\">a</span>. Compare:</p><ul><li><span class=\"data\">i takaakaro ŋai</span> = \"I am playing\" — the subject is I</li><li><span class=\"data\">ko nakonako ŋkoe</span> = \"You are walking\" — the subject is you</li><li><span class=\"data\">e nakonako te aiine</span> = \"A woman is walking\" — one other person</li><li><span class=\"data\">a tebotebo taian nakekei n te bong aei</span> = \"The people are bathing today\" — several other people</li></ul><p>So this word is a <strong>person marker</strong>: a small grammatical word that agrees with the subject. <span class=\"data\">i</span> = 1st person singular, <span class=\"data\">ko</span> = 2nd person singular, <span class=\"data\">e</span> = 3rd person singular, <span class=\"data\">a</span> = 3rd person plural. Notice the marker is there even when the subject is also spelled out (<span class=\"data\">e ... te aiine</span>), so the marker is not itself the subject.</p><h3>Step 2: the verbs and the pronouns</h3><p>Right after the marker comes the verb: <span class=\"data\">nakonako</span> \"walk\", <span class=\"data\">takaakaro</span> \"play\", <span class=\"data\">tekateka</span> \"sit\", <span class=\"data\">tebotebo</span> \"bathe\". Independent pronouns are separate words: <span class=\"data\">ŋai</span> \"I/me\", <span class=\"data\">ŋkoe</span> \"you\".</p><h3>Step 3: nouns, singular and plural</h3><p>Compare <span class=\"data\">te auti</span> \"the house\" with <span class=\"data\">taian auti</span> \"the houses\", and <span class=\"data\">te aiine</span> with <span class=\"data\">taian aiine</span> \"the women\". So <span class=\"data\">te</span> goes with one thing and <span class=\"data\">taian</span> with more than one; the noun itself does not change shape. Nouns you can collect: <span class=\"data\">auti</span> house, <span class=\"data\">titooa</span> store, <span class=\"data\">kawai</span> road, <span class=\"data\">aiine</span> woman, <span class=\"data\">ataei</span> child, <span class=\"data\">nakekei</span> person.</p><h3>Step 4: place words and time words</h3><p>Three words introduce a place phrase: <span class=\"data\">nakon</span> \"to\", <span class=\"data\">inanon</span> \"in(side)\", <span class=\"data\">irarikin</span> \"next to\". Each is followed by its noun phrase, e.g. <span class=\"data\">irarikin te kawai</span> \"next to the road\".</p><p>Two time expressions show up: <span class=\"data\">n te bong aei</span> \"today\" (literally something like \"on this day\") and <span class=\"data\">ningaabong</span> \"tomorrow\". And here is the neat bit: <span class=\"data\">ko tekateka ŋkoe ningaabong</span> is translated \"You <em>will</em> sit tomorrow\" while <span class=\"data\">a tebotebo taian nakekei n te bong aei</span> is \"The people <em>are</em> bathing today\". The verb form never changes — English future versus present is only coming from the time word.</p><h3>Step 5: the word order template</h3><p>Line the sentences up and every one fits this sequence, with any slot allowed to be empty:</p><div class=\"table-scroll\"><table><thead><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><td>person marker</td><td>verb</td><td>prepositional (place) phrase</td><td>pronoun / noun subject</td><td>time phrase</td></tr></tbody></table></div><p>Check it against the longest example: <span class=\"data\">a</span> | <span class=\"data\">takaakaro</span> | <span class=\"data\">irarikin te kawai</span> | <span class=\"data\">taian ataei</span> | <span class=\"data\">n te bong aei</span> = \"The children are playing next to the road today.\" The surprise for an English speaker is slot 4: the noun naming the subject comes late, after the place phrase.</p><h3>Step 6: unscrambling</h3><p>Take a practice scramble that is not one of the graded ones: <span class=\"data\">titooa e nakon Meeri te nakonako</span>. Sort the pieces into slots — <span class=\"data\">e</span> is the marker, <span class=\"data\">nakonako</span> the verb, <span class=\"data\">nakon te titooa</span> the place phrase, <span class=\"data\">Meeri</span> the subject, no time word — and you rebuild <span class=\"data\">e nakonako nakon te titooa Meeri</span>, exactly the table sentence \"Mary is walking to the store.\"</p><p>Do the same with each A1 scramble: find the person marker (it tells you who the subject is and must agree with the noun in slot 4), pull out the verb, group each preposition with the <span class=\"data\">te</span>/<span class=\"data\">taian</span> phrase that follows it, and put any time expression last. Then translate, remembering that <span class=\"data\">ningaabong</span> forces an English future (\"will\") while <span class=\"data\">n te bong aei</span> keeps the present.</p><h3>Step 7: building new sentences (A2)</h3><p>For an English sentence, work through the slots in order. Ask: who is the subject, and is it singular or plural? That fixes slot 1. Then the verb. Then \"next to the store\" style phrases go in slot 3 with <span class=\"data\">te</span> or <span class=\"data\">taian</span> as needed. Then the subject noun or pronoun. Then \"today\" or \"tomorrow\" at the very end. When the subject is a plural noun, remember the pattern of the table: the noun phrase is enough on its own, but the marker at the front still has to be the plural one.</p>",
   "reviewStatus": "published"
 }

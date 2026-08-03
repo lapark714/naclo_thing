@@ -1,0 +1,847 @@
+{
+  "id": "2017-open-B",
+  "tier": "full",
+  "year": 2017,
+  "round": "open",
+  "letter": "B",
+  "title": "Phở Bar",
+  "authors": [
+    "James Hyett"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "semantics",
+    "morphology"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "hard",
+  "languages": [
+    "Vietnamese"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>Menus often use non-English names for dishes that originate from other countries, along with descriptions in English. For example, a Vietnamese take-out menu might list <span class=\"data\">Gỏi Cuốn</span>: Salad rolls. Below are the names and descriptions of twenty dishes from a Vietnamese take-out menu in arbitrary order. Identify the correct correspondences; write your answers in the Answer Sheets.</p>\n<p>Also note that two of the below dishes come from a section with the following description:</p>\n<blockquote><p>Our Famous Vietnamese Noodle Soup. Choice of rice noodle “Phở” or yellow noodle “Mì” and your selected finest meat in an aromatic beef broth with scallions, onion, and cilantro. Soups are served with a plate of bean sprouts, fresh basil, sliced lime, jalapeno.</p></blockquote>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>B1.</td><td><span class=\"data\">Soup Hoành Thánh</span></td></tr>\n<tr><td>B2.</td><td><span class=\"data\">Chim Cút Rôti</span></td></tr>\n<tr><td>B3.</td><td><span class=\"data\">Bánh Oai Vạc Chiên Hoặc Hấp (6 pcs.)</span></td></tr>\n<tr><td>B4.</td><td><span class=\"data\">Bánh Bột Chiên Hành (8 pcs.)</span></td></tr>\n<tr><td>B5.</td><td><span class=\"data\">Bún Xào Đo Biến</span></td></tr>\n<tr><td>B6.</td><td><span class=\"data\">Bánh Xèo</span></td></tr>\n<tr><td>B7.</td><td><span class=\"data\">Gỏi Tôm Hoặc Gỏi Gà</span></td></tr>\n<tr><td>B8.</td><td><span class=\"data\">Gỏi Ngo Sen</span></td></tr>\n<tr><td>B9.</td><td><span class=\"data\">Phở Hoặc Mì Gà</span></td></tr>\n<tr><td>B10.</td><td><span class=\"data\">Bò Xào Cà Ry</span></td></tr>\n<tr><td>B11.</td><td><span class=\"data\">Bún Bò Huế</span></td></tr>\n<tr><td>B12.</td><td><span class=\"data\">Thịt Lụi</span></td></tr>\n<tr><td>B13.</td><td><span class=\"data\">Bún Thịt Nướng</span></td></tr>\n<tr><td>B14.</td><td><span class=\"data\">Bún Chả Giò</span></td></tr>\n<tr><td>B15.</td><td><span class=\"data\">Chả Giò (2 pcs.)</span></td></tr>\n<tr><td>B16.</td><td><span class=\"data\">Bún Thịt Nướng Chả Giò</span></td></tr>\n<tr><td>B17.</td><td><span class=\"data\">Bún Tôm</span></td></tr>\n<tr><td>B18.</td><td><span class=\"data\">Bún Tôm Thịt Nướng Chả Giò</span></td></tr>\n<tr><td>B19.</td><td><span class=\"data\">Cá Salmon Hoặc Cá Bông Lau Hấp</span></td></tr>\n<tr><td>B20.</td><td><span class=\"data\">Mì Xào</span></td></tr>\n</tbody>\n</table>\n</div>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>(A)</td><td>Lotus Stem Salad.</td></tr>\n<tr><td>(B)</td><td>Vietnamese Crepe. A traditional mixture of shrimp and pork, bean sprouts and a delicate sauce folded into a rice powder pancake.</td></tr>\n<tr><td>(C)</td><td>Noodle Soup with shredded chicken.</td></tr>\n<tr><td>(D)</td><td>Wonton Soup. Shrimp, pork dumplings, lettuce, onion and scallions in chicken broth.</td></tr>\n<tr><td>(E)</td><td>Beef stew “Huế Style”. Spicy lemon grass beef noodle soup and shrimp.</td></tr>\n<tr><td>(F)</td><td>Scallions Pancake. Fried sweet flour with scallions.</td></tr>\n<tr><td>(G)</td><td>Vermicelli<sup>1</sup> with seafood sautéed with lemon grass sauce.</td></tr>\n<tr><td>(H)</td><td>Vermicelli with crispy spring rolls.</td></tr>\n<tr><td>(I)</td><td>Roasted Quail.</td></tr>\n<tr><td>(J)</td><td>Filet of salmon or catfish steamed with ginger, scallions, and Chef’s special sauce.</td></tr>\n<tr><td>(K)</td><td>Vermicelli with choice of grilled meat.</td></tr>\n<tr><td>(L)</td><td>Beef sautéed in curry sauce.</td></tr>\n<tr><td>(M)</td><td>Vermicelli with a choice of grilled meat with crispy spring rolls.</td></tr>\n<tr><td>(N)</td><td>Vermicelli with shrimp, choice of grilled meat, and crispy spring rolls.</td></tr>\n<tr><td>(O)</td><td>Saigon Ravioli Fried or Steamed. Homemade dumplings filled with a mixture of chicken, pork, and vegetable. Served with ginger dipping sauce.</td></tr>\n<tr><td>(P)</td><td>Teriyaki with choice of meat.</td></tr>\n<tr><td>(Q)</td><td>Vietnamese salad. Choice of poached shrimp, chicken, or combination, with shredded carrots, cabbage, fresh mints, roasted peanuts, onions and homemade dressing.</td></tr>\n<tr><td>(R)</td><td>Crispy Spring Rolls. A savory mixture of ground pork, taro, carrots, onion, rice vermicelli, and mushroom wrapped in spring roll and fried golden brown.</td></tr>\n<tr><td>(S)</td><td>Vermicelli with grilled shrimp.</td></tr>\n<tr><td>(T)</td><td>Sautéed crispy yellow noodle.</td></tr>\n</tbody>\n</table>\n</div>\n<p><sup>1</sup>Vermicelli are long, slender noodles.</p>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "B.1",
+      "promptHtml": "B1. <span class=\"data\">Soup Hoành Thánh</span>",
+      "part": "B",
+      "partPrompt": "Match each Vietnamese dish name (B1-B20) to its English description (A-T). Write the letter of the description.",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "(D)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.2",
+      "promptHtml": "B2. <span class=\"data\">Chim Cút Rôti</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [
+        "(I)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.3",
+      "promptHtml": "B3. <span class=\"data\">Bánh Oai Vạc Chiên Hoặc Hấp (6 pcs.)</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "O",
+      "acceptedVariants": [
+        "(O)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.4",
+      "promptHtml": "B4. <span class=\"data\">Bánh Bột Chiên Hành (8 pcs.)</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "(F)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.5",
+      "promptHtml": "B5. <span class=\"data\">Bún Xào Đo Biến</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [
+        "(G)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.6",
+      "promptHtml": "B6. <span class=\"data\">Bánh Xèo</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "(B)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.7",
+      "promptHtml": "B7. <span class=\"data\">Gỏi Tôm Hoặc Gỏi Gà</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "Q",
+      "acceptedVariants": [
+        "(Q)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.8",
+      "promptHtml": "B8. <span class=\"data\">Gỏi Ngo Sen</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "(A)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.9",
+      "promptHtml": "B9. <span class=\"data\">Phở Hoặc Mì Gà</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "(C)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.10",
+      "promptHtml": "B10. <span class=\"data\">Bò Xào Cà Ry</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "L",
+      "acceptedVariants": [
+        "(L)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.11",
+      "promptHtml": "B11. <span class=\"data\">Bún Bò Huế</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "(E)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.12",
+      "promptHtml": "B12. <span class=\"data\">Thịt Lụi</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "P",
+      "acceptedVariants": [
+        "(P)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.13",
+      "promptHtml": "B13. <span class=\"data\">Bún Thịt Nướng</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [
+        "(K)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.14",
+      "promptHtml": "B14. <span class=\"data\">Bún Chả Giò</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [
+        "(H)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.15",
+      "promptHtml": "B15. <span class=\"data\">Chả Giò (2 pcs.)</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "R",
+      "acceptedVariants": [
+        "(R)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.16",
+      "promptHtml": "B16. <span class=\"data\">Bún Thịt Nướng Chả Giò</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "M",
+      "acceptedVariants": [
+        "(M)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.17",
+      "promptHtml": "B17. <span class=\"data\">Bún Tôm</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "S",
+      "acceptedVariants": [
+        "(S)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.18",
+      "promptHtml": "B18. <span class=\"data\">Bún Tôm Thịt Nướng Chả Giò</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "(N)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.19",
+      "promptHtml": "B19. <span class=\"data\">Cá Salmon Hoặc Cá Bông Lau Hấp</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "J",
+      "acceptedVariants": [
+        "(J)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    },
+    {
+      "id": "B.20",
+      "promptHtml": "B20. <span class=\"data\">Mì Xào</span>",
+      "part": "B",
+      "gradingMode": "exact",
+      "answerKey": "T",
+      "acceptedVariants": [
+        "(T)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "points": 0.75
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start with the easiest anchors: the dishes whose names contain a word you already recognise from English or from the boxed noodle-soup description, and the descriptions that are only two or three words long. Every dish matches exactly one description, so each anchor you fix removes one option from all the others.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Treat the Vietnamese names as strings of building blocks and compare names that share blocks. If two names differ by exactly one word, their English descriptions should differ by exactly one ingredient. Line up the families of names (the ones beginning with the same first word, the ones ending with the same last word) against the families of descriptions and let the length and structure of each name tell you how long its description should be.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Worked example on data that is not graded here: the introduction tells you Gỏi Cuốn means salad rolls, so Gỏi carries the idea of a salad or a fresh roll. That single block instantly narrows any name starting with Gỏi to the salad descriptions, and then a second word inside the name decides which salad it is. Do the same trick with the boxed paragraph, which hands you two more blocks for free.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What kind of puzzle is this?</h3><p>You are not expected to know Vietnamese. The trick is that both lists are built out of repeating pieces. Vietnamese dish names are compounds: a noodle or protein word, then words for how it is cooked and what goes with it. The English descriptions repeat in exactly the same way. So instead of translating, you compare <em>patterns</em>: names that share a word should have descriptions that share an ingredient.</p>\n\n<h3>Step 1: use the free information</h3><p>The introduction gives you one translation outright: <span class=\"data\">Gỏi Cuốn</span> = salad rolls, so <span class=\"data\">Gỏi</span> has to do with salad. The boxed paragraph gives two more: <span class=\"data\">Phở</span> is the rice noodle and <span class=\"data\">Mì</span> is the yellow noodle. And a few names contain words borrowed straight into or out of English and French: <span class=\"data\">Soup</span>, <span class=\"data\">Salmon</span>, <span class=\"data\">Rôti</span> (roasted), <span class=\"data\">Cà Ry</span> (curry).</p><p>That already settles several rows. <span class=\"data\">Soup Hoành Thánh</span> is the only name containing \"Soup\", and \"Wonton Soup\" is the only description that is a soup other than the two noodle soups. <span class=\"data\">Chim Cút Rôti</span> pairs with \"Roasted Quail\" because of <span class=\"data\">Rôti</span>. <span class=\"data\">Bò Xào Cà Ry</span> is the curry one.</p>\n\n<h3>Step 2: match the two noodle-soup dishes</h3><p>The box says only two dishes come from the noodle-soup section, and only two descriptions are noodle soups: \"Noodle Soup with shredded chicken\" and \"Beef stew 'Huế Style'\". One of the two names literally contains the words <span class=\"data\">Phở</span> and <span class=\"data\">Mì</span> from the box, plus <span class=\"data\">Gà</span>; the other contains the place name <span class=\"data\">Huế</span>, which is printed inside one of the descriptions. Once you spot the place name, both rows fall out at once.</p>\n\n<h3>Step 3: build the <span class=\"data\">Bún</span> family</h3><p>Six names begin with <span class=\"data\">Bún</span>, and six descriptions begin with \"Vermicelli\" (plus one more, <span class=\"data\">Bún Xào Đo Biến</span>, that has extra cooking words). So <span class=\"data\">Bún</span> = vermicelli. Now sort by length and shared blocks:</p><ul><li>The shortest <span class=\"data\">Bún</span> names have the shortest vermicelli descriptions.</li><li><span class=\"data\">Chả Giò</span> appears both on its own (a two-piece appetiser) and inside longer names; the appetiser description is \"Crispy Spring Rolls\", so <span class=\"data\">Chả Giò</span> = crispy spring rolls.</li><li><span class=\"data\">Thịt Nướng</span> shows up in the names that mention grilled meat, and <span class=\"data\">Tôm</span> in the ones that mention shrimp (compare <span class=\"data\">Gỏi Tôm</span>, the shrimp salad).</li></ul><p>Now the longest name in the family, <span class=\"data\">Bún Tôm Thịt Nướng Chả Giò</span>, has to be the description that lists three things: shrimp, grilled meat and spring rolls — and the word order even lines up. Its neighbour without <span class=\"data\">Tôm</span> loses exactly the shrimp.</p>\n\n<h3>Step 4: the leftovers</h3><p><span class=\"data\">Xào</span> turns up in <span class=\"data\">Bò Xào Cà Ry</span> (sautéed in curry), <span class=\"data\">Mì Xào</span> and <span class=\"data\">Bún Xào Đo Biến</span>, so <span class=\"data\">Xào</span> = sautéed. Since <span class=\"data\">Mì</span> is the yellow noodle, <span class=\"data\">Mì Xào</span> is the sautéed crispy yellow noodle, and the vermicelli-with-seafood dish takes the remaining sautéed description.</p><p><span class=\"data\">Bánh</span> starts three names and means a cake or pancake-like item: one is the crepe, one the scallion pancake (<span class=\"data\">Hành</span> = scallions, also visible in the fried-flour description), and one the fried-or-steamed dumplings — that last name contains <span class=\"data\">Chiên Hoặc Hấp</span>, and <span class=\"data\">Hoặc</span> \"or\" also appears in the salmon-or-catfish and the shrimp-or-chicken names, confirming the reading. <span class=\"data\">Hấp</span> reappears in the steamed fish name.</p><p>What remains are the two <span class=\"data\">Gỏi</span> salads: the one naming shrimp or chicken matches the long Vietnamese-salad description with poached shrimp or chicken, and the other one, <span class=\"data\">Ngo Sen</span>, matches \"Lotus Stem Salad\". Finally <span class=\"data\">Thịt Lụi</span> takes the only description left, \"Teriyaki with choice of meat\" — and <span class=\"data\">Thịt</span> \"meat\" is exactly the block you already met in <span class=\"data\">Thịt Nướng</span>.</p>\n\n<h3>The moral</h3><p>Cross-checking beats guessing. Each time you fix a pair, cross it off both lists; the process-of-elimination pressure at the end is what makes the last few rows easy.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution page (B1 D, B2 I, B3 O, B4 F, B5 G, B6 B, B7 Q, B8 A, B9 C, B10 L, B11 E, B12 P, B13 K, B14 H, B15 R, B16 M, B17 S, B18 N, B19 J, B20 T). 15 points split evenly at 0.75 per item (no official per-item breakdown printed). Vietnamese diacritics transcribed exactly as printed, including B5 'Bún Xào Đo Biến' and B8 'Gỏi Ngo Sen', which look like menu typos but are left as printed. Choices are the 20 option letters A-T, since the answer sheet asks for a letter.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:b.1:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.2:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.3:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.4:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.5:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.6:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.7:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.8:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.9:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.10:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.11:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.12:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.13:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.14:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.15:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.16:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.17:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.18:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.19:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b.20:choices",
+      "a": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:49",
+      "a": "Beef stew “Huế Style”. Spicy lemon grass beef noodle soup and shrimp.",
+      "b": "Beef stew \"Huế Style\". Spicy lemon grass beef noodle soup and shrimp."
+    },
+    {
+      "kind": "diff",
+      "path": "cell:59",
+      "a": "Filet of salmon or catfish steamed with ginger, scallions, and Chef’s special sauce.",
+      "b": "Filet of salmon or catfish steamed with ginger, scallions, and Chef's special sauce."
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 22 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~22 API calls that would not resolve it"
+    }
+  ]
+}

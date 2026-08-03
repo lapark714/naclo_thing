@@ -1,0 +1,334 @@
+{
+  "id": "2020-open-D",
+  "tier": "full",
+  "year": 2020,
+  "round": "open",
+  "letter": "D",
+  "title": "Pay Attention",
+  "authors": [
+    "Ethan Chi"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "syntax",
+    "semantics"
+  ],
+  "formTag": "table completion",
+  "difficulty": "standard",
+  "languages": [
+    "English"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>The meaning of a word depends on its context. For example, in the sentence “The farmer <em>seeded</em> the field with corn,” the word <em>seeded</em> means “added seeds to.” However, in the sentence “The chef seeded the tomato,” the word <em>seeded</em> means “took seeds away from.”</p>\n<p>If you were building a model of language, how would you get it to to recognize the way that a word’s meaning depends on context? One popular technique for achieving this goal is a mechanism called <strong>attention</strong>. In the way that attention is implemented in current state-of-the-art models of language, the model has a large number of <strong>attention heads</strong>, each of which is denoted by a pair of numbers (for examples, 8-10). When the model processes a sentence, for every pair of words in the sentence, each head calculates the “relatedness” of the two words.</p>\n<p>The one wrinkle is that we do not know what exactly “relatedness” should mean, so instead of telling the model how to define “relatedness,” we let the model learn its own definition of relatedness. Recently, computer scientists have started to analyze what these attention heads have learned, and this analysis shows that they often reflect linguistic information! For example, here’s the output of one attention head (head 8-10) when we feed the following sentence into BERT, which is one of the most popular models that uses attention heads:</p>\n<p><strong>Example:</strong> I<sub>1</sub> see<sub>2</sub> my<sub>3</sub> sister<sub>4</sub>, but<sub>5</sub> she<sub>6</sub> can’t<sub>7</sub> see<sub>8</sub> me<sub>9</sub> because<sub>10</sub> she<sub>11</sub> is<sub>12</sub> reading<sub>13</sub> a<sub>14</sub> linguistics<sub>15</sub> book<sub>16</sub>.</p>\n<p><strong>Output:</strong> 4 -&gt; 2, 9 -&gt; 8, 16 -&gt; 13</p>\n<p>This output signifies that head 8-10 connects word #4 (<em>sister</em>) to word #2 (<em>see</em>), as well as word #9 (<em>me</em>) to word #8 (<em>see</em>) and word #16 (<em>book</em>) to word #13 (<em>reading</em>). If you consider what all of those pairs of words have in common, you’ll see that each one is a verb and its direct object: <em>sister</em> is the direct object of the first instance of <em>see</em>, <em>me</em> is the direct object of the second instance of <em>see</em>, and <em>book</em> is the direct object of <em>reading</em>. It appears that head 8-10 has learn to connect verbs to their objects! (Note that these activations are directional; for example, word #2 is not connected to word #4.)</p>\n<p>Why is this information useful? If we go back to the example with the verb <em>seed</em>, this sort of information can help the model figure out which version of <em>seed</em> is being used: If its direct object is something like <em>field</em> or <em>lawn</em>, then it probably means “to add seeds to;” if its direct object is something like <em>tomato</em> or <em>watermelon</em>, then it probably means “to take seeds away from.” Of course, one sentence isn’t enough to draw strong conclusions. Instead, computer scientists tend to use a <em>corpus</em>, or a database, of example sentences to find patterns in the data. Below is a small corpus, the NacloWeb Corpus, which has 7 sentences. (Some sentences derived from data in the English Web Treebank.)</p>\n<p><strong><u>NacloWeb Corpus</u></strong></p>\n<ol>\n<li><em>My<sub>1</sub> experience<sub>2</sub> with<sub>3</sub> Gelda<sub>4</sub> 's<sub>5</sub> House<sub>6</sub> of<sub>7</sub> Gelbelgarg<sub>8</sub> has<sub>9</sub> been<sub>10</sub> extremely<sub>11</sub> wonderful<sub>12</sub></em></li>\n<li><em>We<sub>1</sub> use<sub>2</sub> Google<sub>3</sub> ‘s<sub>4</sub> models<sub>5</sub> to<sub>6</sub> delve<sub>7</sub> into<sub>8</sub> the<sub>9</sub> inner<sub>10</sub> workings<sub>11</sub> of<sub>12</sub> language<sub>13</sub></em></li>\n<li><em>At<sub>1</sub> this<sub>2</sub> corporation<sub>3</sub> ‘s<sub>4</sub> meeting<sub>5</sub> people<sub>6</sub> are<sub>7</sub> concerned<sub>8</sub> about<sub>9</sub> the<sub>10</sub> company<sub>11</sub> 's<sub>12</sub> plans<sub>13</sub></em></li>\n<li><em>In<sub>1</sub> July<sub>2</sub> we<sub>3</sub> will<sub>4</sub> interview<sub>5</sub> the<sub>6</sub> candidate<sub>7</sub> and<sub>8</sub> review<sub>9</sub> her<sub>10</sub> resumé<sub>11</sub> again<sub>12</sub></em></li>\n<li><em>The<sub>1</sub> platypus<sub>2</sub> is<sub>3</sub> a<sub>4</sub> strange<sub>5</sub> animal,<sub>6</sub> with<sub>7</sub> its<sub>8</sub> eggs<sub>9</sub> and<sub>10</sub> its<sub>11</sub> webbed<sub>12</sub> feet<sub>13</sub></em></li>\n<li><em>I<sub>1</sub> think<sub>2</sub> that<sub>3</sub> although<sub>4</sub> my<sub>5</sub> NACLO<sub>6</sub> exam<sub>7</sub> was<sub>8</sub> difficult,<sub>9</sub> it<sub>10</sub> was<sub>11</sub> a<sub>12</sub> lot<sub>13</sub> of<sub>14</sub> fun<sub>15</sub></em></li>\n<li><em>Linguistics<sub>1</sub> is<sub>2</sub> a<sub>3</sub> beautiful<sub>4</sub> science<sub>5</sub> that<sub>6</sub> provides<sub>7</sub> interdisciplinary<sub>8</sub> insight<sub>9</sub> into<sub>10</sub> the<sub>11</sub> human<sub>12</sub> experience<sub>13</sub></em></li>\n</ol>\n<p>Note that the NacloWeb corpus treats the possessive clitic <em>’s</em> as a separate word. (So in Sentence #1, word #5 is <em>’s</em> and word #6 is <em>House</em>.)</p>\n<p>In our experiment on the NacloWeb Corpus, we ran each of the corpus’ sentences through BERT and recorded the outputs of four attention heads (8-11, 7-6, 9-6, and 5-4). Unfortunately, due to some extremely sloppy experimental procedure, we don’t remember which order we ran them through the model; in addition, we forgot to record some data. Your job is to fill in the blanks! Note that some blanks may have more than one connection, and some may have none at all.</p>\n<div class=\"table-scroll\"><table>\n<thead><tr><th>Sentence</th><th>8-11</th><th>7-6</th><th>9-6</th><th>5-4</th></tr></thead>\n<tbody>\n<tr><th>Sentence A</th><td>12 -&gt; 13</td><td>5 -&gt; 6</td><td>14 -&gt; 13</td><td>10 -&gt; 6</td></tr>\n<tr><th>Sentence B</th><td><span class=\"blank\" data-q=\"D2.1\" data-label=\"(a)\"></span></td><td>8 -&gt; 9, 11 -&gt; 12</td><td>None</td><td>8 -&gt; 2, 11 -&gt; 2</td></tr>\n<tr><th>Sentence C</th><td>2 -&gt; 3, 10 -&gt; 11</td><td>4 -&gt; 5, 12 -&gt; 13</td><td><span class=\"blank\" data-q=\"D2.2\" data-label=\"(b)\"></span></td><td>11 -&gt; 3</td></tr>\n<tr><th>Sentence D</th><td><span class=\"blank\" data-q=\"D2.3\" data-label=\"(c)\"></span></td><td>4 -&gt; 5</td><td>12 -&gt; 13</td><td>None</td></tr>\n<tr><th>Sentence E</th><td>3 -&gt; 4, 11 -&gt; 12</td><td><span class=\"blank\" data-q=\"D2.4\" data-label=\"(d)\"></span></td><td>10 -&gt; 12</td><td>5 -&gt; 1</td></tr>\n<tr><th>Sentence F</th><td><span class=\"blank\" data-q=\"D2.5\" data-label=\"(e)\"></span></td><td>1 -&gt; 2, 5 -&gt; 6</td><td>7 -&gt; 8</td><td>None</td></tr>\n<tr><th>Sentence G</th><td><span class=\"blank\" data-q=\"D2.6\" data-label=\"(f)\"></span></td><td><span class=\"blank\" data-q=\"D2.7\" data-label=\"(g)\"></span></td><td><span class=\"blank\" data-q=\"D2.8\" data-label=\"(h)\"></span></td><td><span class=\"blank\" data-q=\"D2.9\" data-label=\"(i)\"></span></td></tr>\n</tbody></table></div>\n<p><strong>D1.</strong> Identify sentences A-G.</p>\n<p><strong>D2.</strong> Fill in the missing data, labelled <strong>(a)</strong> to <strong>(i)</strong>, in the table above.</p>\n<p><em>Note: the booklet prints the connection symbol as an arrow; here it is written as “-&gt;”. Write your answers in the same style, for example “3 -&gt; 4”, or “None”.</em></p>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "D1.1",
+      "promptHtml": "Sentence A",
+      "part": "D1",
+      "partPrompt": "Identify sentences A-G: give the number (1-7) of the corpus sentence that each row of the table describes.",
+      "gradingMode": "exact",
+      "answerKey": "6",
+      "acceptedVariants": [],
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D1.2",
+      "promptHtml": "Sentence B",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "5",
+      "acceptedVariants": [],
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D1.3",
+      "promptHtml": "Sentence C",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "3",
+      "acceptedVariants": [],
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D1.4",
+      "promptHtml": "Sentence D",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "2",
+      "acceptedVariants": [],
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D1.5",
+      "promptHtml": "Sentence E",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "7",
+      "acceptedVariants": [],
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D1.6",
+      "promptHtml": "Sentence F",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [],
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D1.7",
+      "promptHtml": "Sentence G",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "4",
+      "acceptedVariants": [],
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D2.1",
+      "promptHtml": "(a) Sentence B, head 8-11",
+      "part": "D2",
+      "partPrompt": "Fill in the missing data, labelled (a) to (i), in the table above. Write connections in the style \"3 -> 4\", separating several connections with a comma, or write \"None\".",
+      "gradingMode": "exact",
+      "answerKey": "1 -> 2, 4 -> 6",
+      "acceptedVariants": [
+        "4 -> 6, 1 -> 2",
+        "1->2, 4->6",
+        "1-2, 4-6"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D2.2",
+      "promptHtml": "(b) Sentence C, head 9-6",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "1 -> 5, 9 -> 13",
+      "acceptedVariants": [
+        "9 -> 13, 1 -> 5",
+        "1->5, 9->13",
+        "1-5, 9-13"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D2.3",
+      "promptHtml": "(c) Sentence D, head 8-11",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "9 -> 11",
+      "acceptedVariants": [
+        "9->11",
+        "9-11"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D2.4",
+      "promptHtml": "(d) Sentence E, head 7-6",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "None",
+      "acceptedVariants": [
+        "none",
+        "no connections"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D2.5",
+      "promptHtml": "(e) Sentence F, head 8-11",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "None",
+      "acceptedVariants": [
+        "none",
+        "no connections"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D2.6",
+      "promptHtml": "(f) Sentence G, head 8-11",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "6 -> 7",
+      "acceptedVariants": [
+        "6->7",
+        "6-7"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D2.7",
+      "promptHtml": "(g) Sentence G, head 7-6",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "10 -> 11",
+      "acceptedVariants": [
+        "10->11",
+        "10-11"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D2.8",
+      "promptHtml": "(h) Sentence G, head 9-6",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "1 -> 2",
+      "acceptedVariants": [
+        "1->2",
+        "1-2"
+      ],
+      "points": 0.625
+    },
+    {
+      "id": "D2.9",
+      "promptHtml": "(i) Sentence G, head 5-4",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "10 -> 7",
+      "acceptedVariants": [
+        "10->7",
+        "10-7"
+      ],
+      "points": 0.625
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start with sentence length. Every number that appears in a row must be the position of a real word in that sentence, so a row containing a large number can only belong to a long sentence. Count the words in each of the seven corpus sentences first.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Each column is one attention head doing one consistent job, the way head 8-10 in the example always linked a verb to its object. Look at the kinds of word pairs a column produces: one column links determiners (the, this, a) to the noun of their phrase, one links possessives (my, its, 's) to the word right after them, one links a preposition to the noun it takes as its object, and one links a word back to something earlier in the sentence that it refers to. Once you know what a column does, the numbers in it tell you which sentence the row must be.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Practise on the example sentence from the first page, which is not part of the table: \"I(1) see(2) my(3) sister(4), but(5) she(6) can't(7) see(8) me(9) because(10) she(11) is(12) reading(13) a(14) linguistics(15) book(16).\" A possessive-to-next-word head would output 3 -> 4 (my, sister); a determiner-to-noun head would output 14 -> 16 (a ... book); a refers-back head would connect she(6) or she(11) to an earlier person. Now apply the same three tests to each row of the table.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What the four columns are</h3>\n<p>An attention head is just a part of the model that, for each word, points at some other word. The example on the first page shows that head 8-10 always points from a verb's object back to the verb. The four heads in the table each have their own habit, and finding those habits is the whole puzzle.</p>\n<p>Look at row A first. Its 9-6 cell contains the number 14, so sentence A must have at least 14 words. Only one corpus sentence is that long (the NACLO exam sentence, with 15 words), so row A is pinned down immediately. Now read that row with the sentence in front of you:</p>\n<ul>\n<li>8-11 gives 12 -&gt; 13: <em>a</em> points at <em>lot</em> - a determiner pointing at its noun.</li>\n<li>7-6 gives 5 -&gt; 6: <em>my</em> points at the word right after it.</li>\n<li>9-6 gives a preposition (<em>of</em>) pointing at a nearby noun.</li>\n<li>5-4 gives 10 -&gt; 6: the pronoun <em>it</em> points back at the thing it refers to (the exam).</li>\n</ul>\n<p>So, roughly: <strong>8-11</strong> = determiner (the, this, a) to the noun of its phrase; <strong>7-6</strong> = possessive (my, her, its, 's) to the following word; <strong>9-6</strong> = preposition to the noun it governs; <strong>5-4</strong> = a word pointing back at an earlier word that means the same thing (linguists call this <em>coreference</em>).</p>\n<h3>Using the coreference column</h3>\n<p>Column 5-4 is the most distinctive, because most sentences contain no back-reference at all. Row B has 8 -&gt; 2 and 11 -&gt; 2: two different words point back to the same word #2. Scan the corpus for a sentence with two possessives that refer to one earlier noun - the platypus sentence has <em>its</em> at #8 and <em>its</em> at #11, both referring to <em>platypus</em> at #2. Row C has 11 -&gt; 3, and in the corporation sentence <em>company</em> (#11) refers back to <em>corporation</em> (#3). Row E has 5 -&gt; 1, and in the linguistics sentence <em>science</em> (#5) is what <em>Linguistics</em> (#1) is.</p>\n<h3>The rows with empty 5-4 cells</h3>\n<p>Three sentences remain for rows D, F and G, and rows D and F show \"None\" for coreference, which fits sentences that never refer back to anything.</p>\n<p>Row F's 7-6 cell is 1 -&gt; 2 and 5 -&gt; 6, so the sentence has possessives at word #1 and word #5. The Gelda's House sentence starts <em>My experience</em> (so 1 -&gt; 2) and has the clitic <em>'s</em> as word #5 followed by <em>House</em> (so 5 -&gt; 6). Its 9-6 cell, 7 -&gt; 8, is <em>of</em> pointing at <em>Gelbelgarg</em>. That row is settled.</p>\n<p>Row D's 7-6 cell has a single possessive at #4, and its 9-6 cell has a preposition at #12 pointing at #13. The Google models sentence has <em>'s</em> as word #4 before <em>models</em>, and <em>of</em> as word #12 before <em>language</em>. Row G, whose cells are all blank, therefore gets the one sentence left over.</p>\n<h3>Filling the blanks</h3>\n<p>Once each row has a sentence, you just apply the column's rule. For a determiner cell (8-11) list every article or demonstrative and the noun of its phrase - notice from row D that when a modifier sits in between, as in <em>the inner workings</em>, the head still reaches the noun. If a sentence has no article or demonstrative at all (the Gelda's House sentence has only possessives), the honest answer is \"None\". Likewise the possessive column is \"None\" for the linguistics sentence, which contains no possessive.</p>\n<p>For row G, work through the sentence word by word: the determiner <em>the</em> and its noun give the 8-11 entry, the possessive <em>her</em> and the following word give the 7-6 entry, the opening preposition and its object give the 9-6 entry, and <em>her</em> pointing back to the person mentioned earlier gives the 5-4 entry.</p>\n<h3>Why the data looks slightly messy</h3>\n<p>These are real outputs from a real model, so a couple of cells are imperfect: in row E the determiner head lands on the adjective rather than the noun (<em>a</em> -&gt; <em>beautiful</em>), and the preposition head in row B produces nothing at all. That is normal - an attention head learns a tendency, not a rule, which is exactly why researchers use a whole corpus rather than one sentence to work out what a head has learned.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution page (D1: A 6, B 5, C 3, D 2, E 7, F 1, G 4; D2 (a)-(i) as printed). The booklet prints the connection symbol as a right arrow; per the ASCII-only rule for non-script symbols it is transcribed everywhere (body, prompts, answer keys) as \"->\". If the site's fonts do carry the arrow, a reviewer may swap \"->\" back to the arrow globally - do it in body, prompts, keys and variants together. No official per-part point breakdown is shown, so the 10 points are split evenly over the 16 blanks (0.625 each); adjust if a breakdown is found. No figures in this problem.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:d1.1:choices",
+      "a": "1|2|3|4|5|6|7",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:d1.2:choices",
+      "a": "1|2|3|4|5|6|7",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:d1.3:choices",
+      "a": "1|2|3|4|5|6|7",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:d1.4:choices",
+      "a": "1|2|3|4|5|6|7",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:d1.5:choices",
+      "a": "1|2|3|4|5|6|7",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:d1.6:choices",
+      "a": "1|2|3|4|5|6|7",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:d1.7:choices",
+      "a": "1|2|3|4|5|6|7",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 7 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~7 API calls that would not resolve it"
+    }
+  ]
+}

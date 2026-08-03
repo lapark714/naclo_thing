@@ -1,0 +1,515 @@
+{
+  "id": "2020-open-A",
+  "tier": "full",
+  "year": 2020,
+  "round": "open",
+  "letter": "A",
+  "title": "Let That Mongo!",
+  "authors": [
+    "Kevin Liang"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "phonology",
+    "morphology"
+  ],
+  "formTag": "table completion",
+  "difficulty": "intro",
+  "languages": [
+    "Mongo"
+  ],
+  "officialPoints": 5,
+  "officialTimeMinutes": 10,
+  "bodyHtml": "<p>Mongo (also known as Nkundo or Lomongo) is a Bantu language spoken by the Mongo Peoples of the central Democratic Republic of the Congo. Presently, there are around 400,000 native speakers spread out over a large area around the Congo River.</p>\n<p>Below is a table showing a few verb conjugations in Lomongo. [d͡ʒ] is a consonant pronounced like the [j] in the English word <em>jump</em>. [ŋ] is a consonant pronounced like the [ng] at the end of the English word <em>sing</em>.</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th><em>Imperative</em></th><th><em>2nd singular</em></th><th><em>3rd singular</em></th><th><em>3rd plural</em></th><th><em>English</em></th></tr>\n</thead>\n<tbody>\n<tr><td><span class=\"data\">bota</span></td><td><span class=\"data\">oota</span></td><td><span class=\"data\">aota</span></td><td><span class=\"data\">baota</span></td><td>&lsquo;beget&rsquo; (to give rise to; to bring about)</td></tr>\n<tr><td><span class=\"data\">kamba</span></td><td><span class=\"data\">okamba</span></td><td><span class=\"data\">akamba</span></td><td><span class=\"data\">bakamba</span></td><td>&lsquo;work&rsquo;</td></tr>\n<tr><td><span class=\"data\">imed͡ʒa</span></td><td><span class=\"data\">wimed͡ʒa</span></td><td><span class=\"data\">imed͡ʒa</span></td><td><span class=\"data\">bimed͡ʒa</span></td><td>&lsquo;consent&rsquo;</td></tr>\n<tr><td><span class=\"data\">usa</span></td><td><span class=\"data\">wusa</span></td><td><span class=\"data\">usa</span></td><td><span class=\"data\">busa</span></td><td>&lsquo;throw&rsquo;</td></tr>\n<tr><td><span class=\"data\">bata</span></td><td><span class=\"data\">oata</span></td><td><span class=\"data\">aata</span></td><td><span class=\"data\">baata</span></td><td>&lsquo;get&rsquo;</td></tr>\n<tr><td><span class=\"data\">ɛna</span></td><td><span class=\"data\">wɛna</span></td><td><span class=\"data\">ɛna</span></td><td><span class=\"data\">bɛna</span></td><td>&lsquo;see&rsquo;</td></tr>\n<tr><td><span class=\"data\">isa</span></td><td><span class=\"data\">wisa</span></td><td><span class=\"data\">isa</span></td><td><span class=\"data\">bisa</span></td><td>&lsquo;hide&rsquo;</td></tr>\n<tr><td><span class=\"data\">d͡ʒila</span></td><td><span class=\"data\">od͡ʒila</span></td><td><span class=\"data\">ad͡ʒila</span></td><td><span class=\"data\">bad͡ʒila</span></td><td>&lsquo;wait&rsquo;</td></tr>\n<tr><td><span class=\"data\">ina</span></td><td><span class=\"data\">wina</span></td><td><span class=\"data\">ina</span></td><td><span class=\"data\">bina</span></td><td>&lsquo;hate&rsquo;</td></tr>\n<tr><td><span class=\"data\">bina</span></td><td><span class=\"data\">oina</span></td><td><span class=\"data\">aina</span></td><td><span class=\"data\">baina</span></td><td>&lsquo;dance&rsquo;</td></tr>\n<tr><td><span class=\"data\">asa</span></td><td><span class=\"data\">wasa</span></td><td><span class=\"data\">asa</span></td><td><span class=\"data\">basa</span></td><td>&lsquo;search&rsquo;</td></tr>\n<tr><td><span class=\"data\">saŋga</span></td><td><span class=\"data\">osaŋga</span></td><td><span class=\"data\">asaŋga</span></td><td><span class=\"data\">basaŋga</span></td><td>&lsquo;say&rsquo;</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>A1.</strong> Explain how these Mongo verb forms work by filling in the blanks below.</p>\n<p>Each Mongo verb has a root form. The 4 verb forms shown here are formed by adding a prefix before the root form. The prefix for the imperative form is <span class=\"blank\" data-q=\"A1.1\" data-label=\"(1)\"></span>, the prefix for the 2nd singular form is <span class=\"blank\" data-q=\"A1.2\" data-label=\"(2)\"></span>, the prefix for the 3rd singular form is <span class=\"blank\" data-q=\"A1.3\" data-label=\"(3)\"></span>, and the prefix for the 3rd plural form is <span class=\"blank\" data-q=\"A1.4\" data-label=\"(4)\"></span>. (Note that some of these prefixes may be empty; to note this, write the symbol Ø-).</p>\n<p>However, we are not done yet: to get the final verb form, we must apply some sound change rules. The relevant rules are:</p>\n<ol>\n<li>If there are two <span class=\"blank\" data-q=\"A1.5\" data-label=\"(5)\"></span>, in a row, delete <span class=\"blank\" data-q=\"A1.6\" data-label=\"(6)\"></span>.</li>\n<li>Delete <span class=\"blank\" data-q=\"A1.7\" data-label=\"(7)\"></span> when it appears between two <span class=\"blank\" data-q=\"A1.8\" data-label=\"(8)\"></span>.</li>\n<li>Change <span class=\"blank\" data-q=\"A1.9\" data-label=\"(9)\"></span> to <span class=\"blank\" data-q=\"A1.10\" data-label=\"(10)\"></span> when it appears before a <span class=\"blank\" data-q=\"A1.11\" data-label=\"(11)\"></span>.</li>\n</ol>\n<p>There is one final wrinkle: the order that these rules are applied in matters. The rules must be applied in this order: First apply rule <span class=\"blank\" data-q=\"A1.12\" data-label=\"(12)\"></span>, then rule <span class=\"blank\" data-q=\"A1.13\" data-label=\"(13)\"></span>, then rule <span class=\"blank\" data-q=\"A1.14\" data-label=\"(14)\"></span>.</p>\n<p><strong>A2.</strong> Fill in the blanks (1-19) in the table below.</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th><em>Imperative</em></th><th><em>2nd singular</em></th><th><em>3rd singular</em></th><th><em>3rd plural</em></th><th><em>English</em></th></tr>\n</thead>\n<tbody>\n<tr><td><span class=\"data\">bakisa</span></td><td><span class=\"blank\" data-q=\"A2.1\" data-label=\"(1)\"></span></td><td><span class=\"blank\" data-q=\"A2.2\" data-label=\"(2)\"></span></td><td><span class=\"blank\" data-q=\"A2.3\" data-label=\"(3)\"></span></td><td>&lsquo;add&rsquo;</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.4\" data-label=\"(4)\"></span></td><td><span class=\"data\">wanda</span></td><td><span class=\"blank\" data-q=\"A2.5\" data-label=\"(5)\"></span></td><td><span class=\"blank\" data-q=\"A2.6\" data-label=\"(6)\"></span></td><td>&lsquo;begin&rsquo;</td></tr>\n<tr><td><span class=\"data\">solola</span></td><td><span class=\"blank\" data-q=\"A2.7\" data-label=\"(7)\"></span></td><td><span class=\"blank\" data-q=\"A2.8\" data-label=\"(8)\"></span></td><td><span class=\"data\">basolola</span></td><td>&lsquo;chat&rsquo;</td></tr>\n<tr><td><span class=\"data\">ponama</span></td><td><span class=\"blank\" data-q=\"A2.9\" data-label=\"(9)\"></span></td><td><span class=\"data\">aponama</span></td><td><span class=\"blank\" data-q=\"A2.10\" data-label=\"(10)\"></span></td><td>&lsquo;elect&rsquo;</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.11\" data-label=\"(11)\"></span></td><td><span class=\"data\">oowa</span></td><td><span class=\"blank\" data-q=\"A2.12\" data-label=\"(12)\"></span></td><td><span class=\"blank\" data-q=\"A2.13\" data-label=\"(13)\"></span></td><td>&lsquo;cure&rsquo;</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.14\" data-label=\"(14)\"></span></td><td><span class=\"blank\" data-q=\"A2.15\" data-label=\"(15)\"></span></td><td><span class=\"data\">aalusa</span></td><td><span class=\"blank\" data-q=\"A2.16\" data-label=\"(16)\"></span></td><td>&lsquo;turn&rsquo;</td></tr>\n<tr><td><span class=\"data\">loŋga</span></td><td><span class=\"blank\" data-q=\"A2.17\" data-label=\"(17)\"></span></td><td><span class=\"blank\" data-q=\"A2.18\" data-label=\"(18)\"></span></td><td><span class=\"blank\" data-q=\"A2.19\" data-label=\"(19)\"></span></td><td>&lsquo;win&rsquo;</td></tr>\n</tbody>\n</table>\n</div>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "A1.1",
+      "promptHtml": "Blank (1): the prefix for the imperative form",
+      "part": "A1",
+      "partPrompt": "Explain how these Mongo verb forms work by filling in the blanks (1)-(14). Note that some prefixes may be empty; to note this, write the symbol Ø-.",
+      "gradingMode": "exact",
+      "answerKey": "Ø-",
+      "acceptedVariants": [
+        "Ø",
+        "no prefix",
+        "0-",
+        "0",
+        "none",
+        "empty"
+      ],
+      "points": 0.14
+    },
+    {
+      "id": "A1.2",
+      "promptHtml": "Blank (2): the prefix for the 2nd singular form",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "o-",
+      "acceptedVariants": [
+        "o",
+        "w-",
+        "w"
+      ],
+      "points": 0.14
+    },
+    {
+      "id": "A1.3",
+      "promptHtml": "Blank (3): the prefix for the 3rd singular form",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "a-",
+      "acceptedVariants": [
+        "a"
+      ],
+      "points": 0.14
+    },
+    {
+      "id": "A1.4",
+      "promptHtml": "Blank (4): the prefix for the 3rd plural form",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "ba-",
+      "acceptedVariants": [
+        "ba"
+      ],
+      "points": 0.14
+    },
+    {
+      "id": "A1.5",
+      "promptHtml": "Blank (5): Rule 1 &mdash; if there are two ___ in a row",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "vowels",
+      "acceptedVariants": [
+        "vowel"
+      ],
+      "points": 0.14
+    },
+    {
+      "id": "A1.6",
+      "promptHtml": "Blank (6): Rule 1 &mdash; delete ___",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "the first one",
+      "acceptedVariants": [
+        "first one",
+        "the first",
+        "the first vowel",
+        "first"
+      ],
+      "points": 0.14
+    },
+    {
+      "id": "A1.7",
+      "promptHtml": "Blank (7): Rule 2 &mdash; delete ___",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "b",
+      "acceptedVariants": [],
+      "points": 0.14
+    },
+    {
+      "id": "A1.8",
+      "promptHtml": "Blank (8): Rule 2 &mdash; when it appears between two ___",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "vowels",
+      "acceptedVariants": [
+        "vowel"
+      ],
+      "points": 0.14
+    },
+    {
+      "id": "A1.9",
+      "promptHtml": "Blank (9): Rule 3 &mdash; change ___",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "o",
+      "acceptedVariants": [
+        "w"
+      ],
+      "points": 0.14
+    },
+    {
+      "id": "A1.10",
+      "promptHtml": "Blank (10): Rule 3 &mdash; to ___",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "w",
+      "acceptedVariants": [
+        "o"
+      ],
+      "points": 0.14
+    },
+    {
+      "id": "A1.11",
+      "promptHtml": "Blank (11): Rule 3 &mdash; when it appears before a ___",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "vowel",
+      "acceptedVariants": [
+        "vowels",
+        "consonant",
+        "consonants"
+      ],
+      "points": 0.14
+    },
+    {
+      "id": "A1.12",
+      "promptHtml": "Blank (12): first apply rule ___",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "3",
+      "acceptedVariants": [
+        "1"
+      ],
+      "points": 0.14
+    },
+    {
+      "id": "A1.13",
+      "promptHtml": "Blank (13): then rule ___",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [
+        "3"
+      ],
+      "points": 0.14
+    },
+    {
+      "id": "A1.14",
+      "promptHtml": "Blank (14): then rule ___",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "2",
+      "acceptedVariants": [],
+      "points": 0.14
+    },
+    {
+      "id": "A2.1",
+      "promptHtml": "Blank (1): 2nd singular of &lsquo;add&rsquo; (imperative <span class=\"data\">bakisa</span>)",
+      "part": "A2",
+      "partPrompt": "Fill in the blanks (1)-(19) in the second table.",
+      "gradingMode": "exact",
+      "answerKey": "oakisa",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.2",
+      "promptHtml": "Blank (2): 3rd singular of &lsquo;add&rsquo;",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "aakisa",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.3",
+      "promptHtml": "Blank (3): 3rd plural of &lsquo;add&rsquo;",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "baakisa",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.4",
+      "promptHtml": "Blank (4): imperative of &lsquo;begin&rsquo; (2nd singular <span class=\"data\">wanda</span>)",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "anda",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.5",
+      "promptHtml": "Blank (5): 3rd singular of &lsquo;begin&rsquo;",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "anda",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.6",
+      "promptHtml": "Blank (6): 3rd plural of &lsquo;begin&rsquo;",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "banda",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.7",
+      "promptHtml": "Blank (7): 2nd singular of &lsquo;chat&rsquo; (imperative <span class=\"data\">solola</span>)",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "osolola",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.8",
+      "promptHtml": "Blank (8): 3rd singular of &lsquo;chat&rsquo;",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "asolola",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.9",
+      "promptHtml": "Blank (9): 2nd singular of &lsquo;elect&rsquo; (imperative <span class=\"data\">ponama</span>)",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "oponama",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.10",
+      "promptHtml": "Blank (10): 3rd plural of &lsquo;elect&rsquo;",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "baponama",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.11",
+      "promptHtml": "Blank (11): imperative of &lsquo;cure&rsquo; (2nd singular <span class=\"data\">oowa</span>)",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "bowa",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.12",
+      "promptHtml": "Blank (12): 3rd singular of &lsquo;cure&rsquo;",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "aowa",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.13",
+      "promptHtml": "Blank (13): 3rd plural of &lsquo;cure&rsquo;",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "baowa",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.14",
+      "promptHtml": "Blank (14): imperative of &lsquo;turn&rsquo; (3rd singular <span class=\"data\">aalusa</span>)",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "balusa",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.15",
+      "promptHtml": "Blank (15): 2nd singular of &lsquo;turn&rsquo;",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "oalusa",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.16",
+      "promptHtml": "Blank (16): 3rd plural of &lsquo;turn&rsquo;",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "baalusa",
+      "acceptedVariants": [],
+      "points": 0.16
+    },
+    {
+      "id": "A2.17",
+      "promptHtml": "Blank (17): 2nd singular of &lsquo;win&rsquo; (imperative <span class=\"data\">loŋga</span>)",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "oloŋga",
+      "acceptedVariants": [
+        "olonga"
+      ],
+      "points": 0.16
+    },
+    {
+      "id": "A2.18",
+      "promptHtml": "Blank (18): 3rd singular of &lsquo;win&rsquo;",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "aloŋga",
+      "acceptedVariants": [
+        "alonga"
+      ],
+      "points": 0.16
+    },
+    {
+      "id": "A2.19",
+      "promptHtml": "Blank (19): 3rd plural of &lsquo;win&rsquo;",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "baloŋga",
+      "acceptedVariants": [
+        "balonga"
+      ],
+      "points": 0.16
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start with rows whose imperative begins with a consonant that is not b, such as 'work' (kamba) or 'say' (saŋga). In those rows nothing seems to get lost, so you can read the three person markers straight off the front of the words.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Now compare rows whose imperative begins with a vowel and rows whose imperative begins with b. Three small adjustments are at work: two vowels next to each other cannot both survive, a b between two vowels disappears, and o and w are two shapes of the same sound (one appears before a vowel, the other before a consonant). The tricky part is deciding which adjustment happens first, since applying them in a different order can give a different result.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try the given row for 'search': imperative asa, 2nd singular wasa. Attaching the 2nd-singular marker to asa puts two vowels side by side. If you collapsed those two vowels first you would just get asa back, which is not the printed form, so the other adjustment has to happen before the collapsing rule. Tracing it in that order gives wasa. Use the same reasoning to decide where the b-deletion rule belongs by testing the given row for 'get' (bata, aata).",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What we are looking for</h3>\n<p>Each verb has a <em>root</em> (the bare meaning-carrying part). The four columns are built by putting a small piece, a <strong>prefix</strong>, in front of the root. But the printed forms are not always just prefix + root: some sounds get squeezed out or changed when the two pieces meet. That is what the rules in A1 describe.</p>\n<h3>Step 1: read the prefixes off the easy rows</h3>\n<p>Pick a row where the imperative starts with a consonant other than b, for example &lsquo;work&rsquo;:</p>\n<ul>\n<li>imperative <span class=\"data\">kamba</span></li>\n<li>2nd singular <span class=\"data\">okamba</span></li>\n<li>3rd singular <span class=\"data\">akamba</span></li>\n<li>3rd plural <span class=\"data\">bakamba</span></li>\n</ul>\n<p>The imperative is the bare root, so the imperative prefix is empty (written Ø-). The other three columns simply add o-, a- and ba-. The row for &lsquo;say&rsquo; (<span class=\"data\">saŋga</span>, <span class=\"data\">osaŋga</span>, <span class=\"data\">asaŋga</span>, <span class=\"data\">basaŋga</span>) confirms this.</p>\n<h3>Step 2: what happens when the root starts with a vowel</h3>\n<p>Look at &lsquo;hide&rsquo;: root <span class=\"data\">isa</span>. The 3rd singular is <span class=\"data\">isa</span>, not <em>aisa</em>: a + isa has two vowels in a row, and the first one drops. The 3rd plural is <span class=\"data\">bisa</span>, not <em>baisa</em>: in ba + isa the a and the i are again next to each other, and again the first one goes. That is <strong>Rule 1: if there are two vowels in a row, delete the first one.</strong></p>\n<p>The 2nd singular is <span class=\"data\">wisa</span>. Here o + isa did not simply lose its o; the o turned into w. Compare <span class=\"data\">okamba</span> (o before a consonant) with <span class=\"data\">wisa</span>, <span class=\"data\">wusa</span>, <span class=\"data\">wɛna</span>, <span class=\"data\">wasa</span> (o before a vowel). So <strong>Rule 3: change o to w before a vowel.</strong></p>\n<h3>Step 3: what happens when the root starts with b</h3>\n<p>Look at &lsquo;dance&rsquo;: imperative <span class=\"data\">bina</span>, 3rd plural <span class=\"data\">baina</span>. The prefix ba- plus the root bina should give <em>babina</em>, but the second b has vanished, leaving a-i as neighbours. Same in &lsquo;get&rsquo;: a + bata gives <span class=\"data\">aata</span>, and o + bata gives <span class=\"data\">oata</span>. In every case the missing sound sat between two vowels. That is <strong>Rule 2: delete b between two vowels.</strong></p>\n<h3>Step 4: why the order matters</h3>\n<p>Two orderings can be tested against the data.</p>\n<p><em>Rule 3 before Rule 1.</em> Take &lsquo;search&rsquo;, root <span class=\"data\">asa</span>. If we collapsed the vowels first, o + asa would become <em>asa</em> and the 2nd singular would look exactly like the imperative. It does not: it is <span class=\"data\">wasa</span>. So the o-to-w change must come first, turning o + asa into w + asa = <span class=\"data\">wasa</span>, and then there are no longer two vowels in a row for Rule 1 to touch.</p>\n<p><em>Rule 1 before Rule 2.</em> Take &lsquo;get&rsquo;, root <span class=\"data\">bata</span>, 3rd singular <span class=\"data\">aata</span>. If we deleted the b first we would get a-a-ta, and Rule 1 would then collapse the two a's into <em>ata</em> &mdash; the wrong answer. Applying Rule 1 first (there are no adjacent vowels in a + bata, so nothing happens) and only then deleting the b gives <span class=\"data\">aata</span>, which is correct. So the order is Rule 3, Rule 1, Rule 2.</p>\n<h3>A second, equally good analysis</h3>\n<p>The official solution accepts a mirror-image account: the 2nd-singular prefix is w- rather than o-, and the third rule instead changes w to o before a <em>consonant</em> (w + kamba gives <span class=\"data\">okamba</span>, while w + asa stays <span class=\"data\">wasa</span>). With that version the order is Rule 1, Rule 3, Rule 2. Either analysis predicts exactly the same forms, so both are marked correct &mdash; but you must keep one story consistent, not mix the two.</p>\n<h3>Step 5: filling in the table</h3>\n<p>First recover the root from whatever form is given, then rebuild the others.</p>\n<ul>\n<li>&lsquo;add&rsquo;: imperative <span class=\"data\">bakisa</span>, so the root is bakisa. o + bakisa: the b is between o and a, so it drops, giving <span class=\"data\">oakisa</span>; a + bakisa gives <span class=\"data\">aakisa</span>; ba + bakisa gives <span class=\"data\">baakisa</span>.</li>\n<li>&lsquo;begin&rsquo;: the 2nd singular <span class=\"data\">wanda</span> shows a w before a vowel, so the root begins with a vowel: anda. The imperative is therefore <span class=\"data\">anda</span>. a + anda collapses to <span class=\"data\">anda</span>; ba + anda collapses to <span class=\"data\">banda</span>.</li>\n<li>&lsquo;cure&rsquo;: the 2nd singular is <span class=\"data\">oowa</span>. If the root started with a vowel we would expect a w, so the root must start with b whose deletion left the two o's: root bowa. Then a + bowa gives <span class=\"data\">aowa</span> and ba + bowa gives <span class=\"data\">baowa</span>.</li>\n<li>&lsquo;turn&rsquo;: the 3rd singular <span class=\"data\">aalusa</span> has two a's, which means a b was deleted: root balusa. Hence the 2nd singular <span class=\"data\">oalusa</span> and the 3rd plural <span class=\"data\">baalusa</span>.</li>\n<li>&lsquo;chat&rsquo;, &lsquo;elect&rsquo; and &lsquo;win&rsquo; start with s, p and l, so nothing is deleted or changed at all: just add o-, a- and ba-.</li>\n</ul>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official 2-page solution. A1 has TWO accepted analyses: (1) Ø-, (2) o- / w-, (3) a-, (4) ba-, (5) vowels, (6) the first one, (7) b, (8) vowels, (9) o / w, (10) w / o, (11) vowel / consonant, (12) 3 / 1, (13) 1 / 3, (14) 2. The alternates are listed as acceptedVariants on blanks 2, 9, 10, 11, 12, 13, so a mixed-analysis answer would also be accepted by the auto-grader; a human may wish to check internal consistency. Special characters to verify against the PDF: Ø (blank 1 key and body text), ŋ in saŋga/loŋga/oloŋga/aloŋga/baloŋga, ɛ in ɛna/wɛna/bɛna, and d͡ʒ (d + combining double inverted breve U+0361 + ʒ) in imed͡ʒa, wimed͡ʒa, bimed͡ʒa, d͡ʒila, od͡ʒila, ad͡ʒila, bad͡ʒila. Point split: 14 A1 blanks at 0.14 (1.96) + 19 A2 blanks at 0.16 (3.04) = 5.00; the booklet gives no per-blank breakdown.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "cell:9",
+      "a": "&lsquo;beget&rsquo; (to give rise to; to bring about)",
+      "b": "‘beget’ (to give rise to; to bring about)"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:14",
+      "a": "&lsquo;work&rsquo;",
+      "b": "‘work’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:19",
+      "a": "&lsquo;consent&rsquo;",
+      "b": "‘consent’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:24",
+      "a": "&lsquo;throw&rsquo;",
+      "b": "‘throw’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:29",
+      "a": "&lsquo;get&rsquo;",
+      "b": "‘get’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:34",
+      "a": "&lsquo;see&rsquo;",
+      "b": "‘see’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:39",
+      "a": "&lsquo;hide&rsquo;",
+      "b": "‘hide’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:44",
+      "a": "&lsquo;wait&rsquo;",
+      "b": "‘wait’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:49",
+      "a": "&lsquo;hate&rsquo;",
+      "b": "‘hate’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:54",
+      "a": "&lsquo;dance&rsquo;",
+      "b": "‘dance’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:59",
+      "a": "&lsquo;search&rsquo;",
+      "b": "‘search’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:64",
+      "a": "&lsquo;say&rsquo;",
+      "b": "‘say’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:74",
+      "a": "&lsquo;add&rsquo;",
+      "b": "‘add’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:79",
+      "a": "&lsquo;begin&rsquo;",
+      "b": "‘begin’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:84",
+      "a": "&lsquo;chat&rsquo;",
+      "b": "‘chat’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:89",
+      "a": "&lsquo;elect&rsquo;",
+      "b": "‘elect’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:94",
+      "a": "&lsquo;cure&rsquo;",
+      "b": "‘cure’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:99",
+      "a": "&lsquo;turn&rsquo;",
+      "b": "‘turn’"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:104",
+      "a": "&lsquo;win&rsquo;",
+      "b": "‘win’"
+    },
+    {
+      "kind": "witness",
+      "path": "data:11",
+      "a": "bimed͡ʒa",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 20 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~20 API calls that would not resolve it"
+    }
+  ]
+}

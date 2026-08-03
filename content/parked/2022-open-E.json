@@ -1,0 +1,474 @@
+{
+  "id": "2022-open-E",
+  "tier": "full",
+  "year": 2022,
+  "round": "open",
+  "letter": "E",
+  "title": "Sleeping in the Shade",
+  "authors": [
+    "Aleka Blackwell"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "syntax",
+    "phonology",
+    "morphology"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "standard",
+  "languages": [
+    "Ik"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>The data in this problem are drawn from Ik, the native language of the Ik people who live on a narrow swath of land in the northeastern corner of Uganda, East Africa. (A map is provided below.) The people call their language <span class=\"data\">Icétôd</span>, which means &lsquo;Ik-speech&rsquo; or &lsquo;Ik-talk&rsquo; and is pronounced ee-CHAY-TOad or [ītʃétôd] in phonetic symbols. Approximately 7,500 people are native speakers of Ik.</p>\n<p>The Ik phrases and sentences in this problem are written in the commonly used orthography. Keep in mind the following as you examine the data:</p>\n<ul>\n<li>The digraph <em>ts</em> and the trigraph <em>ts&rsquo;</em> are used to represent two different consonant sounds in Ik.</li>\n<li>A diacritic borrowed from the International Phonetic Alphabet has been added to the data to reflect a pronunciation feature relevant to the problem. The symbol is a small ring that appears below a letter. This diacritic reflects that the sound represented orthographically is pronounced without the vocal folds vibrating or, in less technical terms, is whispered by the native speakers of the language. Something similar happens in English when native speakers pronounce words like <em>p<u>o</u>tato</em> [pʰə̥ˈtʰeɪ̯ɾoʊ̯] and <em>p<u>e</u>culiar</em> [pʰə̥ˈkʲuːliɚ] where the vowel in the first syllable becomes voiceless. To appreciate how this phonetic process works, try saying the word <em>peculiar</em> or <em>potato</em> with a pause between the first and second syllable of the word, and notice that your vocal folds do not begin vibrating until you pronounce the second syllable of the word. In the case of English, the vowel in the first syllable of words with this phonological structure is <em>devoiced</em>, which means it is pronounced without vocal fold vibration.</li>\n</ul>\n<p>In the left column below appear sentences and phrases in Ik. In the right column, their English translations appear in a scrambled order.</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>1.</td><td><span class=\"data\">Ƙaa bee abaŋḁ.</span></td></tr>\n<tr><td>2.</td><td><span class=\"data\">Atse̥.</span></td></tr>\n<tr><td>3.</td><td><span class=\"data\">Epa ŋoka na ɓets&rsquo;ḁ.</span></td></tr>\n<tr><td>4.</td><td><span class=\"data\">Minia ɲecayḁ.</span></td></tr>\n<tr><td>5.</td><td><span class=\"data\">Ats&rsquo;a ŋoka ɔkakḁ.</span></td></tr>\n<tr><td>6.</td><td><span class=\"data\">Ƙae zeƙwe̥.</span></td></tr>\n<tr><td>7.</td><td><span class=\"data\">Atsia hoo̥.</span></td></tr>\n<tr><td>8.</td><td><span class=\"data\">Epa ŋoka ɲcie kuruo̥.</span></td></tr>\n<tr><td>9.</td><td><span class=\"data\">Atsima bee Isopiao̥.</span></td></tr>\n<tr><td>10.</td><td><span class=\"data\">Mina cekia ntsie̥.</span></td></tr>\n<tr><td>11.</td><td><span class=\"data\">hoika dii ɲcie leɓetse ni gaanḁ</span></td></tr>\n<tr><td>12.</td><td><span class=\"data\">Ƙaa oŋoro̥.</span></td></tr>\n<tr><td>13.</td><td><span class=\"data\">Epa ŋoka kuruo na daḁ.</span></td></tr>\n<tr><td>14.</td><td><span class=\"data\">hoikḁ</span></td></tr>\n<tr><td>15.</td><td><span class=\"data\">Epa bee ŋoka hoo̥.</span></td></tr>\n<tr><td>16.</td><td><span class=\"data\">Atsa abaŋa Isopiao̥.</span></td></tr>\n<tr><td>17.</td><td><span class=\"data\">Epa oŋorḁ.</span></td></tr>\n<tr><td>18.</td><td><span class=\"data\">Mina ɲakawakḁ.</span></td></tr>\n<tr><td>19.</td><td><span class=\"data\">hoika dii</span></td></tr>\n</tbody>\n</table>\n</div>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>A.</td><td><em>My dog is sleeping in the shade.</em></td></tr>\n<tr><td>B.</td><td><em>these two huts of mine that are bad</em></td></tr>\n<tr><td>C.</td><td><em>We came from Ethiopia.</em></td></tr>\n<tr><td>D.</td><td><em>The dog is sleeping in the nice shade.</em></td></tr>\n<tr><td>E.</td><td><em>The dog slept in the hut.</em></td></tr>\n<tr><td>F.</td><td><em>Come.</em></td></tr>\n<tr><td>G.</td><td><em>He loves coffee.</em></td></tr>\n<tr><td>H.</td><td><em>Father is coming from Ethiopia.</em></td></tr>\n<tr><td>I.</td><td><em>these huts</em></td></tr>\n<tr><td>J.</td><td><em>The dog that is white is sleeping.</em></td></tr>\n<tr><td>K.</td><td><em>I love tea.</em></td></tr>\n<tr><td>L.</td><td><em>Go sit.</em></td></tr>\n<tr><td>M.</td><td><em>The elephant is sleeping.</em></td></tr>\n<tr><td>N.</td><td><em>He loves his wife.</em></td></tr>\n<tr><td>O.</td><td><em>the huts</em></td></tr>\n<tr><td>P.</td><td><em>Father went.</em></td></tr>\n<tr><td>Q.</td><td><em>I am coming from the hut.</em></td></tr>\n<tr><td>R.</td><td><em>The dog is chewing the bone.</em></td></tr>\n<tr><td>S.</td><td><em>He is going with the elephant.</em></td></tr>\n</tbody>\n</table>\n</div>\n<figure><img src=\"/content-assets/2022-open-E-map.png\" alt=\"Map of the border region of Uganda, South Sudan, Kenya and Ethiopia showing the small Ik-speaking area near Lake Turkana, surrounded by neighbouring language areas such as Turkana, Karimojong, Toposa, Acholi and Dholuo.\" /></figure>\n<p><strong>E2.</strong> You matched the two Ik sentences below to their well-formed English translations above in E1. Your new task is to translate them word-for-word into English in a way that reveals the meaning of each Ik word, as we have started doing for S1.</p>\n<p>S1. <span class=\"data\">Epa ŋoka kuruo na daḁ.</span> Sleeps <span class=\"blank\" data-q=\"E2.1\"></span> in-shade <span class=\"blank\" data-q=\"E2.2\"></span>.</p>\n<p>S2. <span class=\"data\">Epa ŋoka na ɓets&rsquo;ḁ.</span> <span class=\"blank\" data-q=\"E2.3\"></span>.</p>\n<p><strong>E3.</strong> Translate into Ik. If there are two possible translations into Ik, please provide them both.</p>\n<ol type=\"a\">\n<li>these</li>\n<li>my huts</li>\n<li>I love my wife.</li>\n<li>Father is coming from the nice hut.</li>\n</ol>\n<p><strong>E4.</strong> Translate into English. If you can think of two structurally different translations into English, please provide them both.</p>\n<ol type=\"a\">\n<li><span class=\"data\">Zeƙwata oŋorika kuruo̥.</span></li>\n<li><span class=\"data\">Mina ŋoka ɔkaka ntsie̥.</span></li>\n<li><span class=\"data\">Minima oŋorika ni epḁ.</span></li>\n<li><span class=\"data\">ŋoka na ɲcie̥</span></li>\n</ol>\n<p><strong>E5.</strong> Select the best option regarding the Ik phrases P1 and P2 below.</p>\n<p>P1. <span class=\"data\">hoika dii ɲcie leɓetse̥</span><br />P2. <span class=\"data\">hoika dii ɲcie ni leɓetse̥</span></p>\n<p>(a) Only P1 is grammatical.<br />(b) Only P2 is grammatical.<br />(c) Both P1 and P2 are grammatical.<br />(d) Neither P1 nor P2 is grammatical.</p>\n<p><strong>E6.</strong> State a rule that describes when speakers of Ik devoice vowels in their utterances.</p>\n<p><strong>E7.</strong> Some argue that Ik does not have adjectives as a grammatical category of words in the same way that English does. Give the numbers (1-19) of two sentences or phrases that would make people think this.</p>",
+  "assets": [
+    {
+      "src": "/content-assets/2022-open-E-map.png",
+      "alt": "Map of the border region of Uganda, South Sudan, Kenya and Ethiopia showing the small Ik-speaking area near Lake Turkana, surrounded by neighbouring language areas such as Turkana, Karimojong, Toposa, Acholi and Dholuo."
+    }
+  ],
+  "questions": [
+    {
+      "id": "E1.1",
+      "promptHtml": "1. <span class=\"data\">Ƙaa bee abaŋḁ.</span>",
+      "part": "E1",
+      "partPrompt": "Match the English sentences and phrases to their Ik translations. For each numbered Ik item, give the letter (A-S) of its English translation.",
+      "gradingMode": "exact",
+      "answerKey": "P",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.2",
+      "promptHtml": "2. <span class=\"data\">Atse̥.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.3",
+      "promptHtml": "3. <span class=\"data\">Epa ŋoka na ɓets&rsquo;ḁ.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "J",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.4",
+      "promptHtml": "4. <span class=\"data\">Minia ɲecayḁ.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.5",
+      "promptHtml": "5. <span class=\"data\">Ats&rsquo;a ŋoka ɔkakḁ.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "R",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.6",
+      "promptHtml": "6. <span class=\"data\">Ƙae zeƙwe̥.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "L",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.7",
+      "promptHtml": "7. <span class=\"data\">Atsia hoo̥.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "Q",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.8",
+      "promptHtml": "8. <span class=\"data\">Epa ŋoka ɲcie kuruo̥.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.9",
+      "promptHtml": "9. <span class=\"data\">Atsima bee Isopiao̥.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.10",
+      "promptHtml": "10. <span class=\"data\">Mina cekia ntsie̥.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.11",
+      "promptHtml": "11. <span class=\"data\">hoika dii ɲcie leɓetse ni gaanḁ</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.12",
+      "promptHtml": "12. <span class=\"data\">Ƙaa oŋoro̥.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "S",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.13",
+      "promptHtml": "13. <span class=\"data\">Epa ŋoka kuruo na daḁ.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.14",
+      "promptHtml": "14. <span class=\"data\">hoikḁ</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "O",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.15",
+      "promptHtml": "15. <span class=\"data\">Epa bee ŋoka hoo̥.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.16",
+      "promptHtml": "16. <span class=\"data\">Atsa abaŋa Isopiao̥.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.17",
+      "promptHtml": "17. <span class=\"data\">Epa oŋorḁ.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "M",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.18",
+      "promptHtml": "18. <span class=\"data\">Mina ɲakawakḁ.</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E1.19",
+      "promptHtml": "19. <span class=\"data\">hoika dii</span>",
+      "part": "E1",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [],
+      "points": 0.2
+    },
+    {
+      "id": "E2.1",
+      "promptHtml": "S1. <span class=\"data\">Epa ŋoka kuruo na daḁ</span> &mdash; first gap: Sleeps ____ in-shade ...",
+      "part": "E2",
+      "partPrompt": "You matched the two Ik sentences below to their well-formed English translations above in E1. Your new task is to translate them word-for-word into English in a way that reveals the meaning of each Ik word, as we have started doing for S1.",
+      "gradingMode": "exact",
+      "answerKey": "dog",
+      "acceptedVariants": [],
+      "points": 0.4
+    },
+    {
+      "id": "E2.2",
+      "promptHtml": "S1. <span class=\"data\">Epa ŋoka kuruo na daḁ</span> &mdash; second gap: Sleeps dog in-shade ____",
+      "part": "E2",
+      "gradingMode": "llm",
+      "answerKey": "which nice/is-nice",
+      "acceptedVariants": [
+        "which nice",
+        "which is-nice",
+        "which is nice",
+        "that is nice",
+        "that nice"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "E2.3",
+      "promptHtml": "S2. <span class=\"data\">Epa ŋoka na ɓets&rsquo;ḁ</span> &mdash; give the whole word-for-word translation.",
+      "part": "E2",
+      "gradingMode": "llm",
+      "answerKey": "Sleeps dog which white/is-white",
+      "acceptedVariants": [
+        "Sleeps dog which white",
+        "Sleeps dog which is-white",
+        "Sleeps dog that is white"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "E3.1",
+      "promptHtml": "a. these",
+      "part": "E3",
+      "partPrompt": "Translate into Ik. If there are two possible translations into Ik, please provide them both.",
+      "gradingMode": "exact",
+      "answerKey": "dii",
+      "acceptedVariants": [],
+      "points": 0.4
+    },
+    {
+      "id": "E3.2",
+      "promptHtml": "b. my huts",
+      "part": "E3",
+      "gradingMode": "llm",
+      "answerKey": "hoika ɲcie̥ / hoika na ɲcie̥",
+      "acceptedVariants": [
+        "hoika ncie / hoika na ncie",
+        "hoika ɲcie / hoika na ɲcie"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "E3.3",
+      "promptHtml": "c. I love my wife.",
+      "part": "E3",
+      "gradingMode": "llm",
+      "answerKey": "Mina cekia ɲcie̥. / Mina cekia na ɲcie̥.",
+      "acceptedVariants": [
+        "Mina cekia ncie. / Mina cekia na ncie.",
+        "Mina cekia ɲcie / Mina cekia na ɲcie"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "E3.4",
+      "promptHtml": "d. Father is coming from the nice hut.",
+      "part": "E3",
+      "gradingMode": "exact",
+      "answerKey": "Atsa abaŋa hoo na daḁ.",
+      "acceptedVariants": [
+        "Atsa abaŋa hoo na daa",
+        "Atsa abanga hoo na daa",
+        "Atsa abaŋa hoo na daḁ"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "E4.1",
+      "promptHtml": "a. <span class=\"data\">Zeƙwata oŋorika kuruo̥.</span>",
+      "part": "E4",
+      "partPrompt": "Translate into English. If you can think of two structurally different translations into English, please provide them both.",
+      "gradingMode": "llm",
+      "answerKey": "The elephants are sitting in the shade.",
+      "acceptedVariants": [],
+      "points": 0.4
+    },
+    {
+      "id": "E4.2",
+      "promptHtml": "b. <span class=\"data\">Mina ŋoka ɔkaka ntsie̥.</span>",
+      "part": "E4",
+      "gradingMode": "llm",
+      "answerKey": "The dog loves his bone.",
+      "acceptedVariants": [],
+      "points": 0.4
+    },
+    {
+      "id": "E4.3",
+      "promptHtml": "c. <span class=\"data\">Minima oŋorika ni epḁ.</span>",
+      "part": "E4",
+      "gradingMode": "llm",
+      "answerKey": "We love sleeping elephants. / We love elephants who sleep.",
+      "acceptedVariants": [
+        "We love sleeping elephants.",
+        "We love elephants who sleep."
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "E4.4",
+      "promptHtml": "d. <span class=\"data\">ŋoka na ɲcie̥</span>",
+      "part": "E4",
+      "gradingMode": "exact",
+      "answerKey": "my dog",
+      "acceptedVariants": [],
+      "points": 0.4
+    },
+    {
+      "id": "E5.1",
+      "promptHtml": "Which option is correct?",
+      "part": "E5",
+      "partPrompt": "Select the best option regarding the Ik phrases P1 (hoika dii ɲcie leɓetse̥) and P2 (hoika dii ɲcie ni leɓetse̥).",
+      "gradingMode": "exact",
+      "answerKey": "(c) Both P1 and P2 are grammatical.",
+      "acceptedVariants": [
+        "c",
+        "(c)",
+        "Both P1 and P2 are grammatical."
+      ],
+      "choices": [
+        "(a) Only P1 is grammatical.",
+        "(b) Only P2 is grammatical.",
+        "(c) Both P1 and P2 are grammatical.",
+        "(d) Neither P1 nor P2 is grammatical."
+      ],
+      "points": 0.6
+    },
+    {
+      "id": "E6.1",
+      "promptHtml": "Write the rule.",
+      "part": "E6",
+      "partPrompt": "State a rule that describes when speakers of Ik devoice vowels in their utterances.",
+      "gradingMode": "llm",
+      "answerKey": "Ik speakers devoice all vowels except for [i] in utterance-final position.",
+      "acceptedVariants": [],
+      "points": 0.6
+    },
+    {
+      "id": "E7.1",
+      "promptHtml": "Give two numbers.",
+      "part": "E7",
+      "partPrompt": "Some argue that Ik does not have adjectives as a grammatical category of words in the same way that English does. Give the numbers (1-19) of two sentences or phrases that would make people think this.",
+      "gradingMode": "exact",
+      "answerKey": "3, 11",
+      "acceptedVariants": [
+        "3, 13",
+        "11, 13",
+        "11, 3",
+        "13, 3",
+        "13, 11",
+        "3 and 11",
+        "3 and 13",
+        "11 and 13",
+        "3,11",
+        "3,13",
+        "11,13"
+      ],
+      "points": 0.6
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Ik does not put the subject first the way English does - look at which position in the Ik string the action word occupies. Then hunt for short repeated words (bee, na, ni, dii, ɲcie, ntsie) and for the endings on the longer words, especially the final vowel -a versus -o.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Three separate systems are at work. (1) Little words like na and ni link a noun to a word that describes it, and the choice between the two depends on whether the noun is one thing or several. (2) One short word always stands immediately after the action word and tells you about time. (3) The ring diacritic is not part of any word's spelling: compare where in an utterance it does and does not appear, and which vowel letters it never sits under.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Here is one safe counting step to get you started on the matching. Five Ik items begin with the same first word, Epa, and exactly five English translations mention sleeping - so the first word of an Ik sentence is the verb, and the subject comes after it. Sort both columns into groups by verb (sleep, come, go, love, chew) before you try to pair anything up; then inside each group use the extra words (length, the little word bee, possessives) to tell the members apart.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: Find the verb - it comes first</h3><p>Count first words. <span class=\"data\">Epa</span> starts five Ik items (3, 8, 13, 15, 17), and exactly five English translations talk about sleeping (A, D, E, J, M). <span class=\"data\">Mina</span>/<span class=\"data\">Minia</span> starts three items, and three English sentences talk about loving. So an Ik clause begins with its verb, and the subject follows it: Ik order is roughly Verb - Subject - other stuff. That is why the word-for-word gloss of S1 in E2 starts with <em>Sleeps</em>.</p><h3>Step 2: The little word bee marks the past</h3><p>Three items contain <span class=\"data\">bee</span> right after the verb: 1, 9, 15. The three English translations with a past-tense verb are <em>Father went</em>, <em>We came from Ethiopia</em> and <em>The dog slept in the hut</em>. Compare the pair <span class=\"data\">Atsa abaŋa Isopiao̥</span> &lsquo;Father is coming from Ethiopia&rsquo; with <span class=\"data\">Atsima bee Isopiao̥</span> &lsquo;We came from Ethiopia&rsquo;: same verb root <span class=\"data\">Ats-</span> &lsquo;come&rsquo;, and <span class=\"data\">bee</span> is what adds the pastness.</p><h3>Step 3: Endings on the verb show who does it</h3><p>The verb root <span class=\"data\">Ats-</span> &lsquo;come&rsquo; shows up as <span class=\"data\">Atsa</span> (he/she/it), <span class=\"data\">Atsia</span> (I), <span class=\"data\">Atsima</span> (we), <span class=\"data\">Atse̥</span> (command: Come!). The same endings appear on <span class=\"data\">Min-</span> &lsquo;love&rsquo;: <span class=\"data\">Mina</span> &lsquo;he loves&rsquo;, <span class=\"data\">Minia</span> &lsquo;I love&rsquo;, <span class=\"data\">Minima</span> &lsquo;we love&rsquo;. There is also a plural-subject ending <em>-ta</em>, which is why <span class=\"data\">Zeƙwata</span> in E4a goes with a plural subject.</p><h3>Step 4: Nouns and their endings</h3><p><span class=\"data\">-ika</span> makes a noun plural: <span class=\"data\">hoo</span>/<span class=\"data\">hoika</span> &lsquo;hut/huts&rsquo;, <span class=\"data\">oŋor-</span>/<span class=\"data\">oŋorika</span> &lsquo;elephant/elephants&rsquo;. The final vowel also tells you the noun's job: a subject-like form ends in <em>-a</em> (<span class=\"data\">oŋorḁ</span> &lsquo;the elephant&rsquo; as subject), while a form used for a place or accompaniment ends in <em>-o</em> (<span class=\"data\">hoo̥</span> &lsquo;in/from the hut&rsquo;, <span class=\"data\">kuruo̥</span> &lsquo;in the shade&rsquo;, <span class=\"data\">oŋoro̥</span> &lsquo;with the elephant&rsquo;, <span class=\"data\">Isopiao̥</span> &lsquo;from Ethiopia&rsquo;).</p><h3>Step 5: na, ni, and possessives</h3><p><span class=\"data\">ɲcie</span> means &lsquo;my&rsquo; and <span class=\"data\">ntsie</span> means &lsquo;his/her&rsquo;; they follow the noun, either bare or introduced by <span class=\"data\">na</span>. <span class=\"data\">na</span> and <span class=\"data\">ni</span> are relative words, roughly &lsquo;which, that&rsquo;: <span class=\"data\">na</span> after a singular noun, <span class=\"data\">ni</span> after a plural one (see item 11, which has plural <span class=\"data\">hoika</span> and <span class=\"data\">ni</span>). <span class=\"data\">dii</span> is &lsquo;these&rsquo;, <span class=\"data\">leɓetse</span> is &lsquo;two&rsquo;, <span class=\"data\">gaana</span> is &lsquo;bad&rsquo;, <span class=\"data\">daa</span> is &lsquo;nice&rsquo;, <span class=\"data\">ɓets&rsquo;a</span> is &lsquo;white&rsquo;. Item 11 lines up piece by piece: huts - these - my - two - which - bad.</p><h3>Step 6: Building the E3 and E4 answers</h3><p>For &lsquo;my huts&rsquo; you can either place the possessive straight after the noun or link it with the relative word, which is why E3b and E3c each have two correct forms. For &lsquo;Father is coming from the nice hut&rsquo;, start with the verb (&lsquo;he comes&rsquo;), then the subject &lsquo;father&rsquo;, then the hut in its <em>-o</em> place form, then the describing word introduced by the singular relative word. In E4c the string is &lsquo;we-love elephants which sleep&rsquo;, which English can render either as a relative clause (<em>elephants who sleep</em>) or as a participle (<em>sleeping elephants</em>) - two structurally different translations of one Ik sentence.</p><h3>Step 7: E5 - is ni optional before a numeral?</h3><p>Item 11 shows the full string with <span class=\"data\">ni</span> before the last describing word, and the data also show describing words attached with no relative word at all. Both patterns are attested, so both P1 and P2 are fine: the answer is (c).</p><h3>Step 8: E6 - where the ring appears</h3><p>List every place the ring occurs and every place it does not. It never appears in the middle of an utterance - <span class=\"data\">ŋoka</span>, <span class=\"data\">abaŋa</span>, <span class=\"data\">hoika</span> and the rest are plain when other words follow them - and it appears on the very last vowel of an utterance instead. The one exception is item 19, which ends in <em>i</em> and carries no ring. Hence the official rule: Ik speakers devoice all vowels except for [i] in utterance-final position. Devoicing here is the same whispered effect described for English <em>potato</em>.</p><h3>Step 9: E7 - where are the adjectives?</h3><p>In Ik, words meaning &lsquo;white&rsquo;, &lsquo;nice&rsquo; and &lsquo;bad&rsquo; do not sit next to the noun the way English adjectives do; they are attached with the relative word <span class=\"data\">na</span>/<span class=\"data\">ni</span>, exactly the way a whole clause like &lsquo;which sleeps&rsquo; is attached. That is, they behave like little verbs (&lsquo;which is-white&rsquo;), which is the reason linguists argue Ik has no separate adjective class. The items that show this most clearly are 3, 11 and 13, and any two of those three count.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "CROP /content-assets/2022-open-E-map.png page=2 x=63 y=12 w=33 h=31\nAnswer keys are copied from the official solution pages (E1 matching list, E2 glosses, E3/E4 translations, E5 = (c), E6 rule, E7 = any two of 3, 11, 13).\nDiacritics: the 'small ring below' is transcribed with combining ring below U+0325 (e.g. abaŋḁ, ntsie̥, kuruo̥). Special letters used: Ƙ/ƙ, ɓ, ɲ, ŋ, ɔ, and the apostrophe in ts'. Please verify each ringed vowel against the booklet cell by cell.\nThe IPA in the intro ([ītʃétôd], [pʰə̥ˈtʰeɪ̯ɾoʊ̯], [pʰə̥ˈkʲuːliɚ]) is my best reading of the small print and should be checked against the PDF; the tap/flap symbol in 'potato' and the palatal in 'peculiar' are the least certain.\nE5 P1/P2 in the booklet are printed as 'hoika dii ɲcie leɓetsȩ' and 'hoika dii ɲcie ni leɓetsȩ' - confirm the ring under the final e.\nE2 has three printed gaps (two in S1, one in S2) and they are wired to E2.1, E2.2, E2.3 in that order.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:e3.4:mode",
+      "a": "exact",
+      "b": "llm"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e7.1:mode",
+      "a": "exact",
+      "b": "llm"
+    },
+    {
+      "kind": "diff",
+      "path": "q:e7.1:key",
+      "a": "3, 11",
+      "b": "Any two of: sentences/phrases 3, 11, 13."
+    },
+    {
+      "kind": "diff",
+      "path": "cell:1",
+      "a": "Ƙaa bee abaŋḁ.",
+      "b": "Kaa bee abaŋḁ."
+    },
+    {
+      "kind": "diff",
+      "path": "cell:11",
+      "a": "Ƙae zeƙwe̥.",
+      "b": "Kae zeƙwe̥."
+    },
+    {
+      "kind": "diff",
+      "path": "cell:23",
+      "a": "Ƙaa oŋoro̥.",
+      "b": "Kaa oŋoro̥."
+    },
+    {
+      "kind": "witness",
+      "path": "data:3",
+      "a": "Epa ŋoka na ɓets&rsquo;ḁ.",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:5",
+      "a": "Ats&rsquo;a ŋoka ɔkakḁ.",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:21",
+      "a": "Epa ŋoka na ɓets&rsquo;ḁ.",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 9 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~9 API calls that would not resolve it"
+    },
+    {
+      "kind": "figure",
+      "path": "/content-assets/2022-open-E-map.png",
+      "note": "crop not confirmed after 3 attempts (last verdict: none)"
+    },
+    {
+      "kind": "diff",
+      "path": "hints[0]",
+      "a": "dii",
+      "note": "hint 1 contains the graded answer \"dii\""
+    }
+  ]
+}

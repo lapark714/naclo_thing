@@ -1,27 +1,296 @@
 {
   "id": "2022-open-I",
-  "tier": "catalogue",
+  "tier": "full",
   "year": 2022,
   "round": "open",
   "letter": "I",
   "title": "A Cornish Conundrum",
-  "authors": [],
+  "authors": [
+    "Babette Verhoeven"
+  ],
   "sourcePdfUrl": "https://naclo.org/practice.php",
   "conceptTags": [
-    "historical and comparative",
-    "phonology"
+    "phonology",
+    "morphology"
   ],
-  "formTag": "rule discovery",
+  "formTag": "table completion",
   "difficulty": "hard",
   "languages": [
     "Cornish"
   ],
   "officialPoints": 15,
   "officialTimeMinutes": 27,
-  "bodyHtml": "",
+  "bodyHtml": "<p>Cornish (known in Cornish as <span class=\"data\">Kernewek</span>) is the Celtic language of the county of Cornwall (<span class=\"data\">Kernow</span>) in South West England. It stopped being actively spoken in the late 1700s, but knowledge of the language survived, and since the early 1900s, attempts have been made to revive it. Currently, there is a growing number of second language speakers, as well as some children who are being brought up speaking Cornish.</p>\n<p><strong>I1.</strong> Complete the table below by filling in the gaps with the correct Cornish words. For the singular English word “frog”, the definite singular is “the frog”, the plural is “frogs”, and the definite plural is “the frogs”.</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th>Singular</th><th>Definite Singular</th><th>Plural</th><th>Definite Plural</th><th>Meaning</th></tr>\n</thead>\n<tbody>\n<tr><td><span class=\"data\">benyn</span></td><td><span class=\"data\">an venyn</span></td><td><span class=\"data\">benenes</span></td><td><span class=\"data\">an benenes</span></td><td>‘woman’</td></tr>\n<tr><td><span class=\"data\">gwarier</span></td><td><span class=\"data\">an gwarier</span></td><td><span class=\"data\">gwarioryon</span></td><td><span class=\"data\">an warioryon</span></td><td>‘male actor’</td></tr>\n<tr><td><span class=\"data\">kares</span></td><td><span class=\"data\">an gares</span></td><td><span class=\"data\">karesow</span></td><td><span class=\"data\">an karesow</span></td><td>‘girlfriend’</td></tr>\n<tr><td><span class=\"data\">pennsevik</span></td><td><span class=\"data\">an pennsevik</span></td><td><span class=\"data\">pennsevigyon</span></td><td><span class=\"data\">an bennsevigyon</span></td><td>‘prince’</td></tr>\n<tr><td><span class=\"data\">kwilkyn</span></td><td><span class=\"data\">an kwilkyn</span></td><td><span class=\"data\">kwilkynyow</span></td><td><span class=\"data\">an kwilkynyow</span></td><td>‘frog’</td></tr>\n<tr><td><span class=\"data\">davas</span></td><td><span class=\"data\">an dhavas</span></td><td><span class=\"data\">deves</span></td><td><span class=\"data\">an deves</span></td><td>‘sheep’</td></tr>\n<tr><td><span class=\"data\">tiek</span></td><td><span class=\"data\">an tiek</span></td><td><span class=\"data\">tiogow</span></td><td><span class=\"data\">an diogow</span></td><td>‘male farmer’</td></tr>\n<tr><td><span class=\"data\">gweli</span></td><td><span class=\"data\">an gweli</span></td><td><span class=\"data\">gweliow</span></td><td><span class=\"data\">an gweliow</span></td><td>‘bed’</td></tr>\n<tr><td><span class=\"data\">mowes</span></td><td><span class=\"data\">an vowes</span></td><td><span class=\"data\">mowysi</span></td><td><span class=\"data\">an mowysi</span></td><td>‘girl’</td></tr>\n<tr><td><span class=\"data\">pluven</span></td><td><span class=\"data\">an bluven</span></td><td><span class=\"data\">pluvennow</span></td><td><span class=\"data\">an pluvennow</span></td><td>‘pen’</td></tr>\n<tr><td><span class=\"data\">dehen</span></td><td><span class=\"data\">an dehen</span></td><td><span class=\"data\">dehennow</span></td><td><span class=\"data\">an dehennow</span></td><td>‘cream’</td></tr>\n<tr><td><span class=\"data\">dama</span></td><td><span class=\"data\">an dhama</span></td><td><span class=\"data\">damyow</span></td><td><span class=\"blank\" data-q=\"I1.1\" data-label=\"a.\"></span></td><td>‘mother’</td></tr>\n<tr><td><span class=\"blank\" data-q=\"I1.2\" data-label=\"b.\"></span></td><td><span class=\"data\">an gasek</span></td><td><span class=\"blank\" data-q=\"I1.3\" data-label=\"c.\"></span></td><td><span class=\"data\">an kasegi</span></td><td>‘mare’ (female horse)</td></tr>\n<tr><td><span class=\"data\">kulyek</span></td><td><span class=\"data\">an kulyek</span></td><td><span class=\"data\">kulyoges</span></td><td><span class=\"blank\" data-q=\"I1.4\" data-label=\"d.\"></span></td><td>‘cockerel’ (young male chicken)</td></tr>\n<tr><td><span class=\"data\">myghtern</span></td><td><span class=\"blank\" data-q=\"I1.5\" data-label=\"e.\"></span></td><td><span class=\"data\">myghternedh</span></td><td><span class=\"data\">an vyghternedh</span></td><td>‘king’</td></tr>\n<tr><td><span class=\"data\">myghternes</span></td><td><span class=\"blank\" data-q=\"I1.6\" data-label=\"f.\"></span></td><td><span class=\"data\">myghternesow</span></td><td><span class=\"blank\" data-q=\"I1.7\" data-label=\"g.\"></span></td><td>‘queen’</td></tr>\n<tr><td><span class=\"data\">tas</span></td><td><span class=\"blank\" data-q=\"I1.8\" data-label=\"h.\"></span></td><td><span class=\"data\">tasow</span></td><td><span class=\"blank\" data-q=\"I1.9\" data-label=\"i.\"></span></td><td>‘father’</td></tr>\n<tr><td><span class=\"data\">bogh</span></td><td><span class=\"blank\" data-q=\"I1.10\" data-label=\"j.\"></span></td><td><span class=\"data\">boghes</span></td><td><span class=\"blank\" data-q=\"I1.11\" data-label=\"k.\"></span></td><td>‘billy-goat’ (male goat)</td></tr>\n<tr><td><span class=\"data\">banow</span></td><td><span class=\"blank\" data-q=\"I1.12\" data-label=\"l.\"></span></td><td><span class=\"data\">banowes</span></td><td><span class=\"blank\" data-q=\"I1.13\" data-label=\"m.\"></span></td><td>‘sow’ (female pig)</td></tr>\n<tr><td><span class=\"data\">badh</span></td><td><span class=\"data\">an badh</span></td><td><span class=\"blank\" data-q=\"I1.14\" data-label=\"n.\"></span></td><td><span class=\"data\">an badhes</span></td><td>‘boar’ (male pig)</td></tr>\n<tr><td><span class=\"data\">tevesik</span></td><td><span class=\"blank\" data-q=\"I1.15\" data-label=\"o.\"></span></td><td><span class=\"blank\" data-q=\"I1.16\" data-label=\"p.\"></span></td><td><span class=\"data\">an devesigyon</span></td><td>‘adult man’</td></tr>\n<tr><td><span class=\"data\">pons</span></td><td><span class=\"data\">an pons</span></td><td><span class=\"data\">ponsyow</span></td><td><span class=\"blank\" data-q=\"I1.17\" data-label=\"q.\"></span></td><td>‘bridge’</td></tr>\n<tr><td><span class=\"data\">maw</span></td><td><span class=\"data\">an maw</span></td><td><span class=\"blank\" data-q=\"I1.18\" data-label=\"r.\"></span></td><td><span class=\"data\">an vebyon</span></td><td>‘boy’</td></tr>\n<tr><td><span class=\"blank\" data-q=\"I1.19\" data-label=\"s.\"></span></td><td><span class=\"data\">an desen</span></td><td><span class=\"data\">tesennow</span></td><td><span class=\"data\">an tesennow</span></td><td>‘cake’</td></tr>\n<tr><td><span class=\"blank\" data-q=\"I1.20\" data-label=\"t.\"></span></td><td><span class=\"data\">an tarow</span></td><td><span class=\"data\">terewi</span></td><td><span class=\"data\">an terewi</span></td><td>‘bull’ (male cow)</td></tr>\n</tbody>\n</table>\n</div>\n<p>Here are some additional Cornish words and phrases:</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th>Cornish</th><th>English</th></tr>\n</thead>\n<tbody>\n<tr><td><span class=\"data\">war bons glas</span></td><td>‘on a blue bridge’</td></tr>\n<tr><td><span class=\"data\">war bons perfydh</span></td><td>‘on a perfect bridge’</td></tr>\n<tr><td><span class=\"data\">war desennow perfydh</span></td><td>‘on perfect cakes’</td></tr>\n<tr><td><span class=\"data\">pal drosek</span></td><td>‘noisy spade’ (a spade is a small shovel)</td></tr>\n<tr><td><span class=\"data\">men teg</span></td><td>‘beautiful stone’</td></tr>\n<tr><td><span class=\"data\">pel</span></td><td>‘ball’</td></tr>\n<tr><td><span class=\"data\">war vyghternedh berfydh</span></td><td>‘on perfect kings’</td></tr>\n<tr><td><span class=\"data\">an bal byhan</span></td><td>‘the small mine’</td></tr>\n<tr><td><span class=\"data\">bys bras</span></td><td>‘thumb’</td></tr>\n<tr><td><span class=\"data\">penn daras</span></td><td>‘lintel’ (a horizontal beam over the top of a door)</td></tr>\n<tr><td><span class=\"data\">daras melyn</span></td><td>‘yellow door’</td></tr>\n<tr><td><span class=\"data\">bys troos</span></td><td>‘toe’</td></tr>\n<tr><td><span class=\"data\">war grogen benn</span></td><td>‘on a skull’</td></tr>\n<tr><td><span class=\"data\">war dhas deg</span></td><td>‘on a beautiful stack’</td></tr>\n<tr><td><span class=\"data\">bys byhan</span></td><td>‘pinky finger’</td></tr>\n<tr><td><span class=\"data\">bran bollek</span></td><td>‘intelligent crow’</td></tr>\n<tr><td><span class=\"data\">an badhes tronek</span></td><td>‘the curious boars’</td></tr>\n<tr><td><span class=\"data\">war dhavas</span></td><td>‘on a sheep’</td></tr>\n<tr><td><span class=\"data\">rudhvelyn</span></td><td>‘orange’ (adjective)</td></tr>\n<tr><td><span class=\"data\">war bluven berfydh</span></td><td>‘on a perfect pen’</td></tr>\n<tr><td><span class=\"data\">pel droos</span></td><td>‘football’</td></tr>\n<tr><td><span class=\"data\">krogen wynnrudh</span></td><td>‘pink shell’</td></tr>\n<tr><td><span class=\"data\">duwes bollek</span></td><td>‘intelligent goddess’</td></tr>\n<tr><td><span class=\"data\">gwariores dronek</span></td><td>‘curious actress’</td></tr>\n<tr><td><span class=\"data\">bran drosek</span></td><td>‘noisy crow’</td></tr>\n<tr><td><span class=\"data\">war weliow glasrudh</span></td><td>‘on purple beds’</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>I2.</strong> Fill in the blanks in the table below:</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th>Cornish</th><th>English</th></tr>\n</thead>\n<tbody>\n<tr><td><span class=\"blank\" data-q=\"I2.1\" data-label=\"u.\"></span></td><td>‘the finger’</td></tr>\n<tr><td><span class=\"blank\" data-q=\"I2.2\" data-label=\"v.\"></span></td><td>‘on a beautiful cake’</td></tr>\n<tr><td><span class=\"blank\" data-q=\"I2.3\" data-label=\"w.\"></span></td><td>‘on a door’</td></tr>\n<tr><td><span class=\"data\">an bal berfydh</span></td><td><span class=\"blank\" data-q=\"I2.4\" data-label=\"x.\"></span></td></tr>\n<tr><td><span class=\"data\">das</span></td><td><span class=\"blank\" data-q=\"I2.5\" data-label=\"y.\"></span></td></tr>\n<tr><td><span class=\"data\">war das</span></td><td><span class=\"blank\" data-q=\"I2.6\" data-label=\"z.\"></span></td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>I3.</strong> Some people believe that the English word for a certain animal comes from a phrase meaning \"white head\" in Welsh, a language that is closely related to Cornish. What is this animal? Write your answer in English.</p>",
   "assets": [],
-  "questions": [],
-  "hints": [],
-  "explanationHtml": "",
+  "questions": [
+    {
+      "id": "I1.1",
+      "promptHtml": "(a) Definite plural of <span class=\"data\">dama</span> ‘mother’",
+      "part": "I1",
+      "partPrompt": "Complete the table by filling in the gaps with the correct Cornish words. For the singular English word \"frog\", the definite singular is \"the frog\", the plural is \"frogs\", and the definite plural is \"the frogs\".",
+      "gradingMode": "exact",
+      "answerKey": "an damyow",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.2",
+      "promptHtml": "(b) Singular, ‘mare’ (female horse)",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "kasek",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.3",
+      "promptHtml": "(c) Plural, ‘mare’ (female horse)",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "kasegi",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.4",
+      "promptHtml": "(d) Definite plural of <span class=\"data\">kulyek</span> ‘cockerel’",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "an kulyoges",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.5",
+      "promptHtml": "(e) Definite singular of <span class=\"data\">myghtern</span> ‘king’",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "an myghtern",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.6",
+      "promptHtml": "(f) Definite singular of <span class=\"data\">myghternes</span> ‘queen’",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "an vyghternes",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.7",
+      "promptHtml": "(g) Definite plural of <span class=\"data\">myghternes</span> ‘queen’",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "an myghternesow",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.8",
+      "promptHtml": "(h) Definite singular of <span class=\"data\">tas</span> ‘father’",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "an tas",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.9",
+      "promptHtml": "(i) Definite plural of <span class=\"data\">tas</span> ‘father’",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "an dasow",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.10",
+      "promptHtml": "(j) Definite singular of <span class=\"data\">bogh</span> ‘billy-goat’",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "an bogh",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.11",
+      "promptHtml": "(k) Definite plural of <span class=\"data\">bogh</span> ‘billy-goat’",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "an boghes",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.12",
+      "promptHtml": "(l) Definite singular of <span class=\"data\">banow</span> ‘sow’ (female pig)",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "an vanow",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.13",
+      "promptHtml": "(m) Definite plural of <span class=\"data\">banow</span> ‘sow’ (female pig)",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "an banowes",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.14",
+      "promptHtml": "(n) Plural of <span class=\"data\">badh</span> ‘boar’ (male pig)",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "badhes",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.15",
+      "promptHtml": "(o) Definite singular of <span class=\"data\">tevesik</span> ‘adult man’",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "an tevesik",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.16",
+      "promptHtml": "(p) Plural of <span class=\"data\">tevesik</span> ‘adult man’",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "tevesigyon",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.17",
+      "promptHtml": "(q) Definite plural of <span class=\"data\">pons</span> ‘bridge’",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "an ponsyow",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.18",
+      "promptHtml": "(r) Plural of <span class=\"data\">maw</span> ‘boy’",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "mebyon",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.19",
+      "promptHtml": "(s) Singular, ‘cake’",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "tesen",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I1.20",
+      "promptHtml": "(t) Singular, ‘bull’ (male cow)",
+      "part": "I1",
+      "gradingMode": "exact",
+      "answerKey": "tarow",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I2.1",
+      "promptHtml": "(u) Cornish for ‘the finger’",
+      "part": "I2",
+      "partPrompt": "Fill in the blanks in the table.",
+      "gradingMode": "exact",
+      "answerKey": "an bys",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I2.2",
+      "promptHtml": "(v) Cornish for ‘on a beautiful cake’",
+      "part": "I2",
+      "gradingMode": "exact",
+      "answerKey": "war desen deg",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I2.3",
+      "promptHtml": "(w) Cornish for ‘on a door’",
+      "part": "I2",
+      "gradingMode": "exact",
+      "answerKey": "war dharas",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I2.4",
+      "promptHtml": "(x) English for <span class=\"data\">an bal berfydh</span>",
+      "part": "I2",
+      "gradingMode": "exact",
+      "answerKey": "the perfect spade",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I2.5",
+      "promptHtml": "(y) English for <span class=\"data\">das</span>",
+      "part": "I2",
+      "gradingMode": "exact",
+      "answerKey": "stack",
+      "acceptedVariants": [
+        "a stack"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "I2.6",
+      "promptHtml": "(z) English for <span class=\"data\">war das</span>",
+      "part": "I2",
+      "gradingMode": "exact",
+      "answerKey": "on a father",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "I3.1",
+      "promptHtml": "<p>The animal:</p>",
+      "part": "I3",
+      "partPrompt": "Some people believe that the English word for a certain animal comes from a phrase meaning \"white head\" in Welsh, a language that is closely related to Cornish. What is this animal? Write your answer in English.",
+      "gradingMode": "exact",
+      "answerKey": "penguin",
+      "acceptedVariants": [
+        "penguins"
+      ],
+      "points": 2
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Compare the first letter of each word across the four columns of the big table. Sometimes it stays the same, sometimes it changes in a regular way: b and v, d and dh, k and g, m and v, p and b, t and d, gw and w. Make a list of these pairs before you try to fill anything in.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "The consonant change (a \"mutation\") is triggered by grammar, not by sound alone. Work out which forms trigger it: think about the gender of the noun (feminine or masculine), whether the noun refers to a person, and whether the little word war ‘on’ comes in front. Adjectives can be mutated too, by the noun in front of them. Since the plain singular is never mutated, you can use the mutated forms as clues to reconstruct it, and vice versa.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Take the row for ‘girl’: mowes, an vowes, mowysi, an mowysi. The m of mowes becomes v only in the definite singular, which tells you the noun is feminine; the definite plural is left alone. Compare gwarier ‘male actor’, where the mutation instead shows up in the definite plural an warioryon, because that noun is masculine and refers to a person. Those two rows give you the two halves of the rule.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What is going on with these first letters?</h3>\n<p>Look along the rows of the first table and watch only the initial consonant. Sometimes all four forms start with the same letter (<span class=\"data\">kwilkyn, an kwilkyn, kwilkynyow, an kwilkynyow</span>), and sometimes one form is the odd one out (<span class=\"data\">benyn</span> but <span class=\"data\">an venyn</span>). Collecting the odd ones out gives a fixed set of swaps, which Celtic languages call a <em>soft mutation</em> (a regular change to the first sound of a word, caused by grammar):</p>\n<ul>\n<li>b becomes v</li>\n<li>d becomes dh</li>\n<li>gw becomes w</li>\n<li>k becomes g</li>\n<li>m becomes v</li>\n<li>p becomes b</li>\n<li>t becomes d</li>\n</ul>\n<p>Notice that the bare singular column is never mutated. So the bare singular is your \"safe\" form, and any mutated form can be turned back by undoing one of the swaps above.</p>\n<h3>When does the mutation happen?</h3>\n<p>Now sort the rows by <em>where</em> the change appears.</p>\n<p><strong>Mutation in the definite singular only.</strong> <span class=\"data\">benyn / an venyn</span> ‘woman’, <span class=\"data\">kares / an gares</span> ‘girlfriend’, <span class=\"data\">davas / an dhavas</span> ‘sheep’, <span class=\"data\">mowes / an vowes</span> ‘girl’, <span class=\"data\">pluven / an bluven</span> ‘pen’. These are all feminine nouns. Rule: <strong>feminine nouns mutate after <span class=\"data\">an</span> in the singular.</strong></p>\n<p><strong>Mutation in the definite plural only.</strong> <span class=\"data\">gwarioryon / an warioryon</span> ‘male actors’, <span class=\"data\">pennsevigyon / an bennsevigyon</span> ‘princes’, <span class=\"data\">tiogow / an diogow</span> ‘male farmers’. These are masculine and they all refer to <em>people</em>. Compare <span class=\"data\">ponsyow</span> ‘bridges’ and <span class=\"data\">gweliow</span> ‘beds’, which are masculine but not people: no mutation. Rule: <strong>masculine nouns mutate in the definite plural only when they refer to people.</strong></p>\n<p>Feminine nouns never mutate in the plural (<span class=\"data\">an benenes, an karesow, an deves, an mowysi</span>), and masculine non-person nouns never mutate at all after <span class=\"data\">an</span>.</p>\n<h3>Using the rule to fill the gaps in I1</h3>\n<p>Each blank is solved by asking two questions: is the noun feminine or masculine, and does it refer to a person?</p>\n<ul>\n<li><span class=\"data\">dama / an dhama</span> shows the mutation d-to-dh in the definite singular, so ‘mother’ is feminine. Feminine plurals are not mutated, so the definite plural just adds <span class=\"data\">an</span>.</li>\n<li>For ‘mare’ we are given <span class=\"data\">an gasek</span>. Undo k-to-g and you recover the bare singular. The definite plural <span class=\"data\">an kasegi</span> is unmutated (feminine, and not a person), so the bare plural is the same word without <span class=\"data\">an</span>.</li>\n<li>‘King’ gives <span class=\"data\">an vyghternedh</span> in the definite plural, which is m-to-v: masculine, refers to people. So the definite singular of a masculine noun keeps its m. ‘Queen’ behaves the mirror way: feminine, so the singular mutates and the plural does not.</li>\n<li><span class=\"data\">tas</span> ‘father’: masculine and a person, so the plural <span class=\"data\">tasow</span> gets t-to-d after <span class=\"data\">an</span>, while the singular stays put. Likewise <span class=\"data\">maw</span> ‘boy’, whose definite plural <span class=\"data\">an vebyon</span> hides the unmutated plural under v-to-m.</li>\n<li><span class=\"data\">bogh</span> ‘billy-goat’, <span class=\"data\">badh</span> ‘boar’, <span class=\"data\">tarow</span> ‘bull’, <span class=\"data\">kulyek</span> ‘cockerel’ are masculine animals, not people, so nothing mutates and the columns are straightforward. <span class=\"data\">banow</span> ‘sow’ is feminine, so only its definite singular mutates.</li>\n</ul>\n<h3>The second table: <span class=\"data\">war</span> and adjectives</h3>\n<p>Two more triggers show up in the phrase list.</p>\n<p><strong>Everything mutates after <span class=\"data\">war</span> ‘on’.</strong> <span class=\"data\">pons</span> becomes <span class=\"data\">war bons</span>, <span class=\"data\">davas</span> becomes <span class=\"data\">war dhavas</span>, <span class=\"data\">tesennow</span> becomes <span class=\"data\">war desennow</span>, <span class=\"data\">gweliow</span> becomes <span class=\"data\">war weliow</span>, <span class=\"data\">krogen</span> becomes <span class=\"data\">war grogen</span>. Gender and number make no difference here.</p>\n<p><strong>Adjectives mutate after a feminine singular noun, or after a plural masculine human noun.</strong> Compare <span class=\"data\">war bons perfydh</span> ‘on a perfect bridge’ (masculine singular: the adjective keeps its p) with <span class=\"data\">war bluven berfydh</span> ‘on a perfect pen’ (feminine singular: <span class=\"data\">perfydh</span> becomes <span class=\"data\">berfydh</span>) and <span class=\"data\">war vyghternedh berfydh</span> ‘on perfect kings’ (masculine plural people: mutated again). This is how you can tell a noun's gender even when you have never seen its definite form: <span class=\"data\">pal drosek</span> ‘noisy spade’ has a mutated adjective (<span class=\"data\">trosek</span> becomes <span class=\"data\">drosek</span>), so <span class=\"data\">pal</span> is feminine, whereas <span class=\"data\">an bal byhan</span> ‘the small mine’ has an unmutated adjective, so that <span class=\"data\">bal</span> is a different, masculine word.</p>\n<h3>Working out I2</h3>\n<p>‘Finger’ comes from <span class=\"data\">bys bras</span> ‘thumb’ and <span class=\"data\">bys byhan</span> ‘pinky finger’, so the word is <span class=\"data\">bys</span>. Nothing in the data suggests it is feminine, so the definite singular just adds the article unchanged.</p>\n<p>‘On a beautiful cake’ needs three steps: the singular of ‘cake’ (recovered from <span class=\"data\">an desen</span>), then the mutation caused by <span class=\"data\">war</span>, then the mutation of the adjective <span class=\"data\">teg</span> ‘beautiful’ because the noun is feminine singular; compare <span class=\"data\">war dhas deg</span> ‘on a beautiful stack’.</p>\n<p>‘On a door’ takes <span class=\"data\">daras</span> (seen in <span class=\"data\">penn daras</span> and <span class=\"data\">daras melyn</span>) and applies the d-to-dh mutation after <span class=\"data\">war</span>.</p>\n<p>Going the other way, <span class=\"data\">an bal berfydh</span> has a mutated adjective, so the noun is feminine: this is <span class=\"data\">pal</span> ‘spade’, not the masculine <span class=\"data\">bal</span> ‘mine’. And <span class=\"data\">das</span> is the unmutated form behind <span class=\"data\">war dhas deg</span>, so it means ‘stack’; while <span class=\"data\">war das</span> must be a <em>mutated</em> t-word, so its base form is <span class=\"data\">tas</span>.</p>\n<h3>I3: the white-headed animal</h3>\n<p>Gather every colour word in the problem: <span class=\"data\">glas</span> ‘blue’, <span class=\"data\">glasrudh</span> ‘purple’, <span class=\"data\">rudhvelyn</span> ‘orange’, <span class=\"data\">melyn</span> ‘yellow’, <span class=\"data\">gwynnrudh</span> ‘pink’. Purple is blue plus something, and orange is that same something plus yellow, so <span class=\"data\">rudh</span> must be ‘red’. Pink is that red plus <span class=\"data\">gwynn</span>, so <span class=\"data\">gwynn</span> is ‘white’ (and indeed <span class=\"data\">krogen wynnrudh</span> shows it mutated after a feminine noun). ‘Head’ is <span class=\"data\">penn</span>, from <span class=\"data\">penn daras</span> ‘lintel’ and <span class=\"data\">war grogen benn</span> ‘on a skull’. Put them together in Cornish order, noun first: <span class=\"data\">penn gwynn</span> ‘white head’ - which is the popular etymology of the English word <em>penguin</em>.</p>",
   "reviewStatus": "published"
 }

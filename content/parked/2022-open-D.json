@@ -1,0 +1,217 @@
+{
+  "id": "2022-open-D",
+  "tier": "full",
+  "year": 2022,
+  "round": "open",
+  "letter": "D",
+  "title": "Real Numbers",
+  "authors": [
+    "Daniel Lovsted"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "number systems",
+    "writing systems"
+  ],
+  "formTag": "calendrical and counting",
+  "difficulty": "standard",
+  "languages": [
+    "Iñupiaq"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>In 1994, the students of a middle-school math class in Kaktovik, Alaska noticed that Arabic numerals (that is, the digits 0 to 9) were badly suited to counting in their language, Iñupiaq.<sup>1</sup> They decided to come up with a new numeral system, one that would reflect the Iñupiaq number system.</p>\n<p>The Kaktovik Iñupiaq numerals (as they have come to be known) made it much easier for students to do math in Iñupiaq, and are easy to use and remember, since each symbol has an intuitive relationship with the number it represents. Within a few years, schools and colleges across northern Alaska were using the numerals, and they were recommended for use in Canada. If you walk into a math classroom in northern Alaska today, you might well see a blackboard that looks like the one below, which features Kaktovik Iñupiaq numerals, Iñupiaq words, and a few places intentionally left blank:</p>\n<figure><img src=\"/content-assets/2022-open-D-blackboard.png\" alt=\"A blackboard showing a line of Kaktovik Iñupiaq numerals with an Iñupiaq caption at the top, then seven arithmetic equations written in Kaktovik Iñupiaq numerals, three of them containing a blank labelled a., b. or c., each equation followed by an Iñupiaq word or words at the right.\" /></figure>\n<p>The line of writing across the top of the blackboard is repeated underneath in Iñupiaq words as: <span class=\"data\">siqiññaatchiaq iñuiññaq tallimat malġuk, tallimaagliaq iñuiññaq malġuk</span></p>\n<p>The words written to the right of the seven equations are, from top to bottom: <span class=\"data\">atausiq</span>; <span class=\"data\">tallimat piŋasut</span>; <span class=\"data\">qulit malġuk</span>; <span class=\"data\">akimiaġutaiḷaq</span>; <span class=\"data\">akimiaq atausiq</span>; <span class=\"data\">tallimat piŋasut</span>; <span class=\"data\">iñuiññaq qulit</span>.</p>\n<p style=\"font-size:0.9em\">1. Iñupiaq, meaning \"real or genuine person\" (<span class=\"data\">iñuk</span> = person, <span class=\"data\">-piaq</span> = real, genuine), is the language of the Iñupiaq people (or Iñupiat). There are about 3000 speakers of the language, most of them living in northern Alaska. Iñupiaq is closely related to several other Inuit languages spoken in Canada and Greenland.</p>",
+  "assets": [
+    {
+      "src": "/content-assets/2022-open-D-blackboard.png",
+      "alt": "A blackboard showing a line of Kaktovik Iñupiaq numerals with an Iñupiaq caption at the top, then seven arithmetic equations written in Kaktovik Iñupiaq numerals, three of them containing a blank labelled a., b. or c., each equation followed by an Iñupiaq word or words at the right."
+    }
+  ],
+  "questions": [
+    {
+      "id": "D1.1",
+      "promptHtml": "<p>Blank <strong>a.</strong> (second equation).</p>",
+      "part": "D1",
+      "partPrompt": "Fill in the blanks a., b., and c. from the blackboard with Kaktovik Iñupiaq numerals. Because the glyphs cannot be typed here, give the VALUE of each missing numeral in Arabic digits (0-9) instead.",
+      "gradingMode": "exact",
+      "answerKey": "4",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D1.2",
+      "promptHtml": "<p>Blank <strong>b.</strong> (fourth equation).</p>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "15",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D1.3",
+      "promptHtml": "<p>Blank <strong>c.</strong> (seventh equation).</p>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "6",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D2.1",
+      "promptHtml": "<p>a. three</p>",
+      "part": "D2",
+      "partPrompt": "Give the Iñupiaq word or words for:",
+      "gradingMode": "exact",
+      "answerKey": "piŋasut",
+      "acceptedVariants": [
+        "pinasut"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D2.2",
+      "promptHtml": "<p>b. eleven</p>",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "qulit atausiq",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D2.3",
+      "promptHtml": "<p>c. twenty-two</p>",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "iñuiññaq malġuk",
+      "acceptedVariants": [
+        "inuinnaq malguk",
+        "iñuiññaq malguk",
+        "inuinnaq malġuk"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D3.1",
+      "promptHtml": "<p>a. <span class=\"data\">atausiq</span></p>",
+      "part": "D3",
+      "partPrompt": "Write in Arabic numerals (i.e., using digits 0-9):",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D3.2",
+      "promptHtml": "<p>b. <span class=\"data\">tallimat</span></p>",
+      "part": "D3",
+      "gradingMode": "exact",
+      "answerKey": "5",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D3.3",
+      "promptHtml": "<p>c. <span class=\"data\">iñuiññaġutaiḷaq</span></p>",
+      "part": "D3",
+      "gradingMode": "exact",
+      "answerKey": "19",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D4.1",
+      "promptHtml": "<p>a. the Kaktovik Iñupiaq numerals in the top left corner of the blackboard</p>",
+      "part": "D4",
+      "partPrompt": "In the top left corner of the blackboard, the same thing is written twice: once in Kaktovik Iñupiaq numerals, and once slightly differently in Iñupiaq words. Write in Arabic numerals (i.e., using digits 0-9):",
+      "gradingMode": "exact",
+      "answerKey": "2022-1-27",
+      "acceptedVariants": [
+        "2022-01-27"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D4.2",
+      "promptHtml": "<p>b. <span class=\"data\">quliagliaq</span></p>",
+      "part": "D4",
+      "gradingMode": "exact",
+      "answerKey": "4000",
+      "acceptedVariants": [],
+      "points": 0.5
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start with the very first equation, where every symbol is visible, and look hard at the shapes. Count how many roughly vertical strokes each glyph has, and whether it also has a roughly horizontal stroke along the top. The shape of a glyph tells you its value directly.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Each vertical stroke is worth one and each horizontal top stroke is worth five, so a single glyph can express any value from 0 up to 19. Anything from 20 upward needs two or more glyphs side by side, read like our own digits but in base 20: the left glyph counts twenties (and the one before that counts 400s). The Iñupiaq words work the same way, with named landmarks at 5, 10, 15 and 20 plus a remainder word.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try the third equation, which is fully written out and is not one of the blanks. Its result is labelled qulit malġuk. The equation adds a four-stroke glyph to a glyph with one top bar plus three verticals, so 4 + (5 + 3) = 12. That tells you qulit is the word for ten and that a following word simply adds to it, which is the pattern you need for the other words too.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What the glyphs are made of</h3>\n<p>The Kaktovik Iñupiaq numerals are built out of two kinds of stroke:</p>\n<ul><li>a roughly <strong>vertical</strong> stroke is worth <strong>one</strong>;</li><li>a roughly <strong>horizontal</strong> stroke along the top is worth <strong>five</strong>.</li></ul>\n<p>So a glyph with three verticals is 3, a glyph with one top bar and no verticals is 5, a glyph with one top bar and three verticals is 8, a glyph with two top bars and one vertical is 11, and so on all the way up to 19 (three bars plus four verticals). Zero has its own special crossed shape, which looks a bit like a pair of folded arms.</p>\n<h3>Beyond nineteen: base 20</h3>\n<p>Once you reach 20 you run out of strokes, so the system switches to <em>positional</em> writing exactly like ours, but with twenty instead of ten as the base. Two glyphs side by side mean (left glyph x 20) + (right glyph). For example the glyph for 1 followed by the zero glyph is 1 x 20 + 0 = 20; the glyph for 2 followed by the glyph for 16 is 2 x 20 + 16 = 56. Three glyphs give hundreds of a sort: the left-most counts 400s, because 20 x 20 = 400.</p>\n<h3>Decoding the blackboard</h3>\n<p>Reading each row with the stroke rule turns the blackboard into ordinary arithmetic:</p>\n<div class=\"table-scroll\"><table><tr><th>Row</th><th>Equation</th><th>Iñupiaq label</th></tr>\n<tr><td>1</td><td>4 - 3 = 1</td><td><span class=\"data\">atausiq</span></td></tr>\n<tr><td>2</td><td>2 x (a) = 8</td><td><span class=\"data\">tallimat piŋasut</span></td></tr>\n<tr><td>3</td><td>4 + 8 = 12</td><td><span class=\"data\">qulit malġuk</span></td></tr>\n<tr><td>4</td><td>(b) - 1 = 14</td><td><span class=\"data\">akimiaġutaiḷaq</span></td></tr>\n<tr><td>5</td><td>20 - 4 = 16</td><td><span class=\"data\">akimiaq atausiq</span></td></tr>\n<tr><td>6</td><td>56 &divide; 7 = 8</td><td><span class=\"data\">tallimat piŋasut</span></td></tr>\n<tr><td>7</td><td>5 x (c) = 30</td><td><span class=\"data\">iñuiññaq qulit</span></td></tr></table></div>\n<p>Each blank now falls out of simple arithmetic: in row 2 the missing factor must make 2 times it equal 8; in row 4 the missing number is one more than 14; in row 7 the missing factor must make 5 times it equal 30. Draw the answer as the matching glyph (here we just record its value in digits).</p>\n<h3>The words</h3>\n<p>The Iñupiaq words are base 20 with a sub-base of 5. The landmark words are <span class=\"data\">tallimat</span> 5 (from a word for hand/arm), <span class=\"data\">qulit</span> 10 (\"top\", the upper body's digits), <span class=\"data\">akimiaq</span> 15 (roughly \"it goes across\"), and <span class=\"data\">iñuiññaq</span> 20 (\"complete person\" - all twenty fingers and toes; the <span class=\"data\">iñu-</span> is the same root as in Iñupiaq itself). To get a number in between, you name the landmark and then add the leftover: 12 is <span class=\"data\">qulit malġuk</span> (10 + 2), 17 is <span class=\"data\">akimiaq malġuk</span> (15 + 2), and 20-something is <span class=\"data\">iñuiññaq</span> plus the remainder.</p>\n<p>There is also a \"one short of\" pattern. <span class=\"data\">akimiaġutaiḷaq</span> is 14 - one less than <span class=\"data\">akimiaq</span> (15) - and the same <span class=\"data\">-utaiḷaq</span> ending appears on <span class=\"data\">iñuiññaġutaiḷaq</span>, which must therefore be one less than 20. That is how question D3c is solved without ever seeing it on the blackboard.</p>\n<h3>The date in the corner</h3>\n<p>The line of numerals across the top is a date, written in the order year-month-day. Reading the three groups: the first group has three glyphs, so it is (first x 400) + (second x 20) + third; with 5, 1 and 2 that is 2000 + 20 + 2. Then a single glyph for the month, then two glyphs for the day, 1 and 7, giving 1 x 20 + 7.</p>\n<p>The Iñupiaq caption says the same thing in the reverse order that English uses for dates: the month name <span class=\"data\">siqiññaatchiaq</span> (January - it describes the brightness of the returning sun and contains no number at all), then <span class=\"data\">iñuiññaq tallimat malġuk</span> = 20 + 5 + 2 = twenty-seven, then <span class=\"data\">tallimaagliaq iñuiññaq malġuk</span> = two thousand twenty-two.</p>\n<p>That last word shows a new piece of morphology (word-building): the suffix <span class=\"data\">-agliaq</span> multiplies by 400. <span class=\"data\">tallimat</span> (5) plus <span class=\"data\">-agliaq</span> gives <span class=\"data\">tallimaagliaq</span> = 5 x 400 = 2000. Apply the same suffix to <span class=\"data\">qulit</span> (10) and you get <span class=\"data\">quliagliaq</span> = 10 x 400, which answers D4b.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "CROP /content-assets/2022-open-D-blackboard.png page=1 x=17 y=32 w=66 h=57\nThe blackboard figure is essential: it contains the date line, the seven equations and the labelled blanks a., b., c. Please verify the crop shows the whole boxed blackboard including the caption line at the top and the seventh equation at the bottom.\nD1 in the official solution is answered with drawn glyphs (4, 15 and 6 in Kaktovik numerals). Since the glyphs cannot be typed, the keys here are the Arabic-numeral values 4, 15, 6 and the part prompt says so explicitly - confirm this substitution is acceptable for the site.\nPoints: D1 and D2 and D3 carry 1 point each question, D4 carries 0.5 each, totalling the official 10; the official paper gives no per-part breakdown.\nCheck the special characters in the data: ŋ in piŋasut, ġ in malġuk / akimiaġutaiḷaq, ñ in iñuiññaq, and the ḷ (l with under-dot) in -utaiḷaq.",
+  "_parkReasons": [
+    {
+      "kind": "witness",
+      "path": "data:0",
+      "a": "siqiññaatchiaq iñuiññaq tallimat malġuk, tallimaagliaq iñuiññaq malġuk",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:2",
+      "a": "tallimat piŋasut",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:3",
+      "a": "qulit malġuk",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:4",
+      "a": "akimiaġutaiḷaq",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:5",
+      "a": "akimiaq atausiq",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:6",
+      "a": "tallimat piŋasut",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "witness",
+      "path": "data:7",
+      "a": "iñuiññaq qulit",
+      "note": "does not appear in the booklet text layer"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 7 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~7 API calls that would not resolve it"
+    },
+    {
+      "kind": "figure",
+      "path": "/content-assets/2022-open-D-blackboard.png",
+      "note": "crop not confirmed after 3 attempts (last verdict: NOISY)"
+    }
+  ]
+}

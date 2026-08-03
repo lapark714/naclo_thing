@@ -1,0 +1,343 @@
+{
+  "id": "2021-open-D",
+  "tier": "full",
+  "year": 2021,
+  "round": "open",
+  "letter": "D",
+  "title": "Made You Look!",
+  "authors": [
+    "Tom McCoy"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "semantics",
+    "phonology",
+    "sociolinguistics"
+  ],
+  "formTag": "table completion",
+  "difficulty": "standard",
+  "languages": [
+    "English"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>How do humans process language? One way to study this question is with <strong>eye tracking</strong>, a technique that allows scientists to monitor where an experimental participant is looking while they listen to a sentence. Suppose that a person has been familiarized with this grid of images:</p>\n<figure><img src=\"/content-assets/2021-open-D-grid1.png\" alt=\"Grid of 24 labelled pictures A to X: A rocket, B ring, C fish, D starry night sky, E lamp, F rocking chair, G frying pan, H cardinal bird, I pants, J rock, K milk carton, L car, M ear, N king, O key, P mill, Q clamp, R birthday card, S ant, T amp, U lamb, V carpet, W steering wheel, X clam shell.\" /></figure>\n<p>The person is then read the sentences in the table below, and we track where their eyes fall as they listen to the bolded words.<sup>1</sup> The table shows what the person&rsquo;s predicted eye trajectory is for each of five different hypotheses about how humans might process language (note that the question mark means &ldquo;not looking at any particular image&rdquo;). For example, for the first sentence, Hypothesis 4 predicts the listener starts out looking at no specific image, then looks at Image U, then T, then Image E.</p>\n<div class=\"table-scroll\"><table><thead><tr><th></th><th><em>Hypothesis 1</em></th><th><em>Hypothesis 2</em></th><th><em>Hypothesis 3</em></th><th><em>Hypothesis 4</em></th><th><em>Hypothesis 5</em></th></tr></thead><tbody>\n<tr><td>Mary had a little <strong>*lamp*</strong></td><td>?,E</td><td>U</td><td>?,U,E</td><td>?,U,T,E</td><td><span class=\"blank\" data-q=\"D1.1\" data-label=\"(a)\"></span></td></tr>\n<tr><td>The guitar needs an <strong>*amp*</strong><sup>2</sup></td><td>?,T</td><td>T</td><td>?,T</td><td>?,T</td><td>T</td></tr>\n<tr><td>The flour is from a <strong>*mill*</strong></td><td>?,P</td><td>P</td><td>?,P</td><td>?,P</td><td>P</td></tr>\n<tr><td>I drive a <strong>*rocking chair*</strong></td><td>?,F</td><td>L</td><td>?,J,F</td><td>?,J,N,F</td><td>L,A,F</td></tr>\n<tr><td>This bird is a <strong>*cardinal*</strong><sup>2</sup></td><td>?,H</td><td>H</td><td>?,L,R,H</td><td>?,L,R,H</td><td>H</td></tr>\n<tr><td>This fish is a <strong>*carp*</strong><sup>2</sup></td><td>?,C</td><td>C</td><td>?,L,C</td><td>?,L,C</td><td>C</td></tr>\n<tr><td>I held the block tightly with the metal <strong>*pants*</strong></td><td>?,I</td><td>Q</td><td>?,G,I</td><td>?,G,S,I</td><td>Q,G,I</td></tr>\n<tr><td>I locked the door with a <strong>*steering wheel*</strong></td><td>?,W</td><td><span class=\"blank\" data-q=\"D1.2\" data-label=\"(b)\"></span></td><td>?,W</td><td>?,M,B,W</td><td>O,W</td></tr>\n<tr><td>In the desert sky I could see the <strong>*Milky Way*</strong><sup>2</sup></td><td>?,D</td><td>D</td><td>?,P,K,D</td><td><span class=\"blank\" data-q=\"D1.3\" data-label=\"(c)\"></span></td><td>D</td></tr>\n<tr><td>This fish is a <strong>*clamp*</strong><sup>2</sup></td><td><span class=\"blank\" data-q=\"D1.4\" data-label=\"(d)\"></span></td><td><span class=\"blank\" data-q=\"D1.5\" data-label=\"(e)\"></span></td><td><span class=\"blank\" data-q=\"D1.6\" data-label=\"(f)\"></span></td><td><span class=\"blank\" data-q=\"D1.7\" data-label=\"(g)\"></span></td><td>C,X,Q</td></tr>\n<tr><td>The floor needs a <strong>*carpet*</strong></td><td><span class=\"blank\" data-q=\"D1.8\" data-label=\"(h)\"></span></td><td><span class=\"blank\" data-q=\"D1.9\" data-label=\"(i)\"></span></td><td><span class=\"blank\" data-q=\"D1.10\" data-label=\"(j)\"></span></td><td><span class=\"blank\" data-q=\"D1.11\" data-label=\"(k)\"></span></td><td><span class=\"blank\" data-q=\"D1.12\" data-label=\"(l)\"></span></td></tr>\n</tbody></table></div>\n<p class=\"footnote\"><sup>1</sup> In an actual experiment, these sentences would need to be designed differently to encourage participants to pay attention to the image. For instance, instead of saying &ldquo;I drive a rocking chair&rdquo;, we might say, &ldquo;In a minute, we will ask you to point at what I drive. I drive a rocking chair.&rdquo; In this problem, to save space, we use the shorter prompts shown here.</p>\n<p class=\"footnote\"><sup>2</sup> A cardinal is a type of bird. A carp is a type of fish. A lamb is a young sheep. An amp is a device that makes instruments louder. A clamp is a tool for holding items together. The Milky Way is the galaxy containing the Earth.</p>\n<p>For the rest of this problem we will assume that <strong>Hypothesis 5</strong> is correct. Of course, actual human sentence processing is more complex than Hypothesis 5, but Hypothesis 5 is still a better description of human sentence processing than the other four hypotheses.</p>\n<p>Suppose that we now use this grid of images for an experiment:</p>\n<figure><img src=\"/content-assets/2021-open-D-grid2.png\" alt=\"Grid of 12 labelled pictures: AA book, BB cat, CC frog, DD soda can, EE dripping water tap, FF (MISSING), GG giraffe, HH ambiguous duck-rabbit drawing, II dolphin, JJ house, KK tree, LL sushi.\" /></figure>\n<p>Participants are read the following sentence:</p>\n<p style=\"text-align:center\">My cousin has a pet <strong>*dolphin*</strong></p>\n<p>Another participant is read this sentence, and her eyes follow the trajectory EE, DD, FF, LL:</p>\n<p style=\"text-align:center\">Alice was thirsty after her run, so she ordered some <strong>*sushi*</strong></p>\n<p>In a final experiment, participants are familiarized with this array of images:</p>\n<figure><img src=\"/content-assets/2021-open-D-grid3.png\" alt=\"A six-row array of labelled pictures with some empty cells: F01 truck, F02 tractor, F03 car, F04 campfire, F05 pencil, F06 bicycle, F07 bricks, F08 camera, F09 cat, F10 tennis ball, F11 sand, F12 boat, F13 candle, F14 tennis court, F15 bowtie, F16 sticks, F17 cake, F18 camel, F19 tent, F20 straws, F21 traffic cone, F22 present, F23 tower, F24 pen, F25 strawberries, F26 dog, F27 castle.\" /></figure>\n<p>The table below, when completed, encodes a secret message which could serve as an alternate title for this problem. This message is 7 letters long (a 3-letter word followed by a 4-letter word). Fill in the missing slots in the table so that the intended secret message is still communicated. <em><strong>Hint:</strong></em> Every image is used at least once.</p>\n<p>Remember: we are assuming that participants behave according to Hypothesis 5. When you write the sentences, you should include asterisks, but you don&rsquo;t need to include bolding. You can still get partial credit for correct sentences and trajectories even if you don&rsquo;t figure out the secret message. For the sentences, there are many correct answers.</p>\n<div class=\"table-scroll\"><table><thead><tr><th></th><th><em>Sentence</em></th><th><em>Trajectory</em></th></tr></thead><tbody>\n<tr><td>i</td><td>I bought my friend a birthday <strong>*campfire*</strong></td><td><span class=\"blank\" data-q=\"D5.1\" data-label=\"(a)\"></span></td></tr>\n<tr><td>ii</td><td><span class=\"blank\" data-q=\"D5.2\" data-label=\"(b)\"></span></td><td><span class=\"blank\" data-q=\"D5.3\" data-label=\"(c)\"></span></td></tr>\n<tr><td>iii</td><td><span class=\"blank\" data-q=\"D5.4\" data-label=\"(d)\"></span></td><td>F27, F23, F19, F14, F10</td></tr>\n<tr><td>iv</td><td>My neighbor rides to work every morning in my <strong>*bow tie*</strong></td><td><span class=\"blank\" data-q=\"D5.5\" data-label=\"(e)\"></span></td></tr>\n<tr><td>v</td><td>He signed his name with a dark blue <strong>*pencil*</strong></td><td><span class=\"blank\" data-q=\"D5.6\" data-label=\"(f)\"></span></td></tr>\n<tr><td>vi</td><td>My neighbor rides to work every morning in my <strong>*traffic cone*</strong></td><td><span class=\"blank\" data-q=\"D5.7\" data-label=\"(g)\"></span></td></tr>\n<tr><td>vii</td><td>Outside the construction site there was a pile of <strong>*strawberries*</strong></td><td><span class=\"blank\" data-q=\"D5.8\" data-label=\"(h)\"></span></td></tr>\n</tbody></table></div>",
+  "assets": [
+    {
+      "src": "/content-assets/2021-open-D-grid1.png",
+      "alt": "Grid of 24 labelled pictures A to X: A rocket, B ring, C fish, D starry night sky, E lamp, F rocking chair, G frying pan, H cardinal bird, I pants, J rock, K milk carton, L car, M ear, N king, O key, P mill, Q clamp, R birthday card, S ant, T amp, U lamb, V carpet, W steering wheel, X clam shell."
+    },
+    {
+      "src": "/content-assets/2021-open-D-grid2.png",
+      "alt": "Grid of 12 labelled pictures: AA book, BB cat, CC frog, DD soda can, EE dripping water tap, FF (MISSING), GG giraffe, HH ambiguous duck-rabbit drawing, II dolphin, JJ house, KK tree, LL sushi."
+    },
+    {
+      "src": "/content-assets/2021-open-D-grid3.png",
+      "alt": "A six-row array of labelled pictures with some empty cells: F01 truck, F02 tractor, F03 car, F04 campfire, F05 pencil, F06 bicycle, F07 bricks, F08 camera, F09 cat, F10 tennis ball, F11 sand, F12 boat, F13 candle, F14 tennis court, F15 bowtie, F16 sticks, F17 cake, F18 camel, F19 tent, F20 straws, F21 traffic cone, F22 present, F23 tower, F24 pen, F25 strawberries, F26 dog, F27 castle."
+    }
+  ],
+  "questions": [
+    {
+      "id": "D1.1",
+      "promptHtml": "<p>(a) Hypothesis 5 for &ldquo;Mary had a little <strong>*lamp*</strong>&rdquo;</p>",
+      "part": "D1",
+      "partPrompt": "Fill in the missing slots in the table of predicted eye trajectories.",
+      "gradingMode": "exact",
+      "answerKey": "U,E",
+      "acceptedVariants": [
+        "U, E"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "D1.2",
+      "promptHtml": "<p>(b) Hypothesis 2 for &ldquo;I locked the door with a <strong>*steering wheel*</strong>&rdquo;</p>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "O",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "D1.3",
+      "promptHtml": "<p>(c) Hypothesis 4 for &ldquo;In the desert sky I could see the <strong>*Milky Way*</strong>&rdquo;</p>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "?,P,K,O,D",
+      "acceptedVariants": [
+        "?, P, K, O, D"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "D1.4",
+      "promptHtml": "<p>(d) Hypothesis 1 for &ldquo;This fish is a <strong>*clamp*</strong>&rdquo;</p>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "?,Q",
+      "acceptedVariants": [
+        "?, Q"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "D1.5",
+      "promptHtml": "<p>(e) Hypothesis 2 for &ldquo;This fish is a <strong>*clamp*</strong>&rdquo;</p>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "D1.6",
+      "promptHtml": "<p>(f) Hypothesis 3 for &ldquo;This fish is a <strong>*clamp*</strong>&rdquo;</p>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "?,X,Q",
+      "acceptedVariants": [
+        "?, X, Q"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "D1.7",
+      "promptHtml": "<p>(g) Hypothesis 4 for &ldquo;This fish is a <strong>*clamp*</strong>&rdquo;</p>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "?,U,X,T,E,Q",
+      "acceptedVariants": [
+        "?, U, X, T, E, Q"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "D1.8",
+      "promptHtml": "<p>(h) Hypothesis 1 for &ldquo;The floor needs a <strong>*carpet*</strong>&rdquo;</p>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "?,V",
+      "acceptedVariants": [
+        "?, V"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "D1.9",
+      "promptHtml": "<p>(i) Hypothesis 2 for &ldquo;The floor needs a <strong>*carpet*</strong>&rdquo;</p>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "V",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "D1.10",
+      "promptHtml": "<p>(j) Hypothesis 3 for &ldquo;The floor needs a <strong>*carpet*</strong>&rdquo;</p>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "?,L,C,V",
+      "acceptedVariants": [
+        "?, L, C, V"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "D1.11",
+      "promptHtml": "<p>(k) Hypothesis 4 for &ldquo;The floor needs a <strong>*carpet*</strong>&rdquo;</p>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "?,L,C,V",
+      "acceptedVariants": [
+        "?, L, C, V"
+      ],
+      "points": 0.25
+    },
+    {
+      "id": "D1.12",
+      "promptHtml": "<p>(l) Hypothesis 5 for &ldquo;The floor needs a <strong>*carpet*</strong>&rdquo;</p>",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "V",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "D2.1",
+      "promptHtml": "<p>What trajectory will a participant&rsquo;s eyes follow if they view Image HH as a <strong>rabbit</strong>?</p>",
+      "part": "D2",
+      "partPrompt": "Image HH is ambiguous: it can be viewed as a rabbit or as a duck. Give the eye trajectory for the sentence \"My cousin has a pet *dolphin*\" in each case. Write the image labels separated by commas.",
+      "gradingMode": "exact",
+      "answerKey": "BB,II",
+      "acceptedVariants": [
+        "BB, II",
+        "B,II",
+        "B, II"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D2.2",
+      "promptHtml": "<p>What trajectory will a participant&rsquo;s eyes follow if they view Image HH as a <strong>duck</strong>?</p>",
+      "part": "D2",
+      "gradingMode": "exact",
+      "answerKey": "BB,HH,II",
+      "acceptedVariants": [
+        "BB, HH, II"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "D3.1",
+      "promptHtml": "<p>Image DD depicts a carbonated beverage. Does this participant refer to carbonated beverages as <em>pop</em>, <em>soda</em>, <em>coke</em>, or <em>fizzy drink</em>?</p>",
+      "part": "D3",
+      "partPrompt": "This question is about the second participant, whose eyes followed the trajectory EE, DD, FF, LL for the sushi sentence.",
+      "gradingMode": "exact",
+      "answerKey": "soda",
+      "acceptedVariants": [],
+      "choices": [
+        "pop",
+        "soda",
+        "coke",
+        "fizzy drink"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D4.1",
+      "promptHtml": "<p>What is Image FF? Your answer should be one word.</p>",
+      "part": "D4",
+      "partPrompt": "After the experiment, we somehow lost Image FF!",
+      "gradingMode": "exact",
+      "answerKey": "soup",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "D5.1",
+      "promptHtml": "<p>(a) Trajectory for sentence i: &ldquo;I bought my friend a birthday <strong>*campfire*</strong>&rdquo;</p>",
+      "part": "D5",
+      "partPrompt": "Fill in the missing slots in the final table so that the intended secret message is still communicated. Every image is used at least once, and participants behave according to Hypothesis 5. For the sentences, there are many correct answers.",
+      "gradingMode": "exact",
+      "answerKey": "F22,F17,F13,F08,F04",
+      "acceptedVariants": [
+        "F22, F17, F13, F08, F04"
+      ],
+      "points": 0.375
+    },
+    {
+      "id": "D5.2",
+      "promptHtml": "<p>(b) Sentence ii (many answers are possible; it must produce the trajectory you give in (c) under Hypothesis 5)</p>",
+      "part": "D5",
+      "gradingMode": "llm",
+      "answerKey": "I went on a walk with my pet *camera*",
+      "acceptedVariants": [],
+      "points": 0.375
+    },
+    {
+      "id": "D5.3",
+      "promptHtml": "<p>(c) Trajectory for sentence ii</p>",
+      "part": "D5",
+      "gradingMode": "exact",
+      "answerKey": "F26,F09,F18,F08",
+      "acceptedVariants": [
+        "F26, F09, F18, F08",
+        "F26,F09,F18,F04",
+        "F26, F09, F18, F04"
+      ],
+      "points": 0.375
+    },
+    {
+      "id": "D5.4",
+      "promptHtml": "<p>(d) Sentence iii, whose trajectory is F27, F23, F19, F14, F10 (many answers are possible)</p>",
+      "part": "D5",
+      "gradingMode": "llm",
+      "answerKey": "The queen lives in a magnificent *tennis ball*",
+      "acceptedVariants": [],
+      "points": 0.375
+    },
+    {
+      "id": "D5.5",
+      "promptHtml": "<p>(e) Trajectory for sentence iv: &ldquo;My neighbor rides to work every morning in my <strong>*bow tie*</strong>&rdquo;</p>",
+      "part": "D5",
+      "gradingMode": "exact",
+      "answerKey": "F03,F06,F12,F15",
+      "acceptedVariants": [
+        "F03, F06, F12, F15"
+      ],
+      "points": 0.375
+    },
+    {
+      "id": "D5.6",
+      "promptHtml": "<p>(f) Trajectory for sentence v: &ldquo;He signed his name with a dark blue <strong>*pencil*</strong>&rdquo;</p>",
+      "part": "D5",
+      "gradingMode": "exact",
+      "answerKey": "F24,F05",
+      "acceptedVariants": [
+        "F24, F05"
+      ],
+      "points": 0.375
+    },
+    {
+      "id": "D5.7",
+      "promptHtml": "<p>(g) Trajectory for sentence vi: &ldquo;My neighbor rides to work every morning in my <strong>*traffic cone*</strong>&rdquo;</p>",
+      "part": "D5",
+      "gradingMode": "exact",
+      "answerKey": "F03,F01,F02,F21",
+      "acceptedVariants": [
+        "F03, F01, F02, F21"
+      ],
+      "points": 0.375
+    },
+    {
+      "id": "D5.8",
+      "promptHtml": "<p>(h) Trajectory for sentence vii: &ldquo;Outside the construction site there was a pile of <strong>*strawberries*</strong>&rdquo;</p>",
+      "part": "D5",
+      "gradingMode": "exact",
+      "answerKey": "F07,F11,F16,F20,F25",
+      "acceptedVariants": [
+        "F07, F11, F16, F20, F25"
+      ],
+      "points": 0.375
+    },
+    {
+      "id": "D6.1",
+      "promptHtml": "<p>What is the secret message mentioned in D5?</p>",
+      "part": "D6",
+      "partPrompt": "The completed table encodes a secret message.",
+      "gradingMode": "exact",
+      "answerKey": "EYE SITE",
+      "acceptedVariants": [
+        "eye site"
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start with the rows that are already filled in and figure out what each of the five columns is doing. Look especially at rows where the columns disagree, such as the rocking chair row and the pants row, and ask yourself which picture each letter stands for and why a listener might glance there.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Each hypothesis is a different rule about when a listener moves their eyes: one waits for the whole utterance to end; one looks only at the word it guesses will come next and never moves; one looks at every image whose name is spelled out by the beginning of what has been said so far; one looks at every image whose name is finished at any point, even words hidden in the middle of the target word (shortest first); and one keeps guessing the most likely word that still matches every sound heard so far. For the last table, remember that a trajectory is a path across the picture array, so it has a shape.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try the printed pants row. Hypothesis 4 gives ?,G,S,I: nothing at first, then the frying pan once \"pan\" has been completed, then the ant because the sounds \"ants\" finish a word part-way through \"pants\", then the pants themselves. Hypothesis 5 instead gives Q,G,I, because before the word starts the best guess for holding a block tightly with metal is the clamp, and only then do the sounds narrow it to pan and finally pants. Apply the same reasoning step by step to the rows that are blank.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>How to read a trajectory</h3>\n<p>A trajectory is just the list of pictures the person's eyes visit, in order, while the starred word is being said. A question mark means &ldquo;not looking at any picture in particular&rdquo;. So <span class=\"data\">?,U,T,E</span> means: nothing, then the lamb, then the amp, then the lamp.</p>\n<p>First work out what each picture is, using the rows that are already filled in. From the rocking chair row we can see that J is a rock (\"rock\" is the beginning of \"rocking\") and N is a king (\"rocKING\" contains \"king\"). From the cardinal row, L is a car and R is a card. From the Milky Way row, P is a mill and K is milk. From the steering wheel row, M is an ear and B is a ring, and O is a key.</p>\n<h3>Working out the five hypotheses</h3>\n<p><strong>Hypothesis 1</strong> waits. The listener looks nowhere until the whole utterance is finished, then looks at the picture for the word that was said. That is why every Hypothesis 1 cell has exactly two entries: a question mark plus one picture.</p>\n<p><strong>Hypothesis 2</strong> does not listen at all. It just guesses the most likely word for the slot and stares at that one picture forever. For &ldquo;I locked the door with a ___&rdquo; the most likely word is <em>key</em>, so the answer is the key, even though the sentence actually ends with \"steering wheel\".</p>\n<p><strong>Hypothesis 3</strong> looks at a picture whenever the sounds heard <em>from the start of the word</em> spell out a complete word. In \"Milky Way\" you first hear \"mil\" (mill), then \"milk\" (milk), then the whole thing.</p>\n<p><strong>Hypothesis 4</strong> is like Hypothesis 3 but also counts words that begin part-way through the target word, and when several words finish at the same moment you look at the shortest first. In \"Milky Way\", the moment \"milky\" is complete you have also just completed \"key\" (mil-KY), so the key gets added: nothing, mill, milk, key, Milky Way.</p>\n<p><strong>Hypothesis 5</strong> is the most human-like: at every instant, look at the most likely word that is still consistent with everything you have heard. For \"The floor needs a ___\" the best guess is already <em>carpet</em>, so the eyes go straight there and never move.</p>\n<h3>The clamp and carpet rows</h3>\n<p>\"This fish is a *clamp*\". Hypothesis 1: nothing, then the clamp. Hypothesis 2: the best guess for a fish is the carp, and that is all. Hypothesis 3: the prefixes of \"clamp\" that are words are \"clam\" and \"clamp\", so nothing, clam, clamp. Hypothesis 4: after \"clam-\" you have finished both <em>clam</em> and <em>lamb</em>, and <em>lamb</em> has fewer sounds, so lamb then clam; when the final p arrives you finish <em>amp</em>, <em>lamp</em> and <em>clamp</em>, shortest first. Hypothesis 5: carp first (best guess for a fish), then once \"cl\" rules out carp the best fish-like guess is clam, then finally clamp.</p>\n<p>\"The floor needs a *carpet*\" works the same way: Hypotheses 3 and 4 both go nothing, car, carp, carpet (no extra word hides inside \"carpet\"), while Hypotheses 2 and 5 both point at the carpet immediately.</p>\n<h3>The duck-rabbit, the soda and the missing picture</h3>\n<p>Now only Hypothesis 5 matters. For \"My cousin has a pet *dolphin*\": the best guess for a pet is the cat, so the eyes start on BB. Once the \"d\" of \"dolphin\" is heard, the cat is impossible; if HH counts as a duck, a duck is a likelier pet than a dolphin, so the eyes stop there before landing on the dolphin. If HH counts as a rabbit, \"rabbit\" (or \"bunny\" or \"hare\") does not begin with a d, so it can never be an intermediate stop: the eyes jump from the cat straight to the dolphin.</p>\n<p>The second participant went water (EE), then the carbonated drink (DD), then the missing picture (FF), then sushi (LL). Since the drink came <em>between</em> water and sushi, her word for the drink must begin with the same sounds as \"sushi\" &mdash; so she says <em>soda</em>, not pop, coke or fizzy drink. The same logic pins down FF: it must start with the sounds \"soo\", must be more likely than sushi for &ldquo;she ordered some ___&rdquo;, and must be something a thirsty person orders. That is <em>soup</em>.</p>\n<h3>Drawing letters with your eyes</h3>\n<p>In the last table each trajectory is a path across the picture array &mdash; and if you draw the path, it makes the shape of a letter. Seven sentences give seven letters, and the message is a 3-letter word plus a 4-letter word about eyes: EYE SITE (a pun on \"eyesight\").</p>\n<p>To build a trajectory, apply Hypothesis 5 to the sentence and read off the pictures. \"He signed his name with a dark blue *pencil*\" gives the pen first (best guess for signing) then the pencil: two cells, a short straight stroke, the letter I. \"My neighbor rides to work every morning in my *traffic cone*\" gives car, truck, tractor, traffic cone, and \"...in my *bow tie*\" gives car, bicycle, boat, bowtie. Notice how the first picture is the same in both, because before any sound of the target word arrives the best guess is identical.</p>\n<p>For the row with the given trajectory F27, F23, F19, F14, F10 (castle, tower, tent, tennis court, tennis ball) you have to invent a sentence whose best guess is a castle and whose target word starts \"ten...\": something like \"The queen lives in a magnificent *tennis ball*\". And for the row where both cells are blank, the letter shape tells you what trajectory is needed (a Y), which is why a sentence like \"I went on a walk with my pet *camera*\" works: dog, cat, camel, camera.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "CROP /content-assets/2021-open-D-grid1.png page=1 x=12 y=20 w=80 h=22\nCROP /content-assets/2021-open-D-grid2.png page=2 x=23 y=27 w=50 h=26\nCROP /content-assets/2021-open-D-grid3.png page=3 x=6 y=20 w=86 h=68\nAll answer keys come from the official solution pages. Two things to double-check: (1) the solution prints the rabbit trajectory for D2 as \"B,II\", but the second grid has no image B (labels are AA-LL), so this looks like a typo for BB,II; I keyed BB,II and accepted B,II as a variant. (2) The solution's version of D5 rows v and vii reads \"He signed his name in ink with a dark blue *pencil*\" and \"At the construction site there was a pile of *strawberries*\", slightly different wording from the booklet, which I transcribed as printed in the booklet. Also note the solution says trajectory F26,F09,F18,F04 is acceptable for (c) at a slightly lower score - included as a variant.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "cells:count",
+      "note": "arbitration returned UNRESOLVED"
+    }
+  ]
+}

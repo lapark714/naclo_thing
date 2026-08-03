@@ -1,0 +1,688 @@
+{
+  "id": "2020-open-B",
+  "tier": "full",
+  "year": 2020,
+  "round": "open",
+  "letter": "B",
+  "title": "A Cat in a Hat",
+  "authors": [
+    "Aleka Blackwell"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "syntax"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "hard",
+  "languages": [
+    "Chintang"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>Chintang (Chintang: <span class=\"data\">छिन्ताङ्</span> <span class=\"data\">Chintāṅ</span> / <em>Chhintang</em>) is an eastern Kiranti language spoken by 5,000 to 6,000 people in Chhintang and Ahale municipalities of Dhankuta District, Koshi Zone, Nepal. Its dialects are Mulgaun and Sambhugaon. A few of the characters used to represent the words in this language may be unfamiliar. <span class=\"data\">ʔ</span> is a glottal stop, the sound heard in the middle of “uh-oh.” <span class=\"data\">ŋ</span> is the sound made by the <em>ng</em> in <em>sing</em>. <span class=\"data\">ʌ</span> is the sound made by the <em>o</em> in <em>won</em>.</p>\n<p>Below are 16 sentences in Chintang written in the International Phonetic Alphabet, and their unordered English translations:</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td>1.</td><td><span class=\"data\">cuwa uthurumbeʔ yuŋno</span></td><td>a.</td><td>There is a hole in the towel.</td></tr>\n<tr><td>2.</td><td><span class=\"data\">appa chintaŋbeʔ yuŋno</span></td><td>b.</td><td>The woman has gone away.</td></tr>\n<tr><td>3.</td><td><span class=\"data\">sencak sie</span></td><td>c.</td><td>The rice has been cooked.</td></tr>\n<tr><td>4.</td><td><span class=\"data\">wapaŋa topi wadaŋse</span></td><td>d.</td><td>There is a hat on the head.</td></tr>\n<tr><td>5.</td><td><span class=\"data\">kok thuktaŋse</span></td><td>e.</td><td>My mother-in-law slept.</td></tr>\n<tr><td>6.</td><td><span class=\"data\">ram harinɨŋ khoŋno</span></td><td>f.</td><td>You go to the market.</td></tr>\n<tr><td>7.</td><td><span class=\"data\">kʌp kedadaŋse</span></td><td>g.</td><td>The water is in his mouth.</td></tr>\n<tr><td>8.</td><td><span class=\"data\">taŋbeʔ topi yuŋno</span></td><td>h.</td><td>Joge sent a letter.</td></tr>\n<tr><td>9.</td><td><span class=\"data\">menwaŋa sencak sede</span></td><td>i.</td><td>The mouse died.</td></tr>\n<tr><td>10.</td><td><span class=\"data\">tawelbeʔ uhoŋ yuŋno</span></td><td>j.</td><td>The woman has bought a chicken.</td></tr>\n<tr><td>11.</td><td><span class=\"data\">anambaŋa cuwa thuŋno</span></td><td>k.</td><td>The cup has been broken.</td></tr>\n<tr><td>12.</td><td><span class=\"data\">mechacha khadaŋse</span></td><td>l.</td><td>My father is in Chintang.</td></tr>\n<tr><td>13.</td><td><span class=\"data\">jogeŋa citthi hakte</span></td><td>m.</td><td>The rooster has put on a hat.</td></tr>\n<tr><td>14.</td><td><span class=\"data\">anamma imse</span></td><td>n.</td><td>A cat killed a mouse.</td></tr>\n<tr><td>15.</td><td><span class=\"data\">hana bajar akhaʔno</span></td><td>o.</td><td>Ram plays with Hari.</td></tr>\n<tr><td>16.</td><td><span class=\"data\">mechachaŋa wa khedoŋse</span></td><td>p.</td><td>My father-in-law drinks water.</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>B1</strong>. Match the Chintang sentences (1-16) with their corresponding English translation (a-p).</p>\n<p><strong>B2</strong>. Translate the following into Chintang. Note that some English words may be translated as part of a Chintang word.</p>\n<ol type=\"a\">\n<li>There is a cat in a hat.</li>\n<li>Joge plays with a chicken.</li>\n<li>My hen is in the market.</li>\n<li>parent-in-law</li>\n</ol>\n<p><strong>B3</strong>. Translate the following into English. Your answers should be structurally similar to the English translations given in the data.</p>\n<ol type=\"a\">\n<li><span class=\"data\">athurumbeʔ kok yuŋno</span></li>\n<li><span class=\"data\">appa khade</span></li>\n<li><span class=\"data\">anamma ammanɨŋ yuŋno</span></li>\n</ol>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "B1.1",
+      "promptHtml": "1. <span class=\"data\">cuwa uthurumbeʔ yuŋno</span>",
+      "part": "B1",
+      "partPrompt": "Match the Chintang sentences (1-16) with their corresponding English translation (a-p). Give the letter.",
+      "gradingMode": "exact",
+      "answerKey": "g",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.2",
+      "promptHtml": "2. <span class=\"data\">appa chintaŋbeʔ yuŋno</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "l",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.3",
+      "promptHtml": "3. <span class=\"data\">sencak sie</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "i",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.4",
+      "promptHtml": "4. <span class=\"data\">wapaŋa topi wadaŋse</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "m",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.5",
+      "promptHtml": "5. <span class=\"data\">kok thuktaŋse</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "c",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.6",
+      "promptHtml": "6. <span class=\"data\">ram harinɨŋ khoŋno</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "o",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.7",
+      "promptHtml": "7. <span class=\"data\">kʌp kedadaŋse</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "k",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.8",
+      "promptHtml": "8. <span class=\"data\">taŋbeʔ topi yuŋno</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "d",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.9",
+      "promptHtml": "9. <span class=\"data\">menwaŋa sencak sede</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "n",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.10",
+      "promptHtml": "10. <span class=\"data\">tawelbeʔ uhoŋ yuŋno</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "a",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.11",
+      "promptHtml": "11. <span class=\"data\">anambaŋa cuwa thuŋno</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "p",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.12",
+      "promptHtml": "12. <span class=\"data\">mechacha khadaŋse</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "b",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.13",
+      "promptHtml": "13. <span class=\"data\">jogeŋa citthi hakte</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "h",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.14",
+      "promptHtml": "14. <span class=\"data\">anamma imse</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "e",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.15",
+      "promptHtml": "15. <span class=\"data\">hana bajar akhaʔno</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "f",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B1.16",
+      "promptHtml": "16. <span class=\"data\">mechachaŋa wa khedoŋse</span>",
+      "part": "B1",
+      "gradingMode": "exact",
+      "answerKey": "j",
+      "acceptedVariants": [],
+      "choices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "B2.1",
+      "promptHtml": "a. There is a cat in a hat.",
+      "part": "B2",
+      "partPrompt": "Translate the following into Chintang. Note that some English words may be translated as part of a Chintang word.",
+      "gradingMode": "exact",
+      "answerKey": "topibeʔ menwa yuŋno",
+      "acceptedVariants": [
+        "topibe? menwa yuŋno",
+        "topibe menwa yuŋno",
+        "topibeʔ menwa yunno",
+        "topibe? menwa yunno"
+      ],
+      "points": 1
+    },
+    {
+      "id": "B2.2",
+      "promptHtml": "b. Joge plays with a chicken.",
+      "part": "B2",
+      "gradingMode": "exact",
+      "answerKey": "joge wanɨŋ khoŋno",
+      "acceptedVariants": [
+        "joge waniŋ khoŋno",
+        "joge waning khongno",
+        "joge wanɨŋ khongno"
+      ],
+      "points": 1
+    },
+    {
+      "id": "B2.3",
+      "promptHtml": "c. My hen is in the market.",
+      "part": "B2",
+      "gradingMode": "exact",
+      "answerKey": "awama bajarbeʔ yuŋno",
+      "acceptedVariants": [
+        "awama bajarbe? yuŋno",
+        "awama bajarbe yuŋno",
+        "awama bajarbeʔ yunno",
+        "awama bajarbe? yunno"
+      ],
+      "points": 1
+    },
+    {
+      "id": "B2.4",
+      "promptHtml": "d. parent-in-law",
+      "part": "B2",
+      "gradingMode": "exact",
+      "answerKey": "nam",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "B3.1",
+      "promptHtml": "a. <span class=\"data\">athurumbeʔ kok yuŋno</span>",
+      "part": "B3",
+      "partPrompt": "Translate the following into English. Your answers should be structurally similar to the English translations given in the data.",
+      "gradingMode": "exact",
+      "answerKey": "There is rice in my mouth.",
+      "acceptedVariants": [
+        "The rice is in my mouth.",
+        "Rice is in my mouth."
+      ],
+      "points": 1
+    },
+    {
+      "id": "B3.2",
+      "promptHtml": "b. <span class=\"data\">appa khade</span>",
+      "part": "B3",
+      "gradingMode": "exact",
+      "answerKey": "My father went away.",
+      "acceptedVariants": [
+        "My father left.",
+        "My father has gone away."
+      ],
+      "points": 1
+    },
+    {
+      "id": "B3.3",
+      "promptHtml": "c. <span class=\"data\">anamma ammanɨŋ yuŋno</span>",
+      "part": "B3",
+      "gradingMode": "exact",
+      "answerKey": "My mother-in-law is with my mother.",
+      "acceptedVariants": [
+        "My mother in law is with my mother."
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start with the endings that repeat across many sentences: -beʔ, -ŋa, -nɨŋ, and the verb endings -no, -e, -se. Then look for the names (Ram, Hari, Joge) and for the English sentences that contain a place, a location, or two people, since those give you the fastest secure matches.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Chintang puts the verb at the end of the sentence, and grammatical information is glued onto words as prefixes and suffixes rather than written as separate words. So an English phrase like \"in the ...\" or \"with ...\" or \"my ...\" corresponds to a piece attached to a Chintang noun, not to a word of its own. Sort the sentences by which of these attached pieces they contain, and sort the English list by whether it says \"in/on\", \"with\", or \"my\".",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Try one piece of morphology out on the kinship words. Two words in the data begin with the same three letters anam- and differ only in their final syllable, -ma versus -ba. Two of the English sentences talk about in-laws, one female and one male, so those endings must be marking female versus male. Once you believe that, check whether the same -ma and -ba endings show up on any animal word, and what is left over when you peel them off.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What kind of language is this?</h3>\n<p>Chintang builds words by gluing pieces (called <em>affixes</em>) onto roots: a prefix goes in front, a suffix behind. English uses separate little words like <em>in</em>, <em>with</em> and <em>my</em>; Chintang attaches them. Also, the verb comes last in the sentence. Knowing just that, you can start matching.</p>\n\n<h3>Step 1: find the repeated suffix -beʔ</h3>\n<p>Look at the sentences containing <span class=\"data\">-beʔ</span>: <span class=\"data\">uthurumbeʔ</span>, <span class=\"data\">chintaŋbeʔ</span>, <span class=\"data\">taŋbeʔ</span>, <span class=\"data\">tawelbeʔ</span>. On the English side exactly four sentences say <em>in</em> or <em>on</em> a place: in the towel, in Chintang, in his mouth, on the head. So <span class=\"data\">-beʔ</span> is a location marker meaning \"in / on / at\".</p>\n<p><span class=\"data\">chintaŋbeʔ</span> obviously contains the place name Chintang, and <span class=\"data\">tawelbeʔ</span> contains a borrowed word for <em>towel</em>. That pins two matches immediately. All four of these sentences end in <span class=\"data\">yuŋno</span>, and all four English versions say something \"is\" somewhere, so <span class=\"data\">yuŋno</span> means \"is located / there is\".</p>\n\n<h3>Step 2: find the doer marker -ŋa</h3>\n<p>Four sentences have a word ending in <span class=\"data\">-ŋa</span>: <span class=\"data\">wapaŋa</span>, <span class=\"data\">menwaŋa</span>, <span class=\"data\">anambaŋa</span>, <span class=\"data\">jogeŋa</span>, <span class=\"data\">mechachaŋa</span>. Each of those sentences has two participants (someone does something to something). English sentences with two participants: a cat killed a mouse, the rooster put on a hat, the woman bought a chicken, Joge sent a letter, my father-in-law drinks water. <span class=\"data\">jogeŋa</span> gives away the Joge sentence. The suffix <span class=\"data\">-ŋa</span> marks the doer (linguists call this an <em>ergative</em> marker).</p>\n<p>Compare <span class=\"data\">sencak sie</span> (one participant) with <span class=\"data\">menwaŋa sencak sede</span> (two participants): the same noun <span class=\"data\">sencak</span> appears in both, and the verb root <span class=\"data\">se-</span>/<span class=\"data\">si-</span> shows up in both. On the English side, \"the mouse died\" and \"a cat killed a mouse\" share the same participant too. So <span class=\"data\">sencak</span> is \"mouse\" and <span class=\"data\">menwa</span> is \"cat\".</p>\n\n<h3>Step 3: the suffix -nɨŋ</h3>\n<p><span class=\"data\">harinɨŋ</span> contains the name Hari plus <span class=\"data\">-nɨŋ</span>, and the only English sentence with \"with\" is the one about Ram and Hari. So <span class=\"data\">-nɨŋ</span> means \"with\" and <span class=\"data\">khoŋno</span> means \"plays\".</p>\n\n<h3>Step 4: kinship words and the prefix a-</h3>\n<p>Notice <span class=\"data\">appa</span>, <span class=\"data\">amma</span> (in B3), <span class=\"data\">anamma</span>, <span class=\"data\">anamba</span>, <span class=\"data\">awama</span>. They all start with <span class=\"data\">a-</span>, and every English gloss for them says \"my\". So <span class=\"data\">a-</span> is \"my\". Compare <span class=\"data\">cuwa uthurumbeʔ yuŋno</span> = \"The water is in <em>his</em> mouth\" with B3's <span class=\"data\">athurumbeʔ</span>: the same root <span class=\"data\">thurum</span> \"mouth\" takes <span class=\"data\">u-</span> for \"his\" and <span class=\"data\">a-</span> for \"my\".</p>\n<p>Now strip <span class=\"data\">a-</span> off the in-law words: <span class=\"data\">nam-ma</span> and <span class=\"data\">nam-ba</span>. The root <span class=\"data\">nam</span> means \"parent-in-law\", and <span class=\"data\">-ma</span> is female while <span class=\"data\">-ba</span> is male. That answers B2d.</p>\n<p>The very same female/male suffixes appear on the animal word <span class=\"data\">wa</span> \"chicken\": <span class=\"data\">wapa</span> (the sentence about a rooster) is the male bird, so <span class=\"data\">wa-ma</span> with \"my\" in front, <span class=\"data\">awama</span>, is \"my hen\" - that is what B2c needs.</p>\n\n<h3>Step 5: the verb endings</h3>\n<p>Three tense patterns show up:</p>\n<ul>\n<li><span class=\"data\">-no</span>: present / general statement - <span class=\"data\">yuŋno</span> \"is\", <span class=\"data\">thuŋno</span> \"drinks\", <span class=\"data\">khoŋno</span> \"plays\", <span class=\"data\">akhaʔno</span> \"you go\".</li>\n<li><span class=\"data\">-e</span>: simple past - <span class=\"data\">sie</span> \"died\", <span class=\"data\">sede</span> \"killed\", <span class=\"data\">hakte</span> \"sent\", <span class=\"data\">imse</span> \"slept\", <span class=\"data\">khade</span> \"went\".</li>\n<li><span class=\"data\">-aŋse</span> / <span class=\"data\">-oŋse</span>: perfect, \"has ...\" - <span class=\"data\">thuktaŋse</span> \"has been cooked\", <span class=\"data\">khadaŋse</span> \"has gone away\", <span class=\"data\">khedoŋse</span> \"has bought\", <span class=\"data\">wadaŋse</span> \"has put on\", <span class=\"data\">kedadaŋse</span> \"has been broken\".</li>\n</ul>\n<p>That is why <span class=\"data\">appa khade</span> in B3 is a simple past \"went away\", not \"has gone away\": the perfect version would be <span class=\"data\">khadaŋse</span>, which is the sentence about the woman.</p>\n\n<h3>Step 6: leftovers</h3>\n<p>Borrowed words help mop up the rest: <span class=\"data\">topi</span> \"hat\", <span class=\"data\">kʌp</span> \"cup\", <span class=\"data\">citthi</span> \"letter\", <span class=\"data\">bajar</span> \"market\", <span class=\"data\">tawel</span> \"towel\". <span class=\"data\">hana</span> is \"you\" (and the verb carries an extra <span class=\"data\">a-</span> for a second-person subject), <span class=\"data\">kok</span> is \"rice\", <span class=\"data\">cuwa</span> is \"water\", <span class=\"data\">uhoŋ</span> is \"hole\", <span class=\"data\">taŋ</span> is \"head\", <span class=\"data\">mechacha</span> is \"woman\".</p>\n\n<h3>Step 7: building the B2 sentences</h3>\n<p>For \"There is a cat in a hat\": the location word takes <span class=\"data\">-beʔ</span>, the thing located comes next, and the existential verb goes last, exactly as in the four <span class=\"data\">-beʔ ... yuŋno</span> models. For \"Joge plays with a chicken\": copy the Ram-and-Hari pattern, with <span class=\"data\">-nɨŋ</span> attached to the animal word. For \"My hen is in the market\": <span class=\"data\">a-</span> plus the female animal word, then the market word plus <span class=\"data\">-beʔ</span>, then the verb.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "All answer keys are copied from the official solution page (B1 1-16, B2 a-d, B3 a-c). Points distributed as B1 0.5 each (8 total), B2 1 each (4), B3 1 each (3) = 15; the official booklet shows no per-part breakdown, so this split is editorial. Special characters to verify in the data: glottal stop ʔ, velar nasal ŋ, ʌ (in kʌp), barred i ɨ (in harinɨŋ, wanɨŋ, ammanɨŋ), and the Devanagari छिन्ताङ् plus Chintāṅ in the first paragraph - a font subset covering Devanagari and IPA is needed. Note sentence 7 is printed as 'kʌp kedadaŋse' in the booklet (three syllables 'keda-daŋse'); please confirm against the PDF. B1 choices are bare letters a-p to match the letter-only answer key.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:b1.1:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.2:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.3:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.4:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.5:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.6:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.7:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.8:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.9:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.10:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.11:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.12:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.13:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.14:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.15:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.16:choices",
+      "a": "a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b3.1:mode",
+      "a": "exact",
+      "b": "llm"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b3.2:mode",
+      "a": "exact",
+      "b": "llm"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b3.3:mode",
+      "a": "exact",
+      "b": "llm"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 19 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~19 API calls that would not resolve it"
+    }
+  ]
+}

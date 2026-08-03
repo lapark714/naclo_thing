@@ -1,0 +1,256 @@
+{
+  "id": "2019-open-A",
+  "tier": "full",
+  "year": 2019,
+  "round": "open",
+  "letter": "A",
+  "title": "(title unknown)",
+  "authors": [
+    "Harold Somers"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "phonology",
+    "morphology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "standard",
+  "languages": [
+    "Maltese"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>Maltese is a Semitic language and is the national language of Malta, where it is spoken by about 560,000 people. Along with English it is an official language in Malta, and is also one of the European Union's official languages. Here are some nouns in Maltese given along with their definite articles (\"the\").</p>\n<dl class=\"gloss-list\">\n<dt>il lanġas</dt><dd>(the pear)</dd>\n<dt>li mħadda</dt><dd>(the pillow)</dd>\n<dt>is sħana</dt><dd>(the heat)</dd>\n<dt>il mara</dt><dd>(the woman)</dd>\n<dt>iċ ċpar</dt><dd>(the mist)</dd>\n<dt>il ġobon</dt><dd>(the cheese)</dd>\n<dt>li ksieħ</dt><dd>(the cold)</dd>\n<dt>l għonq</dt><dd>(the neck)</dd>\n<dt>il bar</dt><dd>(the bar)</dd>\n<dt>l art</dt><dd>(the earth)</dd>\n<dt>li ħmar</dt><dd>(the donkey)</dd>\n<dt>id dar</dt><dd>(the house)</dd>\n<dt>li bdiewa</dt><dd>(the peasants)</dd>\n<dt>l uffiċċju</dt><dd>(the office)</dd>\n<dt>iż żir</dt><dd>(the jug)</dd>\n<dt>il lvant</dt><dd>(the east)</dd>\n<dt>ir raġel</dt><dd>(the man)</dd>\n<dt>il ktieb</dt><dd>(the book)</dd>\n<dt>l jum</dt><dd>(the day)</dd>\n<dt>il vjola</dt><dd>(the violet)</dd>\n<dt>is silġ</dt><dd>(the snow)</dd>\n<dt>il qassis</dt><dd>(the priest)</dd>\n</dl>\n<p>As you can see, Maltese has some consonants that are different from those of English. To help you understand how these consonants are pronounced, here is some information on their location in the mouth and manner of articulation.</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th></th><th>Labial</th><th>Alveolar</th><th>Palatal</th><th>Velar</th><th>Pharyngeal</th><th>Glottal</th></tr>\n</thead>\n<tbody>\n<tr><th>Nasal</th><td><span class=\"data\">m</span></td><td><span class=\"data\">n</span></td><td></td><td></td><td></td><td></td></tr>\n<tr><th>Stop</th><td><span class=\"data\">p, b</span></td><td><span class=\"data\">t, d</span></td><td></td><td><span class=\"data\">k, g</span></td><td></td><td><span class=\"data\">q</span></td></tr>\n<tr><th>Affricate</th><td></td><td><span class=\"data\">ċ, ġ, z</span></td><td></td><td></td><td></td><td></td></tr>\n<tr><th>Fricative</th><td><span class=\"data\">f, v</span></td><td><span class=\"data\">s, ż, x</span></td><td></td><td></td><td><span class=\"data\">ħ</span></td><td></td></tr>\n<tr><th>Semivowel</th><td></td><td></td><td><span class=\"data\">j</span></td><td></td><td></td><td></td></tr>\n<tr><th>Trill/Lateral</th><td></td><td><span class=\"data\">r, l</span></td><td></td><td></td><td></td><td></td></tr>\n</tbody>\n</table>\n</div>\n<p>Notes:</p>\n<ul>\n<li><strong>labial</strong> = with the lips, <strong>alveolar</strong> = with the tip of the tongue, <strong>palatal</strong> = with the hard palate of the mouth, <strong>velar</strong> = with the soft palate of the mouth, <strong>pharyngeal</strong> = with the pharynx of the throat, <strong>glottal</strong> = with the glottis</li>\n<li><strong>nasal</strong> = through the nose, <strong>stop</strong> = with stopped airflow, <strong>fricative</strong> = with friction, <strong>affricate</strong> = stop followed by fricative, <strong>semivowel</strong> = like a shorter vowel, <strong>trill</strong> = with the tongue vibrating, <strong>lateral</strong> = with air though the sides of the mouth</li>\n<li>Also, the letter <strong><em>h</em></strong> and combination <strong><em>għ</em></strong> are silent (not pronounced)</li>\n</ul>\n<p><strong>A1.</strong> Two of the words above don't follow the normal rules of Maltese. What are these two words? Mark them down on the answer sheets.</p>\n<p><strong>A2.</strong> Give the appropriate form of the definite article for the following nouns on the answer sheets. All of these nouns follow the normal rules of Maltese.</p>\n<div class=\"table-scroll\">\n<table>\n<tbody>\n<tr><td><span class=\"blank\" data-q=\"A2.1\"></span></td><td><span class=\"data\">xkora</span></td><td>(sack)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.2\"></span></td><td><span class=\"data\">ġebla</span></td><td>(stone)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.3\"></span></td><td><span class=\"data\">mniħer</span></td><td>(nose)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.4\"></span></td><td><span class=\"data\">xemx</span></td><td>(sun)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.5\"></span></td><td><span class=\"data\">kafè</span></td><td>(coffee)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.6\"></span></td><td><span class=\"data\">hena</span></td><td>(happiness)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.7\"></span></td><td><span class=\"data\">għajn</span></td><td>(eye)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.8\"></span></td><td><span class=\"data\">tama</span></td><td>(hope)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.9\"></span></td><td><span class=\"data\">ors</span></td><td>(bear)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.10\"></span></td><td><span class=\"data\">missier</span></td><td>(father)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.11\"></span></td><td><span class=\"data\">lura</span></td><td>(back)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.12\"></span></td><td><span class=\"data\">ilma</span></td><td>(water)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.13\"></span></td><td><span class=\"data\">beraq</span></td><td>(lightning)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.14\"></span></td><td><span class=\"data\">nar</span></td><td>(fire)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.15\"></span></td><td><span class=\"data\">nifs</span></td><td>(breath)</td></tr>\n<tr><td><span class=\"blank\" data-q=\"A2.16\"></span></td><td><span class=\"data\">dlam</span></td><td>(darkness)</td></tr>\n</tbody>\n</table>\n</div>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "A1.1",
+      "promptHtml": "<p>Write down the two irregular nouns.</p>",
+      "part": "A1",
+      "partPrompt": "Two of the words above don't follow the normal rules of Maltese. What are these two words?",
+      "gradingMode": "exact",
+      "answerKey": "ktieb and ġobon",
+      "acceptedVariants": [
+        "ktieb and gobon",
+        "ġobon and ktieb",
+        "gobon and ktieb",
+        "ktieb, ġobon",
+        "ktieb, gobon",
+        "ġobon, ktieb",
+        "gobon, ktieb",
+        "il ktieb and il ġobon",
+        "il ktieb and il gobon"
+      ],
+      "points": 2
+    },
+    {
+      "id": "A2.1",
+      "promptHtml": "<p><span class=\"data\">xkora</span> (sack)</p>",
+      "part": "A2",
+      "partPrompt": "Give the appropriate form of the definite article for the following nouns. All of these nouns follow the normal rules of Maltese.",
+      "gradingMode": "exact",
+      "answerKey": "ix",
+      "acceptedVariants": [
+        "ix xkora"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.2",
+      "promptHtml": "<p><span class=\"data\">ġebla</span> (stone)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "iġ",
+      "acceptedVariants": [
+        "ig",
+        "iġ ġebla",
+        "ig gebla"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.3",
+      "promptHtml": "<p><span class=\"data\">mniħer</span> (nose)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "li",
+      "acceptedVariants": [
+        "li mniħer",
+        "li mniher"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.4",
+      "promptHtml": "<p><span class=\"data\">xemx</span> (sun)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "ix",
+      "acceptedVariants": [
+        "ix xemx"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.5",
+      "promptHtml": "<p><span class=\"data\">kafè</span> (coffee)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "il",
+      "acceptedVariants": [
+        "il kafè",
+        "il kafe"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.6",
+      "promptHtml": "<p><span class=\"data\">hena</span> (happiness)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "l",
+      "acceptedVariants": [
+        "l hena"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.7",
+      "promptHtml": "<p><span class=\"data\">għajn</span> (eye)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "l",
+      "acceptedVariants": [
+        "l għajn",
+        "l ghajn"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.8",
+      "promptHtml": "<p><span class=\"data\">tama</span> (hope)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "it",
+      "acceptedVariants": [
+        "it tama"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.9",
+      "promptHtml": "<p><span class=\"data\">ors</span> (bear)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "l",
+      "acceptedVariants": [
+        "l ors"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.10",
+      "promptHtml": "<p><span class=\"data\">missier</span> (father)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "il",
+      "acceptedVariants": [
+        "il missier"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.11",
+      "promptHtml": "<p><span class=\"data\">lura</span> (back)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "il",
+      "acceptedVariants": [
+        "il lura"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.12",
+      "promptHtml": "<p><span class=\"data\">ilma</span> (water)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "l",
+      "acceptedVariants": [
+        "l ilma"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.13",
+      "promptHtml": "<p><span class=\"data\">beraq</span> (lightning)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "il",
+      "acceptedVariants": [
+        "il beraq"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.14",
+      "promptHtml": "<p><span class=\"data\">nar</span> (fire)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "in",
+      "acceptedVariants": [
+        "in nar"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.15",
+      "promptHtml": "<p><span class=\"data\">nifs</span> (breath)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "in",
+      "acceptedVariants": [
+        "in nifs"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "A2.16",
+      "promptHtml": "<p><span class=\"data\">dlam</span> (darkness)</p>",
+      "part": "A2",
+      "gradingMode": "exact",
+      "answerKey": "id",
+      "acceptedVariants": [
+        "id dlam"
+      ],
+      "points": 0.5
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "The article never depends on the meaning of the noun. Sort the 22 given examples by which article they take, then look only at how each noun begins - and check that first letter against the consonant chart.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "There are four cases, and they have to be tried in order. Ask first: does the noun start with a consonant from the alveolar column of the chart? If so the article's consonant is replaced by a copy of that consonant. If not, ask whether the noun starts with a vowel or with a silent letter (remember h and għ are silent, and j behaves like a vowel here) - those get the shortest article. If not, ask whether the noun starts with two consonants in a row. Anything left over gets the default form.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try the rule out on data you are not being graded on. In is sħana (the heat) the noun starts with s, which sits in the alveolar column, so the article's consonant becomes a copy of s; iż żir (the jug) works the same way with ż. Compare iċ ċpar (the mist): ċ is an affricate, but it is still in the alveolar column, so it copies too. Now notice that ir raġel and li ħmar are handled by two different rules, and see which question you have to ask first to get both right.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What is going on</h3>\n<p>Maltese has one word for \"the\", but it is spelled several different ways: <span class=\"data\">il</span>, <span class=\"data\">li</span>, <span class=\"data\">l</span>, and forms like <span class=\"data\">is</span>, <span class=\"data\">iċ</span>, <span class=\"data\">ir</span>, <span class=\"data\">iż</span>, <span class=\"data\">id</span>. Nothing about the meaning of the noun matters here - only the sounds the noun begins with. This is a <em>phonological</em> rule: the shape of one word changes because of the sounds next to it. (English does something similar in a small way: <em>a</em> before a consonant, <em>an</em> before a vowel.)</p>\n<h3>Step 1: group the data by article</h3>\n<p>Looking at the 22 examples:</p>\n<ul>\n<li>The article's <em>l</em> turns into a copy of the noun's first consonant in <span class=\"data\">is sħana</span>, <span class=\"data\">iċ ċpar</span>, <span class=\"data\">id dar</span>, <span class=\"data\">iż żir</span>, <span class=\"data\">ir raġel</span>, <span class=\"data\">is silġ</span>. The consonants that trigger this are s, ċ, d, ż, r - and if you look them up in the chart, every single one sits in the <strong>Alveolar</strong> column (made with the tip of the tongue). This copying is called <strong>assimilation</strong>.</li>\n<li>The bare form <span class=\"data\">l</span> appears in <span class=\"data\">l art</span>, <span class=\"data\">l uffiċċju</span> (nouns starting with a vowel), <span class=\"data\">l għonq</span> (<em>għ</em> is silent, so what you actually hear first is a vowel), and <span class=\"data\">l jum</span> (<em>j</em> counts as a vowel-like sound here).</li>\n<li><span class=\"data\">li</span> appears in <span class=\"data\">li mħadda</span>, <span class=\"data\">li ksieħ</span>, <span class=\"data\">li ħmar</span>, <span class=\"data\">li bdiewa</span> - each of these begins with <em>two</em> consonants in a row (a <strong>consonant cluster</strong>). The extra vowel makes the mouthful easier to say.</li>\n<li><span class=\"data\">il</span> appears everywhere else: <span class=\"data\">il lanġas</span>, <span class=\"data\">il mara</span>, <span class=\"data\">il bar</span>, <span class=\"data\">il lvant</span>, <span class=\"data\">il vjola</span>, <span class=\"data\">il qassis</span> - single non-alveolar consonants.</li>\n</ul>\n<h3>Step 2: put the rules in order</h3>\n<p>The rules overlap, so they have to be tried one after another, top first:</p>\n<ol>\n<li>Before an alveolar consonant, the article's consonant becomes a copy of it (assimilation).</li>\n<li>Otherwise, before a vowel or a silent letter, use the bare form with no vowel.</li>\n<li>Otherwise, before a consonant cluster, use the form with a vowel after the l.</li>\n<li>Otherwise, use the default form.</li>\n</ol>\n<p>Order matters. <span class=\"data\">ir raġel</span> starts with a single alveolar r, so rule 1 fires. <span class=\"data\">li ħmar</span> starts with ħ, which is pharyngeal and not alveolar, so rule 1 fails, ħ is a real (pronounced) consonant so rule 2 fails, and ħm is a cluster, so rule 3 gives <span class=\"data\">li</span>. Note also <span class=\"data\">il lvant</span>: <em>l</em> and <em>r</em> are alveolar, so rule 1 should apply - and it does, in a hidden way, since a copy of l is just l again, which is why it looks like the default form.</p>\n<h3>Step 3: the two exceptions (A1)</h3>\n<p><span class=\"data\">il ktieb</span> begins with the cluster <em>kt</em>, so the rules predict the <span class=\"data\">li</span> form, but the data shows the default form instead. <span class=\"data\">il ġobon</span> begins with ġ, which the chart lists as an alveolar affricate (it is simply the voiced partner of ċ), so assimilation should have applied - and indeed the answer sheet for <span class=\"data\">ġebla</span> shows that it normally does. So the two rule-breakers are <strong>ktieb</strong> and <strong>ġobon</strong>.</p>\n<h3>Step 4: applying the rules to the new nouns</h3>\n<p>Work through the first letter of each:</p>\n<ul>\n<li><span class=\"data\">xkora</span>, <span class=\"data\">xemx</span>: x is an alveolar fricative, so rule 1 - even though xkora also starts a cluster, rule 1 comes first.</li>\n<li><span class=\"data\">ġebla</span>, <span class=\"data\">tama</span>, <span class=\"data\">nar</span>, <span class=\"data\">nifs</span>, <span class=\"data\">dlam</span>: ġ, t, n, d are all alveolar, so rule 1 again (and dlam and nifs being clusters does not matter).</li>\n<li><span class=\"data\">hena</span>, <span class=\"data\">għajn</span>: h and għ are silent, so rule 2. <span class=\"data\">ors</span>, <span class=\"data\">ilma</span>: begin with vowels, rule 2 as well.</li>\n<li><span class=\"data\">mniħer</span>: m is labial, pronounced, and mn is a cluster - rule 3.</li>\n<li><span class=\"data\">kafè</span>, <span class=\"data\">missier</span>, <span class=\"data\">beraq</span>: single non-alveolar consonants, rule 4. <span class=\"data\">lura</span>: l is alveolar, so rule 1 technically applies, but copying l gives l, so the result looks like the default form.</li>\n</ul>\n<h3>Why linguists care</h3>\n<p>The same split exists in Arabic, Maltese's ancestor: the consonants that trigger assimilation of the article are traditionally called <em>sun letters</em> (from <span class=\"data\">xemx</span>, \"sun\") and the rest <em>moon letters</em> (from <span class=\"data\">qamar</span>, \"moon\"). The class is not an arbitrary list - it is exactly the set of sounds made with the tip of the tongue, the same place the article's own l is made, which is what makes the copying easy for the mouth to do.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution page. A2 keys are the article alone (the booklet's blank precedes the noun); full-phrase forms are allowed as accepted variants. A1: the booklet asks for two words on the answer sheet; transcribed here as ONE question whose key is the solution's wording 'ktieb and ġobon' - if the official answer sheet prints two separate lines, this may need splitting into A1.1/A1.2. Points split is an assumption (A1 = 2, A2 = 16 x 0.5); the solution shows no per-part breakdown. Please verify the diacritics in the data (ġ, ħ, ż, ċ, għ, è) against the PDF.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "(verification)",
+      "note": "this booklet has no usable text layer, so neither the witness check nor arbitration can run. Parked for human review by policy, not by a specific disagreement"
+    }
+  ]
+}

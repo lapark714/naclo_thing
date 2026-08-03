@@ -1,0 +1,298 @@
+{
+  "id": "2021-open-C",
+  "tier": "full",
+  "year": 2021,
+  "round": "open",
+  "letter": "C",
+  "title": "Versatile Verb",
+  "authors": [
+    "Aleka Blackwell"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "syntax",
+    "semantics",
+    "morphology"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "standard",
+  "languages": [
+    "Waama"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>In the left column below appear sentences in Waama, or Yoabu, a Gur language of Benin spoken by roughly 50,000 people. These sentences appear in the writing system of the language. You do not need to know how the writing system's letters are pronounced to solve this problem. In the right column below, the translations of these sentences in English appear <em>in a scrambled order</em>.</p>\n<div class=\"table-scroll\"><table><thead><tr><th>Waama</th><th>English (scrambled)</th></tr></thead><tbody>\n<tr><td>1. <span class=\"data\">Cando dɛbite kpi, o ǹ faa o suka.</span></td><td>A. The tree fell in the forest.</td></tr>\n<tr><td>2. <span class=\"data\">Tando dori.</span></td><td>B. A car passed by earlier.</td></tr>\n<tr><td>3. <span class=\"data\">N pe saaki ti yete.</span></td><td>C. I went to my friend's house.</td></tr>\n<tr><td>4. <span class=\"data\">Bika kɔɔsi kɔɔka.</span></td><td>D. The child fell.</td></tr>\n<tr><td>5. <span class=\"data\">Soosada kaate.</span></td><td>E. Marie lost the money, but she found it.</td></tr>\n<tr><td>6. <span class=\"data\">Suka kpi.</span></td><td>F. It rained.</td></tr>\n<tr><td>7. <span class=\"data\">Ba kaate tiibu band.</span></td><td>G. My hen went to Yooto's house.</td></tr>\n<tr><td>8. <span class=\"data\">N yeentire n daaso.</span></td><td>H. My wife swept our house.</td></tr>\n<tr><td>9. <span class=\"data\">Bisu yɔkɔɔti.</span></td><td>I. The children had fun.</td></tr>\n<tr><td>10. <span class=\"data\">Tiibu dori puŋa mii.</span></td><td>J. Tchando's neighbor died, and he inherited his car.</td></tr>\n<tr><td>11. <span class=\"data\">N taka n daaso yete.</span></td><td>K. They gathered under the tree.</td></tr>\n<tr><td>12. <span class=\"data\">Maari dikitifa pei, o ǹ fa piisi.</span></td><td>L. I hurt my friend.</td></tr>\n<tr><td>13. <span class=\"data\">Suka miiki pɔmpɔmma.</span></td><td>M. The soldiers assembled.</td></tr>\n<tr><td>14. <span class=\"data\">Bika dori.</span></td><td>N. The car broke down.</td></tr>\n<tr><td>15. <span class=\"data\">N kɔɔka taka Yooto yete.</span></td><td>O. The child sold the hen.</td></tr>\n</tbody></table></div>\n<p><strong>C2.</strong> One of the verbs you encountered in the sentences in the left column above would be used by speakers of this language in all 4 sentences below, each of which is translated into English. Which of the verbs you encountered above is that verb?</p>\n<div class=\"table-scroll\"><table><tbody>\n<tr><td><span class=\"data\">N tokore <strong><u>verb</u></strong></span></td><td>'My shirt is torn.'</td></tr>\n<tr><td><span class=\"data\">Yaama <strong><u>verb</u></strong></span></td><td>'The matter is settled.'</td></tr>\n<tr><td><span class=\"data\">O beere <strong><u>verb</u></strong></span></td><td>'He lost his fame.'</td></tr>\n<tr><td><span class=\"data\">Yima <strong><u>verb</u></strong></span></td><td>'The water is frozen.'</td></tr>\n</tbody></table></div>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "C1.1",
+      "promptHtml": "1. <span class=\"data\">Cando dɛbite kpi, o ǹ faa o suka.</span>",
+      "part": "C1",
+      "partPrompt": "Match sentences 1-15 to their English translations. Write the letter of the matching translation.",
+      "gradingMode": "exact",
+      "answerKey": "J",
+      "acceptedVariants": [
+        "Tchando's neighbor died, and he inherited his car."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.2",
+      "promptHtml": "2. <span class=\"data\">Tando dori.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "It rained."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.3",
+      "promptHtml": "3. <span class=\"data\">N pe saaki ti yete.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [
+        "My wife swept our house."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.4",
+      "promptHtml": "4. <span class=\"data\">Bika kɔɔsi kɔɔka.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "O",
+      "acceptedVariants": [
+        "The child sold the hen."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.5",
+      "promptHtml": "5. <span class=\"data\">Soosada kaate.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "M",
+      "acceptedVariants": [
+        "The soldiers assembled."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.6",
+      "promptHtml": "6. <span class=\"data\">Suka kpi.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "The car broke down."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.7",
+      "promptHtml": "7. <span class=\"data\">Ba kaate tiibu band.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [
+        "They gathered under the tree."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.8",
+      "promptHtml": "8. <span class=\"data\">N yeentire n daaso.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "L",
+      "acceptedVariants": [
+        "I hurt my friend."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.9",
+      "promptHtml": "9. <span class=\"data\">Bisu yɔkɔɔti.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [
+        "The children had fun."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.10",
+      "promptHtml": "10. <span class=\"data\">Tiibu dori puŋa mii.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "The tree fell in the forest."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.11",
+      "promptHtml": "11. <span class=\"data\">N taka n daaso yete.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "I went to my friend's house."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.12",
+      "promptHtml": "12. <span class=\"data\">Maari dikitifa pei, o ǹ fa piisi.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "Marie lost the money, but she found it."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.13",
+      "promptHtml": "13. <span class=\"data\">Suka miiki pɔmpɔmma.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "A car passed by earlier."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.14",
+      "promptHtml": "14. <span class=\"data\">Bika dori.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "The child fell."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C1.15",
+      "promptHtml": "15. <span class=\"data\">N kɔɔka taka Yooto yete.</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [
+        "My hen went to Yooto's house."
+      ],
+      "points": 0.2
+    },
+    {
+      "id": "C2.1",
+      "promptHtml": "<p>Write the Waama verb that fills every blank in the four C2 sentences.</p>",
+      "part": "C2",
+      "partPrompt": "One of the verbs you encountered in the sentences in the left column would be used in all 4 sentences of task C2. Which verb is it?",
+      "gradingMode": "exact",
+      "answerKey": "kpi",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "C3.1",
+      "promptHtml": "<p><strong>(a)</strong> The children gathered under the house.</p>",
+      "part": "C3",
+      "partPrompt": "Translate the following English sentences into Waama.",
+      "gradingMode": "exact",
+      "answerKey": "Bisu kaate yete band.",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "C3.2",
+      "promptHtml": "<p><strong>(b)</strong> I sold my car.</p>",
+      "part": "C3",
+      "gradingMode": "exact",
+      "answerKey": "N kɔɔsi n suka.",
+      "acceptedVariants": [
+        "N koosi n suka."
+      ],
+      "points": 1
+    },
+    {
+      "id": "C3.3",
+      "promptHtml": "<p><strong>(c)</strong> Her friend played in the rain.</p>",
+      "part": "C3",
+      "gradingMode": "exact",
+      "answerKey": "O daaso yɔkɔɔti tando mii.",
+      "acceptedVariants": [
+        "O daaso yokooti tando mii."
+      ],
+      "points": 1
+    },
+    {
+      "id": "C4.1",
+      "promptHtml": "<p><strong>(a)</strong> <span class=\"data\">Ba kɔɔsi ti kɔɔsu.</span></p>",
+      "part": "C4",
+      "partPrompt": "Translate the following Waama sentences into English.",
+      "gradingMode": "exact",
+      "answerKey": "They sold our hens.",
+      "acceptedVariants": [
+        "They have sold our hens."
+      ],
+      "points": 1
+    },
+    {
+      "id": "C4.2",
+      "promptHtml": "<p><strong>(b)</strong> <span class=\"data\">N susu kpi.</span></p>",
+      "part": "C4",
+      "gradingMode": "exact",
+      "answerKey": "My cars broke down.",
+      "acceptedVariants": [
+        "My cars died."
+      ],
+      "points": 1
+    },
+    {
+      "id": "C4.3",
+      "promptHtml": "<p><strong>(c)</strong> <span class=\"data\">Maari daaso fa faa.</span></p>",
+      "part": "C4",
+      "gradingMode": "exact",
+      "answerKey": "Marie's friend inherited it.",
+      "acceptedVariants": [
+        "The friend of Marie inherited it.",
+        "Marie's friend inherited them."
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start with the shortest Waama sentences and the shortest English translations. A two-word Waama sentence can only match a very short English sentence, and once you have pinned a word down you can carry it into the longer sentences that reuse it.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Waama is subject-verb-object, but words that English puts before a noun come after it here: location words work like 'tree under' rather than 'under the tree', and possession is shown just by putting the owner in front of the thing owned, with no extra marker at all. There are also no words for 'a' or 'the'. Keep in mind that one verb can cover a whole family of English meanings.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Look at the two noun shapes kɔɔka and kɔɔsu. They differ only in their ending, and that -a versus -u swap is the difference between one and more than one. Spotting that pattern lets you tell singulars from plurals in words you have never seen written out in both forms.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: use the short sentences as a foothold</h3>\n<p>Several Waama sentences are only two words long: <span class=\"data\">Tando dori.</span>, <span class=\"data\">Suka kpi.</span>, <span class=\"data\">Soosada kaate.</span>, <span class=\"data\">Bisu yɔkɔɔti.</span>, <span class=\"data\">Bika dori.</span>. On the English side, the short sentences are 'It rained.', 'The car broke down.', 'The soldiers assembled.', 'The children had fun.', 'The child fell.'</p>\n<p>Notice that <span class=\"data\">dori</span> shows up in two of the short sentences and also in the longer <span class=\"data\">Tiibu dori puŋa mii.</span> The English sentence 'The tree fell in the forest.' is the only long sentence built on 'fell', so <span class=\"data\">dori</span> must mean 'fell' and <span class=\"data\">tiibu</span> must be 'tree'. That immediately splits the two <span class=\"data\">dori</span> sentences: one has <span class=\"data\">Tando</span> as subject and one has <span class=\"data\">Bika</span>. English gives us 'The child fell.' and 'It rained.' — and in Waama 'it rained' is literally 'rain fell', so <span class=\"data\">tando</span> is 'rain' and <span class=\"data\">bika</span> is 'child'.</p>\n<h3>Step 2: chain the vocabulary through the longer sentences</h3>\n<p>Once <span class=\"data\">bika</span> is 'child', the sentence <span class=\"data\">Bika kɔɔsi kɔɔka.</span> can only be about a child doing something to something, and 'The child sold the hen.' fits. So <span class=\"data\">kɔɔsi</span> is 'sold' and <span class=\"data\">kɔɔka</span> is 'hen'. That in turn helps with <span class=\"data\">N kɔɔka taka Yooto yete.</span>, which contains 'hen' plus a name, matching the English sentence about a hen going to Yooto's house. Two useful facts fall out: <span class=\"data\">n</span> means 'my', and <span class=\"data\">yete</span> means 'house'.</p>\n<p>The word <span class=\"data\">yete</span> then appears again in <span class=\"data\">N pe saaki ti yete.</span> and <span class=\"data\">N taka n daaso yete.</span>, which line up with the two remaining house sentences ('My wife swept our house.' and 'I went to my friend's house.'). Compare the two: both start with <span class=\"data\">N</span>, but in one it is 'my' modifying <span class=\"data\">pe</span> 'wife' and in the other it is the subject 'I'. The verb <span class=\"data\">taka</span> means 'went to' — it swallows the English preposition 'to' all by itself.</p>\n<h3>Step 3: postpositions</h3>\n<p>A <em>postposition</em> is a little word that does the job of an English preposition but sits <em>after</em> the noun. In <span class=\"data\">Tiibu dori puŋa mii.</span> the literal order is 'tree fell forest in', so <span class=\"data\">mii</span> is 'in'. In <span class=\"data\">Ba kaate tiibu band.</span> the order is 'they gathered tree under', so <span class=\"data\">band</span> is 'under' and <span class=\"data\">ba</span> is 'they'. The same verb <span class=\"data\">kaate</span> covers both 'gathered' and 'assembled'.</p>\n<h3>Step 4: possession and the conjunction</h3>\n<p>There is no possessive marker in Waama at all. 'Marie's friend' is simply <span class=\"data\">Maari daaso</span>, and 'Yooto's house' is <span class=\"data\">Yooto yete</span>, exactly the way English says 'garage door' without adding anything. Also, in the two-clause sentences the joining word <span class=\"data\">ǹ</span> comes <em>after</em> the subject of the second clause, not at the front of it, and it can mean either 'and' or 'but' depending on context. And when the object is a pronoun, it comes before the verb: <span class=\"data\">o ǹ fa piisi</span> is literally 'she but it found'.</p>\n<h3>Step 5: the versatile verb (C2)</h3>\n<p>The four C2 sentences are about a shirt tearing, a matter being settled, fame being lost, and water freezing. What do those have in common? Each describes something coming to an end. In the main data one verb already covers both a person dying (in the Tchando sentence) and a car breaking down (<span class=\"data\">Suka kpi.</span>) — that verb's real meaning is 'come to an end', which is exactly the thread running through all four C2 sentences.</p>\n<h3>Step 6: plurals (C4)</h3>\n<p>The list gives 'child' and 'children' as <span class=\"data\">bika</span> and <span class=\"data\">bisu</span>: the singular ends in -a, the plural in -u, and the consonant before it shifts from k to s. Applying the same pattern, 'hen' <span class=\"data\">kɔɔka</span> becomes 'hens' <span class=\"data\">kɔɔsu</span>, and 'car' <span class=\"data\">suka</span> becomes 'cars' <span class=\"data\">susu</span>. That is how you read the plural task sentences, whose nouns look unfamiliar at first glance.</p>\n<h3>Step 7: building your own sentences (C3)</h3>\n<p>To translate into Waama, take the English sentence apart and reassemble it Waama-style: subject first, then verb, then object, with any preposition moved behind its noun and no articles anywhere. 'played in the rain' becomes 'played rain in', using the verb that the data glosses as 'had fun' — the same verb covers 'play'. And 'her' is just the pronoun <span class=\"data\">o</span>, which is not marked for gender, so it serves for 'his' and 'her' alike.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Keys taken from the official solution pages. Note a discrepancy in the source booklet: sentence 12 is printed on the problem page as 'Maari dikitifa pei, o ǹ fa piisi.' but appears in the solution table as 'Maari pei dikitifa, o ǹ fa piisi.' I transcribed the problem page as printed; the matching answer (E) is unaffected. The solution's letter list leaves item 15 blank, but the solution table shows 15 = G, which is what I used. Special characters to verify: ɛ (Cando dɛbite), ɔ (kɔɔsi, kɔɔka, yɔkɔɔti, pɔmpɔmma, kɔɔsu), ŋ (puŋa), ǹ (o ǹ). Point distribution is my own even split within parts (C1 0.2 x 15, C2 1, C3 1 x 3, C4 1 x 3 = 10); the booklet shows no per-part breakdown.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "cells:count",
+      "note": "arbitration returned UNRESOLVED"
+    }
+  ]
+}

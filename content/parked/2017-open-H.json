@@ -1,0 +1,360 @@
+{
+  "id": "2017-open-H",
+  "tier": "full",
+  "year": 2017,
+  "round": "open",
+  "letter": "H",
+  "title": "Nothing But Net(works)",
+  "authors": [
+    "Tom McCoy"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "number systems",
+    "writing systems"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "hard",
+  "languages": [],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>You have just crashed your spaceship at the Viterbi Spaceport. Being unfamiliar with spaceship repair, you're very much at a loss--but then a friendly-looking being from Rigel sidles up to you and says:</p>\n<blockquote><p>“<span class=\"data\">ζΨδξ</span>&nbsp;&nbsp; <span class=\"data\">ϖΞNφ</span>&nbsp;&nbsp; <span class=\"data\">ΑφΩυ</span>&nbsp;&nbsp; <span class=\"data\">ΠΠαΣ</span>”</p></blockquote>\n<p>(Okay, maybe that's not so helpful after all.)</p>\n<p>Luckily for you, English and Rigelese are related languages, and you own a GalactiLang translation device that can translate from the Rigelese sound system into more familiar English. This translator first turns the Rigelese word into a sequence of 4 numbers, then uses a neural network to transform those 4 numbers in some way (more about this in a minute), and then it transforms those final numbers into English letters using the following table:</p>\n<div class=\"table-scroll\"><table>\n<tr><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>\n<tr><td>*</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td></tr>\n</table></div>\n<div class=\"table-scroll\"><table>\n<tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>\n<tr><td>N</td><td>O</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</td></tr>\n</table></div>\n<p>Here are a few examples of the translator in action. In each diagram the top row is the Rigelese word, the second row is the 4 numbers it becomes, the third row is the 4 numbers that come out of the network, and the bottom row is the English result. (In the booklet, a jumble of arrows joins the second row to the third row.)</p>\n<div class=\"table-scroll\"><table>\n<tr><th>Rigelese</th><td class=\"data\">φ</td><td class=\"data\">Λ</td><td class=\"data\">Λ</td><td class=\"data\">Λ</td></tr>\n<tr><th></th><td>1</td><td>0</td><td>0</td><td>0</td></tr>\n<tr><th></th><td>0</td><td>1</td><td>0</td><td>1</td></tr>\n<tr><th>English</th><td>*</td><td>A</td><td>*</td><td>A</td></tr>\n</table></div>\n<div class=\"table-scroll\"><table>\n<tr><th>Rigelese</th><td class=\"data\">Ψ</td><td class=\"data\">Λ</td><td class=\"data\">Λ</td><td class=\"data\">Λ</td></tr>\n<tr><th></th><td>11</td><td>0</td><td>0</td><td>0</td></tr>\n<tr><th></th><td>0</td><td>11</td><td>0</td><td>11</td></tr>\n<tr><th>English</th><td>*</td><td>K</td><td>*</td><td>K</td></tr>\n</table></div>\n<div class=\"table-scroll\"><table>\n<tr><th>Rigelese</th><td class=\"data\">Λ</td><td class=\"data\">Λ</td><td class=\"data\">φ</td><td class=\"data\">Λ</td></tr>\n<tr><th></th><td>0</td><td>0</td><td>1</td><td>0</td></tr>\n<tr><th></th><td>1</td><td>1</td><td>1</td><td>1</td></tr>\n<tr><th>English</th><td>A</td><td>A</td><td>A</td><td>A</td></tr>\n</table></div>\n<div class=\"table-scroll\"><table>\n<tr><th>Rigelese</th><td class=\"data\">N</td><td class=\"data\">N</td><td class=\"data\">N</td><td class=\"data\">N</td></tr>\n<tr><th></th><td>2</td><td>2</td><td>2</td><td>2</td></tr>\n<tr><th></th><td>4</td><td>6</td><td>4</td><td>4</td></tr>\n<tr><th>English</th><td>D</td><td>F</td><td>D</td><td>D</td></tr>\n</table></div>\n<div class=\"table-scroll\"><table>\n<tr><th>Rigelese</th><td class=\"data\">N</td><td class=\"data\">ρ</td><td class=\"data\">Λ</td><td class=\"data\">Λ</td></tr>\n<tr><th></th><td>2</td><td>3</td><td>0</td><td>0</td></tr>\n<tr><th></th><td>3</td><td>5</td><td>0</td><td>2</td></tr>\n<tr><th>English</th><td>C</td><td>E</td><td>*</td><td>B</td></tr>\n</table></div>\n<div class=\"table-scroll\"><table>\n<tr><th>Rigelese</th><td class=\"data\">Γ</td><td class=\"data\">ς</td><td class=\"data\">Χ</td><td class=\"data\">Λ</td></tr>\n<tr><th></th><td>4</td><td>-3</td><td>5</td><td>0</td></tr>\n<tr><th></th><td>2</td><td>6</td><td>5</td><td>9</td></tr>\n<tr><th>English</th><td>B</td><td>F</td><td>E</td><td>I</td></tr>\n</table></div>\n<p>“But wait,” you ask, “what's that big jumble of arrows in the middle of each translation?” To which we respond: The jumble of arrows stands for a neural network, which is an abstract computational structure that can be used to approximate any function. The network consists of several layers, including an input layer (the data to be processed), an output layer (the result of the computation), and potentially some middle layers in between the input and output layers. The network is trained on real data, and from this training process it learns how to transition from one layer to the next. Here is an example of a neural network:</p>\n<figure><img src=\"/content-assets/2017-open-H-network.png\" alt=\"A small neural network with an input layer of two cells, a middle layer of two cells and a single output cell; the arrows between layers are labelled with weights 1, 2, 0, 2 and then -1, 1.\" /></figure>\n<p>This network takes two numbers as its input, then transitions from those two numbers to another two numbers in the middle layer, and then those two middle numbers get turned into a single output. The transitions between the layers are governed by the numbers written next to the arrows (these numbers are called weights). Here is an example of this network in action: Given the inputs 13 and 9, it yields the output 31 (after computing the middle layer of 13 and 44).</p>\n<figure><img src=\"/content-assets/2017-open-H-network-example.png\" alt=\"The same small network with inputs 13 and 9, middle layer 13 and 44, and output 31.\" /></figure>\n<p>It is left to you to figure out exactly how the transitions are computed. In this case, if we call the inputs <em>a</em> and <em>b</em>, the output can be easily represented as <em>a + 2b</em>. However, neural networks can also represent many other more complex calculations that cannot be as easily expressed otherwise, and these other calculations have proven to be extremely useful in computational linguistic applications.</p>\n<p>Now, returning to the Rigel example: When you try to translate the message from the Rigelian, your translator runs out of power after only computing one step of the translation. As a result, this is all that it gives you (each diagram represents the translation process for a single word):</p>\n<p><em>Word 1</em></p>\n<div class=\"table-scroll\"><table>\n<tr><th>Rigelese</th><td class=\"data\">ζ</td><td class=\"data\">Ψ</td><td class=\"data\">δ</td><td class=\"data\">ξ</td></tr>\n<tr><th></th><td>8</td><td>11</td><td>-4</td><td>19</td></tr>\n<tr><th></th><td><span class=\"blank\" data-q=\"H1.1\"></span></td><td><span class=\"blank\" data-q=\"H1.2\"></span></td><td><span class=\"blank\" data-q=\"H1.3\"></span></td><td><span class=\"blank\" data-q=\"H1.4\"></span></td></tr>\n<tr><th>English</th><td><span class=\"blank\" data-q=\"H1.5\"></span></td><td><span class=\"blank\" data-q=\"H1.6\"></span></td><td><span class=\"blank\" data-q=\"H1.7\"></span></td><td><span class=\"blank\" data-q=\"H1.8\"></span></td></tr>\n</table></div>\n<p><em>Word 2</em></p>\n<div class=\"table-scroll\"><table>\n<tr><th>Rigelese</th><td class=\"data\">ϖ</td><td class=\"data\">Ξ</td><td class=\"data\">N</td><td class=\"data\">φ</td></tr>\n<tr><th></th><td>9</td><td>10</td><td>2</td><td>1</td></tr>\n<tr><th></th><td><span class=\"blank\" data-q=\"H1.9\"></span></td><td><span class=\"blank\" data-q=\"H1.10\"></span></td><td><span class=\"blank\" data-q=\"H1.11\"></span></td><td><span class=\"blank\" data-q=\"H1.12\"></span></td></tr>\n<tr><th>English</th><td><span class=\"blank\" data-q=\"H1.13\"></span></td><td><span class=\"blank\" data-q=\"H1.14\"></span></td><td><span class=\"blank\" data-q=\"H1.15\"></span></td><td><span class=\"blank\" data-q=\"H1.16\"></span></td></tr>\n</table></div>\n<p><em>Word 3</em></p>\n<div class=\"table-scroll\"><table>\n<tr><th>Rigelese</th><td class=\"data\">Α</td><td class=\"data\">φ</td><td class=\"data\">Ω</td><td class=\"data\">υ</td></tr>\n<tr><th></th><td>-14</td><td>1</td><td>22</td><td>-2</td></tr>\n<tr><th></th><td><span class=\"blank\" data-q=\"H1.17\"></span></td><td><span class=\"blank\" data-q=\"H1.18\"></span></td><td><span class=\"blank\" data-q=\"H1.19\"></span></td><td><span class=\"blank\" data-q=\"H1.20\"></span></td></tr>\n<tr><th>English</th><td><span class=\"blank\" data-q=\"H1.21\"></span></td><td><span class=\"blank\" data-q=\"H1.22\"></span></td><td><span class=\"blank\" data-q=\"H1.23\"></span></td><td><span class=\"blank\" data-q=\"H1.24\"></span></td></tr>\n</table></div>\n<p><em>Word 4</em></p>\n<div class=\"table-scroll\"><table>\n<tr><th>Rigelese</th><td class=\"data\">Π</td><td class=\"data\">Π</td><td class=\"data\">α</td><td class=\"data\">Σ</td></tr>\n<tr><th></th><td>-12</td><td>-12</td><td>32</td><td>-31</td></tr>\n<tr><th></th><td><span class=\"blank\" data-q=\"H1.25\"></span></td><td><span class=\"blank\" data-q=\"H1.26\"></span></td><td><span class=\"blank\" data-q=\"H1.27\"></span></td><td><span class=\"blank\" data-q=\"H1.28\"></span></td></tr>\n<tr><th>English</th><td><span class=\"blank\" data-q=\"H1.29\"></span></td><td><span class=\"blank\" data-q=\"H1.30\"></span></td><td><span class=\"blank\" data-q=\"H1.31\"></span></td><td><span class=\"blank\" data-q=\"H1.32\"></span></td></tr>\n</table></div>",
+  "assets": [
+    {
+      "src": "/content-assets/2017-open-H-network.png",
+      "alt": "A small neural network with an input layer of two cells, a middle layer of two cells and a single output cell; the arrows between layers are labelled with weights 1, 2, 0, 2 and then -1, 1."
+    },
+    {
+      "src": "/content-assets/2017-open-H-network-example.png",
+      "alt": "The same small network with inputs 13 and 9, middle layer 13 and 44, and output 31."
+    }
+  ],
+  "questions": [
+    {
+      "id": "H1.1",
+      "promptHtml": "Word 1: network output, cell 1",
+      "part": "H1",
+      "partPrompt": "H1. Finish the translation that the translator started. Although you can see the six example translations at the start of this problem, you do not know what weights are attached to the arrows in the diagram (although you do know that the weights are the same across the translations for all four words). Therefore, you will have to use those diagrams to figure out the exact inner workings of the translator.",
+      "gradingMode": "exact",
+      "answerKey": "7",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.2",
+      "promptHtml": "Word 1: network output, cell 2",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "15",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.3",
+      "promptHtml": "Word 1: network output, cell 3",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "15",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.4",
+      "promptHtml": "Word 1: network output, cell 4",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "4",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.5",
+      "promptHtml": "Word 1: English letter 1",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.6",
+      "promptHtml": "Word 1: English letter 2",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "O",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.7",
+      "promptHtml": "Word 1: English letter 3",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "O",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.8",
+      "promptHtml": "Word 1: English letter 4",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.9",
+      "promptHtml": "Word 2: network output, cell 1",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "12",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.10",
+      "promptHtml": "Word 2: network output, cell 2",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "21",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.11",
+      "promptHtml": "Word 2: network output, cell 3",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "3",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.12",
+      "promptHtml": "Word 2: network output, cell 4",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "11",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.13",
+      "promptHtml": "Word 2: English letter 1",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "L",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.14",
+      "promptHtml": "Word 2: English letter 2",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "U",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.15",
+      "promptHtml": "Word 2: English letter 3",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.16",
+      "promptHtml": "Word 2: English letter 4",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.17",
+      "promptHtml": "Word 3: network output, cell 1",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "23",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.18",
+      "promptHtml": "Word 3: network output, cell 2",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "9",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.19",
+      "promptHtml": "Word 3: network output, cell 3",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "20",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.20",
+      "promptHtml": "Word 3: network output, cell 4",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "8",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.21",
+      "promptHtml": "Word 3: English letter 1",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "W",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.22",
+      "promptHtml": "Word 3: English letter 2",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.23",
+      "promptHtml": "Word 3: English letter 3",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "T",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.24",
+      "promptHtml": "Word 3: English letter 4",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.25",
+      "promptHtml": "Word 4: network output, cell 1",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "20",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.26",
+      "promptHtml": "Word 4: network output, cell 2",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "8",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.27",
+      "promptHtml": "Word 4: network output, cell 3",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "1",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.28",
+      "promptHtml": "Word 4: network output, cell 4",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "20",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.29",
+      "promptHtml": "Word 4: English letter 1",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "T",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.30",
+      "promptHtml": "Word 4: English letter 2",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.31",
+      "promptHtml": "Word 4: English letter 3",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [],
+      "points": 0.46875
+    },
+    {
+      "id": "H1.32",
+      "promptHtml": "Word 4: English letter 4",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "T",
+      "acceptedVariants": [],
+      "points": 0.46875
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Ignore the Rigelese letters themselves for a moment. All that matters is the row of 4 numbers going in and the row of 4 numbers coming out. Start with the example translations where three of the four input numbers are 0: they tell you the most.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Copy the small a + 2b example: every cell of a new layer is the sum, over all the cells feeding into it, of that cell's value times the weight on its arrow. Here every weight turns out to be 0 or 1, so each of the four output numbers is simply the total of some subset of the four input numbers. Call the inputs a, b, c, d and work out, position by position, which of them get added.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Take the example whose inputs are 11, 0, 0, 0 and whose outputs are 0, 11, 0, 11. Since only the first input is nonzero, the first input must feed output positions 2 and 4 with weight 1, and it must not feed positions 1 and 3 at all. Now repeat that reasoning with the example whose inputs are 0, 0, 1, 0, and then use the examples with several nonzero inputs to check yourself and to pin down the remaining positions.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What the diagrams are really saying</h3>\n<p>Each translation diagram has four rows: the Rigelese letters, the 4 numbers they turn into, the 4 numbers the network spits out, and the English letters those final numbers stand for. The tangle of arrows in the middle is a <strong>neural network</strong>: a machine that takes one row of numbers and produces another row of numbers. Every arrow carries a hidden number called a <strong>weight</strong>.</p>\n<p>The little practice network on page 2 shows how a network computes. To get a cell in the new layer, you multiply each cell that points into it by the weight on that arrow and add all those products up. With inputs 13 and 9 you get a middle layer of 13 (that is 1 times 13 plus 0 times 9) and 44 (that is 2 times 13 plus 2 times 9), and then an output of -1 times 13 plus 1 times 44, which is 31. Overall the network computes <em>a + 2b</em>.</p>\n<h3>Step 1: the number-to-letter code</h3>\n<p>This part is given: 0 is the space-like symbol *, 1 is A, 2 is B, and so on up to 26 is Z. So once you know the four output numbers of a word, the English letters follow immediately.</p>\n<h3>Step 2: use the “only one nonzero input” examples</h3>\n<p>Call the four input numbers <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em> from left to right.</p>\n<ul>\n<li>Inputs 1, 0, 0, 0 give outputs 0, 1, 0, 1. Only <em>a</em> is nonzero, so <em>a</em> reaches output positions 2 and 4 and nothing else. The example with inputs 11, 0, 0, 0 giving 0, 11, 0, 11 confirms the weight is exactly 1, not 2 or one half.</li>\n<li>Inputs 0, 0, 1, 0 give outputs 1, 1, 1, 1. So <em>c</em> reaches all four positions with weight 1.</li>\n</ul>\n<p>So far: position 1 gets <em>c</em> (plus possibly <em>b</em> or <em>d</em>), position 2 gets <em>a</em> and <em>c</em>, position 3 gets <em>c</em>, position 4 gets <em>a</em> and <em>c</em>.</p>\n<h3>Step 3: pin down b and d</h3>\n<p>Now use the examples with more nonzero inputs.</p>\n<p>Inputs 2, 3, 0, 0 give 3, 5, 0, 2. Position 1 came out 3, which is <em>b</em>, so <em>b</em> does feed position 1. Position 2 came out 5 = 2 + 3 = <em>a</em> + <em>b</em>, so <em>b</em> feeds position 2 too. Position 3 came out 0 even though <em>b</em> = 3, so <em>b</em> does not feed position 3; position 4 came out 2 = <em>a</em>, so <em>b</em> does not feed position 4.</p>\n<p>Inputs 2, 2, 2, 2 give 4, 6, 4, 4. Position 1 is 4 = <em>b</em> + <em>c</em> (so <em>d</em> does not feed position 1), position 2 is 6 = <em>a</em> + <em>b</em> + <em>c</em>, position 3 is 4, which must be <em>c</em> + <em>d</em>, and position 4 is 4 = <em>a</em> + <em>c</em>.</p>\n<p>Putting it together, the four outputs are:</p>\n<ol>\n<li><em>b</em> + <em>c</em></li>\n<li><em>a</em> + <em>b</em> + <em>c</em></li>\n<li><em>c</em> + <em>d</em></li>\n<li><em>a</em> + <em>c</em></li>\n</ol>\n<p>Check it on the last example: inputs 4, -3, 5, 0 should give -3 + 5 = 2 (B), 4 - 3 + 5 = 6 (F), 5 + 0 = 5 (E), 4 + 5 = 9 (I). The booklet prints B F E I. It works.</p>\n<h3>Step 4: translate the message</h3>\n<p>Word 1 has inputs 8, 11, -4, 19. Then <em>b</em> + <em>c</em> = 11 - 4 = 7, <em>a</em> + <em>b</em> + <em>c</em> = 8 + 11 - 4 = 15, <em>c</em> + <em>d</em> = -4 + 19 = 15, <em>a</em> + <em>c</em> = 8 - 4 = 4. Reading 7, 15, 15, 4 off the code table gives G, O, O, D.</p>\n<p>Word 2 has inputs 9, 10, 2, 1, giving 12, 21, 3, 11, which is L, U, C, K.</p>\n<p>Word 3 has inputs -14, 1, 22, -2, giving 23, 9, 20, 8, which is W, I, T, H. Notice that the inputs may be negative even though every output lands neatly between 0 and 26.</p>\n<p>Word 4 has inputs -12, -12, 32, -31, giving 20, 8, 1, 20, which is T, H, A, T.</p>\n<h3>The message</h3>\n<p>The friendly Rigelian was wishing you <strong>GOOD LUCK WITH THAT</strong>.</p>\n<p>If you like matrices, the same thing can be written as W R = E, where R is the column of four Rigelese numbers, E is the column of four English numbers, and W is the matrix of weights whose rows are 0 1 1 0 / 1 1 1 0 / 0 0 1 1 / 1 0 1 0. But you do not need matrices at all: the four expressions (b + c), (a + b + c), (c + d), (a + c) are the whole translator.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "CROP /content-assets/2017-open-H-network.png page=2 x=28 y=42 w=45 h=23\nCROP /content-assets/2017-open-H-network-example.png page=2 x=28 y=71 w=45 h=24\nAnswer keys are taken from the official solution page (middle-layer numbers and English letters for all four words). Booklet prints 32 empty cells (4 middle-layer cells + 4 English cells per word), so 32 questions were created; points divided evenly (0.46875 each, total 15) since the solution gives no per-cell breakdown. Please confirm the site's answer sheet does not group these differently.\nGreek-letter check: the booklet appears to use both the round phi (φ) and the loopless variant (ϕ) in different places; every phi has been transcribed as φ. Also verify Λ (capital lambda, value 0), ϖ (variant pi, Word 2 first letter), ς (final sigma, value -3) and Χ (capital chi, value 5) against the page images. The arrow jumbles between layers were not transcribed (weights are unknown and irrelevant to the solution) - a note in the body explains this.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "cell:198",
+      "note": "arbitration returned UNRESOLVED"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:215",
+      "note": "arbitration returned UNRESOLVED"
+    },
+    {
+      "kind": "diff",
+      "path": "data:1",
+      "note": "arbitration returned UNRESOLVED"
+    }
+  ]
+}

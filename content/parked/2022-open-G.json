@@ -1,0 +1,123 @@
+{
+  "id": "2022-open-G",
+  "tier": "full",
+  "year": 2022,
+  "round": "open",
+  "letter": "G",
+  "title": "Out of Order",
+  "authors": [
+    "Tom McCoy"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "syntax"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "intro",
+  "languages": [
+    "English"
+  ],
+  "officialPoints": 5,
+  "officialTimeMinutes": 10,
+  "bodyHtml": "<p>We are used to hearing sentences one word at a time. Sometimes, this can cause confusion. Think about this sentence:</p>\n<p style=\"text-align:center\">Katherine believes Lydia is lying.</p>\n<p>If you read the sentence from left to right, you would first read <em>Katherine</em>, then <em>believes</em>, and then <em>Lydia</em>. At this point, you would think that Katherine believes Lydia. After reading the rest of the words, you would need to go back and fix your incorrect first impression.</p>\n<p>Instead of receiving words one at a time, some computers take in the entire sentence at once. This approach can help avoid the confusion illustrated above. In addition, it is often more efficient because the computer does not have to wait while it processes one word before it can move on to the next one.</p>\n<p>For the all-at-once approach to work, the computer needs its input to be in a representation that does not depend on the order of its elements. In this problem, we focus on some representations of this type. To simplify the scenario, we will only talk about sentences as sequences of letters, even though most language technology today is based around larger units such as words. For example, a word-based system would view &ldquo;good morning&rdquo; as two words (&ldquo;good&rdquo; and &ldquo;morning&rdquo;), while a letter-based system would view &ldquo;good morning&rdquo; as eleven letters (&ldquo;g&rdquo;, &ldquo;o&rdquo;, &ldquo;o&rdquo;, &ldquo;d&rdquo;, &ldquo;m&rdquo;, &ldquo;o&rdquo;, &ldquo;r&rdquo;, &ldquo;n&rdquo;, &ldquo;i&rdquo;, &ldquo;n&rdquo;, and &ldquo;g&rdquo;).</p>\n<h3>In the Bag</h3>\n<p>One very simple representation that avoids using a sequence is called a <em>bag of words</em> (or, in our case, a bag of letters). For example, the word GREEN would be represented as the bag of letters <span class=\"data\">[E,E,G,N,R]</span>. Note that <span class=\"data\">[E,E,G,N,R]</span> is the same bag of letters as <span class=\"data\">[G,E,N,E,R]</span> or <span class=\"data\">[G,R,E,E,N]</span> - although these look different on the printed page, they are the same to a bag-of-letters computer system.</p>\n<p>Using a bag of letters can cause some confusion. Recently, Professor Eliza Shrdlu asked her computer assistant to prepare dinner for an enormous party. The computer asked how many people were attending, and Professor Shrdlu answered OVERFIFTY. Unfortunately, the computer received this answer as the bag of letters <span class=\"data\">[E,F,F,I,O,R,T,V,Y]</span>, which the computer misinterpreted: it rearranged these letters to get a smaller number than what Professor Shrdlu had intended. As a result, there was not enough food at the party for all of the guests.</p>\n<h3>Location, Location, Location</h3>\n<p>In order to avoid this sort of confusion, we need to insert information about the order of the letters. We can do this by annotating each letter with its position in the sequence. (See question G2 below.)</p>\n<p>Note that, like the bag of letters, the representation in G2 is still not a sequence: the order of the letters must be inferred from the numbers they are associated with, not from the order that the letters appear on the page. The representation would not be changed if we rearranged it as <span class=\"data\">[P:10, E:20, O:11, A:21, Y:9, I:13, T:14, O:16, N:17, I:1, R:22, D:6, M:4, A:5, L:19, V:2, E:3, C:18, E:7, I:15, S:12, M:8]</span>. In other words, this representation provides sequential <em>information</em> without sequential <em>structure</em>.</p>\n<h3>Barking Up the Right Tree</h3>\n<p>In linguistics, words and phrases are usually analyzed using a tree structure rather than a sequential structure. For example, we might use the following tree for IN THE SEA:</p>\n<figure><img src=\"/content-assets/2022-open-G-tree.png\" alt=\"Syntax-style tree diagram whose leaves spell out IN THE SEA\" /></figure>\n<p>Another way to represent the tree shown above is <span class=\"data\">[E:RRRL, A:RRRR, H:RLLR, I:LL, T:RLLL, S:RRL, N:LR, E:RLR]</span>.</p>\n<h3>Wickelphones</h3>\n<p>An influential paper by Rumelhart and McClelland (1986) modeled English verbs using representational units called Wickelphones. Wickelphones are named after psychologist Wayne Wickelgren; the <em>phone</em> part of the name refers to the fact that they were representing sounds, also known as phones. Since we are instead using letters, we could encode a message using Wickel<u>letters</u>. The word BLUE represented using Wickelletters would be <span class=\"data\">[U:L_E, B:#_L, E:U_#, L:B_U]</span>.</p>",
+  "assets": [
+    {
+      "src": "/content-assets/2022-open-G-tree.png",
+      "alt": "Syntax-style tree diagram whose leaves spell out IN THE SEA"
+    }
+  ],
+  "questions": [
+    {
+      "id": "G1.1",
+      "promptHtml": "<p>Professor Shrdlu said OVERFIFTY, but the computer received the bag of letters <span class=\"data\">[E,F,F,I,O,R,T,V,Y]</span> and rearranged it into a smaller number. Write that number out in letters, with no punctuation or spaces.</p>",
+      "part": "G1",
+      "partPrompt": "How many people did the computer think would be at the party? You don't need to include any punctuation or spaces in your answer. [HINT: The answer is a number between one and fifty.]",
+      "gradingMode": "exact",
+      "answerKey": "FORTYFIVE",
+      "acceptedVariants": [
+        "FORTY FIVE",
+        "FORTY-FIVE",
+        "45"
+      ],
+      "points": 1
+    },
+    {
+      "id": "G2.1",
+      "promptHtml": "<p><span class=\"data\">[O:16, N:17, E:7, A:21, O:11, E:20, P:10, C:18, M:4, L:19, E:3, D:6, I:15, A:5, I:1, Y:9, S:12, V:2, M:8, T:14, R:22, I:13]</span></p>",
+      "part": "G2",
+      "partPrompt": "What message does the following representation encode? You don't need to include any punctuation or spaces in your answer.",
+      "gradingMode": "exact",
+      "answerKey": "IVEMADEMYPOSITIONCLEAR",
+      "acceptedVariants": [
+        "I'VEMADEMYPOSITIONCLEAR",
+        "IVE MADE MY POSITION CLEAR",
+        "I'VE MADE MY POSITION CLEAR"
+      ],
+      "points": 1
+    },
+    {
+      "id": "G3.1",
+      "promptHtml": "<p><span class=\"data\">[6:U, 4:P, 10:B, 1:N, 9:A, 5:P, 2:A, 7:K, 3:L, 8:C]</span></p>",
+      "part": "G3",
+      "partPrompt": "There are other possible ways to represent linear position besides the approach shown in G2. What message does the following representation encode? You don't need to include any punctuation or spaces in your answer.",
+      "gradingMode": "exact",
+      "answerKey": "BACKUPPLAN",
+      "acceptedVariants": [
+        "BACK UP PLAN",
+        "BACKUP PLAN"
+      ],
+      "points": 1
+    },
+    {
+      "id": "G4.1",
+      "promptHtml": "<p><span class=\"data\">[T:RR, N:LRRL, A:LLRL, U:RLR, R:LLLR, H:LLRRRR, B:LLLL, C:LLRRRL, O:RLL, N:LLRRL, G:LRRR, I:LRL]</span></p>",
+      "part": "G4",
+      "partPrompt": "What message does the following representation encode? You don't need to include any punctuation or spaces in your answer.",
+      "gradingMode": "exact",
+      "answerKey": "BRANCHINGOUT",
+      "acceptedVariants": [
+        "BRANCHING OUT"
+      ],
+      "points": 1
+    },
+    {
+      "id": "G5.1",
+      "promptHtml": "<p><span class=\"data\">[O:I_N, I:T_O, T:N_O, T:A_T, R:U_S, N:U_D, N:E_T, O:T_Y, N:O_T, D:N_I, A:Y_T, R:R_O, I:D_N, T:T_E, P:#_A, E:T_N, Y:O_O, T:N_I, Y:A_A, G:N_S, S:G_#, U:O_N, O:R_U, N:I_G, O:Y_U, U:S_R, R:U_R, A:P_Y, U:O_R, S:R_U]</span></p>",
+      "part": "G5",
+      "partPrompt": "What message does the following representation encode? You don't need to include any punctuation or spaces in your answer.",
+      "gradingMode": "exact",
+      "answerKey": "PAYATTENTIONTOYOURSURROUNDINGS",
+      "acceptedVariants": [
+        "PAY ATTENTION TO YOUR SURROUNDINGS"
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Each section hands you a fully worked example: GREEN as a bag of letters, IN THE SEA as a tree, BLUE as Wickelletters. Before you touch the question data, decode the example and make sure you can explain exactly how it turns back into its word.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Every representation stores each letter together with a tag that says where the letter belongs. Your job is to work out what the tag means, then sort the letters by their tags. In G2 the tag is a position counted one way; in G3 it is counted the other way. In G4 the tag is a path of L (left) and R (right) steps down the tree, so letters are ordered by their paths with L coming before R at every branch. In G5 the tag names the letter that comes before and the letter that comes after, with # marking the edge of the message, so you can chain the pieces together like dominoes.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try the BLUE example from the Wickelletters section: [U:L_E, B:#_L, E:U_#, L:B_U]. The unit B:#_L has # on the left, so B starts the message and is followed by L. Now find the unit whose left neighbour is B: that is L:B_U, so U comes next. Continue with U:L_E and then E:U_#, whose # shows the message ends. Reading the letters in that chain gives B, L, U, E. Use the same chaining method on the long G5 list.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What the problem is really about</h3>\n<p>Computers that read a whole sentence at once cannot rely on the left-to-right order of the page. So the order has to be packed <em>inside</em> each item. Every section of this problem shows one way of doing that, and each question asks you to unpack a message. The trick is always the same: figure out what the extra tag on each letter means, then use the tags to put the letters back in order.</p>\n<h3>G1: a bag with no order at all</h3>\n<p>A bag of letters throws the order away completely. The professor said OVERFIFTY, whose letters are O, V, E, R, F, I, F, T, Y. The computer got the bag <span class=\"data\">[E,F,F,I,O,R,T,V,Y]</span> and had to guess an order. The hint says the answer is a number below fifty, so try spelling small numbers with exactly those nine letters: two Fs, one each of E, I, O, R, T, V, Y. FORTY uses F, O, R, T, Y; that leaves E, F, I, V, which spells FIVE. The bag can therefore also be read as a number in the forties, which is fewer people than were coming - hence not enough food.</p>\n<h3>G2: positions written next to the letters</h3>\n<p>Here each letter carries a number: its slot in the message. So build 22 empty slots and drop each letter into its own slot. <span class=\"data\">I:1</span> gives slot 1, <span class=\"data\">V:2</span> gives slot 2, <span class=\"data\">E:3</span> gives slot 3, and so on. Filling every slot from 1 up to 22 spells out a sentence about having made something clear. Notice that the order the pairs are printed in does not matter at all - the problem even reprints the same message with the pairs shuffled.</p>\n<h3>G3: the same idea, counted backwards</h3>\n<p>This time the number is printed first, but that is not the real change. If you read positions 1 to 10 in the usual direction you get gibberish (N, A, L, P, P, U, K, C, A, B). Read it the other way - start with the highest number, 10, and count down to 1 - and the letters spell a sensible English phrase. The lesson is that a numbering system only tells you the order if you also know which end it counts from.</p>\n<h3>G4: paths through a tree</h3>\n<p>In the IN THE SEA example, each letter comes with a string of Ls and Rs. Think of it as directions from the top of the tree down to that letter: L means take the left branch, R the right one. So <span class=\"data\">I:LL</span> means go left, then left again; <span class=\"data\">N:LR</span> means left, then right. Those two are in the leftmost part of the tree, and they give the word IN.</p>\n<p>To read a message, sort the paths as if L came before R alphabetically, comparing step by step. In the example: LL (I), LR (N), then RLLL (T), RLLR (H), RLR (E), then RRL (S), RRRL (E), RRRR (A) - that is IN THE SEA, left to right along the bottom of the tree.</p>\n<p>Do exactly the same with the G4 list. Group the letters by their first step: everything beginning with L is in the left half of the tree, everything beginning with R is in the right half. Inside each group, sort by the next step, and so on. Reading the leaves left to right gives a two-word English phrase about trees.</p>\n<h3>G5: Wickelletters, or letters plus their neighbours</h3>\n<p>A Wickelletter records a letter together with the letter before it and the letter after it, written <span class=\"data\">before_after</span>. The symbol # marks the boundary of the message. In the BLUE example, <span class=\"data\">B:#_L</span> says: B, preceded by nothing, followed by L. So B is first. Then look for the unit whose \"before\" is B - that is <span class=\"data\">L:B_U</span> - so L is second and U is third. <span class=\"data\">U:L_E</span> confirms U, and <span class=\"data\">E:U_#</span> ends the word.</p>\n<p>For G5, start by finding the unit with # on the left: <span class=\"data\">P:#_A</span>. So the message starts with P, and A comes next. Then chase the chain: look for a unit for A whose left neighbour is P (<span class=\"data\">A:P_Y</span>), then a unit for Y whose left neighbour is A, and so on, until you reach the unit with # on the right (<span class=\"data\">S:G_#</span>). Because the message repeats some letters, you sometimes have to use the neighbour information carefully - there are several units for T and for N, and only one of them fits at each point in the chain. The result is a five-word piece of advice.</p>\n<h3>Why linguists care</h3>\n<p>These are not just puzzles. Bag-of-words models, position encodings (as used in modern neural network models such as transformers), tree structures and Wickelphone-style context units are all real ways that language technology has represented order without processing one item at a time.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken verbatim from the official solution page (G1 FORTYFIVE, G2 IVEMADEMYPOSITIONCLEAR, G3 BACKUPPLAN, G4 BRANCHINGOUT, G5 PAYATTENTIONTOYOURSURROUNDINGS). Points not broken down in the official solution; 5 points split evenly, 1 per question.\nEditorial change to check: the booklet's page-2 paragraph says 'the representation at the bottom of the previous page'; since the G2 data now lives in the G2 question prompt, bodyHtml says 'the representation in G2' instead. Also added a parenthetical '(See question G2 below.)' at the end of the 'Location, Location, Location' paragraph so the flow makes sense on screen.\nCROP /content-assets/2022-open-G-tree.png page=2 x=30 y=38 w=45 h=17",
+  "_parkReasons": [
+    {
+      "kind": "figure",
+      "path": "/content-assets/2022-open-G-tree.png",
+      "note": "crop not confirmed after 3 attempts (last verdict: NOISY)"
+    }
+  ]
+}

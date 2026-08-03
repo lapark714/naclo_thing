@@ -1,0 +1,441 @@
+{
+  "id": "2019-open-G",
+  "tier": "full",
+  "year": 2019,
+  "round": "open",
+  "letter": "G",
+  "title": "(title unknown)",
+  "authors": [
+    "Tom McCoy",
+    "Sonia Reilly"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "semantics"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "intro",
+  "languages": [
+    "English"
+  ],
+  "officialPoints": 5,
+  "officialTimeMinutes": 10,
+  "bodyHtml": "<p>Computers, like humans, often encounter words they have never seen before among the stream of language constantly inundating them, which can pose a challenge for the computer's understanding of language. One approach for handling novel words is to use a <em>character-level</em> model of language: Whereas word-level models treat words as non-decomposable units, character-level models can learn how individual letters (or chunks of letters) work together to create word meaning. For example, if a character-level model encounters the novel word <em>non-walruslike</em>, it could figure out its meaning based on the meanings of smaller chunks (<em>non-</em>, <em>walrus</em>, and <em>like</em>).</p><p>However, such a model might make mistakes if it breaks the word down incorrectly. The table on the left shows a list of words that a hypothetical character-level model might interpret incorrectly, while the table on the right shows (in random order) the definitions it might generate.</p><div class=\"table-scroll\"><table><tbody><tr><td>1.</td><td>battery</td></tr><tr><td>2.</td><td>biking</td></tr><tr><td>3.</td><td>bowling</td></tr><tr><td>4.</td><td>conundrum</td></tr><tr><td>5.</td><td>decent</td></tr><tr><td>6.</td><td>divergent</td></tr><tr><td>7.</td><td>extent</td></tr><tr><td>8.</td><td>idealist</td></tr><tr><td>9.</td><td>incoming</td></tr><tr><td>10.</td><td>message</td></tr><tr><td>11.</td><td>missing</td></tr><tr><td>12.</td><td>mistrust</td></tr><tr><td>13.</td><td>preached</td></tr><tr><td>14.</td><td>pronouncement</td></tr><tr><td>15.</td><td>properties</td></tr><tr><td>16.</td><td>protractor</td></tr><tr><td>17.</td><td>puffiness</td></tr><tr><td>18.</td><td>resting</td></tr><tr><td>19.</td><td>trivial</td></tr><tr><td>20.</td><td>unison</td></tr><tr><td>21.</td><td>weeknight</td></tr></tbody></table></div><div class=\"table-scroll\"><table><tbody><tr><td>A.</td><td>ordered group of notions</td></tr><tr><td>B.</td><td>small arrow-shooting device</td></tr><tr><td>C.</td><td>having two male monarchs</td></tr><tr><td>D.</td><td>item sharing the role of being a beaten instrument used by female religious figures</td></tr><tr><td>E.</td><td>did hurt beforehand</td></tr><tr><td>F.</td><td>in favor of a large farm vehicle</td></tr><tr><td>G.</td><td>not attending</td></tr><tr><td>H.</td><td>sharply wound once more</td></tr><tr><td>I.</td><td>era of disorder</td></tr><tr><td>J.</td><td>like pancake-making material</td></tr><tr><td>K.</td><td>remove pennies from</td></tr><tr><td>L.</td><td>courteous man who descends below water</td></tr><tr><td>M.</td><td>having three small glass containers</td></tr><tr><td>N.</td><td>flaky reddish material created by water droplets</td></tr><tr><td>O.</td><td>small horseman</td></tr><tr><td>P.</td><td>material binding together <em>I, you, she, he,</em> etc.</td></tr><tr><td>Q.</td><td>improperly produce a tune</td></tr><tr><td>R.</td><td>former cloth dwelling</td></tr><tr><td>S.</td><td>appropriate pieces of neckwear</td></tr><tr><td>T.</td><td>female northern bird</td></tr><tr><td>U.</td><td>having one male child</td></tr></tbody></table></div><p><strong>G2.</strong> The three definitions in part G2 below are: A. having two male children; B. did hurt once more; C. not not going out with. Hint: One of these three words appears on the previous page.</p>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "G1.1",
+      "promptHtml": "1. battery",
+      "part": "G1",
+      "partPrompt": "Match the words with the definitions they would be given. Write the letter of the matching definition.",
+      "gradingMode": "exact",
+      "answerKey": "J",
+      "acceptedVariants": [
+        "like pancake-making material"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.2",
+      "promptHtml": "2. biking",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "having two male monarchs"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.3",
+      "promptHtml": "3. bowling",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "small arrow-shooting device"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.4",
+      "promptHtml": "4. conundrum",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "item sharing the role of being a beaten instrument used by female religious figures"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.5",
+      "promptHtml": "5. decent",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [
+        "remove pennies from"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.6",
+      "promptHtml": "6. divergent",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "L",
+      "acceptedVariants": [
+        "courteous man who descends below water"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.7",
+      "promptHtml": "7. extent",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "R",
+      "acceptedVariants": [
+        "former cloth dwelling"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.8",
+      "promptHtml": "8. idealist",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "ordered group of notions"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.9",
+      "promptHtml": "9. incoming",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [
+        "not attending"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.10",
+      "promptHtml": "10. message",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [
+        "era of disorder"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.11",
+      "promptHtml": "11. missing",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "Q",
+      "acceptedVariants": [
+        "improperly produce a tune"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.12",
+      "promptHtml": "12. mistrust",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "flaky reddish material created by water droplets"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.13",
+      "promptHtml": "13. preached",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "did hurt beforehand"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.14",
+      "promptHtml": "14. pronouncement",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "P",
+      "acceptedVariants": [
+        "material binding together I, you, she, he, etc."
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.15",
+      "promptHtml": "15. properties",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "S",
+      "acceptedVariants": [
+        "appropriate pieces of neckwear"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.16",
+      "promptHtml": "16. protractor",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "in favor of a large farm vehicle"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.17",
+      "promptHtml": "17. puffiness",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "T",
+      "acceptedVariants": [
+        "female northern bird"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.18",
+      "promptHtml": "18. resting",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [
+        "sharply wound once more"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.19",
+      "promptHtml": "19. trivial",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "M",
+      "acceptedVariants": [
+        "having three small glass containers"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.20",
+      "promptHtml": "20. unison",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "U",
+      "acceptedVariants": [
+        "having one male child"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G1.21",
+      "promptHtml": "21. weeknight",
+      "part": "G1",
+      "gradingMode": "exact",
+      "answerKey": "O",
+      "acceptedVariants": [
+        "small horseman"
+      ],
+      "points": 0.1667
+    },
+    {
+      "id": "G2.1",
+      "promptHtml": "A. having two male children",
+      "part": "G2",
+      "partPrompt": "What English words would the model give the following definitions? Hint: One of these three words appears in the word list above.",
+      "gradingMode": "exact",
+      "answerKey": "bison",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "G2.2",
+      "promptHtml": "B. did hurt once more",
+      "part": "G2",
+      "gradingMode": "exact",
+      "answerKey": "reached",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "G2.3",
+      "promptHtml": "C. not not going out with",
+      "part": "G2",
+      "gradingMode": "exact",
+      "answerKey": "inundating",
+      "acceptedVariants": [],
+      "points": 0.5
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Forget what each word really means. Instead, look for smaller words and familiar word-parts hiding inside the letters: the model chops the string wherever it recognizes something, even in the wrong place.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Two kinds of chunk show up. Some are real prefixes and suffixes used with the wrong meaning (like re- for \"again\", de- for \"remove\", pre- for \"before\", -ess for \"female\", -y for \"like\", -ling for \"small\"), and some are whole ordinary words that happen to be spelled inside the longer word. Match a definition by translating its parts back into chunks and then gluing the chunks together.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try the method on a word that is not in the puzzle: carpet. A character-level model could split it as car + pet and define it as \"animal companion belonging to a vehicle\". Notice how the definition names each chunk in order. Read each definition in the right-hand table the same way, chunk by chunk, and count the syllables you would need.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What the \"model\" is doing</h3><p>A character-level model does not memorize whole words. It looks at the letters and tries to recognize familiar pieces: prefixes (bits added to the front, like <em>re-</em> or <em>pre-</em>), suffixes (bits added to the end, like <em>-ess</em> or <em>-y</em>) and ordinary words. Then it adds the meanings of those pieces together. That works nicely for a made-up word like <em>non-walruslike</em>, but it goes wrong when the letters of an ordinary word accidentally contain pieces that have nothing to do with its real meaning.</p><h3>Strategy</h3><p>For each definition, translate its wording back into pieces and then ask which word on the left is spelled out by those pieces in that order. Useful equivalences to keep in mind:</p><ul><li>\"again / once more\" = <em>re-</em>; \"beforehand\" = <em>pre-</em>; \"remove\" = <em>de-</em>; \"not\" = <em>in-</em> or <em>un-</em>; \"in favor of\" = <em>pro-</em>; \"sharing the role of\" = <em>co-</em>; \"former\" = <em>ex-</em></li><li>\"one\" = <em>uni-</em>; \"two\" = <em>bi-</em>; \"three\" = <em>tri-</em></li><li>\"female\" = <em>-ess</em>; \"small\" = <em>-ling</em> or <em>wee</em>; \"like\" = <em>-y</em>; \"group of\" = <em>list</em>; \"era\" = <em>age</em></li></ul><h3>Worked examples</h3><p><strong>conundrum:</strong> the definition talks about something \"sharing the role of\" (<em>co-</em>) a \"beaten instrument\" (<em>drum</em>) used by \"female religious figures\" (<em>nun</em>). Put them in the order the definition gives them and you get <em>co + nun + drum</em>.</p><p><strong>divergent:</strong> \"courteous man\" is a <em>gent</em>, and someone \"who descends below water\" is a <em>diver</em>: <em>diver + gent</em>.</p><p><strong>puffiness:</strong> a \"northern bird\" is a <em>puffin</em>, and \"female\" is the suffix <em>-ess</em>. The model reads the real suffix <em>-ness</em> as <em>-ess</em> attached to <em>puffin</em>.</p><p><strong>properties:</strong> \"appropriate\" is <em>proper</em> and \"pieces of neckwear\" are <em>ties</em>, so the model splits the word after <em>proper</em>.</p><p>Notice how the definitions are careful to name the chunks in the same order as the letters. That ordering is your best checking tool: if a definition's parts come out in the wrong order for a candidate word, the match is wrong.</p><h3>Part G2: going backwards</h3><p>Here you build the word yourself from the pieces the definition names. \"Having two...\" starts with <em>bi-</em>, and the plural of \"male child\" gives you the rest. \"Did hurt once more\" needs \"once more\" (<em>re-</em>) plus a past-tense form meaning \"did hurt\". For C, \"not not\" means two negative prefixes stacked up, followed by a word for \"going out with\" in its <em>-ing</em> form. The hint that one of the three answers appears earlier in the problem points you to the very first paragraph of the introduction, where one long word happens to begin with two negative-looking prefixes.</p><h3>Why linguists care</h3><p>This is a joke version of a real problem in natural language processing. Systems that split words into sub-word units (such as byte-pair encoding, used by many modern language models) genuinely do carve <em>mistrust</em> into pieces, and nothing stops the pieces from being <em>mist</em> and <em>rust</em>. Human readers use context and knowledge of real morphology (the study of how words are built from meaningful parts) to avoid these traps; a purely letter-based system has to learn to as well.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken verbatim from the official solution page (letters for G1; bison / reached / inundating for G2). NOTE: the official solution page is mis-titled '(G) Venturing into the Unknown (1/1) [5 Points]' while the problem page is titled '(G) Break it Down!' - the content matches the G1/G2 structure of this problem. Points: 5 total split as 0.1667 per G1 item (3.5 total) and 0.5 per G2 item (1.5 total); official booklet gives no per-part breakdown, so adjust if a rubric surfaces. G1 is a matching task; keys are single letters, with the full definition text allowed as an accepted variant. The G2 definitions are restated inside bodyHtml as a single sentence because the booklet prints them as a lettered list on page 2; verify wording.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:g1.1:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.2:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.3:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.4:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.5:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.6:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.7:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.8:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.9:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.10:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.11:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.12:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.13:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.14:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.15:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.16:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.17:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.18:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.19:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.20:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:g1.21:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "(verification)",
+      "note": "this booklet has no usable text layer, so neither the witness check nor arbitration can run. Parked for human review by policy, not by a specific disagreement"
+    }
+  ]
+}

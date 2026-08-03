@@ -1,0 +1,387 @@
+{
+  "id": "2019-open-F",
+  "tier": "full",
+  "year": 2019,
+  "round": "open",
+  "letter": "F",
+  "title": "(title unknown)",
+  "authors": [
+    "Ethan Chi"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "phonology",
+    "morphology"
+  ],
+  "formTag": "table completion",
+  "difficulty": "standard",
+  "languages": [
+    "Mongolian"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>Here are some words in the Khalkha dialect of Mongolian, a language spoken by approximately 5.2 million people in Mongolia and parts of China. Normally, Mongolian is written in either the Cyrillic or native Mongolian script. However, for ease of reading, all words have been transcribed into Latin script.</p>\n<p>For each word, the singular, plural, and directive<sup>1</sup> forms are given, as well as the pronunciation of the singular form. Some forms are missing.</p>\n<p>Note: in the Pronunciation column, a colon (:) after a vowel marks vowel length. ´ over a vowel marks stress. [ɢ] denotes a consonant that sounds like the <em>g</em> of <em>green</em>, pronounced farther back in the mouth. [ŋ] denotes the <em>ng</em> sound of <em>sing</em>.</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th>Singular</th><th>Plural</th><th>Directive</th><th>Pronunciation (sing.)</th><th>Translation</th></tr>\n</thead>\n<tbody>\n<tr><td><span class=\"data\">havčaar</span></td><td><span class=\"data\">havčaaruud</span></td><td><span class=\"data\">havčaarluu</span></td><td><span class=\"data\">[xavčá:r]</span></td><td>‘dog’</td></tr>\n<tr><td><span class=\"data\">örh</span></td><td><span class=\"data\">örhüüd</span></td><td><span class=\"data\">örhrüü</span></td><td><span class=\"data\">[ɵ́rx]</span></td><td>‘household’</td></tr>\n<tr><td><span class=\"data\">mangar</span></td><td><span class=\"data\">mangar nar</span></td><td><span class=\"data\">mangarluu</span></td><td><span class=\"data\">[mánɢar]</span></td><td>‘fool’</td></tr>\n<tr><td><span class=\"data\">hun</span></td><td><span class=\"data\">hun nar</span></td><td><span class=\"data\">hunruu</span></td><td><span class=\"data\">[xʊ́ŋ]</span></td><td>‘man’</td></tr>\n<tr><td><span class=\"data\">övs</span></td><td><span class=\"data\">övsüüd</span></td><td><span class=\"data\">övsrüü</span></td><td><span class=\"data\">[ɵ́vs]</span></td><td>‘grass’</td></tr>\n<tr><td><span class=\"data\">heer</span></td><td><span class=\"data\">heerüüd</span></td><td><span class=\"data\">heerlüü</span></td><td><span class=\"data\">[xé:r]</span></td><td>‘field’</td></tr>\n<tr><td><span class=\"data\">neg</span></td><td><span class=\"data\">negüüd</span></td><td><span class=\"blank\" data-q=\"F1.1\" data-label=\"(1)\"></span></td><td><span class=\"data\">[nég]</span></td><td>‘ace (playing cards)’</td></tr>\n<tr><td><span class=\"data\">denlüü</span></td><td><span class=\"data\">denlüüčüüd</span></td><td><span class=\"data\">denlüürüü</span></td><td><span class=\"data\">[denlú:]</span></td><td>‘lamp’</td></tr>\n<tr><td><span class=\"data\">zutan</span></td><td><span class=\"data\">zutanuud</span></td><td><span class=\"data\">zutanruu</span></td><td><span class=\"data\">[zʊ́taŋ]</span></td><td>‘cream soup’</td></tr>\n<tr><td><span class=\"data\">sugar</span></td><td><span class=\"data\">sugaruud</span></td><td><span class=\"data\">sugarluu</span></td><td><span class=\"data\">[sʊ́ɢar]</span></td><td>‘Venus (planet)’</td></tr>\n<tr><td><span class=\"data\">šüleg</span></td><td><span class=\"blank\" data-q=\"F1.2\" data-label=\"(2)\"></span></td><td><span class=\"blank\" data-q=\"F1.3\" data-label=\"(3)\"></span></td><td><span class=\"data\">[šúleg]</span></td><td>‘poem’</td></tr>\n<tr><td><span class=\"data\">gal</span></td><td><span class=\"data\">galuud</span></td><td><span class=\"data\">galruu</span></td><td><span class=\"data\">[ɢál]</span></td><td>‘fire’</td></tr>\n<tr><td><span class=\"data\">nuguu</span></td><td><span class=\"data\">nuguučuud</span></td><td><span class=\"data\">nuguuruu</span></td><td><span class=\"data\">[nʊɢʊ́:]</span></td><td>‘back (body part)’</td></tr>\n<tr><td><span class=\"data\">nökör</span></td><td><span class=\"blank\" data-q=\"F1.4\" data-label=\"(4)\"></span></td><td><span class=\"blank\" data-q=\"F1.5\" data-label=\"(5)\"></span></td><td><span class=\"data\">[nékər]</span></td><td>‘husband’</td></tr>\n<tr><td><span class=\"data\">darga</span></td><td><span class=\"blank\" data-q=\"F1.6\" data-label=\"(6)\"></span></td><td><span class=\"blank\" data-q=\"F1.7\" data-label=\"(7)\"></span></td><td><span class=\"blank\" data-q=\"F1.8\" data-label=\"(8)\"></span></td><td>‘mouth’</td></tr>\n<tr><td><span class=\"data\">gölög</span></td><td><span class=\"data\">gölögüüd</span></td><td><span class=\"data\">gölögrüü</span></td><td><span class=\"data\">[gélɵg]</span></td><td>‘puppy’</td></tr>\n<tr><td><span class=\"data\">aav</span></td><td><span class=\"data\">aav nar</span></td><td><span class=\"data\">aavruu</span></td><td><span class=\"data\">[á:v]</span></td><td>‘father’</td></tr>\n<tr><td><span class=\"data\">hüühen</span></td><td><span class=\"data\">hüühen nar</span></td><td><span class=\"data\">hüühenrüü</span></td><td><span class=\"data\">[xú:xeŋ]</span></td><td>‘woman’</td></tr>\n<tr><td><span class=\"data\">ovog</span></td><td><span class=\"blank\" data-q=\"F1.9\" data-label=\"(9)\"></span></td><td><span class=\"blank\" data-q=\"F1.10\" data-label=\"(10)\"></span></td><td><span class=\"data\">[óvoɢ]</span></td><td>‘surname’</td></tr>\n</tbody>\n</table>\n</div>\n<p><small>1. The directive case has the meaning of movement towards something. For example, <span class=\"data\">havčaarluu</span>, the directive case of “dog”, means “towards the dog.”</small></p>\n<p><strong>F1.</strong> Fill in the missing forms (1-10) in the table above.</p>\n<p><strong>F2.</strong> One of the following Mongolian words was originally a loanword from another language: <span class=\"data\">nutag, künda, šoron, gudamž, ehner</span>. Which one is it?</p>\n<p><strong>F3.</strong> Give the plural, directive, and pronunciation of the following words:</p>\n<dl class=\"gloss-list\">\n<dt>A) haančlah</dt><dd>‘king’</dd>\n<dt>B) gürvel</dt><dd>‘lizard’</dd>\n<dt>C) delgüür</dt><dd>‘store’</dd>\n<dt>D) zuun</dt><dd>‘century’</dd>\n<dt>E) čanar</dt><dd>‘quality’</dd>\n</dl>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "F1.1",
+      "promptHtml": "(1) Directive of <span class=\"data\">neg</span> ‘ace (playing cards)’",
+      "part": "F1",
+      "partPrompt": "Fill in the missing forms (1-10) in the table.",
+      "gradingMode": "exact",
+      "answerKey": "negruu",
+      "acceptedVariants": [],
+      "points": 0.4
+    },
+    {
+      "id": "F1.2",
+      "promptHtml": "(2) Plural of <span class=\"data\">šüleg</span> ‘poem’",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "šülegüüd",
+      "acceptedVariants": [
+        "shuleguud",
+        "šulegüüd",
+        "shulegüüd"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "F1.3",
+      "promptHtml": "(3) Directive of <span class=\"data\">šüleg</span> ‘poem’",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "šülegrüü",
+      "acceptedVariants": [
+        "shulegruu",
+        "šulegrüü",
+        "shulegrüü"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "F1.4",
+      "promptHtml": "(4) Plural of <span class=\"data\">nökör</span> ‘husband’",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "nökör nar",
+      "acceptedVariants": [
+        "nokor nar"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "F1.5",
+      "promptHtml": "(5) Directive of <span class=\"data\">nökör</span> ‘husband’",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "nökörlüü",
+      "acceptedVariants": [
+        "nokorluu"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "F1.6",
+      "promptHtml": "(6) Plural of <span class=\"data\">darga</span> ‘mouth’",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "dargachuud",
+      "acceptedVariants": [
+        "dargačuud"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "F1.7",
+      "promptHtml": "(7) Directive of <span class=\"data\">darga</span> ‘mouth’",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "dargaruu",
+      "acceptedVariants": [],
+      "points": 0.4
+    },
+    {
+      "id": "F1.8",
+      "promptHtml": "(8) Pronunciation of <span class=\"data\">darga</span> ‘mouth’",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "[dárɢa]",
+      "acceptedVariants": [
+        "dárɢa",
+        "[dárga]",
+        "[darɢa]",
+        "[darga]",
+        "darga"
+      ],
+      "points": 0.4
+    },
+    {
+      "id": "F1.9",
+      "promptHtml": "(9) Plural of <span class=\"data\">ovog</span> ‘surname’",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "ovoguud",
+      "acceptedVariants": [],
+      "points": 0.4
+    },
+    {
+      "id": "F1.10",
+      "promptHtml": "(10) Directive of <span class=\"data\">ovog</span> ‘surname’",
+      "part": "F1",
+      "gradingMode": "exact",
+      "answerKey": "ovogruu",
+      "acceptedVariants": [],
+      "points": 0.4
+    },
+    {
+      "id": "F2.1",
+      "promptHtml": "Which word is the loanword?",
+      "part": "F2",
+      "partPrompt": "One of the following Mongolian words was originally a loanword from another language: nutag, kunda, soron, gudamz, ehner (as printed: nutag, künda, šoron, gudamž, ehner). Which one is it?",
+      "gradingMode": "exact",
+      "answerKey": "künda",
+      "acceptedVariants": [
+        "kunda"
+      ],
+      "choices": [
+        "nutag",
+        "künda",
+        "šoron",
+        "gudamž",
+        "ehner"
+      ],
+      "points": 1
+    },
+    {
+      "id": "F3.1",
+      "promptHtml": "A) <span class=\"data\">haančlah</span> ‘king’ — plural",
+      "part": "F3",
+      "partPrompt": "Give the plural, directive, and pronunciation of each of the following words: A) haančlah 'king', B) gürvel 'lizard', C) delgüür 'store', D) zuun 'century', E) čanar 'quality'.",
+      "gradingMode": "exact",
+      "answerKey": "haančlah nar",
+      "acceptedVariants": [
+        "haanchlah nar"
+      ],
+      "points": 0.333
+    },
+    {
+      "id": "F3.2",
+      "promptHtml": "A) <span class=\"data\">haančlah</span> ‘king’ — directive",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "haančlahruu",
+      "acceptedVariants": [
+        "haanchlahruu"
+      ],
+      "points": 0.333
+    },
+    {
+      "id": "F3.3",
+      "promptHtml": "A) <span class=\"data\">haančlah</span> ‘king’ — pronunciation",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "[xá:nčlax]",
+      "acceptedVariants": [
+        "xá:nčlax",
+        "[xa:nčlax]",
+        "[xá:nchlax]",
+        "[xa:nchlax]"
+      ],
+      "points": 0.333
+    },
+    {
+      "id": "F3.4",
+      "promptHtml": "B) <span class=\"data\">gürvel</span> ‘lizard’ — plural",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "gürvelčüüd",
+      "acceptedVariants": [
+        "gurvelchuud",
+        "gürvelchüüd",
+        "gürvelüüd"
+      ],
+      "points": 0.333
+    },
+    {
+      "id": "F3.5",
+      "promptHtml": "B) <span class=\"data\">gürvel</span> ‘lizard’ — directive",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "gürvelrüü",
+      "acceptedVariants": [
+        "gurvelruu"
+      ],
+      "points": 0.333
+    },
+    {
+      "id": "F3.6",
+      "promptHtml": "B) <span class=\"data\">gürvel</span> ‘lizard’ — pronunciation",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "[gúrvel]",
+      "acceptedVariants": [
+        "gúrvel",
+        "[gurvel]",
+        "gurvel"
+      ],
+      "points": 0.333
+    },
+    {
+      "id": "F3.7",
+      "promptHtml": "C) <span class=\"data\">delgüür</span> ‘store’ — plural",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "delgüürüüd",
+      "acceptedVariants": [
+        "delguuruud"
+      ],
+      "points": 0.333
+    },
+    {
+      "id": "F3.8",
+      "promptHtml": "C) <span class=\"data\">delgüür</span> ‘store’ — directive",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "delgüürlüü",
+      "acceptedVariants": [
+        "delguurluu"
+      ],
+      "points": 0.333
+    },
+    {
+      "id": "F3.9",
+      "promptHtml": "C) <span class=\"data\">delgüür</span> ‘store’ — pronunciation",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "[delgú:r]",
+      "acceptedVariants": [
+        "delgú:r",
+        "[delgu:r]",
+        "delgu:r"
+      ],
+      "points": 0.333
+    },
+    {
+      "id": "F3.10",
+      "promptHtml": "D) <span class=\"data\">zuun</span> ‘century’ — plural",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "zuunuud",
+      "acceptedVariants": [],
+      "points": 0.333
+    },
+    {
+      "id": "F3.11",
+      "promptHtml": "D) <span class=\"data\">zuun</span> ‘century’ — directive",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "zuunruu",
+      "acceptedVariants": [],
+      "points": 0.333
+    },
+    {
+      "id": "F3.12",
+      "promptHtml": "D) <span class=\"data\">zuun</span> ‘century’ — pronunciation",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "[zʊ́:ŋ]",
+      "acceptedVariants": [
+        "zʊ́:ŋ",
+        "[zʊ:ŋ]",
+        "[zu:ŋ]",
+        "[zu:ng]"
+      ],
+      "points": 0.333
+    },
+    {
+      "id": "F3.13",
+      "promptHtml": "E) <span class=\"data\">čanar</span> ‘quality’ — plural",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "čanaruud",
+      "acceptedVariants": [
+        "canaruud",
+        "chanaruud"
+      ],
+      "points": 0.333
+    },
+    {
+      "id": "F3.14",
+      "promptHtml": "E) <span class=\"data\">čanar</span> ‘quality’ — directive",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "čanarluu",
+      "acceptedVariants": [
+        "canarluu",
+        "chanarluu"
+      ],
+      "points": 0.333
+    },
+    {
+      "id": "F3.15",
+      "promptHtml": "E) <span class=\"data\">čanar</span> ‘quality’ — pronunciation",
+      "part": "F3",
+      "gradingMode": "exact",
+      "answerKey": "[čánar]",
+      "acceptedVariants": [
+        "čánar",
+        "[canar]",
+        "[chánar]",
+        "[chanar]"
+      ],
+      "points": 0.334
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Sort the singular words into two groups by the vowels they contain: one group uses a, o, u and the other uses e, ö, ü. Then look at which shape of ending each group takes. The endings come in matched pairs, such as -uud next to -üüd.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "There are three different plural endings, and the choice depends on the stem: nouns naming people take one ending, stems that end in a vowel take another, and the rest take a third. The directive ending also has two shapes (one starting with l, one starting with r) and which you get depends on the last sound of the stem. For pronunciation, compare each spelling with its transcription letter by letter: h, g, final n, u and ü each behave regularly, and the stress mark always lands in a predictable place relative to long vowels.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Take heer 'field', which is not one of the words you must fill in. Its vowels are e, so all its endings use the front shapes: plural heerüüd, not heeruud. It ends in r, and every stem in the data ending in r takes the l-shaped directive (compare havčaarluu, mangarluu, sugarluu), which gives heerlüü. Its pronunciation [xé:r] shows three regular facts at once: written h is said as x, written ee is a single long vowel, and the stress sits on that long vowel.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What the columns are telling you</h3>\n<p>Every row gives one noun in three forms (singular, plural, directive — the case meaning “towards X”) plus a pronunciation of the singular. So there are really three little systems to crack: how the plural ending is chosen, how the directive ending is chosen, and how spelling maps onto pronunciation.</p>\n<h3>Step 1: vowel harmony (the reason for the title)</h3>\n<p>Line up the endings and you see they always come in pairs: <span class=\"data\">-uud / -üüd</span>, <span class=\"data\">-čuud / -čüüd</span>, <span class=\"data\">-luu / -lüü</span>, <span class=\"data\">-ruu / -rüü</span>. Which member you get depends on the vowels already in the stem:</p>\n<ul>\n<li><strong>Back words</strong> (containing a, o, u) take the u-endings: <span class=\"data\">havčaaruud</span>, <span class=\"data\">zutanruu</span>, <span class=\"data\">galruu</span>, <span class=\"data\">nuguučuud</span>.</li>\n<li><strong>Front words</strong> (containing e, ö, ü) take the ü-endings: <span class=\"data\">örhüüd</span>, <span class=\"data\">heerlüü</span>, <span class=\"data\">denlüüčüüd</span>, <span class=\"data\">gölögrüü</span>.</li>\n</ul>\n<p>Crucially, <em>no single word in the table mixes the two sets</em>. That is what “vowel harmony” means: all the vowels of a word belong to one team.</p>\n<h3>Step 2: choosing the plural ending</h3>\n<p>Three plural endings show up:</p>\n<ul>\n<li><span class=\"data\">nar</span> (a separate word) for nouns naming <em>people</em>: <span class=\"data\">mangar nar</span> ‘fools’, <span class=\"data\">hun nar</span> ‘men’, <span class=\"data\">aav nar</span> ‘fathers’, <span class=\"data\">hüühen nar</span> ‘women’. So ‘husband’ gives <span class=\"data\">nökör nar</span> and ‘king’ gives <span class=\"data\">haančlah nar</span>.</li>\n<li><span class=\"data\">-čuud / -čüüd</span> after a stem that ends in a vowel: <span class=\"data\">denlüüčüüd</span>, <span class=\"data\">nuguučuud</span>, and therefore <span class=\"data\">darga</span> gives <span class=\"data\">dargačuud</span> (printed <span class=\"data\">dargachuud</span> in the official key).</li>\n<li><span class=\"data\">-uud / -üüd</span> for everything else, i.e. non-human nouns ending in a consonant: <span class=\"data\">övsüüd</span>, <span class=\"data\">negüüd</span>, <span class=\"data\">zutanuud</span>, <span class=\"data\">galuud</span>. So <span class=\"data\">šüleg</span> gives <span class=\"data\">šülegüüd</span> (front) and <span class=\"data\">ovog</span> gives <span class=\"data\">ovoguud</span> (back), while <span class=\"data\">zuun</span> gives <span class=\"data\">zuunuud</span> and <span class=\"data\">čanar</span> gives <span class=\"data\">čanaruud</span>.</li>\n</ul>\n<h3>Step 3: choosing the directive ending</h3>\n<p>Compare the last sound of the stem with the consonant of the ending:</p>\n<ul>\n<li>stem ends in <strong>r</strong>: the ending starts with l — <span class=\"data\">havčaarluu</span>, <span class=\"data\">mangarluu</span>, <span class=\"data\">sugarluu</span>, <span class=\"data\">heerlüü</span>, <span class=\"data\">nökörlüü</span>. That is why ‘store’ gives <span class=\"data\">delgüürlüü</span> and ‘quality’ gives <span class=\"data\">čanarluu</span>.</li>\n<li>anything else (including l, g, h, n, s, v and vowels): the ending starts with r — <span class=\"data\">galruu</span>, <span class=\"data\">örhrüü</span>, <span class=\"data\">övsrüü</span>, <span class=\"data\">hunruu</span>, <span class=\"data\">gölögrüü</span>, <span class=\"data\">nuguuruu</span>. So <span class=\"data\">neg</span> gives <span class=\"data\">negruu</span>, <span class=\"data\">šüleg</span> gives <span class=\"data\">šülegrüü</span>, <span class=\"data\">darga</span> gives <span class=\"data\">dargaruu</span>, <span class=\"data\">ovog</span> gives <span class=\"data\">ovogruu</span>, <span class=\"data\">gürvel</span> gives <span class=\"data\">güvelrüü</span>-style <span class=\"data\">gürvelrüü</span>, <span class=\"data\">zuun</span> gives <span class=\"data\">zuunruu</span>, and <span class=\"data\">haančlah</span> gives <span class=\"data\">haančlahruu</span>.</li>\n</ul>\n<h3>Step 4: from spelling to pronunciation</h3>\n<p>Match each spelling against its transcription and the rules fall out:</p>\n<ul>\n<li><strong>h is [x]</strong>: <span class=\"data\">havčaar</span> is [xavčá:r], <span class=\"data\">örh</span> is [ɵ́rx], <span class=\"data\">hüühen</span> is [xú:xeŋ].</li>\n<li><strong>doubled vowel = one long vowel</strong>, marked with a colon: <span class=\"data\">heer</span> is [xé:r], <span class=\"data\">aav</span> is [á:v].</li>\n<li><strong>stress falls on the first long vowel</strong>; if there is no long vowel, on the first syllable. <span class=\"data\">havčaar</span> [xavčá:r] has stress on the second syllable because that is where the long vowel is, while <span class=\"data\">mangar</span> [mánɢar] has no long vowel and stresses the first.</li>\n<li><strong>g is pronounced further back ([ɢ]) in back words</strong> but stays [g] in front words: <span class=\"data\">gal</span> [ɢál], <span class=\"data\">sugar</span> [sʊ́ɢar], <span class=\"data\">ovog</span> [óvoɢ], versus <span class=\"data\">neg</span> [nég], <span class=\"data\">šüleg</span> [šúleg].</li>\n<li><strong>word-final n is [ŋ]</strong>: <span class=\"data\">hun</span> [xʊ́ŋ], <span class=\"data\">zutan</span> [zʊ́taŋ], <span class=\"data\">hüühen</span> [xú:xeŋ].</li>\n<li><strong>written u is [ʊ] (back), written ü is [u] (front)</strong>: <span class=\"data\">nuguu</span> [nʊɢʊ́:] versus <span class=\"data\">denlüü</span> [denlú:].</li>\n</ul>\n<p>Put those together: <span class=\"data\">darga</span> has no long vowel, so stress is on the first syllable, and g in a back word is [ɢ] — giving [dárɢa]. <span class=\"data\">zuun</span> has long back uu and a final n — [zʊ́:ŋ]. <span class=\"data\">delgüür</span> has its long vowel in the second syllable — [delgú:r]. <span class=\"data\">gürvel</span> is a front word with no long vowel — [gúrvel]. <span class=\"data\">čanar</span> — [čánar]. <span class=\"data\">haančlah</span> begins with a long a and ends in h — [xá:nčlax].</p>\n<h3>Step 5: spotting the loanword</h3>\n<p>Native Mongolian words obey vowel harmony, so a word that mixes front and back vowels is a suspect. Test each candidate: <span class=\"data\">nutag</span> (u, a — all back), <span class=\"data\">šoron</span> (o, o — back), <span class=\"data\">gudamž</span> (u, a — back), <span class=\"data\">ehner</span> (e, e — front). Only <span class=\"data\">künda</span> pairs a front ü with a back a, breaking harmony — so that is the borrowed word.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Please verify the exact IPA symbols I transcribed in the Pronunciation column of the data table; the scan is ambiguous for three cells: mangar (transcribed [mánɢar] - could be [máŋɢar]), nökör ([nékər] - possibly [nɵ́kɵr]) and gölög ([gélɵg] - possibly [gɵ́lɵg]). These body cells are not graded.\nThe official solution lists only F1 items 1-8; it gives no answers for blanks (9) and (10) (plural and directive of ovog). Keys F1.9 = ovoguud and F1.10 = ovogruu are MY OWN derivation and must be verified.\nThe official solution's F3 table row for haančlah is corrupted: its Directive cell repeats 'haančlah' and its Pronunciation cell reads '[xavčá:r]' (both leftovers from the problem table), and the Translation column of the whole solution table repeats 'dog/household/fool' from the problem. I used the official plural (haančlah nar) but supplied F3.2 = haančlahruu and F3.3 = [xá:nčlax] myself - UNOFFICIAL, verify.\nF1.6: the solution prints 'dargachuud' with ch although the data uses č; I kept the solution spelling as the key and accept 'dargačuud'.\nF3.4: the official key is gürvelčüüd, which conflicts with gal > galuud in the data; I added 'gürvelüüd' as an accepted variant.\nPoints were split evenly within parts (F1 = 4, F2 = 1, F3 = 5); no official per-item breakdown was given.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "cell:18",
+      "a": "[mánɢar]",
+      "b": "[máŋɢar]"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:73",
+      "a": "[nékər]",
+      "b": "[nɵ́kɵr]"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:83",
+      "a": "[gélɵg]",
+      "b": "[gɵ́lɵg]"
+    },
+    {
+      "kind": "diff",
+      "path": "cell:98",
+      "a": "[óvoɢ]",
+      "b": "[ɔ́vɔɢ]"
+    },
+    {
+      "kind": "diff",
+      "path": "(verification)",
+      "note": "this booklet has no usable text layer, so neither the witness check nor arbitration can run. Parked for human review by policy, not by a specific disagreement"
+    }
+  ]
+}

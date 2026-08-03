@@ -1,0 +1,684 @@
+{
+  "id": "2018-open-H",
+  "tier": "full",
+  "year": 2018,
+  "round": "open",
+  "letter": "H",
+  "title": "N’ko, M’kay",
+  "authors": [
+    "Babette Newsome",
+    "Harold Somers"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "writing systems",
+    "phonology"
+  ],
+  "formTag": "transliteration",
+  "difficulty": "hard",
+  "languages": [
+    "Maninka"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>The N’ko script was invented (or rediscovered, depending on sources) by Guinean Soulemayne Kanté in 1949. Today, N’ko is still used to write Maninka, as well as Dyula and Bambaré, which are all languages from the Mande language family spoken across a range of West African nations: Burkina Faso, Gambia, Ghana, Guinea, Ivory Coast, Liberia, Mali, Senegal, and Sierra Leone. These are all tone languages (ie, using pitch to determine the meaning of words), but the tones (which are usually indicated by diacritics) have been omitted in this problem, to make it simpler. ‘<span class=\"data\">ɔ</span>’ is a vowel pronounced like the ‘o’ in ‘hot’.</p>\n<p>The name of the script in N’ko, which means ‘I speak’, and its inventor’s name are shown here:</p>\n<figure><img src=\"/content-assets/2018-open-H-script-name.png\" alt=\"The N’ko name of the script, meaning ‘I speak’, and the inventor’s name written in N’ko script\" /></figure>\n<p>Below are 12 regional names given in transcription on the left and on the right are the corresponding names in N’ko but in a jumbled-up order. The information given under “Description” is just for your interest: it does not relate to the solution.</p>\n<div class=\"table-scroll\"><table><thead><tr><th></th><th>Name in transcription</th><th>Description</th><th>Name in N’ko (A–L)</th></tr></thead><tbody>\n<tr><td>1.</td><td><span class=\"data\">Kɔnakiri</span></td><td>Conakry – capital of Guinea</td><td><span class=\"blank\" data-q=\"H1.1\" data-label=\"1.\"></span></td></tr>\n<tr><td>2.</td><td><span class=\"data\">Kindia</span></td><td>town in Guinea</td><td><span class=\"blank\" data-q=\"H1.2\" data-label=\"2.\"></span></td></tr>\n<tr><td>3.</td><td><span class=\"data\">N’sérégbédé</span></td><td>city in Guinea</td><td><span class=\"blank\" data-q=\"H1.3\" data-label=\"3.\"></span></td></tr>\n<tr><td>4.</td><td><span class=\"data\">Soromaya</span></td><td>town in Guinea</td><td><span class=\"blank\" data-q=\"H1.4\" data-label=\"4.\"></span></td></tr>\n<tr><td>5.</td><td><span class=\"data\">Faranna</span></td><td>city in Guinea</td><td><span class=\"blank\" data-q=\"H1.5\" data-label=\"5.\"></span></td></tr>\n<tr><td>6.</td><td><span class=\"data\">Djigoué</span></td><td>town in Burkina Faso</td><td><span class=\"blank\" data-q=\"H1.6\" data-label=\"6.\"></span></td></tr>\n<tr><td>7.</td><td><span class=\"data\">Tomboutou</span></td><td>Timbuktu – city in Mali</td><td><span class=\"blank\" data-q=\"H1.7\" data-label=\"7.\"></span></td></tr>\n<tr><td>8.</td><td><span class=\"data\">Bisawo</span></td><td>Bissau – capital of Guinea-Bissau<sup>1</sup></td><td><span class=\"blank\" data-q=\"H1.8\" data-label=\"8.\"></span></td></tr>\n<tr><td>9.</td><td><span class=\"data\">Abidjan</span></td><td>city in Côte d’Ivoire</td><td><span class=\"blank\" data-q=\"H1.9\" data-label=\"9.\"></span></td></tr>\n<tr><td>10.</td><td><span class=\"data\">M’praeso</span></td><td>town in Ghana</td><td><span class=\"blank\" data-q=\"H1.10\" data-label=\"10.\"></span></td></tr>\n<tr><td>11.</td><td><span class=\"data\">Gbésoba</span></td><td>town in Guinea</td><td><span class=\"blank\" data-q=\"H1.11\" data-label=\"11.\"></span></td></tr>\n<tr><td>12.</td><td><span class=\"data\">Guekedou</span></td><td>city in Guinea</td><td><span class=\"blank\" data-q=\"H1.12\" data-label=\"12.\"></span></td></tr>\n</tbody></table></div>\n<figure><img src=\"/content-assets/2018-open-H-nko-list.png\" alt=\"Table of twelve names written in N’ko script, labelled A to L\" /></figure>\n<p>1. Note that Guinea-Bissau and Guinea are two different countries.</p>\n<p>Answer the following questions in the Answer Sheets:</p>\n<p><strong>H1.</strong> Match up the names 1-12 with their N’ko equivalents A-L.</p>\n<p><strong>H2.</strong> Write in N’ko script the following names:</p>\n<div class=\"table-scroll\"><table><thead><tr><th></th><th>Name in transcription</th><th>Description</th><th>Name in N’ko</th></tr></thead><tbody>\n<tr><td>a.</td><td><span class=\"data\">Kodo Wari</span></td><td>the country Côte d’Ivoire</td><td><span class=\"blank\" data-q=\"H2.1\" data-label=\"a.\"></span></td></tr>\n<tr><td>b.</td><td><span class=\"data\">Liberia</span></td><td>the country Liberia</td><td><span class=\"blank\" data-q=\"H2.2\" data-label=\"b.\"></span></td></tr>\n<tr><td>c.</td><td><span class=\"data\">Mamoun</span></td><td>city in Guinea</td><td><span class=\"blank\" data-q=\"H2.3\" data-label=\"c.\"></span></td></tr>\n<tr><td>d.</td><td><span class=\"data\">Firitɔn</span></td><td>Freetown, capital of Sierra Leone</td><td><span class=\"blank\" data-q=\"H2.4\" data-label=\"d.\"></span></td></tr>\n<tr><td>e.</td><td><span class=\"data\">Netaro</span></td><td>town in Guinea</td><td><span class=\"blank\" data-q=\"H2.5\" data-label=\"e.\"></span></td></tr>\n<tr><td>f.</td><td><span class=\"data\">M’bour</span></td><td>city in Senegal</td><td><span class=\"blank\" data-q=\"H2.6\" data-label=\"f.\"></span></td></tr>\n<tr><td>g.</td><td><span class=\"data\">N’djala</span></td><td>town in Sierra Leone</td><td><span class=\"blank\" data-q=\"H2.7\" data-label=\"g.\"></span></td></tr>\n<tr><td>h.</td><td><span class=\"data\">Gberia Fotombou</span></td><td>town in Sierra Leone</td><td><span class=\"blank\" data-q=\"H2.8\" data-label=\"h.\"></span></td></tr>\n</tbody></table></div>\n<p><strong>H3.</strong> Write the following names in transliteration (or in their conventional English spelling):</p>\n<figure><img src=\"/content-assets/2018-open-H-h3-table.png\" alt=\"Table of ten names written in N’ko script, labelled a to j, each with a helpful hint\" /></figure>\n<p>Give your answers for rows a-j here:</p>\n<ul>\n<li>a. (name of a language) <span class=\"blank\" data-q=\"H3.1\" data-label=\"a.\"></span></li>\n<li>b. (name of a country) <span class=\"blank\" data-q=\"H3.2\" data-label=\"b.\"></span></li>\n<li>c. (name of a country) <span class=\"blank\" data-q=\"H3.3\" data-label=\"c.\"></span></li>\n<li>d. (name of a town in Congo) <span class=\"blank\" data-q=\"H3.4\" data-label=\"d.\"></span></li>\n<li>e. (name of a language) <span class=\"blank\" data-q=\"H3.5\" data-label=\"e.\"></span></li>\n<li>f. (name of a country) <span class=\"blank\" data-q=\"H3.6\" data-label=\"f.\"></span></li>\n<li>g. (name of a language) <span class=\"blank\" data-q=\"H3.7\" data-label=\"g.\"></span></li>\n<li>h. (name of a river and a country) <span class=\"blank\" data-q=\"H3.8\" data-label=\"h.\"></span></li>\n<li>i. (name of a country) <span class=\"blank\" data-q=\"H3.9\" data-label=\"i.\"></span></li>\n<li>j. (name of a country) <span class=\"blank\" data-q=\"H3.10\" data-label=\"j.\"></span></li>\n</ul>\n<p>Map of West Africa:</p>\n<figure><img src=\"/content-assets/2018-open-H-map.png\" alt=\"Map of West Africa showing countries and major cities\" /></figure>",
+  "assets": [
+    {
+      "src": "/content-assets/2018-open-H-script-name.png",
+      "alt": "The N’ko name of the script, meaning ‘I speak’, and the inventor’s name written in N’ko script"
+    },
+    {
+      "src": "/content-assets/2018-open-H-nko-list.png",
+      "alt": "Table of twelve names written in N’ko script, labelled A to L"
+    },
+    {
+      "src": "/content-assets/2018-open-H-h3-table.png",
+      "alt": "Table of ten names written in N’ko script, labelled a to j, each with a helpful hint"
+    },
+    {
+      "src": "/content-assets/2018-open-H-map.png",
+      "alt": "Map of West Africa showing countries and major cities"
+    }
+  ],
+  "questions": [
+    {
+      "id": "H1.1",
+      "promptHtml": "1. <span class=\"data\">Kɔnakiri</span> (Conakry — capital of Guinea)",
+      "part": "H1",
+      "partPrompt": "Match up the names 1-12 with their N'ko equivalents A-L. Give the letter for each name.",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.2",
+      "promptHtml": "2. <span class=\"data\">Kindia</span> (town in Guinea)",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.3",
+      "promptHtml": "3. <span class=\"data\">N’sérégbédé</span> (city in Guinea)",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.4",
+      "promptHtml": "4. <span class=\"data\">Soromaya</span> (town in Guinea)",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.5",
+      "promptHtml": "5. <span class=\"data\">Faranna</span> (city in Guinea)",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.6",
+      "promptHtml": "6. <span class=\"data\">Djigoué</span> (town in Burkina Faso)",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "L",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.7",
+      "promptHtml": "7. <span class=\"data\">Tomboutou</span> (Timbuktu — city in Mali)",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "J",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.8",
+      "promptHtml": "8. <span class=\"data\">Bisawo</span> (Bissau — capital of Guinea-Bissau)",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.9",
+      "promptHtml": "9. <span class=\"data\">Abidjan</span> (city in Côte d’Ivoire)",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.10",
+      "promptHtml": "10. <span class=\"data\">M’praeso</span> (town in Ghana)",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.11",
+      "promptHtml": "11. <span class=\"data\">Gbésoba</span> (town in Guinea)",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.12",
+      "promptHtml": "12. <span class=\"data\">Guekedou</span> (city in Guinea)",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H2.1",
+      "promptHtml": "a. <span class=\"data\">Kodo Wari</span> — the country Côte d’Ivoire",
+      "part": "H2",
+      "partPrompt": "Write in N'ko script the following names. If you cannot type N'ko letters, write out the sequence of N'ko letters in capital Latin letters instead.",
+      "gradingMode": "exact",
+      "answerKey": "ߞߘߏ ߥߙߌ",
+      "acceptedVariants": [
+        "KDO WARI"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H2.2",
+      "promptHtml": "b. <span class=\"data\">Liberia</span> — the country Liberia",
+      "part": "H2",
+      "gradingMode": "exact",
+      "answerKey": "ߟߌߓߍߙߌߦߊ",
+      "acceptedVariants": [
+        "LIBERIYA"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H2.3",
+      "promptHtml": "c. <span class=\"data\">Mamoun</span> — city in Guinea",
+      "part": "H2",
+      "gradingMode": "exact",
+      "answerKey": "ߡߊߡߎ߲",
+      "acceptedVariants": [
+        "MAMOUN"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H2.4",
+      "promptHtml": "d. <span class=\"data\">Firitɔn</span> — Freetown, capital of Sierra Leone",
+      "part": "H2",
+      "gradingMode": "exact",
+      "answerKey": "ߝߙߌߕߐ߲",
+      "acceptedVariants": [
+        "ߝߌߙߌߕߐ߲",
+        "FRITƆN",
+        "FIRITƆN",
+        "FRITON",
+        "FIRITON"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H2.5",
+      "promptHtml": "e. <span class=\"data\">Netaro</span> — town in Guinea",
+      "part": "H2",
+      "gradingMode": "exact",
+      "answerKey": "ߣߍߕߊߙߏ",
+      "acceptedVariants": [
+        "NETARO"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H2.6",
+      "promptHtml": "f. <span class=\"data\">M’bour</span> — city in Senegal",
+      "part": "H2",
+      "gradingMode": "exact",
+      "answerKey": "ߒߓߎߙ",
+      "acceptedVariants": [
+        "M’BOUR",
+        "M'BOUR",
+        "N'BOUR"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H2.7",
+      "promptHtml": "g. <span class=\"data\">N’djala</span> — town in Sierra Leone",
+      "part": "H2",
+      "gradingMode": "exact",
+      "answerKey": "ߒߖߟߊ",
+      "acceptedVariants": [
+        "N’DJLA",
+        "N'DJLA"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H2.8",
+      "promptHtml": "h. <span class=\"data\">Gberia Fotombou</span> — town in Sierra Leone",
+      "part": "H2",
+      "gradingMode": "exact",
+      "answerKey": "ߜߍߙߌߦߊ ߝߏߕߏ߲ߓߎ",
+      "acceptedVariants": [
+        "GBERIYA FOTOMBOU"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H3.1",
+      "promptHtml": "a. (name of a language)",
+      "part": "H3",
+      "partPrompt": "Write the following names (rows a-j of the N'ko table) in transliteration, or in their conventional English spelling.",
+      "gradingMode": "exact",
+      "answerKey": "Djula",
+      "acceptedVariants": [
+        "Djoula",
+        "Dyula",
+        "Dyoula"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H3.2",
+      "promptHtml": "b. (name of a country)",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "Mali",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "H3.3",
+      "promptHtml": "c. (name of a country)",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "Sénégal",
+      "acceptedVariants": [
+        "Sénégali",
+        "Senegal",
+        "Senegali"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H3.4",
+      "promptHtml": "d. (name of a town in Congo)",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "Bandoundou",
+      "acceptedVariants": [
+        "Bandundu"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H3.5",
+      "promptHtml": "e. (name of a language)",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "Maninka",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "H3.6",
+      "promptHtml": "f. (name of a country)",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "Sara Lon",
+      "acceptedVariants": [
+        "Sierra Leone"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H3.7",
+      "promptHtml": "g. (name of a language)",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "Bambaré",
+      "acceptedVariants": [
+        "Bambare",
+        "Bambara"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H3.8",
+      "promptHtml": "h. (name of a river and a country)",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "Kambia",
+      "acceptedVariants": [
+        "Gambia"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H3.9",
+      "promptHtml": "i. (name of a country)",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "Bourkina Faso",
+      "acceptedVariants": [
+        "Bouroukina Faso",
+        "Burkina Faso"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H3.10",
+      "promptHtml": "j. (name of a country)",
+      "part": "H3",
+      "gradingMode": "exact",
+      "answerKey": "Ireland",
+      "acceptedVariants": [
+        "Irland",
+        "Iriland"
+      ],
+      "points": 0.5
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "N’ko is an alphabet, so each symbol stands for one sound - but it runs right to left, so the first sound of a name is the symbol furthest to the right. Start by counting symbols and comparing them with the number of sounds in the transcriptions, and look for names that share a distinctive beginning or ending.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Some N’ko spellings are shorter than you expect, because not every vowel is written: when two consonant-plus-vowel syllables in a row contain the same vowel, only the second vowel is spelled out (the rule works pair by pair through the word). Also watch for single letters that cover two Roman letters (DJ, GB, OU), for E and É being different letters, and for a dot under a vowel, which marks nasalisation and shows up in the transcription as an n or an m.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Try the introduction first, where you already know the answer. The script’s own name is pronounced N’ko and is written with three symbols; read right to left, they must be the syllabic nasal N’, then K, then O. That gives you the shape of the syllabic nasal for free, and it is the symbol you should hunt for at the right-hand end of the two names in the list that begin with N’ or M’.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What kind of puzzle is this?</h3><p>N’ko is an alphabet, exactly like our Roman alphabet: one symbol stands for one sound. So each N’ko name in the list is just one of the twelve transcribed names written with different letters. Your job is to work out which symbol stands for which sound, and the quickest way in is to compare lengths and repeated symbols.</p><h3>Which way does the writing run?</h3><p>N’ko is written from right to left. The introduction lets you check this: the script’s own name means ‘I speak’ and is pronounced N’ko, and it is written with three symbols. Reading right to left they are the syllabic nasal N’, then K, then O. Now you know the shape of that syllabic nasal, and you can look for it at the right-hand end of the two names in the list that begin with a syllabic nasal, N’sérégbédé and M’praeso. (The problem tells you at the end that both N’ and M’ use the same symbol, and that it only appears word-initially.)</p><h3>Counting symbols</h3><p>Line up how many symbols each N’ko name has against how many sounds you hear in each transcription. Distinctive names help most: Tomboutou is long, Bisawo has a W, Abidjan has a DJ, and Kodo Wari (in H2) is the only two-word item in that list. Names with a repeated letter, such as Faranna, Soromaya and Kɔnakiri, are also very useful because the repeat shows up as the same symbol twice.</p><h3>The surprise: missing vowels</h3><p>If you count carefully, several N’ko spellings are one or two symbols shorter than the transcription. That is because of a spelling rule: where a consonant-plus-vowel syllable is followed by another consonant-plus-vowel syllable with the <em>same</em> vowel, only the second vowel is written. So Soromaya is spelled SROMYA (SO-RO becomes SRO, MA-YA becomes MYA). The rule applies pair by pair through the word, which is why N’sérégbédé comes out as N’SRÉGBÉDÉ - and remember that GB is a single N’ko letter.</p><h3>One letter for two Roman letters</h3><p>DJ, GB and OU are each written with a single N’ko letter. E (as in Netaro) and É (as in Gbésoba) are two <em>different</em> letters. And the sequences GE, GÉ, GI are written GUE, GUÉ, GUI with a U that is not pronounced - useful for Guekedou. The sequence ‘ia’ needs an extra Y inserted, so Liberia is written LIBERIYA.</p><h3>Dots</h3><p>A dot under a vowel means the vowel is nasalised, that is, air comes out through the nose as you say it. In the Roman transcription a nasalised vowel appears as a vowel plus n, or plus m when the next sound is b or p. That is why Firitɔn ends in a dotted Ɔ, and why the middle of Fotombou is a dotted O followed by B. Importantly, the missing-vowel rule never applies to a nasalised vowel, so both vowels of FO-TO(nasal) survive.</p><h3>Writing names into N’ko (H2)</h3><p>Netaro has no repeated vowel in a pair, so all six letters are written: N, E, T, A, R, O, placed from right to left. Mamoun is just four letters: M, A, M, and a dotted OU, because the final n is carried by the dot. Kodo Wari loses the first O (KO-DO has the same vowel twice), giving KDO WARI. Firitɔn can be written FRITƆ(nasal), with the repeated i rule applied to FI-RI, and the solution also allows the fuller FIRITƆ(nasal).</p><h3>Reading names back out (H3)</h3><p>For part H3 the trick is to sound out the letters and then guess what the place or language is. Some look odd until you say them: Kambia is the country we spell Gambia (N’ko keeps a dotted letter, G, for foreign words, but K works too), Sara Lon is Sierra Leone said the Mande way, Bour(ou)kina Faso is Burkina Faso, Bandoundou is the Congolese town Bandundu - and the very last one, Ir(e)land, is a long way from West Africa.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "H1 and H3 answer keys are copied from the official solution pages. H2 keys are RECONSTRUCTED: the official solution prints the answers as N'ko glyph images, so the N'ko Unicode strings given here were rebuilt from the solution's own letter key plus its stated rules (right-to-left order, digraphs DJ/GB/OU, repeated-vowel deletion, nasalisation dot U+07F2, inserted Y in 'ia'). Please verify each H2 string glyph by glyph against solution page 1, especially the E/É distinction (U+07CD vs U+07CB) and the nasalisation dots. Latin capital transliterations (e.g. KDO WARI) are supplied as accepted variants because students cannot normally type N'ko. Solution item d is printed as two alternative spellings joined by 'or'; both are captured (key plus variant).\nCROP /content-assets/2018-open-H-script-name.png page=1 x=4 y=25 w=88 h=7\nCROP /content-assets/2018-open-H-nko-list.png page=1 x=60 y=32 w=30 h=53\nCROP /content-assets/2018-open-H-h3-table.png page=2 x=20 y=42 w=60 h=47\nCROP /content-assets/2018-open-H-map.png page=3 x=5 y=15 w=90 h=58\nThe H1 A-L list and the H3 N'ko column are images, so the H1 answer column and the H3 answers are given as separate slots outside those figures; check that the crops are legible at screen size. Points are distributed evenly (0.5 per blank, 30 blanks = 15) because the solution shows no per-part breakdown.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:h2.1:mode",
+      "a": "exact",
+      "b": "llm"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.1:key",
+      "a": "ߞߘߏ ߥߙߌ",
+      "b": "KDO WARI"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.2:mode",
+      "a": "exact",
+      "b": "llm"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.2:key",
+      "a": "ߟߌߓߍߙߌߦߊ",
+      "b": "LIBERIYA"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.3:mode",
+      "a": "exact",
+      "b": "llm"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.3:key",
+      "a": "ߡߊߡߎ߲",
+      "b": "MAMOUN"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.4:mode",
+      "a": "exact",
+      "b": "llm"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.4:key",
+      "a": "ߝߙߌߕߐ߲",
+      "b": "FRITƆN"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.5:mode",
+      "a": "exact",
+      "b": "llm"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.5:key",
+      "a": "ߣߍߕߊߙߏ",
+      "b": "NETARO"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.6:mode",
+      "a": "exact",
+      "b": "llm"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.6:key",
+      "a": "ߒߓߎߙ",
+      "b": "M'BOUR"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.7:mode",
+      "a": "exact",
+      "b": "llm"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.7:key",
+      "a": "ߒߖߟߊ",
+      "b": "N'DJLA"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.8:mode",
+      "a": "exact",
+      "b": "llm"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h2.8:key",
+      "a": "ߜߍߙߌߦߊ ߝߏߕߏ߲ߓߎ",
+      "b": "GBERIYA FOTOMBOU"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h3.3:key",
+      "a": "Sénégal",
+      "b": "Sénégali"
+    },
+    {
+      "kind": "diff",
+      "path": "cells:count",
+      "a": "88",
+      "b": "121"
+    },
+    {
+      "kind": "diff",
+      "path": "assets:count",
+      "a": "4",
+      "b": "5"
+    },
+    {
+      "kind": "diff",
+      "path": "figures:count",
+      "a": "4",
+      "b": "5"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 20 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~20 API calls that would not resolve it"
+    },
+    {
+      "kind": "figure",
+      "path": "/content-assets/2018-open-H-script-name.png",
+      "note": "crop not confirmed after 3 attempts (last verdict: NOISY)"
+    }
+  ]
+}

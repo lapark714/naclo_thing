@@ -1,0 +1,231 @@
+{
+  "id": "2017-open-D",
+  "tier": "full",
+  "year": 2017,
+  "round": "open",
+  "letter": "D",
+  "title": "Let’s Roll!",
+  "authors": [
+    "Deryle Lonsdale"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "number systems",
+    "morphology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "standard",
+  "languages": [
+    "Turkish",
+    "Persian"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>Tavla is a variant of backgammon played in Turkey. In the game, two six-sided dice are thrown, resulting in two random numbers between 1 and 6. Each possible outcome has a name, and these names consist of a curious mixture of Persian and Turkish. Some letters used to write these languages are not used to write English, such as <span class=\"data\">ü</span>, <span class=\"data\">ş</span>, and <span class=\"data\">ı</span>, but you do not need to know how these are pronounced to solve this problem. The table on the left lists some of the possible outcomes, while the table on the right lists the names of those outcomes, but the outcomes and their names are not given in the same order. Answer these questions in the Answer Sheets.</p><p><strong>D1.</strong> Match up which name goes with which outcome. Write your answers in the Answer Sheets (that is, next to each outcome in the Answer Sheet, write the letter corresponding to that outcome's name). Note that the order of the dice does not matter for the naming scheme: For example, 2-6 and 6-2 have the same name.</p><div class=\"table-scroll\"><table><thead><tr><th></th><th><em>Outcomes</em></th></tr></thead><tbody><tr><td>a.</td><td>1-3</td></tr><tr><td>b.</td><td>4-6</td></tr><tr><td>c.</td><td>1-5</td></tr><tr><td>d.</td><td>3-5</td></tr><tr><td>e.</td><td>1-4</td></tr><tr><td>f.</td><td>1-6</td></tr><tr><td>g.</td><td>2-6</td></tr></tbody></table></div><div class=\"table-scroll\"><table><thead><tr><th></th><th><em>Names</em></th></tr></thead><tbody><tr><td>(A)</td><td><span class=\"data\">pencü yek</span></td></tr><tr><td>(B)</td><td><span class=\"data\">pencü se</span></td></tr><tr><td>(C)</td><td><span class=\"data\">şeşi yek</span></td></tr><tr><td>(D)</td><td><span class=\"data\">şeş cıhar</span></td></tr><tr><td>(E)</td><td><span class=\"data\">se yek</span></td></tr><tr><td>(F)</td><td><span class=\"data\">şeşi dü</span></td></tr><tr><td>(G)</td><td><span class=\"data\">cıharı yek</span></td></tr></tbody></table></div><p>For Questions <strong>D2</strong> through <strong>D4</strong>, your answer should be an element from the following list of possible outcomes: 1-1, 1-2, 1-3, 1-4, 1-5, 1-6, 2-2, 2-3, 2-4, 2-5, 2-6, 3-3, 3-4, 3-5, 3-6, 4-4, 4-5, 4-6, 5-5, 5-6, 6-6</p><p><strong>D2.</strong> What outcome has the name &ldquo;<span class=\"data\">pencü dü</span>&rdquo;?</p><p><strong>D3.</strong> What outcome has the name &ldquo;<span class=\"data\">cıhari se</span>&rdquo;?</p><p><strong>D4.</strong> What outcome has the name &ldquo;<span class=\"data\">düşeş</span>&rdquo;?</p><p>NOTE: There is significant variation in the exact names used across different Tavla players from different regions. Therefore, some Tavla players use different sets of names than the ones given in this problem.</p>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "D1.1",
+      "promptHtml": "a. 1-3",
+      "part": "D1",
+      "partPrompt": "Match up which name goes with which outcome. For each outcome, write the letter (A-G) of its name.",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "(E)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.2",
+      "promptHtml": "b. 4-6",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "(D)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.3",
+      "promptHtml": "c. 1-5",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "(A)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.4",
+      "promptHtml": "d. 3-5",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "(B)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.5",
+      "promptHtml": "e. 1-4",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [
+        "(G)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.6",
+      "promptHtml": "f. 1-6",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "(C)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D1.7",
+      "promptHtml": "g. 2-6",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "(F)"
+      ],
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D2.1",
+      "promptHtml": "What outcome has the name &ldquo;<span class=\"data\">pencü dü</span>&rdquo;?",
+      "part": "D2",
+      "partPrompt": "Your answer should be an element from this list: 1-1, 1-2, 1-3, 1-4, 1-5, 1-6, 2-2, 2-3, 2-4, 2-5, 2-6, 3-3, 3-4, 3-5, 3-6, 4-4, 4-5, 4-6, 5-5, 5-6, 6-6",
+      "gradingMode": "exact",
+      "answerKey": "2-5",
+      "acceptedVariants": [
+        "5-2"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D3.1",
+      "promptHtml": "What outcome has the name &ldquo;<span class=\"data\">cıhari se</span>&rdquo;?",
+      "part": "D3",
+      "gradingMode": "exact",
+      "answerKey": "3-4",
+      "acceptedVariants": [
+        "4-3"
+      ],
+      "points": 1
+    },
+    {
+      "id": "D4.1",
+      "promptHtml": "What outcome has the name &ldquo;<span class=\"data\">düşeş</span>&rdquo;?",
+      "part": "D4",
+      "gradingMode": "exact",
+      "answerKey": "6-6",
+      "acceptedVariants": [
+        "66"
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Each name is made of two words, and each outcome is made of two numbers. Start by looking for words that show up in more than one name, and for numbers that show up in more than one outcome. If a word appears in exactly the same set of positions as a number, that word probably names that number.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Once you have a guess for what each word means, check whether the two words inside a name come in a fixed order. Compare a name for a roll like 4 and 6 with a name for a roll like 1 and 4: is the bigger die's word always in the same slot? Also note that a word can pick up a small extra ending (an -i or -ı) when it comes first, so treat sesi and ses, for instance, as the same numeral word.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Worked step (not one of the graded blanks): the word sesi/ses appears in three of the seven names, and exactly three of the seven outcomes contain a 6 (4-6, 1-6 and 2-6). So sesi/ses must be the word for 6. Notice that this alone does not tell you which of those three names goes with which of those three outcomes - for that you have to identify the second word in each name too.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What we are given</h3><p>Seven dice rolls on the left, seven Tavla names on the right, in scrambled order. Every name has two parts (except one in question D4, which we will come back to), and every roll has two numbers. So the sensible guess is: each part of a name is a word for one of the numbers on the dice.</p><h3>Step 1: count how often each word appears</h3><p>Line up the words with the numbers by counting.</p><div class=\"table-scroll\"><table><thead><tr><th>Word</th><th>How many names it is in</th><th>Number</th><th>How many outcomes it is in</th></tr></thead><tbody><tr><td><span class=\"data\">yek</span></td><td>4</td><td>1</td><td>4 (1-3, 1-5, 1-4, 1-6)</td></tr><tr><td><span class=\"data\">dü</span></td><td>1</td><td>2</td><td>1 (2-6)</td></tr><tr><td><span class=\"data\">se</span></td><td>2</td><td>3</td><td>2 (1-3, 3-5)</td></tr><tr><td><span class=\"data\">cıhar</span> / <span class=\"data\">cıharı</span></td><td>2</td><td>4</td><td>2 (4-6, 1-4)</td></tr><tr><td><span class=\"data\">pencü</span></td><td>2</td><td>5</td><td>2 (1-5, 3-5)</td></tr><tr><td><span class=\"data\">şeş</span> / <span class=\"data\">şeşi</span></td><td>3</td><td>6</td><td>3 (4-6, 1-6, 2-6)</td></tr></tbody></table></div><p>The counts match up one-to-one, which is strong evidence for the numeral list <span class=\"data\">yek</span> = 1, <span class=\"data\">dü</span> = 2, <span class=\"data\">se</span> = 3, <span class=\"data\">cıhar</span> = 4, <span class=\"data\">pencü</span> = 5, <span class=\"data\">şeş</span> = 6. (These are in fact the Persian numerals; Turkish borrowed them for this game.)</p><h3>Step 2: pin down each match</h3><p>Now just read the names as pairs of numbers.</p><div class=\"table-scroll\"><table><thead><tr><th>Name</th><th>Reads as</th><th>Outcome</th></tr></thead><tbody><tr><td>(A) <span class=\"data\">pencü yek</span></td><td>5 and 1</td><td>c. 1-5</td></tr><tr><td>(B) <span class=\"data\">pencü se</span></td><td>5 and 3</td><td>d. 3-5</td></tr><tr><td>(C) <span class=\"data\">şeşi yek</span></td><td>6 and 1</td><td>f. 1-6</td></tr><tr><td>(D) <span class=\"data\">şeş cıhar</span></td><td>6 and 4</td><td>b. 4-6</td></tr><tr><td>(E) <span class=\"data\">se yek</span></td><td>3 and 1</td><td>a. 1-3</td></tr><tr><td>(F) <span class=\"data\">şeşi dü</span></td><td>6 and 2</td><td>g. 2-6</td></tr><tr><td>(G) <span class=\"data\">cıharı yek</span></td><td>4 and 1</td><td>e. 1-4</td></tr></tbody></table></div><h3>Step 3: two extra rules hiding in the data</h3><p><strong>Bigger number first.</strong> In every single name, the word for the larger die comes first: <span class=\"data\">pencü yek</span> (5 then 1), never <em>yek pencü</em>. That is the opposite of what an English speaker would say (\"one and five\"), so it is worth noticing.</p><p><strong>A linking ending.</strong> Some first words gain a small vowel: <span class=\"data\">şeşi</span>, <span class=\"data\">cıharı</span>. This is a linking suffix; it does not change the number. So <span class=\"data\">şeş</span> and <span class=\"data\">şeşi</span> are the same numeral, and likewise <span class=\"data\">cıhar</span> and <span class=\"data\">cıharı</span>.</p><h3>Questions D2 and D3</h3><p>These are now straight translation. <span class=\"data\">pencü dü</span> is 5 and 2, so the outcome is <strong>2-5</strong>. <span class=\"data\">cıhari se</span> is <span class=\"data\">cıhar</span> plus the linking vowel, so 4 and 3: the outcome is <strong>3-4</strong>.</p><h3>Question D4: the tricky one</h3><p><span class=\"data\">düşeş</span> looks like <span class=\"data\">dü</span> + <span class=\"data\">şeş</span>, that is 2 and 6 - but 2-6 already has a name, <span class=\"data\">şeşi dü</span>, and the problem tells us the order of the dice does not matter, so one roll cannot have two names. Also, our rule says the larger number comes first, and here 2 comes before 6, breaking the pattern for a two-different-numbers roll.</p><p>So <span class=\"data\">dü</span> here is not a die value at all: it means \"two of them\". <span class=\"data\">düşeş</span> is \"two sixes\", which is the double: <strong>6-6</strong>. (English backgammon players say \"double six\" the same way.)</p><h3>Answers</h3><p>D1: a = E, b = D, c = A, d = B, e = G, f = C, g = F. D2: 2-5. D3: 3-4. D4: 6-6.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution page (D1 a-g = E, D, A, B, G, C, F; D2 2-5; D3 3-4; D4 6-6). Points distributed 1 per blank (7 for D1, 1 each for D2-D4) to total the official 10; the solution page shows no explicit breakdown. The booklet prints the outcome list and the name list as two side-by-side tables; transcribed here as two stacked tables. D1 answers are written on the Answer Sheet, not in the printed table, so no inline blank slots were used. Check Turkish diacritics throughout: ü, ş, ı (note the booklet prints 'cıharı yek' in D1 but 'cıhari se' in D3 - kept verbatim).",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "questions:count",
+      "a": "10",
+      "note": "resolved, but this path is inside bodyHtml and is not written back automatically"
+    }
+  ]
+}

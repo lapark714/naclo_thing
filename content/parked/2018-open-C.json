@@ -1,0 +1,360 @@
+{
+  "id": "2018-open-C",
+  "tier": "full",
+  "year": 2018,
+  "round": "open",
+  "letter": "C",
+  "title": "All Roads Lead to Tirana",
+  "authors": [
+    "Ali Sharman"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "semantics",
+    "morphology"
+  ],
+  "formTag": "rule discovery",
+  "difficulty": "hard",
+  "languages": [
+    "Albanian"
+  ],
+  "officialPoints": 20,
+  "officialTimeMinutes": 36,
+  "bodyHtml": "<figure><img src=\"/content-assets/2018-open-C-map.png\" alt=\"Map of a town block. A row of mountains runs along the top. Streets are labelled Rruga e Durresit, Rruga Fortuzi, Rruga Vorpsi, Rruga Kacaniku, Rruga Butrinti, with Bulevard Nene Tereza running down the left side and Rruga I. Kadare down the right side. Lots are marked with icons: below Rruga e Durresit a gravestone, a church, a city hall, a mosque, a garden and one empty lot; below Rruga Fortuzi a coffee cup on the left of the boulevard, then a tooth, scissors and comb, and an empty lot; below Rruga Vorpsi a loaf of bread on the left of the boulevard, then a market stand, a butcher stall and an empty lot; below that a cupcake and a playground slide; then two rows of houses numbered 112, 114, 116, 118, 120 above Rruga Butrinti and 111, 113, 115, 117, 119 below it.\" /></figure>\n<p class=\"credit\">Icons made by Scott de Jonge, Pixel perfect, and Freepik from www.flaticon.com.</p>\n<p>You are visiting an Albanian<sup>1</sup> town close to Tirana. The man at the information center tells you some information about what places are in the town and where they are on the map above. You are both looking at the map from the same perspective as it is shown here, so (for example) a dentist is in front of the mosque, behind the market, to the left of the barbershop, and to the right of the cafe. Note that the man only comments on buildings that are immediate neighbors (perhaps across a street); for example, he might say that the bakery is to the left of the market, but he would not say that the bakery is to the left of the butcher even though that is technically true. Also, he does not talk about diagonal neighbors, so for example he would not say anything about the butcher's relationship to the dentist.</p>\n<p class=\"footnote\">1. Albania is a Balkan country of close to 3 million people with Western coastlines along both the Adriatic and Ionian Seas.</p>\n<p>Here is what the man said to you:</p>\n<p><span class=\"data\">Kafeneja është ndërmjet kishës dhe furrës dhe majtas nga dhëmbëtarit.</span></p>\n<p><span class=\"data\">Bashkia e qytetit është ndërmjet kishës dhe xhamisë.</span></p>\n<p><span class=\"data\">Dhëmbëtari është majtas nga floktorit dhe para xhamisë.</span></p>\n<p><span class=\"data\">Dyqani është para dhëmbëtarit dhe majtas nga mishtorja.</span></p>\n<p><span class=\"data\">Mishtorja është pas ëmbëlsirës.</span></p>\n<p><span class=\"data\">Kopsht është djathtas nga xhamia dhe para maleve.</span></p>\n<p><span class=\"data\">Sheshi lojërash është djathtas nga ëmbëlsira.</span></p>\n<p>Answer the following questions in the Answer Sheets:</p>\n<h3>C1.</h3>\n<p>Match the Albanian place name with the English translation based on the information above and write the matching letter next to the corresponding number.</p>\n<div class=\"table-scroll\"><table><thead><tr><th>English</th><th>Letter</th><th>English</th><th>Letter</th></tr></thead><tbody><tr><td>Bakery</td><td>A.</td><td>Dentist</td><td>H.</td></tr><tr><td>Barbershop</td><td>B.</td><td>Garden</td><td>I.</td></tr><tr><td>Butcher</td><td>C.</td><td>Confectionery</td><td>J.</td></tr><tr><td>Cafe</td><td>D.</td><td>Market</td><td>K.</td></tr><tr><td>Cemetery</td><td>E.</td><td>Mosque</td><td>L.</td></tr><tr><td>Church</td><td>F.</td><td>Mountains</td><td>M.</td></tr><tr><td>City Hall</td><td>G.</td><td>Playground</td><td>N.</td></tr></tbody></table></div>\n<div class=\"table-scroll\"><table><thead><tr><th>Albanian place name</th><th>Letter</th></tr></thead><tbody><tr><td>1. <span class=\"data\">Bashkia e qytetit</span></td><td><span class=\"blank\" data-q=\"C1.1\"></span></td></tr><tr><td>2. <span class=\"data\">Dhëmbëtar</span></td><td><span class=\"blank\" data-q=\"C1.2\"></span></td></tr><tr><td>3. <span class=\"data\">Ëmbëlsirë</span></td><td><span class=\"blank\" data-q=\"C1.3\"></span></td></tr><tr><td>4. <span class=\"data\">Furrë</span></td><td><span class=\"blank\" data-q=\"C1.4\"></span></td></tr><tr><td>5. <span class=\"data\">Kafene</span></td><td><span class=\"blank\" data-q=\"C1.5\"></span></td></tr><tr><td>6. <span class=\"data\">Mishtore</span></td><td><span class=\"blank\" data-q=\"C1.6\"></span></td></tr><tr><td>7. <span class=\"data\">Kishë</span></td><td><span class=\"blank\" data-q=\"C1.7\"></span></td></tr><tr><td>8. <span class=\"data\">Kopsht</span></td><td><span class=\"blank\" data-q=\"C1.8\"></span></td></tr><tr><td>9. <span class=\"data\">Male</span></td><td><span class=\"blank\" data-q=\"C1.9\"></span></td></tr><tr><td>10. <span class=\"data\">Floktor</span></td><td><span class=\"blank\" data-q=\"C1.10\"></span></td></tr><tr><td>11. <span class=\"data\">Shesh lojërash</span></td><td><span class=\"blank\" data-q=\"C1.11\"></span></td></tr><tr><td>12. <span class=\"data\">Dyqan</span></td><td><span class=\"blank\" data-q=\"C1.12\"></span></td></tr><tr><td>13. <span class=\"data\">Varrezë</span></td><td><span class=\"blank\" data-q=\"C1.13\"></span></td></tr><tr><td>14. <span class=\"data\">Xhami</span></td><td><span class=\"blank\" data-q=\"C1.14\"></span></td></tr></tbody></table></div>\n<h3>C2.</h3>\n<p>You receive the following directions for a tour:</p>\n<p><span class=\"data\">Filloni në cep të rrugëve rruga e Durrësit dhe rruga I. Kadare.</span></p>\n<p><span class=\"data\">Shkoni drejt në rrugën e Durrësit në vendin e pestë në të majtë (në fund të rrugës).</span></p>\n<p><span class=\"data\">Shkoni nëpër varrezën.</span></p>\n<p><span class=\"data\">Kthehuni majtas në rrugën Fortuzi. Kafeneja është vendi i parë në të djathtë.</span></p>\n<p><span class=\"data\">Shkoni në vendin e tretë në të djathtë.</span></p>\n<p><span class=\"data\">Shkoni nëpër floktorin dhe kthehuni djathtas.</span></p>\n<p><span class=\"data\">Shkoni në vendin e dytë në të djathtë.</span></p>\n<p><span class=\"data\">Mos shkoni nëpër kafenen.</span></p>\n<p><span class=\"data\">Kthehuni prapa dhe kaloni bulevardin Nënë Tereza.</span></p>\n<p><span class=\"data\">Dyqani është vendi i parë në të djathtë. Floktori është vendi i dytë në të majtë.</span></p>\n<p><span class=\"data\">Shkoni deri në fund të rrugës.</span></p>\n<p><span class=\"data\">Kthehuni djathtas.</span></p>\n<p><em>Hint:</em> The tour goes along roads and through locations.</p>\n<p>At the end of the tour, if you keep walking, what will be the first site (not considering empty lots) on your right that you come to? Write the name of the place in English.</p>\n<p><span class=\"blank\" data-q=\"C2.1\"></span></p>\n<h3>C3.</h3>\n<p>You want to invite all of the new people you have met to go to the café. You know that they all live on Rruga Butrinti but you aren't sure who lives in which house. You go to the corner of Bulevard Nënë Tereza and Rruga Butrinti to ask for directions. A lady there tells you the following while pointing up the road:</p>\n<p><span class=\"data\">Drita jeton në shtëpinë e dytë në të majtë.</span></p>\n<p><span class=\"data\">Kustrimi jeton në shtëpinë e pestë në të majtë.</span></p>\n<p><span class=\"data\">Lindita jeton në shtëpinë e katërt në të djathtë.</span></p>\n<p><span class=\"data\">Sokoli jeton në shtëpinë e parë në të djathtë.</span></p>\n<p><span class=\"data\">Valoni jeton në shtëpinë e tretë në të majtë.</span></p>\n<p>On the Answer Sheet, next to each person's name write that person's house number.</p>\n<div class=\"table-scroll\"><table><thead><tr><th>Name</th><th>House number</th></tr></thead><tbody><tr><td>Drita</td><td><span class=\"blank\" data-q=\"C3.1\"></span></td></tr><tr><td>Kustrim</td><td><span class=\"blank\" data-q=\"C3.2\"></span></td></tr><tr><td>Lindita</td><td><span class=\"blank\" data-q=\"C3.3\"></span></td></tr><tr><td>Sokol</td><td><span class=\"blank\" data-q=\"C3.4\"></span></td></tr><tr><td>Valon</td><td><span class=\"blank\" data-q=\"C3.5\"></span></td></tr></tbody></table></div>",
+  "assets": [
+    {
+      "src": "/content-assets/2018-open-C-map.png",
+      "alt": "Map of a town block with icon-labelled lots along Rruga e Durresit, Rruga Fortuzi, Rruga Vorpsi, Rruga Kacaniku and Rruga Butrinti, bounded by Bulevard Nene Tereza on the left and Rruga I. Kadare on the right, with mountains along the top and houses numbered 112-120 and 111-119."
+    }
+  ],
+  "questions": [
+    {
+      "id": "C1.1",
+      "promptHtml": "1. <span class=\"data\">Bashkia e qytetit</span>",
+      "part": "C1",
+      "partPrompt": "Match the Albanian place name with the English translation based on the information above and write the matching letter next to the corresponding number.",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [
+        "City Hall"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.2",
+      "promptHtml": "2. <span class=\"data\">Dhëmbëtar</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [
+        "Dentist"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.3",
+      "promptHtml": "3. <span class=\"data\">Ëmbëlsirë</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "J",
+      "acceptedVariants": [
+        "Confectionery"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.4",
+      "promptHtml": "4. <span class=\"data\">Furrë</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "Bakery"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.5",
+      "promptHtml": "5. <span class=\"data\">Kafene</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "Cafe"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.6",
+      "promptHtml": "6. <span class=\"data\">Mishtore</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "Butcher"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.7",
+      "promptHtml": "7. <span class=\"data\">Kishë</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "Church"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.8",
+      "promptHtml": "8. <span class=\"data\">Kopsht</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [
+        "Garden"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.9",
+      "promptHtml": "9. <span class=\"data\">Male</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "M",
+      "acceptedVariants": [
+        "Mountains"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.10",
+      "promptHtml": "10. <span class=\"data\">Floktor</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "B",
+      "acceptedVariants": [
+        "Barbershop"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.11",
+      "promptHtml": "11. <span class=\"data\">Shesh lojërash</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "N",
+      "acceptedVariants": [
+        "Playground"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.12",
+      "promptHtml": "12. <span class=\"data\">Dyqan</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [
+        "Market"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.13",
+      "promptHtml": "13. <span class=\"data\">Varrezë</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "Cemetery"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C1.14",
+      "promptHtml": "14. <span class=\"data\">Xhami</span>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "L",
+      "acceptedVariants": [
+        "Mosque"
+      ],
+      "points": 1
+    },
+    {
+      "id": "C2.1",
+      "promptHtml": "<p>First site on your right at the end of the tour (in English):</p>",
+      "part": "C2",
+      "partPrompt": "Follow the tour directions. At the end of the tour, if you keep walking, what will be the first site (not considering empty lots) on your right that you come to? Write the name of the place in English.",
+      "gradingMode": "exact",
+      "answerKey": "Playground",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "C3.1",
+      "promptHtml": "Drita",
+      "part": "C3",
+      "partPrompt": "Next to each person's name write that person's house number.",
+      "gradingMode": "exact",
+      "answerKey": "114",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "C3.2",
+      "promptHtml": "Kustrim",
+      "part": "C3",
+      "gradingMode": "exact",
+      "answerKey": "120",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "C3.3",
+      "promptHtml": "Lindita",
+      "part": "C3",
+      "gradingMode": "exact",
+      "answerKey": "117",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "C3.4",
+      "promptHtml": "Sokol",
+      "part": "C3",
+      "gradingMode": "exact",
+      "answerKey": "111",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "C3.5",
+      "promptHtml": "Valon",
+      "part": "C3",
+      "gradingMode": "exact",
+      "answerKey": "116",
+      "acceptedVariants": [],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "The English sentence in the introduction is your key. It tells you exactly where one building sits relative to four of its neighbours, and one of the man's Albanian sentences describes that same building in the same way. Find that sentence first.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Work out the five position words before the building names: one means \"between\", one \"to the left of\", one \"to the right of\", one \"in front of\" (which on this map means the lot below) and one \"behind\" (the lot above). Once you know those, each sentence becomes a geometry puzzle: only one lot on the map has the described set of neighbours, so the Albanian name in that sentence must be that lot. Notice too that Albanian nouns change shape depending on their role, so the same place can appear as two slightly different words.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "For the tour, first pin down the counting words: parë, dytë, tretë, katërt, pestë are \"first\" through \"fifth\", kthehuni majtas / djathtas is \"turn left / turn right\", kthehuni prapa is \"turn back\", nëpër is \"through\" and mos shkoni is \"do not go\". The parenthesis (në fund të rrugës), \"at the end of the street\", is a check on the very first instruction: it tells you the fifth lot you count is the one at the far end of Rruga e Durrësit, which fixes which direction you are walking and therefore which end of each row you count from. Also remember that the empty lots are not counted as places.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Getting a foothold</h3><p>The problem hands you one sentence in English: a dentist is <em>in front of</em> the mosque, <em>behind</em> the market, <em>to the left of</em> the barbershop, and <em>to the right of</em> the cafe. Now look at the man's third sentence:</p><p><span class=\"data\">Dhëmbëtari është majtas nga floktorit dhe para xhamisë.</span></p><p>Two of the four facts about the dentist appear here, in the same order type: \"X is [left of] Y and [in front of] Z\". Because the dentist is the only building on the map whose left-hand neighbour and lower neighbour are exactly the barbershop and the mosque, this sentence must be about the dentist. So <span class=\"data\">është</span> is \"is\", <span class=\"data\">majtas nga</span> is \"to the left of\", <span class=\"data\">para</span> is \"in front of\" (which, on a map drawn like this, means the lot <em>below</em>), and the two nouns are the barbershop and the mosque.</p><h3>Noun shapes</h3><p>Albanian nouns change their ending according to their role in the sentence and whether they are definite (\"the X\") or indefinite (\"an X\"). That is why the same place shows up in several disguises: <span class=\"data\">xhami</span> appears as <span class=\"data\">xhamisë</span> and <span class=\"data\">xhamia</span>; <span class=\"data\">dhëmbëtar</span> as <span class=\"data\">dhëmbëtari</span> and <span class=\"data\">dhëmbëtarit</span>; <span class=\"data\">kafene</span> as <span class=\"data\">kafeneja</span> and <span class=\"data\">kafenen</span>. Strip the endings and you get the base words listed in C1.</p><h3>Chaining through the map</h3><p>Every later sentence adds one or two new names, and each time only one lot on the map fits:</p><ul><li><span class=\"data\">Kafeneja është ndërmjet kishës dhe furrës dhe majtas nga dhëmbëtarit.</span> Something is left of the dentist, so it is the cup lot on the far side of the boulevard: the cafe. It is also <span class=\"data\">ndërmjet</span> (\"between\") two things, and the cafe's upper and lower neighbours are the church and the bakery. That gives you two more words.</li><li><span class=\"data\">Bashkia e qytetit është ndërmjet kishës dhe xhamisë.</span> In the top row of buildings, only one lot sits between the church and the mosque, and its icon is a public building with columns.</li><li><span class=\"data\">Dyqani është para dhëmbëtarit dhe majtas nga mishtorja.</span> The lot below the dentist has the market-stall icon, and the lot to its right has the meat-counter icon.</li><li><span class=\"data\">Mishtorja është pas ëmbëlsirës.</span> <span class=\"data\">Pas</span> must be the opposite of <span class=\"data\">para</span>, so it means \"behind\", i.e. the lot above. The thing below the butcher is the cupcake lot.</li><li><span class=\"data\">Kopsht është djathtas nga xhamia dhe para maleve.</span> <span class=\"data\">Djathtas nga</span> is \"to the right of\": the lot right of the mosque is the one with plants. And it is in front of (below) the row of triangles at the very top.</li><li><span class=\"data\">Sheshi lojërash është djathtas nga ëmbëlsira.</span> To the right of the cupcake lot is the slide icon.</li><li>Only one Albanian word in the C1 list is now unused, and only one icon on the map has not been named: the gravestone at the left end of the top row. That is how you finish the match without any sentence mentioning it, and the tour later confirms it, since it tells you to walk <span class=\"data\">nëpër varrezën</span>.</li></ul><h3>C2: walking the tour</h3><p>The counting words are the key: <span class=\"data\">i parë, i dytë, i tretë, i katërt, i pestë</span> = first, second, third, fourth, fifth; <span class=\"data\">në të majtë / në të djathtë</span> = on the left / on the right; <span class=\"data\">kthehuni</span> = turn; <span class=\"data\">nëpër</span> = through; <span class=\"data\">mos shkoni</span> = do not go; <span class=\"data\">kthehuni prapa</span> = turn back; <span class=\"data\">deri në fund të rrugës</span> = as far as the end of the street.</p><p>You start at the corner of Rruga e Durrësit and Rruga I. Kadare, i.e. the top right corner, and walk west along Rruga e Durrësit. The buildings are on your left. Skipping the empty lot (empty lots do not count as places), the fifth one you pass is indeed the last one on the street, which matches the parenthesis <span class=\"data\">(në fund të rrugës)</span>. You then walk through it, coming out facing down the map onto Rruga Fortuzi, and turn left, so now you are heading east with the cup lot as the first place on your right, exactly as the directions say. Third place on the right takes you to the scissors lot; you go through it, turn right (now heading west along Rruga Vorpsi), and the second place on your right is the cup lot again, which is why the directions warn you not to go through it.</p><p>Turn back (heading east), cross the boulevard, and check: market first on the right, barbershop second on the left. Both match, so you are on Rruga Vorpsi heading east. Walk to the end of the street, at Rruga I. Kadare, and turn right, so you are now walking down the map along Rruga I. Kadare with the town on your right. The next lot on your right is empty, and the first real site you reach is the slide lot.</p><h3>C3: the house numbers</h3><p>The lady stands at the corner of Bulevard Nënë Tereza and Rruga Butrinti and points up the road, so you are looking east along Rruga Butrinti. The even houses 112, 114, 116, 118, 120 are on one side and the odd houses 111, 113, 115, 117, 119 on the other, both numbered from the boulevard end outwards.</p><p>Because you face east, the row printed above the street is on your left and the row printed below it is on your right. So the first house on the left is 112, the second 114, the third 116, and so on; the first house on the right is 111, the second 113, the third 115, the fourth 117. Read off each sentence's ordinal and side, and you get every person's address. This is exactly the trap the intro sets up: \"left\" and \"right\" are relative to the direction the speaker is facing, not to the page.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution page (C1 letters, C2 Playground, C3 house numbers). C1 keys are stored as bare letters (solution prints \"G.\" etc.); English place names added as accepted variants. Points distributed evenly, 1 point per blank (20 blanks, 20 points) since the solution shows no per-part breakdown. The two C1 option tables in the booklet are printed side by side with an icon in front of each English name; the icons are decorative and the English names are printed, so they are transcribed as text only. The booklet also prints a small decorative pair of eye shapes below the map, which is not transcribed.\nCROP /content-assets/2018-open-C-map.png page=1 x=11 y=14 w=78 h=50",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:c1.1:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.2:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.3:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.4:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.5:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.6:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.7:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.8:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.9:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.10:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.11:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.12:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.13:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.14:choices",
+      "b": "A|B|C|D|E|F|G|H|I|J|K|L|M|N",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "cells:count",
+      "a": "74",
+      "b": "32"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 15 flags exceeds the cap of 5, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~15 API calls that would not resolve it"
+    }
+  ]
+}

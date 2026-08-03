@@ -1,0 +1,132 @@
+{
+  "id": "2017-open-A",
+  "tier": "full",
+  "year": 2017,
+  "round": "open",
+  "letter": "A",
+  "title": "A Little Tshiluba",
+  "authors": [
+    "Tom McCoy"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "morphology",
+    "syntax"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "intro",
+  "languages": [
+    "Tshiluba"
+  ],
+  "officialPoints": 5,
+  "officialTimeMinutes": 10,
+  "bodyHtml": "<p>Tshiluba, spoken by about 6 million people, is one of the official languages of the Democratic Republic of the Congo. Below are some sentences in Tshiluba, along with their English translations:</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th><em>Tshiluba</em></th><th><em>English</em></th></tr>\n</thead>\n<tbody>\n<tr><td><span class=\"data\">mukaji uvwa mumona muana.</span></td><td>The woman saw the child.</td></tr>\n<tr><td><span class=\"data\">bakaji bavwa bamona muana.</span></td><td>The women saw the child.</td></tr>\n<tr><td><span class=\"data\">muluma uvwa mumona bakaji.</span></td><td>The man saw the women.</td></tr>\n<tr><td><span class=\"data\">muluma uvwa mumona bambuji.</span></td><td>The man saw the goats.</td></tr>\n<tr><td><span class=\"data\">banzolu bavwa bamona bantambwe.</span></td><td>The chickens saw the lions.</td></tr>\n<tr><td><span class=\"data\">tubambwa tuvwa tumona baluma.</span></td><td>The small dogs saw the men.</td></tr>\n<tr><td><span class=\"data\">mbwa uvwa mumona ntambwe.</span></td><td>The dog saw the lion.</td></tr>\n<tr><td><span class=\"data\">ntambwe uvwa mumona tubanzolu.</span></td><td>The lion saw the small chickens.</td></tr>\n<tr><td><span class=\"data\">kanzolu kavwa kamona tubantambwe.</span></td><td>The small chicken saw the small lions.</td></tr>\n<tr><td><span class=\"data\">tubakulu tuvwa tumona mbwa.</span></td><td>The small adults saw the dog.</td></tr>\n<tr><td><span class=\"data\">kamuntu kavwa kapeta kantambwe.</span></td><td>The small person found the small lion.</td></tr>\n</tbody>\n</table>\n</div>\n<p>Answer these questions in the Answer Sheets.</p>\n<p><strong>A1.</strong> Translate the following into Tshiluba:</p>\n<ol type=\"a\">\n<li>the dog</li>\n<li>The man saw the child.</li>\n<li>The chicken saw the dogs.</li>\n<li>The adult found the goat.</li>\n<li>The small goats found the small child.</li>\n</ol>\n<p><strong>A2.</strong> Tshiluba belongs to a group of languages known as the Bantu languages. What does <em>bantu</em> mean in Tshiluba?</p>\n<p><strong>A3.</strong> The Tshiluba word for “fruit” is <span class=\"data\">cimuma</span>, and the Tshiluba word for “fruits” is <span class=\"data\">bimuma</span>. Translate the following into English:</p>\n<ol type=\"a\">\n<li><span class=\"data\">cimuma civwa cimona ntambwe.</span></li>\n<li><span class=\"data\">ntambwe uvwa mumona tubimuma.</span></li>\n</ol>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "A1.1",
+      "promptHtml": "<p>a. the dog</p>",
+      "part": "A1",
+      "partPrompt": "Translate the following into Tshiluba.",
+      "gradingMode": "exact",
+      "answerKey": "mbwa",
+      "acceptedVariants": [],
+      "points": 0.6
+    },
+    {
+      "id": "A1.2",
+      "promptHtml": "<p>b. The man saw the child.</p>",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "muluma uvwa mumona muana.",
+      "acceptedVariants": [],
+      "points": 0.6
+    },
+    {
+      "id": "A1.3",
+      "promptHtml": "<p>c. The chicken saw the dogs.</p>",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "nzolu uvwa mumona bambwa",
+      "acceptedVariants": [],
+      "points": 0.6
+    },
+    {
+      "id": "A1.4",
+      "promptHtml": "<p>d. The adult found the goat.</p>",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "mukulu uvwa mupeta mbuji.",
+      "acceptedVariants": [],
+      "points": 0.6
+    },
+    {
+      "id": "A1.5",
+      "promptHtml": "<p>e. The small goats found the small child.</p>",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "tubambuji tuvwa tupeta kamuana.",
+      "acceptedVariants": [],
+      "points": 0.6
+    },
+    {
+      "id": "A2.1",
+      "promptHtml": "<p>What does <em>bantu</em> mean in Tshiluba?</p>",
+      "part": "A2",
+      "partPrompt": "Tshiluba belongs to a group of languages known as the Bantu languages. What does bantu mean in Tshiluba?",
+      "gradingMode": "exact",
+      "answerKey": "people",
+      "acceptedVariants": [
+        "persons"
+      ],
+      "points": 1
+    },
+    {
+      "id": "A3.1",
+      "promptHtml": "<p>a. <span class=\"data\">cimuma civwa cimona ntambwe.</span></p>",
+      "part": "A3",
+      "partPrompt": "The Tshiluba word for \"fruit\" is cimuma, and the Tshiluba word for \"fruits\" is bimuma. Translate the following into English.",
+      "gradingMode": "exact",
+      "answerKey": "The fruit saw the lion.",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "A3.2",
+      "promptHtml": "<p>b. <span class=\"data\">ntambwe uvwa mumona tubimuma.</span></p>",
+      "part": "A3",
+      "gradingMode": "exact",
+      "answerKey": "The lion saw the small fruits.",
+      "acceptedVariants": [],
+      "points": 0.5
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Compare the first two sentences. Only the beginnings of the words change, and all three words in the sentence change together. Tshiluba marks meaning with prefixes at the front of nouns and verbs, so line up the prefixes column by column.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Each noun carries a prefix that tells you its class: mu- for one, ba- for more than one, ka- for one small thing, tu- for several small things, plus some nouns that start with a nasal like mbwa or ntambwe. Whatever prefix the subject noun has, the two verb words in the sentence copy that same prefix. The diminutive prefix ka-/tu- is added in front of the noun's own prefix rather than replacing it.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try an ungraded example: \"The small woman saw the goats.\" The woman is mukaji, so a single small one is ka- plus mukaji, giving kamukaji. Because the subject now begins with ka-, both verb words take ka- as well: kavwa kamona. The object \"the goats\" is bambuji. Put it together in subject-verb-object order and you get kamukaji kavwa kamona bambuji.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Where to start: the words all change together</h3>\n<p>Look at the first two rows:</p>\n<ul>\n<li><span class=\"data\">mukaji uvwa mumona muana.</span> — The woman saw the child.</li>\n<li><span class=\"data\">bakaji bavwa bamona muana.</span> — The women saw the child.</li>\n</ul>\n<p>Only the fronts of the words differ: <span class=\"data\">mu-kaji</span> becomes <span class=\"data\">ba-kaji</span>, and at the same time <span class=\"data\">u-vwa mu-mona</span> becomes <span class=\"data\">ba-vwa ba-mona</span>. So Tshiluba builds words out of a stem (<span class=\"data\">-kaji</span> “woman”) plus a prefix, and the verb words repeat the subject's prefix. This repeating is called <em>agreement</em>.</p>\n<h3>The noun classes</h3>\n<p>Sorting the nouns gives a neat system:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>one</th><th>more than one</th><th>meaning</th></tr></thead>\n<tbody>\n<tr><td><span class=\"data\">mukaji</span></td><td><span class=\"data\">bakaji</span></td><td>woman / women</td></tr>\n<tr><td><span class=\"data\">muluma</span></td><td><span class=\"data\">baluma</span></td><td>man / men</td></tr>\n<tr><td><span class=\"data\">muana</span></td><td>(not shown)</td><td>child</td></tr>\n<tr><td><span class=\"data\">mbwa</span></td><td><span class=\"data\">bambwa</span></td><td>dog / dogs</td></tr>\n<tr><td><span class=\"data\">nzolu</span></td><td><span class=\"data\">banzolu</span></td><td>chicken / chickens</td></tr>\n<tr><td><span class=\"data\">ntambwe</span></td><td><span class=\"data\">bantambwe</span></td><td>lion / lions</td></tr>\n<tr><td><span class=\"data\">mbuji</span></td><td><span class=\"data\">bambuji</span></td><td>goat / goats</td></tr>\n<tr><td><span class=\"data\">muntu</span></td><td><span class=\"data\">bantu</span></td><td>person / people</td></tr>\n<tr><td><span class=\"data\">mukulu</span></td><td><span class=\"data\">bakulu</span></td><td>adult / adults</td></tr>\n</tbody>\n</table>\n</div>\n<p>Plurals of every one of these nouns start with <span class=\"data\">ba-</span>. That is where <strong>A2</strong> comes from: <span class=\"data\">muntu</span> is “person” (we see <span class=\"data\">kamuntu</span> “small person”), so <span class=\"data\">bantu</span> must be the plural, “people”.</p>\n<h3>“Small” is a prefix, and it stacks</h3>\n<p>Compare <span class=\"data\">bambwa</span> “dogs” with <span class=\"data\">tubambwa</span> “small dogs”, and <span class=\"data\">ntambwe</span> “lion” with <span class=\"data\">kantambwe</span> “small lion”. “Small” is <span class=\"data\">ka-</span> for one thing and <span class=\"data\">tu-</span> for several, and it goes in front of whatever the noun already had: <span class=\"data\">tu-ba-ntambwe</span> “small lions”, <span class=\"data\">tu-ba-kulu</span> “small adults”, <span class=\"data\">ka-muntu</span> “small person”.</p>\n<h3>The verb: two words, both agreeing</h3>\n<p>Every sentence has the shape subject + <span class=\"data\">-vwa</span> + verb. The past is expressed with the little word <span class=\"data\">-vwa</span> followed by the main verb, <span class=\"data\">-mona</span> “see” or <span class=\"data\">-peta</span> “find”, and both of them wear the subject's prefix:</p>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th>subject begins with</th><th>verb words</th></tr></thead>\n<tbody>\n<tr><td><span class=\"data\">mu-</span> or a nasal (<span class=\"data\">mbwa</span>, <span class=\"data\">ntambwe</span>, <span class=\"data\">nzolu</span>)</td><td><span class=\"data\">uvwa mumona</span></td></tr>\n<tr><td><span class=\"data\">ba-</span></td><td><span class=\"data\">bavwa bamona</span></td></tr>\n<tr><td><span class=\"data\">tu-</span></td><td><span class=\"data\">tuvwa tumona</span></td></tr>\n<tr><td><span class=\"data\">ka-</span></td><td><span class=\"data\">kavwa kamona</span></td></tr>\n<tr><td><span class=\"data\">ci-</span></td><td><span class=\"data\">civwa cimona</span></td></tr>\n</tbody>\n</table>\n</div>\n<p>Notice that the object noun never changes shape — only the subject controls agreement. Word order is subject, verb, object, just like English.</p>\n<h3>Doing the translations</h3>\n<p>For “The adult found the goat”: <span class=\"data\">tubakulu</span> “small adults” tells us the plural is <span class=\"data\">bakulu</span>, so one adult is <span class=\"data\">mukulu</span>. A <span class=\"data\">mu-</span> subject takes <span class=\"data\">uvwa</span> plus <span class=\"data\">mu-</span> on the main verb, and “found” is <span class=\"data\">-peta</span> (from the last data sentence). The object “the goat” is <span class=\"data\">mbuji</span>.</p>\n<p>For the sentence with small goats as the subject: “small goats” = <span class=\"data\">tu-</span> in front of the plural <span class=\"data\">bambuji</span>, and then the verbs must both take <span class=\"data\">tu-</span>. “The small child” as object is simply <span class=\"data\">ka-</span> in front of <span class=\"data\">muana</span>.</p>\n<h3>A new class in A3</h3>\n<p><span class=\"data\">cimuma</span> / <span class=\"data\">bimuma</span> “fruit / fruits” shows a class pair <span class=\"data\">ci-</span> / <span class=\"data\">bi-</span> that did not appear in the main data. But the same rules apply: a <span class=\"data\">ci-</span> subject gives <span class=\"data\">civwa cimona</span>, and <span class=\"data\">tu-bimuma</span> is “small fruits”, the diminutive stacked on the plural, exactly like <span class=\"data\">tubantambwe</span>.</p>\n<p>These stacking noun-class prefixes with agreement all through the sentence are the trademark of the Bantu family — the family whose name is literally the Tshiluba word for “people.”</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "All answer keys copied verbatim from the official solution page (note: A1 c is printed without a final period in the solution, A1 b/d/e with one; grading ignores trailing punctuation). Points distributed as A1 0.6 each (3), A2 1, A3 0.5 each (1) to total the official 5 points; no official per-part breakdown was printed. The booklet prints no in-text blanks (answers go on separate answer sheets), so no blank slots were used in bodyHtml.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "hints[1]",
+      "a": "mbwa",
+      "note": "hint 2 contains the graded answer \"mbwa\""
+    }
+  ]
+}

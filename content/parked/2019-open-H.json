@@ -1,0 +1,279 @@
+{
+  "id": "2019-open-H",
+  "tier": "full",
+  "year": 2019,
+  "round": "open",
+  "letter": "H",
+  "title": "(title unknown)",
+  "authors": [
+    "Ethan Chi"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "writing systems",
+    "phonology"
+  ],
+  "formTag": "transliteration",
+  "difficulty": "hard",
+  "languages": [
+    "Hanunó'o"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>The <em>Hanunó'o</em> script is an indigenous script used to write the Hanunó'o language, spoken on Mindoro Island, northeast of Palawan Province of The Philippines. Traditionally, Hanunó'o was written by carving characters into strips of bamboo; consequently, it is written vertically (up and down), as opposed to horizontally like the English alphabet.</p>\n<p>Below on the left is a list of Filipino place names written in Hanunó'o in random order. On the right is the same list in Latin script, in a different order. Note that there are two extra cities in the Latin list!</p>\n<figure><img src=\"/content-assets/2019-open-H-names.png\" alt=\"Table of nine columns numbered 1 to 9, each containing a vertical Filipino place name written in the handwritten Hanunó'o script\" /></figure>\n<ul>\n<li>A. <span class=\"data\">Manila</span></li>\n<li>B. <span class=\"data\">Lubang</span></li>\n<li>C. <span class=\"data\">Rumbang</span></li>\n<li>D. <span class=\"data\">Paluan</span></li>\n<li>E. <span class=\"data\">Kaingal</span></li>\n<li>F. <span class=\"data\">Marikit</span></li>\n<li>G. <span class=\"data\">Pasig</span></li>\n<li>H. <span class=\"data\">Magsikap</span></li>\n<li>I. <span class=\"data\">Tubili</span></li>\n<li>J. <span class=\"data\">Mimaropa</span></li>\n<li>K. <span class=\"data\">Sablayan</span></li>\n</ul>\n<p><strong>H1.</strong> Determine the correct correspondences.</p>\n<p><strong>H2.</strong> Write the following Hanunó'o words in the Latin script.</p>\n<figure><img src=\"/content-assets/2019-open-H-words.png\" alt=\"Table of five columns numbered 10 to 14, each containing a word written vertically in the handwritten Hanunó'o script\" /></figure>\n<p><strong>H3.</strong> Write the following words in the Hanunó'o script:</p>\n<ul>\n<li>15. <span class=\"data\">manuk</span></li>\n<li>16. <span class=\"data\">bilawan</span></li>\n<li>17. <span class=\"data\">nagsirung</span></li>\n<li>18. <span class=\"data\">bais</span></li>\n</ul>",
+  "assets": [
+    {
+      "src": "/content-assets/2019-open-H-names.png",
+      "alt": "Table of nine columns numbered 1 to 9, each containing a vertical Filipino place name written in the handwritten Hanunó'o script"
+    },
+    {
+      "src": "/content-assets/2019-open-H-words.png",
+      "alt": "Table of five columns numbered 10 to 14, each containing a word written vertically in the handwritten Hanunó'o script"
+    }
+  ],
+  "questions": [
+    {
+      "id": "H1.1",
+      "promptHtml": "<p>1.</p>",
+      "part": "H1",
+      "partPrompt": "Determine the correct correspondences. For each Hanunó'o name 1-9, give the letter (A-K) of the matching name in the Latin list.",
+      "gradingMode": "exact",
+      "answerKey": "H",
+      "acceptedVariants": [
+        "Magsikap",
+        "H. Magsikap"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.2",
+      "promptHtml": "<p>2.</p>",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "K",
+      "acceptedVariants": [
+        "Sablayan",
+        "K. Sablayan"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.3",
+      "promptHtml": "<p>3.</p>",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "C",
+      "acceptedVariants": [
+        "Rumbang",
+        "C. Rumbang"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.4",
+      "promptHtml": "<p>4.</p>",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "D",
+      "acceptedVariants": [
+        "Paluan",
+        "D. Paluan"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.5",
+      "promptHtml": "<p>5.</p>",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "I",
+      "acceptedVariants": [
+        "Tubili",
+        "I. Tubili"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.6",
+      "promptHtml": "<p>6.</p>",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "A",
+      "acceptedVariants": [
+        "Manila",
+        "A. Manila"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.7",
+      "promptHtml": "<p>7.</p>",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "F",
+      "acceptedVariants": [
+        "Marikit",
+        "F. Marikit"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.8",
+      "promptHtml": "<p>8.</p>",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "G",
+      "acceptedVariants": [
+        "Pasig",
+        "G. Pasig"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H1.9",
+      "promptHtml": "<p>9.</p>",
+      "part": "H1",
+      "gradingMode": "exact",
+      "answerKey": "E",
+      "acceptedVariants": [
+        "Kaingal",
+        "E. Kaingal"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "H2.1",
+      "promptHtml": "<p>10.</p>",
+      "part": "H2",
+      "partPrompt": "Write the following Hanunó'o words (10-14 in the second table) in the Latin script.",
+      "gradingMode": "exact",
+      "answerKey": "kang",
+      "acceptedVariants": [],
+      "points": 1.1
+    },
+    {
+      "id": "H2.2",
+      "promptHtml": "<p>11.</p>",
+      "part": "H2",
+      "gradingMode": "exact",
+      "answerKey": "manimisu",
+      "acceptedVariants": [],
+      "points": 1.1
+    },
+    {
+      "id": "H2.3",
+      "promptHtml": "<p>12.</p>",
+      "part": "H2",
+      "gradingMode": "exact",
+      "answerKey": "mangyan",
+      "acceptedVariants": [],
+      "points": 1.1
+    },
+    {
+      "id": "H2.4",
+      "promptHtml": "<p>13.</p>",
+      "part": "H2",
+      "gradingMode": "exact",
+      "answerKey": "sibuyan",
+      "acceptedVariants": [],
+      "points": 1.1
+    },
+    {
+      "id": "H2.5",
+      "promptHtml": "<p>14.</p>",
+      "part": "H2",
+      "gradingMode": "exact",
+      "answerKey": "palawan",
+      "acceptedVariants": [],
+      "points": 1.1
+    },
+    {
+      "id": "H3.1",
+      "promptHtml": "<p>15. <span class=\"data\">manuk</span></p>",
+      "part": "H3",
+      "partPrompt": "Write the following words in the Hanunó'o script. Since the handwritten script cannot be typed here, describe your spelling instead: list the letters in reading order (bottom to top), naming each letter's consonant and saying whether it carries a vowel mark for i or u, or a padmudpod (the hook that means no vowel).",
+      "gradingMode": "llm",
+      "answerKey": "Three letters, bottom to top: ma; na with the mark for u (nu); ka with a padmudpod, i.e. bare k.",
+      "acceptedVariants": [],
+      "points": 1.25
+    },
+    {
+      "id": "H3.2",
+      "promptHtml": "<p>16. <span class=\"data\">bilawan</span></p>",
+      "part": "H3",
+      "gradingMode": "llm",
+      "answerKey": "Four letters, bottom to top: ba with the mark for i (bi); la; wa; na with a padmudpod, i.e. bare n.",
+      "acceptedVariants": [],
+      "points": 1.25
+    },
+    {
+      "id": "H3.3",
+      "promptHtml": "<p>17. <span class=\"data\">nagsirung</span></p>",
+      "part": "H3",
+      "gradingMode": "llm",
+      "answerKey": "Five letters, bottom to top: na; ga with a padmudpod (bare g); sa with the mark for i (si); ra with the mark for u (ru); nga with a padmudpod (bare ng).",
+      "acceptedVariants": [],
+      "points": 1.25
+    },
+    {
+      "id": "H3.4",
+      "promptHtml": "<p>18. <span class=\"data\">bais</span></p>",
+      "part": "H3",
+      "gradingMode": "llm",
+      "answerKey": "Three letters, bottom to top: ba; the standalone letter for i; sa with a padmudpod, i.e. bare s.",
+      "acceptedVariants": [],
+      "points": 1.25
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Each column is one name, but the script does not run the way you expect: it reads bottom to top. Before worrying about the shapes, compare how many separate letter-shapes a column has with how many consonants a candidate name has.",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "The script is an abugida: one plain letter stands for a consonant plus the vowel a. A short line written above or below a letter switches that vowel to i or u, and a small curved hook at the letter's bottom right (called padmudpod) means the consonant has no vowel at all. So a name whose only vowel is a will show no extra lines, and a name that ends in a consonant will show the hook on its topmost letter. The vowels a and i also have their own standalone letters when they are not attached to a consonant.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Try the method on a word that is not asked about, say kilala. Break it into ki-la-la, so three letters, written bottom to top: the ka letter with a line above it (making ki), then la, then la. No hooks appear, because no consonant is left vowel-less. Doing exactly this bookkeeping - number of letters, which ones carry an i or u line, which ones carry a hook - for every name in the Latin list is what lets you tell the columns apart.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>What kind of writing system is this?</h3>\n<p>Hanunó'o is an <em>abugida</em>: instead of one symbol per sound, one full letter stands for a whole consonant-plus-vowel syllable, and the default vowel is <span class=\"data\">a</span>. Small extra marks adjust that vowel:</p>\n<ul>\n<li>a plain letter = consonant + <span class=\"data\">a</span> (for example the <span class=\"data\">ma</span> letter);</li>\n<li>a short line above or below the letter changes the vowel to <span class=\"data\">i</span> or <span class=\"data\">u</span>;</li>\n<li>a small curved hook at the bottom right of the letter (its Hanunó'o name is <em>padmudpod</em>) means the consonant has no vowel at all;</li>\n<li>the vowels <span class=\"data\">a</span> and <span class=\"data\">i</span> have their own standalone letters when they stand alone in a word.</li>\n</ul>\n<p>The other surprise is the direction. The columns are read <strong>bottom to top</strong>, so the lowest letter in a column is the first sound of the name.</p>\n<h3>Step 1: count the letters each name would need</h3>\n<p>You do not need to recognise a single shape to get started. Break each Latin name into syllables and see how many letters it would take. Every consonant gets a letter, even a final one (it just wears the hook).</p>\n<div class=\"table-scroll\">\n<table>\n<tr><th>Latin name</th><th>Spelled out</th><th>Letters</th></tr>\n<tr><td><span class=\"data\">Manila</span></td><td><span class=\"data\">ma + ni + la</span></td><td>3</td></tr>\n<tr><td><span class=\"data\">Lubang</span></td><td><span class=\"data\">lu + ba + ng(hook)</span></td><td>3</td></tr>\n<tr><td><span class=\"data\">Rumbang</span></td><td><span class=\"data\">ru + m(hook) + ba + ng(hook)</span></td><td>4</td></tr>\n<tr><td><span class=\"data\">Paluan</span></td><td><span class=\"data\">pa + lu + a + n(hook)</span></td><td>4</td></tr>\n<tr><td><span class=\"data\">Kaingal</span></td><td><span class=\"data\">ka + i + nga + l(hook)</span></td><td>4</td></tr>\n<tr><td><span class=\"data\">Marikit</span></td><td><span class=\"data\">ma + ri + ki + t(hook)</span></td><td>4</td></tr>\n<tr><td><span class=\"data\">Pasig</span></td><td><span class=\"data\">pa + si + g(hook)</span></td><td>3</td></tr>\n<tr><td><span class=\"data\">Magsikap</span></td><td><span class=\"data\">ma + g(hook) + si + ka + p(hook)</span></td><td>5</td></tr>\n<tr><td><span class=\"data\">Tubili</span></td><td><span class=\"data\">tu + bi + li</span></td><td>3</td></tr>\n<tr><td><span class=\"data\">Mimaropa</span></td><td><span class=\"data\">mi + ma + ro + pa</span></td><td>4</td></tr>\n<tr><td><span class=\"data\">Sablayan</span></td><td><span class=\"data\">sa + b(hook) + la + ya + n(hook)</span></td><td>5</td></tr>\n</table>\n</div>\n<p>In the picture, columns 1 and 2 are the only ones with five letters, columns 5, 6 and 8 have three, and columns 3, 4, 7 and 9 have four. Since there are four three-letter names but only three three-letter columns, and five four-letter names but only four four-letter columns, exactly one of the extras is a three-letter name and one is a four-letter name.</p>\n<h3>Step 2: the two long names</h3>\n<p><span class=\"data\">Magsikap</span> and <span class=\"data\">Sablayan</span> both need five letters, so they are columns 1 and 2 in some order. Look at the vowels: every vowel in <span class=\"data\">Sablayan</span> is <span class=\"data\">a</span>, so its column carries no i- or u-lines at all, only two hooks. <span class=\"data\">Magsikap</span> contains an <span class=\"data\">i</span> (in <span class=\"data\">si</span>), so its column must show one extra line. Column 1 has that line, column 2 does not: 1 = <span class=\"data\">Magsikap</span> (H), 2 = <span class=\"data\">Sablayan</span> (K).</p>\n<p>A useful cross-check: the bottom letter of column 1 is the <span class=\"data\">ma</span> letter, and the same shape appears at the bottom of the columns for <span class=\"data\">Manila</span> and <span class=\"data\">Marikit</span> and of word 11 and 12 in the second table.</p>\n<h3>Step 3: the three-letter columns</h3>\n<p><span class=\"data\">Tubili</span> has <span class=\"data\">u</span> on the first letter and <span class=\"data\">i</span> on the second and third, and no hook, because it ends in a vowel. <span class=\"data\">Manila</span> has an <span class=\"data\">i</span> only on its middle letter and no hook. <span class=\"data\">Pasig</span> ends in a consonant, so its top letter takes the hook, and its middle letter takes an i-line. <span class=\"data\">Lubang</span> would need a u-line on the bottom letter plus a hook on top. Matching these fingerprints against columns 5, 6 and 8 gives 5 = <span class=\"data\">Tubili</span> (I), 6 = <span class=\"data\">Manila</span> (A), 8 = <span class=\"data\">Pasig</span> (G) - and nothing is left for <span class=\"data\">Lubang</span>, so it is one of the two extra cities.</p>\n<h3>Step 4: the four-letter columns</h3>\n<p><span class=\"data\">Marikit</span> needs two i-lines in the middle and a hook on top. <span class=\"data\">Kaingal</span> is the one that uses the standalone <span class=\"data\">i</span> letter as its second letter, plus a hook on top. <span class=\"data\">Paluan</span> uses the standalone <span class=\"data\">a</span> letter as its third letter, with a u-line on the second and a hook on top. <span class=\"data\">Rumbang</span> has a u-line on its bottom letter and two hooks. <span class=\"data\">Mimaropa</span> would need an i-line on the bottom letter and no hooks at all. The columns give 3 = <span class=\"data\">Rumbang</span> (C), 4 = <span class=\"data\">Paluan</span> (D), 7 = <span class=\"data\">Marikit</span> (F), 9 = <span class=\"data\">Kaingal</span> (E), so <span class=\"data\">Mimaropa</span> is the second extra.</p>\n<h3>H2: reading the script back into Latin letters</h3>\n<p>Now that you know the letters, read each column from the bottom up and add the vowel each mark calls for:</p>\n<ul>\n<li>10: two letters, <span class=\"data\">ka</span> then <span class=\"data\">ng</span> with a hook, so <span class=\"data\">kang</span>.</li>\n<li>11: <span class=\"data\">ma</span>, <span class=\"data\">na</span> with an i-line, <span class=\"data\">ma</span> with an i-line, <span class=\"data\">sa</span> with a u-line, so <span class=\"data\">manimisu</span>.</li>\n<li>12: <span class=\"data\">ma</span>, <span class=\"data\">ng</span> with a hook, <span class=\"data\">ya</span>, <span class=\"data\">na</span> with a hook, so <span class=\"data\">mangyan</span>.</li>\n<li>13: <span class=\"data\">sa</span> with an i-line, <span class=\"data\">ba</span> with a u-line, <span class=\"data\">ya</span>, <span class=\"data\">na</span> with a hook, so <span class=\"data\">sibuyan</span>.</li>\n<li>14: <span class=\"data\">pa</span>, <span class=\"data\">la</span>, <span class=\"data\">wa</span>, <span class=\"data\">na</span> with a hook, so <span class=\"data\">palawan</span>.</li>\n</ul>\n<h3>H3: writing new words</h3>\n<p>Go the other way: syllabify, then stack the letters bottom to top.</p>\n<ul>\n<li><span class=\"data\">manuk</span> = <span class=\"data\">ma</span> + <span class=\"data\">nu</span> (the <span class=\"data\">na</span> letter with a u-line) + bare <span class=\"data\">k</span> (the <span class=\"data\">ka</span> letter with a padmudpod): three letters.</li>\n<li><span class=\"data\">bilawan</span> = <span class=\"data\">bi</span> + <span class=\"data\">la</span> + <span class=\"data\">wa</span> + bare <span class=\"data\">n</span>: four letters.</li>\n<li><span class=\"data\">nagsirung</span> = <span class=\"data\">na</span> + bare <span class=\"data\">g</span> + <span class=\"data\">si</span> + <span class=\"data\">ru</span> + bare <span class=\"data\">ng</span>: five letters.</li>\n<li><span class=\"data\">bais</span> = <span class=\"data\">ba</span> + the standalone <span class=\"data\">i</span> letter + bare <span class=\"data\">s</span>: three letters. The vowel <span class=\"data\">i</span> here follows another vowel, so it cannot ride on a consonant letter and needs its own.</li>\n</ul>\n<h3>Answers to H1</h3>\n<p>1 = H, 2 = K, 3 = C, 4 = D, 5 = I, 6 = A, 7 = F, 8 = G, 9 = E. The two unused Latin names are B (<span class=\"data\">Lubang</span>) and J (<span class=\"data\">Mimaropa</span>).</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "H1 and H2 answer keys are copied from the official solution page (1. H, 2. K, 3. C, 4. D, 5. I, 6. A, 7. F, 8. G, 9. E; 10. kang, 11. manimisu, 12. mangyan, 13. sibuyan, 14. palawan). H3 in the booklet requires drawing Hanunó'o glyphs, which cannot be typed: the four H3 questions have been reworded to ask for a bottom-to-top description of the letters and marks, graded by LLM. The official solution shows the drawn forms for 15-18; a reviewer may prefer to add the solution image as a reference. Point split is my own (H1 0.5 each = 4.5, H2 1.1 each = 5.5, H3 1.25 each = 5, total 15); the booklet gives no per-part breakdown. Figure crops need checking.\nCROP /content-assets/2019-open-H-names.png page=1 x=4 y=28 w=60 h=30\nCROP /content-assets/2019-open-H-words.png page=1 x=3 y=62 w=36 h=28",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:h3.1:key",
+      "a": "Three letters, bottom to top: ma; na with the mark for u (nu); ka with a padmudpod, i.e. bare k.",
+      "b": "ma, nu (the na letter with the u line), ka with padmudpod"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h3.2:key",
+      "a": "Four letters, bottom to top: ba with the mark for i (bi); la; wa; na with a padmudpod, i.e. bare n.",
+      "b": "bi (the ba letter with the i line), la, wa, na with padmudpod"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h3.3:key",
+      "a": "Five letters, bottom to top: na; ga with a padmudpod (bare g); sa with the mark for i (si); ra with the mark for u (ru); nga with a padmudpod (bare ng).",
+      "b": "na, ga with padmudpod, si (the sa letter with the i line), ru (the ra letter with the u line), nga with padmudpod"
+    },
+    {
+      "kind": "diff",
+      "path": "q:h3.4:key",
+      "a": "Three letters, bottom to top: ba; the standalone letter for i; sa with a padmudpod, i.e. bare s.",
+      "b": "ba, the independent letter i, sa with padmudpod"
+    },
+    {
+      "kind": "diff",
+      "path": "(verification)",
+      "note": "this booklet has no usable text layer, so neither the witness check nor arbitration can run. Parked for human review by policy, not by a specific disagreement"
+    }
+  ]
+}
