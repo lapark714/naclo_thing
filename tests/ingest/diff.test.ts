@@ -112,3 +112,56 @@ test("per-index cell comparison still happens when counts match", () => {
   assert.ok(flags.some((f) => f.path === "cell:0" && f.a === "a" && f.b === "x"));
   assert.ok(flags.some((f) => f.path === "cell:1" && f.a === "b" && f.b === "y"));
 });
+
+test("a figure declared by only one pass is flagged on assets:count", () => {
+  const flags = diffRecords(
+    record({
+      bodyHtml: "<figure><img src=\"map.png\"/></figure>",
+      assets: [{ src: "map.png", alt: "a map" }],
+    } as Partial<Problem>),
+    record({ bodyHtml: "", assets: [] } as Partial<Problem>),
+  );
+  const flag = flags.find((f) => f.path === "assets:count");
+  assert.ok(flag, "expected an assets:count flag");
+  assert.equal(flag?.a, "1");
+  assert.equal(flag?.b, "0");
+});
+
+test("a <figure> present in only one pass's bodyHtml is flagged on figures:count", () => {
+  const flags = diffRecords(
+    record({ bodyHtml: "<figure><img src=\"map.png\"/></figure>" } as Partial<Problem>),
+    record({ bodyHtml: "<p>no figure here</p>" } as Partial<Problem>),
+  );
+  const flag = flags.find((f) => f.path === "figures:count");
+  assert.ok(flag, "expected a figures:count flag");
+  assert.equal(flag?.a, "1");
+  assert.equal(flag?.b, "0");
+});
+
+test("matching asset counts with different src names do NOT flag on assets", () => {
+  const flags = diffRecords(
+    record({
+      bodyHtml: "<figure><img src=\"2016-open-a-map.png\"/></figure>",
+      assets: [{ src: "2016-open-a-map.png", alt: "a map" }],
+    } as Partial<Problem>),
+    record({
+      bodyHtml: "<figure><img src=\"2016-open-A-map.png\"/></figure>",
+      assets: [{ src: "2016-open-A-map.png", alt: "a map" }],
+    } as Partial<Problem>),
+  );
+  assert.ok(!flags.some((f) => f.path === "assets:count" || f.path === "figures:count"));
+});
+
+test("agreeing assets and figures counts produce no flags on those keys", () => {
+  const flags = diffRecords(
+    record({
+      bodyHtml: "<figure><img src=\"map-one.png\"/></figure>",
+      assets: [{ src: "map-one.png", alt: "a map" }],
+    } as Partial<Problem>),
+    record({
+      bodyHtml: "<figure><img src=\"map-two.png\"/></figure>",
+      assets: [{ src: "map-two.png", alt: "a map" }],
+    } as Partial<Problem>),
+  );
+  assert.ok(!flags.some((f) => f.path === "assets:count" || f.path === "figures:count"));
+});

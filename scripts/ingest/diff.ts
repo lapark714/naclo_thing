@@ -52,6 +52,14 @@ export function factualLayer(p: Problem): Map<string, string> {
   m.set(`data:count`, String(dataSpans(p.bodyHtml).length));
   dataSpans(p.bodyHtml).forEach((d, i) => m.set(`data:${i}`, d));
 
+  // Counts, not src names: the two passes name their own asset files, so a
+  // filename difference is not a defect. A count mismatch means one pass saw
+  // a figure (a map, a glyph specimen) that the other missed entirely, which
+  // neither the within-record CROP check nor validate.ts can catch, since a
+  // record that omits a figure on both sides of that check is self-consistent.
+  m.set(`assets:count`, String(p.assets.length));
+  m.set(`figures:count`, String((p.bodyHtml.match(/<figure/g) ?? []).length));
+
   return m;
 }
 
