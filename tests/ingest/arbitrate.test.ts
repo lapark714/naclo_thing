@@ -35,9 +35,59 @@ function record(): Problem {
   } as Problem;
 }
 
-test("a resolved answer key is written into the record", () => {
-  const { record: out, unresolved } = applyResolutions(record(), [{ path: "q:A1.a:key", value: "right" }]);
+test("a resolved answer key matching candidate A is written into the record", () => {
+  const { record: out, unresolved } = applyResolutions(record(), [
+    { path: "q:A1.a:key", value: "right", a: "right", b: "rong" },
+  ]);
   assert.equal(out.questions[0].answerKey, "right");
+  assert.deepEqual(unresolved, []);
+});
+
+test("a resolved answer key matching candidate B is written into the record", () => {
+  const { record: out, unresolved } = applyResolutions(record(), [
+    { path: "q:A1.a:key", value: "right", a: "rong", b: "right" },
+  ]);
+  assert.equal(out.questions[0].answerKey, "right");
+  assert.deepEqual(unresolved, []);
+});
+
+test("a resolved answer key matching a candidate only after trimming whitespace is still accepted", () => {
+  const { record: out, unresolved } = applyResolutions(record(), [
+    { path: "q:A1.a:key", value: "right", a: "  right  ", b: "rong" },
+  ]);
+  assert.equal(out.questions[0].answerKey, "right");
+  assert.deepEqual(unresolved, []);
+});
+
+// Finding 5 (Important): applyResolutions used to write ANY arbitrated value
+// straight onto answerKey with no check. arbitrate() is handed only the
+// problem pages (never the solution), so nothing stopped it from inventing a
+// key that neither transcription pass ever proposed, other than the
+// prompt's own UNRESOLVED bias — a soft, non-enforced guardrail for the
+// highest-consequence field in the record.
+test("an answer-key value that matches neither candidate is treated as unresolved, not written", () => {
+  const { record: out, unresolved } = applyResolutions(record(), [
+    { path: "q:A1.a:key", value: "invented", a: "candidateA", b: "candidateB" },
+  ]);
+  assert.equal(out.questions[0].answerKey, "wrong", "the invented value must not reach answerKey");
+  assert.equal(unresolved.length, 1);
+  assert.equal(unresolved[0].path, "q:A1.a:key");
+  assert.match(unresolved[0].note ?? "", /neither candidate/);
+});
+
+test("an answer-key value with no candidates recorded on the flag is treated as unresolved", () => {
+  // A resolution built without threading the flag's a/b through (or from a
+  // flag that itself carried no candidates) must fail closed, not open.
+  const { record: out, unresolved } = applyResolutions(record(), [{ path: "q:A1.a:key", value: "right" }]);
+  assert.equal(out.questions[0].answerKey, "wrong");
+  assert.equal(unresolved.length, 1);
+});
+
+test("a mode/points/variants/choices resolution is unaffected by the answer-key candidate check", () => {
+  // The guard is scoped to :key paths only — a mode resolution with no
+  // candidates on the flag must still apply normally.
+  const { record: out, unresolved } = applyResolutions(record(), [{ path: "q:A1.a:mode", value: "llm" }]);
+  assert.equal(out.questions[0].gradingMode, "llm");
   assert.deepEqual(unresolved, []);
 });
 
@@ -98,7 +148,9 @@ test("a choices resolution writes choices and does not touch acceptedVariants", 
 test("a path whose id case differs from the record's stored id still finds the question and writes the value", () => {
   const rec = record();
   rec.questions[0].id = "D1.Althea-dessert";
-  const { record: out, unresolved } = applyResolutions(rec, [{ path: "q:d1.althea-dessert:key", value: "right" }]);
+  const { record: out, unresolved } = applyResolutions(rec, [
+    { path: "q:d1.althea-dessert:key", value: "right", a: "right", b: "rong" },
+  ]);
   assert.equal(out.questions[0].id, "D1.Althea-dessert");
   assert.equal(out.questions[0].answerKey, "right");
   assert.deepEqual(unresolved, []);

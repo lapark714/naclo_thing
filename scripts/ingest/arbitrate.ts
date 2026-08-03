@@ -19,7 +19,14 @@ import type { Flag } from "./types";
 import type { Target } from "./manifest";
 import { normalizeForWitness } from "./witness";
 
-export type Resolution = { path: string; value: string | null };
+export type Resolution = {
+  path: string;
+  value: string | null;
+  /** The flag's own candidates, carried through so applyResolutions can
+   *  check an answer key against them without re-threading the whole Flag. */
+  a?: string;
+  b?: string;
+};
 
 const MODEL = process.env.INGEST_MODEL || "claude-opus-5";
 
@@ -97,8 +104,30 @@ export function applyResolutions(
         unresolved.push({ kind: "diff", path: r.path, note: "names no question in the record" });
         continue;
       }
-      if (q[2] === "key") target.answerKey = r.value;
-      else if (q[2] === "mode") {
+      if (q[2] === "key") {
+        // The highest-consequence field in the record, and the one place
+        // arbitrate() is asked which value the booklet prints while looking
+        // only at the problem statement — the booklet's solution pages are
+        // an input to drafting, never shown here, and the answer generally
+        // is not printed on the problem pages themselves. The UNRESOLVED
+        // bias in the prompt is the only thing standing between that and an
+        // invented key, so this is a second, structural check: the
+        // arbitrated value is accepted only if it matches one of the two
+        // values the flag actually carried. Anything else — a value neither
+        // pass proposed — cannot be "the value the booklet prints" and is
+        // treated as unresolved instead of written into the answer key a
+        // student is graded against.
+        const value = r.value.trim();
+        const candidates = [r.a, r.b].filter((c): c is string => c !== undefined).map((c) => c.trim());
+        if (!candidates.includes(value)) {
+          unresolved.push({
+            kind: "diff", path: r.path, a: r.value,
+            note: "arbitration returned a value that matched neither candidate — treated as unresolved",
+          });
+          continue;
+        }
+        target.answerKey = r.value;
+      } else if (q[2] === "mode") {
         const parsed = GradingMode.safeParse(r.value);
         if (!parsed.success) {
           unresolved.push({ kind: "diff", path: r.path, a: r.value, note: "arbitration returned an invalid grading mode" });
@@ -156,10 +185,10 @@ export async function arbitrate(
         .filter((b): b is Anthropic.TextBlock => b.type === "text")
         .map((b) => b.text)
         .join("");
-      out.push({ path: flag.path, value: parseArbitrationReply(text) });
+      out.push({ path: flag.path, value: parseArbitrationReply(text), a: flag.a, b: flag.b });
     } catch (err) {
       console.error(`  arbitration failed for ${target.year}-${target.letter} ${flag.path}: ${(err as Error).message}`);
-      out.push({ path: flag.path, value: null });
+      out.push({ path: flag.path, value: null, a: flag.a, b: flag.b });
     }
   }
   return out;

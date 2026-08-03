@@ -195,10 +195,18 @@ test("a q:<id>:key path emitted by diffRecords is parseable and resolvable by ap
   const flags = diffRecords(a, b);
   assert.equal(flags.length, 1);
   assert.equal(flags[0].path, "q:e1.1:key");
+  assert.equal(flags[0].a, "cat");
+  assert.equal(flags[0].b, "dog");
 
-  const { record: resolved, unresolved } = applyResolutions(a, [{ path: flags[0].path, value: "cat-confirmed" }]);
+  // applyResolutions only writes a :key resolution when the arbitrated value
+  // matches one of the flag's own candidates (Finding 5) — arbitrate() carries
+  // a/b through onto the Resolution it builds from this exact flag, so a real
+  // resolution for this path looks like this, not an invented third value.
+  const { record: resolved, unresolved } = applyResolutions(a, [
+    { path: flags[0].path, value: "cat", a: flags[0].a, b: flags[0].b },
+  ]);
   assert.deepEqual(unresolved, []);
-  assert.equal(resolved.questions[0].answerKey, "cat-confirmed");
+  assert.equal(resolved.questions[0].answerKey, "cat");
 });
 
 test("a differing table cell is flagged", () => {
