@@ -170,88 +170,107 @@ export async function cropFigures(
   const flags: Flag[] = reconcileRegions(record, notes);
   const regions = parseRegions(notes);
 
-  mkdirSync(ASSETS_DIR, { recursive: true });
+  try {
+    mkdirSync(ASSETS_DIR, { recursive: true });
+  } catch (err) {
+    flags.push({
+      kind: "figure", path: ASSETS_DIR,
+      note: `could not create the assets directory: ${err instanceof Error ? err.message : String(err)}`,
+    });
+    return { record, flags };
+  }
 
   for (const asset of record.assets) {
-    if (!asset.src.startsWith(ASSETS_PREFIX)) {
-      flags.push({ kind: "figure", path: asset.src, note: `not under ${ASSETS_PREFIX}` });
-      continue;
-    }
-    const onDisk = join(ASSETS_DIR, asset.src.slice(ASSETS_PREFIX.length));
-    if (existsSync(onDisk)) continue;
-
-    const region = regions.get(asset.src);
-    // Already flagged by reconcileRegions above — nothing to crop with here.
-    if (!region) continue;
-
-    // region.page numbers pages within the problem the model was shown (1 =
-    // the problem's first page); target.problem.pages holds the real booklet
-    // page numbers. A model that miscounts pages should park for a human, not
-    // silently crop the wrong page, so this is a flag rather than a fallback.
-    const bookletPage = target.problem.pages[region.page - 1];
-    if (bookletPage === undefined) {
-      flags.push({
-        kind: "figure", path: asset.src,
-        note: `CROP line names page ${region.page}, but the problem has only ${target.problem.pages.length} page(s)`,
-      });
-      continue;
-    }
-
-    // A batch of 58 problems must survive one bad box or one broken PDF.
-    // pageSize and the pdftoppm call below both shell out, and a subprocess
-    // failure (corrupt page, disk full, poppler missing) throws — that must
-    // become a flag and a parked problem, not an exception that aborts every
-    // problem still queued behind this one.
-    let size: { w: number; h: number };
+    // A batch of 58 problems must survive one bad asset. Several calls in
+    // this body shell out or hit the network (pdfinfo, pdftoppm, the vision
+    // confirm call, the filesystem rename) and any of them can throw for
+    // reasons that have nothing to do with this specific asset — a corrupt
+    // page, disk full, a rate limit, a transient network failure. The inner
+    // try/catches below give the more common failures a specific message;
+    // this one is the backstop, so ANY throw from this asset's crop —
+    // including ones from a call added here later — degrades to a flagged,
+    // parked asset instead of aborting every problem still queued behind it.
     try {
-      size = pageSize(target.problem.file, bookletPage);
+      if (!asset.src.startsWith(ASSETS_PREFIX)) {
+        flags.push({ kind: "figure", path: asset.src, note: `not under ${ASSETS_PREFIX}` });
+        continue;
+      }
+      const onDisk = join(ASSETS_DIR, asset.src.slice(ASSETS_PREFIX.length));
+      if (existsSync(onDisk)) continue;
+
+      const region = regions.get(asset.src);
+      // Already flagged by reconcileRegions above — nothing to crop with here.
+      if (!region) continue;
+
+      // region.page numbers pages within the problem the model was shown (1 =
+      // the problem's first page); target.problem.pages holds the real booklet
+      // page numbers. A model that miscounts pages should park for a human, not
+      // silently crop the wrong page, so this is a flag rather than a fallback.
+      const bookletPage = target.problem.pages[region.page - 1];
+      if (bookletPage === undefined) {
+        flags.push({
+          kind: "figure", path: asset.src,
+          note: `CROP line names page ${region.page}, but the problem has only ${target.problem.pages.length} page(s)`,
+        });
+        continue;
+      }
+
+      let size: { w: number; h: number };
+      try {
+        size = pageSize(target.problem.file, bookletPage);
+      } catch (err) {
+        flags.push({
+          kind: "figure", path: asset.src,
+          note: `could not read the page size: ${err instanceof Error ? err.message : String(err)}`,
+        });
+        continue;
+      }
+
+      let box = { ...region, page: bookletPage };
+      let verdict = "";
+      let cut = false;
+      let failureNote: string | null = null;
+
+      for (let attempt = 0; attempt < 3; attempt++) {
+        const base = onDisk.replace(/\.png$/, "");
+        const cmd = cropCommand(target.problem.file, box, size.w, size.h, base);
+        if (isDegenerateBox(cmd)) {
+          failureNote =
+            `crop region has no area once clamped to the page (x=${box.xPct} y=${box.yPct} ` +
+            `w=${box.wPct} h=${box.hPct})`;
+          break;
+        }
+
+        try {
+          execFileSync("pdftoppm", cmd);
+        } catch (err) {
+          failureNote = `pdftoppm failed: ${err instanceof Error ? err.message : String(err)}`;
+          break;
+        }
+
+        const produced = [`${base}-${box.page}.png`, `${base}-0${box.page}.png`, `${base}-00${box.page}.png`, `${base}.png`]
+          .find((p) => existsSync(p));
+        if (!produced) {
+          failureNote = "pdftoppm did not produce the expected output file";
+          break;
+        }
+        if (produced !== onDisk) renameSync(produced, onDisk);
+
+        verdict = await confirm(client, onDisk, asset.alt);
+        if (verdict.startsWith("COMPLETE")) { cut = true; break; }
+        box = widen(box);
+      }
+
+      if (!cut) {
+        flags.push({
+          kind: "figure", path: asset.src,
+          note: failureNote ?? `crop not confirmed after 3 attempts (last verdict: ${verdict || "none"})`,
+        });
+      }
     } catch (err) {
       flags.push({
         kind: "figure", path: asset.src,
-        note: `could not read the page size: ${err instanceof Error ? err.message : String(err)}`,
-      });
-      continue;
-    }
-
-    let box = { ...region, page: bookletPage };
-    let verdict = "";
-    let cut = false;
-    let failureNote: string | null = null;
-
-    for (let attempt = 0; attempt < 3; attempt++) {
-      const base = onDisk.replace(/\.png$/, "");
-      const cmd = cropCommand(target.problem.file, box, size.w, size.h, base);
-      if (isDegenerateBox(cmd)) {
-        failureNote =
-          `crop region has no area once clamped to the page (x=${box.xPct} y=${box.yPct} ` +
-          `w=${box.wPct} h=${box.hPct})`;
-        break;
-      }
-
-      try {
-        execFileSync("pdftoppm", cmd);
-      } catch (err) {
-        failureNote = `pdftoppm failed: ${err instanceof Error ? err.message : String(err)}`;
-        break;
-      }
-
-      const produced = [`${base}-${box.page}.png`, `${base}-0${box.page}.png`, `${base}-00${box.page}.png`, `${base}.png`]
-        .find((p) => existsSync(p));
-      if (!produced) {
-        failureNote = "pdftoppm did not produce the expected output file";
-        break;
-      }
-      if (produced !== onDisk) renameSync(produced, onDisk);
-
-      verdict = await confirm(client, onDisk, asset.alt);
-      if (verdict.startsWith("COMPLETE")) { cut = true; break; }
-      box = widen(box);
-    }
-
-    if (!cut) {
-      flags.push({
-        kind: "figure", path: asset.src,
-        note: failureNote ?? `crop not confirmed after 3 attempts (last verdict: ${verdict || "none"})`,
+        note: `unexpected error while cropping: ${err instanceof Error ? err.message : String(err)}`,
       });
     }
   }

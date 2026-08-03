@@ -1,7 +1,9 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { parseRegions, cropCommand, reconcileRegions, isDegenerateBox } from "../../scripts/ingest/figures";
+import Anthropic from "@anthropic-ai/sdk";
+import { parseRegions, cropCommand, reconcileRegions, isDegenerateBox, cropFigures } from "../../scripts/ingest/figures";
 import type { Problem } from "../../content/schema";
+import type { Target } from "../../scripts/ingest/manifest";
 
 function record(assets: { src: string; alt: string }[]): Problem {
   return {
@@ -114,4 +116,32 @@ test("reconcileRegions flags only the asset missing its CROP line among several"
   const flags = reconcileRegions(rec, notes);
   assert.equal(flags.length, 1);
   assert.equal(flags[0].path, "/content-assets/key.png");
+});
+
+// cropFigures shells out to pdfinfo/pdftoppm, calls a vision model, and
+// touches the filesystem — none of which this suite mocks (see the pattern
+// in arbitrate.test.ts, which only exercises the pure helpers around its
+// client-calling function). This test proves the no-throw contract instead
+// of asserting it: pointing at a PDF that does not exist makes pageSize
+// throw for real, well before the retry loop ever reaches the vision call,
+// so this never touches the network — but it does prove that a genuine
+// subprocess throw degrades to a flag rather than rejecting cropFigures.
+test("cropFigures resolves with a flag, not a rejection, when the source PDF does not exist", async () => {
+  const assetSrc = "/content-assets/figures-test-does-not-exist.png";
+  const rec = {
+    ...record([{ src: assetSrc, alt: "a diagram" }]),
+    _reviewNotes: `CROP ${assetSrc} page=1 x=10 y=10 w=20 h=20\n`,
+  } as Problem;
+
+  const target: Target = {
+    year: 2016, letter: "A", title: "T", officialPoints: 5, authors: ["X"],
+    problem: { file: "/tmp/figures-test-nonexistent-booklet.pdf", pages: [1] },
+    hasTextLayer: true,
+  };
+
+  const client = new Anthropic({ apiKey: "test-key-not-used" });
+
+  const { flags } = await cropFigures(client, target, rec);
+  const assetFlags = flags.filter((f) => f.path === assetSrc);
+  assert.ok(assetFlags.length >= 1, "expected cropFigures to flag the asset rather than throw");
 });
