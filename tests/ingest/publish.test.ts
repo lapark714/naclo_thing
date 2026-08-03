@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { decide, renderReport } from "../../scripts/ingest/publish";
+import { decide, renderReport, hintsLeakAnswers } from "../../scripts/ingest/publish";
 import type { Problem } from "../../content/schema";
 import type { Flag } from "../../scripts/ingest/types";
 
@@ -77,4 +77,86 @@ test("the report lists parked ids with their reasons", () => {
   assert.ok(out.includes("2019-open-C"));
   assert.ok(out.includes("ŋam"));
   assert.ok(!out.includes("2016-open-A\n\n"));
+});
+
+test("a key embedded in a longer word does not flag", () => {
+  // "very" must not fire on "every" — the false positive found in
+  // 2025-open-F, where the hint reads "almost every letter it produced".
+  const r = record({
+    questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "very", acceptedVariants: [], points: 1 }],
+    hints: [
+      { tier: 1, text: "Almost every letter it produced is right.", xpCost: 1 },
+      { tier: 2, text: "Keep going.", xpCost: 2 },
+      { tier: 3, text: "Nearly there.", xpCost: 3 },
+    ],
+  } as Partial<Problem>);
+  assert.deepEqual(hintsLeakAnswers(r), []);
+});
+
+test("a key on the stopword list does not flag even when present as a standalone word", () => {
+  // "with" appears as itself, not embedded — the second 2025-open-F false
+  // positive, from a hint reading "the cipher text ends with F ZYEF".
+  const r = record({
+    questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "with", acceptedVariants: [], points: 1 }],
+    hints: [
+      { tier: 1, text: "The cipher text ends with an odd letter.", xpCost: 1 },
+      { tier: 2, text: "Keep going.", xpCost: 2 },
+      { tier: 3, text: "Nearly there.", xpCost: 3 },
+    ],
+  } as Partial<Problem>);
+  assert.deepEqual(hintsLeakAnswers(r), []);
+});
+
+test("a distinctive multi-character key that genuinely appears still flags", () => {
+  // The guard against over-correcting the check into uselessness: a hint
+  // that really does name a graded answer must still be caught.
+  const r = record({
+    questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "kecantikan", acceptedVariants: [], points: 1 }],
+    hints: [
+      { tier: 1, text: "Compare rows two and five.", xpCost: 1 },
+      { tier: 2, text: "The suffix marks number.", xpCost: 2 },
+      { tier: 3, text: "The answer is kecantikan.", xpCost: 3 },
+    ],
+  } as Partial<Problem>);
+  const flags = hintsLeakAnswers(r);
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].a, "kecantikan");
+});
+
+test("a key containing regex metacharacters does not throw and behaves sensibly", () => {
+  const withMeta = record({
+    questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "a.b", acceptedVariants: [], points: 1 }],
+    hints: [
+      { tier: 1, text: "The pattern is a.b exactly.", xpCost: 1 },
+      { tier: 2, text: "Keep going.", xpCost: 2 },
+      { tier: 3, text: "Nearly there.", xpCost: 3 },
+    ],
+  } as Partial<Problem>);
+  assert.doesNotThrow(() => hintsLeakAnswers(withMeta));
+  assert.equal(hintsLeakAnswers(withMeta).length, 1);
+
+  const withParens = record({
+    questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "(x)", acceptedVariants: [], points: 1 }],
+    hints: [
+      { tier: 1, text: "Nothing like that appears here.", xpCost: 1 },
+      { tier: 2, text: "Keep going.", xpCost: 2 },
+      { tier: 3, text: "Nearly there.", xpCost: 3 },
+    ],
+  } as Partial<Problem>);
+  assert.doesNotThrow(() => hintsLeakAnswers(withParens));
+  assert.deepEqual(hintsLeakAnswers(withParens), []);
+});
+
+test("a non-ASCII key still flags when genuinely present", () => {
+  const r = record({
+    questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "ɲam", acceptedVariants: [], points: 1 }],
+    hints: [
+      { tier: 1, text: "Compare rows two and five.", xpCost: 1 },
+      { tier: 2, text: "Look at the root.", xpCost: 2 },
+      { tier: 3, text: "The word is ɲam in this language.", xpCost: 3 },
+    ],
+  } as Partial<Problem>);
+  const flags = hintsLeakAnswers(r);
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].a, "ɲam");
 });

@@ -24,22 +24,62 @@ export type Outcome = {
 };
 
 /**
+ * Common English function words, skipped as keys entirely, past even the
+ * length floor. A key that happens to be an ordinary word like "with" or
+ * "very" collides constantly with a hint's ordinary prose — cipher and
+ * decoding problems routinely have plain-English answers — and word-boundary
+ * matching does not help here, since these appear as themselves, not
+ * embedded inside a longer word. Closed-class function words plus a handful
+ * of high-frequency fillers; not tuned to chase the archive's flag count to
+ * zero, only to stop the indisputable false positives.
+ */
+const STOPWORD_KEYS = new Set([
+  "a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "from",
+  "has", "have", "he", "her", "his", "in", "is", "it", "its", "not", "of",
+  "on", "one", "or", "she", "so", "than", "that", "the", "their", "them",
+  "then", "there", "these", "they", "this", "to", "two", "up", "very",
+  "was", "were", "what", "when", "which", "who", "will", "with", "you",
+  "your",
+]);
+
+/** Escapes a string for literal use inside a RegExp. */
+function escapeForRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/**
+ * True when `key` occurs in `text` as a standalone word or phrase, not
+ * embedded inside a longer one — "very" must not fire on "every". Plain \b
+ * is ASCII-only: it only sees a boundary where one side is [A-Za-z0-9_], so
+ * it silently fails at the edge of a non-ASCII key (an IPA letter, or the
+ * first character of a key like "ɲam", is not \b's idea of a word
+ * character). The boundary is built from Unicode letter/number classes
+ * instead so a non-Latin or accented key still gets real edges, not none.
+ */
+function containsAsWord(text: string, key: string): boolean {
+  const pattern = new RegExp(`(?<![\\p{L}\\p{N}])${escapeForRegExp(key)}(?![\\p{L}\\p{N}])`, "u");
+  return pattern.test(text);
+}
+
+/**
  * Hints are generated once, not cross-checked, because two passes never word
  * prose the same way. The constraint that replaces consensus for them is that
  * a hint must not simply hand over a graded answer. Keys shorter than three
- * characters are skipped: "a" appears in every sentence in English.
+ * characters are skipped ("a" appears in every sentence in English), and
+ * keys that are themselves common function words are skipped outright
+ * (STOPWORD_KEYS above).
  */
 export function hintsLeakAnswers(record: Problem): Flag[] {
   const flags: Flag[] = [];
   const keys = record.questions
     .filter((q) => q.gradingMode === "exact")
     .map((q) => q.answerKey.trim().toLowerCase())
-    .filter((k) => k.length >= 3);
+    .filter((k) => k.length >= 3 && !STOPWORD_KEYS.has(k));
 
   record.hints.forEach((hint, i) => {
     const text = hint.text.toLowerCase();
     for (const key of keys) {
-      if (text.includes(key)) {
+      if (containsAsWord(text, key)) {
         flags.push({
           kind: "diff",
           path: `hints[${i}]`,
