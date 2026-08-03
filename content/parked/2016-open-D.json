@@ -1,0 +1,174 @@
+{
+  "id": "2016-open-D",
+  "tier": "full",
+  "year": 2016,
+  "round": "open",
+  "letter": "D",
+  "title": "That’s an Order!",
+  "authors": [
+    "Dorottya Demszky",
+    "Yiwei Luo",
+    "Tom McCoy"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "syntax",
+    "semantics"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "hard",
+  "languages": [
+    "Cebuano"
+  ],
+  "officialPoints": 15,
+  "officialTimeMinutes": 27,
+  "bodyHtml": "<p>Cebuano is an Austronesian language spoken in the Philippines. The language was heavily influenced by Spanish during a period of colonialism from 1521 to 1898.</p>\n<p>Your task is to figure out what four women, Althea, Inday, Janelle, and Maria, had for lunch. Each person had a main dish as well as a dessert and a drink. No two people ordered the same main dish, no two people ordered the same dessert, and no two people ordered the same drink.</p>\n<p>Each of them chose from the following Philippine menu:</p>\n<h3>Main Dishes</h3>\n<dl class=\"gloss-list\">\n<dt>adobong baboy</dt><dd>Pork dish cooked in soy sauce, vinegar, and garlic.</dd>\n<dt>adobong sitaw</dt><dd>String beans cooked in the adobo style (with soy sauce and vinegar).</dd>\n<dt>asado</dt><dd>Beef dish cooked in a sauce with tomatoes, olives, onion, ketchup, red bell pepper, and potatoes.</dd>\n<dt>bulanglang</dt><dd>Boiled mixed vegetables, including malunggay leaves, squash and onions in rice washing.</dd>\n</dl>\n<h3>Desserts</h3>\n<dl class=\"gloss-list\">\n<dt>buko pie</dt><dd>A traditional Filipino baked young coconut custard pie.</dd>\n<dt>kutsinta</dt><dd>A type of steamed rice cake made with rice flour, brown sugar and lye.</dd>\n<dt>maruya</dt><dd>Banana fritters, served in syrup or ice cream.</dd>\n<dt>turon saba</dt><dd>Deep fried plantains in spring roll wrappers.</dd>\n</dl>\n<h3>Drinks</h3>\n<dl class=\"gloss-list\">\n<dt>bino</dt><dd>Wine.</dd>\n<dt>gatas</dt><dd>Milk.</dd>\n<dt>serbesa</dt><dd>Beer.</dd>\n<dt>tubig</dt><dd>Water.</dd>\n</dl>\n<p><strong>D1.</strong> Based on the following clues try to determine who ordered which food and drink. Write your answers in Cebuano.</p>\n<ul>\n<li><span class=\"data\">Janelle nikaon og bulanglang apan dili og turon saba.</span></li>\n<li><span class=\"data\">Ang tao nga nipalit og asado ug nikaon og kutsinta wala niinom og serbesa.</span></li>\n<li><span class=\"data\">Ang tao nga nikaon og adobong baboy ug niinom og tubig apan si dili Althea.</span></li>\n<li><span class=\"data\">Ang duha ka tao nga nanginon alkohol mga Maria ug ang tao nga nipalit og adobong sitaw.</span></li>\n<li><span class=\"data\">Inday nipalit og maruya.</span></li>\n<li><span class=\"data\">Ang tolo ka tao nga wala nipalit og maruya mga Maria, Althea, ug Janelle.</span></li>\n<li><span class=\"data\">Ang tao nga nikaon og bulanglang si Janelle.</span></li>\n<li><span class=\"data\">Janelle nipalit og bulanglang apan dili og tubig.</span></li>\n</ul>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th></th><th>Althea</th><th>Inday</th><th>Janelle</th><th>Maria</th></tr>\n</thead>\n<tbody>\n<tr><th>Main Dish</th><td><span class=\"blank\" data-q=\"D1.Althea-main\"></span></td><td><span class=\"blank\" data-q=\"D1.Inday-main\"></span></td><td><span class=\"blank\" data-q=\"D1.Janelle-main\"></span></td><td><span class=\"blank\" data-q=\"D1.Maria-main\"></span></td></tr>\n<tr><th>Dessert</th><td><span class=\"blank\" data-q=\"D1.Althea-dessert\"></span></td><td><span class=\"blank\" data-q=\"D1.Inday-dessert\"></span></td><td><span class=\"blank\" data-q=\"D1.Janelle-dessert\"></span></td><td><span class=\"blank\" data-q=\"D1.Maria-dessert\"></span></td></tr>\n<tr><th>Drink</th><td><span class=\"blank\" data-q=\"D1.Althea-drink\"></span></td><td><span class=\"blank\" data-q=\"D1.Inday-drink\"></span></td><td><span class=\"blank\" data-q=\"D1.Janelle-drink\"></span></td><td><span class=\"blank\" data-q=\"D1.Maria-drink\"></span></td></tr>\n</tbody>\n</table>\n</div>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "D1.Althea-main",
+      "promptHtml": "Althea's main dish",
+      "part": "D1",
+      "partPrompt": "Work out who ordered which main dish, dessert and drink, and fill in the grid using the Cebuano names from the menu.",
+      "gradingMode": "exact",
+      "answerKey": "adobong sitaw",
+      "acceptedVariants": [
+        "sitaw"
+      ],
+      "points": 1.25
+    },
+    {
+      "id": "D1.Inday-main",
+      "promptHtml": "Inday's main dish",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "adobong baboy",
+      "acceptedVariants": [
+        "baboy"
+      ],
+      "points": 1.25
+    },
+    {
+      "id": "D1.Janelle-main",
+      "promptHtml": "Janelle's main dish",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "bulanglang",
+      "acceptedVariants": [],
+      "points": 1.25
+    },
+    {
+      "id": "D1.Maria-main",
+      "promptHtml": "Maria's main dish",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "asado",
+      "acceptedVariants": [],
+      "points": 1.25
+    },
+    {
+      "id": "D1.Althea-dessert",
+      "promptHtml": "Althea's dessert",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "turon saba",
+      "acceptedVariants": [
+        "turon"
+      ],
+      "points": 1.25
+    },
+    {
+      "id": "D1.Inday-dessert",
+      "promptHtml": "Inday's dessert",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "maruya",
+      "acceptedVariants": [],
+      "points": 1.25
+    },
+    {
+      "id": "D1.Janelle-dessert",
+      "promptHtml": "Janelle's dessert",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "buko pie",
+      "acceptedVariants": [
+        "buko"
+      ],
+      "points": 1.25
+    },
+    {
+      "id": "D1.Maria-dessert",
+      "promptHtml": "Maria's dessert",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "kutsinta",
+      "acceptedVariants": [],
+      "points": 1.25
+    },
+    {
+      "id": "D1.Althea-drink",
+      "promptHtml": "Althea's drink",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "serbesa",
+      "acceptedVariants": [],
+      "points": 1.25
+    },
+    {
+      "id": "D1.Inday-drink",
+      "promptHtml": "Inday's drink",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "tubig",
+      "acceptedVariants": [],
+      "points": 1.25
+    },
+    {
+      "id": "D1.Janelle-drink",
+      "promptHtml": "Janelle's drink",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "gatas",
+      "acceptedVariants": [],
+      "points": 1.25
+    },
+    {
+      "id": "D1.Maria-drink",
+      "promptHtml": "Maria's drink",
+      "part": "D1",
+      "gradingMode": "exact",
+      "answerKey": "bino",
+      "acceptedVariants": [],
+      "points": 1.25
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Before doing any logic, decode the Cebuano clue sentences. A handful of short words does all the work: apan, dili, wala, ug, mga, si, nga, ang. The long words that start with ni- or nan- are verbs, and you can guess which is which by seeing what kind of thing follows them (a dish, a dessert, or a drink).",
+      "xpCost": 2
+    },
+    {
+      "tier": 2,
+      "text": "Once translated, treat it as a standard logic grid: four people down one side, and the twelve menu items grouped into three sets of four. The most powerful clues are the ones that say two facts belong to the same person (\"the person who ordered X also ordered Y\") and the ones that name people who are NOT that person, because those let you eliminate three candidates at a time.",
+      "xpCost": 3
+    },
+    {
+      "tier": 3,
+      "text": "Try one clue in detail: Ang duha ka tao nga nanginon alkohol mga Maria ug ang tao nga nipalit og adobong sitaw. Here duha ka tao is \"two people\" (compare tolo ka tao, \"three people\") and mga introduces the list of who they are. So exactly two of the four women drank something alcoholic, which on this menu means bino and serbesa; the other two must have gatas and tubig between them. Notice also that the clue lists Maria and the adobong sitaw person as two separate people.",
+      "xpCost": 4
+    }
+  ],
+  "explanationHtml": "<h3>Step 1: crack the Cebuano</h3>\n<p>You do not need to know Cebuano; you only need to spot the recurring small words. Comparing the sentences gives:</p>\n<dl class=\"gloss-list\">\n<dt>ang tao nga...</dt><dd>the person who...</dd>\n<dt>nikaon og</dt><dd>ate</dd>\n<dt>nipalit og</dt><dd>bought / ordered</dd>\n<dt>niinom og</dt><dd>drank</dd>\n<dt>apan</dt><dd>but</dd>\n<dt>dili</dt><dd>not</dd>\n<dt>wala</dt><dd>did not (with a verb)</dd>\n<dt>ug</dt><dd>and / also</dd>\n<dt>si</dt><dd>marker before a person's name</dd>\n<dt>mga</dt><dd>marker introducing the list of who they are</dd>\n<dt>duha ka tao / tolo ka tao</dt><dd>two people / three people</dd>\n<dt>nanginon alkohol</dt><dd>drank alcohol</dd>\n</dl>\n<p>Translated, the eight clues say:</p>\n<ol>\n<li>Janelle ate bulanglang but not turon saba.</li>\n<li>The person who ordered asado also ate kutsinta but did not drink serbesa.</li>\n<li>The person who ate adobong baboy also drank tubig, and was not Althea.</li>\n<li>The two people who drank alcohol were Maria and the person who ordered adobong sitaw.</li>\n<li>Inday ordered maruya.</li>\n<li>The three people who did not order maruya were Maria, Althea, and Janelle.</li>\n<li>The person who ate bulanglang was Janelle.</li>\n<li>Janelle ordered bulanglang but not tubig.</li>\n</ol>\n<h3>Step 2: which drinks count as alcohol?</h3>\n<p>On this menu bino (wine) and serbesa (beer) are alcoholic; gatas (milk) and tubig (water) are not. Clue 4 therefore says: Maria and the adobong sitaw person had bino and serbesa in some order, and the other two women had gatas and tubig in some order. Clue 4 also lists Maria and the adobong sitaw person as two different people, so Maria did NOT order adobong sitaw.</p>\n<h3>Step 3: pin down the adobong baboy person</h3>\n<p>Clue 3 says one person had both adobong baboy and tubig, and it was not Althea. It cannot be Janelle, because Janelle ate bulanglang (clues 1, 7, 8) and anyway did not drink tubig (clue 8). It cannot be Maria, because Maria drank alcohol (clue 4), not water. That leaves only Inday: <span class=\"data\">adobong baboy</span> and <span class=\"data\">tubig</span>.</p>\n<h3>Step 4: finish the main dishes</h3>\n<p>Janelle has bulanglang and Inday has adobong baboy, so adobong sitaw and asado belong to Althea and Maria. Maria cannot have adobong sitaw (Step 2), so Maria has <span class=\"data\">asado</span> and Althea has <span class=\"data\">adobong sitaw</span>.</p>\n<h3>Step 5: sort out the drinks</h3>\n<p>By clue 4 the alcohol drinkers are Maria and the adobong sitaw person, that is Maria and Althea. Clue 2 says the asado person did not drink serbesa, and the asado person is Maria, so Maria drank <span class=\"data\">bino</span> and Althea drank <span class=\"data\">serbesa</span>. Inday already has tubig, so Janelle is left with <span class=\"data\">gatas</span>.</p>\n<h3>Step 6: desserts</h3>\n<p>Clue 5 gives Inday <span class=\"data\">maruya</span> (clue 6 just repeats this from the other direction, which is a useful consistency check). Clue 2 attaches kutsinta to the asado person, so Maria has <span class=\"data\">kutsinta</span>. Janelle did not have turon saba (clue 1), so from the two remaining desserts Janelle has <span class=\"data\">buko pie</span> and Althea has <span class=\"data\">turon saba</span>.</p>\n<h3>The finished grid</h3>\n<div class=\"table-scroll\">\n<table>\n<thead><tr><th></th><th>Althea</th><th>Inday</th><th>Janelle</th><th>Maria</th></tr></thead>\n<tbody>\n<tr><th>Main Dish</th><td><span class=\"data\">adobong sitaw</span></td><td><span class=\"data\">adobong baboy</span></td><td><span class=\"data\">bulanglang</span></td><td><span class=\"data\">asado</span></td></tr>\n<tr><th>Dessert</th><td><span class=\"data\">turon saba</span></td><td><span class=\"data\">maruya</span></td><td><span class=\"data\">buko pie</span></td><td><span class=\"data\">kutsinta</span></td></tr>\n<tr><th>Drink</th><td><span class=\"data\">serbesa</span></td><td><span class=\"data\">tubig</span></td><td><span class=\"data\">gatas</span></td><td><span class=\"data\">bino</span></td></tr>\n</tbody>\n</table>\n</div>\n<h3>A side note on Spanish influence</h3>\n<p>Several menu words came into Cebuano from Spanish during the colonial period: <span class=\"data\">asado</span> (roast), <span class=\"data\">bino</span> (from <em>vino</em>, wine), <span class=\"data\">serbesa</span> (from <em>cerveza</em>, beer), and <span class=\"data\">adobo</span> as a cooking style. Recognizing them can help you guess which words name drinks and which name dishes even before you crack the grammar.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution grid (Althea: adobong sitaw / turon saba / serbesa; Inday: adobong baboy / maruya / tubig; Janelle: bulanglang / buko pie / gatas; Maria: asado / kutsinta / bino). The booklet itself prints no answer grid (it was on the separate Answer Sheet), so the 4x3 grid with blanks in bodyHtml reproduces the solution layout; question ids use person-plus-category labels since the booklet supplies no letter labels. 15 official points split evenly at 1.25 per cell (no per-part breakdown given in the solution). The clue list is printed as plain indented lines in the PDF; transcribed here as a bulleted list.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "hints[2]",
+      "a": "adobong sitaw",
+      "note": "hint 3 contains the graded answer \"adobong sitaw\""
+    }
+  ]
+}

@@ -1,0 +1,465 @@
+{
+  "id": "2016-open-B",
+  "tier": "full",
+  "year": 2016,
+  "round": "open",
+  "letter": "B",
+  "title": "DAWG Breeds",
+  "authors": [
+    "Patrick Littell"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "morphology"
+  ],
+  "formTag": "formal and computational",
+  "difficulty": "standard",
+  "languages": [
+    "English"
+  ],
+  "officialPoints": 10,
+  "officialTimeMinutes": 18,
+  "bodyHtml": "<p>&ldquo;DAWG&rdquo; (directed acyclic word graph) describes a diagram that stores a set of <em>words</em> in a <em>graph</em> (in the sense of a web of paths) that is <em>directed</em> (each path can only be traveled in one direction) and <em>acyclic</em> (there is no possibility of traveling in a circle).</p>\n<p>When storing a set of words (say, HYDROGEN, OXYGEN, and NITROGEN), there is often some redundancy. All three of these words, for example, end in -GEN, and two of them end in -ROGEN. The DAWG below stores all three words without storing the redundant parts multiple times.</p>\n<figure><img src=\"/content-assets/2016-open-B-example1.png\" alt=\"A DAWG: from start, three boxes NIT, HYD and OXY; NIT and HYD both lead to a box RO, which leads with OXY into a box GEN, then to end.\" /></figure>\n<p>This DAWG can &ldquo;recognize&rdquo; all three words, in that each word constitutes a valid path from the start symbol to the end symbol, and no other sequence of letters forms such a path.</p>\n<p>However, it is not correct to just &ldquo;merge&rdquo; any redundant letters like this, because inappropriately merged letters will lead to incorrect words being recognized.</p>\n<figure><img src=\"/content-assets/2016-open-B-example2.png\" alt=\"A second DAWG where the letters R and O are split into separate boxes, so that paths NIT-R-O-XY-GEN and HYD-R-O-XY-GEN also exist.\" /></figure>\n<p>This DAWG correctly recognizes the letter sequences NITROGEN, HYDROGEN, and OXYGEN, but it also incorrectly recognizes the letter sequences NITROXYGEN and HYDROXYGEN, which were not intended.</p>\n<p>Answer these questions in the Answer Sheets.</p>\n<p><strong>B1.</strong> Below are three DAWGs that recognize a list of words in a category, the way that the DAWGs above recognize a three-word list of chemical elements. Each DAWG recognizes a different category of words.</p>\n<p>These DAWGs are poorly-constructed, however, in that each one recognizes several incorrect letter sequences as well. We will give you the shape of the DAWG (but without letter labels) and the incorrect letter sequences; from this, deduce what words the DAWG was supposed to recognize and write these intended words on your answer sheet. (For each part of this question, the number of intended words is the same as the number of answer spaces you are given on your Answer Sheet.)</p>\n<p><strong>a.</strong></p>\n<figure><img src=\"/content-assets/2016-open-B-dawg-a.png\" alt=\"DAWG (a): unlabelled boxes. From start, a one-letter box and, below it, another one-letter box. The upper one leads to a three-letter box across the top and to a one-letter box; a one-letter box leads to a two-letter box, which leads to a five-letter box, to a two-letter box near the top right, and to a nine-letter box along the bottom, all reaching end.\" /></figure>\n<p>Unintended words: POODHOUND, BLOMERANIAN, BLOODLE</p>\n<p><strong>b.</strong></p>\n<figure><img src=\"/content-assets/2016-open-B-dawg-b.png\" alt=\"DAWG (b): unlabelled boxes. From start, four two-letter boxes fan out; middle boxes of one and two letters lead onward, and every path converges on a single five-letter box that goes to end.\" /></figure>\n<p>Unintended words: HUCKBERRY, RAWBERRY, BLACKLEBERRY, STRASPBERRY</p>\n<p><strong>c.</strong></p>\n<figure><img src=\"/content-assets/2016-open-B-dawg-c.png\" alt=\"DAWG (c): unlabelled boxes. From start, five boxes (two-letter, one-letter, two-letter, one-letter, two-letter) all lead into a single one-letter box, which fans out to a one-letter box above and a one-letter box below, then on through further one- and two-letter boxes to end.\" /></figure>\n<p>Unintended words: PANDA, GHAQ, IRANADA, CAN, RWANAMA, and many more&hellip;</p>\n<p><strong>B2.</strong> For each of the DAWGs above, what would be the fewest number of letter squares needed to recognize every intended word, and only the intended words? (For example, to recognize HYDROGEN, OXYGEN, and NITROGEN, you need at least 14 squares. Any fewer than 14 squares and you would recognize an unintended word like NITROXYGEN or OXYDROGEN. Do not include the start or end spaces in your counts.)</p>",
+  "assets": [
+    {
+      "src": "/content-assets/2016-open-B-example1.png",
+      "alt": "A DAWG: from start, three boxes NIT, HYD and OXY; NIT and HYD both lead to a box RO, which leads with OXY into a box GEN, then to end."
+    },
+    {
+      "src": "/content-assets/2016-open-B-example2.png",
+      "alt": "A second DAWG where the letters R and O are split into separate boxes, so that paths NIT-R-O-XY-GEN and HYD-R-O-XY-GEN also exist."
+    },
+    {
+      "src": "/content-assets/2016-open-B-dawg-a.png",
+      "alt": "DAWG (a): unlabelled boxes. From start, a one-letter box and, below it, another one-letter box. The upper one leads to a three-letter box across the top and to a one-letter box; a one-letter box leads to a two-letter box, which leads to a five-letter box, to a two-letter box near the top right, and to a nine-letter box along the bottom, all reaching end."
+    },
+    {
+      "src": "/content-assets/2016-open-B-dawg-b.png",
+      "alt": "DAWG (b): unlabelled boxes. From start, four two-letter boxes fan out; middle boxes of one and two letters lead onward, and every path converges on a single five-letter box that goes to end."
+    },
+    {
+      "src": "/content-assets/2016-open-B-dawg-c.png",
+      "alt": "DAWG (c): unlabelled boxes. From start, five boxes (two-letter, one-letter, two-letter, one-letter, two-letter) all lead into a single one-letter box, which fans out to a one-letter box above and a one-letter box below, then on through further one- and two-letter boxes to end."
+    }
+  ],
+  "questions": [
+    {
+      "id": "B1.a",
+      "promptHtml": "<p><strong>a.</strong> Unintended words: POODHOUND, BLOMERANIAN, BLOODLE. What are the four intended words?</p>",
+      "part": "B1",
+      "partPrompt": "For each DAWG, work out which words it was supposed to recognize and list them (any order, separated by commas).",
+      "gradingMode": "llm",
+      "answerKey": "BEAGLE, BLOODHOUND, POODLE, POMERANIAN",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "B1.b",
+      "promptHtml": "<p><strong>b.</strong> Unintended words: HUCKBERRY, RAWBERRY, BLACKLEBERRY, STRASPBERRY. What are the five intended words?</p>",
+      "part": "B1",
+      "gradingMode": "llm",
+      "answerKey": "HUCKLEBERRY, BLUEBERRY, BLACKBERRY, STRAWBERRY, RASPBERRY",
+      "acceptedVariants": [],
+      "points": 2
+    },
+    {
+      "id": "B1.c",
+      "promptHtml": "<p><strong>c.</strong> Unintended words: PANDA, GHAQ, IRANADA, CAN, RWANAMA, and many more. What are the six intended words?</p>",
+      "part": "B1",
+      "gradingMode": "llm",
+      "answerKey": "RWANDA, CANADA, GHANA, PANAMA, IRAQ, IRAN",
+      "acceptedVariants": [],
+      "points": 3
+    },
+    {
+      "id": "B2.a",
+      "promptHtml": "<p><strong>a.</strong> Fewest letter squares for the dog-breed list:</p>",
+      "part": "B2",
+      "partPrompt": "For each DAWG, give the fewest number of letter squares needed to recognize every intended word and only the intended words (do not count the start or end ovals).",
+      "gradingMode": "exact",
+      "answerKey": "27",
+      "acceptedVariants": [
+        "27 squares"
+      ],
+      "points": 1
+    },
+    {
+      "id": "B2.b",
+      "promptHtml": "<p><strong>b.</strong> Fewest letter squares for the berry list:</p>",
+      "part": "B2",
+      "gradingMode": "exact",
+      "answerKey": "26",
+      "acceptedVariants": [
+        "26 squares"
+      ],
+      "points": 1
+    },
+    {
+      "id": "B2.c",
+      "promptHtml": "<p><strong>c.</strong> Fewest letter squares for the country list:</p>",
+      "part": "B2",
+      "gradingMode": "exact",
+      "answerKey": "24",
+      "acceptedVariants": [
+        "24 squares"
+      ],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Start with the unintended words, not the diagrams. Each unintended word is built out of the same boxes as the real words, just combined in the wrong order, so comparing two unintended words shows you where one box ends and the next begins. POODHOUND and BLOMERANIAN, for instance, share nothing at the start but each contains a chunk you should recognize.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Split each unintended word into pieces so that the pieces can be re-shuffled into real words of one category (dog breeds, berries, countries). A piece that appears in an unintended word must also appear in at least one intended word, and the number of squares in each box of the picture tells you exactly how many letters that piece has. For B2, count the total letters in your intended words, then subtract every letter you can safely share: shared beginnings and shared endings only, since sharing a chunk in the middle is what created the wrong words in the first place.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Practise the B2 counting on the chemical-element example. HYDROGEN, OXYGEN and NITROGEN have 8 + 6 + 8 = 22 letters. HYDROGEN and NITROGEN share the ending ROGEN, so those five letters need to be stored once instead of twice: that saves 5, leaving 17. OXYGEN then shares the ending GEN, saving 3 more, leaving 14 - exactly the 14 squares the problem quotes. Nothing else can be merged without creating a word like NITROXYGEN.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What a DAWG is doing</h3>\n<p>Think of each box as a chunk of letters. You start at <em>start</em>, follow arrows from box to box, read off the letters as you go, and if you reach <em>end</em> you have &ldquo;recognized&rdquo; a word. Two words that end the same way (HYD-RO-GEN and NIT-RO-GEN) can share the boxes RO and GEN, which saves space. The danger is that sharing a box also creates <em>new</em> paths: if you split RO into R and O, the graph suddenly also allows HYD-R-O-XY-GEN.</p>\n<h3>B1: reading the wrong words backwards</h3>\n<p>The unintended words are the accidental paths. Because they are made of the same boxes as the real words, they tell you what the boxes are.</p>\n<p><strong>(a)</strong> POODHOUND, BLOMERANIAN, BLOODLE. The chunk HOUND and the chunk MERANIAN look like pieces of dog breeds, so the category is dog breeds. Now cut the words up:</p>\n<ul><li>POODHOUND = P + OO + D + HOUND, and BLOODLE = B + L + OO + D + LE</li><li>BLOMERANIAN = B + L + O + MERANIAN</li></ul>\n<p>Re-combining the pieces into real breeds gives <span class=\"data\">BEAGLE</span> (B + EAG + LE), <span class=\"data\">BLOODHOUND</span> (B + L + O + OD + HOUND), <span class=\"data\">POODLE</span> (P + O + OD + LE) and <span class=\"data\">POMERANIAN</span> (P + O + MERANIAN). Check the box sizes in the picture: a one-letter box (B), another one-letter box (P), a three-letter box (EAG), a two-letter box (LE), one-letter L, one-letter O, two-letter OD, five-letter HOUND and nine-letter MERANIAN. Everything fits.</p>\n<p><strong>(b)</strong> Every unintended word ends in BERRY, so the category is berries and there is one five-letter box BERRY that all paths run into. HUCKBERRY tells you HU and CK are separate boxes; BLACKLEBERRY tells you LE is a box that HUCKLEBERRY needs; RAWBERRY and STRASPBERRY split ST, RA, W and SP apart. The intended words are <span class=\"data\">HUCKLEBERRY</span> (HU + CK + LE + BERRY), <span class=\"data\">BLUEBERRY</span> (BL + UE + BERRY), <span class=\"data\">BLACKBERRY</span> (BL + A + CK + BERRY), <span class=\"data\">STRAWBERRY</span> (ST + RA + W + BERRY) and <span class=\"data\">RASPBERRY</span> (RA + SP + BERRY).</p>\n<p><strong>(c)</strong> RWANAMA, IRANADA, GHAQ and CAN mix up country names. All five left-hand boxes feed into a single one-letter box A, and after that the graph branches again. The intended words are <span class=\"data\">RWANDA</span> (RW + A + N + DA), <span class=\"data\">CANADA</span> (C + A + N + A + DA), <span class=\"data\">GHANA</span> (GH + A + N + A), <span class=\"data\">PANAMA</span> (P + A + N + A + MA), <span class=\"data\">IRAQ</span> (IR + A + Q) and <span class=\"data\">IRAN</span> (IR + A + N). Because the single A box is shared by all six, any prefix can be glued to any suffix, which is why the graph recognizes &ldquo;many more&rdquo; junk words.</p>\n<h3>B2: how few squares can you get away with?</h3>\n<p>Now build the graph <em>properly</em>. Two words may share a box only if that sharing creates no extra path. In practice this means you may merge a shared <strong>beginning</strong> (both words start the same way and split later) or a shared <strong>ending</strong> (both words arrive at the same tail and never separate again). Sharing a chunk in the middle is exactly what went wrong above.</p>\n<p>So: add up the letters of all intended words, then subtract the letters you can merge.</p>\n<p><strong>(a)</strong> BEAGLE 6 + BLOODHOUND 10 + POODLE 6 + POMERANIAN 10 = 32 letters. Shared beginnings: BEAGLE and BLOODHOUND share B (save 1); POODLE and POMERANIAN share PO (save 2). Shared endings: BEAGLE and POODLE both finish in LE (save 2). Total saved 5, so <strong>27 squares</strong>. Note that the OOD inside BLOODHOUND and POODLE cannot be merged - it sits in the middle of one word and at the start-ish of the other, and merging it is precisely what produced POODHOUND.</p>\n<p><strong>(b)</strong> HUCKLEBERRY 11 + BLUEBERRY 9 + BLACKBERRY 10 + STRAWBERRY 10 + RASPBERRY 9 = 49 letters. All five end in BERRY, so store those 5 letters once instead of five times: that saves 4 &times; 5 = 20, leaving 29. HUCKLE and BLUE both end in E just before BERRY, so that E can be merged too (save 1), leaving 28. BLUEBERRY and BLACKBERRY share the beginning BL (save 2). Total: <strong>26 squares</strong>.</p>\n<p><strong>(c)</strong> RWANDA 6 + CANADA 6 + GHANA 5 + PANAMA 6 + IRAQ 4 + IRAN 4 = 31 letters. Shared beginning: IRAQ and IRAN share IRA (save 3). Shared endings: RWANDA, CANADA, GHANA and PANAMA all end in A, so that final A is stored once instead of four times (save 3); RWANDA and CANADA also share the D before it (save 1). Total saved 7, so <strong>24 squares</strong>. You cannot go further: the N of GHANA is followed by A while the N of RWANDA is followed by D, so those N boxes must stay separate.</p>\n<h3>The general lesson</h3>\n<p>A minimal DAWG (computer scientists call it a minimal deterministic acyclic finite-state automaton) merges states only when everything that can follow them is identical. That single rule explains both halves of this problem: it tells you which merges are legal when you count squares, and it tells you which illegal merge produced each unintended word.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "Answer keys taken from the official solution page (B1 a/b/c intended-word lists and B2 counts 27/26/24). Point split across sub-questions (B1 2/2/3, B2 1/1/1) is my own distribution; the booklet gives only the 10-point total. B1 uses llm grading because the intended words may be listed in any order; the answerKey lists the official set. Five figures need cropping:\nCROP /content-assets/2016-open-B-example1.png page=1 x=12 y=27 w=76 h=15\nCROP /content-assets/2016-open-B-example2.png page=1 x=8 y=49 w=84 h=15\nCROP /content-assets/2016-open-B-dawg-a.png page=2 x=8 y=13 w=84 h=17\nCROP /content-assets/2016-open-B-dawg-b.png page=2 x=8 y=30 w=84 h=17\nCROP /content-assets/2016-open-B-dawg-c.png page=2 x=8 y=48 w=84 h=18",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:b1.a:mode",
+      "a": "llm",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a:key",
+      "a": "BEAGLE, BLOODHOUND, POODLE, POMERANIAN",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a:points",
+      "a": "2",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b:mode",
+      "a": "llm",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b:key",
+      "a": "HUCKLEBERRY, BLUEBERRY, BLACKBERRY, STRAWBERRY, RASPBERRY",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b:points",
+      "a": "2",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c:mode",
+      "a": "llm",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c:key",
+      "a": "RWANDA, CANADA, GHANA, PANAMA, IRAQ, IRAN",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c:points",
+      "a": "3",
+      "note": "absent in pass B"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a1:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a1:key",
+      "b": "BEAGLE",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a1:points",
+      "b": "0.5",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a2:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a2:key",
+      "b": "BLOODHOUND",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a2:points",
+      "b": "0.5",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a3:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a3:key",
+      "b": "POODLE",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a3:points",
+      "b": "0.5",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a4:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a4:key",
+      "b": "POMERANIAN",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.a4:points",
+      "b": "0.5",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b1:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b1:key",
+      "b": "HUCKLEBERRY",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b1:points",
+      "b": "0.4",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b2:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b2:key",
+      "b": "BLUEBERRY",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b2:points",
+      "b": "0.4",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b3:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b3:key",
+      "b": "BLACKBERRY",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b3:points",
+      "b": "0.4",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b4:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b4:key",
+      "b": "STRAWBERRY",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b4:points",
+      "b": "0.4",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b5:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b5:key",
+      "b": "RASPBERRY",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.b5:points",
+      "b": "0.4",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c1:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c1:key",
+      "b": "RWANDA",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c1:points",
+      "b": "0.5",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c2:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c2:key",
+      "b": "CANADA",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c2:points",
+      "b": "0.5",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c3:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c3:key",
+      "b": "GHANA",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c3:points",
+      "b": "0.5",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c4:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c4:key",
+      "b": "PANAMA",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c4:points",
+      "b": "0.5",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c5:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c5:key",
+      "b": "IRAQ",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c5:points",
+      "b": "0.5",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c6:mode",
+      "b": "exact",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c6:key",
+      "b": "IRAN",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "q:b1.c6:points",
+      "b": "0.5",
+      "note": "absent in pass A"
+    },
+    {
+      "kind": "diff",
+      "path": "(arbitration)",
+      "note": "skipped arbitration: 54 flags exceeds the cap of 25, so the two passes disagree too broadly to arbitrate field by field. Parked for human review instead of spending ~54 API calls that would not resolve it"
+    },
+    {
+      "kind": "figure",
+      "path": "/content-assets/2016-open-B-dawg-a.png",
+      "note": "crop not confirmed after 3 attempts (last verdict: none)"
+    }
+  ]
+}

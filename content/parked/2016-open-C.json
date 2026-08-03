@@ -1,0 +1,216 @@
+{
+  "id": "2016-open-C",
+  "tier": "full",
+  "year": 2016,
+  "round": "open",
+  "letter": "C",
+  "title": "The Curious Case of Estonian",
+  "authors": [
+    "Praveen Venkataramana"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "morphology"
+  ],
+  "formTag": "table completion",
+  "difficulty": "intro",
+  "languages": [
+    "Estonian"
+  ],
+  "officialPoints": 5,
+  "officialTimeMinutes": 10,
+  "bodyHtml": "<p>Estonian is a Uralic language closely related to Finnish; it is spoken by over a million people in Estonia. In Estonian, as in many languages around the world, nouns (and adjectives) take different forms (called \"cases\") according to their role in the sentence. For example, in the sentence below, there are three forms of the word <em>horse</em>. This is similar to the difference between <em>he, him,</em> and <em>his</em> in English.</p>\n<div class=\"table-scroll\"><table><tbody><tr><td><span class=\"data\">Hobune</span></td><td><span class=\"data\">nägi</span></td><td><span class=\"data\">hobust</span></td><td><span class=\"data\">hobusega.</span></td></tr><tr><td>horse.nominative</td><td>saw</td><td>horse.partitive</td><td>horse.comitative</td></tr></tbody></table></div>\n<p>'A horse saw a horse with a horse.'</p>\n<p>Estonian nouns have a lot of different forms depending on their case and their number (singular or plural). The table below illustrates various forms for different nouns and adjectives; the exact meaning of these different cases is not relevant to this problem. Be careful, however: exactly four of the forms in the table below are mistakes! Note that <span class=\"data\">õ, ä, ö,</span> and <span class=\"data\">ü</span> are vowels.</p>\n<div class=\"table-scroll\"><table><thead><tr><th>English translation</th><th>Genitive Singular</th><th>Partitive Singular</th><th>Adessive Singular</th><th>Nominative Plural</th><th>Genitive Plural</th><th>Adessive Plural</th></tr></thead><tbody>\n<tr><td>'house'</td><td><span class=\"data\">maja</span></td><td><span class=\"data\">maja</span></td><td><span class=\"data\">majal</span></td><td><span class=\"data\">majad</span></td><td><span class=\"data\">majade</span></td><td><span class=\"data\">majadel</span></td></tr>\n<tr><td>'nest'</td><td><span class=\"data\">pesa</span></td><td><span class=\"data\">pesa</span></td><td><span class=\"data\">pesal</span></td><td><span class=\"data\">pesad</span></td><td><span class=\"data\">pesade</span></td><td><span class=\"data\">pesadel</span></td></tr>\n<tr><td>'singer'</td><td><span class=\"data\">laulja</span></td><td><span class=\"data\">laulja</span></td><td><span class=\"data\">lauljal</span></td><td><span class=\"data\">lauljad</span></td><td><span class=\"data\">lauljate</span></td><td><span class=\"data\">lauljatel</span></td></tr>\n<tr><td>'restaurant'</td><td><span class=\"data\">söökla</span></td><td><span class=\"data\">sööklat</span></td><td><span class=\"data\">sööklal</span></td><td><span class=\"data\">sööklad</span></td><td><span class=\"data\">sööklate</span></td><td><span class=\"data\">sööklatel</span></td></tr>\n<tr><td>'name'</td><td><span class=\"data\">nime</span></td><td><span class=\"data\">nime</span></td><td><span class=\"data\">nimel</span></td><td><span class=\"data\">nimed</span></td><td><span class=\"data\">nimede</span></td><td><span class=\"data\">nimedel</span></td></tr>\n<tr><td>'ice'</td><td><span class=\"data\">jää</span></td><td><span class=\"data\">jääd</span></td><td><span class=\"data\">jääl</span></td><td><span class=\"data\">jääd</span></td><td><span class=\"data\">jääde</span></td><td><span class=\"data\">jäädel</span></td></tr>\n<tr><td>'summer'</td><td><span class=\"data\">suve</span></td><td><span class=\"data\">suve</span></td><td><span class=\"data\">suvel</span></td><td><span class=\"data\">suved</span></td><td><span class=\"data\">suvede</span></td><td><span class=\"data\">suvedel</span></td></tr>\n<tr><td>'white'</td><td><span class=\"data\">valge</span></td><td><span class=\"data\">valget</span></td><td><span class=\"data\">valgel</span></td><td><span class=\"data\">valged</span></td><td><span class=\"data\">valgete</span></td><td><span class=\"data\">valgetel</span></td></tr>\n<tr><td>'sister'</td><td><span class=\"data\">õe</span></td><td><span class=\"data\">õde</span></td><td><span class=\"data\">õdel</span></td><td><span class=\"data\">õed</span></td><td><span class=\"data\">õdede</span></td><td><span class=\"data\">õdedel</span></td></tr>\n<tr><td>'road'</td><td><span class=\"data\">tee</span></td><td><span class=\"data\">teed</span></td><td><span class=\"data\">teel</span></td><td><span class=\"data\">teed</span></td><td><span class=\"data\">teede</span></td><td><span class=\"data\">teedel</span></td></tr>\n<tr><td>'big'</td><td><span class=\"data\">suur</span></td><td><span class=\"data\">suurt</span></td><td><span class=\"data\">suurel</span></td><td><span class=\"data\">suured</span></td><td><span class=\"data\">suurte</span></td><td><span class=\"data\">suurtel</span></td></tr>\n<tr><td>'yellow'</td><td><span class=\"data\">kollase</span></td><td><span class=\"data\">kollaset</span></td><td><span class=\"data\">kollasel</span></td><td><span class=\"data\">kollased</span></td><td><span class=\"data\">kollaste</span></td><td><span class=\"data\">kollastel</span></td></tr>\n<tr><td>'man'</td><td><span class=\"data\">mehe</span></td><td><span class=\"data\">meest</span></td><td><span class=\"data\">mehel</span></td><td><span class=\"data\">mehed</span></td><td><span class=\"data\">meeste</span></td><td><span class=\"data\">meestel</span></td></tr>\n<tr><td>'bean'</td><td><span class=\"data\">oa</span></td><td><span class=\"data\">uba</span></td><td><span class=\"data\">oal</span></td><td><span class=\"data\">oad</span></td><td><span class=\"data\">ubade</span></td><td><span class=\"data\">ubadel</span></td></tr>\n<tr><td>'reason'</td><td><span class=\"data\">põhjuse</span></td><td><span class=\"data\">põhjust</span></td><td><span class=\"data\">põhjusel</span></td><td><span class=\"data\">põhjused</span></td><td><span class=\"data\">põhjuste</span></td><td><span class=\"data\">põhjustel</span></td></tr>\n<tr><td>'story'</td><td><span class=\"data\">loo</span></td><td><span class=\"data\">lugu</span></td><td><span class=\"data\">lool</span></td><td><span class=\"data\">lood</span></td><td><span class=\"data\">lugude</span></td><td><span class=\"data\">lugudel</span></td></tr>\n<tr><td>'island'</td><td><span class=\"data\">saare</span></td><td><span class=\"data\">saart</span></td><td><span class=\"data\">saarel</span></td><td><span class=\"data\">saared</span></td><td><span class=\"data\">saarte</span></td><td><span class=\"data\">saartel</span></td></tr>\n</tbody></table></div>\n<p><strong>C1.</strong> Write down the <em>correct</em> forms of the four incorrect words.</p>\n<p><strong>C2.</strong> Fill in the blanks in the table below.</p>\n<div class=\"table-scroll\"><table><thead><tr><th>English translation</th><th>Genitive Singular</th><th>Partitive Singular</th><th>Adessive Singular</th><th>Nominative Plural</th><th>Genitive Plural</th><th>Adessive Plural</th></tr></thead><tbody>\n<tr><td>'moon'</td><td><span class=\"blank\" data-q=\"C2.a\"></span></td><td><span class=\"data\">kuud</span></td><td><span class=\"data\">kuul</span></td><td><span class=\"blank\" data-q=\"C2.b\"></span></td><td><span class=\"blank\" data-q=\"C2.c\"></span></td><td><span class=\"blank\" data-q=\"C2.d\"></span></td></tr>\n<tr><td>'human'</td><td><span class=\"data\">inimese</span></td><td><span class=\"blank\" data-q=\"C2.e\"></span></td><td><span class=\"blank\" data-q=\"C2.f\"></span></td><td><span class=\"blank\" data-q=\"C2.g\"></span></td><td><span class=\"data\">inimeste</span></td><td><span class=\"blank\" data-q=\"C2.h\"></span></td></tr>\n<tr><td>'fish'</td><td><span class=\"blank\" data-q=\"C2.i\"></span></td><td><span class=\"data\">kala</span></td><td><span class=\"blank\" data-q=\"C2.j\"></span></td><td><span class=\"data\">kalad</span></td><td><span class=\"blank\" data-q=\"C2.k\"></span></td><td><span class=\"blank\" data-q=\"C2.l\"></span></td></tr>\n</tbody></table></div>",
+  "assets": [],
+  "questions": [
+    {
+      "id": "C1.1",
+      "promptHtml": "<p>The Partitive Singular of 'singer' is printed as <span class=\"data\">laulja</span>. Write the correct form.</p>",
+      "part": "C1",
+      "partPrompt": "Exactly four forms in the big table are mistakes. Write down the correct form of each one.",
+      "gradingMode": "exact",
+      "answerKey": "lauljat",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.2",
+      "promptHtml": "<p>The Adessive Singular of 'sister' is printed as <span class=\"data\">õdel</span>. Write the correct form.</p>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "õel",
+      "acceptedVariants": [
+        "oel"
+      ],
+      "points": 0.5
+    },
+    {
+      "id": "C1.3",
+      "promptHtml": "<p>The Partitive Singular of 'yellow' is printed as <span class=\"data\">kollaset</span>. Write the correct form.</p>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "kollast",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C1.4",
+      "promptHtml": "<p>The Genitive Singular of 'big' is printed as <span class=\"data\">suur</span>. Write the correct form.</p>",
+      "part": "C1",
+      "gradingMode": "exact",
+      "answerKey": "suure",
+      "acceptedVariants": [],
+      "points": 0.5
+    },
+    {
+      "id": "C2.a",
+      "promptHtml": "<p>(a) 'moon', Genitive Singular</p>",
+      "part": "C2",
+      "partPrompt": "Fill in the blanks in the second table.",
+      "gradingMode": "exact",
+      "answerKey": "kuu",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.b",
+      "promptHtml": "<p>(b) 'moon', Nominative Plural</p>",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "kuud",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.c",
+      "promptHtml": "<p>(c) 'moon', Genitive Plural</p>",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "kuude",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.d",
+      "promptHtml": "<p>(d) 'moon', Adessive Plural</p>",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "kuudel",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.e",
+      "promptHtml": "<p>(e) 'human', Partitive Singular</p>",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "inimest",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.f",
+      "promptHtml": "<p>(f) 'human', Adessive Singular</p>",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "inimesel",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.g",
+      "promptHtml": "<p>(g) 'human', Nominative Plural</p>",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "inimesed",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.h",
+      "promptHtml": "<p>(h) 'human', Adessive Plural</p>",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "inimestel",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.i",
+      "promptHtml": "<p>(i) 'fish', Genitive Singular</p>",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "kala",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.j",
+      "promptHtml": "<p>(j) 'fish', Adessive Singular</p>",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "kalal",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.k",
+      "promptHtml": "<p>(k) 'fish', Genitive Plural</p>",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "kalade",
+      "acceptedVariants": [],
+      "points": 0.25
+    },
+    {
+      "id": "C2.l",
+      "promptHtml": "<p>(l) 'fish', Adessive Plural</p>",
+      "part": "C2",
+      "gradingMode": "exact",
+      "answerKey": "kaladel",
+      "acceptedVariants": [],
+      "points": 0.25
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Do not think about what the cases mean. Just compare the six Estonian forms in a single row: several of them are one letter longer than another form in the same row.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "Four of the columns are predictable from the other two. The Adessive Singular and the Nominative Plural are built from the Genitive Singular by adding one consonant each; the Genitive Plural is built from the Partitive Singular; and the Adessive Plural is the Genitive Plural plus one consonant. A cell is a mistake when it breaks one of these relationships.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try the 'reason' row, which is not one of the graded items. Genitive Singular põhjuse plus -l gives põhjusel (matches the Adessive Singular) and plus -d gives põhjused (matches the Nominative Plural). Partitive Singular põhjust plus -e gives põhjuste (matches the Genitive Plural), and that plus -l gives põhjustel. Every cell in that row checks out, so the row is clean. Notice that when the Partitive Singular ends in a vowel instead of -t, the Genitive Plural adds -de instead of -e (compare maja and majade).",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>What a \"case\" is</h3><p>A case is just a shape a noun takes depending on its job in the sentence. English does a tiny bit of this with pronouns: <em>he</em> (subject), <em>him</em> (object), <em>his</em> (possessor). Estonian does it with every noun and adjective, and there are a lot of shapes. The good news for this problem is that you never need to know what \"adessive\" or \"partitive\" mean. You only need to see how the columns relate to each other.</p>\n<h3>Step 1: find the columns that are just one letter longer</h3><p>Look at the 'house' row: <span class=\"data\">maja, maja, majal, majad, majade, majadel</span>. The third form is the first plus <span class=\"data\">-l</span>. The fourth is the first plus <span class=\"data\">-d</span>. The sixth is the fifth plus <span class=\"data\">-l</span>. Check 'nest' and the same thing happens: <span class=\"data\">pesa, pesal, pesad, pesade, pesadel</span>.</p><p>So the working rules are:</p><ul><li>Adessive Singular = Genitive Singular + <span class=\"data\">l</span></li><li>Nominative Plural = Genitive Singular + <span class=\"data\">d</span></li><li>Adessive Plural = Genitive Plural + <span class=\"data\">l</span></li></ul>\n<h3>Step 2: connect the Genitive Plural to the Partitive Singular</h3><p>The Genitive Plural is <em>not</em> based on the Genitive Singular. Compare 'man': Genitive Singular <span class=\"data\">mehe</span>, but Genitive Plural <span class=\"data\">meeste</span>. What it does match is the Partitive Singular <span class=\"data\">meest</span> plus <span class=\"data\">-e</span>. The same works for 'story' (<span class=\"data\">lugu</span> plus <span class=\"data\">-de</span> gives <span class=\"data\">lugude</span>) and 'bean' (<span class=\"data\">uba</span> plus <span class=\"data\">-de</span> gives <span class=\"data\">ubade</span>).</p><p>The choice between <span class=\"data\">-e</span> and <span class=\"data\">-de</span> depends on the end of the Partitive Singular: if it ends in <span class=\"data\">t</span>, add <span class=\"data\">-e</span> (<span class=\"data\">valget</span> gives <span class=\"data\">valgete</span>); if it ends in a vowel, add <span class=\"data\">-de</span> (<span class=\"data\">nime</span> gives <span class=\"data\">nimede</span>). Either way, the Genitive Plural tells you the Partitive Singular and vice versa.</p>\n<h3>Step 3: hunt for the four broken cells</h3><p>Now scan every row and see whether all four relationships hold.</p><ul><li><strong>'singer'</strong>: Genitive Plural <span class=\"data\">lauljate</span> ends in <span class=\"data\">-te</span>, so the Partitive Singular must end in <span class=\"data\">t</span>: it should be <span class=\"data\">lauljat</span>, not <span class=\"data\">laulja</span>. (Also, <span class=\"data\">lauljatel</span> is <span class=\"data\">lauljate</span> + <span class=\"data\">l</span>, confirming the Genitive Plural is fine.)</li><li><strong>'sister'</strong>: Genitive Singular is <span class=\"data\">õe</span>, and the Nominative Plural <span class=\"data\">õed</span> agrees with it. So the Adessive Singular must be <span class=\"data\">õe</span> + <span class=\"data\">l</span> = <span class=\"data\">õel</span>, not <span class=\"data\">õdel</span>.</li><li><strong>'yellow'</strong>: Genitive Plural <span class=\"data\">kollaste</span> means the Partitive Singular ends in <span class=\"data\">st</span>: <span class=\"data\">kollast</span>, not <span class=\"data\">kollaset</span>. Compare 'big', whose Partitive Singular is <span class=\"data\">suurt</span> and Genitive Plural <span class=\"data\">suurte</span>.</li><li><strong>'big'</strong>: the Adessive Singular <span class=\"data\">suurel</span> and Nominative Plural <span class=\"data\">suured</span> both point to a Genitive Singular <span class=\"data\">suure</span>, so the printed <span class=\"data\">suur</span> is wrong.</li></ul><p>That is exactly four mistakes, so you can stop.</p>\n<h3>Step 4: fill the small table</h3><p><strong>'moon'.</strong> You are given Partitive Singular <span class=\"data\">kuud</span> and Adessive Singular <span class=\"data\">kuul</span>. Strip the <span class=\"data\">-l</span> from the adessive: Genitive Singular is <span class=\"data\">kuu</span> (a). Then Nominative Plural = <span class=\"data\">kuu</span> + <span class=\"data\">d</span> = <span class=\"data\">kuud</span> (b) - it happens to look the same as the partitive, just as with 'ice' and 'road'. Genitive Plural = <span class=\"data\">kuud</span> + <span class=\"data\">e</span> = <span class=\"data\">kuude</span> (c), and Adessive Plural = <span class=\"data\">kuudel</span> (d).</p><p><strong>'human'.</strong> Genitive Singular <span class=\"data\">inimese</span> gives Adessive Singular <span class=\"data\">inimesel</span> (f) and Nominative Plural <span class=\"data\">inimesed</span> (g). Genitive Plural <span class=\"data\">inimeste</span> ends in <span class=\"data\">-te</span>, so the Partitive Singular is <span class=\"data\">inimest</span> (e), and the Adessive Plural is <span class=\"data\">inimestel</span> (h). This row behaves exactly like 'yellow'.</p><p><strong>'fish'.</strong> Partitive Singular <span class=\"data\">kala</span> ends in a vowel, and Nominative Plural <span class=\"data\">kalad</span> shows the Genitive Singular is <span class=\"data\">kala</span> (i), just like 'house'. So Adessive Singular <span class=\"data\">kalal</span> (j), Genitive Plural <span class=\"data\">kala</span> + <span class=\"data\">de</span> = <span class=\"data\">kalade</span> (k), Adessive Plural <span class=\"data\">kaladel</span> (l).</p>\n<h3>The moral</h3><p>Estonian stems can change unpredictably (<span class=\"data\">õe</span> versus <span class=\"data\">õde</span>, <span class=\"data\">loo</span> versus <span class=\"data\">lugu</span>), but the endings are highly regular, and each irregular stem shows up in a fixed set of columns. Once you know which column each other column is built from, you can both spot errors and generate missing forms without knowing a word of Estonian.</p>",
+  "reviewStatus": "drafted",
+  "_reviewNotes": "All answer keys taken from the official solution page. The booklet does not label the four C1 items, so ids C1.1-C1.4 were assigned in the order the official solution lists them (laulja, õdel, kollaset, suur); each prompt names the exact word and cell so grading stays unambiguous. Points: 5 total split as 0.5 per C1 item (2) and 0.25 per C2 blank (3). No figures in this problem.",
+  "_parkReasons": [
+    {
+      "kind": "diff",
+      "path": "q:c1.3:key",
+      "note": "arbitration returned UNRESOLVED"
+    },
+    {
+      "kind": "diff",
+      "path": "q:c1.4:key",
+      "note": "arbitration returned UNRESOLVED"
+    },
+    {
+      "kind": "diff",
+      "path": "cells:count",
+      "note": "arbitration returned UNRESOLVED"
+    },
+    {
+      "kind": "diff",
+      "path": "data:count",
+      "note": "arbitration returned UNRESOLVED"
+    }
+  ]
+}

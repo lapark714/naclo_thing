@@ -1,0 +1,98 @@
+{
+  "id": "2016-open-A",
+  "tier": "full",
+  "year": 2016,
+  "round": "open",
+  "letter": "A",
+  "title": "Tangled Up In Nots",
+  "authors": [
+    "Bozhidar Bozhanov"
+  ],
+  "sourcePdfUrl": "https://naclo.org/practice.php",
+  "conceptTags": [
+    "syntax",
+    "morphology"
+  ],
+  "formTag": "rosetta-stone translation",
+  "difficulty": "intro",
+  "languages": [
+    "Malay"
+  ],
+  "officialPoints": 5,
+  "officialTimeMinutes": 10,
+  "bodyHtml": "<p>Malay is an Austronesian language spoken by the Malay people and people of other ethnic groups who reside in Malaysia (indicated on the map below), southern Thailand, the Philippines, and Singapore. Below are eight sentences in Malay, along with their English translations:</p>\n<div class=\"table-scroll\">\n<table>\n<thead>\n<tr><th><em>Malay</em></th><th><em>English</em></th></tr>\n</thead>\n<tbody>\n<tr><td><span class=\"data\">Gadis cantik itu tidak kaya.</span></td><td>The beautiful girl is not rich.</td></tr>\n<tr><td><span class=\"data\">Penyanyi itu tidak bahagia.</span></td><td>The singer is not happy.</td></tr>\n<tr><td><span class=\"data\">Kekayaan itu bukan dari bapanya.</span></td><td>The wealth is not from his father.</td></tr>\n<tr><td><span class=\"data\">Wang bukan kebahagiaan.</span></td><td>Money is not happiness.</td></tr>\n<tr><td><span class=\"data\">Kereta itu tidak datang dari medan itu.</span></td><td>The car is not coming from the field.</td></tr>\n<tr><td><span class=\"data\">Manusia itu depan rumah itu bukan penyanyi.</span></td><td>The man in front of the house is not a singer.</td></tr>\n<tr><td><span class=\"data\">Hadiah itu bukan untuk bapa itu.</span></td><td>The gift is not for the father.</td></tr>\n<tr><td><span class=\"data\">Gadis bahagia itu tidak menangis.</span></td><td>The happy girl is not crying.</td></tr>\n</tbody>\n</table>\n</div>\n<p><strong>A1.</strong> Translate the following sentences into Malay.</p>\n<ol type=\"a\">\n<li>Beauty is not a gift.</li>\n<li>The rich girl is not a singer.</li>\n<li>His wealth is not for the girl.</li>\n<li>The man is not coming.</li>\n<li>The gift from the singer is not beautiful.</li>\n</ol>\n<figure><img src=\"/content-assets/2016-open-A-map.png\" alt=\"World map with country names labelled; Malaysia is outlined in a box in Southeast Asia\" /></figure>",
+  "assets": [
+    {
+      "src": "/content-assets/2016-open-A-map.png",
+      "alt": "World map with country names labelled; Malaysia is outlined in a box in Southeast Asia"
+    }
+  ],
+  "questions": [
+    {
+      "id": "A1.a",
+      "promptHtml": "<p>Beauty is not a gift.</p>",
+      "part": "A1",
+      "partPrompt": "Translate the following sentences into Malay.",
+      "gradingMode": "exact",
+      "answerKey": "Kecantikan bukan hadiah.",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A1.b",
+      "promptHtml": "<p>The rich girl is not a singer.</p>",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "Gadis kaya itu bukan penyanyi.",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A1.c",
+      "promptHtml": "<p>His wealth is not for the girl.</p>",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "Kekayaannya bukan untuk gadis itu.",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A1.d",
+      "promptHtml": "<p>The man is not coming.</p>",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "Manusia itu tidak datang.",
+      "acceptedVariants": [],
+      "points": 1
+    },
+    {
+      "id": "A1.e",
+      "promptHtml": "<p>The gift from the singer is not beautiful.</p>",
+      "part": "A1",
+      "gradingMode": "exact",
+      "answerKey": "Hadiah itu dari penyanyi itu tidak cantik.",
+      "acceptedVariants": [],
+      "points": 1
+    }
+  ],
+  "hints": [
+    {
+      "tier": 1,
+      "text": "Two different Malay words are translated as \"is not\": tidak and bukan. Sort the eight example sentences into two groups by which negator they use, then look at what kind of word comes right after the negator.",
+      "xpCost": 1
+    },
+    {
+      "tier": 2,
+      "text": "tidak appears when the next word is an adjective or a verb; bukan appears when the next thing is a noun phrase or a preposition. Also notice that \"the\" is not a separate word before the noun: itu follows the noun (and any adjective), and possession is shown by adding to the end of the noun.",
+      "xpCost": 2
+    },
+    {
+      "tier": 3,
+      "text": "Try a sentence that is not asked for, such as \"The car is not happiness.\" The subject is a noun phrase, so \"the car\" is kereta itu; the thing after the negator is a noun, so choose bukan; \"happiness\" is the abstract noun built from bahagia by wrapping it in ke...an, giving kebahagiaan. Put those in subject-negator-complement order.",
+      "xpCost": 3
+    }
+  ],
+  "explanationHtml": "<h3>Line up the words</h3>\n<p>Start with a pair that differ in only one place. <span class=\"data\">Gadis cantik itu tidak kaya</span> is \"The beautiful girl is not rich\" and <span class=\"data\">Gadis bahagia itu tidak menangis</span> is \"The happy girl is not crying\". So <span class=\"data\">gadis</span> = girl, <span class=\"data\">cantik</span> = beautiful, <span class=\"data\">kaya</span> = rich, <span class=\"data\">bahagia</span> = happy, <span class=\"data\">menangis</span> = crying. From the other lines: <span class=\"data\">penyanyi</span> = singer, <span class=\"data\">hadiah</span> = gift, <span class=\"data\">bapa</span> = father, <span class=\"data\">manusia</span> = man, <span class=\"data\">kereta</span> = car, <span class=\"data\">rumah</span> = house, <span class=\"data\">medan</span> = field, <span class=\"data\">wang</span> = money, <span class=\"data\">datang</span> = coming, <span class=\"data\">dari</span> = from, <span class=\"data\">untuk</span> = for, <span class=\"data\">depan</span> = in front of.</p>\n<h3>Where does \"the\" go?</h3>\n<p>English \"the\" has no separate word before the noun. Instead <span class=\"data\">itu</span> comes <em>after</em> the noun, and after any adjective too: <span class=\"data\">gadis cantik itu</span> is literally \"girl beautiful the\". Notice that <span class=\"data\">Wang bukan kebahagiaan</span> (\"Money is not happiness\") has no <span class=\"data\">itu</span> at all, because neither noun is \"the\" something. So put <span class=\"data\">itu</span> in exactly where English has \"the\", and leave it out where English has \"a\" or nothing.</p>\n<h3>Abstract nouns: ke...an</h3>\n<p><span class=\"data\">kaya</span> = rich, but <span class=\"data\">kekayaan</span> = wealth. <span class=\"data\">bahagia</span> = happy, but <span class=\"data\">kebahagiaan</span> = happiness. The pattern is a prefix <span class=\"data\">ke-</span> plus a suffix <span class=\"data\">-an</span> wrapped around the adjective. This is called a circumfix: one piece of a word attaches at the front and another at the back at the same time. So \"beauty\" from <span class=\"data\">cantik</span> is <span class=\"data\">kecantikan</span>.</p>\n<h3>Possession: -nya</h3>\n<p>\"his father\" is <span class=\"data\">bapanya</span> - the possessor is glued onto the end of the noun as <span class=\"data\">-nya</span>, not written as a separate word in front. So \"his wealth\" is <span class=\"data\">kekayaannya</span> (<span class=\"data\">kekayaan</span> + <span class=\"data\">-nya</span>).</p>\n<h3>The real puzzle: tidak or bukan?</h3>\n<p>Group the examples by negator:</p>\n<ul>\n<li><span class=\"data\">tidak</span>: before <span class=\"data\">kaya</span> (adjective), <span class=\"data\">bahagia</span> (adjective), <span class=\"data\">datang</span> (verb), <span class=\"data\">menangis</span> (verb).</li>\n<li><span class=\"data\">bukan</span>: before <span class=\"data\">dari bapanya</span> (preposition phrase), <span class=\"data\">kebahagiaan</span> (noun), <span class=\"data\">penyanyi</span> (noun), <span class=\"data\">untuk bapa itu</span> (preposition phrase).</li>\n</ul>\n<p>The rule: use <span class=\"data\">tidak</span> when an adjective or a verb follows, and <span class=\"data\">bukan</span> otherwise (a noun phrase or a preposition phrase). English uses \"is not\" for all of these, so this is the trap the title jokes about.</p>\n<h3>Putting the answers together</h3>\n<ul>\n<li>\"Beauty is not a gift\": <span class=\"data\">kecantikan</span>, no <span class=\"data\">itu</span> (no \"the\"), and a noun follows the negator, so <span class=\"data\">bukan</span>: <span class=\"data\">Kecantikan bukan hadiah.</span></li>\n<li>\"The rich girl is not a singer\": noun then adjective then <span class=\"data\">itu</span>, then a noun after the negator: <span class=\"data\">Gadis kaya itu bukan penyanyi.</span></li>\n<li>\"His wealth is not for the girl\": abstract noun plus <span class=\"data\">-nya</span>, then a preposition phrase, so <span class=\"data\">bukan</span>: <span class=\"data\">Kekayaannya bukan untuk gadis itu.</span></li>\n<li>\"The man is not coming\": a verb follows, so <span class=\"data\">tidak</span>: <span class=\"data\">Manusia itu tidak datang.</span></li>\n<li>\"The gift from the singer is not beautiful\": the subject is <span class=\"data\">hadiah itu dari penyanyi itu</span> (compare <span class=\"data\">Manusia itu depan rumah itu</span>, where the modifying phrase follows the noun), and an adjective follows the negator: <span class=\"data\">Hadiah itu dari penyanyi itu tidak cantik.</span></li>\n</ul>",
+  "reviewStatus": "published",
+  "_reviewNotes": "Answer keys taken directly from the official solution page. The official explanation contains an apparent typo (\"Only 'teman' (his) precedes the noun\") - the data actually show possession as the suffix -nya, which is what my explanation says; reviewer may wish to check.\nCROP /content-assets/2016-open-A-map.png page=1 x=13 y=61 w=74 h=32"
+}
