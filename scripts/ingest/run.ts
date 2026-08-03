@@ -26,15 +26,16 @@ import { decide, writeRecord, renderReport, type Outcome } from "./publish";
 import type { Flag } from "./types";
 
 /**
- * Arbitration is one API call per flag. Past this many flags on a single
- * problem, the two passes have not disagreed on a value — they have
- * disagreed on the shape of the problem itself (2016-B: one pass read part
- * B1 as 3 blanks, the other as 4, turning 6 questions into 18 and every
- * field comparison into a flag). No per-field arbitration call can rescue
- * that; a human has to re-read the problem either way. Skipping straight to
- * park saves the cost of finding that out the expensive way.
+ * Arbitration is one API call per flag. A problem with a handful of
+ * disagreements is the only kind arbitration has any realistic chance of
+ * rescuing. The first run resolved zero of sixteen attempts, confirming that
+ * the arbitration prompt's bias toward UNRESOLVED is working as designed: a
+ * parked problem costs a few minutes of review; a wrong answer key reaches a
+ * student. Capping low keeps the possibility of a cheap rescue on a near-clean
+ * problem while refusing to pay per-flag on problems that are going to park
+ * regardless.
  */
-const ARBITRATION_FLAG_CAP = 25;
+const ARBITRATION_FLAG_CAP = 5;
 
 function loadEnv() {
   if (!existsSync(".env")) return;
