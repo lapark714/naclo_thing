@@ -41,9 +41,9 @@ const CSS_FILE = "app/globals.css";
    Glyph coverage
    --------------------------------------------------------------------------- */
 
-type Range = [number, number];
+export type Range = [number, number];
 
-function coveredRanges(): Range[] {
+export function coveredRanges(): Range[] {
   const css = readFileSync(CSS_FILE, "utf8");
   const ranges: Range[] = [
     [0x09, 0x0a], // tab, newline
@@ -73,7 +73,7 @@ function coveredRanges(): Range[] {
   return ranges;
 }
 
-function uncoveredChars(text: string, ranges: Range[]): Map<string, number> {
+export function uncoveredChars(text: string, ranges: Range[]): Map<string, number> {
   const bad = new Map<string, number>();
   for (const ch of text) {
     const cp = ch.codePointAt(0)!;
@@ -85,7 +85,7 @@ function uncoveredChars(text: string, ranges: Range[]): Map<string, number> {
 }
 
 /** Every human-visible string in a record, flattened. */
-function allText(value: unknown): string {
+export function allText(value: unknown): string {
   if (typeof value === "string") return value;
   if (Array.isArray(value)) return value.map(allText).join("");
   if (value && typeof value === "object") {
@@ -342,4 +342,4 @@ function main() {
   );
 }
 
-main();
+if (import.meta.url === `file://${process.argv[1]}`) main();
