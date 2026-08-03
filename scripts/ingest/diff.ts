@@ -18,6 +18,16 @@
  * manifest.ts before either pass runs — it is never left to the model — so
  * there is nothing to cross-check here, only noise to skip.
  *
+ * Data spans (data:count, data:<n>) are excluded for a different reason: not
+ * because they don't matter, but because witness.ts already owns them with a
+ * stronger check. Comparing pass A's span count against pass B's only tells
+ * you the two models wrapped class="data" markup differently — a convention
+ * choice, in the same family as acceptedVariants and per-question points.
+ * The witness check instead verifies every one of pass A's spans against the
+ * booklet's own pdftotext output, an independent source that cannot
+ * hallucinate a glyph. That is a strictly stronger gate than two models
+ * disagreeing, so this layer leaves language-data correctness to it entirely.
+ *
  * Questions are paired by POSITION, not by id. Both passes transcribe the
  * booklet's questions in the order it prints them, but they routinely invent
  * different id schemes for the same question set — 2016-D had pass A write
@@ -75,8 +85,6 @@ export function factualLayer(p: Problem): Map<string, string> {
 
   m.set(`cells:count`, String(tableCells(p.bodyHtml).length));
   tableCells(p.bodyHtml).forEach((cell, i) => m.set(`cell:${i}`, cell));
-  m.set(`data:count`, String(dataSpans(p.bodyHtml).length));
-  dataSpans(p.bodyHtml).forEach((d, i) => m.set(`data:${i}`, d));
 
   // Counts, not src names: the two passes name their own asset files, so a
   // filename difference is not a defect. A count mismatch means one pass saw
@@ -136,12 +144,10 @@ export function diffRecords(a: Problem, b: Problem): Flag[] {
   const fb = factualLayer(b);
   const flags: Flag[] = diffQuestions(a, b);
   const skipCells = fa.get("cells:count") !== fb.get("cells:count");
-  const skipData = fa.get("data:count") !== fb.get("data:count");
 
   for (const [path, va] of fa) {
-    // Skip positional comparisons for cells/data if count mismatches, but always compare the counts themselves
-    if ((path.startsWith("cell:") && !path.endsWith(":count") && skipCells) ||
-        (path.startsWith("data:") && !path.endsWith(":count") && skipData)) {
+    // Skip positional cell comparisons if the cell count mismatches, but always compare the count itself
+    if (path.startsWith("cell:") && !path.endsWith(":count") && skipCells) {
       continue;
     }
 
@@ -150,9 +156,8 @@ export function diffRecords(a: Problem, b: Problem): Flag[] {
     else if (vb !== va) flags.push({ kind: "diff", path, a: va, b: vb });
   }
   for (const [path, vb] of fb) {
-    // Skip positional comparisons for cells/data if count mismatches, but always compare the counts themselves
-    if ((path.startsWith("cell:") && !path.endsWith(":count") && skipCells) ||
-        (path.startsWith("data:") && !path.endsWith(":count") && skipData)) {
+    // Skip positional cell comparisons if the cell count mismatches, but always compare the count itself
+    if (path.startsWith("cell:") && !path.endsWith(":count") && skipCells) {
       continue;
     }
 

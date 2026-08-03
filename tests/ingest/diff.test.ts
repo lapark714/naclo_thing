@@ -239,15 +239,12 @@ test("cell count mismatch produces exactly one flag, skips positional comparison
   assert.equal(flags[0].b, "1");
 });
 
-test("data span count mismatch produces exactly one flag, skips positional comparison", () => {
+test("records differing only in their data spans produce no flags: the witness owns that check", () => {
   const flags = diffRecords(
     record({ bodyHtml: '<p><span class="data">a</span><span class="data">b</span></p>' } as Partial<Problem>),
     record({ bodyHtml: '<p><span class="data">x</span></p>' } as Partial<Problem>),
   );
-  assert.equal(flags.length, 1);
-  assert.equal(flags[0].path, "data:count");
-  assert.equal(flags[0].a, "2");
-  assert.equal(flags[0].b, "1");
+  assert.deepEqual(flags, []);
 });
 
 test("per-index cell comparison still happens when counts match", () => {
