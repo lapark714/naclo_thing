@@ -40,6 +40,38 @@ export function parseRegions(reviewNotes: string): Map<string, Region> {
   return out;
 }
 
+/**
+ * The drafting model must keep two lists in sync: the `assets` array and the
+ * CROP lines in `_reviewNotes`. Nothing else checks this — validate.ts only
+ * validates assets a record actually declares, so a CROP line with no asset
+ * entry produces no crop and no flag on its own, and an asset with no CROP
+ * line has nothing to crop it with. Either drift is silent until a student
+ * hits a missing figure. This checks both directions before any cropping runs.
+ */
+export function reconcileRegions(record: Problem, reviewNotes: string): Flag[] {
+  const flags: Flag[] = [];
+  const regions = parseRegions(reviewNotes);
+  const assetSrcs = new Set(record.assets.map((a) => a.src));
+
+  for (const src of regions.keys()) {
+    if (!assetSrcs.has(src)) {
+      flags.push({
+        kind: "figure", path: src,
+        note: "a crop region was described for an asset the record does not declare",
+      });
+    }
+  }
+  for (const asset of record.assets) {
+    if (!regions.has(asset.src)) {
+      flags.push({
+        kind: "figure", path: asset.src,
+        note: "the record declares an asset with no crop region described",
+      });
+    }
+  }
+  return flags;
+}
+
 export function cropCommand(
   file: string, region: Region, pageW: number, pageH: number, outBase: string,
 ): string[] {
@@ -110,11 +142,11 @@ async function confirm(client: Anthropic, imagePath: string, alt: string): Promi
 export async function cropFigures(
   client: Anthropic, target: Target, record: Problem,
 ): Promise<{ record: Problem; flags: Flag[] }> {
-  const flags: Flag[] = [];
   // _reviewNotes is written by the drafting pass (Stage 3) but is not part of
   // the published schema, so it only exists as an extra property on the raw
   // record — hence the cast rather than a schema field.
   const notes = String((record as unknown as { _reviewNotes?: string })._reviewNotes ?? "");
+  const flags: Flag[] = reconcileRegions(record, notes);
   const regions = parseRegions(notes);
 
   mkdirSync(ASSETS_DIR, { recursive: true });
@@ -128,10 +160,8 @@ export async function cropFigures(
     if (existsSync(onDisk)) continue;
 
     const region = regions.get(asset.src);
-    if (!region) {
-      flags.push({ kind: "figure", path: asset.src, note: "no CROP line in _reviewNotes" });
-      continue;
-    }
+    // Already flagged by reconcileRegions above — nothing to crop with here.
+    if (!region) continue;
 
     // region.page numbers pages within the problem the model was shown (1 =
     // the problem's first page); target.problem.pages holds the real booklet

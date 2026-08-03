@@ -1,6 +1,18 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { parseRegions, cropCommand } from "../../scripts/ingest/figures";
+import { parseRegions, cropCommand, reconcileRegions } from "../../scripts/ingest/figures";
+import type { Problem } from "../../content/schema";
+
+function record(assets: { src: string; alt: string }[]): Problem {
+  return {
+    id: "x", tier: "full", year: 2016, round: "open", letter: "A", title: "T",
+    authors: ["X"], sourcePdfUrl: "https://naclo.org/practice.php",
+    conceptTags: ["phonology"], formTag: "rule-discovery", difficulty: "intro",
+    languages: [], officialPoints: 5, officialTimeMinutes: 10,
+    bodyHtml: "", assets,
+    questions: [], hints: [], explanationHtml: "", reviewStatus: "drafted",
+  } as Problem;
+}
 
 test("parseRegions reads CROP lines into regions keyed by asset src", () => {
   const notes =
@@ -32,4 +44,37 @@ test("cropCommand clamps a box that runs off the page", () => {
   const w = Number(cmd[cmd.indexOf("-W") + 1]);
   const x = Number(cmd[cmd.indexOf("-x") + 1]);
   assert.ok(x + w <= 1000, `${x} + ${w} exceeds the page width`);
+});
+
+test("reconcileRegions flags a CROP line with no matching asset", () => {
+  const notes = "CROP /content-assets/orphan.png page=2 x=10 y=35 w=80 h=30\n";
+  const flags = reconcileRegions(record([]), notes);
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].kind, "figure");
+  assert.equal(flags[0].path, "/content-assets/orphan.png");
+});
+
+test("reconcileRegions flags an asset with no CROP line", () => {
+  const rec = record([{ src: "/content-assets/signs.png", alt: "signs" }]);
+  const flags = reconcileRegions(rec, "Keys checked against the solution.\n");
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].kind, "figure");
+  assert.equal(flags[0].path, "/content-assets/signs.png");
+});
+
+test("reconcileRegions produces no flags for a matched src/CROP pair", () => {
+  const rec = record([{ src: "/content-assets/signs.png", alt: "signs" }]);
+  const notes = "CROP /content-assets/signs.png page=2 x=10 y=35 w=80 h=30\n";
+  assert.deepEqual(reconcileRegions(rec, notes), []);
+});
+
+test("reconcileRegions flags only the asset missing its CROP line among several", () => {
+  const rec = record([
+    { src: "/content-assets/signs.png", alt: "signs" },
+    { src: "/content-assets/key.png", alt: "key" },
+  ]);
+  const notes = "CROP /content-assets/signs.png page=2 x=10 y=35 w=80 h=30\n";
+  const flags = reconcileRegions(rec, notes);
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].path, "/content-assets/key.png");
 });
