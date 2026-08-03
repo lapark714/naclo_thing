@@ -14,9 +14,10 @@ colors:
   verdigris: "#2f6b4f"
   verdigris-tint: "#ebf2ee"
   surface: "#ffffff"
-  action: "oklch(0.46 0.12 62)"
-  action-hover: "oklch(0.37 0.1 62)"
-  action-tint: "oklch(0.96 0.025 62)"
+  action: "oklch(0.7 0.19 45)"
+  action-hover: "oklch(0.63 0.18 45)"
+  action-deep: "oklch(0.47 0.14 45)"
+  action-tint: "oklch(0.96 0.03 45)"
 typography:
   wordmark:
     fontFamily: '"Wordmark", "Helvetica Neue", Arial, sans-serif'
@@ -183,11 +184,19 @@ something needs to stand out and is none of those, it stands out through
 weight, rule, or ink fill. Decoration is not a role, and there are no
 gradients, tinted cards, or coloured surfaces anywhere.
 
-Action is warm, which is deliberate. It shares a ground with the paper rather
-than sitting on top of it, and it keeps the interface clear of the cool
-blue-violet that reads as a generated default. It runs darker and far less red
-than oxblood, and the two never appear in the same role: one fills a button,
-the other is small text next to a wrong answer.
+Action is a vivid orange, which sets two rules the rest of the system obeys.
+Anything it fills carries an **ink** label, never paper: paper on this orange
+is 2.75:1, nowhere near readable, while ink on it is 6.18:1. Anything it writes
+at body size uses `--action-deep` instead, which is 6.93:1 on paper. The vivid
+value appears only as a fill or as the wordmark.
+
+The wordmark is the one place it runs at 2.75:1 against paper, below the 3:1
+large-text floor. That is deliberate and permitted: WCAG 1.4.3 exempts text
+that is part of a logo or brand name. At 56px bold it is entirely legible; it
+simply is not held to a ratio meant for prose.
+
+It runs far more orange than oxblood, and the two never share a role: action
+fills a button, oxblood is small text next to a wrong answer.
 
 An earlier draft added a fourth role, one hue per concept tag, as an index.
 It was removed: eight coded dots across a library page read as decoration

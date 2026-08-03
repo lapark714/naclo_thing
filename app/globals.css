@@ -451,9 +451,10 @@
      body text without shouting. Every learning platform lands on a blue for
      this; the discipline is keeping it dark and low-chroma rather than the
      bright product blue, which fights a warm ground. */
-  --action: oklch(0.46 0.12 62);
-  --action-hover: oklch(0.37 0.1 62);
-  --action-tint: oklch(0.96 0.025 62);
+  --action: oklch(0.7 0.19 45);
+  --action-hover: oklch(0.63 0.18 45);
+  --action-deep: oklch(0.47 0.14 45);
+  --action-tint: oklch(0.96 0.03 45);
 
 
   --radius: 3px;
@@ -505,6 +506,7 @@
   --color-good-tint: var(--good-tint);
   --color-action: var(--action);
   --color-action-hover: var(--action-hover);
+  --color-action-deep: var(--action-deep);
   --color-action-tint: var(--action-tint);
 
   --color-background: var(--background);

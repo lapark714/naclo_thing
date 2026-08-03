@@ -39,7 +39,7 @@ export default function Home() {
       <div className="mt-9 flex flex-wrap items-center gap-x-5 gap-y-3">
         <Link
           href="/practice"
-          className="bg-action border-action hover:bg-action-hover hover:border-action-hover inline-flex items-center border px-8 py-4 text-[0.85rem] font-semibold tracking-[0.12em] text-paper uppercase transition-colors"
+          className="bg-action border-action hover:bg-action-hover hover:border-action-hover inline-flex items-center border px-8 py-4 text-[0.85rem] font-semibold tracking-[0.12em] text-ink uppercase transition-colors"
         >
           Start practicing
         </Link>

@@ -107,12 +107,12 @@ export function HomeDemo() {
       <p className="mt-3 max-w-[58ch] text-[0.85rem] leading-relaxed text-ink-soft">
         {state === "correct" ? (
           <>
-            <span className="font-semibold text-good">Correct.</span> That is
-            one of six blanks in Pavel Iosad&rsquo;s Permyak problem, and you
+            <span className="font-semibold text-good">Correct.</span>{" "}
+            That is one of six blanks in Pavel Iosad&rsquo;s Permyak problem, and you
             solved it without being taught a thing.{" "}
             <Link
               href="/practice/2023-open-D"
-              className="text-action underline underline-offset-2"
+              className="text-action-deep underline underline-offset-2"
             >
               Finish it
             </Link>
@@ -137,7 +137,7 @@ export function HomeDemo() {
             enough to get there, which is the whole idea.{" "}
             <Link
               href="/practice/2023-open-D"
-              className="text-action underline underline-offset-2"
+              className="text-action-deep underline underline-offset-2"
             >
               See the rest of this problem
             </Link>
