@@ -104,7 +104,11 @@ TRANSCRIPTION RULES
 - Paired translation lists (word — gloss) become <dl class="gloss-list"><dt>word</dt><dd>gloss</dd>...</dl>.
 - Wrap every span of non-English language data in class="data": <span class="data">word</span>, or <dt> content (already styled).
 - Where the booklet prints a BLANK for the student to fill in — an empty table cell labelled "(a)" or "a.", or a gap like "_____(a)_____" inside a sentence — do not transcribe the label. Put an answer slot there instead: <span class="blank" data-q="A2.a"></span>, naming the question whose input belongs in that spot. The site renders the real input inside the slot, so the student answers where the booklet asks. Every slot must name a question that exists, and no question may have two slots; the build fails otherwise. Row numbers ("1.", "2.") and option labels the student only refers to are NOT blanks and stay as text.
-- If part of the problem is a figure, glyph specimen, kinship tree, or drawing that cannot be expressed as text or a table, do NOT attempt ASCII art. Describe precisely what must be cropped (page and location) in _reviewNotes, reference it in bodyHtml as <figure><img src="/content-assets/<id>-<name>.png" alt="<alt text>" /></figure>, and add the same src/alt to assets. The reviewer will crop it.
+- If part of the problem is a figure, glyph specimen, kinship tree, or drawing that cannot be expressed as text or a table, do NOT attempt ASCII art. Describe what must be cropped in _reviewNotes using exactly this line format, one per figure:
+CROP <asset-src> page=<n> x=<pct> y=<pct> w=<pct> h=<pct>
+where the percentages are of the full page, measured from the top left, and the box is drawn generously so the whole figure plus a little margin falls inside it. Example:
+CROP /content-assets/2016-open-G-signs.png page=2 x=10 y=35 w=80 h=30
+The reviewer will crop it.
 
 QUESTIONS
 - One entry per blank the student fills: {"id","part","partPrompt","promptHtml","gradingMode","answerKey","acceptedVariants","points"} plus optional "choices".
