@@ -96,7 +96,7 @@ naclo_tool/
 **Content integrity — MUST Follow:**
 - A record publishes only when its two independent transcription passes agree, the booklet's own text layer confirms the language data, and `validate.ts` is clean; anything else parks in `content/parked/`, which the site never loads
 - Human review is no longer on the publish path. It is a follow-on pass over the parked queue and over answers students flag as wrong
-- The written hints and explanations are authored at ingest and human-reviewed. `/api/help` adds request-time AI hints on top; it never replaces them, is prompted against revealing answers, and costs more XP than the reviewed ladder
+- The written hints and explanations are authored at ingest by the drafting pass. They are not cross-checked the way facts are, because two passes never word prose alike; what replaces consensus for them is that a hint naming a graded answer parks the problem. `/api/help` adds request-time AI hints on top; it never replaces them, is prompted against revealing answers, and costs more XP than the written ladder
 - `llm` answer keys stay server-side; only `exact` keys ship in the content bundle
 - `validate.ts` blocks the build — never bypass it
 
