@@ -59,7 +59,7 @@ const HEADER = /\(([A-Z])\)\s+(.+?)\s+\((\d+)\/(\d+)\)/;
 /** Case-varies across years, and inside 2021's own booklet: match both "points" and "Points". */
 const POINTS = /\(([A-Z])\)\s+.+?\s+\(1\/\d+\)\s*\[(\d+)\s*[Pp]oints?\]/g;
 const AUTHOR_LABELLED = /^Problem ([A-Z]):\s*([^\n\f]+)/gm;
-const AUTHOR_PARENTHESISED = /^\(([A-Z])\)\s+([A-Z][^\n\f]*)$/gm;
+const AUTHOR_PARENTHESISED = /^\(([A-Z])\)\s+([A-Z][^\n\f]*)/gm;
 
 export function readText(file: string): string {
   return execFileSync("pdftotext", [file, "-"], {

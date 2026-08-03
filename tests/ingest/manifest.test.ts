@@ -52,3 +52,13 @@ test("parsers return empty maps on a mojibake booklet rather than throwing", () 
   assert.equal(parseAuthors(cipher).size, 0);
   assert.equal(parsePageMap(cipher).pages.size, 0);
 });
+
+test("parseAuthors extracts 2022-style authors when form feed immediately follows name", () => {
+  const creditsWithFormFeed =
+    "Problem Credits:\n(A) Michael Salter\f" +
+    "next page\n(B) Tom McCoy\f" +
+    "Image Credits:\n";
+  const a = parseAuthors(creditsWithFormFeed);
+  assert.deepEqual(a.get("A"), ["Michael Salter"]);
+  assert.deepEqual(a.get("B"), ["Tom McCoy"]);
+});
