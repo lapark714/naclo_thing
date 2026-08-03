@@ -8,7 +8,7 @@
  * however the run went.
  */
 
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, unlinkSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { Problem } from "../../content/schema";
 import type { Flag } from "./types";
@@ -117,17 +117,66 @@ export function decide(record: Problem, flags: Flag[]): Outcome {
   };
 }
 
-export function writeRecord(o: Outcome, record: Problem): string {
-  const dir = o.status === "published" ? PUBLISHED_DIR : PARKED_DIR;
+/**
+ * The published payload is the record re-parsed through the schema, not the
+ * raw record spread. `loadDraft` deliberately carries `_reviewNotes` back
+ * across the parse (Stage 5 needs it to crop figures), so the raw record
+ * that reaches here still has it attached — and a raw spread would ship that
+ * internal note straight into a published JSON file, where validate.ts's
+ * glyph check treats one stray symbol in it as a build-blocking problem.
+ * `Problem.safeParse` strips any key the schema does not declare, same as it
+ * would for any other unknown field, so re-parsing is what actually keeps
+ * `_reviewNotes` off the wire. `decide()` only ever marks an outcome
+ * "published" after this exact parse (with the same reviewStatus override)
+ * already succeeded once, so failure here means that invariant broke.
+ */
+function publishedPayload(record: Problem): Problem {
+  const parsed = Problem.safeParse({ ...record, reviewStatus: "published" as const });
+  if (!parsed.success) {
+    throw new Error(
+      `writeRecord: record ${record.id} was marked published but failed to re-parse: ` +
+        parsed.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("; "),
+    );
+  }
+  return parsed.data;
+}
+
+export function writeRecord(
+  o: Outcome,
+  record: Problem,
+  dirs: { published: string; parked: string } = { published: PUBLISHED_DIR, parked: PARKED_DIR },
+): string {
+  const dir = o.status === "published" ? dirs.published : dirs.parked;
+  const counterpartDir = o.status === "published" ? dirs.parked : dirs.published;
   mkdirSync(dir, { recursive: true });
 
+  // Parked records keep _reviewNotes and _parkReasons — that pairing IS the
+  // human review queue's content, not an internal leak, because parked
+  // files never ship to a student.
   const payload =
     o.status === "published"
-      ? { ...record, reviewStatus: "published" as const }
+      ? publishedPayload(record)
       : { ...record, reviewStatus: "drafted" as const, _parkReasons: o.flags };
 
   const path = join(dir, `${record.id}.json`);
   writeFileSync(path, JSON.stringify(payload, null, 2) + "\n");
+
+  // A record that published on one run and parks on the next (or the other
+  // way around — arbitration is a non-deterministic model call, cropFigures
+  // hits the network) must not leave its previous outcome live under the
+  // other directory. lib/content.ts reads only content/problems/, so a stale
+  // published file left behind after a record parks would keep serving that
+  // record to students even though this run's report says it parked.
+  const counterpartPath = join(counterpartDir, `${record.id}.json`);
+  if (existsSync(counterpartPath)) {
+    try {
+      unlinkSync(counterpartPath);
+    } catch {
+      // Best-effort: a failed cleanup should not stop this run from
+      // reporting the record it DID successfully write.
+    }
+  }
+
   return path;
 }
 

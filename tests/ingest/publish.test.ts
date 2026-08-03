@@ -1,6 +1,9 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { decide, renderReport, hintsLeakAnswers } from "../../scripts/ingest/publish";
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { decide, renderReport, hintsLeakAnswers, writeRecord } from "../../scripts/ingest/publish";
 import type { Problem } from "../../content/schema";
 import type { Flag } from "../../scripts/ingest/types";
 
@@ -159,4 +162,93 @@ test("a non-ASCII key still flags when genuinely present", () => {
   const flags = hintsLeakAnswers(r);
   assert.equal(flags.length, 1);
   assert.equal(flags[0].a, "ɲam");
+});
+
+// --- writeRecord ---------------------------------------------------------
+//
+// These exercise real filesystem writes, so every one of them uses a scratch
+// directory under the OS tmp dir via the `dirs` override — never
+// content/problems or content/parked. That override exists for exactly this
+// (see Finding 2/6 in the final review): production call sites in run.ts
+// omit it and get the real directories.
+
+function withScratchDirs(fn: (dirs: { published: string; parked: string }) => void) {
+  const root = mkdtempSync(join(tmpdir(), "publish-test-"));
+  const dirs = { published: join(root, "problems"), parked: join(root, "parked") };
+  try {
+    fn(dirs);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+}
+
+test("writeRecord strips _reviewNotes from a published record (Finding 6)", () => {
+  withScratchDirs((dirs) => {
+    const rec = { ...record(), _reviewNotes: "CROP /content-assets/x.png page=1 x=1 y=1 w=1 h=1" } as Problem;
+    const outcome = decide(rec, []);
+    assert.equal(outcome.status, "published");
+
+    const path = writeRecord(outcome, rec, dirs);
+    const written = JSON.parse(readFileSync(path, "utf8"));
+    assert.equal(written.reviewStatus, "published");
+    assert.equal("_reviewNotes" in written, false, "_reviewNotes must not reach a published file");
+  });
+});
+
+test("writeRecord keeps _reviewNotes and adds _parkReasons on a parked record", () => {
+  withScratchDirs((dirs) => {
+    const rec = { ...record(), _reviewNotes: "keys checked against the solution" } as Problem;
+    const flags: Flag[] = [{ kind: "diff", path: "q:A1.a:key", a: "x", b: "y" }];
+    const outcome = decide(rec, flags);
+    assert.equal(outcome.status, "parked");
+
+    const path = writeRecord(outcome, rec, dirs);
+    const written = JSON.parse(readFileSync(path, "utf8"));
+    assert.equal(written.reviewStatus, "drafted");
+    assert.equal(written._reviewNotes, "keys checked against the solution");
+    assert.ok(Array.isArray(written._parkReasons) && written._parkReasons.length === 1);
+  });
+});
+
+test("writeRecord deletes a stale published file when the record parks this run (Finding 2)", () => {
+  withScratchDirs((dirs) => {
+    mkdirSync(dirs.published, { recursive: true });
+    const stalePath = join(dirs.published, `${record().id}.json`);
+    writeFileSync(stalePath, JSON.stringify({ ...record(), reviewStatus: "published" }));
+
+    const rec = record();
+    const flags: Flag[] = [{ kind: "diff", path: "q:A1.a:key", a: "x", b: "y" }];
+    const outcome = decide(rec, flags);
+    assert.equal(outcome.status, "parked");
+    writeRecord(outcome, rec, dirs);
+
+    assert.equal(existsSync(stalePath), false, "the stale published file must be removed once the record parks");
+    assert.ok(existsSync(join(dirs.parked, `${record().id}.json`)));
+  });
+});
+
+test("writeRecord deletes a stale parked file when the record publishes this run (Finding 2)", () => {
+  withScratchDirs((dirs) => {
+    mkdirSync(dirs.parked, { recursive: true });
+    const stalePath = join(dirs.parked, `${record().id}.json`);
+    writeFileSync(stalePath, JSON.stringify({ ...record(), reviewStatus: "drafted", _parkReasons: [] }));
+
+    const rec = record();
+    const outcome = decide(rec, []);
+    assert.equal(outcome.status, "published");
+    writeRecord(outcome, rec, dirs);
+
+    assert.equal(existsSync(stalePath), false, "the stale parked file must be removed once the record publishes");
+    assert.ok(existsSync(join(dirs.published, `${record().id}.json`)));
+  });
+});
+
+test("writeRecord does not touch the counterpart directory when there is nothing there to clean up", () => {
+  withScratchDirs((dirs) => {
+    const rec = record();
+    const outcome = decide(rec, []);
+    // Should not throw even though dirs.parked does not exist yet.
+    assert.doesNotThrow(() => writeRecord(outcome, rec, dirs));
+    assert.equal(existsSync(dirs.parked), false);
+  });
 });
