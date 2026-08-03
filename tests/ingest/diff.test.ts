@@ -1,7 +1,9 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { stripTags, tableCells, dataSpans, diffRecords } from "../../scripts/ingest/diff";
+import { applyResolutions } from "../../scripts/ingest/arbitrate";
 import type { Problem } from "../../content/schema";
+import type { Question } from "../../content/schema";
 
 function record(over: Partial<Problem> = {}): Problem {
   return {
@@ -95,9 +97,108 @@ test("differing prose does NOT flag", () => {
   assert.deepEqual(flags, []);
 });
 
-test("a question present in only one pass is flagged", () => {
+test("differing question counts produce exactly one questions:count flag, no per-question flags", () => {
   const flags = diffRecords(record(), record({ questions: [] } as Partial<Problem>));
-  assert.ok(flags.some((f) => f.note === "absent in pass B"));
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].path, "questions:count");
+  assert.equal(flags[0].a, "1");
+  assert.equal(flags[0].b, "0");
+});
+
+test("a bigger question-count mismatch still produces exactly one flag, not a cascade", () => {
+  const manyA: Question[] = Array.from({ length: 18 }, (_, i) => ({
+    id: `B1.${i + 1}`, promptHtml: "p", gradingMode: "exact",
+    answerKey: "x", acceptedVariants: [], points: 1,
+  }));
+  const fewB: Question[] = Array.from({ length: 6 }, (_, i) => ({
+    id: `B1.${i + 1}`, promptHtml: "p", gradingMode: "exact",
+    answerKey: "x", acceptedVariants: [], points: 1,
+  }));
+  const flags = diffRecords(
+    record({ questions: manyA } as Partial<Problem>),
+    record({ questions: fewB } as Partial<Problem>),
+  );
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].path, "questions:count");
+  assert.equal(flags[0].a, "18");
+  assert.equal(flags[0].b, "6");
+  assert.ok(flags[0].note?.includes("meaningless"));
+});
+
+test("same questions in the same order but completely different id schemes, identical answers: no flags", () => {
+  const a: Question[] = Array.from({ length: 21 }, (_, i) => ({
+    id: `E1.${i + 1}`, promptHtml: "p", gradingMode: "exact",
+    answerKey: `answer-${i}`, acceptedVariants: [], points: 1,
+  }));
+  const letters = "abcdefghijklmnopqrstu".split("");
+  const b: Question[] = Array.from({ length: 21 }, (_, i) => ({
+    id: `E1.${letters[i]}`, promptHtml: "p", gradingMode: "exact",
+    answerKey: `answer-${i}`, acceptedVariants: [], points: 1,
+  }));
+  const flags = diffRecords(
+    record({ questions: a } as Partial<Problem>),
+    record({ questions: b } as Partial<Problem>),
+  );
+  assert.deepEqual(flags, []);
+});
+
+test("same positional questions, different id schemes, one answer key differing: exactly one flag naming that key, using pass A's id", () => {
+  const a: Question[] = [
+    { id: "E1.1", promptHtml: "p", gradingMode: "exact", answerKey: "cat", acceptedVariants: [], points: 1 },
+    { id: "E1.2", promptHtml: "p", gradingMode: "exact", answerKey: "dog", acceptedVariants: [], points: 1 },
+  ];
+  const b: Question[] = [
+    { id: "E1.a", promptHtml: "p", gradingMode: "exact", answerKey: "cat", acceptedVariants: [], points: 1 },
+    { id: "E1.b", promptHtml: "p", gradingMode: "exact", answerKey: "doge", acceptedVariants: [], points: 1 },
+  ];
+  const flags = diffRecords(
+    record({ questions: a } as Partial<Problem>),
+    record({ questions: b } as Partial<Problem>),
+  );
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].path, "q:e1.2:key");
+  assert.equal(flags[0].a, "dog");
+  assert.equal(flags[0].b, "doge");
+});
+
+test("same positional questions still catch a gradingMode difference and a choices difference", () => {
+  const a: Question[] = [
+    { id: "E1.1", promptHtml: "p", gradingMode: "exact", answerKey: "cat", acceptedVariants: [], points: 1, choices: ["cat", "dog"] },
+    { id: "E1.2", promptHtml: "p", gradingMode: "exact", answerKey: "dog", acceptedVariants: [], points: 1 },
+  ];
+  const b: Question[] = [
+    { id: "E1.a", promptHtml: "p", gradingMode: "self", answerKey: "cat", acceptedVariants: [], points: 1, choices: ["cat", "dog", "bird"] },
+    { id: "E1.b", promptHtml: "p", gradingMode: "exact", answerKey: "dog", acceptedVariants: [], points: 1 },
+  ];
+  const flags = diffRecords(
+    record({ questions: a } as Partial<Problem>),
+    record({ questions: b } as Partial<Problem>),
+  );
+  assert.equal(flags.length, 2);
+  const mode = flags.find((f) => f.path === "q:e1.1:mode");
+  assert.ok(mode, "expected a q:e1.1:mode flag");
+  assert.equal(mode?.a, "exact");
+  assert.equal(mode?.b, "self");
+  const choices = flags.find((f) => f.path === "q:e1.1:choices");
+  assert.ok(choices, "expected a q:e1.1:choices flag");
+  assert.equal(choices?.a, "cat|dog");
+  assert.equal(choices?.b, "cat|dog|bird");
+});
+
+test("a q:<id>:key path emitted by diffRecords is parseable and resolvable by applyResolutions", () => {
+  const a = record({
+    questions: [{ id: "E1.1", promptHtml: "p", gradingMode: "exact", answerKey: "cat", acceptedVariants: [], points: 1 }],
+  } as Partial<Problem>);
+  const b = record({
+    questions: [{ id: "E1.a", promptHtml: "p", gradingMode: "exact", answerKey: "dog", acceptedVariants: [], points: 1 }],
+  } as Partial<Problem>);
+  const flags = diffRecords(a, b);
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].path, "q:e1.1:key");
+
+  const { record: resolved, unresolved } = applyResolutions(a, [{ path: flags[0].path, value: "cat-confirmed" }]);
+  assert.deepEqual(unresolved, []);
+  assert.equal(resolved.questions[0].answerKey, "cat-confirmed");
 });
 
 test("a differing table cell is flagged", () => {
