@@ -32,3 +32,7 @@ next-env.d.ts
 # unreviewed AI output from npm run draft; promotion into content/problems is
 # the human step, and nothing in here should ever be committed as if it were
 /content/drafts
+
+# NOTE: content/parked is deliberately NOT ignored. It is the review queue for
+# problems the pipeline could not vouch for, and it is meant to be read in a
+# diff. lib/content.ts never loads it, so nothing in it can reach a student.
