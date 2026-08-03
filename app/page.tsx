@@ -20,7 +20,7 @@ export default function Home() {
           by meeting the puzzle before its name. */}
       <p className="mt-5 max-w-[54ch] text-lg leading-relaxed text-ink">
         A language you have never seen, and just enough of it to work out the
-        rest. That is the whole game.
+        rest. That&apos;s the whole game.
       </p>
 
       <p className="mt-4 max-w-[54ch] text-[0.95rem] leading-relaxed text-ink-soft">
