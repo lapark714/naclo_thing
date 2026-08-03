@@ -8,7 +8,7 @@
  * however the run went.
  */
 
-import { existsSync, mkdirSync, unlinkSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { Problem } from "../../content/schema";
 import type { Flag } from "./types";
@@ -246,6 +246,31 @@ function publishedPayload(record: Problem): Problem {
   return parsed.data;
 }
 
+/**
+ * True only when `path` reads as JSON with `tier: "full"`. Used to decide
+ * whether a published counterpart is a stale publish worth deleting, so a
+ * read failure must never be mistaken for a yes — an unreadable file, a
+ * malformed JSON parse, or a record with no usable `tier` all fall through
+ * to `false` (leave it alone). Deleting on doubt is how the archive shrank:
+ * 27 `tier: "catalogue"` stubs erased across 2018 and 2020–2022 by code that
+ * treated "a file exists at the counterpart path" as "this is a stale
+ * publish", when a catalogue stub sitting in content/problems/ is not a
+ * stale publish — it is the archive's own entry for a problem not yet
+ * transcribed.
+ */
+function counterpartTierIsFull(path: string): boolean {
+  try {
+    const parsed: unknown = JSON.parse(readFileSync(path, "utf8"));
+    return (
+      typeof parsed === "object" &&
+      parsed !== null &&
+      (parsed as { tier?: unknown }).tier === "full"
+    );
+  } catch {
+    return false;
+  }
+}
+
 export function writeRecord(
   o: Outcome,
   record: Problem,
@@ -272,8 +297,22 @@ export function writeRecord(
   // other directory. lib/content.ts reads only content/problems/, so a stale
   // published file left behind after a record parks would keep serving that
   // record to students even though this run's report says it parked.
+  //
+  // But when parking, "a file sits at the counterpart path" is not the same
+  // claim as "that file is a stale publish this pipeline can no longer vouch
+  // for" — content/problems/ also holds tier: "catalogue" stubs, catalogued
+  // long before they were transcribed. Parking does not contradict a
+  // catalogue stub; the stub only claims the problem exists and is not yet
+  // playable, which stays true. So on the parking path, delete the
+  // counterpart only when it reads back as tier: "full" — a stale full
+  // record — and leave it alone otherwise, including when its tier cannot be
+  // determined at all. The publish path is unaffected: content/parked/ never
+  // holds a catalogue stub to protect, so a stale parked counterpart is
+  // always cleared, as before.
   const counterpartPath = join(counterpartDir, `${record.id}.json`);
-  if (existsSync(counterpartPath)) {
+  const shouldDeleteCounterpart =
+    o.status === "published" || counterpartTierIsFull(counterpartPath);
+  if (shouldDeleteCounterpart && existsSync(counterpartPath)) {
     try {
       unlinkSync(counterpartPath);
     } catch {

@@ -347,3 +347,93 @@ test("writeRecord does not touch the counterpart directory when there is nothing
     assert.equal(existsSync(dirs.parked), false);
   });
 });
+
+// --- catalogue stub protection --------------------------------------------
+//
+// The regression: writeRecord deleted a record's counterpart whenever one
+// existed, without checking whether that counterpart was a stale full
+// publish or a tier: "catalogue" stub — metadata-only archive entries for
+// problems catalogued long before they were transcribed. A full run deleted
+// 27 of them across 2018 and 2020-2022 and the archive quietly shrank from
+// 64 published records to 41. Parking a record must delete a stale tier:
+// "full" counterpart but never a tier: "catalogue" one, and must default to
+// leaving the file alone whenever its tier cannot be determined at all.
+
+test("parking a record whose published counterpart is tier: catalogue leaves that file in place", () => {
+  withScratchDirs((dirs) => {
+    mkdirSync(dirs.published, { recursive: true });
+    const stubPath = join(dirs.published, `${record().id}.json`);
+    const stub = { ...record(), tier: "catalogue" as const, questions: [] };
+    writeFileSync(stubPath, JSON.stringify(stub));
+
+    const rec = record();
+    const flags: Flag[] = [{ kind: "diff", path: "q:A1.a:key", a: "x", b: "y" }];
+    const outcome = decide(rec, flags);
+    assert.equal(outcome.status, "parked");
+    writeRecord(outcome, rec, dirs);
+
+    assert.equal(
+      existsSync(stubPath),
+      true,
+      "a catalogue stub is the archive's own entry, not a stale publish, and parking must not delete it",
+    );
+    assert.ok(existsSync(join(dirs.parked, `${record().id}.json`)));
+  });
+});
+
+test("parking a record whose published counterpart is tier: full deletes it", () => {
+  withScratchDirs((dirs) => {
+    mkdirSync(dirs.published, { recursive: true });
+    const stalePath = join(dirs.published, `${record().id}.json`);
+    writeFileSync(stalePath, JSON.stringify({ ...record(), reviewStatus: "published" }));
+
+    const rec = record();
+    const flags: Flag[] = [{ kind: "diff", path: "q:A1.a:key", a: "x", b: "y" }];
+    const outcome = decide(rec, flags);
+    assert.equal(outcome.status, "parked");
+    writeRecord(outcome, rec, dirs);
+
+    assert.equal(existsSync(stalePath), false, "a stale tier: full publish must be removed once the record parks");
+    assert.ok(existsSync(join(dirs.parked, `${record().id}.json`)));
+  });
+});
+
+test("publishing a record still deletes a stale parked counterpart", () => {
+  withScratchDirs((dirs) => {
+    mkdirSync(dirs.parked, { recursive: true });
+    const stalePath = join(dirs.parked, `${record().id}.json`);
+    writeFileSync(stalePath, JSON.stringify({ ...record(), reviewStatus: "drafted", _parkReasons: [] }));
+
+    const rec = record();
+    const outcome = decide(rec, []);
+    assert.equal(outcome.status, "published");
+    writeRecord(outcome, rec, dirs);
+
+    assert.equal(
+      existsSync(stalePath),
+      false,
+      "content/parked/ never holds a catalogue stub to protect, so the publish direction is unchanged",
+    );
+    assert.ok(existsSync(join(dirs.published, `${record().id}.json`)));
+  });
+});
+
+test("a counterpart file containing malformed JSON is left in place rather than deleted", () => {
+  withScratchDirs((dirs) => {
+    mkdirSync(dirs.published, { recursive: true });
+    const malformedPath = join(dirs.published, `${record().id}.json`);
+    writeFileSync(malformedPath, "{ this is not valid JSON");
+
+    const rec = record();
+    const flags: Flag[] = [{ kind: "diff", path: "q:A1.a:key", a: "x", b: "y" }];
+    const outcome = decide(rec, flags);
+    assert.equal(outcome.status, "parked");
+    assert.doesNotThrow(() => writeRecord(outcome, rec, dirs));
+
+    assert.equal(
+      existsSync(malformedPath),
+      true,
+      "an unreadable tier is not evidence of a stale publish — deleting on doubt is how the archive shrank",
+    );
+  });
+});
