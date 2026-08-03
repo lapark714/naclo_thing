@@ -164,6 +164,51 @@ test("a non-ASCII key still flags when genuinely present", () => {
   assert.equal(flags[0].a, "ɲam");
 });
 
+test("a purely numeric key does not flag even when present as a standalone word", () => {
+  // A hint about perfect squares cannot list the range without naming a
+  // hundred — 2016-open-E, where the hint reads "the perfect squares
+  // between 1 and 100 are 1, 4, 9, 16, 25, 36, 49, 64, 81 and 100".
+  const r = record({
+    questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "100", acceptedVariants: [], points: 1 }],
+    hints: [
+      { tier: 1, text: "Think about perfect squares.", xpCost: 1 },
+      { tier: 2, text: "Keep going.", xpCost: 2 },
+      { tier: 3, text: "The perfect squares between 1 and 100 are 1, 4, 9, 16, 25, 36, 49, 64, 81 and 100.", xpCost: 3 },
+    ],
+  } as Partial<Problem>);
+  assert.deepEqual(hintsLeakAnswers(r), []);
+});
+
+test("a content-word key on the extended stopword list does not flag", () => {
+  // A phonology hint cannot avoid the word "vowels" — 2020-open-A.
+  const r = record({
+    questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "vowels", acceptedVariants: [], points: 1 }],
+    hints: [
+      { tier: 1, text: "Look at the vowels in each row.", xpCost: 1 },
+      { tier: 2, text: "Keep going.", xpCost: 2 },
+      { tier: 3, text: "Nearly there.", xpCost: 3 },
+    ],
+  } as Partial<Problem>);
+  assert.deepEqual(hintsLeakAnswers(r), []);
+});
+
+test("a distinctive non-English key still flags after the stopword/numeric extension", () => {
+  // The guard against over-correcting: an ordinary numeral or content word
+  // is skipped, but a genuinely distinctive answer a student could not
+  // otherwise guess must still be caught.
+  const r = record({
+    questions: [{ id: "A1.a", promptHtml: "p", gradingMode: "exact", answerKey: "asado", acceptedVariants: [], points: 1 }],
+    hints: [
+      { tier: 1, text: "Compare rows two and five.", xpCost: 1 },
+      { tier: 2, text: "Look at the root.", xpCost: 2 },
+      { tier: 3, text: "The sentence uses the word asado to describe the dish.", xpCost: 3 },
+    ],
+  } as Partial<Problem>);
+  const flags = hintsLeakAnswers(r);
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].a, "asado");
+});
+
 // --- writeRecord ---------------------------------------------------------
 //
 // These exercise real filesystem writes, so every one of them uses a scratch

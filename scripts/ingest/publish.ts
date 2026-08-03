@@ -24,13 +24,19 @@ export type Outcome = {
 };
 
 /**
- * Common English function words, skipped as keys entirely, past even the
- * length floor. A key that happens to be an ordinary word like "with" or
- * "very" collides constantly with a hint's ordinary prose — cipher and
- * decoding problems routinely have plain-English answers — and word-boundary
+ * Common English words, skipped as keys entirely, past even the length
+ * floor. A key that happens to be an ordinary word like "with" or "very"
+ * collides constantly with a hint's ordinary prose — cipher and decoding
+ * problems routinely have plain-English answers — and word-boundary
  * matching does not help here, since these appear as themselves, not
- * embedded inside a longer word. Closed-class function words plus a handful
- * of high-frequency fillers; not tuned to chase the archive's flag count to
+ * embedded inside a longer word. The check earns its keep when a hint
+ * quotes a distinctive answer a student could not otherwise guess (a
+ * foreign-language word, a made-up morpheme); it has no signal when the
+ * answer key happens to be an ordinary word a hint legitimately needs to
+ * use to talk about the problem at all — a phonology hint cannot avoid
+ * saying "vowels". Closed-class function words plus a handful of
+ * high-frequency content words that are both plausible answers and
+ * plausible hint vocabulary; not tuned to chase the archive's flag count to
  * zero, only to stop the indisputable false positives.
  */
 const STOPWORD_KEYS = new Set([
@@ -40,7 +46,24 @@ const STOPWORD_KEYS = new Set([
   "then", "there", "these", "they", "this", "to", "two", "up", "very",
   "was", "were", "what", "when", "which", "who", "will", "with", "you",
   "your",
+  "vowels", "vowel", "consonants", "consonant", "same", "different",
+  "first", "second", "third", "last", "next", "none", "all", "both",
+  "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+  "yes", "no", "true", "false", "plural", "singular", "past", "present",
+  "future", "subject", "object", "verb", "noun", "word", "words",
+  "letter", "letters", "sound", "sounds", "number", "numbers",
 ]);
+
+/**
+ * True when `key` consists only of digits, optionally with a decimal point
+ * or a leading minus sign — "100", "3.5", "-2". A hint about a counting or
+ * number-system problem cannot discuss the number range without naming
+ * numbers, and a bare numeral carries no distinctive information the way a
+ * foreign word or invented morpheme does.
+ */
+function isNumericKey(key: string): boolean {
+  return /^-?\d+(\.\d+)?$/.test(key);
+}
 
 /** Escapes a string for literal use inside a RegExp. */
 function escapeForRegExp(s: string): string {
@@ -65,16 +88,16 @@ function containsAsWord(text: string, key: string): boolean {
  * Hints are generated once, not cross-checked, because two passes never word
  * prose the same way. The constraint that replaces consensus for them is that
  * a hint must not simply hand over a graded answer. Keys shorter than three
- * characters are skipped ("a" appears in every sentence in English), and
- * keys that are themselves common function words are skipped outright
- * (STOPWORD_KEYS above).
+ * characters are skipped ("a" appears in every sentence in English), keys
+ * that are themselves common words are skipped outright (STOPWORD_KEYS
+ * above), and purely numeric keys are skipped (isNumericKey above).
  */
 export function hintsLeakAnswers(record: Problem): Flag[] {
   const flags: Flag[] = [];
   const keys = record.questions
     .filter((q) => q.gradingMode === "exact")
     .map((q) => q.answerKey.trim().toLowerCase())
-    .filter((k) => k.length >= 3 && !STOPWORD_KEYS.has(k));
+    .filter((k) => k.length >= 3 && !STOPWORD_KEYS.has(k) && !isNumericKey(k));
 
   record.hints.forEach((hint, i) => {
     const text = hint.text.toLowerCase();
