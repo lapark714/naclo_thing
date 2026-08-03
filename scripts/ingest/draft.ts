@@ -10,10 +10,14 @@
  * content/drafts/<id>.a.json and <id>.b.json with reviewStatus "drafted".
  * Passes are pooled at a concurrency of 4 (see pool.ts).
  *
- * Drafts NEVER land in content/problems/ — the site serves only published
- * records from there, and promotion is a human act: review the draft, fix
- * what is wrong, move the file over, flip reviewStatus. The quality gate
- * stays where the spec put it.
+ * Drafts NEVER land in content/problems/ on their own — the site serves only
+ * published records from there. Promotion is `npm run ingest -- <year>`
+ * (run.ts): it diffs the two passes against each other, checks them against
+ * the booklet's own text layer, arbitrates what it safely can, crops
+ * figures, and only then writes a published record — or parks it for a
+ * person. A draft is never moved to content/problems/ by hand; doing so
+ * ships a single, un-cross-checked pass straight to students, skipping
+ * every gate the pipeline exists to run.
  *
  * Usage:
  *   tsx scripts/ingest/draft.ts --list            # show the manifest, no API calls
@@ -370,7 +374,10 @@ async function main() {
 
   console.log(`\n${done} drafted, ${skipped} skipped, ${failed} failed.`);
   if (done > 0) {
-    console.log("Drafts are in content/drafts/ — review, fix, then move to content/problems/ with reviewStatus published.");
+    console.log(
+      "Drafts are in content/drafts/. Run `npm run ingest -- <year>` to cross-check, arbitrate, " +
+        "crop figures, and publish or park them — never move a draft to content/problems/ by hand.",
+    );
   }
 }
 

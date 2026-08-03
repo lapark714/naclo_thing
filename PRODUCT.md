@@ -48,7 +48,7 @@ same work:
 - **Graduated, priced help.** Three hints per problem unlock in order, each with
   its XP cost shown before it is spent. The first says where to look; the last
   works a step through on data that is not graded. Request-time AI help sits on
-  top of the reviewed ladder and is prompted against revealing answers.
+  top of the written ladder and is prompted against revealing answers.
 - **Reasoning, not keys.** NACLO's own solution sheets give the answer and
   rarely the route. Every playable problem here carries a written walkthrough of
   how a solver gets there.
