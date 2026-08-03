@@ -71,3 +71,44 @@ test("a differing table cell is flagged", () => {
   assert.equal(flags[0].a, "ɲam");
   assert.equal(flags[0].b, "ŋam");
 });
+
+test("stripTags decodes entities in correct order (decode &lt;/&gt; before &amp;)", () => {
+  assert.equal(stripTags("&amp;lt;"), "&lt;");
+});
+
+test("dataSpans accepts single-quoted class attributes", () => {
+  const html = "<p><span class='data'>marlu</span></p>";
+  assert.deepEqual(dataSpans(html), ["marlu"]);
+});
+
+test("cell count mismatch produces exactly one flag, skips positional comparison", () => {
+  const flags = diffRecords(
+    record({ bodyHtml: "<table><tr><td>a</td><td>b</td></tr></table>" } as Partial<Problem>),
+    record({ bodyHtml: "<table><tr><td>x</td></tr></table>" } as Partial<Problem>),
+  );
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].path, "cells:count");
+  assert.equal(flags[0].a, "2");
+  assert.equal(flags[0].b, "1");
+});
+
+test("data span count mismatch produces exactly one flag, skips positional comparison", () => {
+  const flags = diffRecords(
+    record({ bodyHtml: '<p><span class="data">a</span><span class="data">b</span></p>' } as Partial<Problem>),
+    record({ bodyHtml: '<p><span class="data">x</span></p>' } as Partial<Problem>),
+  );
+  assert.equal(flags.length, 1);
+  assert.equal(flags[0].path, "data:count");
+  assert.equal(flags[0].a, "2");
+  assert.equal(flags[0].b, "1");
+});
+
+test("per-index cell comparison still happens when counts match", () => {
+  const flags = diffRecords(
+    record({ bodyHtml: "<table><tr><td>a</td><td>b</td></tr></table>" } as Partial<Problem>),
+    record({ bodyHtml: "<table><tr><td>x</td><td>y</td></tr></table>" } as Partial<Problem>),
+  );
+  assert.equal(flags.length, 2);
+  assert.ok(flags.some((f) => f.path === "cell:0" && f.a === "a" && f.b === "x"));
+  assert.ok(flags.some((f) => f.path === "cell:1" && f.a === "b" && f.b === "y"));
+});
