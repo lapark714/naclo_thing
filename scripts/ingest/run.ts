@@ -177,7 +177,13 @@ async function safeProcessOne(client: Anthropic, target: Target): Promise<Outcom
     return {
       id,
       status: "parked",
-      flags: [{ kind: "diff", path: "(crash)", note: `processOne threw: ${message}` }],
+      flags: [{
+        kind: "diff", path: "(crash)",
+        note:
+          `processOne threw before writeRecord ran: ${message}. No record was written for ` +
+          `${id} this run — if it was already published or parked from an earlier run, that ` +
+          "file is untouched and still stands; this outcome is reported for visibility only.",
+      }],
       questionCount: 0,
     };
   }
@@ -213,14 +219,22 @@ async function main() {
   const results = await mapPool(manifest, 4, (t) => safeProcessOne(client, t));
   const outcomes = results.filter((o): o is Outcome => o !== null);
 
-  // Stage 6 — fonts, over everything that published this run.
-  const publishedRecords = outcomes
-    .filter((o) => o.status === "published")
-    .map((o) => Problem.parse(JSON.parse(readFileSync(`content/problems/${o.id}.json`, "utf8"))));
-  const fontFlags = await ensureCoverage(publishedRecords);
-  if (fontFlags.length > 0) {
-    console.warn(`\n${fontFlags.length} font issue(s) — the affected problems need a subset by hand:`);
-    for (const f of fontFlags) console.warn(`  ${f.path} ${f.a ?? ""} — ${f.note}`);
+  // Stage 6 — fonts, over everything that published this run. Guarded: a
+  // throw here (a corrupt published file, a font-subsetting failure) must
+  // not cost the run report below. `outcomes` already reflects every record
+  // this run wrote — published or parked — into content/, and that report
+  // is the only human-facing summary of a run that has already changed it.
+  try {
+    const publishedRecords = outcomes
+      .filter((o) => o.status === "published")
+      .map((o) => Problem.parse(JSON.parse(readFileSync(`content/problems/${o.id}.json`, "utf8"))));
+    const fontFlags = await ensureCoverage(publishedRecords);
+    if (fontFlags.length > 0) {
+      console.warn(`\n${fontFlags.length} font issue(s) — the affected problems need a subset by hand:`);
+      for (const f of fontFlags) console.warn(`  ${f.path} ${f.a ?? ""} — ${f.note}`);
+    }
+  } catch (err) {
+    console.error(`Stage 6 (fonts) failed: ${err instanceof Error ? err.message : String(err)}`);
   }
 
   const date = new Date().toISOString().slice(0, 10);
@@ -233,4 +247,7 @@ async function main() {
   console.log(`Now run: npm run validate`);
 }
 
-main();
+main().catch((err) => {
+  console.error(`ingest run failed: ${err instanceof Error ? (err.stack ?? err.message) : String(err)}`);
+  process.exit(1);
+});
