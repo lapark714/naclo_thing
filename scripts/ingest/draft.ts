@@ -2,9 +2,13 @@
  * The batch drafting pipeline — the `draft` step from the spec's content
  * pipeline, finally implemented.
  *
- * For each requested problem it renders the problem pages and the matching
- * solution pages to images, sends them to the Claude API, and writes the
- * returned record to content/drafts/<id>.json with reviewStatus "drafted".
+ * Each requested problem is drafted TWICE, at different resolutions and with
+ * different reading-order instructions (see PASS_STYLE below), so the two
+ * results can be checked against each other downstream. For each pass it
+ * renders the problem pages and the matching solution pages to images, sends
+ * them to the Claude API, and writes the returned record to
+ * content/drafts/<id>.a.json and <id>.b.json with reviewStatus "drafted".
+ * Passes are pooled at a concurrency of 4 (see pool.ts).
  *
  * Drafts NEVER land in content/problems/ — the site serves only published
  * records from there, and promotion is a human act: review the draft, fix
@@ -25,6 +29,8 @@ import { join } from "node:path";
 import { tmpdir } from "node:os";
 import { Problem } from "../../content/schema";
 import { CONCEPT_TAGS, FORM_TAGS } from "../../content/taxonomy";
+import { buildManifest, EXAMS, type Target } from "./manifest";
+import { mapPool } from "./pool";
 
 /* ---------------------------------------------------------------------------
    Environment. tsx does not auto-load .env.
@@ -42,134 +48,14 @@ loadEnv();
 const MODEL = process.env.INGEST_MODEL || "claude-opus-5";
 
 /* ---------------------------------------------------------------------------
-   Manifest: which pages hold which problem, per booklet.
-   Derived from pdftotext where the text layer is sound; 2019's is mojibake
-   (and 2023's solutions), so those carry hand-checked page maps.
-   --------------------------------------------------------------------------- */
-
-type Booklet = { file: string; pages: number[] };
-type Target = { year: number; letter: string; title: string; problem: Booklet; solution?: Booklet };
-
-const EXAMS: Record<number, { problems: string; solutions: string }> = {
-  2018: { problems: "pdfs/NACLO2018ROUND1.pdf", solutions: "pdfs/NACLO2018ROUND1SOL.pdf" },
-  2019: { problems: "pdfs/NACLO2019ROUND1.pdf", solutions: "pdfs/NACLO2019ROUND1SOL.pdf" },
-  2020: { problems: "pdfs/NACLO2020ROUND1.pdf", solutions: "pdfs/NACLO2020ROUND1SOL.pdf" },
-  2021: { problems: "pdfs/NACLO2021ROUND1.pdf", solutions: "pdfs/NACLO2021ROUND1SOL.pdf" },
-  2022: { problems: "pdfs/NACLO2022ROUND1.pdf", solutions: "pdfs/NACLO2022ROUND1SOL.pdf" },
-  2023: { problems: "pdfs/NACLO2023ROUND1.pdf", solutions: "pdfs/NACLO2023ROUND1SOL.pdf" },
-  2024: { problems: "pdfs/naclo-2024-problems.pdf", solutions: "pdfs/naclo-2024-solutions.pdf" },
-  2025: { problems: "pdfs/naclo-2025-problems.pdf", solutions: "pdfs/naclo-2025-solutions.pdf" },
-};
-
-// Hand-checked page maps for booklets whose embedded text is mojibake.
-//
-// 2023 solutions verified by rendering each page. Both 2019 booklets embed a
-// subsetted font with a broken ToUnicode map, so pdftotext returns a
-// substitution cipher — but a consistent one, and the header furniture
-// survives it: "(" is U+037E, ")" is U+037F, and a digit d is U+03EC+d. That
-// leaves "(X)" and "(n/m)" findable without decoding a word of the prose.
-// Scanning both booklets for that shape turns up exactly eight letter glyphs
-// (U+0004, U+0011, U+0012, U+0018, U+001C, U+0026, U+0027, U+002C) in the
-// same order in each, which pins them to A-H. Pages below are that scan, with
-// the (n/m) counts agreeing on every span. The end-of-booklet answer sheet
-// (problems p24-29, its own "1/6".."6/6") is excluded.
-const MANUAL_PAGES: Record<string, Record<string, number[]>> = {
-  "pdfs/NACLO2023ROUND1SOL.pdf": {
-    A: [1, 2], B: [3], C: [4, 5], D: [6, 7], E: [8], F: [9], G: [10, 11, 12, 13], H: [14],
-  },
-  "pdfs/NACLO2019ROUND1.pdf": {
-    A: [8, 9], B: [10], C: [11], D: [12, 13, 14], E: [15], F: [16, 17], G: [18, 19], H: [20, 21],
-  },
-  "pdfs/NACLO2019ROUND1SOL.pdf": {
-    A: [2], B: [3], C: [4], D: [5], E: [6], F: [7], G: [8], H: [9],
-  },
-};
-
-const HEADER = /\(([A-Z])\)\s+(.+?)\s+\((\d+)\/(\d+)\)/;
-
-function mapBooklet(file: string): { pages: Map<string, number[]>; titles: Map<string, string> } {
-  const pages = new Map<string, number[]>();
-  const titles = new Map<string, string>();
-
-  const manual = MANUAL_PAGES[file];
-  if (manual) {
-    for (const [letter, pp] of Object.entries(manual)) pages.set(letter, pp);
-    return { pages, titles };
-  }
-
-  const text = execFileSync("pdftotext", [file, "-"], {
-    encoding: "utf8",
-    maxBuffer: 64 * 1024 * 1024,
-  });
-  const pageTexts = text.split("\f");
-  pageTexts.forEach((page, i) => {
-    const m = page.match(HEADER);
-    if (!m) return;
-    const [, letter, title] = m;
-    if (!pages.has(letter)) pages.set(letter, []);
-    pages.get(letter)!.push(i + 1);
-    if (!titles.has(letter)) titles.set(letter, title.replace(/\s+/g, " ").trim());
-  });
-
-  // Fallback for solutions booklets with bare "(A) Title" headers and no
-  // (1/1) pagination — e.g. 2024. Each letter spans from its header page to
-  // the next letter's header page (inclusive: several solutions share pages).
-  if (pages.size === 0) {
-    const headers: { letter: string; page: number }[] = [];
-    pageTexts.forEach((page, i) => {
-      for (const m of page.matchAll(/^\(([A-Z])\)\s+\S/gm) as Iterable<RegExpMatchArray>) {
-        headers.push({ letter: m[1], page: i + 1 });
-      }
-    });
-    headers.forEach((h, idx) => {
-      const end = idx + 1 < headers.length ? headers[idx + 1].page : pageTexts.length - 1;
-      const span: number[] = [];
-      for (let p = h.page; p <= Math.max(h.page, end); p++) span.push(p);
-      if (!pages.has(h.letter)) pages.set(h.letter, span);
-    });
-  }
-  return { pages, titles };
-}
-
-function buildManifest(): Target[] {
-  const targets: Target[] = [];
-  for (const [yearStr, files] of Object.entries(EXAMS)) {
-    const year = Number(yearStr);
-    if (!existsSync(files.problems)) continue;
-
-    const prob = mapBooklet(files.problems);
-    if (prob.pages.size === 0) {
-      console.warn(`  ${year}: no problems found (broken text layer?) — needs a manual page map`);
-      continue;
-    }
-    const sol = existsSync(files.solutions)
-      ? mapBooklet(files.solutions)
-      : { pages: new Map<string, number[]>(), titles: new Map<string, string>() };
-
-    for (const [letter, pp] of [...prob.pages.entries()].sort()) {
-      targets.push({
-        year,
-        letter,
-        title: prob.titles.get(letter) ?? "(title unknown)",
-        problem: { file: files.problems, pages: pp },
-        solution: sol.pages.has(letter)
-          ? { file: files.solutions, pages: sol.pages.get(letter)! }
-          : undefined,
-      });
-    }
-  }
-  return targets;
-}
-
-/* ---------------------------------------------------------------------------
    Rendering
    --------------------------------------------------------------------------- */
 
-function renderPages(file: string, pages: number[], dir: string, prefix: string): string[] {
+function renderPages(file: string, pages: number[], dir: string, prefix: string, dpi: number): string[] {
   const out: string[] = [];
   for (const page of pages) {
     const base = join(dir, `${prefix}-${page}`);
-    execFileSync("pdftoppm", ["-png", "-r", "150", "-f", String(page), "-l", String(page), file, base]);
+    execFileSync("pdftoppm", ["-png", "-r", String(dpi), "-f", String(page), "-l", String(page), file, base]);
     // pdftoppm zero-pads the page suffix depending on total page count
     for (const suffix of [`-${page}.png`, `-${String(page).padStart(2, "0")}.png`, `-${String(page).padStart(3, "0")}.png`]) {
       if (existsSync(base + suffix)) {
@@ -185,7 +71,7 @@ function renderPages(file: string, pages: number[], dir: string, prefix: string)
    The drafting prompt
    --------------------------------------------------------------------------- */
 
-const SYSTEM = `You transcribe NACLO linguistics olympiad problems into structured JSON records for a practice site. You are given page images of one problem and, when available, its official solution. Accuracy is everything: a wrong answer key or a broken table alignment makes the problem unsolvable, and a human reviewer will check your work cell by cell.
+const SYSTEM_BASE = `You transcribe NACLO linguistics olympiad problems into structured JSON records for a practice site. You are given page images of one problem and, when available, its official solution. Accuracy is everything: a wrong answer key or a broken table alignment makes the problem unsolvable, and a human reviewer will check your work cell by cell.
 
 Return ONLY a JSON object, no markdown fences, matching this shape:
 
@@ -238,34 +124,67 @@ HINTS — exactly 3, each shaped {"tier": <1|2|3>, "text": "...", "xpCost": <n>}
 
 EXPLANATION — a genuine walkthrough for a 12-17 year old: the path a solver takes, not just the answers. Use <h3> section headers, work concrete examples, and gloss any linguistics term in plain English. This is the main thing the site adds over the PDF.`;
 
+export type Pass = "a" | "b";
+
+/**
+ * The two passes must fail differently or agreement proves nothing. A model
+ * misreading a glyph at 150dpi will often misread it the same way twice, so
+ * the passes differ in resolution and in reading order.
+ */
+const PASS_STYLE: Record<Pass, { dpi: number; instruction: string }> = {
+  a: {
+    dpi: 150,
+    instruction:
+      "\n\nREADING ORDER: work through every table strictly cell by cell, " +
+      "row by row, left to right. Read each cell in isolation before moving " +
+      "on, and do not infer a cell's content from the pattern of its " +
+      "neighbours.",
+  },
+  b: {
+    dpi: 300,
+    instruction:
+      "\n\nREADING ORDER: read each page as a whole first and understand what " +
+      "the problem is asking, then transcribe. Where a glyph is ambiguous, " +
+      "resolve it from the language's overall inventory as shown across the " +
+      "whole data set rather than from the single mark on the page.",
+  },
+};
+
 /* ---------------------------------------------------------------------------
    Drafting
    --------------------------------------------------------------------------- */
 
-async function draftOne(client: Anthropic, target: Target, force: boolean): Promise<"done" | "skipped" | "failed"> {
+export async function draftPass(
+  client: Anthropic,
+  target: Target,
+  pass: Pass,
+  force: boolean,
+): Promise<"done" | "skipped" | "failed"> {
   const id = `${target.year}-open-${target.letter}`;
-  const draftPath = `content/drafts/${id}.json`;
+  const label = `${id}.${pass}`;
+  const draftPath = `content/drafts/${id}.${pass}.json`;
+  const dpi = PASS_STYLE[pass].dpi;
 
   if (existsSync(`content/problems/${id}.json`)) {
     const existing = JSON.parse(readFileSync(`content/problems/${id}.json`, "utf8"));
     if (existing.tier === "full") {
-      console.log(`  ${id}: already fully transcribed — skipping`);
+      console.log(`  ${label}: already fully transcribed — skipping`);
       return "skipped";
     }
   }
   if (existsSync(draftPath) && !force) {
-    console.log(`  ${id}: draft exists — skipping (use --force to redo)`);
+    console.log(`  ${label}: draft exists — skipping (use --force to redo)`);
     return "skipped";
   }
 
-  const workDir = join(tmpdir(), `gloss-draft-${id}`);
+  const workDir = join(tmpdir(), `gloss-draft-${label}`);
   rmSync(workDir, { recursive: true, force: true });
   mkdirSync(workDir, { recursive: true });
 
   try {
-    const problemImages = renderPages(target.problem.file, target.problem.pages, workDir, "p");
+    const problemImages = renderPages(target.problem.file, target.problem.pages, workDir, "p", dpi);
     const solutionImages = target.solution
-      ? renderPages(target.solution.file, target.solution.pages, workDir, "s")
+      ? renderPages(target.solution.file, target.solution.pages, workDir, "s", dpi)
       : [];
 
     const content: Anthropic.ContentBlockParam[] = [
@@ -299,17 +218,17 @@ async function draftOne(client: Anthropic, target: Target, force: boolean): Prom
     const stream = client.messages.stream({
       model: MODEL,
       max_tokens: 64000,
-      system: SYSTEM,
+      system: SYSTEM_BASE + PASS_STYLE[pass].instruction,
       messages: [{ role: "user", content }],
     });
     const response = await stream.finalMessage();
 
     if (response.stop_reason === "refusal") {
-      console.error(`  ${id}: model declined the request — skipping`);
+      console.error(`  ${label}: model declined the request — skipping`);
       return "failed";
     }
     if (response.stop_reason === "max_tokens") {
-      console.error(`  ${id}: output truncated at max_tokens — raise it and retry`);
+      console.error(`  ${label}: output truncated at max_tokens — raise it and retry`);
       return "failed";
     }
 
@@ -326,21 +245,26 @@ async function draftOne(client: Anthropic, target: Target, force: boolean): Prom
       record = JSON.parse(text);
     } catch {
       writeFileSync(`${draftPath}.rejected`, text);
-      console.error(`  ${id}: response was not valid JSON — raw output kept at ${draftPath}.rejected`);
+      console.error(`  ${label}: response was not valid JSON — raw output kept at ${draftPath}.rejected`);
       return "failed";
     }
 
     // Pin the fields the model must not control.
-    const pinned = {
+    const pinned: Record<string, unknown> = {
       ...(record as Record<string, unknown>),
       id,
       tier: "full",
       year: target.year,
       round: "open",
       letter: target.letter,
+      title: target.title,
       sourcePdfUrl: "https://naclo.org/practice.php",
       reviewStatus: "drafted",
     };
+    // Deterministic where the booklet is readable; model-supplied for 2019,
+    // where it gets consensus-checked like any other model output.
+    if (target.officialPoints !== null) pinned.officialPoints = target.officialPoints;
+    if (target.authors.length > 0) pinned.authors = target.authors;
 
     const parsed = Problem.safeParse(pinned);
     mkdirSync("content/drafts", { recursive: true });
@@ -348,9 +272,9 @@ async function draftOne(client: Anthropic, target: Target, force: boolean): Prom
 
     const tokens = `${response.usage.input_tokens}in/${response.usage.output_tokens}out`;
     if (parsed.success) {
-      console.log(`  ${id}: drafted (${(pinned as unknown as { questions?: unknown[] }).questions?.length ?? "?"} questions, ${tokens})`);
+      console.log(`  ${label}: drafted (${(pinned as unknown as { questions?: unknown[] }).questions?.length ?? "?"} questions, ${tokens})`);
     } else {
-      console.warn(`  ${id}: drafted with ${parsed.error.issues.length} schema issue(s) to fix in review (${tokens}):`);
+      console.warn(`  ${label}: drafted with ${parsed.error.issues.length} schema issue(s) to fix in review (${tokens}):`);
       for (const issue of parsed.error.issues.slice(0, 5)) {
         console.warn(`      ${issue.path.join(".")}: ${issue.message}`);
       }
@@ -368,7 +292,7 @@ async function main() {
   const force = args.includes("--force");
   const wants = args.filter((a) => !a.startsWith("--"));
 
-  const manifest = buildManifest();
+  const manifest = buildManifest(Object.keys(EXAMS).map(Number));
 
   if (args.includes("--list") || (wants.length === 0 && !args.includes("--all"))) {
     console.log("Draftable problems (problem pages + solution pages):\n");
@@ -400,24 +324,33 @@ async function main() {
   const client = new Anthropic();
   console.log(`Drafting ${selected.length} problem(s) with ${MODEL} -> content/drafts/\n`);
 
-  let done = 0, skipped = 0, failed = 0;
-  for (const target of selected) {
+  // Two passes per problem, pooled at concurrency 4: 116 calls sequentially
+  // is most of a day, pooled it is about an hour. A rate limit gets one
+  // retry after a 60s wait, then that pass is given up on — the run
+  // continues rather than stalling the whole pool on one bad response.
+  const jobs = selected.flatMap((t) => (["a", "b"] as Pass[]).map((pass) => ({ t, pass })));
+  const outcomes = await mapPool(jobs, 4, async ({ t, pass }) => {
     try {
-      const result = await draftOne(client, target, force);
-      if (result === "done") done += 1;
-      else if (result === "skipped") skipped += 1;
-      else failed += 1;
+      return await draftPass(client, t, pass, force);
     } catch (err) {
-      failed += 1;
       if (err instanceof Anthropic.RateLimitError) {
-        console.error(`  ${target.year}-${target.letter}: rate limited — waiting 60s`);
         await new Promise((r) => setTimeout(r, 60_000));
-      } else if (err instanceof Anthropic.APIError) {
-        console.error(`  ${target.year}-${target.letter}: API error ${err.status}: ${err.message}`);
-      } else {
-        console.error(`  ${target.year}-${target.letter}: ${(err as Error).message}`);
+        try {
+          return await draftPass(client, t, pass, force);
+        } catch {
+          return "failed" as const;
+        }
       }
+      console.error(`  ${t.year}-${t.letter}.${pass}: ${(err as Error).message}`);
+      return "failed" as const;
     }
+  });
+
+  let done = 0, skipped = 0, failed = 0;
+  for (const outcome of outcomes) {
+    if (outcome === "done") done += 1;
+    else if (outcome === "skipped") skipped += 1;
+    else failed += 1;
   }
 
   console.log(`\n${done} drafted, ${skipped} skipped, ${failed} failed.`);
