@@ -42,6 +42,11 @@ typography:
     fontSize: "2.25rem"
     fontWeight: 600
     lineHeight: 1.25
+  subhead:
+    fontFamily: '"Noto Serif Display", Georgia, serif'
+    fontSize: "1.35rem"
+    fontWeight: 600
+    lineHeight: 1.3
   title:
     fontFamily: '"Noto Serif Display", Georgia, serif'
     fontSize: "1.05rem"
@@ -257,6 +262,9 @@ adding the file.
 - **Display** (600, 3rem, 1): Reserved. The landing page's opening is now the
   wordmark, so nothing currently uses this step.
 - **Headline** (600, 2.25rem, 1.25): Problem titles.
+- **Subhead** (600, 1.35rem, 1.3): The heading of a column or panel that has
+  to carry across a wide row, where Title reads as body text and Headline
+  reads as a page title.
 - **Title** (600, 1.05rem, 1.4): Card and section headings inside a page.
 - **Body** (400, 1rem, 1.5): Prose. Measure is capped between 54ch and 68ch
   depending on context, never full container width.

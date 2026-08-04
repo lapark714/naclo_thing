@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-04T15:31:41Z",
+  "generatedAt": "2026-08-04T15:37:22Z",
   "title": "Design System: gloss.",
   "extensions": {
     "colorMeta": {
@@ -255,6 +255,10 @@
       "wordmark-sm": {
         "displayName": "Wordmark (narrow)",
         "purpose": "The logotype below the sm breakpoint. 3.5rem is about 56px, which on a 390px viewport swallows the sentence underneath it."
+      },
+      "subhead": {
+        "displayName": "Subhead",
+        "purpose": "The heading of a column or panel carrying across a wide row. Title reads as body text at that width; Headline reads as a page title."
       }
     },
     "shadows": [
