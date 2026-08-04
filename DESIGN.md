@@ -233,9 +233,11 @@ adding the file.
 
 ### Hierarchy
 
-- **Wordmark** (700, 3.5rem, -0.02em): The logotype, and only the logotype. Ink
-  on paper, because the page is paper. The reference art reverses it out of
-  charcoal; that lockup is kept for the app icon, never for the page.
+- **Wordmark** (700, 3.5rem, -0.02em; 2.75rem below the `sm` breakpoint): The
+  logotype, and only the logotype. Ink on paper, because the page is paper. The
+  reference art reverses it out of charcoal; that lockup is kept for the app
+  icon, never for the page. It steps down on a narrow screen because 3.5rem is
+  about 56px, which on a 390px viewport swallows the sentence underneath it.
 - **Display** (600, 3rem, 1): Reserved. The landing page's opening is now the
   wordmark, so nothing currently uses this step.
 - **Headline** (600, 2.25rem, 1.25): Problem titles.
