@@ -145,8 +145,7 @@ export function HomeDemo() {
           </>
         ) : (
           <>
-            Three real rows from the 2023 exam. Work out the fourth. No Permyak
-            required, and nothing here is a trick.
+            Example of three rows from the 2023 exam. Work out the fourth.
           </>
         )}
       </p>
