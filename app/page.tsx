@@ -56,11 +56,7 @@ export default function Home() {
       {/* The guarantee, where it reassures. It used to sit in the second
           sentence of the page, which sold a process detail as a headline. */}
       <p className="mt-4 max-w-[58ch] text-[0.85rem] leading-relaxed text-ink-soft">
-        Each problem is transcribed twice, independently, and the two
-        transcriptions are checked against each other and against the text
-        inside the original PDF. Anything the checks can&apos;t settle is
-        withheld. If an answer still looks wrong, you
-        can flag it for our review.
+        We transcribe each problem twice and compare both versions against the original PDF. Anything that doesn't match is held back. If something still looks off, flag it and we'll take a look.
       </p>
 
       {/* Bracketed by hairlines rather than boxed: the design system has no
