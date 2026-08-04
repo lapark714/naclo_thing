@@ -67,27 +67,27 @@ export default function Home() {
           tinted surfaces, so a rule above and below is what gives this block
           an edge without inventing a card for it. */}
       <section className="mt-12 border-y border-rule py-8">
-        <h2 className="text-[0.7rem] font-semibold tracking-[0.14em] text-ink-soft uppercase">
+        <h2 className="text-[0.72rem] font-semibold tracking-[0.14em] text-ink-soft uppercase">
           How it works
         </h2>
         <dl className="mt-4 grid gap-x-6 gap-y-7 sm:grid-cols-3">
           <div>
             <dt className="font-heading text-[1.05rem]">Hints cost XP</dt>
-            <dd className="mt-1 text-[0.88rem] leading-relaxed text-ink-soft">
+            <dd className="mt-1 text-[0.85rem] leading-relaxed text-ink-soft">
               You may unlock three per problem, in order. The first says where to
               look, while the last works a step through on ungraded data. 
             </dd>
           </div>
           <div>
             <dt className="font-heading text-[1.05rem]">Worked explanations</dt>
-            <dd className="mt-1 text-[0.88rem] leading-relaxed text-ink-soft">
+            <dd className="mt-1 text-[0.85rem] leading-relaxed text-ink-soft">
               NACLO&rsquo;s own solutions give the answer and skip the
               reasoning. Read the steps a solver takes to get there.
             </dd>
           </div>
           <div>
             <dt className="font-heading text-[1.05rem]">A clock you control</dt>
-            <dd className="mt-1 text-[0.88rem] leading-relaxed text-ink-soft">
+            <dd className="mt-1 text-[0.85rem] leading-relaxed text-ink-soft">
               Nothing runs on a timer unless you set one. When it runs out you
               get a banner but your answers keep working.
             </dd>
@@ -97,7 +97,7 @@ export default function Home() {
 
       {/* No rule of its own: the section above already closes with one, and a
           second hairline forty pixels below it reads as noise. */}
-      <footer className="mt-8 text-[0.8rem] text-ink-soft">
+      <footer className="mt-8 text-[0.78rem] text-ink-soft">
         <p className="max-w-[60ch]">
           Unofficial practice for the North American Computational Linguistics
           Olympiad. We credit the original authors on every problem page. You do

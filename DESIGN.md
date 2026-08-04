@@ -51,6 +51,16 @@ typography:
     fontSize: "0.95rem"
     fontWeight: 400
     lineHeight: 1.5
+  small:
+    fontFamily: '"Noto Sans", ui-sans-serif, system-ui, sans-serif'
+    fontSize: "0.85rem"
+    fontWeight: 400
+    lineHeight: 1.5
+  fine:
+    fontFamily: '"Noto Sans", ui-sans-serif, system-ui, sans-serif'
+    fontSize: "0.78rem"
+    fontWeight: 400
+    lineHeight: 1.45
   label:
     fontFamily: '"Noto Sans", ui-sans-serif, system-ui, sans-serif'
     fontSize: "0.72rem"
@@ -246,6 +256,11 @@ adding the file.
   depending on context, never full container width.
 - **Data** (400, 0.95rem, 1.5): Every span of language data, table cell, and
   answer input.
+- **Small** (400, 0.85rem, 1.5): Supporting prose that sits beside a primary
+  thing rather than carrying it: the guarantee under a call to action, a
+  definition list's description, the count next to a button.
+- **Fine** (400, 0.78rem, 1.45): Metadata and fine print. Footers, byline
+  detail, counts, anything a reader should be able to skip.
 - **Label** (600, 0.72rem, 0.14em tracking, uppercase): Section eyebrows,
   table headers, and all button text.
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-04T13:57:45Z",
+  "generatedAt": "2026-08-04T14:00:00Z",
   "title": "Design System: gloss.",
   "extensions": {
     "colorMeta": {
@@ -243,6 +243,14 @@
       "label": {
         "displayName": "Label",
         "purpose": "Uppercase eyebrows, table headers and all button text."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Supporting prose beside a primary thing: the guarantee under a CTA, a definition list's description, the count next to a button."
+      },
+      "fine": {
+        "displayName": "Fine",
+        "purpose": "Metadata and fine print. Footers, byline detail, counts, anything a reader should be able to skip."
       }
     },
     "shadows": [
