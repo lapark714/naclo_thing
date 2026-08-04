@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-01T12:45:39Z",
+  "generatedAt": "2026-08-04T13:57:45Z",
   "title": "Design System: gloss.",
   "extensions": {
     "colorMeta": {
@@ -153,6 +153,70 @@
           "#f1eee6",
           "#faf9f5"
         ]
+      },
+      "action": {
+        "role": "primary",
+        "displayName": "Action Orange",
+        "canonical": "oklch(0.7 0.19 45)",
+        "tonalRamp": [
+          "oklch(0.18 0.105 45)",
+          "oklch(0.30 0.152 45)",
+          "oklch(0.42 0.180 45)",
+          "oklch(0.56 0.190 45)",
+          "oklch(0.70 0.190 45)",
+          "oklch(0.80 0.152 45)",
+          "oklch(0.88 0.086 45)",
+          "oklch(0.96 0.030 45)"
+        ],
+        "purpose": "Action and brand: the primary button, a selected chip, a link, the -eme of the wordmark."
+      },
+      "action-hover": {
+        "role": "primary",
+        "displayName": "Action Orange Hover",
+        "canonical": "oklch(0.63 0.18 45)",
+        "tonalRamp": [
+          "oklch(0.18 0.099 45)",
+          "oklch(0.30 0.144 45)",
+          "oklch(0.42 0.171 45)",
+          "oklch(0.56 0.180 45)",
+          "oklch(0.70 0.180 45)",
+          "oklch(0.80 0.144 45)",
+          "oklch(0.88 0.081 45)",
+          "oklch(0.96 0.029 45)"
+        ],
+        "purpose": "Hover and active state of anything filled with Action."
+      },
+      "action-deep": {
+        "role": "primary",
+        "displayName": "Action Orange Deep",
+        "canonical": "oklch(0.47 0.14 45)",
+        "tonalRamp": [
+          "oklch(0.18 0.077 45)",
+          "oklch(0.30 0.112 45)",
+          "oklch(0.42 0.133 45)",
+          "oklch(0.56 0.140 45)",
+          "oklch(0.70 0.140 45)",
+          "oklch(0.80 0.112 45)",
+          "oklch(0.88 0.063 45)",
+          "oklch(0.96 0.022 45)"
+        ],
+        "purpose": "Action at body size, where the vivid step does not clear contrast on paper. 6.93:1."
+      },
+      "action-tint": {
+        "role": "primary",
+        "displayName": "Action Orange Tint",
+        "canonical": "oklch(0.96 0.03 45)",
+        "tonalRamp": [
+          "oklch(0.18 0.017 45)",
+          "oklch(0.30 0.024 45)",
+          "oklch(0.42 0.028 45)",
+          "oklch(0.56 0.030 45)",
+          "oklch(0.70 0.030 45)",
+          "oklch(0.80 0.024 45)",
+          "oklch(0.88 0.013 45)",
+          "oklch(0.96 0.005 45)"
+        ],
+        "purpose": "The wash behind a selected or active region."
       }
     },
     "typographyMeta": {
@@ -268,12 +332,12 @@
       "Square corners everywhere; the radius scale exists in tokens and is unused",
       "Hairline rules and tonal blocks carry structure instead of shadows",
       "Serif display for identity, humanist sans for interface, a dedicated linguistics face for language data",
-      "One accent, spent on cost and error, not on decoration"
+      "Four colour roles, each with a job: action, subject, cost/error, correct"
     ],
     "rules": [
       {
-        "name": "The One Accent Rule",
-        "body": "Oxblood is the only chromatic colour in the interface, and it means cost or error. Verdigris answers it and means correct. Neither is ever decorative, and no third accent is introduced for emphasis, category, or brand.",
+        "name": "The Every Colour Has A Job Rule",
+        "body": "Three colour roles exist and nothing else is chromatic. Oxblood means cost or error. Verdigris means correct. Action (`--action`, never `--accent`: the shadcn scaffold owns that name and the production minifier will silently take its value) means action or brand: the primary button, a selected chip, a link, the `-eme` of the wordmark. If something needs to stand out and is none of those, it stands out through weight, rule, or ink fill. Decoration is not a role, and there are no gradients, tinted cards, or coloured surfaces anywhere.",
         "section": "colors"
       },
       {
@@ -313,20 +377,20 @@
       }
     ],
     "dos": [
-      "Do keep the page on warm paper (#fbfaf7) and reserve white (#ffffff) for surfaces that genuinely sit above it.",
-      "Do set every span of language data in the data stack, and add a font subset before shipping a script the fonts do not cover.",
-      "Do give wide tables their natural width inside .table-scroll, and give every direct child of <body> width:100% and min-width:0.",
-      "Do cap prose by character measure (54ch to 68ch), not by container width.",
-      "Do use the global focus treatment: a 2px ink outline at 2px offset.",
-      "Do spend Oxblood on cost and error only, and Verdigris on correctness only."
+      "**Do** keep the page on warm paper (#fbfaf7) and reserve white (#ffffff) for surfaces that genuinely sit above it.",
+      "**Do** set every span of language data in the data stack, and add a font subset before shipping a script the fonts do not cover. The build fails on an uncovered character, and that failure is the feature.",
+      "**Do** give wide tables their natural width inside `.table-scroll`, and give every direct child of `<body>` `width: 100%` and `min-width: 0`.",
+      "**Do** cap prose by character measure (54ch to 68ch), not by container width.",
+      "**Do** use the global focus treatment: a 2px ink outline at 2px offset.",
+      "**Do** spend Oxblood on cost and error only, and Verdigris on correctness only."
     ],
     "donts": [
-      "Don't introduce a border radius. Every corner is 0px, and the radius tokens in globals.css are vestigial.",
-      "Don't give any control a shadow, and don't add ambient shadow to a card, panel or table.",
-      "Don't let the interface drift toward a generic SaaS dashboard: no blue accent, no rounded cards, no sidebar chrome, no soft elevation.",
-      "Don't add a third accent colour.",
-      "Don't reflow or wrap a data table to fit a narrow screen.",
-      "Don't put an em dash in user-facing copy, and don't use a character the self-hosted fonts do not carry."
+      "**Don't** introduce a border radius. Every corner is 0px, and the radius tokens in `globals.css` are vestigial.",
+      "**Don't** give any control a shadow, and don't add ambient shadow to a card, panel or table. The hint popover is the only element in the system that carries one.",
+      "**Don't** let the interface drift toward a generic SaaS dashboard: no blue accent, no rounded cards, no sidebar chrome, no soft elevation. This is the one confirmed rejection.",
+      "**Don't** add a fifth colour role. If something needs emphasis and is not a cost, an error, or a correct answer, use weight, rule, or ink fill.",
+      "**Don't** reflow or wrap a data table to fit a narrow screen. Column alignment is often the problem itself, and breaking it destroys the puzzle.",
+      "**Don't** put an em dash in user-facing copy, and don't use a character the self-hosted fonts do not carry. Arrows are the recurring offender: no shipped font contains U+2192."
     ]
   }
 }
