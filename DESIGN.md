@@ -287,8 +287,12 @@ be mistaken for body text.
 
 ## Layout
 
-A single centred column, 48rem (768px) maximum, with 20px gutters that widen to
-32px above the small breakpoint. Vertical rhythm runs on a coarse scale: 40px
+Two container widths, chosen by what the surface is for. Reading and solving
+surfaces (the practice index, a problem page) hold a single centred column,
+48rem (768px) maximum. The landing page runs to 72rem (1152px), because it is
+scanned and acted on rather than read top to bottom, and at 48rem on a desktop
+it reads as the phone layout with half the screen empty either side. Both use
+20px gutters that widen to 32px above the small breakpoint. Vertical rhythm runs on a coarse scale: 40px
 between blocks, 64px between major sections, 64px to 96px of page padding on the
 landing page.
 
@@ -299,7 +303,9 @@ container and overflow horizontally within it.
 Responsive behaviour is almost entirely one breakpoint (640px). Above it,
 gutters widen, the display type steps up, and the three how-it-works items sit
 in a row. Below it, everything stacks. There is no separate mobile layout and no
-navigation to collapse.
+navigation to collapse. The landing page adds one more at 1024px, where the
+pitch and the worked demo move from stacked to side by side; that is the only
+place in the system with a second breakpoint.
 
 ### Named Rules
 
