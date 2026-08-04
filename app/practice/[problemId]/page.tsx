@@ -7,6 +7,7 @@ import {
   toClientQuestions,
 } from "@/lib/content";
 import { ProblemView } from "@/components/problem-view";
+import { ReadingProgress } from "@/components/reading-progress";
 
 export function generateStaticParams() {
   return getPublishedProblems().map((p) => ({ problemId: p.id }));
@@ -37,6 +38,7 @@ export default async function ProblemPage({
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-10 sm:px-8">
+      <ReadingProgress />
       <Link
         href="/practice"
         className="text-[0.8rem] text-ink-soft underline underline-offset-2 hover:text-ink"
