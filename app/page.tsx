@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { getProblemIndex } from "@/lib/content";
-import { ConceptCoverage } from "@/components/concept-coverage";
 import { HomeDemo } from "@/components/home-demo";
 
 export default function Home() {
@@ -65,7 +64,10 @@ export default function Home() {
         can flag it.
       </p>
 
-      <section className="mt-12">
+      {/* Bracketed by hairlines rather than boxed: the design system has no
+          tinted surfaces, so a rule above and below is what gives this block
+          an edge without inventing a card for it. */}
+      <section className="mt-12 border-y border-rule py-8">
         <h2 className="text-[0.7rem] font-semibold tracking-[0.14em] text-ink-soft uppercase">
           How it works
         </h2>
@@ -95,9 +97,9 @@ export default function Home() {
         </dl>
       </section>
 
-      <ConceptCoverage problems={problems} />
-
-      <footer className="mt-10 border-t border-rule pt-6 text-[0.8rem] text-ink-soft">
+      {/* No rule of its own: the section above already closes with one, and a
+          second hairline forty pixels below it reads as noise. */}
+      <footer className="mt-8 text-[0.8rem] text-ink-soft">
         <p className="max-w-[60ch]">
           Unofficial practice for the North American Computational Linguistics
           Olympiad. We credit the original authors on every problem page. You do
