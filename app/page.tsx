@@ -18,7 +18,7 @@ export default function Home() {
           a contest they have not entered, and the contest student loses nothing
           by meeting the puzzle before its name. */}
       <p className="mt-5 max-w-[54ch] text-lg leading-relaxed text-ink">
-        A language you have never seen, and just enough of it to work out the
+        A language you have never seen, but just enough of it to work out the
         rest. That&apos;s the whole game.
       </p>
 
@@ -26,8 +26,7 @@ export default function Home() {
         The problems come from NACLO, the North American Computational
         Linguistics Olympiad, which publishes its past exams as PDFs you cannot
         search or filter. Here they are transcribed, sorted by what each one
-        teaches, and fitted with hints you unlock one at a time instead of
-        jumping to the answer.
+        teaches, and fitted with hints you can unlock one at a time.
       </p>
 
       <HomeDemo />
@@ -59,9 +58,9 @@ export default function Home() {
       <p className="mt-4 max-w-[58ch] text-[0.85rem] leading-relaxed text-ink-soft">
         Each problem is transcribed twice, independently, and the two
         transcriptions are checked against each other and against the text
-        inside the original PDF; anything the checks can&apos;t settle is
-        held back instead of published. If an answer still looks wrong, you
-        can flag it.
+        inside the original PDF. Anything the checks can&apos;t settle is
+        withheld. If an answer still looks wrong, you
+        can flag it for our review.
       </p>
 
       {/* Bracketed by hairlines rather than boxed: the design system has no
@@ -75,9 +74,8 @@ export default function Home() {
           <div>
             <dt className="font-heading text-[1.05rem]">Hints cost XP</dt>
             <dd className="mt-1 text-[0.88rem] leading-relaxed text-ink-soft">
-              You unlock three per problem, in order. The first says where to
-              look, the last works a step through on ungraded data. You see the
-              cost before you spend.
+              You may unlock three per problem, in order. The first says where to
+              look, while the last works a step through on ungraded data. 
             </dd>
           </div>
           <div>
@@ -91,7 +89,7 @@ export default function Home() {
             <dt className="font-heading text-[1.05rem]">A clock you control</dt>
             <dd className="mt-1 text-[0.88rem] leading-relaxed text-ink-soft">
               Nothing runs on a timer unless you set one. When it runs out you
-              get a banner and your answers keep working.
+              get a banner but your answers keep working.
             </dd>
           </div>
         </dl>
