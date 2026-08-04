@@ -22,13 +22,6 @@ export default function Home() {
         rest. That&apos;s the whole game.
       </p>
 
-      <p className="mt-4 max-w-[54ch] text-[0.95rem] leading-relaxed text-ink-soft">
-        The problems come from NACLO, the North American Computational
-        Linguistics Olympiad, which publishes its past exams as PDFs you cannot
-        search or filter. Here they are transcribed, sorted by what each one
-        teaches, and fitted with hints you can unlock one at a time.
-      </p>
-
       <HomeDemo />
 
       {/* Above the explainer, not below it: on a phone the old order put the
@@ -53,10 +46,13 @@ export default function Home() {
         </span>
       </div>
 
-      {/* The guarantee, where it reassures. It used to sit in the second
-          sentence of the page, which sold a process detail as a headline. */}
+      {/* One line doing three jobs, because the page had a paragraph for each:
+          where the problems come from, that they are checked, and what to do
+          when one is still wrong. How it works covers the rest. */}
       <p className="mt-4 max-w-[58ch] text-[0.85rem] leading-relaxed text-ink-soft">
-        We transcribe each problem twice and compare both versions against the original PDF. Anything that doesn't match is held back. If something still looks off, flag it and we'll take a look.
+        Past problems from NACLO, the linguistics olympiad. Each one is
+        transcribed twice and checked against the original PDF. Flag anything
+        that still looks wrong.
       </p>
 
       {/* Bracketed by hairlines rather than boxed: the design system has no
