@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-04T14:00:00Z",
+  "generatedAt": "2026-08-04T15:31:41Z",
   "title": "Design System: gloss.",
   "extensions": {
     "colorMeta": {
@@ -251,6 +251,10 @@
       "fine": {
         "displayName": "Fine",
         "purpose": "Metadata and fine print. Footers, byline detail, counts, anything a reader should be able to skip."
+      },
+      "wordmark-sm": {
+        "displayName": "Wordmark (narrow)",
+        "purpose": "The logotype below the sm breakpoint. 3.5rem is about 56px, which on a 390px viewport swallows the sentence underneath it."
       }
     },
     "shadows": [

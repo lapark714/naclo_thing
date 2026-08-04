@@ -25,6 +25,12 @@ typography:
     fontWeight: 700
     lineHeight: 1
     letterSpacing: "-0.02em"
+  wordmark-sm:
+    fontFamily: '"Wordmark", "Helvetica Neue", Arial, sans-serif'
+    fontSize: "2.75rem"
+    fontWeight: 700
+    lineHeight: 1
+    letterSpacing: "-0.02em"
   display:
     fontFamily: '"Noto Serif Display", Georgia, serif'
     fontSize: "3rem"
