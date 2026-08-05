@@ -383,8 +383,17 @@ export function ProblemView({
           >
             {anyListed ? "Questions" : "Progress"}
           </h2>
+          {/* The earned figure comes first. Every other mention of XP on this
+              page is a deduction, and for a long time this line showed what
+              help had cost without ever showing what the work was worth. */}
           <span className="text-[0.78rem] text-ink-soft tabular-nums">
             {correctCount} of {questions.length} correct
+            {saved.xpEarned > 0 && (
+              <span className="font-semibold text-ink">
+                {" "}
+                · {saved.xpEarned} of {officialPoints} XP
+              </span>
+            )}
             {hintCost > 0 && (
               <span className="text-mark"> · −{hintCost} XP from help</span>
             )}

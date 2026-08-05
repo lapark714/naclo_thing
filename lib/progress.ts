@@ -145,6 +145,45 @@ const EMPTY_PROBLEM: ProblemProgress = {
   answered: {},
 };
 
+/**
+ * Per-concept mastery: XP earned against XP available for each tag.
+ *
+ * Deliberately not a lifetime total. A running score only grows, so it says
+ * nothing about where you stand and reads as a loss after a break, which is
+ * why the product asks for coverage rather than a score. Earned-against-
+ * available is bounded: every concept has a ceiling you can actually reach.
+ *
+ * It is also the first place XP is shown as something gained rather than
+ * spent, and the only place taking a hint has a visible consequence — the
+ * denominator does not move when you spend, so the fraction drops.
+ */
+export type Mastery = {
+  earned: number;
+  available: number;
+  solved: number;
+  total: number;
+};
+
+export function masteryByConcept(
+  problems: { id: string; conceptTags: string[]; officialPoints: number }[],
+  progress: Progress,
+): Record<string, Mastery> {
+  const out: Record<string, Mastery> = {};
+  for (const problem of problems) {
+    const p = progress.problems[problem.id];
+    for (const tag of problem.conceptTags) {
+      out[tag] ??= { earned: 0, available: 0, solved: 0, total: 0 };
+      out[tag].available += problem.officialPoints;
+      out[tag].total += 1;
+      if (p) {
+        out[tag].earned += p.xpEarned;
+        if (p.solved) out[tag].solved += 1;
+      }
+    }
+  }
+  return out;
+}
+
 /** Per-concept coverage: how many problems carrying each tag are solved. */
 export function coverageByConcept(
   problems: { id: string; conceptTags: string[] }[],

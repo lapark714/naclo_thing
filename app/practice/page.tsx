@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getProblemIndex, getUpcoming } from "@/lib/content";
 import { ConceptFilter } from "@/components/concept-filter";
 import { ComingSoon } from "@/components/coming-soon";
+import { ConceptMastery } from "@/components/concept-mastery";
 
 export const metadata: Metadata = {
   title: "Practice · morpheme",
@@ -30,6 +31,8 @@ export default function PracticePage() {
       <div className="mt-7">
         <ConceptFilter problems={problems} />
       </div>
+
+      <ConceptMastery problems={problems} />
 
       <ComingSoon upcoming={upcoming} />
     </main>
