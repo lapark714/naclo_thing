@@ -53,7 +53,7 @@ export default function Home() {
               each: where the problems come from, that they are checked, and
               what to do when one is still wrong. */}
           <p className="mt-4 max-w-[58ch] text-[0.85rem] leading-relaxed text-ink-soft">
-            Past problems from NACLO, the linguistics olympiad. Each one is
+            Past problems from the North American Computational Linguistics Olympiad, NACLO. Each one is
             transcribed twice and checked against the original PDF. Flag
             anything that still looks wrong.
           </p>
