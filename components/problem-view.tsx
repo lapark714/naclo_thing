@@ -313,6 +313,12 @@ export function ProblemView({
 
   return (
     <>
+      {/* Above the problem, not below it. The clock covers the whole attempt,
+          reading included, and several problems put their blanks in a table
+          near the top: a timer under that is a timer a student meets after
+          they have already started answering. */}
+      <PracticeTimer problemId={problemId} />
+
       {body}
 
       {blankSlots.map((el) => {
@@ -372,8 +378,6 @@ export function ProblemView({
           .
         </p>
       )}
-
-      <PracticeTimer problemId={problemId} />
 
       <section aria-labelledby="questions-heading" className="mt-10">
         <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2 border-b border-ink pb-2">

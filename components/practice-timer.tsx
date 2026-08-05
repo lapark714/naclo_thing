@@ -41,7 +41,7 @@ export function PracticeTimer({ problemId }: { problemId: string }) {
   const expired = Boolean(saved) && left <= 0;
 
   return (
-    <div className="mt-6 border border-rule bg-white px-4 py-3">
+    <div className="mt-6 mb-8 border border-rule bg-white px-4 py-3">
       {!saved ? (
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
           <span className="text-[0.7rem] font-semibold tracking-[0.14em] text-ink-soft uppercase">
