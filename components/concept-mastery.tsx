@@ -23,23 +23,23 @@ export function ConceptMastery({ problems }: { problems: ProblemSummary[] }) {
     .filter(([, m]) => m.available > 0)
     .sort((a, b) => b[1].earned - a[1].earned || a[0].localeCompare(b[0]));
 
-  if (rows.length === 0) return null;
-
-  const started = rows.some(([, m]) => m.earned > 0);
+  // Nothing to show a student who has not started. An all-empty table above
+  // the problem list is the same noise the landing page had: it answers a
+  // question nobody has asked yet, and it pushes the actual problems down.
+  if (rows.length === 0 || !rows.some(([, m]) => m.earned > 0)) return null;
 
   return (
-    <section aria-labelledby="mastery-heading" className="mt-12 border-t border-rule pt-8">
+    <section aria-labelledby="mastery-heading" className="mb-10 border-b border-rule pb-8">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <h2
           id="mastery-heading"
           className="text-[0.72rem] font-semibold tracking-[0.14em] text-ink-soft uppercase"
         >
-          {started ? "Your mastery" : "XP by concept"}
+          Your mastery
         </h2>
         <p className="text-[0.78rem] text-ink-faint">
-          {started
-            ? "Hints come out of what a problem is worth, so the gap is what help cost you."
-            : "Solve a problem to earn its points. Hints come out of them."}
+          Hints come out of what a problem is worth, so the gap is what help
+          cost you.
         </p>
       </div>
 

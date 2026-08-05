@@ -28,11 +28,15 @@ export default function PracticePage() {
         Pick a concept and work problems of that type. Filters stack.
       </p>
 
+      {/* Above the library, not below it. This is the answer to "what do I
+          work on next", and under forty-one problem rows nobody ever saw it. */}
+      <div className="mt-8">
+        <ConceptMastery problems={problems} />
+      </div>
+
       <div className="mt-7">
         <ConceptFilter problems={problems} />
       </div>
-
-      <ConceptMastery problems={problems} />
 
       <ComingSoon upcoming={upcoming} />
     </main>
