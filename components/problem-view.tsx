@@ -383,7 +383,7 @@ export function ProblemView({
           >
             {anyListed ? "Questions" : "Progress"}
           </h2>
-          {/* The earned figure comes first. Every other mention of XP on this
+          {/* The earned figure comes first. Every other mention of points on this
               page is a deduction, and for a long time this line showed what
               help had cost without ever showing what the work was worth. */}
           <span className="text-[0.78rem] text-ink-soft tabular-nums">
@@ -391,11 +391,11 @@ export function ProblemView({
             {saved.xpEarned > 0 && (
               <span className="font-semibold text-ink">
                 {" "}
-                · {saved.xpEarned} of {officialPoints} XP
+                · {saved.xpEarned} of {officialPoints} points
               </span>
             )}
             {hintCost > 0 && (
-              <span className="text-mark"> · −{hintCost} XP from help</span>
+              <span className="text-mark"> · −{hintCost} points from help</span>
             )}
           </span>
         </div>
@@ -521,7 +521,7 @@ export function ProblemView({
               Show explanation
             </button>
             <p className="mt-2 text-[0.78rem] text-ink-faint">
-              Reading the explanation costs no XP. Worth {officialPoints} points
+              Reading the explanation is free. This problem is worth {officialPoints} points
               in the real exam.
             </p>
           </div>

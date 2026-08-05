@@ -46,7 +46,7 @@ Two things a neighbouring product could not truthfully copy without doing the
 same work:
 
 - **Graduated, priced help.** Three hints per problem unlock in order, each with
-  its XP cost shown before it is spent. The first says where to look; the last
+  its cost shown before it is spent. The first says where to look; the last
   works a step through on data that is not graded. Request-time AI help sits on
   top of the written ladder and is prompted against revealing answers.
 - **Reasoning, not keys.** NACLO's own solution sheets give the answer and
@@ -86,9 +86,9 @@ questions rather than transcribing from scratch.
 - **Grading** is decided per sub-question at ingest: `exact` runs in the browser
   with forgiving normalization, `llm` calls a server route for free-text
   translation, `self` is unused. Currently 573 exact, 25 llm, 0 self.
-- **Help** is a three-tier written hint ladder with XP costs, plus a
+- **Help** is a three-tier written hint ladder that costs points, plus a
   request-time route offering an extra AI hint, a plain-language explanation,
-  and an answer reveal that zeroes that part's XP.
+  and an answer reveal that zeroes that part's points.
 - **Timing** is opt-in. Untimed by default; when a timer expires a banner
   appears and every input stays live.
 - **Progress** lives in the browser's local storage and is expressed as coverage
@@ -106,7 +106,7 @@ is nothing to leak.
 **Current behaviour, not confirmed as permanent.** These hold today and are
 enforced in code and in CLAUDE.md, but the init interview did not commit them as
 inviolable, so future work may revisit them deliberately rather than assuming
-either way: help always costing XP and hints never giving the answer; every
+either way: help always costing points and hints never giving the answer; every
 problem carrying its author byline and a link to the original PDF; only
 records the pipeline's cross-checks could vouch for reaching a student, with
 human review moved to a follow-on pass over what gets parked instead of

@@ -75,7 +75,7 @@ export default function Home() {
         </h2>
         <dl className="mt-7 grid gap-x-12 gap-y-9 sm:grid-cols-3">
           <div>
-            <dt className="font-heading text-[1.35rem]">Hints cost XP</dt>
+            <dt className="font-heading text-[1.35rem]">Hints cost points</dt>
             <dd className="mt-2 max-w-[42ch] text-[1rem] leading-relaxed text-ink-soft">
               You may unlock three per problem, in order. The first says where
               to look, while the last works a step through on ungraded data.

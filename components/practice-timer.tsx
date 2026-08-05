@@ -110,7 +110,7 @@ export function PracticeTimer({ problemId }: { problemId: string }) {
       {expired && (
         <p className="mt-2 border-t border-rule pt-2 text-[0.85rem] text-ink-soft">
           Your time is up. Keep going if you want to. Nothing is locked, and time taken does not
-          affect XP.
+          affect your points.
         </p>
       )}
     </div>

@@ -117,7 +117,7 @@ export function HelpPopover({
       >
         Hint
         {spent > 0 && (
-          <span className={open ? "text-paper/70" : "text-mark"} aria-label={`${spent} XP spent`}>
+          <span className={open ? "text-paper/70" : "text-mark"} aria-label={`${spent} points spent`}>
             −{spent}
           </span>
         )}
@@ -154,7 +154,7 @@ export function HelpPopover({
                           onClick={() => onRevealHint(hint.tier)}
                           className="shrink-0 text-[0.75rem] text-mark underline underline-offset-2 hover:no-underline"
                         >
-                          Reveal · −{hint.xpCost} XP
+                          Reveal · −{hint.xpCost} points
                         </button>
                       ) : (
                         <span className="shrink-0 text-[0.72rem] text-ink-faint">locked</span>
@@ -205,7 +205,7 @@ export function HelpPopover({
                   ? "Thinking…"
                   : aiHints.length >= 3
                     ? "No more hints"
-                    : `Ask for a hint · −${AI_HINT_COST} XP`}
+                    : `Ask for a hint · −${AI_HINT_COST} points`}
               </button>
               <button
                 type="button"
@@ -221,11 +221,11 @@ export function HelpPopover({
             </p>
           </div>
 
-          {/* The exit hatch. Costs the part's XP, and says so. */}
+          {/* The exit hatch. Costs the part's points, and says so. */}
           <div className="mt-3 border-t border-rule pt-3">
             {partRevealed ? (
               <p className="text-[0.78rem] text-ink-soft">
-                Answers for {part} are shown. This part scores 0 XP.
+                Answers for {part} are shown. This part scores 0 points.
               </p>
             ) : (
               <button
@@ -236,7 +236,7 @@ export function HelpPopover({
                 }}
                 className="text-[0.78rem] text-ink-soft underline underline-offset-2 hover:text-ink"
               >
-                Show me the answers for {part} · 0 XP for this part
+                Show me the answers for {part} · 0 points for this part
               </button>
             )}
           </div>

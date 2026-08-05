@@ -4,9 +4,9 @@ import { useProgress, masteryByConcept } from "@/lib/progress";
 import type { ProblemSummary } from "@/lib/content";
 
 /**
- * XP earned against XP available, one row per concept.
+ * Points earned against points available, one row per concept.
  *
- * Until this existed, every mention of XP on the site was a deduction: hints
+ * Until this existed, every mention of points on the site was a deduction: hints
  * cost it, revealing an answer zeroed it, and nothing ever showed a student
  * what they had. `xpEarned` was written on every solve and read nowhere, so
  * the currency had a price list and no balance.
@@ -53,7 +53,7 @@ export function ConceptMastery({ problems }: { problems: ProblemSummary[] }) {
                 <dd className="text-[0.78rem] text-ink-soft tabular-nums">
                   <span className="font-semibold text-ink">{m.earned}</span>
                   {" / "}
-                  {m.available} XP
+                  {m.available} points
                   <span className="text-ink-faint">
                     {" · "}
                     {m.solved}/{m.total}
@@ -65,7 +65,7 @@ export function ConceptMastery({ problems }: { problems: ProblemSummary[] }) {
               <div
                 className="mt-1.5 h-[3px] w-full bg-rule"
                 role="img"
-                aria-label={`${tag}: ${m.earned} of ${m.available} XP earned`}
+                aria-label={`${tag}: ${m.earned} of ${m.available} points earned`}
               >
                 <div
                   className="h-full bg-ink"
