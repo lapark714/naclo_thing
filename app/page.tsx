@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getProblemIndex } from "@/lib/content";
 import { HomeDemo } from "@/components/home-demo";
 
@@ -73,28 +74,46 @@ export default function Home() {
         <h2 className="text-[0.72rem] font-semibold tracking-[0.14em] text-ink-soft uppercase">
           How it works
         </h2>
+        {/* Real screenshots, all cropped to the same window on a live problem
+            page, so the three read as one app rather than three mockups. They
+            go stale if that UI moves: recapture rather than redraw. */}
         <dl className="mt-7 grid gap-x-12 gap-y-9 sm:grid-cols-3">
-          <div>
-            <dt className="font-heading text-[1.35rem]">Hints cost points</dt>
-            <dd className="mt-2 max-w-[42ch] text-[1rem] leading-relaxed text-ink-soft">
-              You may unlock three per problem, in order. The first says where
-              to look, while the last works a step through on ungraded data.
-            </dd>
-          </div>
-          <div>
-            <dt className="font-heading text-[1.35rem]">Worked explanations</dt>
-            <dd className="mt-2 max-w-[42ch] text-[1rem] leading-relaxed text-ink-soft">
-              NACLO&rsquo;s own solutions give the answer and skip the
-              reasoning. Read the steps a solver takes to get there.
-            </dd>
-          </div>
-          <div>
-            <dt className="font-heading text-[1.35rem]">A clock you control</dt>
-            <dd className="mt-2 max-w-[42ch] text-[1rem] leading-relaxed text-ink-soft">
-              Nothing runs on a timer unless you set one. When it runs out you
-              get a banner but your answers keep working.
-            </dd>
-          </div>
+          {[
+            {
+              title: "Hints cost points",
+              body: "You may unlock three per problem, in order. The first says where to look, while the last works a step through on ungraded data.",
+              src: "/how/hints.png",
+              alt: "A help panel open over a Kogi matching question, listing three hints. The first offers to reveal for one point, the other two are locked, and a line below says hints never give the answer.",
+            },
+            {
+              title: "Worked explanations",
+              body: "NACLO’s own solutions give the answer and skip the reasoning. Read the steps a solver takes to get there.",
+              src: "/how/explanation.png",
+              alt: "A written walkthrough that breaks a Kogi phrase into a root and three grammar slots, with a table pairing each slot to its form and meaning.",
+            },
+            {
+              title: "A clock you control",
+              body: "Nothing runs on a timer unless you set one. When it runs out you get a banner but your answers keep working.",
+              src: "/how/timer.png",
+              alt: "A timer at the top of a problem reading thirteen minutes fifty-six seconds left, with a Stop link beside it and the problem text below.",
+            },
+          ].map((item) => (
+            <div key={item.title}>
+              <div className="mb-4 border border-rule bg-white">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={760}
+                  height={432}
+                  className="block h-auto w-full"
+                />
+              </div>
+              <dt className="font-heading text-[1.35rem]">{item.title}</dt>
+              <dd className="mt-2 max-w-[42ch] text-[1rem] leading-relaxed text-ink-soft">
+                {item.body}
+              </dd>
+            </div>
+          ))}
         </dl>
       </section>
 
