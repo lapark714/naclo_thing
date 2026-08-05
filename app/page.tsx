@@ -119,12 +119,26 @@ export default function Home() {
 
       {/* No rule of its own: the section above already closes with one, and a
           second hairline forty pixels below it reads as noise. */}
-      <footer className="mt-8 text-[0.78rem] text-ink-soft">
-        <p className="max-w-[60ch]">
-          Unofficial practice for the North American Computational Linguistics
-          Olympiad. We credit the original authors on every problem page. You do
-          not need an account, and your browser keeps your progress.
-        </p>
+      <footer className="mt-8 flex flex-wrap items-end justify-between gap-x-8 gap-y-5 text-[0.78rem] text-ink-soft">
+        <div>
+          <p className="max-w-[60ch]">
+            Unofficial practice for the North American Computational Linguistics
+            Olympiad. We credit the original authors on every problem page. You
+            do not need an account, and your browser keeps your progress.
+          </p>
+          {/* The site is unofficial, so the line above disclaims NACLO's
+              problems while this one claims only the site around them. */}
+          <p className="mt-2 text-ink-faint">
+            &copy; {new Date().getFullYear()} Laurence Park
+          </p>
+        </div>
+
+        <a
+          href="mailto:lapark@stanford.edu"
+          className="shrink-0 border border-rule-strong bg-white px-4 py-2 text-[0.75rem] font-semibold tracking-[0.1em] text-ink uppercase transition-colors hover:border-ink"
+        >
+          Contact
+        </a>
       </footer>
     </main>
   );

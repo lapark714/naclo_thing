@@ -154,7 +154,8 @@ export function HelpPopover({
                           onClick={() => onRevealHint(hint.tier)}
                           className="shrink-0 text-[0.75rem] text-mark underline underline-offset-2 hover:no-underline"
                         >
-                          Reveal · −{hint.xpCost} points
+                          Reveal −{hint.xpCost}{" "}
+                          {hint.xpCost === 1 ? "point" : "points"}
                         </button>
                       ) : (
                         <span className="shrink-0 text-[0.72rem] text-ink-faint">locked</span>
@@ -205,7 +206,7 @@ export function HelpPopover({
                   ? "Thinking…"
                   : aiHints.length >= 3
                     ? "No more hints"
-                    : `Ask for a hint · −${AI_HINT_COST} points`}
+                    : `Ask for a hint −${AI_HINT_COST} points`}
               </button>
               <button
                 type="button"
@@ -236,8 +237,13 @@ export function HelpPopover({
                 }}
                 className="text-[0.78rem] text-ink-soft underline underline-offset-2 hover:text-ink"
               >
-                Show me the answers for {part} · 0 points for this part
+                Show me the answers for {part}
               </button>
+            )}
+            {!partRevealed && (
+              <p className="mt-1 text-[0.72rem] text-ink-faint">
+                Scores 0 points for this part.
+              </p>
             )}
           </div>
         </div>
