@@ -309,11 +309,13 @@ tables are not squeezed to fit; they keep their natural width inside a scrolling
 container and overflow horizontally within it.
 
 Responsive behaviour is almost entirely one breakpoint (640px). Above it,
-gutters widen, the display type steps up, and the three how-it-works items sit
-in a row. Below it, everything stacks. There is no separate mobile layout and no
+gutters widen and the display type steps up. Below it, everything stacks. There is no separate mobile layout and no
 navigation to collapse. The landing page adds one more at 1024px, where the
-pitch and the worked demo move from stacked to side by side; that is the only
-place in the system with a second breakpoint.
+pitch and the worked demo move from stacked to side by side, and each
+how-it-works item puts its screenshot beside its description rather than above
+it; that is the only place in the system with a second breakpoint. Those items
+were a three-across row until the descriptions grew: at 1088px of content, three
+columns give a 36ch measure, well under the floor the Measure Rule sets.
 
 ### Named Rules
 

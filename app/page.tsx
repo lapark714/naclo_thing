@@ -71,13 +71,17 @@ export default function Home() {
           tinted surfaces, so a rule above and below is what gives this block
           an edge without inventing a card for it. */}
       <section className="mt-16 border-y border-rule py-10 sm:py-12">
-        <h2 className="text-[0.72rem] font-semibold tracking-[0.14em] text-ink-soft uppercase">
+        {/* A headline rather than the small uppercase label the product uses
+            for QUESTIONS and EXPLANATION. Those label a working surface; this
+            heads a pitch, on the one page that already carries a 3.5rem
+            wordmark. The label style stays everywhere else. */}
+        <h2 className="font-heading text-center text-[2.25rem] leading-[1.25]">
           How it works
         </h2>
         {/* Real screenshots, all cropped to the same window on a live problem
             page, so the three read as one app rather than three mockups. They
             go stale if that UI moves: recapture rather than redraw. */}
-        <dl className="mt-7 grid gap-x-12 gap-y-9 sm:grid-cols-3">
+        <dl className="mt-10 grid gap-y-10">
           {[
             {
               title: "Hints cost points",
@@ -87,29 +91,38 @@ export default function Home() {
             },
             {
               title: "Worked explanations",
-              body: "NACLO's answer keys give the answer and skip the reasoning. Deriving each one by hand across the whole archive was never realistic. This is a pipeline for it. Conditioned on the official solution, a language model back-chains to recover the inferences that yield it, then orders them forward, the way a solver would.",
+              body: "NACLO's answer keys give the answer and skip the reasoning. Deriving each one by hand was never realistic, so this is a pipeline for it. Conditioned on the official solution, a language model back-chains to recover the inferences that yield it, then orders them forward, the way a solver would.",
               src: "/how/explanation.png",
               alt: "A written walkthrough that breaks a Kogi phrase into a root and three grammar slots, with a table pairing each slot to its form and meaning.",
             },
             {
               title: "A clock you control",
-              body: "Nothing runs on a timer unless you set one. When it runs out you get a banner but your answers keep working.",
+              body: "The real exam is timed, but early practice shouldn't be. Nothing here runs on a clock unless you start one. When it does run out you get a banner and nothing else, so your answers keep working, and the problem stays open as long as you want it.",
               src: "/how/timer.png",
               alt: "A timer at the top of a problem reading thirteen minutes fifty-six seconds left, with a Stop link beside it and the problem text below.",
             },
           ].map((item) => (
-            <div key={item.title}>
-              <div className="mb-4 border border-rule bg-white">
+            // grid-rows-[auto_1fr] is load-bearing: a row-span-2 item taller
+            // than its tracks otherwise splits the excess between them, which
+            // opens an unexplained gap between the term and its definition.
+            // items-start likewise, or the bordered image stretches and draws
+            // white space under the screenshot whenever the text runs longer.
+            <div
+              key={item.title}
+              className="grid gap-x-12 lg:grid-cols-[380px_minmax(0,1fr)] lg:grid-rows-[auto_1fr] lg:items-start"
+            >
+              <div className="mb-4 border border-rule bg-white sm:max-w-[380px] lg:row-span-2 lg:mb-0">
                 <Image
                   src={item.src}
                   alt={item.alt}
                   width={760}
                   height={432}
+                  sizes="(min-width: 640px) 380px, calc(100vw - 40px)"
                   className="block h-auto w-full"
                 />
               </div>
               <dt className="font-heading text-[1.35rem]">{item.title}</dt>
-              <dd className="mt-2 max-w-[42ch] text-[1rem] leading-relaxed text-ink-soft">
+              <dd className="mt-2 max-w-[58ch] text-[1rem] leading-relaxed text-ink-soft">
                 {item.body}
               </dd>
             </div>
