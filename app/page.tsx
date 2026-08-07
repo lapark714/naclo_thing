@@ -81,13 +81,13 @@ export default function Home() {
           {[
             {
               title: "Hints cost points",
-              body: "You may unlock three per problem, in order. The first says where to look, while the last works a step through on ungraded data.",
+              body: "Three hints per problem, unlocked in order. The first points you to the right part of the data; the last walks a full step through on examples that aren't graded. Each one is generated against the official NACLO solution key.",
               src: "/how/hints.png",
               alt: "A help panel open over a Kogi matching question, listing three hints. The first offers to reveal for one point, the other two are locked, and a line below says hints never give the answer.",
             },
             {
               title: "Worked explanations",
-              body: "NACLO’s own solutions give the answer and skip the reasoning. Read the steps a solver takes to get there.",
+              body: "NACLO's answer keys give the answer and skip the reasoning. Deriving each one by hand across the whole archive was never realistic. This is a pipeline for it. Conditioned on the official solution, a language model back-chains to recover the inferences that yield it, then orders them forward, the way a solver would.",
               src: "/how/explanation.png",
               alt: "A written walkthrough that breaks a Kogi phrase into a root and three grammar slots, with a table pairing each slot to its form and meaning.",
             },
