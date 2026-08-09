@@ -31,11 +31,20 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
+            {/* Two labels, one visible per state. The second is a copy the
+                ink fill carries in with it, so neither ever renders against
+                the ground it is unreadable on. See .ink-wipe in globals.css. */}
             <Link
               href="/practice"
-              className="bg-action border-action hover:bg-action-hover hover:border-action-hover inline-flex items-center border px-8 py-4 text-[0.85rem] font-semibold tracking-[0.12em] text-ink uppercase transition-colors"
+              className="ink-wipe bg-action border-action relative inline-flex items-center border px-8 py-4 text-[0.85rem] font-semibold tracking-[0.12em] whitespace-nowrap text-ink uppercase"
             >
               Start practicing
+              <span
+                aria-hidden="true"
+                className="ink-wipe-fill bg-ink text-paper absolute -inset-px flex items-center justify-center"
+              >
+                Start practicing
+              </span>
             </Link>
             <span className="text-[0.85rem] text-ink-soft">
               <span className="font-semibold text-ink tabular-nums">

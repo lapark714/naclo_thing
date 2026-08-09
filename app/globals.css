@@ -606,6 +606,43 @@ body > * {
   color: var(--ink);
 }
 
+/* The landing page's one call to action.
+ *
+ * The system's rule is that a button signals pressability by inverting its
+ * fill rather than by faking a raised edge, so the hover state is that same
+ * inversion, drawn instead of switched: the ink sweeps in left to right, the
+ * direction the page is read and the direction the button sends you. A scale
+ * or a lift would be the raised edge the rule rejects, and this world has no
+ * shadow to lift into.
+ *
+ * Two stacked labels rather than one recoloured one. Ink on the action orange
+ * is 6.18:1 and paper on it is 2.75:1, so a single label crossing the wipe
+ * would spend the whole transition half-unreadable whichever colour it took.
+ * Each copy only ever sits on the ground it was coloured for.
+ *
+ * The fill is inset -1px so it covers the button's border too; clipped back to
+ * nothing at rest, it is the border that would otherwise stay orange under an
+ * ink face. Do not add overflow-hidden to reach for the same thing: that clips
+ * to the padding box and puts the border back.
+ */
+.ink-wipe {
+  transition: transform 90ms ease-out;
+}
+.ink-wipe-fill {
+  clip-path: inset(0 100% 0 0);
+  /* Leaving is faster than arriving: this duration governs hover-off, the one
+     on the hover rule governs hover-on. */
+  transition: clip-path 170ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ink-wipe:hover .ink-wipe-fill,
+.ink-wipe:focus-visible .ink-wipe-fill {
+  clip-path: inset(0 0 0 0);
+  transition-duration: 300ms;
+}
+.ink-wipe:active {
+  transform: translateY(1px);
+}
+
 /* The signature: primary language data is always set in Charis SIL. */
 .data {
   font-family: var(--data-stack);
