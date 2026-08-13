@@ -345,12 +345,20 @@ not by faking a raised edge.
 - **Popover lift** (`box-shadow: 0 8px 28px -12px rgba(22,24,29,0.35)`): The
   hint panel only. It genuinely floats over the page and must read as
   detached from the problem underneath.
+- **Plate lift** (`box-shadow: 0 14px 30px -16px rgba(22,24,29,0.45)`): The
+  how-it-works screenshots on hover only, never at rest. The same recipe pulled
+  tighter and lighter for a 6px rise rather than a floating panel. Both shadows
+  are the same idea at two distances; a third value is a new vocabulary and
+  needs a better reason than a new component.
+
 ### Named Rules
 
-**The Flat Page Rule.** Surfaces are flat at rest. The only shadow in the system
-belongs to the one element that actually leaves the page, the hint popover.
-Nothing else carries shadow, including controls. A hard zero-blur offset is a
-neobrutalist costume and this world is not that.
+**The Flat Page Rule.** Surfaces are flat at rest, and shadow is what an element
+pays for actually leaving the page. Two do: the hint popover, which floats over
+the problem, and a hover-lifted plate, which is flat and ruled like everything
+else until a pointer picks it up. Nothing carries shadow at rest, and controls
+never carry it at all: a button signals pressability by inverting its fill. A
+hard zero-blur offset is a neobrutalist costume and this world is not that.
 
 ## Shapes
 

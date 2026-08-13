@@ -120,7 +120,10 @@ export default function Home() {
               key={item.title}
               className="grid gap-x-12 lg:grid-cols-[380px_minmax(0,1fr)] lg:grid-rows-[auto_1fr] lg:items-start"
             >
-              <div className="mb-4 border border-rule bg-white sm:max-w-[380px] lg:row-span-2 lg:mb-0">
+              {/* .plate carries the hover lift. See globals.css: at rest it
+                  is flat and ruled like everything else, and the rise is what
+                  earns the shadow. */}
+              <div className="plate mb-4 border border-rule bg-white sm:max-w-[380px] lg:row-span-2 lg:mb-0">
                 <Image
                   src={item.src}
                   alt={item.alt}

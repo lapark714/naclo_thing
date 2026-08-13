@@ -643,6 +643,60 @@ body > * {
   transform: translateY(1px);
 }
 
+/* The how-it-works screenshots.
+ *
+ * A plate, in the printing sense the rest of this world borrows from: the
+ * photographic illustration tipped into a volume rather than printed with the
+ * text. Hovering picks one up off the page, which is the only thing the
+ * gesture claims. These are not controls and there is nothing to click.
+ *
+ * The Flat Page Rule survives this intact, because it is a rule about rest: a
+ * plate at rest is flat, ruled, and shadowless like everything else, and what
+ * earns the shadow is the same thing that earns the popover's, actually
+ * leaving the page. The values are the popover's recipe pulled tighter and
+ * lighter for a 6px rise rather than a floating panel, so the system still has
+ * one shadow vocabulary instead of two. Do not add a second.
+ *
+ * The scale is 1.2%, small enough to read as approach rather than zoom. It
+ * costs nothing in sharpness because the source is 760px into a 380px box, so
+ * even scaled up the image is still sampling below its own resolution.
+ *
+ * Leaving is faster than arriving, as on .ink-wipe, but both are quicker: that
+ * wipe crosses a whole button, this lifts six pixels, and duration should
+ * carry distance. Same easing curve, because a page should move one way.
+ *
+ * hover: hover rather than a bare :hover, because a plate is not a control and
+ * a touch device has nothing to put it back down with. Android Chrome leaves
+ * the hover state applied after a tap, which on a div with no click target
+ * would strand one screenshot in the air for the rest of the visit.
+ *
+ * Reduced motion holds the plate still rather than moving it instantly. The
+ * global rule only collapses the duration, which turns a 6px rise into a 6px
+ * jump, and an abrupt jump is the thing that setting exists to prevent. The
+ * border and the shadow still answer, so the hover is not silent.
+ */
+.plate {
+  box-shadow: 0 0 0 0 rgb(22 24 29 / 0);
+  transition:
+    transform 130ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 130ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 130ms ease-out;
+}
+@media (hover: hover) {
+  .plate:hover {
+    transform: translateY(-6px) scale(1.012);
+    border-color: var(--rule-strong);
+    box-shadow: 0 14px 30px -16px rgb(22 24 29 / 0.45);
+    transition-duration: 220ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plate:hover {
+    transform: none;
+  }
+}
+
 /* The signature: primary language data is always set in Charis SIL. */
 .data {
   font-family: var(--data-stack);
