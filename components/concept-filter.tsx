@@ -101,7 +101,7 @@ export function ConceptFilter({ problems }: Props) {
                 className="group flex flex-wrap items-baseline gap-x-4 gap-y-1 py-4 hover:bg-tint/60"
               >
                 <span className="w-16 shrink-0 text-[0.72rem] tracking-wider text-ink-faint tabular-nums">
-                  {p.year} · {p.letter}
+                  {p.year} {p.letter}
                 </span>
                 <span className="min-w-0 flex-1 basis-64">
                   <span className="font-heading text-[1.05rem] text-ink group-hover:underline group-hover:underline-offset-4">

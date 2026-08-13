@@ -50,7 +50,7 @@ export default function Home() {
               <span className="font-semibold text-ink tabular-nums">
                 {problems.length}
               </span>{" "}
-              problems ·{" "}
+              problems,{" "}
               <span className="font-semibold text-ink tabular-nums">
                 {languages.length}
               </span>{" "}
