@@ -54,7 +54,7 @@ export default async function ProblemPage({
             · {problem.officialPoints} points
           </span>
         </p>
-        <h1 className="font-heading mt-2 text-3xl leading-tight sm:text-4xl">
+        <h1 className="font-heading mt-2 text-3xl leading-tight tracking-[-0.015em] sm:text-4xl">
           {problem.title}
         </h1>
         <p className="mt-2 text-[0.88rem] text-ink-soft">

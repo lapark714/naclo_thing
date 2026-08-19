@@ -2,6 +2,18 @@
 
 This file will hold the project's development status and thus document whatever large updates/accomplishments on the project have been made day-by-day. It is meant to help keep track of where things were left off from the previous day, as a personal reminder.
 
+## 2026-08-19
+
+**Done**
+
+- Swapped the site's type system: Poppins for display, Verdana for text. Every heading role is now Poppins 600 (self-hosted, latin + latin-ext, 13.5KB); body, labels, captions and table headers are Verdana, which is a system face and downloads nothing. The wordmark is untouched. Noto Serif Display was the old display face, had no remaining consumer, and was deleted along with its files
+- Language data stayed on Charis SIL, deliberately. Verdana has no IPA, no Latin Extended-B and no non-Latin script, and `validate.ts` only checks the `unicode-range`s declared in `globals.css`, not which stack an element actually names — so pointing `.data` at Verdana would have passed the build clean and rendered Cherokee, N'Ko and IPA in whatever the browser found. The Noto script stack sits behind Verdana in `--ui-stack` for the same reason: a hint can quote the language it is about
+- Verified the swap by computed style rather than by eye: wordmark → Wordmark, headings → Poppins, body/labels → Verdana, table data → Charis SIL. Glyph coverage diffed before and after (nothing lost, gained U+2191/U+2193 from Poppins), `npm run validate` output identical to baseline, lint and build clean
+
+**Left off / known**
+
+- The prose measure runs long and predates this change. `max-width: 68ch` renders as 81 characters under the old Noto Sans and 84 under Verdana, because `ch` is the width of "0" and Verdana's figures are wide relative to its lowercase. Not touched, since it was already out of band and narrowing the column is a visible design decision. `57ch` would put it at ~70 characters if that is wanted
+
 ## 2026-08-03
 
 **Done**

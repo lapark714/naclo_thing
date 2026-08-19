@@ -3,12 +3,21 @@
 @import "shadcn/tailwind.css";
 
 /* ---------------------------------------------------------------------------
-   Self-hosted type. Noto is the family built to render every writing system,
-   which is this product's whole problem. Charis SIL is SIL's fieldwork face
-   and carries IPA and stacked diacritics.
+   Type. Three voices, split by job rather than by size, though the split
+   happens to fall on a size boundary: display type is Poppins, running text
+   and every label under it is Verdana, and primary language data is Charis
+   SIL. A student can tell evidence from instruction at a glance.
 
-   The rule: English UI is Noto Sans, primary language data is Charis SIL.
-   A student can tell evidence from instruction at a glance.
+   Charis SIL is not interchangeable with the other two. It is SIL's fieldwork
+   face: it carries IPA and stacked diacritics, and its stack extends into the
+   scripts NACLO problems are actually about. Verdana carries none of that, so
+   the data role never moves to it.
+
+   Noto is the family built to render every writing system, which is this
+   product's whole problem. It no longer sets any text of its own, and it is
+   still the reason the site works: it is the self-hosted backstop behind both
+   of the other two, and validate.ts reads the unicode-range declarations
+   below as the definition of what the site can render at all.
    --------------------------------------------------------------------------- */
 
 @font-face {
@@ -92,22 +101,36 @@
   unicode-range: U+0020, U+002D-002E, U+0030-0039, U+0041-005A, U+0061-007A;
 }
 
+/*
+ * The display face. One cut ships (600), which is the weight every heading
+ * already rendered at: headings declare no weight of their own, so the browser
+ * matches to the only cut present. Adding a second Poppins weight without
+ * adding the file would silently reweight every heading on the site.
+ *
+ * Poppins is geometric, and so is the wordmark's Montserrat. That is a
+ * relationship rather than a collision as long as the wordmark keeps its own
+ * size, tracking and split colour, which it does, and as long as nothing else
+ * on the page is set in a geometric sans, which nothing is.
+ *
+ * The ranges are Google's own, unedited, because they describe what is
+ * actually inside these two files and validate.ts reads them as truth.
+ */
 @font-face {
-  font-family: "Noto Serif Display";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("/fonts/NotoSerifDisplay-600-latin.woff2") format("woff2");
+  src: url("/fonts/Poppins-600-latin.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: "Noto Serif Display";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("/fonts/NotoSerifDisplay-600-latin-ext.woff2") format("woff2");
+  src: url("/fonts/Poppins-600-latin-ext.woff2") format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
     U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
@@ -421,15 +444,24 @@
     "Noto Sans Georgian", "Noto Sans Cherokee", "Noto Sans Ethiopic",
     "Noto Sans NKo", "Noto Sans JP", "Noto Sans", "Doulos SIL", Charter,
     Georgia, serif;
-  /* UI text. The script families sit behind "Noto Sans" because a hint or a
-     part instruction can quote the language it is about, and a family the
-     element never names can never be used however well @font-face covers it.
-     unicode-range still gates the download, so a page with no Armenian on it
-     pays nothing for the Armenian entry. */
-  --ui-stack: "Noto Sans", "Noto Sans Armenian", "Noto Sans Devanagari",
-    "Noto Sans Georgian", "Noto Sans Cherokee", "Noto Sans Ethiopic",
-    "Noto Sans NKo", "Noto Sans JP", "Charis SIL", ui-sans-serif, system-ui,
-    sans-serif;
+  /* UI text. Verdana is a system face: nothing is downloaded for it, and on
+     the desktops this product is actually studied on it is already there.
+     Geneva, DejaVu Sans and Tahoma catch the platforms that lack it, in that
+     order, because each is closer to Verdana's width than the generic sans
+     the chain would otherwise fall to.
+
+     Everything behind that group is the self-hosted backstop, and it is not
+     decoration. Verdana carries no IPA, no Latin Extended-B and no non-Latin
+     script, and a hint or a part instruction can quote the language it is
+     about. "Noto Sans" takes the Latin gaps; the script families take their
+     own blocks, because a family the element never names can never be used
+     however well @font-face covers it. unicode-range still gates the
+     download, so a page with no Armenian on it pays nothing for the Armenian
+     entry. */
+  --ui-stack: Verdana, Geneva, "DejaVu Sans", Tahoma, "Noto Sans",
+    "Noto Sans Armenian", "Noto Sans Devanagari", "Noto Sans Georgian",
+    "Noto Sans Cherokee", "Noto Sans Ethiopic", "Noto Sans NKo",
+    "Noto Sans JP", "Charis SIL", ui-sans-serif, system-ui, sans-serif;
   --paper: #fbfaf7;
   --ink: #16181d;
   --ink-soft: #5a6070;
@@ -541,9 +573,9 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
 
-  --font-sans: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-heading: "Noto Serif Display", Georgia, serif;
-  --font-display: "Noto Serif Display", Georgia, serif;
+  --font-sans: var(--ui-stack);
+  --font-heading: "Poppins", var(--ui-stack);
+  --font-display: "Poppins", var(--ui-stack);
   --font-data: var(--data-stack);
   --font-wordmark: "Wordmark", "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
@@ -756,7 +788,7 @@ u {
 .problem-body th,
 .table-scroll th {
   background: var(--tint);
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--ui-stack);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.06em;

@@ -32,28 +32,29 @@ typography:
     lineHeight: 1
     letterSpacing: "-0.02em"
   display:
-    fontFamily: '"Noto Serif Display", Georgia, serif'
+    fontFamily: '"Poppins", Verdana, Geneva, "DejaVu Sans", Tahoma, "Noto Sans", sans-serif'
     fontSize: "3rem"
     fontWeight: 600
     lineHeight: 1
-    letterSpacing: "normal"
+    letterSpacing: "-0.015em"
   headline:
-    fontFamily: '"Noto Serif Display", Georgia, serif'
+    fontFamily: '"Poppins", Verdana, Geneva, "DejaVu Sans", Tahoma, "Noto Sans", sans-serif'
     fontSize: "2.25rem"
     fontWeight: 600
     lineHeight: 1.25
+    letterSpacing: "-0.015em"
   subhead:
-    fontFamily: '"Noto Serif Display", Georgia, serif'
+    fontFamily: '"Poppins", Verdana, Geneva, "DejaVu Sans", Tahoma, "Noto Sans", sans-serif'
     fontSize: "1.35rem"
     fontWeight: 600
     lineHeight: 1.3
   title:
-    fontFamily: '"Noto Serif Display", Georgia, serif'
+    fontFamily: '"Poppins", Verdana, Geneva, "DejaVu Sans", Tahoma, "Noto Sans", sans-serif'
     fontSize: "1.05rem"
     fontWeight: 600
     lineHeight: 1.4
   body:
-    fontFamily: '"Noto Sans", ui-sans-serif, system-ui, sans-serif'
+    fontFamily: 'Verdana, Geneva, "DejaVu Sans", Tahoma, "Noto Sans", sans-serif'
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.5
@@ -63,17 +64,17 @@ typography:
     fontWeight: 400
     lineHeight: 1.5
   small:
-    fontFamily: '"Noto Sans", ui-sans-serif, system-ui, sans-serif'
+    fontFamily: 'Verdana, Geneva, "DejaVu Sans", Tahoma, "Noto Sans", sans-serif'
     fontSize: "0.85rem"
     fontWeight: 400
     lineHeight: 1.5
   fine:
-    fontFamily: '"Noto Sans", ui-sans-serif, system-ui, sans-serif'
+    fontFamily: 'Verdana, Geneva, "DejaVu Sans", Tahoma, "Noto Sans", sans-serif'
     fontSize: "0.78rem"
     fontWeight: 400
     lineHeight: 1.45
   label:
-    fontFamily: '"Noto Sans", ui-sans-serif, system-ui, sans-serif'
+    fontFamily: 'Verdana, Geneva, "DejaVu Sans", Tahoma, "Noto Sans", sans-serif'
     fontSize: "0.72rem"
     fontWeight: 600
     lineHeight: 1.2
@@ -236,21 +237,38 @@ else. The brief specifies Gotham, which is licensed and cannot be redistributed,
 so what ships is a 5KB subset of Montserrat, the usual stand-in for Gotham in a
 lowercase logotype. Swapping in real Gotham is one `src:` line in `globals.css`.
 
-**Display Font:** Noto Serif Display (with Georgia, serif)
-**Body Font:** Noto Sans (with ui-sans-serif, system-ui)
+**Display Font:** Poppins, self-hosted, one cut
+**Body Font:** Verdana (with Geneva, DejaVu Sans, Tahoma)
 **Data Font:** Charis SIL, backed by a stack of Noto script faces and
 Doulos SIL
 
-**Character:** A high-contrast serif for identity against a plain humanist sans
-for everything operational, with a third voice reserved entirely for language
-data. Charis SIL is a linguistics face: it carries IPA, and its stack extends
-into Armenian, Devanagari, Georgian, Cherokee, Ethiopic, N'Ko and katakana. That
-third voice is the point of the pairing. A Warlpiri word and the sentence
-describing it should not look like the same kind of thing.
+**Character:** A geometric sans for everything that announces, a wide screen
+sans for everything that is read, and a third voice reserved entirely for
+language data. Charis SIL is a linguistics face: it carries IPA, and its stack
+extends into Armenian, Devanagari, Georgian, Cherokee, Ethiopic, N'Ko and
+katakana. That third voice is the point of the pairing. A Warlpiri word and the
+sentence describing it should not look like the same kind of thing.
+
+Verdana is the one face here that is not downloaded. It is a system font, so on
+a desktop it is already present and costs nothing, and Geneva, DejaVu Sans and
+Tahoma stand in on the platforms that lack it. What it cannot do is carry a
+language: it has no IPA, no Latin Extended-B and no non-Latin script. The
+self-hosted Noto stack sits behind it for exactly that reason, and the data
+role never moves onto it.
+
+Poppins and the wordmark's Montserrat are both geometric. That reads as a
+family relationship rather than a mistake because the wordmark keeps its own
+size, tracking and split colour, and because nothing else on the page is set
+geometric.
 
 Only one display cut ships (600). Headings do not declare a weight, so the
 browser matches to that cut; do not introduce a second display weight without
 adding the file.
+
+Display steps from 1.875rem up are tracked -0.015em. Poppins is drawn loose for
+interface use, and at heading size that spacing reads as a gap rather than as
+air. The 1.35rem and 1.05rem steps are left at normal tracking, because
+negative tracking below about 1.5rem costs legibility and buys nothing.
 
 ### Hierarchy
 

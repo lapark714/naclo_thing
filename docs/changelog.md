@@ -107,12 +107,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 - XP: AI hints cost 2 XP each and are capped at 3 per part; revealing a part's answers zeroes that part's XP for scoring. Written hints unchanged at 1-3 XP and remain the default, cheaper path
 - `/practice` lists playable problems only. Catalogue entries no longer appear as rows marked "not yet transcribed"; they are counted in a "More problems coming soon" section instead. `getProblemIndex()` now returns `full`-tier records only, so the landing-page problem count, the language count, and every per-concept coverage denominator describe what a student can actually work. Their pages are still generated and still link out to the booklet — nothing links to them
 - The "playable now" filter chip is gone from `concept-filter.tsx`, since every listed problem is now playable
+- Type system reset to Poppins for display and Verdana for text. Every heading role (3rem down to 1.05rem) is Poppins 600, self-hosted latin + latin-ext, 13.5KB; body, labels, captions and table headers are Verdana, a system face that downloads nothing. The wordmark keeps Montserrat and is untouched. Language data keeps Charis SIL: Verdana carries no IPA, no Latin Extended-B and no non-Latin script, and `validate.ts` checks `@font-face` coverage rather than which stack an element names, so moving the data role would have passed the build and rendered the problems in mismatched fallbacks. The self-hosted Noto stack stays behind Verdana as the backstop for exactly that gap
+- Display steps from 1.875rem up tracked -0.015em, since Poppins is drawn loose for interface use; the 1.35rem and 1.05rem steps left at normal tracking
 
 ### Removed
 
 - Unused create-next-app SVGs from `public/` (`file`, `globe`, `next`, `vercel`, `window`)
 - `app/layout.tsx`'s dead `Geist`/`Geist_Mono` import from `next/font/google` — exposed CSS variables nothing read, and its removal also drops a build-time Google Fonts fetch that the spec's self-hosted-font requirement rules out
 - `components/hint-ladder.tsx`, folded into `help-popover.tsx`
+- Noto Serif Display, the previous display face, and its two woff2 files. Poppins replaced it and nothing else referenced it. Its `unicode-range`s duplicated Noto Sans's latin and latin-ext exactly, so glyph coverage is unchanged
 
 ### Fixed
 
