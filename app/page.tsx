@@ -36,7 +36,7 @@ export default function Home() {
                 the ground it is unreadable on. See .ink-wipe in globals.css. */}
             <Link
               href="/practice"
-              className="ink-wipe font-cta bg-action border-action relative inline-flex items-center border px-8 py-4 text-[0.85rem] font-semibold tracking-[0.12em] whitespace-nowrap text-ink uppercase"
+              className="ink-wipe font-cta bg-action border-action relative inline-flex items-center border px-8 py-4 text-[0.85rem] font-bold tracking-[0.12em] whitespace-nowrap text-ink uppercase"
             >
               Start practicing
               <span
@@ -46,7 +46,7 @@ export default function Home() {
                 Start practicing
               </span>
             </Link>
-            <span className="text-[0.85rem] text-ink-soft">
+            <span className="font-cta text-[0.85rem] text-ink-soft">
               <span className="font-semibold text-ink tabular-nums">
                 {problems.length}
               </span>{" "}

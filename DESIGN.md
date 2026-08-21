@@ -294,7 +294,8 @@ negative tracking below about 1.5rem costs legibility and buys nothing.
 - **Fine** (400, 0.78rem, 1.45): Metadata and fine print. Footers, byline
   detail, counts, anything a reader should be able to skip.
 - **Label** (600, 0.72rem, 0.14em tracking, uppercase): Section eyebrows,
-  table headers, and all button text.
+  table headers, and button text. The primary button is the one exception, at
+  0.85rem and 700; see Buttons.
 
 ### Named Rules
 
@@ -403,13 +404,15 @@ harsh, fix it with spacing, border colour, or tone, never with a radius.
 
 - **Shape:** Square (0px radius), 1px border.
 - **Primary:** Ink fill, paper text, 1px ink border, 16px by 32px padding,
-  uppercase label at 0.85rem with 0.12em tracking. No shadow. One per page at
-  most; it is the page's single call to action. Its label is the one text role
-  set in Noto Sans rather than Verdana (`--font-cta`): Verdana ships no 600, so
-  `font-semibold` resolves to Bold, and its width compounds with the tracking
-  until the label sprawls. Both effects are invisible on the 0.72rem labels,
-  which stay on Verdana. On hover it inverts to paper
-  fill with ink text against the border it already carries, so nothing shifts.
+  uppercase at 0.85rem, 700, 0.12em tracking. No shadow. One per page at most;
+  it is the page's single call to action. It is set in Noto Sans rather than
+  Verdana (`--font-cta`), because Verdana runs about 15% wider at this size and
+  the 0.12em tracking compounds that until the label sprawls across its box.
+  The count that sits beside it shares the face, so the pair reads as one line
+  rather than two typefaces meeting. Both are the only text on the site off
+  Verdana; the 0.72rem labels stay on it, where the width costs nothing. On
+  hover it inverts to paper fill with ink text against the border it already
+  carries, so nothing shifts.
 - **Secondary:** White fill, ink text, 1px ink border, 6px by 12px padding,
   uppercase label at 0.75rem. Used for Check, Show explanation, and every
   in-page action.
