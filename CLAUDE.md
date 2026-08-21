@@ -65,6 +65,7 @@ naclo_tool/
 - Responsive design (desktop-first — most students study on their computers)
 - Self-hosted fonts must cover IPA and non-Latin scripts; a missing-glyph box breaks the problem
 - Light and dark, declared once as `light-dark(day, night)` in `app/globals.css` and switched by `color-scheme` — never a `.dark` class with a duplicated palette
+- Light is the default for every reader. `:root` declares `color-scheme: light`, not `light dark`; the OS setting is never read. Dark is opt-in via the toggle and then remembered
 - Dark ratios are solved against the dark ground, never mirrored off the light column
 - NEVER `filter: invert()` a problem figure. At least one problem's answer is which robe is white and which is black
 

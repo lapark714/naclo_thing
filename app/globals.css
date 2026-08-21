@@ -448,8 +448,12 @@
    scrollbars, form controls, the overscroll gutter — to match. A theme built
    on a .dark class has to remember that separately, and usually doesn't.
 
-   Declared `light dark`, the page follows the operating system with no
-   JavaScript at all. The two rules under this block are the entire manual
+   The site opens light, for every reader, including one whose machine is set
+   to dark. Declaring `light` here rather than `light dark` is the whole of
+   that: the day column is what the interface was drawn against, and most
+   students meet it on their first problem, mid-lesson, on a school machine
+   whose setting is not theirs. Night is a choice they make, not a default
+   they inherit. The two rules under this block are the entire manual
    override: script sets data-theme, color-scheme narrows to one value, every
    token re-resolves. Nothing else in the file knows a theme exists.
 
@@ -462,7 +466,7 @@
    --------------------------------------------------------------------------- */
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
   --data-stack: "Charis SIL", "Noto Sans Armenian", "Noto Sans Devanagari",
     "Noto Sans Georgian", "Noto Sans Cherokee", "Noto Sans Ethiopic",
@@ -594,7 +598,9 @@
 }
 
 /* The whole of the manual override. A student who has never touched the
-   control has no data-theme attribute and keeps following their machine. */
+   control has no data-theme attribute and stays on the light default above;
+   the light rule is still written out because the toggle stamps the attribute
+   either way, and because a stored "light" has to beat nothing at all. */
 :root[data-theme="light"] {
   color-scheme: light;
 }
@@ -950,10 +956,11 @@ figure figcaption {
 }
 
 /* ---------------------------------------------------------------------------
-   Theme mechanics. Everything here exists because a theme has two possible
-   sources of truth — the attribute the toggle writes, and the machine's own
-   setting for every student who has never touched the toggle — and both have
-   to be answered before first paint. Nothing below waits for React.
+   Theme mechanics. Everything here exists because the theme has to be
+   answered before first paint: the attribute the toggle writes when there is
+   one, and light when there is not. Nothing below waits for React, and
+   nothing below asks the machine — the default is the product's, not the
+   operating system's.
    --------------------------------------------------------------------------- */
 
 /* Selection. Unstyled, this arrives as the system blue: a fifth colour role
@@ -975,22 +982,14 @@ figure figcaption {
    never flickers through the wrong label, and no screenshot swaps under the
    reader a beat late.
  *
- * Every branch only ever hides. That is what lets the attribute case and the
- * system case coexist without one having to un-hide what the other hid, which
- * would mean guessing the display value Tailwind had already set. */
+ * Every branch only ever hides, never un-hides, which would mean guessing the
+ * display value Tailwind had already set. The unset case sits in the light
+ * list rather than in a media query of its own, so the page is right with
+ * JavaScript switched off entirely. */
 :root[data-theme="light"] [data-theme-when="dark"],
+:root:not([data-theme]) [data-theme-when="dark"],
 :root[data-theme="dark"] [data-theme-when="light"] {
   display: none;
-}
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme]) [data-theme-when="dark"] {
-    display: none;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) [data-theme-when="light"] {
-    display: none;
-  }
 }
 
 /* Problem figures keep their true tone in both themes, and the mat is how.
@@ -1014,26 +1013,15 @@ figure figcaption {
   border: 1px solid light-dark(transparent, var(--rule-strong));
 }
 
-/* The theme toggle's fill. Same three-branch shape as the twins above and for
-   the same reason: the active cell has to be right on the first frame, and
-   the resolved theme comes either from the attribute or from the machine.
+/* The theme toggle's fill. Same shape as the twins above and for the same
+   reason: the active cell has to be right on the first frame, and no theme
+   is stamped until the toggle is touched, so LIGHT lights up unattributed.
    Ink fill and paper label is the system's existing word for "this control is
    on" — a selected chip, the primary button and an open Hint trigger all say
    it this way — so the theme switch does not get a vocabulary of its own. */
 :root[data-theme="light"] [data-theme-pick="light"],
+:root:not([data-theme]) [data-theme-pick="light"],
 :root[data-theme="dark"] [data-theme-pick="dark"] {
   background: var(--ink);
   color: var(--paper);
-}
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme]) [data-theme-pick="light"] {
-    background: var(--ink);
-    color: var(--paper);
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) [data-theme-pick="dark"] {
-    background: var(--ink);
-    color: var(--paper);
-  }
 }

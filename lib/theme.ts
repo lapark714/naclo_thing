@@ -5,11 +5,11 @@
  * account, nothing to sync, nothing collected.
  *
  * Almost none of the theme is implemented here. CSS owns it: `color-scheme`
- * on the root drives every `light-dark()` token in globals.css, and left at
- * its default the page already follows the student's machine with no
+ * on the root drives every `light-dark()` token in globals.css, and left
+ * alone it is `light`, so the site opens light for everyone with no
  * JavaScript at all. All this module does is record the one case CSS cannot
- * see, which is a student who wants something other than what their machine
- * says, and write it to the attribute the stylesheet is watching.
+ * see, which is a student who wants night, and write it to the attribute the
+ * stylesheet is watching.
  */
 
 import { useSyncExternalStore } from "react";
@@ -18,24 +18,6 @@ const KEY = "morpheme.theme.v1";
 const EVENT = "morpheme:theme";
 
 export type Theme = "light" | "dark";
-
-/** The inline script in app/layout.tsx runs this same logic before first paint. */
-export function systemTheme(): Theme {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-}
-
-function stored(): Theme | null {
-  try {
-    const raw = window.localStorage.getItem(KEY);
-    return raw === "light" || raw === "dark" ? raw : null;
-  } catch {
-    // Private browsing lands here. Falling back to the machine's setting is a
-    // better failure than refusing to render a page.
-    return null;
-  }
-}
 
 export function setTheme(next: Theme) {
   // The attribute first, so the repaint happens on this frame rather than
@@ -56,28 +38,15 @@ export function setTheme(next: Theme) {
    --------------------------------------------------------------------------- */
 
 function subscribe(onChange: () => void) {
-  const media = window.matchMedia("(prefers-color-scheme: dark)");
-
-  // A student who has never touched the toggle is still following their
-  // machine, so a machine that flips at sunset should take the page with it
-  // while the tab is open.
-  const onSystemChange = () => {
-    if (stored() === null) {
-      document.documentElement.dataset.theme = systemTheme();
-      onChange();
-    }
-  };
-
   window.addEventListener(EVENT, onChange);
   window.addEventListener("storage", onChange);
-  media.addEventListener("change", onSystemChange);
   return () => {
     window.removeEventListener(EVENT, onChange);
     window.removeEventListener("storage", onChange);
-    media.removeEventListener("change", onSystemChange);
   };
 }
 
+// No attribute means nobody has chosen, and nobody choosing means light.
 function getSnapshot(): Theme {
   return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
 }

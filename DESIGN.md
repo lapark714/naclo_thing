@@ -183,10 +183,16 @@ themes.
 
 Every value is declared once in `globals.css` as `light-dark(day, night)` and
 switched by the CSS `color-scheme` property, never by a `.dark` class with a
-second copy of the palette. Two things follow. The page follows the reader's
-machine with no JavaScript at all, and `color-scheme` also repaints the
-browser's own furniture — scrollbars, form controls, the overscroll gutter —
-which a class-based theme has to remember separately and usually does not.
+second copy of the palette. Two things follow. The whole theme works with no
+JavaScript at all, and `color-scheme` also repaints the browser's own furniture
+— scrollbars, form controls, the overscroll gutter — which a class-based theme
+has to remember separately and usually does not.
+
+**Light is the default, for everyone.** `:root` declares `color-scheme: light`,
+not `light dark`, so a reader whose machine is set to dark still opens on paper.
+Day is the column the interface was drawn against, and most students meet it
+mid-lesson on a school machine whose setting is not theirs. Night is a choice
+they make in the toggle, not one they inherit.
 
 The night column is not the day column inverted. Ratios were solved against the
 night ground, because equal WCAG contrast reads as *less* separation near black:

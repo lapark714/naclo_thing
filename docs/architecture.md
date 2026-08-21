@@ -83,35 +83,35 @@ published / parked, and every park reason) lands in `docs/ingest-runs/`.
 - `lib/progress.ts` — localStorage: `solved`, `xpEarned`, `hintsUsed`, `aiHintsUsed`, `selfGraded` per problem. Read via `useProgress`/`useProblemProgress`, `useSyncExternalStore` hooks over the raw storage — localStorage is the single source of truth, not copied into component state on mount
 - `lib/timer.ts` — Start timestamp + duration, never an elapsed counter, so timing survives refresh. `useStoredTimer` follows the same `useSyncExternalStore` pattern as `lib/progress.ts`
 - `lib/content.ts` — Loads records at build, filters to `published`, builds the filter index
-- `lib/theme.ts` — The theme's *override* only. CSS owns the theme itself: `app/globals.css` declares every colour once as `light-dark(day, night)` and switches on the `color-scheme` property, so an untouched page follows the reader's machine with no JavaScript. This module records a manual choice in localStorage and writes it to `data-theme` on `<html>`, which is the same attribute the stylesheet reads — there is never a second copy of the theme to fall out of step with the pixels. Same `useSyncExternalStore` pattern as `lib/progress.ts`; `getServerSnapshot` returns `null` so statically generated HTML cannot mismatch on hydration
+- `lib/theme.ts` — The theme's *override* only. CSS owns the theme itself: `app/globals.css` declares every colour once as `light-dark(day, night)` and switches on the `color-scheme` property, declared `light`, so an untouched page is light with no JavaScript. This module records a manual choice in localStorage and writes it to `data-theme` on `<html>`, which is the same attribute the stylesheet reads — there is never a second copy of the theme to fall out of step with the pixels. Same `useSyncExternalStore` pattern as `lib/progress.ts`; `getServerSnapshot` returns `null` so statically generated HTML cannot mismatch on hydration
 
 
 ## Theme resolution
 
-Three sources answer "which theme", in this order, and all three agree before
-first paint:
+Two sources answer "which theme", in this order, and both agree before first
+paint. The operating system is not one of them: the site opens light for
+everyone, and dark is a choice the reader makes.
 
 ```
-1. app/globals.css   :root { color-scheme: light dark }
+1. app/globals.css   :root { color-scheme: light }
                      every token is light-dark(day, night)
-                     -> matches the operating system, zero JavaScript
+                     -> light, zero JavaScript
                         (this alone is a complete, working theme)
 
 2. <head> script     reads localStorage, stamps data-theme on <html>
-   (~200 bytes,      -> a stored override wins, applied during parse,
+   (~150 bytes,      -> a stored override wins, applied during parse,
     blocking)           before any pixels land. This is the whole of
-                        the no-flash guarantee.
+                        the no-flash guarantee. On a first visit it
+                        stamps nothing at all.
 
-3. lib/theme.ts      after hydration: writes the override, and listens on
-                     matchMedia so a machine that flips at sunset takes an
-                     untouched page with it. Supplies aria-pressed, nothing
-                     visual.
+   lib/theme.ts      after hydration: writes the override. Supplies
+                     aria-pressed, nothing visual.
 ```
 
 A handful of rules need to *name* the theme rather than just take a colour from
-it — the toggle's active cell, the light/dark screenshot pair. Those carry both
-a `[data-theme]` branch and a `prefers-color-scheme` branch, so they are correct
-with JavaScript switched off entirely. Every branch only ever hides; none has to
+it — the toggle's active cell, the light/dark screenshot pair. Those carry the
+unset case in their light branch alongside the `[data-theme]` ones, so they are
+correct on a first visit and with JavaScript switched off entirely. Every branch only ever hides; none has to
 un-hide what another hid, which would mean guessing a display value Tailwind had
 already set.
 
