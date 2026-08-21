@@ -135,7 +135,13 @@ but nothing should be built toward that direction until it is chosen.
 - No em dashes in any user-facing copy.
 - Errors say what to do next, and an AI grading verdict can always be flagged as
   wrong.
-- No dark mode in the MVP.
+- Light and dark are both first-class, added 2026-08-21. Dark is the same
+  reference grammar read under a lamp: warm charcoal ground, warm off-white
+  ink, and the same orange. It follows the reader's machine unless they say
+  otherwise. The earlier "no dark mode in the MVP" commitment is retired.
+- Problem figures keep their true tone in both themes. The answer to at least
+  one problem is which robe is white and which is black, so a tonal inversion
+  is a content change, not a style choice.
 
 ## Evidence on Hand
 

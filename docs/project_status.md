@@ -2,6 +2,30 @@
 
 This file will hold the project's development status and thus document whatever large updates/accomplishments on the project have been made day-by-day. It is meant to help keep track of where things were left off from the previous day, as a personal reminder.
 
+## 2026-08-21
+
+**Done**
+
+- Built dark mode as a second theme rather than an inversion of the first. The direction is the same reference grammar read under a lamp at night: warm charcoal ground (`#191712`), warm off-white ink (`#eae7e0`), never pure black and never pure white, because the warmth is most of what stops the light theme looking like a template. The app icon already reverses the wordmark out of charcoal, so the dark lockup was the brand's own, not an invention
+- Every colour is declared once, as `light-dark(day, night)`, switched by the CSS `color-scheme` property rather than a `.dark` class. Two consequences worth keeping: the site follows the reader's machine with no JavaScript at all, and `color-scheme` also tells the browser to repaint scrollbars, form controls and the overscroll gutter — the thing a class-based theme has to remember separately and usually doesn't. Manual override is two CSS rules plus a ~200-byte blocking script in `<head>`
+- Night ratios were solved against the night ground, not mirrored off the day column. Equal WCAG contrast reads as *less* separation near black, so hairlines, tonal blocks and the lifted surface each take a wider step at night than a flip would give them. Body text is held at 14.5:1 rather than the day column's 17.0:1 on purpose — light text on a dark ground blooms, and the last two points buy glare rather than legibility over a twenty-minute problem. 21 pairings solved and verified before any CSS was written
+- Two tokens had to be invented, and both were places where the old system was literal rather than semantic. `--surface` replaces `#ffffff` in fourteen components: the White Means Above rule meant "one step lifted off the ground", and white only encoded that by accident of the ground being paper. `--on-action` replaces `text-ink` on the orange fill: that was correct only while `--ink` was guaranteed dark. Everything else — `bg-ink text-paper` on the primary button, selected chips, the open Hint trigger — kept working with only its values swapped, and not one of those components was touched
+- Toggle is two cells in the existing filter-chip vocabulary, on the row that already holds the back link, so no navigation chrome was invented for it. Which cell is filled is decided in CSS, not React, so it is right on the first frame of a statically generated page; JavaScript only supplies `aria-pressed`
+- Recaptured the three landing-page screenshots in **both** themes, each pair from the same scroll position with the clock frozen at 13:56, so only the theme differs. They swap by CSS rather than `<picture>`, because `<picture>` can only read the machine's setting and would keep serving the light shot to a reader who chose dark by hand
+- Verified rather than assumed, in this order: `light-dark()` survives Tailwind v4's `color-mix()` opacity modifiers (`bg-tint/50` computes clean — had it not, the single-source palette would have had to become two duplicated blocks); light mode is byte-identical after the token swap (`bg-surface` → `rgb(255,255,255)`, `text-on-action` → `rgb(22,24,29)`, popover shadow unchanged); the theme script sits in `<head>`, after the stylesheet link, before `<body>`, with no `defer`/`async`, so no flash is possible; no sideways scroll at 390px. Lint, build (75 pages), `npm run validate`, and 120/120 tests all clean
+
+**Decisions worth remembering**
+
+- **Never `filter: invert()` a problem figure.** It is the standard dark-mode move for diagrams and it is a content bug here. 2016 G asks which monk wears the white robe and which the black; inverting it does not dim the figure, it changes the answer. Photographs, engravings and line art all sit in `content/assets/` with nothing marking them apart, so no filter is safe across the set. Figures keep their true tone on a light mat with a rule around it, which frames the brightness as deliberate — the plate metaphor, made literal
+- `--action` does not move between themes. It is the brand, it clears 5.03:1 on paper and 6.24:1 on charcoal, and moving it would make the wordmark two different oranges. Its derived values do move, in opposite directions
+- Oxblood cannot stay oxblood at night. At 5.4:1 on a dark ground it has to lift to `#e16758`, which reads terracotta. That is a real loss to the palette and a physical constraint of dark mode, not a slip
+
+**Left off / known**
+
+- `--ink-faint` fails WCAG AA in both themes — 3.56:1 on the night ground and 3.08:1 on a night surface, against 3.09:1 and 3.23:1 by day, on the same nine strings. Confirmed by walking the live DOM in both themes and computing every text node against its effective background, so it is pre-existing and not a dark-mode regression. Left alone rather than changing the light theme unasked, but some affected strings are real instructions rather than metadata ("Each number goes with the circle it touches...", "Hints never give the answer. Explaining is free."), so lifting the token in both themes is a decision worth making rather than inheriting
+- Problem figures are still the brightest thing on a dark page. That is the honest answer for facsimiles whose tonal values are the data, but it has not been seen by a student on a real screen at night
+- `.impeccable/design.json` is stale against `DESIGN.md` and wants `/impeccable document` to refresh it. Not run, since the skill says drift is reported, not repaired as a side effect
+
 ## 2026-08-19
 
 **Done**

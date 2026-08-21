@@ -83,6 +83,51 @@ published / parked, and every park reason) lands in `docs/ingest-runs/`.
 - `lib/progress.ts` — localStorage: `solved`, `xpEarned`, `hintsUsed`, `aiHintsUsed`, `selfGraded` per problem. Read via `useProgress`/`useProblemProgress`, `useSyncExternalStore` hooks over the raw storage — localStorage is the single source of truth, not copied into component state on mount
 - `lib/timer.ts` — Start timestamp + duration, never an elapsed counter, so timing survives refresh. `useStoredTimer` follows the same `useSyncExternalStore` pattern as `lib/progress.ts`
 - `lib/content.ts` — Loads records at build, filters to `published`, builds the filter index
+- `lib/theme.ts` — The theme's *override* only. CSS owns the theme itself: `app/globals.css` declares every colour once as `light-dark(day, night)` and switches on the `color-scheme` property, so an untouched page follows the reader's machine with no JavaScript. This module records a manual choice in localStorage and writes it to `data-theme` on `<html>`, which is the same attribute the stylesheet reads — there is never a second copy of the theme to fall out of step with the pixels. Same `useSyncExternalStore` pattern as `lib/progress.ts`; `getServerSnapshot` returns `null` so statically generated HTML cannot mismatch on hydration
+
+
+## Theme resolution
+
+Three sources answer "which theme", in this order, and all three agree before
+first paint:
+
+```
+1. app/globals.css   :root { color-scheme: light dark }
+                     every token is light-dark(day, night)
+                     -> matches the operating system, zero JavaScript
+                        (this alone is a complete, working theme)
+
+2. <head> script     reads localStorage, stamps data-theme on <html>
+   (~200 bytes,      -> a stored override wins, applied during parse,
+    blocking)           before any pixels land. This is the whole of
+                        the no-flash guarantee.
+
+3. lib/theme.ts      after hydration: writes the override, and listens on
+                     matchMedia so a machine that flips at sunset takes an
+                     untouched page with it. Supplies aria-pressed, nothing
+                     visual.
+```
+
+A handful of rules need to *name* the theme rather than just take a colour from
+it — the toggle's active cell, the light/dark screenshot pair. Those carry both
+a `[data-theme]` branch and a `prefers-color-scheme` branch, so they are correct
+with JavaScript switched off entirely. Every branch only ever hides; none has to
+un-hide what another hid, which would mean guessing a display value Tailwind had
+already set.
+
+**Two tokens exist because the old system was literal where it meant to be
+semantic.** `--surface` replaced `#ffffff` in fourteen components: the White
+Means Above rule meant "one step lifted off the ground", and white only encoded
+that by accident of the ground being paper. `--on-action` replaced `text-ink` on
+the orange fill, which was correct only while `--ink` was guaranteed dark.
+Everything else in the system — `bg-ink text-paper` on the primary button,
+selected chips, the open Hint trigger — inverted correctly on a value swap alone.
+
+**Problem figures are matted, never filtered.** `filter: invert()` is the usual
+dark-mode treatment for diagrams and is a content bug here: 2016 G turns on which
+monk's robe is white and which is black. Photographs, engravings and line art
+share `content/assets/` with nothing marking them apart, so no filter is safe
+across the set.
 
 ### Content & Ingest
 - `content/schema.ts` — Zod `Problem`/`Question`, imported by both the scripts and the site

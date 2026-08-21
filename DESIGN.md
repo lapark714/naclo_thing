@@ -18,6 +18,27 @@ colors:
   action-hover: "oklch(0.63 0.18 45)"
   action-deep: "oklch(0.47 0.14 45)"
   action-tint: "oklch(0.96 0.03 45)"
+  on-action: "#16181d"
+  select: "#ffdcc2"
+colorsDark:
+  paper: "#191712"
+  ink: "#eae7e0"
+  ink-soft: "#98958f"
+  ink-faint: "#716f69"
+  rule: "#39332d"
+  rule-strong: "#4d473f"
+  tint: "#312c26"
+  oxblood: "#e16758"
+  oxblood-tint: "#34201c"
+  verdigris: "#61a482"
+  verdigris-tint: "#213229"
+  surface: "#27241e"
+  action: "oklch(0.7 0.19 45)"
+  action-hover: "oklch(0.78 0.165 48)"
+  action-deep: "oklch(0.721 0.135 48)"
+  action-tint: "#45281b"
+  on-action: "#191712"
+  select: "#4a3524"
 typography:
   wordmark:
     fontFamily: '"Wordmark", "Helvetica Neue", Arial, sans-serif'
@@ -157,7 +178,23 @@ so treat category habit as unresolved rather than forbidden.
 
 ## Colors
 
-A paper-and-ink neutral field with two signal colours held in reserve.
+A paper-and-ink neutral field with two signal colours held in reserve, in two
+themes.
+
+Every value is declared once in `globals.css` as `light-dark(day, night)` and
+switched by the CSS `color-scheme` property, never by a `.dark` class with a
+second copy of the palette. Two things follow. The page follows the reader's
+machine with no JavaScript at all, and `color-scheme` also repaints the
+browser's own furniture — scrollbars, form controls, the overscroll gutter —
+which a class-based theme has to remember separately and usually does not.
+
+The night column is not the day column inverted. Ratios were solved against the
+night ground, because equal WCAG contrast reads as *less* separation near black:
+hairlines, tonal blocks and the lifted surface each take a wider step at night
+than a flip would give them. Body text is held at 14.5:1 rather than the day
+column's 17.0:1 on purpose, since light text on a dark ground blooms and the
+last two points buy glare rather than legibility over a twenty-minute problem.
+Both ends are warm and neither is pure: no `#fff`, no `#000`.
 
 ### Primary
 
@@ -226,9 +263,33 @@ rather than as wayfinding, which is the opposite of what colour is for here.
 Concepts are named in words, and the words were always doing the work.
 
 
-**The White Means Above Rule.** The page is paper; white is a raised surface.
-Anything painted #ffffff is claiming to sit above the page, so use it only for
-tables, inputs, popovers, and unselected controls.
+**The Lifted Surface Rule** (formerly White Means Above). A raised surface is
+one tonal step off the ground, and `--surface` is that step: #ffffff by day,
+#27241e by night. Use it only for tables, inputs, popovers, and unselected
+controls. It was a literal #ffffff in fourteen components until dark mode, and
+it is the one value in this system that could not survive a theme — white does
+not mean "raised" on a dark page, it means "hole". Never write a literal white
+again; the rule was always about lift, and white only encoded that by accident
+of the ground being paper.
+
+**The On-Action Rule.** Anything filled with `--action` carries `--on-action`,
+never `--ink`. The orange is light in both themes, so its label is dark in both
+(6.18:1 by day, 6.24:1 by night). `text-ink` on the call to action was correct
+only for as long as ink was guaranteed to be dark, and stopped being correct the
+moment ink learned to be off-white.
+
+**The Action Holds Rule.** `--action` is the one colour that does not move
+between themes. It is the brand, it clears 5.03:1 on paper and 6.24:1 on
+charcoal, and moving it would make the wordmark two different oranges. Its
+derived values do move, in opposite directions: `--action-deep` means "the
+action colour that is safe at body size", which is darker than the fill by day
+and lighter than it by night. Same job, opposite arithmetic.
+
+**Oxblood cannot stay oxblood at night.** At 5.4:1 on a dark ground it has to
+lift to #e16758, which reads terracotta rather than deep and muted. That is a
+real loss and a physical constraint of dark mode, not a slip — a signal colour
+on a dark ground has to be lighter than the ground, and there is no dark red
+that is also light.
 
 ## Typography
 
@@ -361,10 +422,17 @@ not by faking a raised edge.
 
 ### Shadow Vocabulary
 
-- **Popover lift** (`box-shadow: 0 8px 28px -12px rgba(22,24,29,0.35)`): The
-  hint panel only. It genuinely floats over the page and must read as
-  detached from the problem underneath.
-- **Plate lift** (`box-shadow: 0 14px 30px -16px rgba(22,24,29,0.45)`): The
+Both recipes keep their geometry across themes and change only their colour,
+through `--lift-popover-tone` and `--lift-plate-tone`. A 35%-alpha ink is
+invisible on charcoal, so night goes to true black at roughly double the alpha.
+At night the popover's 1px `--ink` border does most of the separating and the
+shadow only seats it; that is the correct dark-mode elevation strategy, and it
+is why the border is not optional there.
+
+- **Popover lift** (`box-shadow: 0 8px 28px -12px var(--lift-popover-tone)`,
+  applied by the `.lift-popover` class): The hint panel only. It genuinely
+  floats over the page and must read as detached from the problem underneath.
+- **Plate lift** (`box-shadow: 0 14px 30px -16px var(--lift-plate-tone)`): The
   how-it-works screenshots on hover only, never at rest. The same recipe pulled
   tighter and lighter for a 6px rise rather than a floating panel. Both shadows
   are the same idea at two distances; a third value is a new vocabulary and
@@ -475,8 +543,14 @@ the page.
 
 ### Do:
 
-- **Do** keep the page on warm paper (#fbfaf7) and reserve white (#ffffff) for
-  surfaces that genuinely sit above it.
+- **Do** keep the page on the warm ground (#fbfaf7 by day, #191712 by night) and
+  reserve `--surface` for things that genuinely sit above it.
+- **Do** add a new colour as a single `light-dark(day, night)` declaration, and
+  solve the night value against the night ground rather than mirroring the day
+  one.
+- **Do** mat a problem figure rather than filtering it. Figures keep their true
+  tone in both themes: at least one problem's answer is which robe is white and
+  which is black, so a tonal inversion is a content change, not a style choice.
 - **Do** set every span of language data in the data stack, and add a font
   subset before shipping a script the fonts do not cover. The build fails on an
   uncovered character, and that failure is the feature.
@@ -489,6 +563,14 @@ the page.
 
 ### Don't:
 
+- **Don't** write a literal `#ffffff`, a literal `bg-white`, or `text-ink` on an
+  action fill. Those are `--surface` and `--on-action`, and the literals are
+  exactly what dark mode broke.
+- **Don't** add a `.dark` class or a second copy of the palette. One list,
+  `light-dark()`, switched by `color-scheme`.
+- **Don't** apply `filter: invert()` to any image in `content/assets/`.
+  Photographs, engravings and line art sit there with nothing marking them
+  apart, and inverting the wrong one changes an answer.
 - **Don't** introduce a border radius. Every corner is 0px, and the radius
   tokens in `globals.css` are vestigial.
 - **Don't** give any control a shadow, and don't add ambient shadow to a card,

@@ -28,11 +28,13 @@ naclo_tool/
 │   ├── coming-soon.tsx           # Untranscribed remainder, count + year breakdown
 │   ├── home-demo.tsx             # Playable demo question on the landing page
 │   ├── inline-answer.tsx         # Answer input rendered inside the problem body
+│   ├── theme-toggle.tsx          # Light/dark cells; active cell decided in CSS, not React
 │   └── use-answer.ts             # Grading hook shared by inline and row inputs
 ├── lib/
 │   ├── grading.ts                # exact-match normalization
 │   ├── progress.ts               # localStorage via useSyncExternalStore
 │   ├── timer.ts                  # Timestamp-based timing
+│   ├── theme.ts                  # localStorage theme override; CSS owns the rest
 │   └── content.ts                # Loads published problems, builds index
 ├── content/
 │   ├── schema.ts                 # Zod schema, shared by pipeline and site
@@ -62,7 +64,9 @@ naclo_tool/
 - Clean, minimal interface — the problem text and its tables are the star
 - Responsive design (desktop-first — most students study on their computers)
 - Self-hosted fonts must cover IPA and non-Latin scripts; a missing-glyph box breaks the problem
-- No dark mode for MVP
+- Light and dark, declared once as `light-dark(day, night)` in `app/globals.css` and switched by `color-scheme` — never a `.dark` class with a duplicated palette
+- Dark ratios are solved against the dark ground, never mirrored off the light column
+- NEVER `filter: invert()` a problem figure. At least one problem's answer is which robe is white and which is black
 
 **Component patterns:**
 - Shadcn UI for all interactive elements (buttons, inputs, dialogs, tabs)
