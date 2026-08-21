@@ -404,7 +404,11 @@ harsh, fix it with spacing, border colour, or tone, never with a radius.
 - **Shape:** Square (0px radius), 1px border.
 - **Primary:** Ink fill, paper text, 1px ink border, 16px by 32px padding,
   uppercase label at 0.85rem with 0.12em tracking. No shadow. One per page at
-  most; it is the page's single call to action. On hover it inverts to paper
+  most; it is the page's single call to action. Its label is the one text role
+  set in Noto Sans rather than Verdana (`--font-cta`): Verdana ships no 600, so
+  `font-semibold` resolves to Bold, and its width compounds with the tracking
+  until the label sprawls. Both effects are invisible on the 0.72rem labels,
+  which stay on Verdana. On hover it inverts to paper
   fill with ink text against the border it already carries, so nothing shifts.
 - **Secondary:** White fill, ink text, 1px ink border, 6px by 12px padding,
   uppercase label at 0.75rem. Used for Check, Show explanation, and every

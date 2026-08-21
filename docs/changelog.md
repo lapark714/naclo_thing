@@ -109,6 +109,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 - The "playable now" filter chip is gone from `concept-filter.tsx`, since every listed problem is now playable
 - Type system reset to Poppins for display and Verdana for text. Every heading role (3rem down to 1.05rem) is Poppins 600, self-hosted latin + latin-ext, 13.5KB; body, labels, captions and table headers are Verdana, a system face that downloads nothing. The wordmark keeps Montserrat and is untouched. Language data keeps Charis SIL: Verdana carries no IPA, no Latin Extended-B and no non-Latin script, and `validate.ts` checks `@font-face` coverage rather than which stack an element names, so moving the data role would have passed the build and rendered the problems in mismatched fallbacks. The self-hosted Noto stack stays behind Verdana as the backstop for exactly that gap
 - Display steps from 1.875rem up tracked -0.015em, since Poppins is drawn loose for interface use; the 1.35rem and 1.05rem steps left at normal tracking
+- The landing page's primary button held back from Verdana onto Noto Sans 600 (`--font-cta`), the only text role that did not move. Verdana ships no 600, so `font-semibold` was resolving to Bold, and at 0.85rem uppercase with 0.12em tracking the label also measured 15% wider than before. Neither shows on the 0.72rem labels, which stay on Verdana. Costs one 35KB woff2 the page had stopped fetching
 
 ### Removed
 

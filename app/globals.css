@@ -577,6 +577,14 @@
   --font-heading: "Poppins", var(--ui-stack);
   --font-display: "Poppins", var(--ui-stack);
   --font-data: var(--data-stack);
+  /* The landing page's call to action, and the one text role held back from
+     Verdana. It is the site's uppercase label style at its largest and
+     heaviest, and Verdana loses twice at that size: it ships no 600, so
+     font-semibold resolves to Bold rather than to the semibold Noto Sans
+     actually has a cut for, and its width compounds with the 0.12em tracking
+     until the label sprawls across its box. The small grey labels elsewhere
+     stay on Verdana, where neither effect is visible. */
+  --font-cta: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
   --font-wordmark: "Wordmark", "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
 
