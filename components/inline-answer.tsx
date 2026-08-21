@@ -95,7 +95,7 @@ export function InlineAnswer({
               className={`data border px-1.5 py-0.5 text-[0.9rem] transition-colors ${
                 value === c
                   ? "border-ink bg-ink text-paper"
-                  : "border-rule-strong bg-white hover:bg-tint"
+                  : "border-rule-strong bg-surface hover:bg-tint"
               } disabled:opacity-70`}
             >
               {c}
@@ -124,7 +124,7 @@ export function InlineAnswer({
           onChange={(e) => setValue(e.target.value)}
           disabled={settled}
           aria-label={`Answer for ${question.id}`}
-          className={`data border ${border} bg-white px-1.5 py-0.5 text-[0.92rem] disabled:opacity-70`}
+          className={`data border ${border} bg-surface px-1.5 py-0.5 text-[0.92rem] disabled:opacity-70`}
         >
           <option value="">Choose…</option>
           {question.choices.map((c) => (

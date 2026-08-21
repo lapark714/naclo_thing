@@ -112,7 +112,7 @@ export function HelpPopover({
         className={`flex items-center gap-1.5 border px-2 py-1 text-[0.72rem] font-semibold tracking-wide uppercase transition-colors ${
           open
             ? "border-ink bg-ink text-paper"
-            : "border-rule-strong bg-white text-ink-soft hover:border-ink hover:text-ink"
+            : "border-rule-strong bg-surface text-ink-soft hover:border-ink hover:text-ink"
         }`}
       >
         Hint
@@ -128,7 +128,7 @@ export function HelpPopover({
           ref={panelRef}
           role="dialog"
           aria-label={`Help for part ${part}`}
-          className="absolute top-full right-0 z-30 mt-1.5 w-[min(23rem,calc(100vw-2.5rem))] border border-ink bg-white p-4 shadow-[0_8px_28px_-12px_rgba(22,24,29,0.35)]"
+          className="absolute top-full right-0 z-30 mt-1.5 w-[min(23rem,calc(100vw-2.5rem))] border border-ink bg-surface p-4 lift-popover"
         >
           <p className="text-[0.7rem] font-semibold tracking-[0.14em] text-ink-soft uppercase">
             Help with {part}

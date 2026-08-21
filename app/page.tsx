@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getProblemIndex } from "@/lib/content";
 import { HomeDemo } from "@/components/home-demo";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   const problems = getProblemIndex();
@@ -12,7 +13,13 @@ export default function Home() {
     // read top to bottom, it is scanned and acted on, so at desktop width the
     // pitch and the demo sit side by side instead of stacking into a ribbon
     // with half the screen empty either side of it.
-    <main className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+    <main className="mx-auto max-w-6xl px-5 pt-6 pb-16 sm:px-8 sm:pt-8 sm:pb-24">
+      {/* The one page with no back link, so the control gets its own line.
+          Top padding comes off to pay for it: the wordmark should still open
+          the page, not sit under a header. */}
+      <div className="mb-8 flex justify-end sm:mb-12">
+        <ThemeToggle />
+      </div>
       <div className="grid items-start gap-x-16 gap-y-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         <div>
           {/* Split at the real morpheme boundary: morph + the -eme of phoneme,
@@ -36,7 +43,7 @@ export default function Home() {
                 the ground it is unreadable on. See .ink-wipe in globals.css. */}
             <Link
               href="/practice"
-              className="ink-wipe font-cta bg-action border-action relative inline-flex items-center border px-8 py-4 text-[0.85rem] font-bold tracking-[0.12em] whitespace-nowrap text-ink uppercase"
+              className="ink-wipe font-cta bg-action border-action relative inline-flex items-center border px-8 py-4 text-[0.85rem] font-bold tracking-[0.12em] whitespace-nowrap text-on-action uppercase"
             >
               Start practicing
               <span
@@ -89,7 +96,10 @@ export default function Home() {
         </h2>
         {/* Real screenshots, all cropped to the same window on a live problem
             page, so the three read as one app rather than three mockups. They
-            go stale if that UI moves: recapture rather than redraw. */}
+            go stale if that UI moves: recapture rather than redraw.
+            Each ships as a pair, captured from the same scroll position with
+            the clock stopped so only the theme differs between them — the
+            plate must not reframe under a reader who flips the toggle. */}
         <dl className="mt-10 grid gap-y-10">
           {[
             {
@@ -123,15 +133,29 @@ export default function Home() {
               {/* .plate carries the hover lift. See globals.css: at rest it
                   is flat and ruled like everything else, and the rise is what
                   earns the shadow. */}
-              <div className="plate mb-4 border border-rule bg-white sm:max-w-[380px] lg:row-span-2 lg:mb-0">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  width={760}
-                  height={432}
-                  sizes="(min-width: 640px) 380px, calc(100vw - 40px)"
-                  className="block h-auto w-full"
-                />
+              <div className="plate mb-4 border border-rule bg-surface sm:max-w-[380px] lg:row-span-2 lg:mb-0">
+                {/* Both captures render and CSS shows one, rather than a
+                    <picture> media query, because <picture> can only read the
+                    machine's setting and would keep serving the light shot to
+                    a reader who chose dark by hand. The twin nobody is looking
+                    at costs nothing: it is display:none, so it never enters the
+                    viewport, so a lazy image never fetches it. */}
+                {(["light", "dark"] as const).map((mode) => (
+                  <Image
+                    key={mode}
+                    data-theme-when={mode}
+                    src={
+                      mode === "dark"
+                        ? item.src.replace(/\.png$/, "-dark.png")
+                        : item.src
+                    }
+                    alt={item.alt}
+                    width={760}
+                    height={432}
+                    sizes="(min-width: 640px) 380px, calc(100vw - 40px)"
+                    className="block h-auto w-full"
+                  />
+                ))}
               </div>
               <dt className="font-heading text-[1.35rem]">{item.title}</dt>
               <dd className="mt-2 max-w-[58ch] text-[1rem] leading-relaxed text-ink-soft">
@@ -160,7 +184,7 @@ export default function Home() {
 
         <a
           href="mailto:lapark@stanford.edu"
-          className="shrink-0 border border-rule-strong bg-white px-4 py-2 text-[0.75rem] font-semibold tracking-[0.1em] text-ink uppercase transition-colors hover:border-ink"
+          className="shrink-0 border border-rule-strong bg-surface px-4 py-2 text-[0.75rem] font-semibold tracking-[0.1em] text-ink uppercase transition-colors hover:border-ink"
         >
           Contact
         </a>

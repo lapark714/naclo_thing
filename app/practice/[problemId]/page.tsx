@@ -8,6 +8,7 @@ import {
 } from "@/lib/content";
 import { ProblemView } from "@/components/problem-view";
 import { ReadingProgress } from "@/components/reading-progress";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function generateStaticParams() {
   return getPublishedProblems().map((p) => ({ problemId: p.id }));
@@ -39,12 +40,15 @@ export default async function ProblemPage({
   return (
     <article className="mx-auto max-w-3xl px-5 py-10 sm:px-8">
       <ReadingProgress />
-      <Link
-        href="/practice"
-        className="text-[0.8rem] text-ink-soft underline underline-offset-2 hover:text-ink"
-      >
-        ← All problems
-      </Link>
+      <div className="flex items-center justify-between gap-4">
+        <Link
+          href="/practice"
+          className="text-[0.8rem] text-ink-soft underline underline-offset-2 hover:text-ink"
+        >
+          ← All problems
+        </Link>
+        <ThemeToggle />
+      </div>
 
       <header className="mt-6 border-b border-ink pb-5">
         <p className="text-[0.7rem] font-semibold tracking-[0.16em] text-ink-soft uppercase">
@@ -66,7 +70,7 @@ export default async function ProblemPage({
       </header>
 
       {problem.tier !== "full" ? (
-        <div className="mt-7 border border-rule bg-white px-5 py-5">
+        <div className="mt-7 border border-rule bg-surface px-5 py-5">
           <p className="text-[0.7rem] font-semibold tracking-[0.14em] text-ink-soft uppercase">
             Not yet transcribed
           </p>

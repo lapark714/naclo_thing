@@ -439,7 +439,31 @@
 
 /* --------------------------------------------------------------------------- */
 
+/* ---------------------------------------------------------------------------
+   Colour. Two themes, one list.
+
+   Every value below is written once, as light-dark(day, night). The switch is
+   the CSS color-scheme property, not a class: set it and every light-dark()
+   on the page resolves, and the browser also repaints its own furniture —
+   scrollbars, form controls, the overscroll gutter — to match. A theme built
+   on a .dark class has to remember that separately, and usually doesn't.
+
+   Declared `light dark`, the page follows the operating system with no
+   JavaScript at all. The two rules under this block are the entire manual
+   override: script sets data-theme, color-scheme narrows to one value, every
+   token re-resolves. Nothing else in the file knows a theme exists.
+
+   The night column is not an inversion of the day column. Ratios were solved
+   against the night ground rather than mirrored, because equal contrast reads
+   as less separation down near black: hairlines, tonal blocks and the lifted
+   surface all take a wider step at night than their day values would give if
+   flipped. Signal colours lift instead of deepening, which is a real loss —
+   oxblood at 5.4:1 on a dark ground cannot stay oxblood, and reads terracotta.
+   --------------------------------------------------------------------------- */
+
 :root {
+  color-scheme: light dark;
+
   --data-stack: "Charis SIL", "Noto Sans Armenian", "Noto Sans Devanagari",
     "Noto Sans Georgian", "Noto Sans Cherokee", "Noto Sans Ethiopic",
     "Noto Sans NKo", "Noto Sans JP", "Noto Sans", "Doulos SIL", Charter,
@@ -462,40 +486,85 @@
     "Noto Sans Armenian", "Noto Sans Devanagari", "Noto Sans Georgian",
     "Noto Sans Cherokee", "Noto Sans Ethiopic", "Noto Sans NKo",
     "Noto Sans JP", "Charis SIL", ui-sans-serif, system-ui, sans-serif;
-  --paper: #fbfaf7;
-  --ink: #16181d;
-  --ink-soft: #5a6070;
-  --ink-faint: #8b8f9c;
-  --rule: #dfdcd4;
-  --rule-strong: #c9c5ba;
-  --tint: #f1eee6;
-  --mark: #a4342a;
-  --mark-tint: #f8efed;
-  --good: #2f6b4f;
-  --good-tint: #ebf2ee;
+
+  /* The ground and the text on it. Warm at both ends of the day: the day
+     ground is warm off-white and the night ground is warm charcoal, because
+     the warmth is most of what stops this looking like a template. Neither
+     end is neutral and neither is pure — no #fff, no #000. 17.0:1 by day,
+     14.5:1 by night, the night figure held back deliberately: light text on a
+     dark ground blooms, and the last two points of contrast buy glare rather
+     than legibility over a twenty-minute problem. */
+  --paper: light-dark(#fbfaf7, #191712);
+  --ink: light-dark(#16181d, #eae7e0);
+  --ink-soft: light-dark(#5a6070, #98958f);
+  --ink-faint: light-dark(#8b8f9c, #716f69);
+
+  /* Surface is the White Means Above rule, made a token. It used to be a
+     literal #ffffff in fourteen places, which is the one thing in this system
+     that could not survive a theme: white does not mean "raised" on a dark
+     page, it means "hole". What the rule always meant was one step lifted off
+     the ground, so that is what the token is, and it lifts in both themes. */
+  --surface: light-dark(#ffffff, #27241e);
+  --rule: light-dark(#dfdcd4, #39332d);
+  --rule-strong: light-dark(#c9c5ba, #4d473f);
+  /* One tonal step from the ground toward the ink. Table headers and hover
+     states. The direction of the step flips with the theme, which is why the
+     night header sits lighter than its cells while the day header sits
+     darker: the constant is "toward the ink", not "darker". */
+  --tint: light-dark(#f1eee6, #312c26);
+
+  --mark: light-dark(#a4342a, #e16758);
+  --mark-tint: light-dark(#f8efed, #34201c);
+  --good: light-dark(#2f6b4f, #61a482);
+  --good-tint: light-dark(#ebf2ee, #213229);
 
   /* Action. Named --action, not --accent: the shadcn scaffold already owns
      --accent (it maps to --tint for muted hover states). Redefining the same
      name survived dev, where both declarations existed and this one won, and
      was silently deduplicated to the scaffold's value by the production
      minifier, which painted the primary button and the wordmark's -eme in a
-     pale warm grey on warm paper. A cool counterweight to the warm paper, deep enough to sit under
-     body text without shouting. Every learning platform lands on a blue for
-     this; the discipline is keeping it dark and low-chroma rather than the
-     bright product blue, which fights a warm ground. */
-  --action: oklch(0.7 0.19 45);
-  --action-hover: oklch(0.63 0.18 45);
-  --action-deep: oklch(0.47 0.14 45);
-  --action-tint: oklch(0.96 0.03 45);
+     pale warm grey on warm paper.
 
+     The vivid value is the one colour that does not move between themes. It
+     is the brand, it is legible on both grounds (5.03:1 on paper, 6.24:1 on
+     charcoal), and moving it would make the wordmark two different oranges.
+     The two derived values do move, and they move in opposite directions:
+     --action-deep is "the action colour that is safe at body size", which by
+     day means darker than the fill and by night means lighter than it. Same
+     job, opposite arithmetic. --action-hover likewise steps toward the ink. */
+  --action: oklch(0.7 0.19 45);
+  --action-hover: light-dark(oklch(0.63 0.18 45), oklch(0.78 0.165 48));
+  --action-deep: light-dark(oklch(0.47 0.14 45), oklch(0.721 0.135 48));
+  --action-tint: light-dark(oklch(0.96 0.03 45), #45281b);
+
+  /* The label that sits on an action fill, and the only token whose value
+     barely moves. The orange is light in both themes, so its label is dark in
+     both themes — text-ink on the call to action was correct only for as long
+     as ink was guaranteed to be dark, and stopped being correct the moment
+     ink learned to be off-white. Anything filled with --action carries this,
+     never --ink. 6.18:1 by day, 6.24:1 by night. */
+  --on-action: light-dark(#16181d, #191712);
+
+  /* Selection. Left to the browser it arrives as the system blue, which is
+     the fifth colour role this system does not have, and by night it lands on
+     warm charcoal looking like a bug. A wash of the action hue instead, dark
+     enough by day and light enough by night to keep --ink over 10:1 on it. */
+  --select: light-dark(#ffdcc2, #4a3524);
+
+  /* Shadow tone, not shadow. The two recipes in this system keep their
+     geometry across themes and change only their colour: a 35%-alpha ink at
+     day is invisible on charcoal, so night goes to true black at roughly
+     double the alpha. Same two distances, same vocabulary, still no third. */
+  --lift-popover-tone: light-dark(rgb(22 24 29 / 0.35), rgb(0 0 0 / 0.72));
+  --lift-plate-tone: light-dark(rgb(22 24 29 / 0.45), rgb(0 0 0 / 0.66));
 
   --radius: 3px;
 
   --background: var(--paper);
   --foreground: var(--ink);
-  --card: #ffffff;
+  --card: var(--surface);
   --card-foreground: var(--ink);
-  --popover: #ffffff;
+  --popover: var(--surface);
   --popover-foreground: var(--ink);
   --primary: var(--ink);
   --primary-foreground: var(--paper);
@@ -524,6 +593,15 @@
   --chart-5: var(--rule-strong);
 }
 
+/* The whole of the manual override. A student who has never touched the
+   control has no data-theme attribute and keeps following their machine. */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
 @theme inline {
   --color-paper: var(--paper);
   --color-ink: var(--ink);
@@ -532,6 +610,8 @@
   --color-rule: var(--rule);
   --color-rule-strong: var(--rule-strong);
   --color-tint: var(--tint);
+  --color-surface: var(--surface);
+  --color-on-action: var(--on-action);
   --color-mark: var(--mark);
   --color-mark-tint: var(--mark-tint);
   --color-good: var(--good);
@@ -716,7 +796,7 @@ body > * {
  * border and the shadow still answer, so the hover is not silent.
  */
 .plate {
-  box-shadow: 0 0 0 0 rgb(22 24 29 / 0);
+  box-shadow: 0 0 0 0 rgb(0 0 0 / 0);
   transition:
     transform 130ms cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 130ms cubic-bezier(0.16, 1, 0.3, 1),
@@ -726,7 +806,7 @@ body > * {
   .plate:hover {
     transform: translateY(-6px) scale(1.012);
     border-color: var(--rule-strong);
-    box-shadow: 0 14px 30px -16px rgb(22 24 29 / 0.45);
+    box-shadow: 0 14px 30px -16px var(--lift-plate-tone);
     transition-duration: 220ms;
   }
 }
@@ -783,7 +863,7 @@ u {
 .table-scroll {
   overflow-x: auto;
   border: 1px solid var(--rule);
-  background: #fff;
+  background: var(--surface);
 }
 .problem-body table,
 .table-scroll table {
@@ -866,5 +946,94 @@ figure figcaption {
   *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Theme mechanics. Everything here exists because a theme has two possible
+   sources of truth — the attribute the toggle writes, and the machine's own
+   setting for every student who has never touched the toggle — and both have
+   to be answered before first paint. Nothing below waits for React.
+   --------------------------------------------------------------------------- */
+
+/* Selection. Unstyled, this arrives as the system blue: a fifth colour role
+   the palette does not have, and on warm charcoal it reads as a bug rather
+   than as a highlight. --ink clears 10:1 on both washes. */
+::selection {
+  background: var(--select);
+  color: var(--ink);
+}
+
+/* The hint popover's lift, moved out of an arbitrary Tailwind value so its
+   tone can answer the theme. Geometry unchanged. */
+.lift-popover {
+  box-shadow: 0 8px 28px -12px var(--lift-popover-tone);
+}
+
+/* Theme-conditional twins. Two elements render and CSS picks one, so the
+   correct one is right at first paint instead of after hydration — the toggle
+   never flickers through the wrong label, and no screenshot swaps under the
+   reader a beat late.
+ *
+ * Every branch only ever hides. That is what lets the attribute case and the
+ * system case coexist without one having to un-hide what the other hid, which
+ * would mean guessing the display value Tailwind had already set. */
+:root[data-theme="light"] [data-theme-when="dark"],
+:root[data-theme="dark"] [data-theme-when="light"] {
+  display: none;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) [data-theme-when="dark"] {
+    display: none;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) [data-theme-when="light"] {
+    display: none;
+  }
+}
+
+/* Problem figures keep their true tone in both themes, and the mat is how.
+ *
+ * The obvious dark-mode move for a diagram is filter: invert(1), and here it
+ * would be a content bug rather than a style choice. These are facsimiles of
+ * printed booklet pages, and at least one problem turns on which monk's robe
+ * is white and which is black. Inverting it does not dim the figure, it
+ * changes the answer. Photographs, engravings and shaded maps sit in the same
+ * folder as the line art and nothing marks them apart, so no filter is safe
+ * across the set.
+ *
+ * So the plate metaphor the rest of this system borrows from printing becomes
+ * literal: the figure is tipped in on its own light mat, framed by a rule that
+ * says the brightness is intentional. Transparent in daylight, where a mat
+ * against paper would only be a rule nobody asked for, which keeps this to one
+ * declaration per property instead of a duplicated dark-only block. */
+.problem-body figure img {
+  padding: 6px;
+  background: light-dark(transparent, #ffffff);
+  border: 1px solid light-dark(transparent, var(--rule-strong));
+}
+
+/* The theme toggle's fill. Same three-branch shape as the twins above and for
+   the same reason: the active cell has to be right on the first frame, and
+   the resolved theme comes either from the attribute or from the machine.
+   Ink fill and paper label is the system's existing word for "this control is
+   on" — a selected chip, the primary button and an open Hint trigger all say
+   it this way — so the theme switch does not get a vocabulary of its own. */
+:root[data-theme="light"] [data-theme-pick="light"],
+:root[data-theme="dark"] [data-theme-pick="dark"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) [data-theme-pick="light"] {
+    background: var(--ink);
+    color: var(--paper);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) [data-theme-pick="dark"] {
+    background: var(--ink);
+    color: var(--paper);
   }
 }

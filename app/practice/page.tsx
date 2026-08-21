@@ -4,6 +4,7 @@ import { getProblemIndex, getUpcoming } from "@/lib/content";
 import { ConceptFilter } from "@/components/concept-filter";
 import { ComingSoon } from "@/components/coming-soon";
 import { ConceptMastery } from "@/components/concept-mastery";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: "Practice · morpheme",
@@ -16,12 +17,18 @@ export default function PracticePage() {
 
   return (
     <main className="mx-auto max-w-3xl px-5 py-10 sm:px-8">
-      <Link
-        href="/"
-        className="text-[0.8rem] text-ink-soft underline underline-offset-2 hover:text-ink"
-      >
-        ← morpheme
-      </Link>
+      {/* The back link already owned this row and had the whole width to
+          itself. The theme control takes the end of it rather than adding a
+          bar: this world has no navigation chrome and should not grow any. */}
+      <div className="flex items-center justify-between gap-4">
+        <Link
+          href="/"
+          className="text-[0.8rem] text-ink-soft underline underline-offset-2 hover:text-ink"
+        >
+          ← morpheme
+        </Link>
+        <ThemeToggle />
+      </div>
 
       <h1 className="font-heading mt-6 text-3xl leading-tight tracking-[-0.015em] sm:text-4xl">Practice</h1>
       <p className="mt-2 max-w-[56ch] text-[0.95rem] text-ink-soft">

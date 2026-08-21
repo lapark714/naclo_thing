@@ -41,7 +41,7 @@ export function PracticeTimer({ problemId }: { problemId: string }) {
   const expired = Boolean(saved) && left <= 0;
 
   return (
-    <div className="mt-6 mb-8 border border-rule bg-white px-4 py-3">
+    <div className="mt-6 mb-8 border border-rule bg-surface px-4 py-3">
       {!saved ? (
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
           <span className="text-[0.7rem] font-semibold tracking-[0.14em] text-ink-soft uppercase">
@@ -54,7 +54,7 @@ export function PracticeTimer({ problemId }: { problemId: string }) {
               max={180}
               value={minutes}
               onChange={(e) => setDraft(e.target.value)}
-              className="w-16 border border-input bg-white px-2 py-1 text-[0.9rem] tabular-nums"
+              className="w-16 border border-input bg-surface px-2 py-1 text-[0.9rem] tabular-nums"
               aria-label="Minutes"
             />
             minutes

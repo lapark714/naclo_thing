@@ -35,7 +35,7 @@ export function QuestionRow({ problemId, question, onResolved, revealedAnswer }:
                 onChange={(e) => setValue(e.target.value)}
                 disabled={settled}
                 aria-label={`Answer for ${question.id}`}
-                className="data w-full border border-input bg-white px-2 py-1.5 text-[0.92rem] disabled:opacity-70"
+                className="data w-full border border-input bg-surface px-2 py-1.5 text-[0.92rem] disabled:opacity-70"
               >
                 <option value="">Choose…</option>
                 {question.choices.map((c) => (
@@ -55,7 +55,7 @@ export function QuestionRow({ problemId, question, onResolved, revealedAnswer }:
                     className={`data border px-2.5 py-1 text-[0.9rem] transition-colors ${
                       value === c
                         ? "border-ink bg-ink text-paper"
-                        : "border-input bg-white hover:bg-tint"
+                        : "border-input bg-surface hover:bg-tint"
                     } disabled:opacity-70`}
                   >
                     {c}
@@ -72,7 +72,7 @@ export function QuestionRow({ problemId, question, onResolved, revealedAnswer }:
               aria-label={`Answer for ${question.id}`}
               spellCheck={false}
               autoComplete="off"
-              className="data w-full border border-input bg-white px-2 py-1.5 text-[0.95rem] disabled:opacity-70"
+              className="data w-full border border-input bg-surface px-2 py-1.5 text-[0.95rem] disabled:opacity-70"
             />
           )}
 

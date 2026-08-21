@@ -55,13 +55,13 @@ export function ConceptFilter({ problems }: Props) {
                 aria-pressed={on}
                 className={`border px-2.5 py-1 text-[0.82rem] transition-colors ${
                   on
-                    ? "bg-action border-action text-ink"
-                    : "border-rule-strong bg-white hover:bg-tint"
+                    ? "bg-action border-action text-on-action"
+                    : "border-rule-strong bg-surface hover:bg-tint"
                 }`}
               >
                 {tag}
                 <span
-                  className={`ml-1.5 tabular-nums ${on ? "text-ink/60" : "text-ink-faint"}`}
+                  className={`ml-1.5 tabular-nums ${on ? "text-on-action/60" : "text-ink-faint"}`}
                 >
                   {count}
                 </span>

@@ -509,7 +509,7 @@ export function ProblemView({
             />
           </>
         ) : (
-          <div className="border border-rule bg-white px-4 py-4">
+          <div className="border border-rule bg-surface px-4 py-4">
             <p className="max-w-[58ch] text-[0.9rem] text-ink-soft">
               {allDone
                 ? "You have every part. Read how a solver would get there."
