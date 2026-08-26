@@ -92,7 +92,7 @@ export default function Home() {
             heads a pitch, on the one page that already carries a 3.5rem
             wordmark. The label style stays everywhere else. */}
         <h2 className="font-heading text-center text-[2.25rem] leading-[1.25] tracking-[-0.015em]">
-          How it works
+          How It Works
         </h2>
         {/* Real screenshots, all cropped to the same window on a live problem
             page, so the three read as one app rather than three mockups. They
@@ -103,19 +103,19 @@ export default function Home() {
         <dl className="mt-10 grid gap-y-10">
           {[
             {
-              title: "Hints cost points",
+              title: "Hints Cost Points",
               body: "Three hints per problem, unlocked in order. The first points you to the right part of the data; the last walks a full step through on examples that aren't graded. Each one is generated against the official NACLO solution key.",
               src: "/how/hints.png",
               alt: "A help panel open over a Kogi matching question, listing three hints. The first offers to reveal for one point, the other two are locked, and a line below says hints never give the answer.",
             },
             {
-              title: "Worked explanations",
+              title: "Worked Explanations",
               body: "NACLO's answer keys give the answer and skip the reasoning. Deriving each one by hand was never realistic, so this is a pipeline for it. Conditioned on the official solution, a language model back-chains to recover the inferences that yield it, then orders them forward, the way a solver would.",
               src: "/how/explanation.png",
               alt: "A written walkthrough that breaks a Kogi phrase into a root and three grammar slots, with a table pairing each slot to its form and meaning.",
             },
             {
-              title: "A clock you control",
+              title: "A Clock You Control",
               body: "The real exam is timed, but early practice shouldn't be. Nothing here runs on a clock unless you start one. When it does run out you get a banner and nothing else, so your answers keep working, and the problem stays open as long as you want it.",
               src: "/how/timer.png",
               alt: "A timer at the top of a problem reading thirteen minutes fifty-six seconds left, with a Stop link beside it and the problem text below.",
