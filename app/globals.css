@@ -440,36 +440,34 @@
 /* --------------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------------
-   Colour. Two themes, one list.
+   Colour. One list, one theme.
 
-   Every value below is written once, as light-dark(day, night). The switch is
-   the CSS color-scheme property, not a class: set it and every light-dark()
-   on the page resolves, and the browser also repaints its own furniture —
-   scrollbars, form controls, the overscroll gutter — to match. A theme built
-   on a .dark class has to remember that separately, and usually doesn't.
+   The palette is NACLO's: #ff9a04 and #00aaee, taken from naclo.org's own
+   stylesheet and logo artwork, over their flat #ffffff and #000000.
 
-   The site opens light, for every reader, including one whose machine is set
-   to dark. Declaring `light` here rather than `light dark` is the whole of
-   that: the day column is what the interface was drawn against, and most
-   students meet it on their first problem, mid-lesson, on a school machine
-   whose setting is not theirs. Night is a choice they make, not a default
-   they inherit. The two rules under this block are the entire manual
-   override: script sets data-theme, color-scheme narrows to one value, every
-   token re-resolves. Nothing else in the file knows a theme exists.
+   This file carried a second column until 2026-11-02. Every value was written
+   as a two-argument light-dark(), switched by the CSS color-scheme property
+   rather than by a class. The dark theme is withdrawn and the night values
+   are gone with it, along with the toggle, the pre-paint script and the
+   screenshot twins.
 
-   The night column is not an inversion of the day column. Ratios were solved
-   against the night ground rather than mirrored, because equal contrast reads
-   as less separation down near black: hairlines, tonal blocks and the lifted
-   surface all take a wider step at night than their day values would give if
-   flipped. Signal colours lift instead of deepening, which is a real loss —
-   oxblood at 5.51:1 on a dark ground cannot stay oxblood, and reads terracotta.
+   color-scheme stays declared as `light` rather than dropped. Left unset, the
+   browser reads the machine's setting and repaints its own furniture —
+   scrollbars, form controls, the overscroll gutter — dark underneath a light
+   page. Declaring it is what stops that, and it is now the only line in this
+   file that knows a theme existed.
 
-   Every ratio here is solved against the *worst* ground the token can actually
-   land on, not against --paper. --tint is one step toward the ink, so a token
-   that clears 4.5:1 on the page can sit at 4.3:1 on a hovered row and fail
-   there. --ink-faint, --good-deep and --action-deep are all solved on --tint
-   for that reason; three of them were tuned to exactly 4.5:1 on the ground
-   first and had no headroom left for the hover state underneath them.
+   Bringing dark back is not a matter of adding a class. It means restoring
+   the night column, and that column was not an inversion of this one: its
+   ratios were solved against the night ground rather than mirrored, because
+   equal contrast reads as less separation near black. Commit e5d4b29 is the
+   last one that has it.
+
+   Every ratio here is solved against the *worst* ground the token can land
+   on, not against --paper. --tint is one step toward the ink, so a token that
+   clears 4.5:1 on the page can sit at 4.3:1 on a hovered row and fail there.
+   --ink-faint, --good-deep, --action-deep and --rule-strong are all solved on
+   --tint for that reason.
    --------------------------------------------------------------------------- */
 
 :root {
@@ -515,10 +513,10 @@
      with --tint on hover. See the Worst Ground Rule in DESIGN.md: the first
      pass tuned this token to 4.54:1 on the ground and shipped it at 4.31:1
      under a cursor. */
-  --paper: light-dark(#ffffff, #141414);
-  --ink: light-dark(#000000, #e8e8e8);
-  --ink-soft: light-dark(#444444, #a6a6a6);
-  --ink-faint: light-dark(#707070, #8c8c8c);
+  --paper: #ffffff;
+  --ink: #000000;
+  --ink-soft: #444444;
+  --ink-faint: #707070;
 
   /* Surface, and the one rule the white ground genuinely broke.
 
@@ -534,8 +532,8 @@
      "this reads as above the page", and on a white page a rule says that and
      a fill cannot. --tint is NACLO's own #f5f5f5, and it is now the only
      tonal block in the day column. */
-  --surface: light-dark(#ffffff, #1f1f1f);
-  --rule: light-dark(#e0e0e0, #333333);
+  --surface: #ffffff;
+  --rule: #e0e0e0;
   /* --rule-strong owes 3:1, not 4.5:1, because it is never text — but it is
      the only thing marking several controls, so 1.4.11 applies to it squarely.
      The free-text inline blank is `border-0 border-b` with no fill at all, the
@@ -546,16 +544,16 @@
      headroom this time: the worst case is 3.17:1 by day and 3.19:1 by night,
      where the paper-only values this replaces were 3.03:1 and 3.02:1 on the
      page and 2.48:1 on a night table header. */
-  --rule-strong: light-dark(#8a8a8a, #737373);
-  --tint: light-dark(#f5f5f5, #262626);
+  --rule-strong: #8a8a8a;
+  --tint: #f5f5f5;
 
   /* Cost and error. Oxblood is the one chromatic role that is not NACLO's,
      and it stays: red for a wrong answer is near-universal, the brand has no
      substitute for it, and the alternative was spending orange on both "press
      this" and "you got this wrong". 6.77:1 on white. Night still cannot hold
      oxblood and still reads terracotta, for the reason given above. */
-  --mark: light-dark(#a4342a, #e16758);
-  --mark-tint: light-dark(#fbeeec, #33201d);
+  --mark: #a4342a;
+  --mark-tint: #fbeeec;
 
   /* Correct, in NACLO cyan. This replaces verdigris, and it is the same
      arrangement --action has below, for the same reason: the brand value is
@@ -569,9 +567,9 @@
      lighter --good-hover there is #44ccf4, which is NACLO's own hover cyan
      rather than a value invented for the dark column. */
   --good: #00aaee;
-  --good-hover: light-dark(#0092cc, #44ccf4);
-  --good-deep: light-dark(#0b78a9, #5cd2f7);
-  --good-tint: light-dark(#e4f5fd, #0c2d3c);
+  --good-hover: #0092cc;
+  --good-deep: #0b78a9;
+  --good-tint: #e4f5fd;
 
   /* Action. Named --action, not --accent: the shadcn scaffold already owns
      --accent (it maps to --tint for muted hover states). Redefining the same
@@ -592,9 +590,9 @@
      day means darker than the fill and by night means lighter than it. Same
      job, opposite arithmetic. */
   --action: #ff9a04;
-  --action-hover: light-dark(#e08700, #ffb13d);
-  --action-deep: light-dark(#a36100, #ffb13d);
-  --action-tint: light-dark(#fff3e1, #3d2a0a);
+  --action-hover: #e08700;
+  --action-deep: #a36100;
+  --action-tint: #fff3e1;
 
   /* The heading orange, and the one token with a size condition attached.
 
@@ -613,7 +611,7 @@
      deliberately NOT exported to @theme, so there is no `text-action-head`
      utility to reach for at body size — .section-head is its only sanctioned
      use, and that class is only ever put on a display heading. */
-  --action-head: light-dark(#cc7a00, #ff9a04);
+  --action-head: #cc7a00;
 
   /* The label that sits on a brand fill. Both brand hues are light in both
      themes, so both carry a black label in both themes — #000000 now, the
@@ -629,7 +627,7 @@
      wash is a pale step off --good rather than off the action hue: cyan is
      the colour this interface already uses to say "this one". --ink clears
      14:1 on it by day and 7.8:1 by night. */
-  --select: light-dark(#a5ddf5, #0e4a63);
+  --select: #a5ddf5;
 
   /* Shadow tone, not shadow. The two recipes keep their geometry across
      themes and change only their colour. Both ends are true black now, the
@@ -638,8 +636,8 @@
      than one on charcoal. Same two distances, same vocabulary, still no
      third — and by day these now carry lift on their own, since --surface no
      longer steps above the ground. */
-  --lift-popover-tone: light-dark(rgb(0 0 0 / 0.22), rgb(0 0 0 / 0.72));
-  --lift-plate-tone: light-dark(rgb(0 0 0 / 0.28), rgb(0 0 0 / 0.66));
+  --lift-popover-tone: rgb(0 0 0 / 0.22);
+  --lift-plate-tone: rgb(0 0 0 / 0.28);
 
   --radius: 3px;
 
@@ -674,17 +672,6 @@
   --chart-3: var(--mark);
   --chart-4: var(--good);
   --chart-5: var(--rule-strong);
-}
-
-/* The whole of the manual override. A student who has never touched the
-   control has no data-theme attribute and stays on the light default above;
-   the light rule is still written out because the toggle stamps the attribute
-   either way, and because a stored "light" has to beat nothing at all. */
-:root[data-theme="light"] {
-  color-scheme: light;
-}
-:root[data-theme="dark"] {
-  color-scheme: dark;
 }
 
 @theme inline {
@@ -823,11 +810,12 @@ body > * {
  * or a lift would be the raised edge the rule rejects, and this world has no
  * shadow to lift into.
  *
- * Two stacked labels rather than one recoloured one. Ink on the action orange
- * is 9.88:1 and paper on it is 2.13:1 by day, so a single label crossing the
- * wipe would spend the whole transition half-unreadable whichever colour it
- * took.
- * Each copy only ever sits on the ground it was coloured for.
+ * One label over the fill, not two. This carried a stacked copy while the
+ * wipe was ink: paper on the orange is 2.13:1 and ink on it 9.88:1, so no
+ * single label could cross the transition readable, and each copy had to sit
+ * only on the ground it was coloured for. Both fills take the same black
+ * label now — 9.88:1 on the orange, 7.98:1 on the cyan — so the duplicate
+ * went when the ink did, and the fill became a plain background sweep.
  *
  * The fill is inset -1px so it covers the button's border too; clipped back to
  * nothing at rest, it is the border that would otherwise stay orange under an
@@ -1099,51 +1087,20 @@ figure figcaption {
   box-shadow: 0 8px 28px -12px var(--lift-popover-tone);
 }
 
-/* Theme-conditional twins. Two elements render and CSS picks one, so the
-   correct one is right at first paint instead of after hydration — the toggle
-   never flickers through the wrong label, and no screenshot swaps under the
-   reader a beat late.
+/* Problem figures keep their true tone. NEVER filter: invert() one.
  *
- * Every branch only ever hides, never un-hides, which would mean guessing the
- * display value Tailwind had already set. The unset case sits in the light
- * list rather than in a media query of its own, so the page is right with
- * JavaScript switched off entirely. */
-:root[data-theme="light"] [data-theme-when="dark"],
-:root:not([data-theme]) [data-theme-when="dark"],
-:root[data-theme="dark"] [data-theme-when="light"] {
-  display: none;
-}
-
-/* Problem figures keep their true tone in both themes, and the mat is how.
+ * It is the standard dark-mode move for a diagram and it is a content bug
+ * here. These are facsimiles of printed booklet pages, and at least one
+ * problem turns on which monk's robe is white and which is black: inverting
+ * it does not dim the figure, it changes the answer. Photographs, engravings
+ * and shaded maps sit in the same folder as the line art with nothing marking
+ * them apart, so no filter is safe across the set.
  *
- * The obvious dark-mode move for a diagram is filter: invert(1), and here it
- * would be a content bug rather than a style choice. These are facsimiles of
- * printed booklet pages, and at least one problem turns on which monk's robe
- * is white and which is black. Inverting it does not dim the figure, it
- * changes the answer. Photographs, engravings and shaded maps sit in the same
- * folder as the line art and nothing marks them apart, so no filter is safe
- * across the set.
- *
- * So the plate metaphor the rest of this system borrows from printing becomes
- * literal: the figure is tipped in on its own light mat, framed by a rule that
- * says the brightness is intentional. Transparent in daylight, where a mat
- * against paper would only be a rule nobody asked for, which keeps this to one
- * declaration per property instead of a duplicated dark-only block. */
+ * The mat this rule used to paint was a dark-theme device, a white ground
+ * under a figure that would otherwise float on charcoal, and it resolved to
+ * nothing by day. With the night column withdrawn only the padding is left.
+ * The ban outlives the mat: it is about the content, not the theme. */
 .problem-body figure img {
   padding: 6px;
-  background: light-dark(transparent, #ffffff);
-  border: 1px solid light-dark(transparent, var(--rule-strong));
 }
 
-/* The theme toggle's fill. Same shape as the twins above and for the same
-   reason: the active cell has to be right on the first frame, and no theme
-   is stamped until the toggle is touched, so LIGHT lights up unattributed.
-   Ink fill and paper label is the system's existing word for "this control is
-   on" — a selected chip, the primary button and an open Hint trigger all say
-   it this way — so the theme switch does not get a vocabulary of its own. */
-:root[data-theme="light"] [data-theme-pick="light"],
-:root:not([data-theme]) [data-theme-pick="light"],
-:root[data-theme="dark"] [data-theme-pick="dark"] {
-  background: var(--ink);
-  color: var(--paper);
-}

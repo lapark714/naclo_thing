@@ -24,29 +24,6 @@ colors:
   on-action: "#000000"
   on-good: "#000000"
   select: "#a5ddf5"
-colorsDark:
-  paper: "#141414"
-  ink: "#e8e8e8"
-  ink-soft: "#a6a6a6"
-  ink-faint: "#8c8c8c"
-  rule: "#333333"
-  rule-strong: "#737373"
-  tint: "#262626"
-  oxblood: "#e16758"
-  oxblood-tint: "#33201d"
-  cyan: "#00aaee"
-  cyan-hover: "#44ccf4"
-  cyan-deep: "#5cd2f7"
-  cyan-tint: "#0c2d3c"
-  surface: "#1f1f1f"
-  action: "#ff9a04"
-  action-hover: "#ffb13d"
-  action-deep: "#ffb13d"
-  action-tint: "#3d2a0a"
-  action-head: "#ff9a04"
-  on-action: "#000000"
-  on-good: "#000000"
-  select: "#0e4a63"
 typography:
   wordmark:
     fontFamily: '"Wordmark", "Helvetica Neue", Arial, sans-serif'
@@ -198,110 +175,86 @@ unresolved rather than forbidden.
 
 ## Colors
 
-A black-and-white field carrying NACLO's own two brand hues, plus one borrowed
-red, in two themes.
+A black-and-white field carrying NACLO's two brand hues, plus one borrowed red.
 
-Every value is declared once in `globals.css` as `light-dark(day, night)` and
-switched by the CSS `color-scheme` property, never by a `.dark` class with a
-second copy of the palette. Two things follow. The whole theme works with no
-JavaScript at all, and `color-scheme` also repaints the browser's own furniture
-— scrollbars, form controls, the overscroll gutter — which a class-based theme
-has to remember separately and usually does not.
+**The palette is NACLO's, not an interpretation of it.** Neither hue was
+sampled from a screenshot or guessed from the logo. `#ff9a04` is declared on
+every heading in naclo.org's own stylesheet and is the literal value of 3,634
+pixels of their logo artwork; `#00aaee` is declared eight times in that
+stylesheet, filling the nav bar and setting every link and every rule under an
+h1. The ground is theirs too: a flat `#ffffff` with `#000000` text, with
+`#444444` and `#f5f5f5` lifted straight out of the same file.
 
-**The palette is NACLO's, not an interpretation of it.** The two brand hues
-were not sampled from a screenshot or guessed from the logo. `#ff9a04` is
-declared on every heading in naclo.org's own stylesheet and is the literal
-value of 3,634 pixels of their logo artwork; `#00aaee` is declared eight times
-in that stylesheet, filling the nav bar and setting every link and every rule
-under an h1. `#44ccf4`, their nav hover, is the dark column's cyan. The ground
-is theirs too: a flat `#ffffff` with `#000000` text, with `#444444` and
-`#f5f5f5` lifted straight out of the same file.
+**One theme, light.** `:root` declares `color-scheme: light`. Keep that
+declaration even though there is nothing to switch between: left unset, the
+browser reads the machine's setting and repaints its own furniture —
+scrollbars, form controls, the overscroll gutter — dark underneath a light
+page. It is the only line in `globals.css` that knows a theme ever existed.
 
-This replaced a warm paper-and-ink field that had been the better reading
-ground. That was the trade, made knowingly: a palette that borrows a brand's
-two hues while quietly keeping its own paper stock is not that brand's palette.
-What was bought back is measurable — the day column's hairlines and faint text
-were below AA against warm paper and are not against white.
-
-**Light is the default, for everyone.** `:root` declares `color-scheme: light`,
-not `light dark`, so a reader whose machine is set to dark still opens on the
-white page. Day is the column the interface was drawn against, and most
-students meet it mid-lesson on a school machine whose setting is not theirs.
-Night is a choice they make in the toggle, not one they inherit.
-
-The night column is not the day column inverted. Ratios were solved against the
-night ground, because equal WCAG contrast reads as *less* separation near black:
-hairlines, tonal blocks and the lifted surface each take a wider step at night
-than a flip would give them. Body text is held at 15.0:1 rather than the day
-column's 21.0:1 on purpose, since light text on a dark ground blooms and the
-last few points buy glare rather than legibility over a twenty-minute problem.
-Night is neutral grey rather than warm charcoal, because the day column stopped
-being warm and two themes in different temperatures are two design systems.
+A dark theme shipped on 2026-08-21 and was withdrawn on 2026-11-02. Every token
+was a two-argument `light-dark()` until then. Bringing it back means restoring
+the night column, not adding a `.dark` class, and that column was not an
+inversion of this one — its ratios were solved against the night ground rather
+than mirrored, because equal WCAG contrast reads as *less* separation near
+black. Commit `e5d4b29` is the last one that has it.
 
 ### Primary
 
 - **Action** (#ff9a04): NACLO's orange. Action and brand — the primary button,
-  a selected filter chip, a link, the `-eme` of the wordmark. It does not move
-  between themes. It is 9.88:1 under its own black label in both.
-- **Action Head** (#cc7a00 day, #ff9a04 night): display headings, over a cyan
-  rule. See the Section Heading Rule below. The one token carrying a size
-  condition, and the one deliberately kept out of `@theme` so no utility class
-  can apply it at body size.
+  a selected filter chip, a link, the `-eme` of the wordmark. 9.88:1 under its
+  own black label.
+- **Action Head** (#cc7a00): display headings, over a cyan rule. See the
+  Section Heading Rule below. The one token carrying a size condition, and the
+  one deliberately kept out of `@theme` so no utility class can apply it at
+  body size.
 
 ### Secondary
 
 - **Cyan** (#00aaee): NACLO's cyan, and this system's word for *correct*. Like
-  the orange it holds across themes, and like the orange it is a fill and an
-  outline rather than a voice: at 2.63:1 on white it cannot set text by day.
-- **Cyan Deep** (#0b78a9 day, #5cd2f7 night): the cyan that is safe at body
-  size. 4.51:1 on --tint by day, 8.66:1 by night. Every `correct` and `solved` on the
-  site is set in this, not in the vivid value.
-- **Cyan Tint** (#e4f5fd day, #0c2d3c night): the wash behind a correct row.
+  the orange it is a fill, an outline and an underline rather than a voice: at
+  2.63:1 on white it cannot set text.
+- **Cyan Deep** (#0b78a9): the cyan that is safe at body size, 4.51:1 on
+  `--tint`. Every `correct` and `solved` on the site is set in this, not in the
+  vivid value.
+- **Cyan Tint** (#e4f5fd): the wash behind a correct row.
 
 ### Tertiary
 
-- **Oxblood** (#a4342a day, #e16758 night): cost and error. The one chromatic
-  role that is not NACLO's, kept deliberately. Red for a wrong answer is
-  near-universal, the brand offers no substitute for it, and the alternative was
-  spending orange on both "press this" and "you got this wrong". 6.77:1 on
-  white. Deep and muted rather than alarming, because a student seeing it is
-  mid-problem, not in danger.
-- **Oxblood Tint** (#fbeeec day, #33201d night): the wash behind an incorrect
-  answer row.
+- **Oxblood** (#a4342a): cost and error. The one chromatic role that is not
+  NACLO's, kept deliberately. Red for a wrong answer is near-universal, the
+  brand offers no substitute for it, and the alternative was spending orange on
+  both "press this" and "you got this wrong". 6.77:1 on white. Deep and muted
+  rather than alarming, because a student seeing it is mid-problem, not in
+  danger.
+- **Oxblood Tint** (#fbeeec): the wash behind an incorrect answer row.
 
 ### Neutral
 
-- **Paper** (#ffffff day, #141414 night): the page ground. NACLO's own white by
-  day; a neutral charcoal, not pure black, by night.
-- **Ink** (#000000 day, #e8e8e8 night): body text and headings. 21.0:1 by day.
-- **Surface** (#ffffff day, #1f1f1f night): one tonal step above the ground —
-  except by day, where there is no step above white. See the Lifted Surface
-  Rule below.
-- **Ink Soft** (#444444 day, #a6a6a6 night): secondary prose, table headers,
-  captions. 9.74:1 by day. NACLO's own grey.
-- **Ink Faint** (#707070 day, #8c8c8c night): metadata that should recede —
-  counts, footnotes, disabled states. 4.54:1 and 4.50:1 against `--tint`, the
-  darkest ground either lands on, where the warm values it replaced were
-  3.09:1 and 3.56:1 against the page and less than that on a hovered row.
-- **Rule** (#e0e0e0 day, #333333 night): hairline dividers and table borders.
-- **Rule Strong** (#8a8a8a day, #737373 night): input and control borders, one
-  step darker than Rule so a control reads as interactive against a mere
-  divider. 3.17:1 and 3.19:1 against `--tint`, the worst ground either lands
-  on, where the warm values it replaced sat at 1.65:1 and 1.95:1. An earlier
-  pass published 3.03:1 and 3.02:1 here, which were `--paper`-only figures and
-  fell to 2.48:1 on a night table header.
-- **Tint** (#f5f5f5 day, #262626 night): tonal block for table headers and hover
-  states, the substitute for elevation. NACLO's own panel grey by day.
+- **Paper** (#ffffff): the page ground, NACLO's own white.
+- **Ink** (#000000): body text and headings. 21.0:1.
+- **Surface** (#ffffff): where a raised thing sits. Equal to the ground, since
+  nothing sits above white — see the Lifted Surface Rule.
+- **Ink Soft** (#444444): secondary prose, table headers, captions. 9.74:1.
+  NACLO's own grey.
+- **Ink Faint** (#707070): metadata that should recede — counts, footnotes,
+  disabled states. 4.54:1 against `--tint`, the worst ground it lands on.
+- **Rule** (#e0e0e0): hairline dividers and table borders.
+- **Rule Strong** (#8a8a8a): input and control borders, one step darker than
+  Rule so a control reads as interactive against a mere divider. 3.17:1 against
+  `--tint`, the worst ground it lands on, which matters because on several
+  controls this 1px rule is the only thing marking them.
+- **Tint** (#f5f5f5): tonal block for table headers and hover states, the
+  substitute for elevation. NACLO's own panel grey.
 
 ### Named Rules
 
 **The Every Colour Has A Job Rule.** Three colour roles exist and nothing else
 is chromatic. Action (`--action`, never `--accent`: the shadcn scaffold owns
-that name and the production minifier will silently take its value) means action
-or brand. Cyan means correct. Oxblood means cost or error. If something needs to
-stand out and is none of those, it stands out through weight, rule, or ink fill.
-Decoration is not a role, and there are no gradients, tinted cards, or coloured
-surfaces anywhere.
+that name and the production minifier will silently take its value) means
+action or brand. Cyan means correct. Oxblood means cost or error. If something
+needs to stand out and is none of those, it stands out through weight, rule, or
+ink fill. Decoration is not a role, and there are no gradients, tinted cards, or
+coloured surfaces anywhere.
 
 Two of the three are NACLO's brand hues and one is not, which is the whole
 shape of this palette: the brand supplies identity and affirmation, and the
@@ -318,83 +271,68 @@ than as wayfinding, which is the opposite of what colour is for here. Concepts
 are named in words, and the words were always doing the work.
 
 **The Vivid Fills, The Deep Writes Rule.** Both brand hues are light. Neither
-can set text on white — the orange is 2.13:1 there and the cyan 2.63:1 — so
-each keeps a deepened twin that can: `--action-deep` and `--good-deep`, both
-at 4.51:1 against `--tint`. The vivid value fills, outlines and underlines; the
+can set text on white — the orange is 2.13:1 and the cyan 2.63:1 — so each
+keeps a deepened twin that can: `--action-deep` and `--good-deep`, both at
+4.51:1 against `--tint`. The vivid value fills, outlines and underlines; the
 deep value writes. naclo.org does set links in `#00aaee` directly, which is a
 real failure on their page and not one worth copying for fidelity's sake.
 
-The derived values move between themes and they move in opposite directions.
-`--action-deep` means "the action colour that is safe at body size", which is
-darker than the fill by day and lighter than it by night. Same job, opposite
-arithmetic.
-
 The wordmark is the one place a vivid value runs below the 3:1 large-text floor
-against the ground. That is deliberate and permitted: WCAG 1.4.3 exempts text
+against the ground, and it does it twice: `morph` is cyan at 2.63:1 and `eme`
+is orange at 2.13:1. That is deliberate and permitted — WCAG 1.4.3 exempts text
 that is part of a logo or brand name. At 56px bold it is entirely legible; it
 simply is not held to a ratio meant for prose. The same exemption is why
-`--action` may fill a button whose silhouette is 2.13:1 against the page — the
+`--action` may fill a button whose silhouette is 2.13:1 against the page: the
 control is identified by its 9.88:1 black label, so 1.4.11 does not ask the
 boundary to carry it. A correct inline answer is underlined in `--good` for the
-same reason: the word `correct` sits beside it in `--good-deep`.
+same reason — the word `correct` sits beside it in `--good-deep`.
 
 **The Lifted Surface Rule** (formerly White Means Above). A raised surface is
-one tonal step off the ground — and by day, since the ground became `#ffffff`,
-there is no step above it. So by day `--surface` *is* the ground and lift is
-carried by the hairline and the shadow already drawn around every one of these
-things: a table, an input, the hint popover and an unselected chip each keep a
-border, and the ones that float keep a shadow. Night is unchanged and still
-lifts, because there the step exists.
+one tonal step off the ground, and since the ground is `#ffffff` there is no
+step above it. So `--surface` *is* the ground, and lift is carried by the
+hairline and the shadow already drawn around every one of these things: a
+table, an input, the hint popover and an unselected chip each keep a border,
+and the ones that float keep a shadow.
 
 The rule survives; only its instrument moved. What it always meant was "this
 reads as above the page", and on a white page a rule says that and a fill
-cannot. Anything relying on `--surface` alone for separation must carry a border
-— by day it would otherwise vanish into the page. Never write a literal white;
-the rule was always about lift, and white only ever encoded that by accident of
-the ground being paper.
+cannot. Anything relying on `--surface` alone for separation must carry a
+border, or it vanishes into the page. Never write a literal white; the rule was
+always about lift, and white only ever encoded that by accident of the ground
+being paper.
 
 **The On-Brand-Fill Rule.** Anything filled with `--action` carries
 `--on-action`, and anything filled with `--good` carries `--on-good`, never
-`--ink`. Both are `#000000`, and both hues are light in both themes, so both
-labels are black in both: 9.88:1 on the orange, 7.98:1 on the cyan. `text-ink`
-on the call to action was correct only for as long as ink was guaranteed to be
-dark, and stopped being correct the moment ink learned to be off-white.
-
-**The Brand Holds Rule.** `--action` and `--good` are the two colours that do
-not move between themes. They are the brand, they clear 2.13:1 and 2.63:1 on
-white and 8.66:1 and 7.00:1 on charcoal, and moving either would make the
-wordmark two different oranges and correctness two different cyans.
+`--ink`. Both are `#000000`: 9.88:1 on the orange, 7.98:1 on the cyan. Because
+both fills take the same black label, the primary button's wipe needs only one
+label rather than the two it carried while the wipe was ink.
 
 **The Worst Ground Rule.** A ratio is solved against whichever ground gives a
-token the *least* contrast, not against `--paper`. That ground is not the same
-one in both themes, and "the darkest" is the wrong shorthand for it: by day the
-grounds run `--paper` #ffffff, `--tint` #f5f5f5, so the worst is the darkest,
-while at night they run `--paper` #141414, `--surface` #1f1f1f, `--tint`
-#262626, and the worst is the *lightest*, because the ink above them is light.
-`--tint` is the worst case in both columns, by opposite arithmetic. A rule that
-said "darkest" would have a reader solve the night value against #141414, which
-is the easiest ground there, not the hardest.
+token the *least* contrast, not against `--paper`. The grounds run `--paper`
+#ffffff, `--surface` #ffffff, `--tint` #f5f5f5, plus the composites a hovered
+row makes of `--tint` at 50% and 60%. `--tint` is the worst of them, so
+`--ink-faint`, `--good-deep`, `--action-deep` and `--rule-strong` are all
+solved there. The rule generalises: before adding a colour, list every ground
+it can land on and solve the hardest one.
 
-`--tint` is one step toward the ink, and a hovered row composites it at 60%, so
-a token tuned to exactly 4.5:1 on the page sits at 4.3:1 the moment a cursor
-crosses it. Four tokens shipped that way and had to be re-solved: `--ink-faint`,
-`--good-deep` and `--action-deep` at 4.5:1, and `--rule-strong` at 3:1, which
-was missed on the first pass of this very rule — it was the only token here
-carrying a 1.4.11 floor rather than a text one, and it was the one not checked.
-The rule generalises: before adding a colour, list every ground it can land on
-and solve the hardest one.
+While there were two themes this rule needed stating carefully, because "the
+darkest ground" was right by day and backwards at night — the night grounds ran
+#141414 < #1f1f1f < #262626 and the worst was the *lightest*, since the ink
+above them was light. With one theme the darkest ground is simply the worst
+one, but the property to solve for is least contrast, not darkness, and that is
+what a restored night column would need again.
 
 Opacity counts as a ground. `text-on-action/70` composites the label into the
 fill underneath it, so the pair that matters is the composite against the fill,
-not the token against the fill.
+not the token against the fill. At 60% that same count was 4.38:1.
 
 **The Section Heading Rule.** NACLO's stylesheet heads every section with
 `h1 { color: #ff9a04; border-bottom: solid 1px #00aaee }`, and that
-orange-over-cyan pair is the most recognisable thing on their page. `.section-head`
-is it, with one compromise: #ff9a04 is 2.13:1 on white, below even the 3:1 floor
-large text gets, and a section heading is prose rather than a logo so it cannot
-borrow the wordmark's 1.4.3 exemption. Day walks the same hue down to 3.31:1;
-night needs no compromise and gets the brand value itself at 8.66:1.
+orange-over-cyan pair is the most recognisable thing on their page.
+`.section-head` is it, with one compromise: #ff9a04 is 2.13:1 on white, below
+even the 3:1 floor large text gets, and a section heading is prose rather than
+a logo so it cannot borrow the wordmark's 1.4.3 exemption. `--action-head`
+walks the same hue down to 3.31:1.
 
 Only display headings take it — the problem title, `Practice`, `How It Works`,
 all at 30px or more. The small uppercase labels that head a working surface,
@@ -403,12 +341,6 @@ this orange would owe 4.5:1 and fails it, and they label a surface rather than
 opening a section. `.section-head-center` swaps the full-width border for a
 short centred rule, because a border under a centred heading spans the column
 and stops reading as that heading's underline.
-
-**Oxblood cannot stay oxblood at night.** At 5.51:1 on a dark ground it has to
-lift to #e16758, which reads terracotta rather than deep and muted. That is a
-real loss and a physical constraint of dark mode, not a slip — a signal colour
-on a dark ground has to be lighter than the ground, and there is no dark red
-that is also light.
 
 
 ## Typography
@@ -542,12 +474,13 @@ not by faking a raised edge.
 
 ### Shadow Vocabulary
 
-Both recipes keep their geometry across themes and change only their colour,
-through `--lift-popover-tone` and `--lift-plate-tone`. A 35%-alpha ink is
-invisible on charcoal, so night goes to true black at roughly double the alpha.
-At night the popover's 1px `--ink` border does most of the separating and the
-shadow only seats it; that is the correct dark-mode elevation strategy, and it
-is why the border is not optional there.
+Both recipes take their colour from `--lift-popover-tone` and
+`--lift-plate-tone`, which are black at low alpha. They were tokens because the
+tone had to answer the theme; with one theme they are simply the two shadow
+colours, and the indirection is kept because the geometry is shared and the
+alpha is not. The popover's 1px `--ink` border still does most of the
+separating and the shadow only seats it, which is why the border is not
+optional.
 
 - **Popover lift** (`box-shadow: 0 8px 28px -12px var(--lift-popover-tone)`,
   applied by the `.lift-popover` class): The hint panel only. It genuinely
@@ -677,15 +610,13 @@ the page.
 
 ### Do:
 
-- **Do** keep the page on NACLO's ground (#ffffff by day, #141414 by night).
-  `--surface` lifts at night; by day it equals the ground, so anything relying
-  on it for separation must also carry a border.
-- **Do** add a new colour as a single `light-dark(day, night)` declaration, and
-  solve the night value against the night ground rather than mirroring the day
-  one.
-- **Do** mat a problem figure rather than filtering it. Figures keep their true
-  tone in both themes: at least one problem's answer is which robe is white and
-  which is black, so a tonal inversion is a content change, not a style choice.
+- **Do** keep the page on NACLO's ground, #ffffff. `--surface` equals it, so
+  anything relying on `--surface` for separation must also carry a border.
+- **Do** solve a new colour against the worst ground it can land on — `--tint`
+  and the composites a hovered row makes of it, not `--paper`.
+- **Do** leave a problem figure's tone alone. At least one problem's answer is
+  which robe is white and which is black, so a tonal inversion is a content
+  change, not a style choice.
 - **Do** set every span of language data in the data stack, and add a font
   subset before shipping a script the fonts do not cover. The build fails on an
   uncovered character, and that failure is the feature.
@@ -700,10 +631,15 @@ the page.
 ### Don't:
 
 - **Don't** write a literal `#ffffff`, a literal `bg-white`, or `text-ink` on an
-  action fill. Those are `--surface` and `--on-action`, and the literals are
-  exactly what dark mode broke.
-- **Don't** add a `.dark` class or a second copy of the palette. One list,
-  `light-dark()`, switched by `color-scheme`.
+  action fill. Those are `--surface` and `--on-action`. The literals survived
+  for a year because the ground happened to be paper, and dark mode found every
+  one of them; the tokens are what keeps that lesson after dark mode's exit.
+- **Don't** remove `color-scheme: light` from `:root` now that there is nothing
+  to switch. Unset, the browser reads the machine's setting and paints its own
+  scrollbars and form controls dark under a light page.
+- **Don't** reintroduce dark as a `.dark` class or a second copy of the
+  palette. It was one list of `light-dark()` declarations switched by
+  `color-scheme`, and if it returns it returns that way — see Colors.
 - **Don't** apply `filter: invert()` to any image in `content/assets/`.
   Photographs, engravings and line art sit there with nothing marking them
   apart, and inverting the wrong one changes an answer.

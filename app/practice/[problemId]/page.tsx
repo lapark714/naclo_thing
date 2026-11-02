@@ -8,7 +8,6 @@ import {
 } from "@/lib/content";
 import { ProblemView } from "@/components/problem-view";
 import { ReadingProgress } from "@/components/reading-progress";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 export function generateStaticParams() {
   return getPublishedProblems().map((p) => ({ problemId: p.id }));
@@ -47,7 +46,6 @@ export default async function ProblemPage({
         >
           ← All problems
         </Link>
-        <ThemeToggle />
       </div>
 
       <header className="mt-6 border-b border-ink pb-5">

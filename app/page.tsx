@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { getProblemIndex } from "@/lib/content";
 import { HomeDemo } from "@/components/home-demo";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   const problems = getProblemIndex();
@@ -17,17 +16,20 @@ export default function Home() {
       {/* The one page with no back link, so the control gets its own line.
           Top padding comes off to pay for it: the wordmark should still open
           the page, not sit under a header. */}
-      <div className="mb-8 flex justify-end sm:mb-12">
-        <ThemeToggle />
-      </div>
       <div className="grid items-start gap-x-16 gap-y-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         <div>
           {/* Split at the real morpheme boundary: morph + the -eme of phoneme,
               grapheme, sememe. The colour lands on a piece of the word that
               means something, so the mark states the idea rather than
-              decorating it. */}
+              decorating it.
+
+              Both halves are brand now, one hue each, where morph used to be
+              plain ink. WCAG 1.4.3 exempts text that is part of a logo, which
+              is what lets the cyan run at 2.63:1 here and nowhere else on the
+              site — every other cyan that sets type is --good-deep. */}
           <h1 className="wordmark text-[2.75rem] sm:text-[3.5rem]">
-            morph<span className="text-action">eme</span>
+            <span className="text-good">morph</span>
+            <span className="text-action">eme</span>
           </h1>
           {/* Puzzle first. The casual puzzler will not read past a sentence
               about a contest they have not entered, and the contest student
@@ -38,20 +40,22 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
-            {/* Two labels, one visible per state. The second is a copy the
-                ink fill carries in with it, so neither ever renders against
-                the ground it is unreadable on. See .ink-wipe in globals.css. */}
+            {/* One label over a sweeping fill. This carried two stacked
+                copies while the wipe was ink: paper on the orange is 2.13:1
+                and ink on it 9.88:1, so no single label could cross the
+                transition readable. Both fills take the same black label now
+                — 9.88:1 on the orange, 7.98:1 on the cyan — so the duplicate
+                went with the ink. The fill sits behind, clipped from the
+                left; see .ink-wipe in globals.css. */}
             <Link
               href="/practice"
-              className="ink-wipe font-cta bg-action border-action relative inline-flex items-center border px-8 py-4 text-[0.85rem] font-bold tracking-[0.12em] whitespace-nowrap text-on-action uppercase"
+              className="ink-wipe font-cta bg-action border-good relative inline-flex items-center border-2 px-8 py-4 text-[0.85rem] font-bold tracking-[0.12em] whitespace-nowrap text-on-action uppercase"
             >
-              Start practicing
               <span
                 aria-hidden="true"
-                className="ink-wipe-fill bg-ink text-paper absolute -inset-px flex items-center justify-center"
-              >
-                Start practicing
-              </span>
+                className="ink-wipe-fill bg-good absolute -inset-0.5"
+              />
+              <span className="relative">Start practicing</span>
             </Link>
             <span className="font-cta text-[0.85rem] text-ink-soft">
               <span className="font-semibold text-ink tabular-nums">
@@ -134,28 +138,19 @@ export default function Home() {
                   is flat and ruled like everything else, and the rise is what
                   earns the shadow. */}
               <div className="plate mb-4 border border-rule bg-surface sm:max-w-[380px] lg:row-span-2 lg:mb-0">
-                {/* Both captures render and CSS shows one, rather than a
-                    <picture> media query, because <picture> can only read the
-                    machine's setting and would keep serving the light shot to
-                    a reader who chose dark by hand. The twin nobody is looking
-                    at costs nothing: it is display:none, so it never enters the
-                    viewport, so a lazy image never fetches it. */}
-                {(["light", "dark"] as const).map((mode) => (
-                  <Image
-                    key={mode}
-                    data-theme-when={mode}
-                    src={
-                      mode === "dark"
-                        ? item.src.replace(/\.png$/, "-dark.png")
-                        : item.src
-                    }
-                    alt={item.alt}
-                    width={760}
-                    height={432}
-                    sizes="(min-width: 640px) 380px, calc(100vw - 40px)"
-                    className="block h-auto w-full"
-                  />
-                ))}
+                {/* One capture. This rendered a light/dark pair until the
+                    dark theme was withdrawn, with CSS hiding the twin rather
+                    than a <picture> media query, because <picture> can only
+                    read the machine's setting. They go stale if the UI moves:
+                    recapture rather than redraw. */}
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={760}
+                  height={432}
+                  sizes="(min-width: 640px) 380px, calc(100vw - 40px)"
+                  className="block h-auto w-full"
+                />
               </div>
               <dt className="font-heading text-[1.35rem]">{item.title}</dt>
               <dd className="mt-2 max-w-[58ch] text-[1rem] leading-relaxed text-ink-soft">

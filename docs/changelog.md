@@ -81,6 +81,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ### Changed
 
+- The wordmark is both brand colours instead of one plus black: `morph` in NACLO cyan, `eme` in NACLO orange, split at the same morpheme boundary as before. WCAG 1.4.3 exempts text that is part of a logo, which is what lets the cyan run at 2.63:1 here and nowhere else on the site
+- The primary button is orange-filled with a 2px cyan border, and its hover wipe sweeps in cyan rather than ink. It also dropped to a single label: the wipe carried a stacked copy because paper on the orange is 2.13:1 and ink on it 9.88:1, so no one label could cross the transition readable. Both fills take the same black label now, 9.88:1 on the orange and 7.98:1 on the cyan, so the duplicate went with the ink
 - **The palette is now NACLO's own.** Both chromatic brand roles were rebased onto the competition's actual colours, taken from naclo.org rather than interpreted from it: `#ff9a04` is declared on every heading in their stylesheet and is the literal value of 3,634 pixels of their logo artwork, and `#00aaee` is declared eight times in the same file, filling the nav bar and setting every link. The orange replaces `oklch(0.7 0.19 45)` = `#fa6e1d` — a yellower, lighter hue at `oklch(0.774 0.173 64.9)`. Cyan replaces verdigris `#2f6b4f`/`#61a482` as the colour of a correct answer. `#44ccf4`, NACLO's own nav hover, is the dark column's cyan
 - **The ground is NACLO's too.** `--paper` went `#fbfaf7` → `#ffffff` and `--ink` `#16181d` → `#000000`, and the dark column was de-warmed to match (`#191712` → `#141414`, `#eae7e0` → `#e8e8e8`). The warm paper stock was the better reading ground and was given up knowingly: a palette that borrows a brand's two hues while keeping its own paper is not that brand's palette. Two themes in different temperatures would have been two design systems
 - Oxblood stays, by explicit decision, as the one chromatic role that is not NACLO's. Red for a wrong answer is near-universal, the brand offers no substitute, and the alternative was spending orange on both "press this" and "you got this wrong"
@@ -142,6 +144,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ### Removed
 
+- **The dark theme, withdrawn.** All 22 two-argument `light-dark()` declarations collapsed to their day value, both `:root[data-theme]` rules, the theme-conditional twin rules, the toggle's fill rule and the figure mat (a dark-only device that resolved to nothing by day). `components/theme-toggle.tsx`, `lib/theme.ts`, the pre-paint `<head>` script and its `suppressHydrationWarning`, the `ThemeToggle` on all three pages, and the three `-dark.png` screenshot twins with the markup that rendered them. `globals.css` is 109 lines lighter
+- `color-scheme: light` on `:root` is deliberately **kept**. Unset, the browser reads the machine's setting and repaints scrollbars, form controls and the overscroll gutter dark underneath a light page. It is now the only line in the stylesheet that knows a theme ever existed
+- The figure mat is gone but its reason is not: `.problem-body figure img` keeps its padding and the comment keeps the ban on `filter: invert()`. That ban is about the content — one problem's answer is which robe is white and which is black — not about the theme
+- Restoring dark means restoring the night column, not adding a `.dark` class. Its ratios were solved against the night ground rather than mirrored, and commit `e5d4b29` is the last one that carries them
 - Unused create-next-app SVGs from `public/` (`file`, `globe`, `next`, `vercel`, `window`)
 - `app/layout.tsx`'s dead `Geist`/`Geist_Mono` import from `next/font/google` — exposed CSS variables nothing read, and its removal also drops a build-time Google Fonts fetch that the spec's self-hosted-font requirement rules out
 - `components/hint-ladder.tsx`, folded into `help-popover.tsx`

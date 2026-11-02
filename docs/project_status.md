@@ -2,6 +2,26 @@
 
 This file will hold the project's development status and thus document whatever large updates/accomplishments on the project have been made day-by-day. It is meant to help keep track of where things were left off from the previous day, as a personal reminder.
 
+## 2026-11-02 (evening)
+
+**Done**
+
+- Both brand colours now carry the two marks that were still half-black. The wordmark is `morph` in cyan and `eme` in orange, split where it always split; the primary button is an orange fill with a 2px cyan border whose hover wipe sweeps cyan instead of ink
+- That change made the button simpler, not just different. The wipe carried two stacked labels because paper on the orange is 2.13:1 and ink on it 9.88:1, so no single label could cross the transition readable. Both fills take the same black label now, so the duplicate went with the ink and the fill became a plain background sweep
+- Withdrew the dark theme, completely rather than hidden. 22 `light-dark()` declarations collapsed to their day value, the two `data-theme` rules, the twin-hiding rules, the toggle fill rule and the figure mat all removed, along with `theme-toggle.tsx`, `lib/theme.ts`, the pre-paint script, the toggle on three pages and the three dark screenshots. 109 lines out of `globals.css`
+- Kept `color-scheme: light`. It looks vestigial with nothing to switch and it is not: unset, the browser paints its own scrollbars and form controls from the machine's setting, dark under a light page
+
+**Decisions worth remembering**
+
+- **A deleted feature's reason can outlive it.** The figure mat was a dark-mode device and went with the theme, but the rule it enforced — never `filter: invert()` a problem figure, because one problem's answer is which robe is white and which is black — is about the content. It stayed, as a comment on a rule that now only sets padding
+- **`color-scheme` is not the theme.** It is the browser-furniture declaration that happens to also drive `light-dark()`. Removing it with the theme would have left scrollbars reading the OS on a page that no longer does
+- **Write the restore path at the point of deletion.** Every place that described two themes now names commit `e5d4b29` as the last one holding the night column, because the night ratios were solved against the night ground and are not recoverable by inverting the day ones
+
+**Left off / known**
+
+- A reader who used the toggle still has `morpheme.theme.v1` in localStorage. Nothing reads it and nothing writes it; it is inert, and adding cleanup code would mean adding theme code back
+- The `-dark.png` screenshots are deleted from the tree but remain in git history at `e5d4b29` if dark returns
+
 ## 2026-11-02
 
 **Done**

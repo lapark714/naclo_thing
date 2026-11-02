@@ -123,8 +123,9 @@ but nothing should be built toward that direction until it is chosen.
 - The product is **morpheme**, lower case, no full stop. The wordmark is set
   in a geometric sans (Gotham where licensed, Montserrat as the shipped
   stand-in), split at its own morpheme boundary: `morph` in ink, `eme` in the
-  accent. The reference art reverses it out of the dark ground; that lockup is
-  kept for the app icon, not for the page.
+  accent. Both halves are brand colours: `morph` in NACLO cyan, `eme` in NACLO
+  orange. The reference art reverses the mark out of black; that lockup is kept
+  for the app icon, not for the page.
 - Colour answers to a job or it is not used. Three roles: NACLO orange
   (#ff9a04) for action and brand, NACLO cyan (#00aaee) for correct, oxblood
   (#a4342a) for cost and error. No gradients, no tinted cards, no coloured
@@ -142,11 +143,11 @@ but nothing should be built toward that direction until it is chosen.
 - No em dashes in any user-facing copy.
 - Errors say what to do next, and an AI grading verdict can always be flagged as
   wrong.
-- Light and dark are both first-class, added 2026-08-21. Dark is the same
-  reference grammar read under a lamp: neutral charcoal ground, off-white ink,
-  and the same orange. Light is the default for every reader, including
-  one whose machine is set to dark; night is chosen in the toggle and then
-  remembered. The earlier "no dark mode in the MVP" commitment is retired.
+- One theme, light. Dark shipped 2026-08-21 and was withdrawn 2026-11-02, a
+  deliberate narrowing rather than a regression: the toggle, the pre-paint
+  script and the night half of every token are gone. The original "no dark
+  mode in the MVP" position is effectively back, and the night column's
+  contrast work is recoverable from commit e5d4b29 if it returns.
 - Problem figures keep their true tone in both themes. The answer to at least
   one problem is which robe is white and which is black, so a tonal inversion
   is a content change, not a style choice.

@@ -28,13 +28,11 @@ naclo_tool/
 │   ├── coming-soon.tsx           # Untranscribed remainder, count + year breakdown
 │   ├── home-demo.tsx             # Playable demo question on the landing page
 │   ├── inline-answer.tsx         # Answer input rendered inside the problem body
-│   ├── theme-toggle.tsx          # Light/dark cells; active cell decided in CSS, not React
 │   └── use-answer.ts             # Grading hook shared by inline and row inputs
 ├── lib/
 │   ├── grading.ts                # exact-match normalization
 │   ├── progress.ts               # localStorage via useSyncExternalStore
 │   ├── timer.ts                  # Timestamp-based timing
-│   ├── theme.ts                  # localStorage theme override; CSS owns the rest
 │   └── content.ts                # Loads published problems, builds index
 ├── content/
 │   ├── schema.ts                 # Zod schema, shared by pipeline and site
@@ -64,9 +62,9 @@ naclo_tool/
 - Clean, minimal interface — the problem text and its tables are the star
 - Responsive design (desktop-first — most students study on their computers)
 - Self-hosted fonts must cover IPA and non-Latin scripts; a missing-glyph box breaks the problem
-- Light and dark, declared once as `light-dark(day, night)` in `app/globals.css` and switched by `color-scheme` — never a `.dark` class with a duplicated palette
-- Light is the default for every reader. `:root` declares `color-scheme: light`, not `light dark`; the OS setting is never read. Dark is opt-in via the toggle and then remembered
-- Dark ratios are solved against the dark ground, never mirrored off the light column
+- One theme, light. `:root` declares `color-scheme: light` — keep that declaration; left unset the browser repaints scrollbars and form controls dark under a light page
+- The dark theme was withdrawn 2026-11-02. If it comes back it is a second column restored, not a `.dark` class with a duplicated palette; commit e5d4b29 is the last one that has it
+- Solve every ratio against the worst ground a token can land on, not against `--paper`. `--tint` and the opacity composites over it are grounds
 - NEVER `filter: invert()` a problem figure. At least one problem's answer is which robe is white and which is black
 
 **Component patterns:**

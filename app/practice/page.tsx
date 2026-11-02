@@ -4,7 +4,6 @@ import { getProblemIndex, getUpcoming } from "@/lib/content";
 import { ConceptFilter } from "@/components/concept-filter";
 import { ComingSoon } from "@/components/coming-soon";
 import { ConceptMastery } from "@/components/concept-mastery";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: "Practice · morpheme",
@@ -27,7 +26,6 @@ export default function PracticePage() {
         >
           ← morpheme
         </Link>
-        <ThemeToggle />
       </div>
 
       <h1 className="section-head font-heading mt-6 text-3xl leading-tight tracking-[-0.015em] sm:text-4xl">Practice</h1>
