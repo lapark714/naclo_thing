@@ -491,36 +491,65 @@
     "Noto Sans Cherokee", "Noto Sans Ethiopic", "Noto Sans NKo",
     "Noto Sans JP", "Charis SIL", ui-sans-serif, system-ui, sans-serif;
 
-  /* The ground and the text on it. Warm at both ends of the day: the day
-     ground is warm off-white and the night ground is warm charcoal, because
-     the warmth is most of what stops this looking like a template. Neither
-     end is neutral and neither is pure — no #fff, no #000. 17.0:1 by day,
-     14.5:1 by night, the night figure held back deliberately: light text on a
-     dark ground blooms, and the last two points of contrast buy glare rather
-     than legibility over a twenty-minute problem. */
-  --paper: light-dark(#fbfaf7, #191712);
-  --ink: light-dark(#16181d, #eae7e0);
-  --ink-soft: light-dark(#5a6070, #98958f);
-  --ink-faint: light-dark(#8b8f9c, #716f69);
+  /* The ground and the text on it. NACLO's own page is white with black
+     text, and this column is that page: #ffffff and #000000, taken from
+     naclo.org rather than tuned here. The warm off-white this used to open on
+     was the better reading ground and it is gone on purpose — the brief was
+     the official colours, and a palette that borrows the brand's two hues
+     while quietly keeping its own paper stock is not the brand's palette.
 
-  /* Surface is the White Means Above rule, made a token. It used to be a
-     literal #ffffff in fourteen places, which is the one thing in this system
-     that could not survive a theme: white does not mean "raised" on a dark
-     page, it means "hole". What the rule always meant was one step lifted off
-     the ground, so that is what the token is, and it lifts in both themes. */
-  --surface: light-dark(#ffffff, #27241e);
-  --rule: light-dark(#dfdcd4, #39332d);
-  --rule-strong: light-dark(#c9c5ba, #4d473f);
-  /* One tonal step from the ground toward the ink. Table headers and hover
-     states. The direction of the step flips with the theme, which is why the
-     night header sits lighter than its cells while the day header sits
-     darker: the constant is "toward the ink", not "darker". */
-  --tint: light-dark(#f1eee6, #312c26);
+     The greys under it are NACLO's too: #444444 is declared in their
+     stylesheet, and #767676 sits inside their grey family between the
+     #606060 and #888888 they use. Both read better here than what they
+     replace — secondary prose goes 3.09:1 -> 4.54:1 at the faint end, which
+     was below AA before and is not now. */
+  --paper: light-dark(#ffffff, #141414);
+  --ink: light-dark(#000000, #e8e8e8);
+  --ink-soft: light-dark(#444444, #9a9a9a);
+  --ink-faint: light-dark(#767676, #7e7e7e);
 
+  /* Surface, and the one rule the white ground genuinely broke.
+
+     The Lifted Surface Rule said a raised thing sits one tonal step off the
+     ground, and by day that step was paper -> white. There is no step above
+     white. So by day surface *is* the ground, and lift is carried by the
+     hairline and the shadow that were already drawn around every one of these
+     things: a table, an input, the hint popover and an unselected chip each
+     keep a border and, where they float, a shadow. Night is unchanged and
+     still lifts, because there the step exists.
+
+     The rule survives; only its instrument moved. What it always meant was
+     "this reads as above the page", and on a white page a rule says that and
+     a fill cannot. --tint is NACLO's own #f5f5f5, and it is now the only
+     tonal block in the day column. */
+  --surface: light-dark(#ffffff, #1f1f1f);
+  --rule: light-dark(#e0e0e0, #333333);
+  --rule-strong: light-dark(#949494, #626262);
+  --tint: light-dark(#f5f5f5, #262626);
+
+  /* Cost and error. Oxblood is the one chromatic role that is not NACLO's,
+     and it stays: red for a wrong answer is near-universal, the brand has no
+     substitute for it, and the alternative was spending orange on both "press
+     this" and "you got this wrong". 6.77:1 on white. Night still cannot hold
+     oxblood and still reads terracotta, for the reason given above. */
   --mark: light-dark(#a4342a, #e16758);
-  --mark-tint: light-dark(#f8efed, #34201c);
-  --good: light-dark(#2f6b4f, #61a482);
-  --good-tint: light-dark(#ebf2ee, #213229);
+  --mark-tint: light-dark(#fbeeec, #33201d);
+
+  /* Correct, in NACLO cyan. This replaces verdigris, and it is the same
+     arrangement --action has below, for the same reason: the brand value is
+     the token, and a deepened twin exists for the sizes the brand value
+     cannot carry.
+
+     #00aaee is 2.63:1 on white, so it never sets text in the day column —
+     naclo.org does set links in it, which is a real failure on their page and
+     not one to copy. Here the vivid value fills and outlines; --good-deep
+     writes. Night is the one place the brand cyan is legible as text, and the
+     lighter --good-hover there is #44ccf4, which is NACLO's own hover cyan
+     rather than a value invented for the dark column. */
+  --good: #00aaee;
+  --good-hover: light-dark(#0092cc, #44ccf4);
+  --good-deep: light-dark(#0c7eb1, #5cd2f7);
+  --good-tint: light-dark(#e4f5fd, #0c2d3c);
 
   /* Action. Named --action, not --accent: the shadcn scaffold already owns
      --accent (it maps to --tint for muted hover states). Redefining the same
@@ -529,38 +558,47 @@
      minifier, which painted the primary button and the wordmark's -eme in a
      pale warm grey on warm paper.
 
-     The vivid value is the one colour that does not move between themes. It
-     is the brand, it is legible on both grounds (5.03:1 on paper, 6.24:1 on
-     charcoal), and moving it would make the wordmark two different oranges.
-     The two derived values do move, and they move in opposite directions:
+     The vivid value is #ff9a04, sampled from naclo.org's own logo artwork —
+     3,634 of its pixels are that exact hex — and declared on every heading
+     in their stylesheet. It is a yellower, lighter orange than the one it
+     replaces: oklch(0.774 0.173 64.9) against the old oklch(0.7 0.19 45).
+
+     It still does not move between themes. It is the brand, moving it would
+     make the wordmark two different oranges, and it clears 9.88:1 under its
+     own black label in both. The derived values move, in opposite directions:
      --action-deep is "the action colour that is safe at body size", which by
      day means darker than the fill and by night means lighter than it. Same
-     job, opposite arithmetic. --action-hover likewise steps toward the ink. */
-  --action: oklch(0.7 0.19 45);
-  --action-hover: light-dark(oklch(0.63 0.18 45), oklch(0.78 0.165 48));
-  --action-deep: light-dark(oklch(0.47 0.14 45), oklch(0.721 0.135 48));
-  --action-tint: light-dark(oklch(0.96 0.03 45), #45281b);
+     job, opposite arithmetic. */
+  --action: #ff9a04;
+  --action-hover: light-dark(#e08700, #ffb13d);
+  --action-deep: light-dark(#ac6600, #ffb13d);
+  --action-tint: light-dark(#fff3e1, #3d2a0a);
 
-  /* The label that sits on an action fill, and the only token whose value
-     barely moves. The orange is light in both themes, so its label is dark in
-     both themes — text-ink on the call to action was correct only for as long
-     as ink was guaranteed to be dark, and stopped being correct the moment
-     ink learned to be off-white. Anything filled with --action carries this,
-     never --ink. 6.18:1 by day, 6.24:1 by night. */
-  --on-action: light-dark(#16181d, #191712);
+  /* The label that sits on a brand fill. Both brand hues are light in both
+     themes, so both carry a black label in both themes — #000000 now, the
+     same black the body text uses, because the ground stopped being warm and
+     took the warm near-black with it. 9.88:1 on the orange, 7.98:1 on the
+     cyan. Anything filled with --action or --good carries one of these,
+     never --ink, which learned to be off-white the day dark mode landed. */
+  --on-action: #000000;
+  --on-good: #000000;
 
-  /* Selection. Left to the browser it arrives as the system blue, which is
-     the fifth colour role this system does not have, and by night it lands on
-     warm charcoal looking like a bug. A wash of the action hue instead, dark
-     enough by day and light enough by night to keep --ink over 10:1 on it. */
-  --select: light-dark(#ffdcc2, #4a3524);
+  /* Selection. Left to the browser it arrives as the system blue, which used
+     to be a colour role this palette did not have. It has one now, so the
+     wash is a pale step off --good rather than off the action hue: cyan is
+     the colour this interface already uses to say "this one". --ink clears
+     14:1 on it by day and 7.8:1 by night. */
+  --select: light-dark(#a5ddf5, #0e4a63);
 
-  /* Shadow tone, not shadow. The two recipes in this system keep their
-     geometry across themes and change only their colour: a 35%-alpha ink at
-     day is invisible on charcoal, so night goes to true black at roughly
-     double the alpha. Same two distances, same vocabulary, still no third. */
-  --lift-popover-tone: light-dark(rgb(22 24 29 / 0.35), rgb(0 0 0 / 0.72));
-  --lift-plate-tone: light-dark(rgb(22 24 29 / 0.45), rgb(0 0 0 / 0.66));
+  /* Shadow tone, not shadow. The two recipes keep their geometry across
+     themes and change only their colour. Both ends are true black now, the
+     day value following --ink off the warm near-black it used to borrow;
+     day stays the lighter alpha because a shadow on white needs less to read
+     than one on charcoal. Same two distances, same vocabulary, still no
+     third — and by day these now carry lift on their own, since --surface no
+     longer steps above the ground. */
+  --lift-popover-tone: light-dark(rgb(0 0 0 / 0.22), rgb(0 0 0 / 0.72));
+  --lift-plate-tone: light-dark(rgb(0 0 0 / 0.28), rgb(0 0 0 / 0.66));
 
   --radius: 3px;
 
@@ -618,9 +656,12 @@
   --color-tint: var(--tint);
   --color-surface: var(--surface);
   --color-on-action: var(--on-action);
+  --color-on-good: var(--on-good);
   --color-mark: var(--mark);
   --color-mark-tint: var(--mark-tint);
   --color-good: var(--good);
+  --color-good-hover: var(--good-hover);
+  --color-good-deep: var(--good-deep);
   --color-good-tint: var(--good-tint);
   --color-action: var(--action);
   --color-action-hover: var(--action-hover);

@@ -119,7 +119,7 @@ export function ConceptFilter({ problems }: Props) {
                 </span>
                 <span className="shrink-0 text-[0.78rem] text-ink-soft tabular-nums">
                   {progress.problems[p.id]?.solved ? (
-                    <span className="text-good">solved</span>
+                    <span className="text-good-deep">solved</span>
                   ) : (
                     <>{p.questionCount} parts</>
                   )}

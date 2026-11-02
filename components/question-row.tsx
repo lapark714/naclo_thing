@@ -130,7 +130,7 @@ function Feedback({
 
   if (verdict.state === "correct") {
     return (
-      <p className="mt-1.5 text-[0.82rem] text-good">
+      <p className="mt-1.5 text-[0.82rem] text-good-deep">
         Correct{verdict.reason ? <span className="text-ink-soft">. {verdict.reason}</span> : null}
       </p>
     );

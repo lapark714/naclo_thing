@@ -107,7 +107,7 @@ export function HomeDemo() {
       <p className="mt-3 max-w-[58ch] text-[0.85rem] leading-relaxed text-ink-soft">
         {state === "correct" ? (
           <>
-            <span className="font-semibold text-good">Correct.</span>{" "}
+            <span className="font-semibold text-good-deep">Correct.</span>{" "}
             That is one of six blanks in Pavel Iosad&rsquo;s Permyak problem, and you
             solved it without being taught a thing.{" "}
             <Link

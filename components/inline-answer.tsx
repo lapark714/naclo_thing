@@ -213,7 +213,7 @@ function Trailing({
   }
 
   if (verdict.state === "correct") {
-    return <span className="text-[0.78rem] text-good">correct</span>;
+    return <span className="text-[0.78rem] text-good-deep">correct</span>;
   }
 
   if (verdict.state === "checking") {
