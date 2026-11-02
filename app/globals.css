@@ -536,7 +536,17 @@
      tonal block in the day column. */
   --surface: light-dark(#ffffff, #1f1f1f);
   --rule: light-dark(#e0e0e0, #333333);
-  --rule-strong: light-dark(#949494, #626262);
+  /* --rule-strong owes 3:1, not 4.5:1, because it is never text — but it is
+     the only thing marking several controls, so 1.4.11 applies to it squarely.
+     The free-text inline blank is `border-0 border-b` with no fill at all, the
+     help popover's buttons carry no fill inside a --surface panel, and the
+     timer's number input is --surface inside a --surface panel: in each the
+     same colour sits on both sides of the 1px rule, so nothing rescues it.
+     Those grounds are --surface and --tint, not --paper. Solved there, with
+     headroom this time: the worst case is 3.17:1 by day and 3.19:1 by night,
+     where the paper-only values this replaces were 3.03:1 and 3.02:1 on the
+     page and 2.48:1 on a night table header. */
+  --rule-strong: light-dark(#8a8a8a, #737373);
   --tint: light-dark(#f5f5f5, #262626);
 
   /* Cost and error. Oxblood is the one chromatic role that is not NACLO's,

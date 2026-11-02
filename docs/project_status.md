@@ -32,6 +32,17 @@ This file will hold the project's development status and thus document whatever 
 - **Solve a colour against the worst ground it can land on, not against the page.** This is the lesson of the whole day. Every ratio I checked in the morning was correct and every one was measured against the wrong thing. A hover tint, a lifted surface and an opacity modifier are all grounds
 - **Grep is not an audit.** Two of the misses were invisible to `grep -n "blue"` and `grep verdigris` because the stale phrase wrapped a line break. Reading the file beats matching a pattern in it
 
+**Second audit, same day**
+
+- Ran the audit again over the heading work and the re-solve. It found that I had written the Worst Ground Rule and then not applied it to `--rule-strong` — the one token in the palette with a non-text 3:1 floor rather than a 4.5:1 text one, and the one I did not check. It was 2.48:1 on a night table header while DESIGN.md certified it as clearing 1.4.11
+- That one matters more than its severity suggests. On three controls the 1px rule is the *only* thing marking them and the same colour sits on both sides of it, so nothing rescues the boundary: the free-text inline blank (`border-0 border-b`, no fill, inside a `--surface` table scroller), the help popover's unfilled buttons inside a `--surface` panel, and the timer's `--surface` input inside a `--surface` panel. Re-solved with headroom this time rather than to the floor
+- It also caught that the rule's own wording was backwards at night. "Solve against the darkest ground" is right by day and wrong by night, where the grounds run #141414 < #1f1f1f < #262626 and the worst is the lightest. Someone following it literally would solve the night value against the easiest ground
+
+**Decisions worth remembering, part three**
+
+- **The rule you just wrote is the one you forget to apply.** Both audits found the same shape of error: a principle stated correctly and then applied to the obvious cases only. The first pass measured against `--paper` everywhere; the second fixed the three text tokens and skipped the one with a different floor, because a 3:1 token did not look like the thing the 4.5:1 rule was about
+- **State a rule in terms of the property, not the appearance.** "Darkest ground" encoded a day-column assumption into a rule meant for both themes. "Least contrast" is the actual property and is theme-independent
+
 **Left off / known**
 
 - `--good-hover` and the three `*-tint` washes are defined and still unused by any component, as they were before this change

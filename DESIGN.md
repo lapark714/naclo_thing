@@ -7,7 +7,7 @@ colors:
   ink-soft: "#444444"
   ink-faint: "#707070"
   rule: "#e0e0e0"
-  rule-strong: "#949494"
+  rule-strong: "#8a8a8a"
   tint: "#f5f5f5"
   oxblood: "#a4342a"
   oxblood-tint: "#fbeeec"
@@ -30,7 +30,7 @@ colorsDark:
   ink-soft: "#a6a6a6"
   ink-faint: "#8c8c8c"
   rule: "#333333"
-  rule-strong: "#626262"
+  rule-strong: "#737373"
   tint: "#262626"
   oxblood: "#e16758"
   oxblood-tint: "#33201d"
@@ -165,10 +165,12 @@ Warlpiri locative suffix or an Armenian transliteration, and the design's job is
 to present that subject accurately and then get out of the way.
 
 Density is closer to a printed page than to an application. Rules are hairlines,
-corners are square, and the only fill in the palette is the black used to mark a
-control as active. Colour is nearly absent: a page of eight problems is white,
-black, and one line of oxblood where something costs XP. That restraint is what
-makes the data legible, and the data is the whole product.
+corners are square, and the fills are few: black to mark a control as active,
+and NACLO's orange on the primary button and a selected chip. Colour is still
+nearly absent in the body of a problem — eight of them are white, black, an
+amber title over a cyan rule, and one line of oxblood where something costs XP.
+That restraint is what makes the data legible, and the data is the whole
+product.
 
 What chromatic colour there is belongs to NACLO. The site is unofficial and
 says so, but it is a study tool for one competition, and taking that
@@ -282,10 +284,12 @@ being warm and two themes in different temperatures are two design systems.
   darkest ground either lands on, where the warm values it replaced were
   3.09:1 and 3.56:1 against the page and less than that on a hovered row.
 - **Rule** (#e0e0e0 day, #333333 night): hairline dividers and table borders.
-- **Rule Strong** (#949494 day, #626262 night): input and control borders, one
+- **Rule Strong** (#8a8a8a day, #737373 night): input and control borders, one
   step darker than Rule so a control reads as interactive against a mere
-  divider. 3.03:1 and 3.02:1, clearing WCAG 1.4.11 where the warm values it
-  replaced sat at 1.65:1 and 1.95:1.
+  divider. 3.17:1 and 3.19:1 against `--tint`, the worst ground either lands
+  on, where the warm values it replaced sat at 1.65:1 and 1.95:1. An earlier
+  pass published 3.03:1 and 3.02:1 here, which were `--paper`-only figures and
+  fell to 2.48:1 on a night table header.
 - **Tint** (#f5f5f5 day, #262626 night): tonal block for table headers and hover
   states, the substitute for elevation. NACLO's own panel grey by day.
 
@@ -361,14 +365,24 @@ not move between themes. They are the brand, they clear 2.13:1 and 2.63:1 on
 white and 8.66:1 and 7.00:1 on charcoal, and moving either would make the
 wordmark two different oranges and correctness two different cyans.
 
-**The Worst Ground Rule.** A ratio is solved against the darkest ground a
-token can actually land on, not against `--paper`. `--tint` is one step toward
-the ink, and a hovered row composites it at 60%, so a token tuned to exactly
-4.5:1 on the page sits at 4.3:1 the moment a cursor crosses it. Three tokens
-shipped that way and had to be re-solved: `--ink-faint`, `--good-deep` and
-`--action-deep` are now measured on `--tint`, which is the worst case for all
-three. The rule generalises: before adding a colour, list every ground it can
-land on and solve the hardest one.
+**The Worst Ground Rule.** A ratio is solved against whichever ground gives a
+token the *least* contrast, not against `--paper`. That ground is not the same
+one in both themes, and "the darkest" is the wrong shorthand for it: by day the
+grounds run `--paper` #ffffff, `--tint` #f5f5f5, so the worst is the darkest,
+while at night they run `--paper` #141414, `--surface` #1f1f1f, `--tint`
+#262626, and the worst is the *lightest*, because the ink above them is light.
+`--tint` is the worst case in both columns, by opposite arithmetic. A rule that
+said "darkest" would have a reader solve the night value against #141414, which
+is the easiest ground there, not the hardest.
+
+`--tint` is one step toward the ink, and a hovered row composites it at 60%, so
+a token tuned to exactly 4.5:1 on the page sits at 4.3:1 the moment a cursor
+crosses it. Four tokens shipped that way and had to be re-solved: `--ink-faint`,
+`--good-deep` and `--action-deep` at 4.5:1, and `--rule-strong` at 3:1, which
+was missed on the first pass of this very rule — it was the only token here
+carrying a 1.4.11 floor rather than a text one, and it was the one not checked.
+The rule generalises: before adding a colour, list every ground it can land on
+and solve the hardest one.
 
 Opacity counts as a ground. `text-on-action/70` composites the label into the
 fill underneath it, so the pair that matters is the composite against the fill,
@@ -390,7 +404,7 @@ opening a section. `.section-head-center` swaps the full-width border for a
 short centred rule, because a border under a centred heading spans the column
 and stops reading as that heading's underline.
 
-**Oxblood cannot stay oxblood at night.** At 5.4:1 on a dark ground it has to
+**Oxblood cannot stay oxblood at night.** At 5.51:1 on a dark ground it has to
 lift to #e16758, which reads terracotta rather than deep and muted. That is a
 real loss and a physical constraint of dark mode, not a slip — a signal colour
 on a dark ground has to be lighter than the ground, and there is no dark red
@@ -601,7 +615,9 @@ harsh, fix it with spacing, border colour, or tone, never with a radius.
   paper text and an ink border.
 - **State:** Used for concept and difficulty filters, which stack. Each chip
   carries a tabular-nums count that dims to Ink Faint when unselected and to
-  60% paper when selected.
+  `--on-action` at 70% when selected. Not paper, and not 60%: the count sits on
+  an orange fill, and the opacity composites it into that fill rather than over
+  the page, which at 60% put it at 4.38:1. See the Worst Ground Rule.
 
 ### Cards / Containers
 
