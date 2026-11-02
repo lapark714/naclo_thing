@@ -91,7 +91,7 @@ export default function Home() {
             for QUESTIONS and EXPLANATION. Those label a working surface; this
             heads a pitch, on the one page that already carries a 3.5rem
             wordmark. The label style stays everywhere else. */}
-        <h2 className="font-heading text-center text-[2.25rem] leading-[1.25] tracking-[-0.015em]">
+        <h2 className="section-head section-head-center font-heading text-center text-[2.25rem] leading-[1.25] tracking-[-0.015em]">
           How It Works
         </h2>
         {/* Real screenshots, all cropped to the same window on a live problem

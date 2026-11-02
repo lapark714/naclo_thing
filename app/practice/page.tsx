@@ -30,7 +30,7 @@ export default function PracticePage() {
         <ThemeToggle />
       </div>
 
-      <h1 className="font-heading mt-6 text-3xl leading-tight tracking-[-0.015em] sm:text-4xl">Practice</h1>
+      <h1 className="section-head font-heading mt-6 text-3xl leading-tight tracking-[-0.015em] sm:text-4xl">Practice</h1>
       <p className="mt-2 max-w-[56ch] text-[0.95rem] text-ink-soft">
         Pick a concept and work problems of that type. Filters stack.
       </p>
