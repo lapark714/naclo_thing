@@ -462,7 +462,14 @@
    as less separation down near black: hairlines, tonal blocks and the lifted
    surface all take a wider step at night than their day values would give if
    flipped. Signal colours lift instead of deepening, which is a real loss —
-   oxblood at 5.4:1 on a dark ground cannot stay oxblood, and reads terracotta.
+   oxblood at 5.51:1 on a dark ground cannot stay oxblood, and reads terracotta.
+
+   Every ratio here is solved against the *worst* ground the token can actually
+   land on, not against --paper. --tint is one step toward the ink, so a token
+   that clears 4.5:1 on the page can sit at 4.3:1 on a hovered row and fail
+   there. --ink-faint, --good-deep and --action-deep are all solved on --tint
+   for that reason; three of them were tuned to exactly 4.5:1 on the ground
+   first and had no headroom left for the hover state underneath them.
    --------------------------------------------------------------------------- */
 
 :root {
@@ -499,14 +506,19 @@
      while quietly keeping its own paper stock is not the brand's palette.
 
      The greys under it are NACLO's too: #444444 is declared in their
-     stylesheet, and #767676 sits inside their grey family between the
-     #606060 and #888888 they use. Both read better here than what they
-     replace — secondary prose goes 3.09:1 -> 4.54:1 at the faint end, which
-     was below AA before and is not now. */
+     stylesheet, and #707070 sits just below the #606060-to-#888888 band they
+     use. Both read better here than what they replace — the faint end goes
+     3.09:1 -> 4.54:1, which was below AA before and is not now.
+
+     --ink-faint is measured on --tint rather than on the page, because the
+     count on an unselected concept chip is --ink-faint and that chip fills
+     with --tint on hover. See the Worst Ground Rule in DESIGN.md: the first
+     pass tuned this token to 4.54:1 on the ground and shipped it at 4.31:1
+     under a cursor. */
   --paper: light-dark(#ffffff, #141414);
   --ink: light-dark(#000000, #e8e8e8);
-  --ink-soft: light-dark(#444444, #9a9a9a);
-  --ink-faint: light-dark(#767676, #7e7e7e);
+  --ink-soft: light-dark(#444444, #a6a6a6);
+  --ink-faint: light-dark(#707070, #8c8c8c);
 
   /* Surface, and the one rule the white ground genuinely broke.
 
@@ -548,7 +560,7 @@
      rather than a value invented for the dark column. */
   --good: #00aaee;
   --good-hover: light-dark(#0092cc, #44ccf4);
-  --good-deep: light-dark(#0c7eb1, #5cd2f7);
+  --good-deep: light-dark(#0b78a9, #5cd2f7);
   --good-tint: light-dark(#e4f5fd, #0c2d3c);
 
   /* Action. Named --action, not --accent: the shadcn scaffold already owns
@@ -571,8 +583,27 @@
      job, opposite arithmetic. */
   --action: #ff9a04;
   --action-hover: light-dark(#e08700, #ffb13d);
-  --action-deep: light-dark(#ac6600, #ffb13d);
+  --action-deep: light-dark(#a36100, #ffb13d);
   --action-tint: light-dark(#fff3e1, #3d2a0a);
+
+  /* The heading orange, and the one token with a size condition attached.
+
+     NACLO's own stylesheet heads every section with
+     `h1 { color: #ff9a04; border-bottom: solid 1px #00aaee }`, and that
+     orange-over-cyan pair is the most recognisable thing on their page. The
+     colour cannot be copied exactly: #ff9a04 is 2.13:1 on white, under even
+     the 3:1 floor large text gets, and a section heading is prose rather than
+     a logo, so it has no 1.4.3 exemption to lean on the way the wordmark does.
+
+     So day walks the same hue (oklch H 64.9) down to 3.31:1 — still clearly
+     their amber, and 3.03:1 even on --tint. Night needs no compromise at all:
+     the brand value clears 8.66:1 on #141414, so night gets the real thing.
+
+     Valid at 24px and above, which is the whole of its contract. It is
+     deliberately NOT exported to @theme, so there is no `text-action-head`
+     utility to reach for at body size — .section-head is its only sanctioned
+     use, and that class is only ever put on a display heading. */
+  --action-head: light-dark(#cc7a00, #ff9a04);
 
   /* The label that sits on a brand fill. Both brand hues are light in both
      themes, so both carry a black label in both themes — #000000 now, the
@@ -783,8 +814,9 @@ body > * {
  * shadow to lift into.
  *
  * Two stacked labels rather than one recoloured one. Ink on the action orange
- * is 6.18:1 and paper on it is 2.75:1, so a single label crossing the wipe
- * would spend the whole transition half-unreadable whichever colour it took.
+ * is 9.88:1 and paper on it is 2.13:1 by day, so a single label crossing the
+ * wipe would spend the whole transition half-unreadable whichever colour it
+ * took.
  * Each copy only ever sits on the ground it was coloured for.
  *
  * The fill is inset -1px so it covers the button's border too; clipped back to
@@ -905,6 +937,44 @@ u {
   margin-top: 0.35rem;
 }
 
+/* NACLO's section heading, brought over whole: their amber over their cyan.
+ *
+ * The rule is 1px and vivid --good, as theirs is. A 1px rule is not text and
+ * carries nothing the heading above it does not already say, so its 2.63:1
+ * against white is decoration rather than information — the same reading that
+ * lets --action fill a button whose black label does the identifying.
+ *
+ * Only display headings take this. The small uppercase labels that head a
+ * working surface — QUESTIONS, EXPLANATION, YOUR MASTERY — keep --ink-soft:
+ * they sit at 0.7rem, where this orange would need 4.5:1 and fails, and they
+ * label a surface rather than opening a section. The split already existed in
+ * the type scale; this only gives one half of it a colour.
+ */
+.section-head {
+  color: var(--action-head);
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--good);
+}
+
+/* The centred variant. A border-bottom on a centred heading spans the column
+   and stops reading as that heading's underline — it reads as another section
+   divider, which this section already has in its border-y. A short rule
+   centred under the text keeps the pair attached, which is the whole point of
+   the pattern. Drawn as a pseudo-element so the heading stays a block and
+   nothing has to become inline-block to be centred. */
+.section-head-center {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.section-head-center::after {
+  content: "";
+  display: block;
+  width: 7rem;
+  height: 1px;
+  margin: 0.5em auto 0;
+  background: var(--good);
+}
+
 /* Wide data tables scroll inside their own container so the page body never
    scrolls sideways. Students on phones are the reason this exists. */
 .table-scroll {
@@ -1004,9 +1074,10 @@ figure figcaption {
    operating system's.
    --------------------------------------------------------------------------- */
 
-/* Selection. Unstyled, this arrives as the system blue: a fifth colour role
-   the palette does not have, and on warm charcoal it reads as a bug rather
-   than as a highlight. --ink clears 10:1 on both washes. */
+/* Selection. Unstyled, this arrives as the system blue, which used to be a
+   colour role this palette did not have. It has one now, so the wash is a pale
+   step off --good rather than off the action hue. --ink clears 14.26:1 on the
+   day wash and 7.87:1 on the night one. See --select for the reasoning. */
 ::selection {
   background: var(--select);
   color: var(--ink);

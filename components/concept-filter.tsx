@@ -61,7 +61,7 @@ export function ConceptFilter({ problems }: Props) {
               >
                 {tag}
                 <span
-                  className={`ml-1.5 tabular-nums ${on ? "text-on-action/60" : "text-ink-faint"}`}
+                  className={`ml-1.5 tabular-nums ${on ? "text-on-action/70" : "text-ink-faint"}`}
                 >
                   {count}
                 </span>
