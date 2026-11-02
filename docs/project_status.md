@@ -6,7 +6,7 @@ This file will hold the project's development status and thus document whatever 
 
 **Done**
 
-- Both brand colours now carry the two marks that were still half-black. The wordmark is `morph` in cyan and `eme` in orange, split where it always split; the primary button is an orange fill with a 2px cyan border whose hover wipe sweeps cyan instead of ink
+- Both brand colours now carry the two marks that were still half-black. The wordmark is `morph` in cyan and `eme` in orange, split where it always split; the primary button keeps its orange fill and sweeps cyan on hover instead of ink. A cyan outline at rest was tried and dropped — cyan means *correct* here, and framing an unused control in it says the wrong thing
 - That change made the button simpler, not just different. The wipe carried two stacked labels because paper on the orange is 2.13:1 and ink on it 9.88:1, so no single label could cross the transition readable. Both fills take the same black label now, so the duplicate went with the ink and the fill became a plain background sweep
 - Withdrew the dark theme, completely rather than hidden. 22 `light-dark()` declarations collapsed to their day value, the two `data-theme` rules, the twin-hiding rules, the toggle fill rule and the figure mat all removed, along with `theme-toggle.tsx`, `lib/theme.ts`, the pre-paint script, the toggle on three pages and the three dark screenshots. 109 lines out of `globals.css`
 - Kept `color-scheme: light`. It looks vestigial with nothing to switch and it is not: unset, the browser paints its own scrollbars and form controls from the machine's setting, dark under a light page

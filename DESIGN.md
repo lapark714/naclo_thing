@@ -94,11 +94,15 @@ spacing:
   section: "64px"
 components:
   button-primary:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.paper}"
+    backgroundColor: "{colors.action}"
+    textColor: "{colors.on-action}"
+    borderColor: "{colors.action}"
     rounded: "{rounded.none}"
     padding: "16px 32px"
     typography: "{typography.label}"
+  button-primary-hover:
+    backgroundColor: "{colors.cyan}"
+    textColor: "{colors.on-good}"
   button-secondary:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
@@ -524,16 +528,24 @@ harsh, fix it with spacing, border colour, or tone, never with a radius.
 ### Buttons
 
 - **Shape:** Square (0px radius), 1px border.
-- **Primary:** Ink fill, paper text, 1px ink border, 16px by 32px padding,
-  uppercase at 0.85rem, 700, 0.12em tracking. No shadow. One per page at most;
-  it is the page's single call to action. It is set in Noto Sans rather than
-  Verdana (`--font-cta`), because Verdana runs about 15% wider at this size and
-  the 0.12em tracking compounds that until the label sprawls across its box.
-  The count that sits beside it shares the face, so the pair reads as one line
-  rather than two typefaces meeting. Both are the only text on the site off
-  Verdana; the 0.72rem labels stay on it, where the width costs nothing. On
-  hover it inverts to paper fill with ink text against the border it already
-  carries, so nothing shifts.
+- **Primary:** Action fill, `--on-action` label, 1px border in `--action` too,
+  16px by 32px padding, uppercase at 0.85rem, 700, 0.12em tracking. No shadow.
+  One per page at most; it is the page's single call to action. The border
+  matches the fill and is invisible at rest — it exists to be covered, since
+  the hover fill is inset -1px so the edge does not stay orange under the
+  sweep. It is set in Noto Sans rather than Verdana (`--font-cta`), because
+  Verdana runs about 15% wider at this size and the 0.12em tracking compounds
+  that until the label sprawls across its box. The count that sits beside it
+  shares the face, so the pair reads as one line rather than two typefaces
+  meeting. Both are the only text on the site off Verdana; the 0.72rem labels
+  stay on it, where the width costs nothing.
+- **Primary hover:** `--good` sweeps in from the left, clipped rather than
+  faded, and the label stays put. It needs only one label because both fills
+  take the same black one — 9.88:1 on the orange, 7.98:1 on the cyan. While the
+  sweep was ink it needed two, since paper on the orange is 2.13:1. The button
+  carries no cyan at rest: an outline in `--good` was tried and dropped,
+  because a brand hue that means *correct* has no business framing a control
+  that has not been used yet.
 - **Secondary:** White fill, ink text, 1px ink border, 6px by 12px padding,
   uppercase label at 0.75rem. Used for Check, Show explanation, and every
   in-page action.

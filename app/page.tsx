@@ -46,14 +46,19 @@ export default function Home() {
                 transition readable. Both fills take the same black label now
                 — 9.88:1 on the orange, 7.98:1 on the cyan — so the duplicate
                 went with the ink. The fill sits behind, clipped from the
-                left; see .ink-wipe in globals.css. */}
+                left; see .ink-wipe in globals.css.
+
+                The 1px border is --action, the same colour as the fill, so it
+                is invisible at rest. It exists to be covered: the fill is
+                inset -1px so the border does not stay orange under the cyan
+                as it sweeps across. */}
             <Link
               href="/practice"
-              className="ink-wipe font-cta bg-action border-good relative inline-flex items-center border-2 px-8 py-4 text-[0.85rem] font-bold tracking-[0.12em] whitespace-nowrap text-on-action uppercase"
+              className="ink-wipe font-cta bg-action border-action relative inline-flex items-center border px-8 py-4 text-[0.85rem] font-bold tracking-[0.12em] whitespace-nowrap text-on-action uppercase"
             >
               <span
                 aria-hidden="true"
-                className="ink-wipe-fill bg-good absolute -inset-0.5"
+                className="ink-wipe-fill bg-good absolute -inset-px"
               />
               <span className="relative">Start practicing</span>
             </Link>
