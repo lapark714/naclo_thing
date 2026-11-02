@@ -2,6 +2,31 @@
 
 This file will hold the project's development status and thus document whatever large updates/accomplishments on the project have been made day-by-day. It is meant to help keep track of where things were left off from the previous day, as a personal reminder.
 
+## 2026-11-02
+
+**Done**
+
+- Rebased the palette onto NACLO's official brand colours. The two hues were pinned from the source rather than eyeballed from a screenshot: `#ff9a04` is `color:` on every h1 in naclo.org's stylesheet and is the literal value of 3,634 pixels of `naclo_orange.PNG`, and `#00aaee` is declared eight times in the same file as the nav fill, the link colour and the rule under every heading. Both were read out of the live site's computed styles and its logo canvas, so the values are theirs and not an interpretation
+- Orange replaces `oklch(0.7 0.19 45)` = `#fa6e1d` as `--action`: a yellower, lighter hue, `oklch(0.774 0.173 64.9)` against the old `oklch(0.7 0.19 45)`. Cyan replaces verdigris as the colour of a correct answer. `#44ccf4`, NACLO's own nav hover, became the dark column's cyan rather than a value invented for it
+- The ground went to NACLO's flat `#ffffff` on `#000000`, and the dark column was de-warmed to neutral greys to match. Giving up the warm paper was the real cost of the change and it was taken deliberately — a palette that borrows a brand's two hues while quietly keeping its own paper stock is not that brand's palette, and two themes in different temperatures are two design systems
+- Oxblood stays, which was the one thing worth asking about before touching anything. Spending orange on both "press this" and "you got this wrong" was the alternative, and red for a wrong answer has no brand substitute
+- 21 contrast pairings re-solved against the new grounds with a written OKLCH/WCAG solver before any CSS changed, the same way the dark theme was built. The day column came out *better* than the warm one it replaced: `--ink-faint` 3.09:1 → 4.54:1 and `--rule-strong` 1.65:1 → 3.03:1, both of which had been sitting below their floors. The night column gained the same two fixes
+- Verified in the browser rather than assumed: both themes resolve correctly from `getComputedStyle` (not from a screenshot, which lagged repaint and twice showed the wrong theme); a correct and an incorrect answer were actually typed and checked on 2026-A, giving `#0c7eb1`/`#5cd2f7` for "Correct" and `#a4342a`/`#e16758` for "Not yet"; and an inline answer on 2023-A confirmed the vivid `#00aaee` renders as the underline on a correct blank. Mobile at 375px checked too. Lint, build (75 pages) and `npm run validate` all clean
+
+**Decisions worth remembering**
+
+- **Two tokens, not one, per brand hue.** Neither NACLO colour can set text on white — orange is 2.13:1 there, cyan 2.63:1 — so each keeps a deepened twin for body size. The vivid value fills, outlines and underlines; the deep value writes. This is the arrangement `--action`/`--action-deep` already had, extended to cyan rather than invented for it. naclo.org does set links in `#00aaee` directly, which is a genuine accessibility failure on their page, and fidelity is not a reason to copy it
+- **The Lifted Surface Rule survived by changing instrument.** It said a raised thing sits one tonal step above the ground, and the day ground became `#ffffff`, above which nothing sits. So by day `--surface` *is* the ground and lift moved to the border and shadow already drawn around every table, input, popover and chip. Night is untouched. What the rule always meant was "this reads as above the page", and on a white page a rule says that and a fill cannot — the fill only ever encoded it by accident of the ground being paper
+- **The old "no blue accent" anti-reference had to be retired carefully.** DESIGN.md rejected the generic SaaS dashboard and named "a blue accent" as part of it. NACLO's brand carries a cyan, so that clause now reads as a ban on the brand. It was rewritten rather than deleted: what the rejection always meant is a hue chosen because products have one, not a hue a competition actually uses
+- **Found a long-standing documentation error while checking it.** `--action` was recorded in three places as clearing "5.03:1 on paper". The real figure for `#fa6e1d` on `#fbfaf7` is 2.75:1; 6.93:1 belonged to `--action-deep` and the two had been conflated. Worth knowing because the new orange is 2.13:1 on white and that looked like a regression against a number that was never true. Both are accepted for the same reason: a filled control is identified by its 9.88:1 black label, so WCAG 1.4.11 does not ask the boundary to carry it, and the wordmark is exempt under 1.4.3
+- The reading-progress hairline and the mastery bars stayed ink on purpose. Both carry written reasoning that position and progress are neither action nor correctness, and a row of orange bars on the library page would read as decoration. A palette swap is not a licence to reassign roles
+
+**Left off / known**
+
+- `--good-hover` and the three `*-tint` washes are defined and still unused by any component, as they were before this change
+- The app icon keeps its reversed black-on-white lockup. Putting the wordmark on NACLO orange instead is a one-line change and a brand decision, not a palette one, so it was left alone
+- The site is still unofficial and unendorsed. Using NACLO's colours is not a claim to their authority, and nothing in the copy suggests otherwise
+
 ## 2026-08-21
 
 **Done**
