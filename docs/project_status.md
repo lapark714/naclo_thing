@@ -21,6 +21,17 @@ This file will hold the project's development status and thus document whatever 
 - **Found a long-standing documentation error while checking it.** `--action` was recorded in three places as clearing "5.03:1 on paper". The real figure for `#fa6e1d` on `#fbfaf7` is 2.75:1; 6.93:1 belonged to `--action-deep` and the two had been conflated. Worth knowing because the new orange is 2.13:1 on white and that looked like a regression against a number that was never true. Both are accepted for the same reason: a filled control is identified by its 9.88:1 black label, so WCAG 1.4.11 does not ask the boundary to carry it, and the wordmark is exempt under 1.4.3
 - The reading-progress hairline and the mastery bars stayed ink on purpose. Both carry written reasoning that position and progress are neither action nor correctness, and a row of orange bars on the library page would read as decoration. A palette swap is not a licence to reassign roles
 
+**Later the same day**
+
+- Brought over NACLO's section-heading pattern, an amber heading over a 1px cyan rule, on the three display headings. Their orange cannot be copied exactly here: #ff9a04 is 2.13:1 on white, under the 3:1 floor large text gets, and a heading is prose so it has no logo exemption. Day uses the same hue at 3.31:1, night uses the brand value at 8.66:1 because the dark ground allows it. `--action-head` is kept out of `@theme` on purpose, so there is no utility to misapply it at body size
+- A 27-agent audit of the morning's rebase found four real contrast regressions, all one mistake: ratios solved against `--paper` rather than against the darkest ground a token actually lands on. Three tokens had been tuned to exactly 4.5:1 on the page and so failed on a hovered row, which composites `--tint` at 60%. Re-solved on `--tint`, which is now a written rule
+- It also caught `text-on-action/60` on a selected chip at 4.38:1 — opacity composites the label into the fill, so the opacity is part of the ratio, which I had not checked anywhere. And five stale comments, including a DESIGN.md don't-list that still banned "no blue accent" as "the one confirmed rejection" while the Overview three screens above retired that clause. My own grep missed it because the phrase wraps across two lines
+
+**Decisions worth remembering, part two**
+
+- **Solve a colour against the worst ground it can land on, not against the page.** This is the lesson of the whole day. Every ratio I checked in the morning was correct and every one was measured against the wrong thing. A hover tint, a lifted surface and an opacity modifier are all grounds
+- **Grep is not an audit.** Two of the misses were invisible to `grep -n "blue"` and `grep verdigris` because the stale phrase wrapped a line break. Reading the file beats matching a pattern in it
+
 **Left off / known**
 
 - `--good-hover` and the three `*-tint` washes are defined and still unused by any component, as they were before this change

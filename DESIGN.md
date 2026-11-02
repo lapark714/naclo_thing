@@ -5,7 +5,7 @@ colors:
   paper: "#ffffff"
   ink: "#000000"
   ink-soft: "#444444"
-  ink-faint: "#767676"
+  ink-faint: "#707070"
   rule: "#e0e0e0"
   rule-strong: "#949494"
   tint: "#f5f5f5"
@@ -13,21 +13,22 @@ colors:
   oxblood-tint: "#fbeeec"
   cyan: "#00aaee"
   cyan-hover: "#0092cc"
-  cyan-deep: "#0c7eb1"
+  cyan-deep: "#0b78a9"
   cyan-tint: "#e4f5fd"
   surface: "#ffffff"
   action: "#ff9a04"
   action-hover: "#e08700"
-  action-deep: "#ac6600"
+  action-deep: "#a36100"
   action-tint: "#fff3e1"
+  action-head: "#cc7a00"
   on-action: "#000000"
   on-good: "#000000"
   select: "#a5ddf5"
 colorsDark:
   paper: "#141414"
   ink: "#e8e8e8"
-  ink-soft: "#9a9a9a"
-  ink-faint: "#7e7e7e"
+  ink-soft: "#a6a6a6"
+  ink-faint: "#8c8c8c"
   rule: "#333333"
   rule-strong: "#626262"
   tint: "#262626"
@@ -42,6 +43,7 @@ colorsDark:
   action-hover: "#ffb13d"
   action-deep: "#ffb13d"
   action-tint: "#3d2a0a"
+  action-head: "#ff9a04"
   on-action: "#000000"
   on-good: "#000000"
   select: "#0e4a63"
@@ -239,14 +241,18 @@ being warm and two themes in different temperatures are two design systems.
 - **Action** (#ff9a04): NACLO's orange. Action and brand — the primary button,
   a selected filter chip, a link, the `-eme` of the wordmark. It does not move
   between themes. It is 9.88:1 under its own black label in both.
+- **Action Head** (#cc7a00 day, #ff9a04 night): display headings, over a cyan
+  rule. See the Section Heading Rule below. The one token carrying a size
+  condition, and the one deliberately kept out of `@theme` so no utility class
+  can apply it at body size.
 
 ### Secondary
 
 - **Cyan** (#00aaee): NACLO's cyan, and this system's word for *correct*. Like
   the orange it holds across themes, and like the orange it is a fill and an
   outline rather than a voice: at 2.63:1 on white it cannot set text by day.
-- **Cyan Deep** (#0c7eb1 day, #5cd2f7 night): the cyan that is safe at body
-  size. 4.53:1 by day, 10.54:1 by night. Every `correct` and `solved` on the
+- **Cyan Deep** (#0b78a9 day, #5cd2f7 night): the cyan that is safe at body
+  size. 4.51:1 on --tint by day, 8.66:1 by night. Every `correct` and `solved` on the
   site is set in this, not in the vivid value.
 - **Cyan Tint** (#e4f5fd day, #0c2d3c night): the wash behind a correct row.
 
@@ -269,11 +275,12 @@ being warm and two themes in different temperatures are two design systems.
 - **Surface** (#ffffff day, #1f1f1f night): one tonal step above the ground —
   except by day, where there is no step above white. See the Lifted Surface
   Rule below.
-- **Ink Soft** (#444444 day, #9a9a9a night): secondary prose, table headers,
+- **Ink Soft** (#444444 day, #a6a6a6 night): secondary prose, table headers,
   captions. 9.74:1 by day. NACLO's own grey.
-- **Ink Faint** (#767676 day, #7e7e7e night): metadata that should recede —
-  counts, footnotes, disabled states. 4.54:1 in both columns, where the warm
-  values it replaced were 3.09:1 and 3.56:1.
+- **Ink Faint** (#707070 day, #8c8c8c night): metadata that should recede —
+  counts, footnotes, disabled states. 4.54:1 and 4.50:1 against `--tint`, the
+  darkest ground either lands on, where the warm values it replaced were
+  3.09:1 and 3.56:1 against the page and less than that on a hovered row.
 - **Rule** (#e0e0e0 day, #333333 night): hairline dividers and table borders.
 - **Rule Strong** (#949494 day, #626262 night): input and control borders, one
   step darker than Rule so a control reads as interactive against a mere
@@ -308,8 +315,8 @@ are named in words, and the words were always doing the work.
 
 **The Vivid Fills, The Deep Writes Rule.** Both brand hues are light. Neither
 can set text on white — the orange is 2.13:1 there and the cyan 2.63:1 — so
-each keeps a deepened twin that can: `--action-deep` at 4.51:1 and
-`--good-deep` at 4.53:1. The vivid value fills, outlines and underlines; the
+each keeps a deepened twin that can: `--action-deep` and `--good-deep`, both
+at 4.51:1 against `--tint`. The vivid value fills, outlines and underlines; the
 deep value writes. naclo.org does set links in `#00aaee` directly, which is a
 real failure on their page and not one worth copying for fidelity's sake.
 
@@ -353,6 +360,35 @@ dark, and stopped being correct the moment ink learned to be off-white.
 not move between themes. They are the brand, they clear 2.13:1 and 2.63:1 on
 white and 8.66:1 and 7.00:1 on charcoal, and moving either would make the
 wordmark two different oranges and correctness two different cyans.
+
+**The Worst Ground Rule.** A ratio is solved against the darkest ground a
+token can actually land on, not against `--paper`. `--tint` is one step toward
+the ink, and a hovered row composites it at 60%, so a token tuned to exactly
+4.5:1 on the page sits at 4.3:1 the moment a cursor crosses it. Three tokens
+shipped that way and had to be re-solved: `--ink-faint`, `--good-deep` and
+`--action-deep` are now measured on `--tint`, which is the worst case for all
+three. The rule generalises: before adding a colour, list every ground it can
+land on and solve the hardest one.
+
+Opacity counts as a ground. `text-on-action/70` composites the label into the
+fill underneath it, so the pair that matters is the composite against the fill,
+not the token against the fill.
+
+**The Section Heading Rule.** NACLO's stylesheet heads every section with
+`h1 { color: #ff9a04; border-bottom: solid 1px #00aaee }`, and that
+orange-over-cyan pair is the most recognisable thing on their page. `.section-head`
+is it, with one compromise: #ff9a04 is 2.13:1 on white, below even the 3:1 floor
+large text gets, and a section heading is prose rather than a logo so it cannot
+borrow the wordmark's 1.4.3 exemption. Day walks the same hue down to 3.31:1;
+night needs no compromise and gets the brand value itself at 8.66:1.
+
+Only display headings take it — the problem title, `Practice`, `How It Works`,
+all at 30px or more. The small uppercase labels that head a working surface,
+`QUESTIONS` and `EXPLANATION` and `YOUR MASTERY`, keep `--ink-soft`: at 0.7rem
+this orange would owe 4.5:1 and fails it, and they label a surface rather than
+opening a section. `.section-head-center` swaps the full-width border for a
+short centred rule, because a border under a centred heading spans the column
+and stops reading as that heading's underline.
 
 **Oxblood cannot stay oxblood at night.** At 5.4:1 on a dark ground it has to
 lift to #e16758, which reads terracotta rather than deep and muted. That is a
@@ -587,6 +623,15 @@ harsh, fix it with spacing, border colour, or tone, never with a radius.
   voice.
 - **Disabled:** 70% opacity, used once an answer is locked.
 
+### Section Headings
+
+- **Style:** `.section-head` — `--action-head`, 0.3em of padding, and a 1px
+  `--good` rule beneath. Display sizes only (30px and up).
+- **Centred:** add `.section-head-center`, which replaces the border with a
+  7rem rule centred under the text.
+- **Not this:** small uppercase surface labels. Those stay `--ink-soft` at
+  0.72rem with 0.14em tracking, and take no rule.
+
 ### Data Table
 
 The signature component. Real `<table>` markup inside a `.table-scroll`
@@ -651,11 +696,14 @@ the page.
 - **Don't** give any control a shadow, and don't add ambient shadow to a card,
   panel or table. The hint popover is the only element in the system that
   carries one.
-- **Don't** let the interface drift toward a generic SaaS dashboard: no blue
-  accent, no rounded cards, no sidebar chrome, no soft elevation. This is the
-  one confirmed rejection.
-- **Don't** add a fifth colour role. If something needs emphasis and is not a
-  cost, an error, or a correct answer, use weight, rule, or ink fill.
+- **Don't** let the interface drift toward a generic SaaS dashboard: no
+  rounded cards, no sidebar chrome, no soft elevation. This is the one
+  confirmed rejection. It once also read "no blue accent"; see the Overview for
+  why that clause is retired — NACLO's brand carries a cyan, and `--good` is
+  it, so what the rejection bans is a hue chosen because products have one.
+- **Don't** add a fourth colour role. If something needs emphasis and is not an
+  action, a cost, an error, or a correct answer, use weight, rule, or ink
+  fill.
 - **Don't** reflow or wrap a data table to fit a narrow screen. Column
   alignment is often the problem itself, and breaking it destroys the puzzle.
 - **Don't** put an em dash in user-facing copy, and don't use a character the

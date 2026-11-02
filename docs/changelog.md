@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ### Added
 
+- `.section-head` and `--action-head`: NACLO's own section-heading pattern, an amber heading over a 1px cyan rule, taken from their `h1 { color: #ff9a04; border-bottom: solid 1px #00aaee }`. Applied to the three display headings (problem title, Practice, How It Works). Day walks the hue down to 3.31:1 because #ff9a04 is 2.13:1 on white, under the 3:1 floor large text gets and with no logo exemption to borrow; night uses the brand value at 8.66:1. `.section-head-center` swaps the full-width border for a short centred rule. `--action-head` is deliberately not exported to `@theme`, so no utility can apply it at body size
 - Next.js 16 scaffold (App Router, TypeScript, Tailwind, ESLint) with `app/` at the repo root
 - Coming-soon landing page at `app/page.tsx`, prerendered as static; site metadata set in `app/layout.tsx`
 - `vercel.json` pinning the framework preset to `nextjs`
@@ -148,6 +149,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ### Fixed
 
+- Four contrast regressions found by an audit of the palette rebase, all from solving ratios against `--paper` instead of against the darkest ground a token can land on. `--ink-faint`, `--good-deep` and `--action-deep` had been tuned to exactly 4.5:1 on the page and so fell to 4.30:1–4.31:1 on a hovered row, which composites `--tint` at 60%. All three re-solved on `--tint`: `--ink-faint` #767676 → #707070 and #7e7e7e → #8c8c8c, `--good-deep` #0c7eb1 → #0b78a9, `--action-deep` #ac6600 → #a36100. `--ink-soft` went #9a9a9a → #a6a6a6 at night to keep the soft/faint step visible
+- Dark `--ink-faint` was 4.06:1 on `--surface`, below AA, across five render sites. Covered by the same re-solve
+- The count on a selected concept chip was 4.38:1: `text-on-action/60` composites the label into the orange underneath it, so the opacity is part of the ratio. Now `/70`, at 5.79:1. It was 3.15:1 before the palette change, so this is the second half of a fix the rebase started
+- Five stale comments the rebase left behind: the `.ink-wipe` pair still quoted the old palette's 6.18:1/2.75:1, the `::selection` comment still called the system blue "a fifth colour role the palette does not have" on "warm charcoal" at "10:1 on both washes", the palette prologue still said oxblood was 5.4:1 at night, and DESIGN.md's don't-list still banned "no blue accent" as "the one confirmed rejection" while the Overview three screens above retired that exact clause. The don't-list also still forbade a *fifth* colour role when three now ship
 - Self-hosted fonts wired into `app/globals.css` (`body { font-family: "Noto Sans" }`, `.problem-body` etc. use Charis SIL) and used sitewide, closing the Geist-placeholder debt
 - `CLAUDE.md` restored to real content (`dd773f0`, prior to this build): goals, architecture tree, design style guide, UX guidelines, constraints, repo etiquette. No longer just `@AGENTS.md`
 - Level-3 AI hints were returning 502s: `max_tokens: 300` on `/api/help` was too low, the model spent the budget reasoning before it emitted text, and the empty-text guard threw. Raised to 1000 for hints and 1600 for explain. Found by testing the live route, not by reading the code
