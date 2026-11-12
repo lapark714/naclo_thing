@@ -21,6 +21,9 @@
 *.tsbuildinfo
 next-env.d.ts
 
+# playwright-cli scratch output (snapshots, screenshots, console logs)
+.playwright-cli/
+
 # naclo source pdfs
 /pdfs
 .env*
@@ -36,3 +39,16 @@ next-env.d.ts
 # NOTE: content/parked is deliberately NOT ignored. It is the review queue for
 # problems the pipeline could not vouch for, and it is meant to be read in a
 # diff. lib/content.ts never loads it, so nothing in it can reach a student.
+
+# Agent and design-tooling scratch. Untracked rather than deleted: these keep
+# working locally, they just are not part of the published repository.
+#
+# AGENTS.md is generated and re-added by `next dev`
+# (node_modules/next/dist/server/lib/generate-agent-files.js), so it has to be
+# ignored rather than removed — deleting it only brings it back untracked.
+/CLAUDE.md
+/AGENTS.md
+/.claude/
+/.impeccable/
+/.superpowers/
+/.codex/
