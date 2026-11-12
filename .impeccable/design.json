@@ -1,284 +1,434 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-04T15:37:22Z",
-  "title": "Design System: gloss.",
+  "generatedAt": "2026-11-12T07:34:09Z",
+  "title": "Design System: morpheme",
   "extensions": {
     "colorMeta": {
-      "ink": {
-        "role": "primary",
-        "displayName": "Ink",
-        "canonical": "#16181d",
-        "tonalRamp": [
-          "#0a0b0e",
-          "#16181d",
-          "#2b2f37",
-          "#434855",
-          "#5a6070",
-          "#8b8f9c",
-          "#b6b9c2",
-          "#e3e4e8"
-        ]
-      },
-      "oxblood": {
-        "role": "secondary",
-        "displayName": "Oxblood",
-        "canonical": "#a4342a",
-        "tonalRamp": [
-          "#3a1210",
-          "#571b17",
-          "#75241e",
-          "#8c2c24",
-          "#a4342a",
-          "#c25a50",
-          "#dc9a94",
-          "#f8efed"
-        ]
-      },
-      "verdigris": {
-        "role": "tertiary",
-        "displayName": "Verdigris",
-        "canonical": "#2f6b4f",
-        "tonalRamp": [
-          "#0f2418",
-          "#173726",
-          "#204b34",
-          "#285a42",
-          "#2f6b4f",
-          "#4f8d70",
-          "#8fbaa4",
-          "#ebf2ee"
-        ]
-      },
       "paper": {
         "role": "neutral",
-        "displayName": "Paper",
-        "canonical": "#fbfaf7",
+        "displayName": "Navy Ground",
+        "canonical": "oklch(21.8% 0.036 251.3)",
         "tonalRamp": [
-          "#26241f",
-          "#3d3a33",
-          "#5b574d",
-          "#847f72",
-          "#b0aca1",
-          "#d5d1c8",
-          "#eeebe4",
-          "#fbfaf7"
+          "#020c19",
+          "#182636",
+          "#344355",
+          "#536375",
+          "#738497",
+          "#95a7bb",
+          "#b9cbe0",
+          "#def1ff"
         ]
       },
       "surface": {
         "role": "neutral",
-        "displayName": "Surface White",
-        "canonical": "#ffffff",
+        "displayName": "Lifted Surface",
+        "canonical": "oklch(26.3% 0.041 250.9)",
         "tonalRamp": [
-          "#1a1a1a",
-          "#333333",
-          "#4d4d4d",
-          "#737373",
-          "#a6a6a6",
-          "#d9d9d9",
-          "#f2f2f2",
-          "#ffffff"
+          "#010c1c",
+          "#152638",
+          "#324457",
+          "#506378",
+          "#70859b",
+          "#93a7be",
+          "#b6cce4",
+          "#dbf1ff"
+        ]
+      },
+      "tint": {
+        "role": "neutral",
+        "displayName": "Tonal Block",
+        "canonical": "oklch(31.7% 0.047 248.4)",
+        "tonalRamp": [
+          "#000c1e",
+          "#11273b",
+          "#2e445a",
+          "#4c647b",
+          "#6d859e",
+          "#8fa8c2",
+          "#b2cce7",
+          "#d7f2ff"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(91.9% 0.012 248.0)",
+        "tonalRamp": [
+          "#070c10",
+          "#21262b",
+          "#3d4348",
+          "#5c6268",
+          "#7d8389",
+          "#9fa6ac",
+          "#c3cad1",
+          "#e8eff6"
         ]
       },
       "ink-soft": {
         "role": "neutral",
         "displayName": "Ink Soft",
-        "canonical": "#5a6070",
+        "canonical": "oklch(76.4% 0.012 252.1)",
         "tonalRamp": [
-          "#14161a",
-          "#22252c",
-          "#333842",
-          "#464b58",
-          "#5a6070",
-          "#848a99",
-          "#adb2be",
-          "#dcdee4"
+          "#080c10",
+          "#21262b",
+          "#3d4348",
+          "#5c6268",
+          "#7d838a",
+          "#a0a6ad",
+          "#c4cad1",
+          "#e9eff7"
         ]
       },
       "ink-faint": {
         "role": "neutral",
         "displayName": "Ink Faint",
-        "canonical": "#8b8f9c",
+        "canonical": "oklch(68.4% 0.012 252.1)",
         "tonalRamp": [
-          "#1c1e23",
-          "#2f323a",
-          "#454953",
-          "#5f636e",
-          "#7a7e8b",
-          "#8b8f9c",
-          "#b9bcc5",
-          "#e6e7eb"
+          "#080c10",
+          "#21262b",
+          "#3d4349",
+          "#5c6268",
+          "#7d838a",
+          "#a0a6ad",
+          "#c4cad1",
+          "#e9eff7"
         ]
       },
       "rule": {
         "role": "neutral",
         "displayName": "Rule",
-        "canonical": "#dfdcd4",
+        "canonical": "oklch(33.8% 0.042 251.7)",
         "tonalRamp": [
-          "#2b2924",
-          "#443f37",
-          "#5f5a4f",
-          "#807a6d",
-          "#a8a294",
-          "#c9c5ba",
-          "#dfdcd4",
-          "#f4f2ed"
+          "#000b1c",
+          "#152639",
+          "#314458",
+          "#506379",
+          "#70849c",
+          "#92a7bf",
+          "#b6cce5",
+          "#daf1ff"
         ]
       },
       "rule-strong": {
         "role": "neutral",
         "displayName": "Rule Strong",
-        "canonical": "#c9c5ba",
+        "canonical": "oklch(63.0% 0.015 251.6)",
         "tonalRamp": [
-          "#26241f",
-          "#3b382f",
-          "#544f43",
-          "#726c5c",
-          "#9a9384",
-          "#c9c5ba",
-          "#e0ddd5",
-          "#f5f4f0"
-        ]
-      },
-      "tint": {
-        "role": "neutral",
-        "displayName": "Tint",
-        "canonical": "#f1eee6",
-        "tonalRamp": [
-          "#2a2820",
-          "#413e33",
-          "#5d5949",
-          "#807b67",
-          "#aaa593",
-          "#d3cfc1",
-          "#f1eee6",
-          "#faf9f5"
+          "#070c11",
+          "#20262c",
+          "#3c434a",
+          "#5b6269",
+          "#7c838b",
+          "#9fa6ae",
+          "#c2cad3",
+          "#e8eff8"
         ]
       },
       "action": {
         "role": "primary",
-        "displayName": "Action Orange",
-        "canonical": "oklch(0.7 0.19 45)",
+        "displayName": "NACLO Orange",
+        "canonical": "oklch(77.4% 0.173 64.9)",
         "tonalRamp": [
-          "oklch(0.18 0.105 45)",
-          "oklch(0.30 0.152 45)",
-          "oklch(0.42 0.180 45)",
-          "oklch(0.56 0.190 45)",
-          "oklch(0.70 0.190 45)",
-          "oklch(0.80 0.152 45)",
-          "oklch(0.88 0.086 45)",
-          "oklch(0.96 0.030 45)"
-        ],
-        "purpose": "Action and brand: the primary button, a selected chip, a link, the -eme of the wordmark."
+          "#320000",
+          "#560000",
+          "#7b1c00",
+          "#a04200",
+          "#c66500",
+          "#ed8900",
+          "#ffae32",
+          "#ffd461"
+        ]
       },
       "action-hover": {
         "role": "primary",
-        "displayName": "Action Orange Hover",
-        "canonical": "oklch(0.63 0.18 45)",
+        "displayName": "Orange Hover",
+        "canonical": "oklch(81.6% 0.154 72.5)",
         "tonalRamp": [
-          "oklch(0.18 0.099 45)",
-          "oklch(0.30 0.144 45)",
-          "oklch(0.42 0.171 45)",
-          "oklch(0.56 0.180 45)",
-          "oklch(0.70 0.180 45)",
-          "oklch(0.80 0.144 45)",
-          "oklch(0.88 0.081 45)",
-          "oklch(0.96 0.029 45)"
-        ],
-        "purpose": "Hover and active state of anything filled with Action."
+          "#2b0000",
+          "#4d0400",
+          "#702b00",
+          "#944d00",
+          "#b96f00",
+          "#df9301",
+          "#ffb745",
+          "#ffdd6f"
+        ]
       },
       "action-deep": {
         "role": "primary",
-        "displayName": "Action Orange Deep",
-        "canonical": "oklch(0.47 0.14 45)",
+        "displayName": "Orange, comfortable",
+        "canonical": "oklch(81.6% 0.154 72.5)",
         "tonalRamp": [
-          "oklch(0.18 0.077 45)",
-          "oklch(0.30 0.112 45)",
-          "oklch(0.42 0.133 45)",
-          "oklch(0.56 0.140 45)",
-          "oklch(0.70 0.140 45)",
-          "oklch(0.80 0.112 45)",
-          "oklch(0.88 0.063 45)",
-          "oklch(0.96 0.022 45)"
-        ],
-        "purpose": "Action at body size, where the vivid step does not clear contrast on paper. 6.93:1."
+          "#2b0000",
+          "#4d0400",
+          "#702b00",
+          "#944d00",
+          "#b96f00",
+          "#df9301",
+          "#ffb745",
+          "#ffdd6f"
+        ]
+      },
+      "action-head": {
+        "role": "primary",
+        "displayName": "Heading Orange",
+        "canonical": "oklch(77.4% 0.173 64.9)",
+        "tonalRamp": [
+          "#320000",
+          "#560000",
+          "#7b1c00",
+          "#a04200",
+          "#c66500",
+          "#ed8900",
+          "#ffae32",
+          "#ffd461"
+        ]
       },
       "action-tint": {
         "role": "primary",
-        "displayName": "Action Orange Tint",
-        "canonical": "oklch(0.96 0.03 45)",
+        "displayName": "Orange Wash",
+        "canonical": "oklch(29.7% 0.050 80.3)",
         "tonalRamp": [
-          "oklch(0.18 0.017 45)",
-          "oklch(0.30 0.024 45)",
-          "oklch(0.42 0.028 45)",
-          "oklch(0.56 0.030 45)",
-          "oklch(0.70 0.030 45)",
-          "oklch(0.80 0.024 45)",
-          "oklch(0.88 0.013 45)",
-          "oklch(0.96 0.005 45)"
-        ],
-        "purpose": "The wash behind a selected or active region."
+          "#160800",
+          "#322204",
+          "#503f22",
+          "#705e40",
+          "#927f60",
+          "#b6a282",
+          "#dac6a5",
+          "#ffecc9"
+        ]
+      },
+      "cyan": {
+        "role": "secondary",
+        "displayName": "NACLO Cyan",
+        "canonical": "oklch(69.8% 0.151 236.1)",
+        "tonalRamp": [
+          "#000041",
+          "#002662",
+          "#004886",
+          "#006aaa",
+          "#008dcf",
+          "#1ab2f6",
+          "#53d7ff",
+          "#7dfeff"
+        ]
+      },
+      "cyan-hover": {
+        "role": "secondary",
+        "displayName": "Cyan Hover",
+        "canonical": "oklch(78.9% 0.127 221.8)",
+        "tonalRamp": [
+          "#000d30",
+          "#002d50",
+          "#004e71",
+          "#006f94",
+          "#0092b8",
+          "#22b6dd",
+          "#57dbff",
+          "#81ffff"
+        ]
+      },
+      "cyan-deep": {
+        "role": "secondary",
+        "displayName": "Cyan, comfortable",
+        "canonical": "oklch(78.9% 0.127 221.8)",
+        "tonalRamp": [
+          "#000d30",
+          "#002d50",
+          "#004e71",
+          "#006f94",
+          "#0092b8",
+          "#22b6dd",
+          "#57dbff",
+          "#81ffff"
+        ]
+      },
+      "cyan-tint": {
+        "role": "secondary",
+        "displayName": "Cyan Wash",
+        "canonical": "oklch(27.8% 0.049 235.1)",
+        "tonalRamp": [
+          "#000d1c",
+          "#072839",
+          "#264658",
+          "#456679",
+          "#66889c",
+          "#88abc0",
+          "#abcfe5",
+          "#d0f5ff"
+        ]
+      },
+      "oxblood": {
+        "role": "danger",
+        "displayName": "Terracotta",
+        "canonical": "oklch(70.4% 0.156 29.1)",
+        "tonalRamp": [
+          "#350000",
+          "#5b0000",
+          "#810000",
+          "#a83227",
+          "#cf5648",
+          "#f77a6a",
+          "#ff9f8d",
+          "#ffc4b1"
+        ]
+      },
+      "oxblood-tint": {
+        "role": "danger",
+        "displayName": "Error Wash",
+        "canonical": "oklch(28.4% 0.036 27.7)",
+        "tonalRamp": [
+          "#180504",
+          "#351e1b",
+          "#543b37",
+          "#755a56",
+          "#977b76",
+          "#bb9d99",
+          "#e0c1bc",
+          "#ffe6e1"
+        ]
+      },
+      "on-action": {
+        "role": "neutral",
+        "displayName": "On Brand Fill",
+        "canonical": "oklch(0.0% 0.000 0.0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "on-good": {
+        "role": "neutral",
+        "displayName": "On Brand Fill",
+        "canonical": "oklch(0.0% 0.000 0.0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "select": {
+        "role": "secondary",
+        "displayName": "Selection Wash",
+        "canonical": "oklch(39.0% 0.073 233.9)",
+        "tonalRamp": [
+          "#000d24",
+          "#002943",
+          "#0c4863",
+          "#326884",
+          "#548aa8",
+          "#76adcc",
+          "#9ad2f2",
+          "#bff8ff"
+        ]
+      },
+      "figure-mat": {
+        "role": "neutral",
+        "displayName": "Figure Mat",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
       }
     },
     "typographyMeta": {
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "The logotype and nothing else. morph in cyan, eme in orange; exempt from contrast floors under WCAG 1.4.3."
+      },
       "display": {
         "displayName": "Display",
-        "purpose": "The wordmark on the landing page only."
+        "purpose": "The landing page's one headline."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Problem titles."
-      },
-      "title": {
-        "displayName": "Title",
-        "purpose": "Card and section headings inside a page."
-      },
-      "body": {
-        "displayName": "Body",
-        "purpose": "Prose, capped at 54-68ch measure."
-      },
-      "data": {
-        "displayName": "Data",
-        "purpose": "Every span of language data, table cell and answer input. Charis SIL backed by the Noto script stack."
-      },
-      "label": {
-        "displayName": "Label",
-        "purpose": "Uppercase eyebrows, table headers and all button text."
-      },
-      "small": {
-        "displayName": "Small",
-        "purpose": "Supporting prose beside a primary thing: the guarantee under a CTA, a definition list's description, the count next to a button."
-      },
-      "fine": {
-        "displayName": "Fine",
-        "purpose": "Metadata and fine print. Footers, byline detail, counts, anything a reader should be able to skip."
-      },
-      "wordmark-sm": {
-        "displayName": "Wordmark (narrow)",
-        "purpose": "The logotype below the sm breakpoint. 3.5rem is about 56px, which on a 390px viewport swallows the sentence underneath it."
+        "purpose": "Section headings. Takes .section-head: action-head over a 1px cyan rule, 30px and up only."
       },
       "subhead": {
         "displayName": "Subhead",
-        "purpose": "The heading of a column or panel carrying across a wide row. Title reads as body text at that width; Headline reads as a page title."
+        "purpose": "Item titles inside a section."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Small headings inside a component."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running prose. Verdana, a system face, downloaded for nobody."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Language data only, never interface text. Charis SIL plus the self-hosted Noto script stack; carries IPA and non-Latin scripts the UI face cannot."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Captions and verdict lines."
+      },
+      "fine": {
+        "displayName": "Fine",
+        "purpose": "Metadata that should recede."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase surface labels: QUESTIONS, EXPLANATION, YOUR MASTERY. These keep ink-soft and never take the heading orange."
       }
     },
     "shadows": [
       {
-        "name": "popover-lift",
-        "value": "0 8px 28px -12px rgba(22,24,29,0.35)",
-        "purpose": "The hint popover only. It genuinely floats over the problem and must read as detached."
+        "name": "lift-popover",
+        "value": "0 8px 28px -12px rgb(0 0 0 / 0.72)",
+        "purpose": "The hint popover, the only element in the system that floats. Its 1px ink border does most of the separating; the shadow only seats it."
+      },
+      {
+        "name": "lift-plate",
+        "value": "0 14px 30px -16px rgb(0 0 0 / 0.66)",
+        "purpose": "The how-it-works screenshots on hover only, never at rest. The rise is what earns the shadow."
       }
     ],
     "motion": [
       {
-        "name": "state-transition",
-        "value": "transition-colors, default duration",
-        "purpose": "Colour-only transitions on buttons and chips as they invert to ink fill."
+        "name": "ink-wipe-in",
+        "value": "clip-path 300ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The primary button's cyan fill sweeping in from the left. Arriving is slower than leaving."
+      },
+      {
+        "name": "ink-wipe-out",
+        "value": "clip-path 170ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The same fill retreating on hover-off."
+      },
+      {
+        "name": "plate-rise",
+        "value": "transform 220ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "A screenshot plate lifting 6px on hover. Reduced motion holds it still rather than jumping it."
       }
     ],
     "breakpoints": [
       {
         "name": "sm",
         "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
       }
     ]
   },
@@ -287,126 +437,146 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The single call to action on a page. Ink fill that inverts on hover; no shadow.",
-      "html": "<a class=\"ds-btn-primary\" href=\"#\">Start practicing</a>",
-      "css": ".ds-btn-primary{display:inline-flex;align-items:center;background:#16181d;color:#fbfaf7;border:1px solid #16181d;padding:16px 32px;font-family:'Noto Sans',ui-sans-serif,system-ui,sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:0;transition:background .15s,color .15s}.ds-btn-primary:hover{background:#fbfaf7;color:#16181d}.ds-btn-primary:focus-visible{outline:2px solid #16181d;outline-offset:2px}"
+      "description": "The page's single call to action. Orange fill, black label, cyan sweeping in on hover.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><span class=\"ds-btn-primary-fill\"></span><span class=\"ds-btn-primary-label\">Start practicing</span></a>",
+      "css": ".ds-btn-primary{position:relative;display:inline-flex;align-items:center;background:var(--action);border:1px solid var(--action);color:var(--on-action);padding:16px 32px;font-family:\"Noto Sans\",sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:0}.ds-btn-primary-fill{position:absolute;inset:-1px;background:var(--good);clip-path:inset(0 100% 0 0);transition:clip-path 170ms cubic-bezier(.16,1,.3,1)}.ds-btn-primary:hover .ds-btn-primary-fill,.ds-btn-primary:focus-visible .ds-btn-primary-fill{clip-path:inset(0 0 0 0);transition-duration:300ms}.ds-btn-primary-label{position:relative}"
     },
     {
       "name": "Secondary Button",
       "kind": "button",
       "refersTo": "button-secondary",
-      "description": "Every in-page action: Check, Show explanation. Inverts to ink fill on hover.",
+      "description": "Check, Show explanation, and every in-page action. Inverts to an ink fill on hover.",
       "html": "<button class=\"ds-btn-secondary\">Check</button>",
-      "css": ".ds-btn-secondary{background:#fff;color:#16181d;border:1px solid #16181d;border-radius:0;padding:6px 12px;font-family:'Noto Sans',ui-sans-serif,system-ui,sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.025em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s}.ds-btn-secondary:hover{background:#16181d;color:#fbfaf7}.ds-btn-secondary:focus-visible{outline:2px solid #16181d;outline-offset:2px}.ds-btn-secondary:disabled{opacity:.35;cursor:not-allowed}"
+      "css": ".ds-btn-secondary{background:var(--surface);color:var(--ink);border:1px solid var(--ink);padding:6px 12px;font-family:Verdana,sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:0;transition:background .15s,color .15s}.ds-btn-secondary:hover{background:var(--ink);color:var(--paper)}.ds-btn-secondary:focus-visible{outline:2px solid var(--ink);outline-offset:2px}.ds-btn-secondary:disabled{opacity:.35;cursor:not-allowed}"
     },
     {
       "name": "Hint Trigger",
       "kind": "button",
-      "refersTo": "button-secondary",
-      "description": "Anchored beside each part of a problem. Inverts while open and appends XP spent in Oxblood.",
-      "html": "<button class=\"ds-hint\">Hint <span class=\"ds-hint-xp\">−1</span></button>",
-      "css": ".ds-hint{display:inline-flex;align-items:center;gap:6px;background:#fff;color:#5a6070;border:1px solid #c9c5ba;border-radius:0;padding:4px 8px;font-family:'Noto Sans',ui-sans-serif,system-ui,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.025em;text-transform:uppercase;cursor:pointer;transition:border-color .15s,color .15s}.ds-hint:hover{border-color:#16181d;color:#16181d}.ds-hint:focus-visible{outline:2px solid #16181d;outline-offset:2px}.ds-hint-xp{color:#a4342a}"
+      "refersTo": "hint-trigger",
+      "description": "Opens the per-part help popover. Carries the running cost in terracotta until it is open.",
+      "html": "<button class=\"ds-hint\">Hint <span class=\"ds-hint-cost\">−2</span></button>",
+      "css": ".ds-hint{background:var(--surface);color:var(--ink-soft);border:1px solid var(--rule-strong);padding:6px 12px;font-family:Verdana,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-radius:0}.ds-hint:hover{border-color:var(--ink);color:var(--ink)}.ds-hint-cost{color:var(--mark)}"
     },
     {
       "name": "Filter Chip",
       "kind": "chip",
       "refersTo": "chip",
-      "description": "Concept and difficulty filters, which stack. Selected state is ink fill.",
-      "html": "<button class=\"ds-chip\" aria-pressed=\"false\">morphology <span class=\"ds-chip-count\">31</span></button><button class=\"ds-chip ds-chip-on\" aria-pressed=\"true\">syntax <span class=\"ds-chip-count\">17</span></button>",
-      "css": ".ds-chip{background:#fff;color:#16181d;border:1px solid #c9c5ba;border-radius:0;padding:4px 10px;margin-right:6px;font-family:'Noto Sans',ui-sans-serif,system-ui,sans-serif;font-size:.82rem;cursor:pointer;transition:background .15s,border-color .15s}.ds-chip:hover{background:#f1eee6}.ds-chip-count{margin-left:6px;font-variant-numeric:tabular-nums;color:#8b8f9c}.ds-chip-on{background:#16181d;border-color:#16181d;color:#fbfaf7}.ds-chip-on .ds-chip-count{color:rgba(251,250,247,.6)}.ds-chip:focus-visible{outline:2px solid #16181d;outline-offset:2px}"
+      "description": "Concept filters on the practice page; they stack. Selected is an orange fill with a black label.",
+      "html": "<span class=\"ds-chip\">morphology <b class=\"ds-chip-n\">26</b></span><span class=\"ds-chip ds-chip-on\">syntax <b class=\"ds-chip-n-on\">11</b></span>",
+      "css": ".ds-chip{display:inline-block;background:var(--surface);color:var(--ink);border:1px solid var(--rule-strong);padding:4px 10px;margin-right:6px;font-family:Verdana,sans-serif;font-size:.78rem;border-radius:0}.ds-chip:hover{background:var(--tint)}.ds-chip-on{background:var(--action);border-color:var(--action);color:var(--on-action)}.ds-chip-n{color:var(--ink-faint);font-weight:400;font-variant-numeric:tabular-nums}.ds-chip-n-on{color:var(--on-action);opacity:.7;font-weight:400;font-variant-numeric:tabular-nums}"
     },
     {
       "name": "Answer Input",
       "kind": "input",
       "refersTo": "input-answer",
-      "description": "Set in the data font because the student is typing language data.",
-      "html": "<input class=\"ds-input\" type=\"text\" value=\"marlungka\" />",
-      "css": ".ds-input{width:100%;background:#fff;color:#16181d;border:1px solid #c9c5ba;border-radius:0;padding:6px 8px;font-family:'Charis SIL',Charter,Georgia,serif;font-size:.95rem}.ds-input:focus-visible{outline:2px solid #16181d;outline-offset:2px}.ds-input:disabled{opacity:.7}"
+      "description": "A free-text blank graded in the browser. It carries no Check button: Enter grades it, and a press enter label appears once something is typed.",
+      "html": "<span class=\"ds-answer\"><input class=\"ds-answer-in\" value=\"Monday\"><span class=\"ds-answer-hint\">press enter</span></span>",
+      "css": ".ds-answer{display:inline-flex;align-items:center;gap:9px}.ds-answer-in{background:var(--surface);color:var(--ink);border:1px solid var(--rule-strong);padding:6px 8px;font-family:\"Charis SIL\",Georgia,serif;font-size:.95rem;border-radius:0}.ds-answer-in:focus-visible{outline:2px solid var(--ink);outline-offset:2px}.ds-answer-hint{color:var(--ink-faint);font-family:Verdana,sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}"
     },
     {
       "name": "Data Table",
       "kind": "custom",
       "refersTo": "table-header",
-      "description": "The signature component. Keeps its natural width and scrolls inside its container; cells never wrap, because column alignment is often the puzzle.",
-      "html": "<div class=\"ds-table-scroll\"><table class=\"ds-table\"><thead><tr><th>Warlpiri</th><th>English</th></tr></thead><tbody><tr><td><span class=\"ds-data\">Maliki ka marlungka karrimi.</span></td><td>The dog is standing on the kangaroo.</td></tr><tr><td><span class=\"ds-data\">Karnta ka kuurlurla ngunami.</span></td><td>The woman is lying in the school.</td></tr></tbody></table></div>",
-      "css": ".ds-table-scroll{overflow-x:auto;border:1px solid #dfdcd4;background:#fff}.ds-table{border-collapse:collapse;width:max-content;min-width:100%}.ds-table th{background:#f1eee6;color:#5a6070;font-family:'Noto Sans',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:8px 14px}.ds-table td{padding:7px 14px;font-size:.95rem;white-space:nowrap;border-bottom:1px solid #dfdcd4;vertical-align:top}.ds-data{font-family:'Charis SIL',Charter,Georgia,serif}"
+      "description": "The signature component. Real table markup inside a horizontally scrolling container, so the page body never scrolls sideways.",
+      "html": "<div class=\"ds-table-scroll\"><table class=\"ds-table\"><thead><tr><th>Freida</th><th>Satra</th></tr></thead><tbody><tr><td>2 · tu</td><td>3 · dri</td></tr><tr><td>9 · neigi</td><td>10 · tin</td></tr></tbody></table></div>",
+      "css": ".ds-table-scroll{overflow-x:auto;border:1px solid var(--rule);background:var(--surface)}.ds-table{border-collapse:collapse;width:max-content;min-width:100%;font-family:\"Charis SIL\",Georgia,serif;font-size:.95rem}.ds-table th{background:var(--tint);color:var(--ink-soft);text-align:left;padding:8px 14px;font-family:Verdana,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}.ds-table td{border-top:1px solid var(--rule);color:var(--ink);padding:8px 14px;white-space:nowrap}"
     },
     {
       "name": "Hint Popover",
       "kind": "custom",
-      "refersTo": "button-secondary",
-      "description": "Anchored to a part, not the page. The only element in the system that carries a blurred shadow.",
-      "html": "<div class=\"ds-popover\"><p class=\"ds-popover-eyebrow\">Help with B1</p><p class=\"ds-popover-tier\">1. Where to look</p><p class=\"ds-popover-body\">Compare the noun on its own with the same noun when it means ‘on/in it’.</p><button class=\"ds-popover-reveal\">Reveal · −2 XP</button></div>",
-      "css": ".ds-popover{width:min(23rem,calc(100vw - 2.5rem));background:#fff;border:1px solid #16181d;border-radius:0;padding:16px;box-shadow:0 8px 28px -12px rgba(22,24,29,.35);font-family:'Noto Sans',ui-sans-serif,system-ui,sans-serif}.ds-popover-eyebrow{margin:0 0 10px;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#5a6070}.ds-popover-tier{margin:0;font-size:.8rem;font-weight:600;color:#16181d}.ds-popover-body{margin:6px 0 12px;font-size:.85rem;line-height:1.6;color:#16181d}.ds-popover-reveal{background:none;border:none;padding:0;color:#a4342a;font-size:.75rem;text-decoration:underline;text-underline-offset:2px;cursor:pointer}.ds-popover-reveal:hover{text-decoration:none}"
+      "refersTo": "popover-hint",
+      "description": "The only element in the system that floats. Its ink border does most of the separating; the shadow seats it.",
+      "html": "<div class=\"ds-popover\"><p class=\"ds-popover-tier\">Hint 1 · 1 point</p><p class=\"ds-popover-body\">Look at which words change when the day changes.</p></div>",
+      "css": ".ds-popover{background:var(--surface);border:1px solid var(--ink);box-shadow:0 8px 28px -12px rgb(0 0 0 / .72);padding:16px;max-width:23rem;border-radius:0}.ds-popover-tier{margin:0 0 6px;color:var(--mark);font-family:Verdana,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}.ds-popover-body{margin:0;color:var(--ink);font-family:Verdana,sans-serif;font-size:.85rem;line-height:1.55}"
+    },
+    {
+      "name": "Section Heading",
+      "kind": "custom",
+      "refersTo": "section-head",
+      "description": "NACLO's own pattern, brought over whole: their amber over their cyan. Display sizes only, 30px and up.",
+      "html": "<h2 class=\"ds-section-head\">Practice</h2>",
+      "css": ".ds-section-head{color:var(--action-head);border-bottom:1px solid var(--good);padding-bottom:.3em;margin:0;font-family:Poppins,Verdana,sans-serif;font-size:2.25rem;font-weight:600;line-height:1.25;letter-spacing:-.015em}"
+    },
+    {
+      "name": "Problem Figure",
+      "kind": "custom",
+      "refersTo": "figure-mat",
+      "description": "A scan of a printed booklet page on its own white mat. Never filter: invert() one — one problem's answer is which robe is white and which is black.",
+      "html": "<figure class=\"ds-figure\"><img class=\"ds-figure-img\" alt=\"A facsimile of a printed booklet page\" src=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='90'%3E%3Crect width='200' height='90' fill='%23fff'/%3E%3Ctext x='12' y='34' font-family='Georgia' font-size='13'%3Etu dri fo%3C/text%3E%3Ctext x='12' y='58' font-family='Georgia' font-size='13'%3Eneigi tin erfu%3C/text%3E%3C/svg%3E\"></figure>",
+      "css": ".ds-figure{margin:0}.ds-figure-img{display:block;padding:6px;background:var(--figure-mat,#fff);border:1px solid var(--rule-strong);max-width:100%;height:auto}"
     }
   ],
   "narrative": {
-    "northStar": "The Reference Grammar",
-    "overview": "The page is a scholarly linguistics volume that happens to accept typing. Warm paper stock, a serif display face used sparingly at the top of a page, and data set with the care a good grammar gives its example sentences. The subject is a Warlpiri locative suffix or an Armenian transliteration, and the design's job is to present that subject accurately and then get out of the way.\n\nDensity is closer to a printed page than to an application. Rules are hairlines, corners are square, and the only fill in the palette is the near-black used to mark a control as active. Colour is nearly absent: a page of eight problems is paper, ink, and one line of oxblood where something costs XP. That restraint is what makes the data legible, and the data is the whole product.\n\nThe single confirmed rejection is the generic SaaS dashboard: soft shadows, a blue accent, rounded cards, and sidebar chrome. Nothing here should look like a product template.",
+    "northStar": "The Reference Grammar, read on a screen",
+    "overview": "A scholarly linguistics volume that happens to accept typing, moved off paper. The subject is a Warlpiri locative suffix or an Armenian transliteration, and the design's job is to present that subject accurately and then get out of the way. Density is closer to a printed page than to an application: rules are hairlines, corners are square, and chrome yields to legibility.\n\nWhat chromatic colour there is belongs to NACLO. The site is unofficial and says so, but it is a study tool for one competition, and taking that competition's own two hues rather than inventing a third is the honest move. Both were sampled from naclo.org's stylesheet and logo artwork rather than interpreted from them.\n\nThe ground is not theirs. #0d1b2a replaced a flat white that read as a printed page rather than as something you work in, and it is the one part of the palette borrowed from elsewhere. It pays for itself twice: both brand hues clear 4.5:1 against every ground here and so set type at full strength, which they could not do on white, and --surface has somewhere above the ground to go again, so a table reads as an object rather than as a hairline.",
     "keyCharacteristics": [
-      "Warm paper ground (#fbfaf7), never pure white except on raised surfaces",
+      "A dark navy ground (#0d1b2a) carrying NACLO's own orange and cyan; the hues are theirs, the ground is not",
       "Square corners everywhere; the radius scale exists in tokens and is unused",
-      "Hairline rules and tonal blocks carry structure instead of shadows",
-      "Serif display for identity, humanist sans for interface, a dedicated linguistics face for language data",
-      "Four colour roles, each with a job: action, subject, cost/error, correct"
+      "Hairline rules and tonal blocks carry structure instead of shadows; exactly one element floats",
+      "Geometric sans for identity, a system sans for interface, and a dedicated linguistics face for language data",
+      "Three colour roles, each with a job: action, correct, and cost/error",
+      "A free-text blank grades on Enter and carries no button — three in five questions on the site"
     ],
     "rules": [
       {
         "name": "The Every Colour Has A Job Rule",
-        "body": "Three colour roles exist and nothing else is chromatic. Oxblood means cost or error. Verdigris means correct. Action (`--action`, never `--accent`: the shadcn scaffold owns that name and the production minifier will silently take its value) means action or brand: the primary button, a selected chip, a link, the `-eme` of the wordmark. If something needs to stand out and is none of those, it stands out through weight, rule, or ink fill. Decoration is not a role, and there are no gradients, tinted cards, or coloured surfaces anywhere.",
-        "section": "colors"
+        "section": "colors",
+        "body": "Three chromatic roles and nothing else. Action means action or brand, cyan means correct, oxblood means cost or error. Anything else that needs to stand out does it through weight, rule, or ink fill. A reading-position indicator and a mastery bar are deliberately achromatic: position and progress are neither action nor correctness."
       },
       {
-        "name": "The White Means Above Rule",
-        "body": "The page is paper; white is a raised surface. Anything painted #ffffff is claiming to sit above the page, so use it only for tables, inputs, popovers, and unselected controls.",
-        "section": "colors"
+        "name": "The Worst Ground Rule",
+        "section": "colors",
+        "body": "A ratio is solved against whichever ground gives a token the least contrast. On a dark page that is the lightest ground, not the darkest — the ladder runs paper #0d1b2a, surface #152638, tint #1e3449, plus the composites a hovered row makes of tint, and every text token is solved on tint. Opacity counts as a ground: a slash modifier composites the label into the fill beneath it. There is a ceiling too — pure white is 12.78:1 against tint, so a target above that is unreachable rather than hard."
+      },
+      {
+        "name": "The Lifted Surface Rule",
+        "section": "elevation",
+        "body": "A raised surface is one tonal step off the ground, and --surface is that step: tables, inputs, popovers, unselected controls. The rule lost its instrument entirely under a white ground, where nothing sits above #ffffff and --surface had to equal --paper. It is whole again. Never write a literal colour for it."
+      },
+      {
+        "name": "The On-Brand-Fill Rule",
+        "section": "colors",
+        "body": "Anything filled with --action carries --on-action and anything filled with --good carries --on-good, never --ink. Both are #000000: 9.88:1 on the orange, 7.98:1 on the cyan. Both brand hues are light, so both take a black label, and --ink is off-white and would fail on either."
+      },
+      {
+        "name": "The Figure Mat Rule",
+        "section": "elevation",
+        "body": "Never filter: invert() a problem figure. These are facsimiles of printed booklet pages and at least one problem turns on which monk's robe is white and which is black, so inverting does not dim the figure, it changes the answer. A scan is a white rectangle and on this ground it reads as a hole burned in the page, so a figure is tipped onto its own #ffffff mat with a rule-strong rule, which says the brightness is deliberate. The one sanctioned literal white in the system."
+      },
+      {
+        "name": "The Section Heading Rule",
+        "section": "typography",
+        "body": "NACLO's stylesheet heads every section with an orange h1 over a 1px cyan rule, and .section-head is that. On this ground it is exact: --action-head is #ff9a04 itself, where on white it had to be walked down to clear the large-text floor. Display headings only, 30px and up. The small uppercase labels that head a working surface keep --ink-soft."
       },
       {
         "name": "The Third Voice Rule",
-        "body": "Language data is set in the data stack, never the UI sans. This is the established convention rather than a hard invariant; the enforced part is narrower and absolute: every character in a published record must be covered by a self-hosted font, and the build fails otherwise.",
-        "section": "typography"
-      },
-      {
-        "name": "The Uppercase Label Rule",
-        "body": "Anything functional and small is uppercase at 0.72rem with wide tracking: eyebrows, table headers, buttons. Sentence case is for prose.",
-        "section": "typography"
+        "section": "typography",
+        "body": "Language data is set in the data stack, never the UI face. Charis SIL is a linguistics face carrying IPA and extending into Armenian, Devanagari, Georgian, Cherokee, Ethiopic, N'Ko and katakana. A Warlpiri word and the sentence describing it should not look like the same kind of thing."
       },
       {
         "name": "The Sideways Scroll Rule",
-        "body": "The page body never scrolls horizontally. A wide table scrolls inside .table-scroll and nothing else moves. Every page wrapper carries width:100% and min-width:0.",
-        "section": "layout"
-      },
-      {
-        "name": "The Measure Rule",
-        "body": "Prose is capped by character count, not by container. 54ch for introductory copy, 58ch for instructions, 68ch for body text inside a problem.",
-        "section": "layout"
-      },
-      {
-        "name": "The Flat Page Rule",
-        "body": "Surfaces are flat at rest. The only shadow in the system belongs to the one element that actually leaves the page, the hint popover. Nothing else carries shadow, including controls.",
-        "section": "elevation"
-      },
-      {
-        "name": "The Square Corner Rule",
-        "body": "Radius is zero everywhere. If a component looks harsh, fix it with spacing, border colour, or tone, never with a radius.",
-        "section": "shapes"
+        "section": "layout",
+        "body": "The page body never scrolls horizontally. A wide table scrolls inside its own .table-scroll container, which is why a sticky table header cannot be hung on a th: that container is the scrollport on both axes."
       }
     ],
     "dos": [
-      "**Do** keep the page on warm paper (#fbfaf7) and reserve white (#ffffff) for surfaces that genuinely sit above it.",
-      "**Do** set every span of language data in the data stack, and add a font subset before shipping a script the fonts do not cover. The build fails on an uncovered character, and that failure is the feature.",
-      "**Do** give wide tables their natural width inside `.table-scroll`, and give every direct child of `<body>` `width: 100%` and `min-width: 0`.",
-      "**Do** cap prose by character measure (54ch to 68ch), not by container width.",
-      "**Do** use the global focus treatment: a 2px ink outline at 2px offset.",
-      "**Do** spend Oxblood on cost and error only, and Verdigris on correctness only."
+      "Do keep the page on the navy ground and let --surface do the lifting; a raised thing is a tonal step, not a border alone",
+      "Do solve a new colour against the worst ground it can land on, which here is the lightest — --tint and the composites of it, never --paper",
+      "Do leave a problem figure's tone alone and keep it on its white mat",
+      "Do set every span of language data in the data stack, and add a font subset before shipping a script the fonts do not cover; the build fails on an uncovered character, and that failure is the feature",
+      "Do reach for --action-deep or --good-deep when a brand hue sets small text, though on this ground the vivid values clear the floor too",
+      "Do give wide tables their natural width inside .table-scroll",
+      "Do cap prose by character measure (54ch to 68ch), not by container width"
     ],
     "donts": [
-      "**Don't** introduce a border radius. Every corner is 0px, and the radius tokens in `globals.css` are vestigial.",
-      "**Don't** give any control a shadow, and don't add ambient shadow to a card, panel or table. The hint popover is the only element in the system that carries one.",
-      "**Don't** let the interface drift toward a generic SaaS dashboard: no blue accent, no rounded cards, no sidebar chrome, no soft elevation. This is the one confirmed rejection.",
-      "**Don't** add a fifth colour role. If something needs emphasis and is not a cost, an error, or a correct answer, use weight, rule, or ink fill.",
-      "**Don't** reflow or wrap a data table to fit a narrow screen. Column alignment is often the problem itself, and breaking it destroys the puzzle.",
-      "**Don't** put an em dash in user-facing copy, and don't use a character the self-hosted fonts do not carry. Arrows are the recurring offender: no shipped font contains U+2192."
+      "Don't write a literal #ffffff, a literal bg-white, or text-ink on a brand fill; the one exception is the figure mat, which is the white of the printed page and must not follow the ground",
+      "Don't remove color-scheme: dark from :root; unset, the browser paints its own scrollbars and form controls light under a dark page",
+      "Don't reintroduce a light theme as a class or a second copy of the palette; if a second theme returns it is one list of light-dark() declarations switched by color-scheme",
+      "Don't add a fourth colour role; if something needs emphasis and is not an action, a cost, an error, or a correct answer, use weight, rule, or ink fill",
+      "Don't introduce a border radius; every corner is 0px and the radius tokens are vestigial",
+      "Don't give any control a shadow, or add ambient shadow to a card, panel or table; the hint popover is the only element that carries one",
+      "Don't reflow or wrap a data table to fit a narrow screen; column alignment is often the problem itself",
+      "Don't put an em dash in user-facing copy, or a character the self-hosted fonts do not carry"
     ]
   }
 }
