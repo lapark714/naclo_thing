@@ -1,8 +1,8 @@
-# morpheme
+<a href="https://morpheme.cc"><img src="public/logo.svg" alt="morpheme" width="420"></a>
 
 Past NACLO linguistics problems, set for study.
 
-**[naclo-prep.vercel.app](https://naclo-prep.vercel.app)**
+**[morpheme.cc](https://morpheme.cc)**
 
 ---
 

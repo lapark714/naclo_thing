@@ -160,8 +160,8 @@ but nothing should be built toward that direction until it is chosen.
   `public/fonts/` covering Latin, IPA, Armenian, Devanagari, Georgian, Cherokee,
   Ethiopic, N'Ko, Greek, Cyrillic, katakana, and nasal-vowel blocks.
 - Author bylines and links to the original booklets on every problem page.
-- Live at naclo-prep.vercel.app; naclo-thing.vercel.app redirects to it. The
-  URL still does not match the product name.
+- Live at morpheme.cc. The URL matches the product name as of 2026-11-12; the
+  naclo-prep.vercel.app and naclo-thing.vercel.app deploys predate it.
 
 There are no users yet, no testimonials, no usage numbers, no press, and no
 endorsement from NACLO. The site is unofficial. Future work must not invent any
