@@ -2,28 +2,29 @@
 name: morpheme
 description: A reference grammar you can type into. Past NACLO linguistics problems, set for study.
 colors:
-  paper: "#ffffff"
-  ink: "#000000"
-  ink-soft: "#444444"
-  ink-faint: "#707070"
-  rule: "#e0e0e0"
-  rule-strong: "#8a8a8a"
-  tint: "#f5f5f5"
-  oxblood: "#a4342a"
-  oxblood-tint: "#fbeeec"
+  paper: "#0d1b2a"
+  ink: "#dee5ec"
+  ink-soft: "#adb3ba"
+  ink-faint: "#949aa1"
+  rule: "#27394d"
+  rule-strong: "#838a92"
+  tint: "#1e3449"
+  surface: "#152638"
+  oxblood: "#f17565"
+  oxblood-tint: "#3a2320"
   cyan: "#00aaee"
-  cyan-hover: "#0092cc"
-  cyan-deep: "#0b78a9"
-  cyan-tint: "#e4f5fd"
-  surface: "#ffffff"
+  cyan-hover: "#44ccf4"
+  cyan-deep: "#44ccf4"
+  cyan-tint: "#0b2c3d"
   action: "#ff9a04"
-  action-hover: "#e08700"
-  action-deep: "#a36100"
-  action-tint: "#fff3e1"
-  action-head: "#cc7a00"
+  action-hover: "#ffb13d"
+  action-deep: "#ffb13d"
+  action-tint: "#3a2a0c"
+  action-head: "#ff9a04"
   on-action: "#000000"
   on-good: "#000000"
-  select: "#a5ddf5"
+  select: "#114b66"
+  figure-mat: "#ffffff"
 typography:
   wordmark:
     fontFamily: '"Wordmark", "Helvetica Neue", Arial, sans-serif'
@@ -168,8 +169,8 @@ unresolved rather than forbidden.
 
 **Key Characteristics:**
 
-- NACLO's own white ground (#ffffff) and black text (#000000), taken from
-  their stylesheet rather than tuned here
+- A dark navy ground (#0d1b2a) carrying NACLO's own orange and cyan. The hues
+  are theirs; the ground is borrowed from the edtech reference
 - Square corners everywhere; the radius scale exists in tokens and is unused
 - Hairline rules and tonal blocks carry structure instead of shadows
 - Serif display for identity, humanist sans for interface, a dedicated
@@ -179,173 +180,142 @@ unresolved rather than forbidden.
 
 ## Colors
 
-A black-and-white field carrying NACLO's two brand hues, plus one borrowed red.
+NACLO's two brand hues on a dark navy ground, plus one borrowed red.
 
-**The palette is NACLO's, not an interpretation of it.** Neither hue was
-sampled from a screenshot or guessed from the logo. `#ff9a04` is declared on
-every heading in naclo.org's own stylesheet and is the literal value of 3,634
-pixels of their logo artwork; `#00aaee` is declared eight times in that
-stylesheet, filling the nav bar and setting every link and every rule under an
-h1. The ground is theirs too: a flat `#ffffff` with `#000000` text, with
-`#444444` and `#f5f5f5` lifted straight out of the same file.
+**The hues are NACLO's. The ground is not.** `#ff9a04` is declared on every
+heading in naclo.org's own stylesheet and is the literal value of 3,634 pixels
+of their logo artwork; `#00aaee` is declared eight times in that stylesheet,
+filling the nav bar and setting every link. `#0d1b2a` is neither. It is
+borrowed from the edtech products this site is measured against, and it
+replaced a flat `#ffffff` that read as a printed page rather than as something
+you work in. Earlier drafts of this file claimed the whole palette was theirs
+and not an interpretation; that claim now covers the hues only.
 
-**One theme, light.** `:root` declares `color-scheme: light`. Keep that
-declaration even though there is nothing to switch between: left unset, the
-browser reads the machine's setting and repaints its own furniture —
-scrollbars, form controls, the overscroll gutter — dark underneath a light
-page. It is the only line in `globals.css` that knows a theme ever existed.
+**What the dark ground buys.** On white, both brand values were illegible as
+text — the orange 2.13:1, the cyan 2.63:1 — so each kept a deepened twin and
+the vivid value was confined to fills, outlines and underlines. Here they clear
+4.5:1 against every ground on the page: the orange at 6.01:1 and the cyan at
+4.86:1 even against `--tint`, the hardest of them. The brand colours set type
+directly, at full strength. That is the single biggest thing this change bought
+and it is why `--action-head` is now the brand orange itself rather than a
+walked-down version of it.
 
-A dark theme shipped on 2026-08-21 and was withdrawn on 2026-11-02. Every token
-was a two-argument `light-dark()` until then. Bringing it back means restoring
-the night column, not adding a `.dark` class, and that column was not an
-inversion of this one — its ratios were solved against the night ground rather
-than mirrored, because equal WCAG contrast reads as *less* separation near
-black. Commit `e5d4b29` is the last one that has it.
+It also gives the Lifted Surface Rule its instrument back. Under white,
+`--surface` had nowhere above the ground to go, so it collapsed into it and a
+hairline was the only thing saying a table was a table.
+
+**One theme.** `:root` declares `color-scheme: dark`, which keeps the browser's
+own scrollbars, form controls and overscroll gutter matched to the page. There
+is no toggle and no second column. A light theme would be a second column
+restored, not a `.dark` class.
 
 ### Primary
 
 - **Action** (#ff9a04): NACLO's orange. Action and brand — the primary button,
-  a selected filter chip, a link, the `-eme` of the wordmark. 9.88:1 under its
-  own black label.
-- **Action Head** (#cc7a00): display headings, over a cyan rule. See the
-  Section Heading Rule below. The one token carrying a size condition, and the
-  one deliberately kept out of `@theme` so no utility class can apply it at
-  body size.
+  a selected filter chip, a link, the `-eme` of the wordmark, and display
+  headings. 9.88:1 under its own black label, 6.01:1 as text on the worst
+  ground.
 
 ### Secondary
 
-- **Cyan** (#00aaee): NACLO's cyan, and this system's word for *correct*. Like
-  the orange it is a fill, an outline and an underline rather than a voice: at
-  2.63:1 on white it cannot set text.
-- **Cyan Deep** (#0b78a9): the cyan that is safe at body size, 4.51:1 on
-  `--tint`. Every `correct` and `solved` on the site is set in this, not in the
-  vivid value.
-- **Cyan Tint** (#e4f5fd): the wash behind a correct row.
+- **Cyan** (#00aaee): NACLO's cyan, and this system's word for *correct*.
+  4.86:1 as text on the worst ground, so unlike on white it writes as well as
+  fills.
+- **Cyan Deep** (#44ccf4): NACLO's own nav-hover cyan, kept as the comfortable
+  value for small text. It is no longer a compliance requirement the way it was
+  on white, only a legibility preference.
+- **Cyan Tint** (#0b2c3d): the wash behind a correct row.
 
 ### Tertiary
 
-- **Oxblood** (#a4342a): cost and error. The one chromatic role that is not
-  NACLO's, kept deliberately. Red for a wrong answer is near-universal, the
-  brand offers no substitute for it, and the alternative was spending orange on
-  both "press this" and "you got this wrong". 6.77:1 on white. Deep and muted
-  rather than alarming, because a student seeing it is mid-problem, not in
-  danger.
-- **Oxblood Tint** (#fbeeec): the wash behind an incorrect answer row.
+- **Oxblood** (#f17565): cost and error. The one chromatic role that is not
+  NACLO's, kept deliberately — red for a wrong answer is near-universal and the
+  brand offers no substitute. It cannot stay oxblood on a dark ground and reads
+  terracotta; that is a physical constraint, not a slip, since a signal colour
+  here has to be lighter than the ground and there is no dark red that is also
+  light.
+- **Oxblood Tint** (#3a2320): the wash behind an incorrect answer row.
 
 ### Neutral
 
-- **Paper** (#ffffff): the page ground, NACLO's own white.
-- **Ink** (#000000): body text and headings. 21.0:1.
-- **Surface** (#ffffff): where a raised thing sits. Equal to the ground, since
-  nothing sits above white — see the Lifted Surface Rule.
-- **Ink Soft** (#444444): secondary prose, table headers, captions. 9.74:1.
-  NACLO's own grey.
-- **Ink Faint** (#707070): metadata that should recede — counts, footnotes,
-  disabled states. 4.54:1 against `--tint`, the worst ground it lands on.
-- **Rule** (#e0e0e0): hairline dividers and table borders.
-- **Rule Strong** (#8a8a8a): input and control borders, one step darker than
-  Rule so a control reads as interactive against a mere divider. 3.17:1 against
-  `--tint`, the worst ground it lands on, which matters because on several
-  controls this 1px rule is the only thing marking them.
-- **Tint** (#f5f5f5): tonal block for table headers and hover states, the
-  substitute for elevation. NACLO's own panel grey.
+- **Paper** (#0d1b2a): the page ground.
+- **Ink** (#dee5ec): body text and headings. 10.06:1 on the worst ground,
+  13.69:1 on the page. Held below the 12.78:1 ceiling that pure white would
+  give against `--tint`, because light text on a dark ground blooms and the
+  last points buy glare rather than legibility over a twenty-minute problem.
+- **Surface** (#152638): one step above the ground. Tables, inputs, popovers,
+  unselected chips.
+- **Ink Soft** (#adb3ba): secondary prose, table headers, captions. 6.05:1.
+- **Ink Faint** (#949aa1): metadata that should recede. 4.50:1 on the worst
+  ground.
+- **Rule** (#27394d): hairline dividers and table borders.
+- **Rule Strong** (#838a92): input and control borders. 3.03:1 on the worst
+  ground, which matters because on several controls this 1px rule is the only
+  thing marking them.
+- **Tint** (#1e3449): tonal block for table headers and hover states.
+- **Figure Mat** (#ffffff): not a palette colour. See the figure rule below.
 
 ### Named Rules
 
 **The Every Colour Has A Job Rule.** Three colour roles exist and nothing else
 is chromatic. Action (`--action`, never `--accent`: the shadcn scaffold owns
 that name and the production minifier will silently take its value) means
-action or brand. Cyan means correct. Oxblood means cost or error. If something
-needs to stand out and is none of those, it stands out through weight, rule, or
-ink fill. Decoration is not a role, and there are no gradients, tinted cards, or
-coloured surfaces anywhere.
+action or brand. Cyan means correct. Oxblood means cost or error. Anything else
+that needs to stand out does it through weight, rule, or ink fill. No
+gradients, no coloured surfaces, no colour-coded categories.
 
-Two of the three are NACLO's brand hues and one is not, which is the whole
-shape of this palette: the brand supplies identity and affirmation, and the
-thing it has no word for — being wrong — is borrowed.
-
-A reading-position indicator and a mastery bar are deliberately *not* chromatic.
-Both are ink on rule. Position and progress are neither action nor correctness,
-and a row of orange bars on the library page would read as decoration on a page
-whose job is choosing what to work on next.
-
-An earlier draft added a fourth role, one hue per concept tag, as an index. It
-was removed: eight coded dots across a library page read as decoration rather
-than as wayfinding, which is the opposite of what colour is for here. Concepts
-are named in words, and the words were always doing the work.
-
-**The Vivid Fills, The Deep Writes Rule.** Both brand hues are light. Neither
-can set text on white — the orange is 2.13:1 and the cyan 2.63:1 — so each
-keeps a deepened twin that can: `--action-deep` and `--good-deep`, both at
-4.51:1 against `--tint`. The vivid value fills, outlines and underlines; the
-deep value writes. naclo.org does set links in `#00aaee` directly, which is a
-real failure on their page and not one worth copying for fidelity's sake.
-
-The wordmark is the one place a vivid value runs below the 3:1 large-text floor
-against the ground, and it does it twice: `morph` is cyan at 2.63:1 and `eme`
-is orange at 2.13:1. That is deliberate and permitted — WCAG 1.4.3 exempts text
-that is part of a logo or brand name. At 56px bold it is entirely legible; it
-simply is not held to a ratio meant for prose. The same exemption is why
-`--action` may fill a button whose silhouette is 2.13:1 against the page: the
-control is identified by its 9.88:1 black label, so 1.4.11 does not ask the
-boundary to carry it. A correct inline answer is underlined in `--good` for the
-same reason — the word `correct` sits beside it in `--good-deep`.
-
-**The Lifted Surface Rule** (formerly White Means Above). A raised surface is
-one tonal step off the ground, and since the ground is `#ffffff` there is no
-step above it. So `--surface` *is* the ground, and lift is carried by the
-hairline and the shadow already drawn around every one of these things: a
-table, an input, the hint popover and an unselected chip each keep a border,
-and the ones that float keep a shadow.
-
-The rule survives; only its instrument moved. What it always meant was "this
-reads as above the page", and on a white page a rule says that and a fill
-cannot. Anything relying on `--surface` alone for separation must carry a
-border, or it vanishes into the page. Never write a literal white; the rule was
-always about lift, and white only ever encoded that by accident of the ground
-being paper.
-
-**The On-Brand-Fill Rule.** Anything filled with `--action` carries
-`--on-action`, and anything filled with `--good` carries `--on-good`, never
-`--ink`. Both are `#000000`: 9.88:1 on the orange, 7.98:1 on the cyan. Because
-both fills take the same black label, the primary button's wipe needs only one
-label rather than the two it carried while the wipe was ink.
+A reading-position indicator and a mastery bar are deliberately *not*
+chromatic. Position and progress are neither action nor correctness.
 
 **The Worst Ground Rule.** A ratio is solved against whichever ground gives a
-token the *least* contrast, not against `--paper`. The grounds run `--paper`
-#ffffff, `--surface` #ffffff, `--tint` #f5f5f5, plus the composites a hovered
-row makes of `--tint` at 50% and 60%. `--tint` is the worst of them, so
-`--ink-faint`, `--good-deep`, `--action-deep` and `--rule-strong` are all
-solved there. The rule generalises: before adding a colour, list every ground
-it can land on and solve the hardest one.
+token the *least* contrast. On a dark page that is the **lightest** ground, not
+the darkest — the ladder runs `--paper` #0d1b2a, `--surface` #152638, `--tint`
+#1e3449, plus the composites a hovered row makes of `--tint`, and `--tint` is
+the worst of them. Every text token is solved there.
 
-While there were two themes this rule needed stating carefully, because "the
-darkest ground" was right by day and backwards at night — the night grounds ran
-#141414 < #1f1f1f < #262626 and the worst was the *lightest*, since the ink
-above them was light. With one theme the darkest ground is simply the worst
-one, but the property to solve for is least contrast, not darkness, and that is
-what a restored night column would need again.
+This is the rule's second theme, and the phrasing matters: "the darkest ground"
+was right on white and would be exactly backwards here. Solve for least
+contrast, which is theme-independent.
 
 Opacity counts as a ground. `text-on-action/70` composites the label into the
-fill underneath it, so the pair that matters is the composite against the fill,
-not the token against the fill. At 60% that same count was 4.38:1.
+fill beneath it, so the pair that matters is the composite against the fill.
+
+There is also a ceiling now. Pure white against `--tint` is 12.78:1, so any
+target above that is unreachable rather than merely hard to hit.
+
+**The Lifted Surface Rule.** A raised surface is one tonal step off the ground,
+and `--surface` is that step. Tables, inputs, popovers and unselected controls.
+The rule lost its instrument entirely under white, where nothing sits above
+#ffffff and `--surface` had to equal the ground; it is whole again. Never write
+a literal colour for it.
+
+**The On-Brand-Fill Rule.** Anything filled with `--action` carries
+`--on-action`, anything filled with `--good` carries `--on-good`, never
+`--ink`. Both are `#000000`: 9.88:1 on the orange, 7.98:1 on the cyan. Both
+brand hues are light, so both take a black label, and `--ink` is now off-white
+and would fail on either.
+
+**The Figure Mat Rule.** NEVER `filter: invert()` a problem figure. It is the
+standard dark-ground move for a diagram and it is a content bug: these are
+facsimiles of printed booklet pages, and at least one problem turns on which
+monk's robe is white and which is black, so inverting does not dim the figure,
+it changes the answer. Photographs, engravings and shaded maps share a folder
+with the line art and nothing marks them apart, so no filter is safe.
+
+A scan is a white rectangle, and dropped straight onto this ground it reads as
+a hole burned in the page. The mat is what fixes that: the figure is tipped in
+on its own `#ffffff` ground with a `--rule-strong` rule around it, which says
+the brightness is deliberate. The rule has now outlived three theme changes —
+it was written for the first dark theme, became a no-op under white, and is
+load-bearing again.
 
 **The Section Heading Rule.** NACLO's stylesheet heads every section with
-`h1 { color: #ff9a04; border-bottom: solid 1px #00aaee }`, and that
-orange-over-cyan pair is the most recognisable thing on their page.
-`.section-head` is it, with one compromise: #ff9a04 is 2.13:1 on white, below
-even the 3:1 floor large text gets, and a section heading is prose rather than
-a logo so it cannot borrow the wordmark's 1.4.3 exemption. `--action-head`
-walks the same hue down to 3.31:1.
-
-Only display headings take it — the problem title, `Practice`, `How It Works`,
-all at 30px or more. The small uppercase labels that head a working surface,
-`QUESTIONS` and `EXPLANATION` and `YOUR MASTERY`, keep `--ink-soft`: at 0.7rem
-this orange would owe 4.5:1 and fails it, and they label a surface rather than
-opening a section. `.section-head-center` swaps the full-width border for a
-short centred rule, because a border under a centred heading spans the column
-and stops reading as that heading's underline.
-
+`h1 { color: #ff9a04; border-bottom: solid 1px #00aaee }`. `.section-head` is
+that, and on this ground it is exact: `--action-head` is `#ff9a04` itself,
+where on white it had to be walked down to #cc7a00 to clear the large-text
+floor. Display headings only — the problem title, `Practice`, `How It Works`,
+all 30px or more. Small uppercase surface labels keep `--ink-soft`.
+`.section-head-center` swaps the full-width border for a short centred rule.
 
 ## Typography
 
@@ -631,13 +601,14 @@ the page.
 
 ### Do:
 
-- **Do** keep the page on NACLO's ground, #ffffff. `--surface` equals it, so
-  anything relying on `--surface` for separation must also carry a border.
-- **Do** solve a new colour against the worst ground it can land on — `--tint`
-  and the composites a hovered row makes of it, not `--paper`.
-- **Do** leave a problem figure's tone alone. At least one problem's answer is
-  which robe is white and which is black, so a tonal inversion is a content
-  change, not a style choice.
+- **Do** keep the page on the navy ground, #0d1b2a, and let `--surface` do the
+  lifting again. A raised thing is a tonal step, not a border alone.
+- **Do** solve a new colour against the worst ground it can land on, which on
+  this ground is the *lightest* — `--tint` and the composites a hovered row
+  makes of it, never `--paper`.
+- **Do** leave a problem figure's tone alone and keep it on its white mat. At
+  least one problem's answer is which robe is white and which is black, so a
+  tonal inversion is a content change, not a style choice.
 - **Do** set every span of language data in the data stack, and add a font
   subset before shipping a script the fonts do not cover. The build fails on an
   uncovered character, and that failure is the feature.
@@ -653,14 +624,19 @@ the page.
 
 - **Don't** write a literal `#ffffff`, a literal `bg-white`, or `text-ink` on an
   action fill. Those are `--surface` and `--on-action`. The literals survived
-  for a year because the ground happened to be paper, and dark mode found every
-  one of them; the tokens are what keeps that lesson after dark mode's exit.
-- **Don't** remove `color-scheme: light` from `:root` now that there is nothing
-  to switch. Unset, the browser reads the machine's setting and paints its own
-  scrollbars and form controls dark under a light page.
-- **Don't** reintroduce dark as a `.dark` class or a second copy of the
-  palette. It was one list of `light-dark()` declarations switched by
-  `color-scheme`, and if it returns it returns that way — see Colors.
+  for a year because the ground happened to be paper, and the first dark theme
+  found every one of them.
+  The one exception is the figure mat, and it is an exception on purpose: that
+  white is not a surface colour that happens to be light, it is the white of
+  the printed page the scan came from. It must not follow the ground, so it
+  must not be a token — see the Figure Mat Rule.
+- **Don't** remove `color-scheme: dark` from `:root`. Unset, the browser reads
+  the machine's setting and paints its own scrollbars and form controls light
+  under a dark page.
+- **Don't** reintroduce a light theme as a `.dark`-style class or a second copy
+  of the palette. If a second theme ever returns it is one list of
+  `light-dark()` declarations switched by `color-scheme`, as it was before —
+  see Colors.
 - **Don't** apply `filter: invert()` to any image in `content/assets/`.
   Photographs, engravings and line art sit there with nothing marking them
   apart, and inverting the wrong one changes an answer.

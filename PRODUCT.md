@@ -130,9 +130,9 @@ but nothing should be built toward that direction until it is chosen.
   (#ff9a04) for action and brand, NACLO cyan (#00aaee) for correct, oxblood
   (#a4342a) for cost and error. No gradients, no tinted cards, no coloured
   surfaces, and no colour-coded categories.
-- The chromatic palette is NACLO's own, sampled from naclo.org's stylesheet and
-  logo artwork rather than interpreted from them, and so is the ground
-  (#ffffff on #000000). Adopted 2026-11-02, replacing a warm paper-and-ink
+- The two brand hues are NACLO's own, sampled from naclo.org's stylesheet and
+  logo artwork rather than interpreted from them. The ground is not theirs and
+  is not claimed to be. Adopted 2026-11-02, replacing a warm paper-and-ink
   field and a verdigris green. Oxblood stays because the brand has no word for
   being wrong, and spending orange on both "press this" and "you got this
   wrong" was the alternative. The site remains unofficial and unendorsed; using
@@ -143,11 +143,11 @@ but nothing should be built toward that direction until it is chosen.
 - No em dashes in any user-facing copy.
 - Errors say what to do next, and an AI grading verdict can always be flagged as
   wrong.
-- One theme, light. Dark shipped 2026-08-21 and was withdrawn 2026-11-02, a
-  deliberate narrowing rather than a regression: the toggle, the pre-paint
-  script and the night half of every token are gone. The original "no dark
-  mode in the MVP" position is effectively back, and the night column's
-  contrast work is recoverable from commit e5d4b29 if it returns.
+- One theme, dark, on a navy ground (#0d1b2a) since 2026-11-11. The history is
+  worth keeping straight: a light/dark pair shipped 2026-08-21, dark was
+  withdrawn 2026-11-02 leaving flat white, and white was then judged to read
+  as a printed page rather than as something you work in. What exists now is
+  one dark theme, not the old pair reinstated — there is no toggle.
 - Problem figures keep their true tone in both themes. The answer to at least
   one problem is which robe is white and which is black, so a tonal inversion
   is a content change, not a style choice.

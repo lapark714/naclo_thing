@@ -2,6 +2,26 @@
 
 This file will hold the project's development status and thus document whatever large updates/accomplishments on the project have been made day-by-day. It is meant to help keep track of where things were left off from the previous day, as a personal reminder.
 
+## 2026-11-11 (later)
+
+**Done**
+
+- Moved the ground to dark navy #0d1b2a. The complaint was that "a paper colour isn't very modern", and the first thing to establish was that there was no paper colour left — the ground had been flat #ffffff since the 2nd. So the objection was to white itself, which is the more interesting version of it
+- The diagnosis that mattered: it is not the hue, it is the flatness. When the ground went white, `--surface` had nowhere above it to go and collapsed into `--paper`, so a table, an input, the popover and the page were all one colour separated by a hairline. That is how a printed page works and how an app does not
+- Re-solved every token against navy, ladder `--paper` #0d1b2a < `--surface` #152638 < `--tint` #1e3449. Zero failures across every token on every ground, including the three opacity composites and the figure mat
+- Reinstated the figure mat, which had become a no-op under white
+
+**Decisions worth remembering**
+
+- **The dark ground gave the brand its voice back.** On white both NACLO hues were illegible as text (2.13:1 and 2.63:1) and had to hide behind deepened twins; on navy they clear 4.5:1 everywhere. `--action-head` is the real #ff9a04 now instead of the walked-down #cc7a00 white forced. This is the one change in the whole palette arc that made the brand *more* itself rather than less
+- **"Darkest ground" was a latent bug in my own rule.** Written on white it read correctly; on a dark page it points at the easiest ground, not the hardest. Solve for least contrast — the property, not the appearance. Second time that exact distinction has cost something
+- **Ceilings exist.** Asking for 13:1 against `--tint` returned null from the solver, because pure white only reaches 12.78:1 there. Worth knowing before tuning toward a value that cannot exist
+- **The ground is not NACLO's and the docs now say so.** DESIGN.md claimed the whole palette was theirs "and not an interpretation". That holds for the hues and not the ground, and leaving the overclaim in would have been the easy thing to do
+
+**Left off / known**
+
+- The token is still named `--paper` for a navy ground, as it was for a white one. Renaming touches every file that uses it and buys nothing but accuracy
+
 ## 2026-11-11
 
 **Done**

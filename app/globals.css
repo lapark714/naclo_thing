@@ -440,38 +440,37 @@
 /* --------------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------------
-   Colour. One list, one theme.
+   Colour. One list, one theme, on a dark ground.
 
-   The palette is NACLO's: #ff9a04 and #00aaee, taken from naclo.org's own
-   stylesheet and logo artwork, over their flat #ffffff and #000000.
+   The two brand hues are NACLO's: #ff9a04 and #00aaee, taken from their own
+   stylesheet and logo artwork. The ground is not. #0d1b2a is borrowed from
+   the edtech products this site is measured against, and it replaced a flat
+   white that read as a printed page rather than as something you work in.
+   The claim this file used to make — that the palette is NACLO's and not an
+   interpretation of it — now holds for the hues and not for the ground.
 
-   This file carried a second column until 2026-11-02. Every value was written
-   as a two-argument light-dark(), switched by the CSS color-scheme property
-   rather than by a class. The dark theme is withdrawn and the night values
-   are gone with it, along with the toggle, the pre-paint script and the
-   screenshot twins.
+   What the dark ground buys is the thing white could not give. On #ffffff
+   both brand values are illegible as text (2.13:1 and 2.63:1), so each
+   carried a deepened twin and the vivid value was confined to fills. Here
+   they clear 4.5:1 against every ground on the page — orange at 6.01:1 and
+   cyan at 4.86:1 even against --tint, the worst of them — so the brand
+   colours set type directly, at full strength, for the first time.
 
-   color-scheme stays declared as `light` rather than dropped. Left unset, the
-   browser reads the machine's setting and repaints its own furniture —
-   scrollbars, form controls, the overscroll gutter — dark underneath a light
-   page. Declaring it is what stops that, and it is now the only line in this
-   file that knows a theme existed.
+   It also gives the Lifted Surface Rule its instrument back. Under white,
+   --surface had nowhere above the ground to go and collapsed into it, which
+   left a hairline as the only thing saying a table was a table. --surface
+   lifts again.
 
-   Bringing dark back is not a matter of adding a class. It means restoring
-   the night column, and that column was not an inversion of this one: its
-   ratios were solved against the night ground rather than mirrored, because
-   equal contrast reads as less separation near black. Commit e5d4b29 is the
-   last one that has it.
-
-   Every ratio here is solved against the *worst* ground the token can land
-   on, not against --paper. --tint is one step toward the ink, so a token that
-   clears 4.5:1 on the page can sit at 4.3:1 on a hovered row and fail there.
-   --ink-faint, --good-deep, --action-deep and --rule-strong are all solved on
-   --tint for that reason.
+   Every ratio is solved against the ground that gives a token the LEAST
+   contrast, which on a dark page is the LIGHTEST one, not the darkest. The
+   ladder runs --paper #0d1b2a, --surface #152638, --tint #1e3449, plus the
+   composites a hovered row makes of --tint, and every text token is solved on
+   --tint. Pure white tops out at 12.78:1 against it; anything asked for above
+   that is unreachable rather than merely difficult.
    --------------------------------------------------------------------------- */
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
   --data-stack: "Charis SIL", "Noto Sans Armenian", "Noto Sans Devanagari",
     "Noto Sans Georgian", "Noto Sans Cherokee", "Noto Sans Ethiopic",
@@ -513,10 +512,10 @@
      with --tint on hover. See the Worst Ground Rule in DESIGN.md: the first
      pass tuned this token to 4.54:1 on the ground and shipped it at 4.31:1
      under a cursor. */
-  --paper: #ffffff;
-  --ink: #000000;
-  --ink-soft: #444444;
-  --ink-faint: #707070;
+  --paper: #0d1b2a;
+  --ink: #dee5ec;
+  --ink-soft: #adb3ba;
+  --ink-faint: #949aa1;
 
   /* Surface, and the one rule the white ground genuinely broke.
 
@@ -532,8 +531,8 @@
      "this reads as above the page", and on a white page a rule says that and
      a fill cannot. --tint is NACLO's own #f5f5f5, and it is now the only
      tonal block in the day column. */
-  --surface: #ffffff;
-  --rule: #e0e0e0;
+  --surface: #152638;
+  --rule: #27394d;
   /* --rule-strong owes 3:1, not 4.5:1, because it is never text — but it is
      the only thing marking several controls, so 1.4.11 applies to it squarely.
      The free-text inline blank is `border-0 border-b` with no fill at all, the
@@ -544,16 +543,16 @@
      headroom this time: the worst case is 3.17:1 by day and 3.19:1 by night,
      where the paper-only values this replaces were 3.03:1 and 3.02:1 on the
      page and 2.48:1 on a night table header. */
-  --rule-strong: #8a8a8a;
-  --tint: #f5f5f5;
+  --rule-strong: #838a92;
+  --tint: #1e3449;
 
   /* Cost and error. Oxblood is the one chromatic role that is not NACLO's,
      and it stays: red for a wrong answer is near-universal, the brand has no
      substitute for it, and the alternative was spending orange on both "press
      this" and "you got this wrong". 6.77:1 on white. Night still cannot hold
      oxblood and still reads terracotta, for the reason given above. */
-  --mark: #a4342a;
-  --mark-tint: #fbeeec;
+  --mark: #f17565;
+  --mark-tint: #3a2320;
 
   /* Correct, in NACLO cyan. This replaces verdigris, and it is the same
      arrangement --action has below, for the same reason: the brand value is
@@ -567,9 +566,9 @@
      lighter --good-hover there is #44ccf4, which is NACLO's own hover cyan
      rather than a value invented for the dark column. */
   --good: #00aaee;
-  --good-hover: #0092cc;
-  --good-deep: #0b78a9;
-  --good-tint: #e4f5fd;
+  --good-hover: #44ccf4;
+  --good-deep: #44ccf4;
+  --good-tint: #0b2c3d;
 
   /* Action. Named --action, not --accent: the shadcn scaffold already owns
      --accent (it maps to --tint for muted hover states). Redefining the same
@@ -590,9 +589,9 @@
      day means darker than the fill and by night means lighter than it. Same
      job, opposite arithmetic. */
   --action: #ff9a04;
-  --action-hover: #e08700;
-  --action-deep: #a36100;
-  --action-tint: #fff3e1;
+  --action-hover: #ffb13d;
+  --action-deep: #ffb13d;
+  --action-tint: #3a2a0c;
 
   /* The heading orange, and the one token with a size condition attached.
 
@@ -611,7 +610,7 @@
      deliberately NOT exported to @theme, so there is no `text-action-head`
      utility to reach for at body size — .section-head is its only sanctioned
      use, and that class is only ever put on a display heading. */
-  --action-head: #cc7a00;
+  --action-head: #ff9a04;
 
   /* The label that sits on a brand fill. Both brand hues are light in both
      themes, so both carry a black label in both themes — #000000 now, the
@@ -627,7 +626,7 @@
      wash is a pale step off --good rather than off the action hue: cyan is
      the colour this interface already uses to say "this one". --ink clears
      14:1 on it by day and 7.8:1 by night. */
-  --select: #a5ddf5;
+  --select: #114b66;
 
   /* Shadow tone, not shadow. The two recipes keep their geometry across
      themes and change only their colour. Both ends are true black now, the
@@ -636,8 +635,8 @@
      than one on charcoal. Same two distances, same vocabulary, still no
      third — and by day these now carry lift on their own, since --surface no
      longer steps above the ground. */
-  --lift-popover-tone: rgb(0 0 0 / 0.22);
-  --lift-plate-tone: rgb(0 0 0 / 0.28);
+  --lift-popover-tone: rgb(0 0 0 / 0.72);
+  --lift-plate-tone: rgb(0 0 0 / 0.66);
 
   --radius: 3px;
 
@@ -1089,6 +1088,64 @@ figure figcaption {
 
 /* Problem figures keep their true tone. NEVER filter: invert() one.
  *
+ * It is the standard dark-ground move for a diagram and it is a content bug
+ * here. These are facsimiles of printed booklet pages, and at least one
+ * problem turns on which monk's robe is white and which is black: inverting
+ * it does not dim the figure, it changes the answer. Photographs, engravings
+ * and shaded maps sit in the same folder as the line art with nothing marking
+ * them apart, so no filter is safe across the set.
+ *
+ * So the mat is back, and on a navy ground it is load-bearing again rather
+ * than the no-op it became under white. A scan is a white rectangle; dropped
+ * straight onto this page it reads as a hole burned in it. Tipping it onto
+ * its own white mat with a rule around it says the brightness is deliberate —
+ * the plate metaphor the rest of the system borrows from printing, made
+ * literal. This is the third time this rule has outlived a theme change. */
+.problem-body figure img {
+  max-width: 100%;
+  height: auto;
+}
+.problem-body figcaption,
+figure figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Theme mechanics. Everything here exists because the theme has to be
+   answered before first paint: the attribute the toggle writes when there is
+   one, and light when there is not. Nothing below waits for React, and
+   nothing below asks the machine — the default is the product's, not the
+   operating system's.
+   --------------------------------------------------------------------------- */
+
+/* Selection. Unstyled, this arrives as the system blue, which used to be a
+   colour role this palette did not have. It has one now, so the wash is a pale
+   step off --good rather than off the action hue. --ink clears 14.26:1 on the
+   day wash and 7.87:1 on the night one. See --select for the reasoning. */
+::selection {
+  background: var(--select);
+  color: var(--ink);
+}
+
+/* The hint popover's lift, moved out of an arbitrary Tailwind value so its
+   tone can answer the theme. Geometry unchanged. */
+.lift-popover {
+  box-shadow: 0 8px 28px -12px var(--lift-popover-tone);
+}
+
+/* Problem figures keep their true tone. NEVER filter: invert() one.
+ *
  * It is the standard dark-mode move for a diagram and it is a content bug
  * here. These are facsimiles of printed booklet pages, and at least one
  * problem turns on which monk's robe is white and which is black: inverting
@@ -1102,5 +1159,7 @@ figure figcaption {
  * The ban outlives the mat: it is about the content, not the theme. */
 .problem-body figure img {
   padding: 6px;
+  background: #ffffff;
+  border: 1px solid var(--rule-strong);
 }
 

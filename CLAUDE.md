@@ -62,10 +62,11 @@ naclo_tool/
 - Clean, minimal interface — the problem text and its tables are the star
 - Responsive design (desktop-first — most students study on their computers)
 - Self-hosted fonts must cover IPA and non-Latin scripts; a missing-glyph box breaks the problem
-- One theme, light. `:root` declares `color-scheme: light` — keep that declaration; left unset the browser repaints scrollbars and form controls dark under a light page
-- The dark theme was withdrawn 2026-11-02. If it comes back it is a second column restored, not a `.dark` class with a duplicated palette; commit e5d4b29 is the last one that has it
+- One theme, dark. The ground is navy `#0d1b2a`; `:root` declares `color-scheme: dark` — keep that declaration so the browser's own scrollbars and form controls match the page
+- The ground is the one part of the palette that is not NACLO's. The two brand hues are; navy is borrowed from the edtech reference. Both hues set type at full strength here, which they could not do on white
+- There is no theme toggle and no second column. A light theme would be a second column restored, not a `.dark` class
 - Solve every ratio against the worst ground a token can land on, not against `--paper`. `--tint` and the opacity composites over it are grounds
-- NEVER `filter: invert()` a problem figure. At least one problem's answer is which robe is white and which is black
+- NEVER `filter: invert()` a problem figure. At least one problem's answer is which robe is white and which is black. On the dark ground figures sit on a white mat with a rule, which frames the brightness as deliberate
 
 **Component patterns:**
 - Shadcn UI for all interactive elements (buttons, inputs, dialogs, tabs)
