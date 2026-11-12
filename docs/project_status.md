@@ -2,6 +2,27 @@
 
 This file will hold the project's development status and thus document whatever large updates/accomplishments on the project have been made day-by-day. It is meant to help keep track of where things were left off from the previous day, as a personal reminder.
 
+## 2026-11-11
+
+**Done**
+
+- Brainstormed "make it feel modernised like an edtech platform" down to something buildable. The reference was DataCamp, and the complaint underneath it was density: "not like a big jumble of words or buttons". Mocked three structural alternatives, and the answer that mattered was that the current layout won — everything-on-one-page is right for a problem you range around in, so the fix is treatment, not architecture
+- Retired the Check button on 359 of 598 sub-questions. Enter grades a free-text blank graded in the browser; choice questions and `llm` answers keep the button because Enter has nothing to commit in a `<select>` and a keystroke should not spend a rate-limited network grade
+- Per-part progress (`2/5`) in the gutter rail, suppressed on single-part problems
+- Fixed three things the scout turned up that were already broken: a stale verdict that never cleared on edit, no in-flight guard on a grader behind a 20/min limiter whose limiter runs before its cache, and the inline blank grading its one `llm` question on Enter with no way to dispute the result
+
+**Decisions worth remembering**
+
+- **The user picked the option I had labelled "the problem".** Shown three layouts, they kept today's. That is not a contradiction: a NACLO problem is a body of evidence you range around in, not a lesson with steps, and chunking it decides the route for you. The real exam hands you a booklet where everything is visible. The complaint was about how the page reads, not what is on it
+- **Scout before implementing, when the thing is older than you are.** All three treatments changed on contact with the code. Grouping by part already existed; the "named header" I mocked up was fiction, because the records carry an id and an instruction sentence and no title. And the obvious sticky implementation is a silent no-op
+- **A no-op is worse than a failure.** `thead th { position: sticky; top: 0 }` reads as correct and does nothing, because `.table-scroll` computes `overflow-y: auto` and is therefore the scrollport. Measured: the header went to -285px. Without the scout this would have shipped looking right
+
+**Left off / known**
+
+- Treatment 3, pinning the data table, is unbuilt and is not a small change. 68 tables over 35 problems, 18 with two or more; 10 of the 14 inline records put their blanks in the first table, so a "pin the data table" heuristic pins live inputs; a third of tables are too tall to pin; and `.table-scroll` also wraps a prose box, 17 explanation tables and the home demo. It needs a way to mark which table is the data table, which means a schema field and 68 records revalidated
+- Two records' question points do not sum to `officialPoints` (2026-open-B 10.08 vs 10, 2026-open-E 17.25 vs 15), which is why the part rail shows coverage and not points
+- `self` grading mode has no published questions, so its "Show key" button path is untested on the live site
+
 ## 2026-11-02 (evening)
 
 **Done**

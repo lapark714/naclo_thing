@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { ClientQuestion } from "@/lib/content";
 import { checkExact } from "@/lib/grading";
 
@@ -28,10 +28,39 @@ export function useAnswer(
   const [verdict, setVerdict] = useState<Verdict>({ state: "unanswered" });
   const [flagged, setFlagged] = useState(false);
 
+  /**
+   * One grade at a time. The llm path is a network call behind a 20-per-minute
+   * per-IP limiter, and that limiter is checked before the verdict cache, so a
+   * held Enter key could spend a student's whole minute of grading on one
+   * answer and then tell them the grader is down. A ref rather than state
+   * because the guard has to be true for the next call in the same tick, before
+   * any re-render.
+   */
+  const grading = useRef(false);
+
   const settled =
     verdict.state === "correct" || verdict.state === "revealed" || Boolean(revealedAnswer);
 
+  /**
+   * A verdict describes the answer that produced it. The moment the student
+   * types a different one it is stale, and leaving it up means a red underline
+   * and a "not yet" sitting under an answer nothing has judged. That was
+   * survivable while a deliberate Check press was the only way to grade; with
+   * Enter doing it, the stale verdict is the only feedback on screen.
+   *
+   * Only the unsettled verdicts clear. Correct and revealed disable the input,
+   * so there is nothing to retype.
+   */
+  function edit(next: string) {
+    setValue(next);
+    setVerdict((v) =>
+      v.state === "incorrect" || v.state === "error" ? { state: "unanswered" } : v,
+    );
+  }
+
   async function check() {
+    if (grading.current) return;
+
     if (question.gradingMode === "exact") {
       const { correct } = checkExact(
         value,
@@ -48,6 +77,7 @@ export function useAnswer(
       return;
     }
 
+    grading.current = true;
     setVerdict({ state: "checking" });
     try {
       const res = await fetch("/api/grade", {
@@ -71,15 +101,30 @@ export function useAnswer(
         state: "error",
         reason: "Could not reach the grader. Mark it yourself below.",
       });
+    } finally {
+      grading.current = false;
     }
   }
 
+  /**
+   * Whether pressing Enter in this question's input should grade it.
+   *
+   * Free text only, and only when the answer is graded in the browser. A choice
+   * question has nothing to type into, so Enter has nothing to commit and the
+   * button stays. An llm answer is a network call against a rate limit and a
+   * paragraph of someone's reasoning: submitting that on a keystroke, where a
+   * stray Enter mid-sentence spends a grade, is worse than asking for a press.
+   */
+  const gradesOnEnter =
+    question.gradingMode === "exact" && (question.choices?.length ?? 0) === 0;
+
   return {
     value,
-    setValue,
+    setValue: edit,
     verdict,
     setVerdict,
     settled,
+    gradesOnEnter,
     flagged,
     setFlagged,
     check,

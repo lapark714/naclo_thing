@@ -577,6 +577,15 @@ harsh, fix it with spacing, border colour, or tone, never with a radius.
 - **Style:** Square, 1px Rule Strong border, white fill, 6px by 8px padding,
   set in the data font because the student is typing language data.
 - **Focus:** Global 2px ink outline, 2px offset. No border-colour shift.
+- **Submit:** Enter grades a free-text blank that is graded in the browser,
+  and such a blank carries no button at all — 359 of the 598 published
+  sub-questions, about three in five. A `press enter` label in Ink Faint
+  appears beside it once something is typed, so an untouched page stays quiet.
+  The button survives only where Enter cannot stand in for it: a choice
+  question has nothing to type into, and an `llm` answer is a rate-limited
+  network call where a stray Enter mid-sentence spends a grade. The verdict
+  sits in an `aria-live="polite"` region, because with no button to move focus
+  to, the answer would otherwise be judged in silence.
 - **Verdict:** Correct rows wash Cyan Tint, incorrect wash Oxblood Tint. The
   verdict line sits beneath in 0.82rem, coloured Cyan Deep or Oxblood — Cyan
   Deep, never the vivid `--good`, which cannot set text on white. A correct

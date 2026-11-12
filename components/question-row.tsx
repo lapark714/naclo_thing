@@ -14,8 +14,18 @@ type Props = {
 };
 
 export function QuestionRow({ problemId, question, onResolved, revealedAnswer }: Props) {
-  const { value, setValue, verdict, settled, flagged, setFlagged, check, reveal, selfMark } =
-    useAnswer(problemId, question, onResolved, revealedAnswer);
+  const {
+    value,
+    setValue,
+    verdict,
+    settled,
+    gradesOnEnter,
+    flagged,
+    setFlagged,
+    check,
+    reveal,
+    selfMark,
+  } = useAnswer(problemId, question, onResolved, revealedAnswer);
 
   const useDropdown = (question.choices?.length ?? 0) > 5;
 
@@ -68,6 +78,12 @@ export function QuestionRow({ problemId, question, onResolved, revealedAnswer }:
               type="text"
               value={value}
               onChange={(e) => setValue(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && gradesOnEnter && value && !settled) {
+                  e.preventDefault();
+                  void check();
+                }
+              }}
               disabled={settled}
               aria-label={`Answer for ${question.id}`}
               spellCheck={false}
@@ -76,7 +92,14 @@ export function QuestionRow({ problemId, question, onResolved, revealedAnswer }:
             />
           )}
 
-          {!settled && (
+          {/* The button is gone wherever Enter can do its job, which is most
+              of the site: a free-text blank graded in the browser. What is left
+              is where Enter has nothing to commit (a choice question) or where
+              committing should stay deliberate (an llm answer, a self-marked
+              one). Roughly three in five of the questions on the site lose
+              their button; the rest keep it because they need it, not for
+              consistency's sake. */}
+          {!settled && !gradesOnEnter && (
             <button
               type="button"
               onClick={check}
@@ -90,6 +113,15 @@ export function QuestionRow({ problemId, question, onResolved, revealedAnswer }:
                   : "Check"}
             </button>
           )}
+
+          {/* Something has to say how to submit once the button is gone. It
+              appears only with something typed, so an untouched page stays
+              quiet and the hint arrives at the moment it is actionable. */}
+          {!settled && gradesOnEnter && value && (
+            <span className="shrink-0 text-[0.7rem] tracking-[0.1em] text-ink-faint uppercase">
+              press enter
+            </span>
+          )}
         </div>
       </div>
 
@@ -99,14 +131,22 @@ export function QuestionRow({ problemId, question, onResolved, revealedAnswer }:
         </p>
       )}
 
-      <Feedback
-        verdict={verdict}
-        question={question}
-        onReveal={reveal}
-        onSelfMark={selfMark}
-        flagged={flagged}
-        onFlag={() => setFlagged(true)}
-      />
+      {/* The verdict is announced, not just shown. While a Check button was
+          the only way to grade, the press moved focus to a control whose own
+          label changed to "Checking" and screen readers followed it. Enter
+          leaves focus in the input, so without this the answer is judged in
+          silence. Polite rather than assertive: it should not cut across
+          someone mid-sentence in the next blank. */}
+      <div aria-live="polite">
+        <Feedback
+          verdict={verdict}
+          question={question}
+          onReveal={reveal}
+          onSelfMark={selfMark}
+          flagged={flagged}
+          onFlag={() => setFlagged(true)}
+        />
+      </div>
     </div>
   );
 }

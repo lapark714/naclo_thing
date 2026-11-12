@@ -227,6 +227,16 @@ export function ProblemView({
   const correctCount = Object.values(answered).filter(Boolean).length;
   const allDone = correctCount === questions.length;
 
+  /* Parts that actually render a row in the list. A problem whose blanks all
+     sit inside its body has none, and a problem with one part needs no
+     per-part counter: it would restate the "{correctCount} of {n} correct"
+     line directly above it. */
+  const listedParts = useMemo(
+    () => shownParts.filter((p) => !p.allInline),
+    [shownParts],
+  );
+  const showPartCounts = listedParts.length > 1;
+
   const persist = useCallback(
     (
       next: Record<string, boolean>,
@@ -412,15 +422,30 @@ export function ProblemView({
           </p>
         )}
 
-        {shownParts
-          .filter((part) => !part.allInline)
-          .map((part) => (
+        {listedParts.map((part) => {
+          const doneInPart = part.remaining.filter((q) => answered[q.id]).length;
+          return (
             <div key={part.key} className="mb-8 flex gap-4 sm:gap-6">
-              {/* The gutter rail: part labels against a hairline rule. */}
+              {/* The gutter rail: part labels against a hairline rule, and
+                  under the label how far through that part you are.
+
+                  Coverage rather than points, which is how the rest of the
+                  site reports progress. It also answers the question the long
+                  list cannot — how big is this chunk — so forty rows read as
+                  five sections of a knowable size rather than one run.
+
+                  The part has no name to show. The records carry an id and an
+                  instruction sentence and nothing else, and the sentence is
+                  phrased as a command, so there is no title here to set. */}
               <div className="w-8 shrink-0 border-r border-rule pt-1 sm:w-12">
                 <span className="text-[0.72rem] font-semibold tracking-wider text-ink-soft">
                   {part.key}
                 </span>
+                {showPartCounts && (
+                  <span className="mt-1 block text-[0.68rem] tabular-nums text-ink-faint">
+                    {doneInPart}/{part.remaining.length}
+                  </span>
+                )}
               </div>
 
               <div className="min-w-0 flex-1">
@@ -458,7 +483,8 @@ export function ProblemView({
                 ))}
               </div>
             </div>
-          ))}
+          );
+        })}
       </section>
 
       <section aria-labelledby="explanation-heading" className="mt-10">

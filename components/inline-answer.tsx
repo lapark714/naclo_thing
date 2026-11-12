@@ -42,7 +42,7 @@ export function InlineAnswer({
   revealedAnswer,
   label,
 }: Props) {
-  const { value, setValue, verdict, settled, check, reveal } = useAnswer(
+  const { value, setValue, verdict, settled, gradesOnEnter, check, reveal } = useAnswer(
     problemId,
     question,
     onResolved,
@@ -69,6 +69,7 @@ export function InlineAnswer({
           settled={settled}
           value={value}
           verdict={verdict}
+          gradesOnEnter={gradesOnEnter}
           onCheck={check}
           onReveal={reveal}
           revealedAnswer={revealedAnswer}
@@ -106,6 +107,7 @@ export function InlineAnswer({
           settled={settled}
           value={value}
           verdict={verdict}
+          gradesOnEnter={gradesOnEnter}
           onCheck={check}
           onReveal={reveal}
           revealedAnswer={revealedAnswer}
@@ -137,6 +139,7 @@ export function InlineAnswer({
           settled={settled}
           value={value}
           verdict={verdict}
+          gradesOnEnter={gradesOnEnter}
           onCheck={check}
           onReveal={reveal}
           revealedAnswer={revealedAnswer}
@@ -154,7 +157,11 @@ export function InlineAnswer({
         value={value}
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={(e) => {
-          if (e.key === "Enter" && value && !settled) {
+          // gradesOnEnter rather than a bare check: this input already graded
+          // on Enter, including the one llm blank in the corpus, which sent a
+          // paragraph to the grader on a keystroke with no way to dispute the
+          // verdict afterwards. Free text graded in the browser only.
+          if (e.key === "Enter" && gradesOnEnter && value && !settled) {
             e.preventDefault();
             void check();
           }
@@ -170,6 +177,7 @@ export function InlineAnswer({
         settled={settled}
         value={value}
         verdict={verdict}
+        gradesOnEnter={gradesOnEnter}
         onCheck={check}
         onReveal={reveal}
         revealedAnswer={revealedAnswer}
@@ -183,6 +191,7 @@ function Trailing({
   settled,
   value,
   verdict,
+  gradesOnEnter,
   onCheck,
   onReveal,
   revealedAnswer,
@@ -191,6 +200,7 @@ function Trailing({
   settled: boolean;
   value: string;
   verdict: ReturnType<typeof useAnswer>["verdict"];
+  gradesOnEnter: boolean;
   onCheck: () => void;
   onReveal: () => void;
   revealedAnswer?: string;
@@ -245,6 +255,12 @@ function Trailing({
   }
 
   if (settled || !value) return null;
+
+  // A blank that grades on Enter needs no button beside it. These sit inside
+  // the problem's own sentences and tables, where a button is the most
+  // intrusive thing on the line, so retiring it matters more here than in the
+  // questions list.
+  if (gradesOnEnter) return null;
 
   return (
     <button
